@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>차단정책 편집모드</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*745 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>차단정책 편집모드</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- tbl_row_default -->
+        <div class="tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 160px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">차단창 이름</th>
+                <td>
+                  <input type="text" name="" value="" title="차단창 이름" style="width: 320px" />
+                  <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                  <input type="checkbox" id="" name="" value="" /><label for="">기본</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">평일차단</th>
+                <td>
+                  <input type="radio" id="" name="" value="" /><label for="">차단함</label>
+                  <input type="radio" id="" name="" value="" /><label for="">차단안함</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">휴일차단</th>
+                <td>
+                  <input type="radio" id="" name="" value="" /><label for="">차단함</label>
+                  <input type="radio" id="" name="" value="" /><label for="">차단안함</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">요일차단</th>
+                <td class="ect">
+                  <div>
+                    <input type="checkbox" id="" name="" value="" /><label for="">월</label>
+                    <input type="checkbox" id="" name="" value="" /><label for="">화</label>
+                    <input type="checkbox" id="" name="" value="" /><label for="">수</label>
+                    <input type="checkbox" id="" name="" value="" /><label for="">목</label>
+                    <input type="checkbox" id="" name="" value="" /><label for="">금</label>
+                    <input type="checkbox" id="" name="" value="" /><label for="">토</label>
+                    <input type="checkbox" id="" name="" value="" /><label for="">일</label>
+                  </div>
+                  <div class="mt14">
+                    <input type="radio" id="" name="" value="" /><label for="">근무표</label>
+                    <input type="radio" id="" name="" value="" /><label for="">고정시각</label>
+                    <input type="text" name="" value="00:00" title="시간 입력" class="center ml4" style="width: 70px" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">특정일차단</th>
+                <td class="ect">
+                  <!-- box_change -->
+                  <div class="box_change">
+                    <input type="radio" id="" name="" value="" /><label for="">차단함</label>
+                    <input type="radio" id="" name="" value="" /><label for="">차단안함</label>
+
+                    <!-- bg_box -->
+                    <div class="bg_box">
+                      <div class="line_change">
+                        <div class="ip_calendar">
+                          <input type="text" name="" value="2019-07-05" title="종료일" />
+                          <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                        </div>
+                      </div>
+                      <div class="line_change">
+                        <input type="radio" id="" name="" value="" /><label for="">근무표</label>
+                        <input
+                          type="text"
+                          name=""
+                          value=""
+                          title="분 입력"
+                          class="center ml4 mr4"
+                          style="width: 60px"
+                        />
+                        분
+                        <select name="" title="선택" class="ml4" style="width: 70px">
+                          <option value="">전</option>
+                          <option value="">옵션1</option>
+                          <option value="">옵션2</option>
+                          <option value="">옵션3</option>
+                          <option value="">옵션4</option>
+                        </select>
+                      </div>
+                      <div class="line_change">
+                        <input type="radio" id="" name="" value="" /><label for="">고정시각</label>
+                        <input
+                          type="text"
+                          name=""
+                          value="00:00"
+                          title="시간 입력"
+                          class="center ml4"
+                          style="width: 70px"
+                        />
+                      </div>
+                    </div>
+                    <!-- //bg_box -->
+                  </div>
+                  <!-- //box_change -->
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">휴가자차단</th>
+                <td>
+                  <input type="radio" id="" name="" value="" /><label for="">차단함</label>
+                  <input type="radio" id="" name="" value="" /><label for="">차단안함</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">휴직자차단</th>
+                <td>
+                  <input type="radio" id="" name="" value="" /><label for="">차단함</label>
+                  <input type="radio" id="" name="" value="" /><label for="">차단안함</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">퇴직자차단</th>
+                <td>
+                  <input type="radio" id="" name="" value="" /><label for="">차단함</label>
+                  <input type="radio" id="" name="" value="" /><label for="">차단안함</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  알림창 <a href="#none" title="새창 열림" class="btn_sm bg_sky_line vtalign">추가</a>
+                </th>
+                <td class="ect">
+                  <div class="group_div">
+                    <div>
+                      <input
+                        type="text"
+                        name=""
+                        value="알림창알림창_01"
+                        title="알림창명"
+                        class="bg_readonly"
+                        style="width: 568px"
+                        readonly="readonly"
+                      />
+                      <a href="#none" class="btn_sm bg_pink ml12">삭제</a>
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name=""
+                        value="알림창알림창_02"
+                        title="알림창명"
+                        class="bg_readonly"
+                        style="width: 568px"
+                        readonly="readonly"
+                      />
+                      <a href="#none" class="btn_sm bg_pink ml12">삭제</a>
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name=""
+                        value="알림창알림창_03"
+                        title="알림창명"
+                        class="bg_readonly"
+                        style="width: 568px"
+                        readonly="readonly"
+                      />
+                      <a href="#none" class="btn_sm bg_pink ml12">삭제</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  차단창 <a href="#none" title="새창 열림" class="btn_sm bg_sky_line vtalign">추가</a>
+                </th>
+                <td class="ect">
+                  <div class="group_div">
+                    <div>
+                      <input
+                        type="text"
+                        name=""
+                        value="차단창차단창_01"
+                        title="차단창명"
+                        class="bg_readonly"
+                        style="width: 568px"
+                        readonly="readonly"
+                      />
+                      <a href="#none" class="btn_sm bg_pink ml12">삭제</a>
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name=""
+                        value="차단창차단창_02"
+                        title="차단창명"
+                        class="bg_readonly"
+                        style="width: 568px"
+                        readonly="readonly"
+                      />
+                      <a href="#none" class="btn_sm bg_pink ml12">삭제</a>
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name=""
+                        value="차단창차단창_03"
+                        title="차단창명"
+                        class="bg_readonly"
+                        style="width: 568px"
+                        readonly="readonly"
+                      />
+                      <a href="#none" class="btn_sm bg_pink ml12">삭제</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">저장</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

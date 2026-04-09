@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>PC 연장사용 통계</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 1024*745 -->
+  <body class="popup" style="width: 1024px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>PC 연장사용 통계</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents">
+        <!-- search area -->
+        <div class="search_area">
+          <div class="tbl_search">
+            <table>
+              <colgroup>
+                <col style="width: 128px" />
+                <col style="width: 334.4px" />
+                <col style="width: 128px" />
+                <col style="width: 334px" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">기간</th>
+                  <td>
+                    <div class="select_box">
+                      <select name="" title="기간" style="width: 155px">
+                        <option value="">전체</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                        <option value="">옵션4</option>
+                      </select>
+                      <select name="" title="기간" style="width: 155px">
+                        <option value="">전체</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                        <option value="">옵션4</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th scope="row">이름 / 사번</th>
+                  <td>
+                    <div class="ip_box">
+                      <input type="text" name="" value="" title="이름 / 사번" />
+                      <a href="#none" class="icon_delete_full_blue">삭제</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- btn -->
+          <div class="btn_area">
+            <a href="#none" class="btn_big bg_blue icon_big_search">검색</a>
+          </div>
+          <!-- //btn -->
+        </div>
+        <!-- //search area -->
+
+        <!-- result_area -->
+        <div class="result_area">
+          <!-- result_top -->
+          <div class="result_top clearfix">
+            <div class="fl_left">
+              <p class="totla_num">총 <span>0</span>건</p>
+            </div>
+            <div class="btn_area fl_right">
+              <!-- <a href="#none" class="btn_md icon_md_csv">CSV</a> -->
+              <a href="#none" class="btn_md icon_md_excel">엑셀</a>
+            </div>
+          </div>
+          <!-- //result_top -->
+
+          <!-- tbl_default -->
+          <div class="tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: 110px" />
+                <col style="width: auto" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"><a href="#none">사번</a></th>
+                  <th scope="col"><a href="#none">부서</a></th>
+                  <th scope="col"><a href="#none">이름</a></th>
+                  <th scope="col"><a href="#none">직급</a></th>
+                  <th scope="col">
+                    <a href="#none">사전신청<br />(횟수)</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">긴급신청<br />(횟수)</a>
+                  </th>
+                  <th scope="col"><a href="#none">신청시간</a></th>
+                  <th scope="col"><a href="#none">사용시간</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">검색된 데이터가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>20180801</td>
+                  <td>CEO &gt; 서비스개발팀</td>
+                  <td>서영숙</td>
+                  <td>주임</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_default -->
+
+          <!-- result_paging -->
+          <div class="result_paging">
+            <!-- paging -->
+            <div class="paging">
+              <a href="#none" class="btn_start">처음으로</a>
+              <a href="#none" class="btn_prev">이전</a>
+              <strong>1</strong>
+              <a href="#none">2</a>
+              <a href="#none">3</a>
+              <a href="#none">4</a>
+              <a href="#none">5</a>
+              <a href="#none">6</a>
+              <a href="#none">7</a>
+              <a href="#none">8</a>
+              <a href="#none">9</a>
+              <a href="#none">10</a>
+              <a href="#none" class="btn_next">다음</a>
+              <a href="#none" class="btn_end">맨끝으로</a>
+            </div>
+            <!-- //paging -->
+            <p class="page_num"><strong>3</strong>/<span>10</span></p>
+          </div>
+          <!-- //result_paging -->
+        </div>
+        <!-- //result_area -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

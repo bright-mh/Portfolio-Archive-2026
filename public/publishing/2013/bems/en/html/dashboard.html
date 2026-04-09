@@ -1,0 +1,2607 @@
+<!doctype html>
+<html>
+  <head lang="ko">
+    <meta charset="utf-8" />
+    <title>Cloud Bems</title>
+
+    <script type="text/javascript" src="/html/2014/bems/en/js/custom/head.js"></script>
+
+    <!-- main include -->
+    <script type="text/javascript" charset="utf-8" src="/html/2014/bems/en/js/jquery.dotdotdot.min.js"></script>
+    <link href="/html/2014/bems/en/css/custom/main_layout.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="utf-8" src="/html/2014/bems/en/js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/html/2014/bems/en/js/custom/main_layout.js"></script>
+    <script>
+      $(function () {
+        $("#chart01").highcharts(
+          {
+            chart: {
+              type: "gauge",
+              plotBackgroundColor: "#FFFFFF",
+              plotBackgroundImage: null,
+              plotBorderWidth: 0,
+              plotBorderColor: "#FFFFFF",
+              plotShadow: false,
+              backgroundColor: "#FFFFFF",
+              backgroundImage: null,
+              alignTicks: false,
+              borderColor: "#FFFFFF",
+              spacing: [20, 10, 0, 0],
+            },
+            credits: { enabled: false },
+            exporting: { enabled: false },
+            legend: { enabled: false },
+            title: {
+              text: "",
+            },
+            pane: {
+              startAngle: -150,
+              endAngle: 150,
+              background: [],
+              borderColor: "#FFFFFF",
+            },
+
+            // the value axis
+            yAxis: {
+              min: 0,
+              max: 2470,
+              tickWidth: 0,
+              lineWidth: 0,
+              minorTickInterval: "auto",
+              minorTickWidth: 0,
+              minorTickLength: 40,
+              minorTickPosition: "inside",
+              minorTickColor: "#666",
+              tickInterval: 400, // 중간 구분선
+              labels: {
+                rotation: "auto",
+                style: {
+                  "font-size": "10px",
+                  color: "#999999",
+                },
+              },
+              title: {
+                text: "",
+              },
+              plotBands: [
+                {
+                  from: 0,
+                  to: 1520,
+                  color: "#b4cd78", // 첫번째 영역
+                  innerRadius: "90%",
+                  outerRadius: "130%",
+                },
+                {
+                  from: 1521,
+                  to: 1900,
+                  color: "#f5be55", // 두번째 영역
+                  innerRadius: "90%",
+                  outerRadius: "130%",
+                },
+                {
+                  from: 1901,
+                  to: 2470,
+                  color: "#c82d2d", // 세번째 영역
+                  innerRadius: "90%",
+                  outerRadius: "130%",
+                },
+              ],
+            },
+
+            series: [
+              {
+                key: "key",
+                name: "19:30", // 여기에 툴팁에 초기에 표시되는 타이틀이 들어갑니다.
+                data: [{ y: 850, dataLabels: false }],
+                tooltip: {
+                  shared: true,
+                  useHTML: true,
+                  headerFormat: '<div class="chart_tooltip">',
+                  pointFormat: "{series.name} <br />{point.y}",
+                  footerFormat: "</div>",
+                  valueDecimals: 0, // 소수점 몇자리까지 표시 할 것인지
+                  valueSuffix: " kWh",
+                },
+              },
+            ],
+          },
+          // Add some life
+          function (chart) {
+            if (!chart.renderer.forExport) {
+              /*setInterval(function () { // 주기적으로 아래 함수를 실행시켜 주면서 데이터를 반영합니다. ajax로 데이터를 불러올 것 이라면 이 부분에 코딩을 하시면 됩니다. 
+				var data = chart.series[0];
+				var point = chart.series[0].points[0];
+				var newName = "13:00";
+				var newPoint = 1239;
+		        data.name = newName;
+				point.update(newPoint);
+				
+		    }, 3000); // 1000 : 1초*/
+            }
+          },
+        );
+      });
+
+      /**
+	에너지 사용량 부분 챠트 설정
+*/
+      jQuery(function () {
+        $("#chart02").highcharts({
+          credits: { enabled: false },
+          exporting: { enabled: false },
+          legend: { enabled: false },
+          chart: {
+            zoomType: "xy",
+            spacing: [40, 0, 50, 0],
+          },
+          title: { text: " " },
+          subtitle: { text: " " },
+
+          xAxis: {
+            tickWidth: 0,
+            categories: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+          },
+          yAxis: [
+            {
+              // Primary yAxis
+              lineWidth: 1,
+              max: 200,
+              labels: {
+                format: "{value}",
+                align: "right",
+                style: {
+                  color: "#999999",
+                  "font-size": "12px",
+                },
+              },
+              title: {
+                rotation: -90,
+                text: "toe",
+                style: {
+                  color: "#777777",
+                  "font-size": "11px",
+                  "font-weight": "bold",
+                },
+              },
+            },
+            {
+              // Secondary yAxis
+              lineWidth: 1,
+              title: {
+                text: "℃",
+                rotation: 90,
+                style: {
+                  color: "#999999",
+                  "font-size": "12px",
+                  "font-weight": "bold",
+                  "writing-mode": "lr-tb",
+                },
+              },
+              labels: {
+                format: "{value}",
+                style: {
+                  color: "#777777",
+                  "font-size": "11px",
+                  align: 0,
+                },
+              },
+              opposite: true,
+            },
+          ],
+          tooltip: {
+            shared: false,
+          },
+          plotOptions: {
+            column: {
+              stacking: "normal",
+            },
+          },
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#777777",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#777777",
+              fontWeight: "normal",
+            },
+          },
+          series: [
+            {
+              name: "Electricity",
+              color: "#ed8672",
+              type: "column",
+              yAxis: 0,
+              data: [
+                126.3494031, 107.8121053, 117.1973957, 114.7749763, 129.7478559, 140.6809422, 163.2695152, 167.7630103,
+                132.6746353, 121.1901602, 110.8872355, 45.8994997,
+              ],
+
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              tooltip: {
+                valueSuffix: " toe",
+                shared: false,
+                seHTML: true,
+                headerFormat: "2013 {point.key}<br />",
+                pointFormat:
+                  "<p>" +
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right;color: {series.color}"> {point.y} </span> ' +
+                  "</span> ",
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { day: "%Y-%m" },
+              },
+            },
+            {
+              name: "Gas",
+              color: "#77b4d3",
+              type: "column",
+              yAxis: 0,
+              data: [
+                54.73416, 36.29566, 25.41136, 20.5452, 14.40608, 10.03704, 13.474404, 17.750817, 8.600578, 11.538709,
+                22.3202, 13.182477,
+              ],
+
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              tooltip: {
+                valueSuffix: " toe",
+                shared: false,
+                seHTML: true,
+                headerFormat: "2013 {point.key}<br />",
+                pointFormat:
+                  "<p>" +
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right;color: {series.color}"> {point.y} </span> ' +
+                  "</span> ",
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { day: "%Y-%m" },
+              },
+            },
+            {
+              name: "Outdoor Temperature",
+              color: "#616161",
+              type: "line",
+              yAxis: 1,
+              data: [-3.4, 1.2, 5.1, 10.0, 18.2, 24.4, 25.5, 27.7, 21.8, 15.8, 6.2, 3.2],
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              tooltip: {
+                valueSuffix: " ºC",
+                shared: false,
+                seHTML: true,
+                headerFormat: "2013 {point.key}<br />",
+                pointFormat:
+                  "<p>" +
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right;color: {series.color}"> {point.y} </span> ' +
+                  "</span> ",
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { day: "%Y-%m" },
+              },
+              marker: {
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#616161",
+                lineWidth: 2,
+              },
+            },
+          ],
+        });
+      });
+
+      /*                                               연별                            */
+      jQuery(function () {
+        $("#chart02_1").highcharts({
+          credits: { enabled: false },
+          exporting: { enabled: false },
+          legend: { enabled: false },
+          chart: {
+            zoomType: "xy",
+            spacing: [40, 0, 50, 0],
+          },
+          title: { text: " " },
+          subtitle: { text: " " },
+
+          xAxis: {
+            tickWidth: 0,
+            categories: ["2011", "2012", "2013"],
+          },
+          yAxis: [
+            {
+              // Primary yAxis
+              lineWidth: 1,
+              labels: {
+                format: "{value}",
+                align: "right",
+                style: {
+                  color: "#999999",
+                  "font-size": "12px",
+                },
+              },
+              title: {
+                rotation: -90,
+                text: "toe",
+                style: {
+                  color: "#777777",
+                  "font-size": "11px",
+                  "font-weight": "bold",
+                },
+              },
+            },
+          ],
+          tooltip: {
+            shared: false,
+          },
+          plotOptions: {
+            column: {
+              stacking: "normal",
+            },
+          },
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#777777",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#777777",
+              fontWeight: "normal",
+            },
+          },
+          series: [
+            {
+              name: "Electricity",
+              color: "#ed8672",
+              type: "column",
+              yAxis: 0,
+              data: [1678.90547, 1470.4915906, 1478.2467347],
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              tooltip: {
+                valueSuffix: " toe",
+                shared: false,
+                seHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right"> {point.y} </span> ',
+
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { year: "%Y" },
+              },
+            },
+            {
+              name: "Gas",
+              color: "#77b4d3",
+              type: "column",
+              yAxis: 0,
+              data: [288.76492, 299.4036311, 248.296685],
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              tooltip: {
+                valueSuffix: " toe",
+                shared: false,
+                seHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right"> {point.y} </span> ',
+
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { year: "%Y" },
+              },
+            },
+          ],
+        });
+      });
+
+      /*                                               일별                            */
+      jQuery(function () {
+        Highcharts.setOptions({
+          lang: {
+            weekdays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+          },
+        });
+
+        $("#chart02_2").highcharts({
+          credits: { enabled: false },
+          exporting: { enabled: false },
+          legend: { enabled: false },
+          chart: {
+            zoomType: "xy",
+            spacing: [40, 0, 50, 0],
+          },
+          title: { text: " " },
+          subtitle: { text: " " },
+
+          xAxis: {
+            tickWidth: 0,
+            type: "datetime",
+            dateTimeLabelFormats: { day: "%e" },
+            tickInterval: 24 * 3600 * 1000,
+          },
+          yAxis: [
+            {
+              // Primary yAxis
+              lineWidth: 1,
+              labels: {
+                format: "{value}",
+                align: "right",
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              title: {
+                rotation: -90,
+                text: "toe",
+                style: {
+                  color: "#777777",
+                  "font-size": "11px",
+                  "font-weight": "bold",
+                },
+              },
+            },
+            {
+              // Secondary yAxis
+              lineWidth: 1,
+              title: {
+                text: "℃",
+                rotation: 90,
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                  "font-weight": "bold",
+                  "writing-mode": "lr-tb",
+                },
+              },
+              labels: {
+                format: "{value}",
+                style: {
+                  color: "#777777",
+                  "font-size": "11px",
+                  align: 0,
+                },
+              },
+              opposite: true,
+            },
+          ],
+          tooltip: {
+            shared: false,
+          },
+          plotOptions: {
+            column: {
+              stacking: "normal",
+            },
+          },
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#777777",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#777777",
+              fontWeight: "normal",
+            },
+          },
+          series: [
+            {
+              name: "Electricity",
+              color: "#ed8672",
+              type: "column",
+              yAxis: 0,
+              data: [
+                2.534695,
+                4.3984039,
+                4.3804253,
+                4.2835827,
+                4.1926452,
+                4.1613801,
+                2.5172538,
+                2.3693045,
+                4.3561877,
+                4.3562403,
+                4.4663242,
+                3.883057,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+              ],
+              pointStart: Date.UTC(2013, 11, 1),
+              pointInterval: 3600 * 1000 * 24,
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+
+              tooltip: {
+                valueSuffix: " toe",
+                shared: false,
+                useHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right;color: {series.color}"> {point.y} </span> ',
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { day: "%Y-%m-%e (%a)" },
+              },
+            },
+            {
+              name: "Gas",
+              color: "#77b4d3",
+              type: "column",
+              yAxis: 0,
+              data: [
+                0.332717,
+                1.488361,
+                1.226568,
+                1.065946,
+                0.964775,
+                1.120182,
+                0.257621,
+                0.068838,
+                1.53321,
+                1.632295,
+                1.811691,
+                1.680273,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+              ],
+              pointInterval: 3600 * 1000 * 24,
+              pointStart: Date.UTC(2013, 11, 1),
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              tooltip: {
+                valueSuffix: " toe",
+                shared: false,
+                useHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right;color: {series.color}"> {point.y} </span> ',
+
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { day: "%Y-%m-%e (%a)" },
+              },
+            },
+            {
+              name: "Outdoor Temperature",
+              color: "#616161",
+              type: "line",
+              yAxis: 1,
+              data: [
+                4.5,
+                3.9,
+                6.7,
+                5.5,
+                5.5,
+                3.0,
+                6.2,
+                4.2,
+                3.8,
+                0.3,
+                -1.7,
+                -3.2,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+              ],
+              pointInterval: 3600 * 1000 * 24,
+              pointStart: Date.UTC(2013, 11, 1),
+              labels: {
+                style: {
+                  color: "#777777",
+                  "font-size": "10px",
+                },
+              },
+              tooltip: {
+                valueSuffix: " ºC",
+                shared: false,
+                useHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right;color: {series.color}"> {point.y} </span> ',
+
+                footerFormat: "",
+                valueDecimals: 2,
+                dateTimeLabelFormats: { day: "%Y-%m-%e (%a)" },
+              },
+              marker: {
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#616161",
+                lineWidth: 2,
+              },
+            },
+          ],
+        });
+      });
+
+      jQuery("document").ready(function () {
+        jQuery(".highcharts-legend-item")
+          .find("tspan")
+          .css({ color: "#898a8c", "font-size": "11px", "font-weight": "normal" });
+        jQuery(".highcharts-legend-item").find("rect").css({ height: "10px" });
+        // ie8 에서 y 축 타이틀 회전위해
+      });
+
+      jQuery(function () {
+        jQuery("#chart03").highcharts({
+          chart: {
+            spacing: [40, 0, 50, 0],
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+              day: "%e", // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            },
+            pointStart: Date.UTC(2013, 12, 12), // 기준 날짜를 설정
+            pointInterval: 3600 * 1000,
+            tickInterval: 1000 * 3600 * 2,
+            tickWidth: 0,
+            startOnTick: false,
+          },
+          yAxis: {
+            lineWidth: 1,
+            title: {
+              text: "kWh",
+              style: {
+                color: "#777777",
+                "font-size": "11px",
+                "font-weight": "bold",
+              },
+            },
+          },
+          tooltip: {
+            valueSuffix: " kWh",
+            shared: false,
+            seHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat: "<span >{series.name}: </span>" + '<span style="text-align: right"> {point.y} </span> ',
+
+            footerFormat: "",
+            valueDecimals: 2,
+            dateTimeLabelFormats: { hour: "2012-12-12 (%H:%M)" },
+          },
+          series: [
+            {
+              type: "area",
+              name: "Latest 7-day average",
+              lineColor: "#a9a9a9",
+              lineWidth: 1,
+              color: "#f0f0f0",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#a9a9a9",
+                radius: 2,
+                lineWidth: 2,
+              },
+              data: [
+                null,
+                460,
+                421,
+                409,
+                397,
+                402,
+                443,
+                571,
+                730,
+                810,
+                904,
+                913,
+                904,
+                858,
+                911,
+                886,
+                881,
+                844,
+                873,
+                833,
+                686,
+                614,
+                565,
+                552,
+                530,
+              ],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+            {
+              type: "spline",
+              color: "#ed8672",
+              lineWidth: 2,
+              name: "Today",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#ed8672",
+                lineWidth: 2,
+              },
+              data: [
+                null,
+                492,
+                442,
+                440,
+                445,
+                451,
+                488,
+                660,
+                903,
+                1020,
+                1106,
+                1084,
+                1112,
+                1056,
+                1150,
+                1114,
+                1122,
+                1105,
+                1060,
+                624,
+                null,
+                null,
+                null,
+                null,
+                null,
+              ],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#898a8c",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#898a8c",
+              fontWeight: "normal",
+            },
+          },
+        });
+      });
+
+      jQuery(function () {
+        jQuery("#chart03_1").highcharts({
+          chart: {
+            spacing: [40, 0, 50, 0],
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+              day: "%e", // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            },
+            pointStart: Date.UTC(2013, 12, 12), // 기준 날짜를 설정
+            pointInterval: 3600 * 1000,
+            tickInterval: 1000 * 3600 * 2,
+            tickWidth: 0,
+            startOnTick: false,
+          },
+          yAxis: {
+            lineWidth: 1,
+            title: {
+              text: "kWh",
+              style: {
+                color: "#777777",
+                "font-size": "11px",
+                "font-weight": "bold",
+              },
+            },
+          },
+          tooltip: {
+            valueSuffix: " kWh",
+            shared: false,
+            seHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat: "<span >{series.name}: </span>" + '<span style="text-align: right"> {point.y} </span> ',
+
+            footerFormat: "",
+            valueDecimals: 2,
+            dateTimeLabelFormats: { hour: "2012-12-12 (%H:%M)" },
+          },
+          series: [
+            {
+              type: "area",
+              name: "Yesterday",
+              lineColor: "#a9a9a9",
+              lineWidth: 1,
+              color: "#f0f0f0",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#a9a9a9",
+                radius: 2,
+                lineWidth: 2,
+              },
+              data: [
+                null,
+                464,
+                436,
+                420,
+                396,
+                406,
+                464,
+                668,
+                909,
+                1045,
+                1151,
+                1168,
+                1108,
+                1061,
+                1128,
+                1063,
+                1072,
+                1030,
+                1066,
+                1003,
+                805,
+                717,
+                644,
+                607,
+                574,
+              ],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+            {
+              type: "spline",
+              color: "#ed8672",
+              lineWidth: 2,
+              name: "Today",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#ed8672",
+                lineWidth: 2,
+              },
+              data: [
+                null,
+                492,
+                442,
+                440,
+                445,
+                451,
+                488,
+                660,
+                903,
+                1020,
+                1106,
+                1084,
+                1112,
+                1056,
+                1150,
+                1114,
+                1122,
+                1105,
+                1060,
+                624,
+                null,
+                null,
+                null,
+                null,
+                null,
+              ],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#898a8c",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#898a8c",
+              fontWeight: "normal",
+            },
+          },
+        });
+      });
+
+      jQuery(function () {
+        jQuery("#chart03_2").highcharts({
+          chart: {
+            spacing: [40, 0, 50, 0],
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+              day: "%e", // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            },
+            pointStart: Date.UTC(2013, 12, 12), // 기준 날짜를 설정
+            pointInterval: 3600 * 1000,
+            tickInterval: 1000 * 3600 * 2,
+            tickWidth: 0,
+            startOnTick: false,
+          },
+          yAxis: {
+            lineWidth: 1,
+            title: {
+              text: "kWh",
+              style: {
+                color: "#777777",
+                "font-size": "11px",
+                "font-weight": "bold",
+              },
+            },
+          },
+          tooltip: {
+            valueSuffix: " kWh",
+            shared: false,
+            seHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat: "<span >{series.name}: </span>" + '<span style="text-align: right"> {point.y} </span> ',
+
+            footerFormat: "",
+            valueDecimals: 2,
+            dateTimeLabelFormats: { hour: "2012-12-12 (%H:%M)" },
+          },
+          series: [
+            {
+              type: "area",
+              name: "Latest 30-day average",
+              lineColor: "#a9a9a9",
+              lineWidth: 1,
+              color: "#f0f0f0",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#a9a9a9",
+                radius: 2,
+                lineWidth: 2,
+              },
+              data: [
+                null,
+                472,
+                433,
+                423,
+                413,
+                420,
+                465,
+                633,
+                847,
+                958,
+                1054,
+                1055,
+                1041,
+                992,
+                1063,
+                1021,
+                1025,
+                993,
+                1000,
+                820,
+                746,
+                666,
+                604,
+                579,
+                552,
+              ],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+            {
+              type: "spline",
+              color: "#ed8672",
+              lineWidth: 2,
+              name: "Today",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#ed8672",
+                lineWidth: 2,
+              },
+              data: [
+                null,
+                492,
+                442,
+                440,
+                445,
+                451,
+                488,
+                660,
+                903,
+                1020,
+                1106,
+                1084,
+                1112,
+                1056,
+                1150,
+                1114,
+                1122,
+                1105,
+                1060,
+                624,
+                null,
+                null,
+                null,
+                null,
+                null,
+              ],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#898a8c",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#898a8c",
+              fontWeight: "normal",
+            },
+          },
+        });
+      });
+
+      jQuery(function () {
+        jQuery("#chart04").highcharts({
+          chart: {
+            spacing: [40, 0, 50, 0],
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+              day: "%e", // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            },
+            pointStart: Date.UTC(2013, 12, 12), // 기준 날짜를 설정
+            pointInterval: 3600 * 1000,
+            tickInterval: 1000 * 3600 * 2,
+            tickWidth: 0,
+            startOnTick: false,
+          },
+          yAxis: {
+            lineWidth: 1,
+            title: {
+              text: "N㎥",
+              style: {
+                color: "#777777",
+                "font-size": "12px",
+                "font-weight": "bold",
+              },
+            },
+          },
+          tooltip: {
+            valueSuffix: " N㎥",
+            shared: false,
+            seHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat: "<span >{series.name}: </span>" + '<span style="text-align: right"> {point.y} </span> ',
+
+            footerFormat: "",
+            valueDecimals: 2,
+            dateTimeLabelFormats: { hour: "2012-12-12 (%H:%M)" },
+          },
+          series: [
+            {
+              type: "area",
+              name: "Latest 7-day average",
+              lineColor: "#a9a9a9",
+              lineWidth: 1,
+              color: "#f0f0f0",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#a9a9a9",
+                radius: 2,
+                lineWidth: 2,
+              },
+              data: [null, 0, 0, 0, 0, 0, 51, 48, 100, 100, 90, 78, 75, 71, 76, 54, 63, 66, 62, 61, 15, 0, 0, 0, 0],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+            {
+              type: "spline",
+              color: "#77b4d3",
+              lineWidth: 2,
+              name: "Today",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#77b4d3",
+                lineWidth: 2,
+              },
+              data: [null, 0, 0, 0, 0, 0, 104, 52, 191, 196, 126, 85, 140, 114, 121, 102, 92, 90, 116, 12],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#898a8c",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#898a8c",
+              fontWeight: "normal",
+            },
+          },
+        });
+      });
+
+      jQuery(function () {
+        jQuery("#chart04_1").highcharts({
+          chart: {
+            spacing: [40, 0, 50, 0],
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+              day: "%e", // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            },
+            pointStart: Date.UTC(2013, 12, 12), // 기준 날짜를 설정
+            pointInterval: 3600 * 1000,
+            tickInterval: 1000 * 3600 * 2,
+            tickWidth: 0,
+            startOnTick: false,
+          },
+          yAxis: {
+            lineWidth: 1,
+            title: {
+              text: "N㎥",
+              style: {
+                color: "#777777",
+                "font-size": "11px",
+                "font-weight": "bold",
+              },
+            },
+          },
+          tooltip: {
+            valueSuffix: " N㎥",
+            shared: false,
+            seHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat: "<span >{series.name}: </span>" + '<span style="text-align: right"> {point.y} </span> ',
+
+            footerFormat: "",
+            valueDecimals: 2,
+            dateTimeLabelFormats: { hour: "2012-12-12 (%H:%M)" },
+          },
+          series: [
+            {
+              type: "area",
+              name: "Yesterday",
+              lineColor: "#a9a9a9",
+              lineWidth: 1,
+              color: "#f0f0f0",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#a9a9a9",
+                radius: 2,
+                lineWidth: 2,
+              },
+              data: [
+                null,
+                0,
+                0,
+                0,
+                0,
+                0,
+                102,
+                86,
+                143,
+                160,
+                144,
+                128,
+                130,
+                129,
+                153,
+                72,
+                119,
+                117,
+                119,
+                108,
+                27,
+                0,
+                0,
+                0,
+                0,
+              ],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+            {
+              type: "spline",
+              color: "#77b4d3",
+              lineWidth: 2,
+              name: "Today",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#77b4d3",
+                lineWidth: 2,
+              },
+              data: [null, 0, 0, 0, 0, 0, 104, 52, 191, 196, 126, 85, 140, 114, 121, 102, 92, 90, 116, 12],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#898a8c",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#898a8c",
+              fontWeight: "normal",
+            },
+          },
+        });
+      });
+
+      jQuery(function () {
+        jQuery("#chart04_2").highcharts({
+          chart: {
+            spacing: [40, 0, 50, 0],
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+              day: "%e", // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            },
+            pointStart: Date.UTC(2013, 12, 12), // 기준 날짜를 설정
+            pointInterval: 3600 * 1000,
+            tickInterval: 1000 * 3600 * 2,
+            tickWidth: 0,
+            startOnTick: false,
+          },
+          yAxis: {
+            lineWidth: 1,
+            title: {
+              text: "N㎥",
+              style: {
+                color: "#777777",
+                "font-size": "11px",
+                "font-weight": "bold",
+              },
+            },
+          },
+          tooltip: {
+            valueSuffix: " N㎥",
+            shared: false,
+            seHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat: "<span >{series.name}: </span>" + '<span style="text-align: right"> {point.y} </span> ',
+
+            footerFormat: "",
+            valueDecimals: 2,
+            dateTimeLabelFormats: { hour: "2012-12-12 (%H:%M)" },
+          },
+          series: [
+            {
+              type: "area",
+              name: "Latest 30-day average",
+              lineColor: "#a9a9a9",
+              lineWidth: 1,
+              color: "#f0f0f0",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#a9a9a9",
+                radius: 2,
+                lineWidth: 2,
+              },
+              data: [null, 0, 0, 0, 0, 0, 86, 62, 145, 152, 120, 97, 115, 105, 117, 76, 91, 91, 99, 60, 21, 0, 0, 0, 0],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+            {
+              type: "spline",
+              color: "#77b4d3",
+              lineWidth: 2,
+              name: "Today",
+              marker: {
+                enabled: false,
+                symbol: "circle",
+                fillColor: "#FFFFFF",
+                lineColor: "#77b4d3",
+                lineWidth: 2,
+              },
+              data: [null, 0, 0, 0, 0, 0, 104, 52, 191, 196, 126, 85, 140, 114, 121, 102, 92, 90, 116, 12],
+              pointStart: Date.UTC(2013, 12, 12),
+              pointInterval: 3600 * 1000, // one day
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            y: 30,
+            borderColor: "#FFFFFF",
+            itemDistance: 20,
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#898a8c",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#898a8c",
+              fontWeight: "normal",
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      /*목표대비 사용량 percent insert */
+      jQuery(document).ready(function () {
+        jQuery(".percenBox .percen").css({ height: "43.60%" });
+
+        var tab_01_Obj = ["#chart02_2", "#chart02", "#chart02_1"];
+
+        for (i = 0; i < 3; i++) {
+          jQuery(tab_01_Obj[i]).hide();
+        }
+        jQuery(tab_01_Obj[1]).show();
+        $(".mTab01>ul>li").bind("mousedown", function () {
+          var idx = $(".mTab01>ul>li").index($(this));
+          $(".mTab01>ul>li").removeClass("over");
+          for (i = 0; i < 3; i++) {
+            if (i == idx) {
+              jQuery(tab_01_Obj[i]).css({ visibility: "visible" });
+              jQuery(tab_01_Obj[i]).show();
+            } else {
+              jQuery(tab_01_Obj[i]).css({ visibility: "hidden" });
+              jQuery(tab_01_Obj[i]).hide();
+            }
+          }
+          $(this).addClass("over");
+          return false;
+        });
+
+        var tab_02_obj = [
+          ["#chart03_1", "#chart03", "#chart03_2"],
+          ["#chart04_1", "#chart04", "#chart04_2"],
+        ];
+        var tabIndex = 0;
+        var tabSelectIndex = 1;
+        var selecTxt = [];
+
+        for (i = 0; i < 2; i++) {
+          for (j = 0; j < 3; j++) {
+            $(tab_02_obj[i][j]).hide();
+          } //E for
+        } //E for
+
+        tab02Over(tabIndex, tabSelectIndex);
+
+        $(".selecBox>option").each(function () {
+          selecTxt.push($(this).text());
+        });
+
+        $(".mTab02>ul>li").bind("mousedown", function () {
+          var idx = $(".mTab02>ul>li").index($(this));
+          tabIndex = idx;
+          $(".mTab02>ul>li").removeClass("over");
+          $(this).addClass("over");
+          tab02Over(tabIndex, tabSelectIndex);
+          return false;
+        });
+
+        $(".selecBox").change(function () {
+          for (i = 0; i < 3; i++) {
+            if ($(".selecBox option:selected").text() == selecTxt[i]) {
+              tabSelectIndex = i;
+              break;
+            } //E if
+          } //E for
+          tab02Over(tabIndex, tabSelectIndex);
+        });
+
+        function tab02Over(num01, num02) {
+          for (i = 0; i < 2; i++) {
+            if (i == num01) {
+              for (j = 0; j < 3; j++) {
+                if (j == num02) {
+                  $(tab_02_obj[i][j]).show();
+                  $(tab_02_obj[i][j]).css({ visibility: "visible" });
+                } else {
+                  $(tab_02_obj[i][j]).hide();
+                  $(tab_02_obj[i][j]).css({ visibility: "hidden" });
+                } //E if
+              } //E for
+            } else {
+              for (j = 0; j < 3; j++) {
+                $(tab_02_obj[i][j]).hide();
+                $(tab_02_obj[i][j]).css({ visibility: "hidden" });
+              } //E for
+            } //E if
+          } //E for
+        } //E fun
+
+        $(".tabSelectBox>ul>li>a").bind("click", function () {
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <script type="text/javascript" src="/html/2014/bems/en/js/custom/gnb.js"></script>
+
+    <!-- container -->
+    <div id="mainCon">
+      <div class="content">
+        <section class="smallBox todayEn">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>Today’s Energy Consumption</h1>
+            </div>
+
+            <div class="con">
+              <!-- 전기 DATA 가 있을 경우 -->
+              <div class="electArea">
+                <div class="topBox clear02">
+                  <div class="icon">
+                    <img src="/html/2014/bems/en/images/common/icon_spark.gif" alt="전기 아이콘" />
+                  </div>
+                  <div class="grap">
+                    <!-- 일 -->
+                    <div class="tGrap">
+                      <div class="maxData">
+                        <div class="realData" style="width: 84.42%"></div>
+                      </div>
+                      <!-- 툴팁 영역 -->
+                      <div class="graphTooltip">
+                        <p>00:00~19:30</p>
+                        <!-- 
+												case : 휴일 인 경우
+												<p>10월1일(<span class="holi">일</span>)</p>
+												-->
+                        <ul>
+                          <li>Today: <span>16,844 kWh</span></li>
+                        </ul>
+                        <!-- bg를 위한 div 태그 -->
+                        <div class="bg_tooltipLeft"></div>
+                        <div class="bg_tooltipRight"></div>
+                      </div>
+                      <!-- //툴팁 영역 -->
+                    </div>
+
+                    <!-- 어제 -->
+                    <div class="mGrap">
+                      <div class="maxData" style="width: 98%">
+                        <div class="realData" style="width: 86%"></div>
+                      </div>
+                      <!-- 툴팁 영역 -->
+                      <div class="graphTooltip">
+                        <p>00:00~19:30</p>
+                        <!-- 
+												case : 휴일 인 경우
+												<p>10월1일(<span class="holi">일</span>)</p>
+												-->
+                        <ul>
+                          <li>YesterDay: <span>16,651 kWh</span></li>
+                        </ul>
+                        <!-- bg를 위한 div 태그 -->
+                        <div class="bg_tooltipLeft"></div>
+                        <div class="bg_tooltipRight"></div>
+                      </div>
+                      <!-- //툴팁 영역 -->
+                    </div>
+
+                    <!-- 년 -->
+                    <div class="bGrap">
+                      <div class="maxData" style="width: 100%">
+                        <div class="realData" style="width: 85%"></div>
+                      </div>
+                      <!-- 툴팁 영역 -->
+                      <div class="graphTooltip">
+                        <p>00:00~19:30</p>
+                        <ul>
+                          <li>Last Year: <span>16,882 kWh</span></li>
+                        </ul>
+                        <!-- bg를 위한 div 태그 -->
+                        <div class="bg_tooltipLeft"></div>
+                        <div class="bg_tooltipRight"></div>
+                      </div>
+                      <!-- //툴팁 영역 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="table">
+                  <table>
+                    <thead>
+                      <tr class="head">
+                        <td class="title">Electricity</td>
+                        <td class="timeAmount">Until 19:30</td>
+                        <td class="todayAmount">Total Daily</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit05">
+                          <img src="/html/2014/bems/en/images/common/elect_icon1.gif" alt="" />Today
+                        </td>
+                        <td><span class="point1">16,844 kWh</span></td>
+                        <td><span class="point1">-</span></td>
+                      </tr>
+                      <tr>
+                        <td class="tit05">
+                          <img src="/html/2014/bems/en/images/common/elect_icon2.gif" alt="" />Yesterday
+                        </td>
+                        <td>16,651 kWh</td>
+                        <td>19,370 kWh</td>
+                      </tr>
+                      <tr>
+                        <td class="tit05">
+                          <img src="/html/2014/bems/en/images/common/elect_icon3.gif" alt="" />Last Year
+                        </td>
+                        <td>16,882 kWh</td>
+                        <td>19,748 kWh</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //전기 DATA 가 있을 경우 -->
+
+              <!-- 전기 DATA 가 없을 경우 -->
+              <!--div class="electArea">
+							<div class="topBox clear02">
+								<div class="icon"><img src="/html/2014/bems/en/images/common/icon_spark_off.gif" alt="전기 아이콘"/></div>
+								<p class="nonData">에너지 원이 확인되지 않아<br/>정보를 표시할 수 없습니다.</p>
+						</div-->
+              <!-- //전기 DATA 가 없을 경우 -->
+              <!-- 가스 DATA 가 있을 경우 -->
+              <div class="gasArea">
+                <div class="topBox clear02">
+                  <div class="icon"><img src="/html/2014/bems/en/images/common/icon_fire.gif" alt="불 아이콘" /></div>
+                  <div class="grap">
+                    <!-- 일 -->
+                    <div class="tGrap">
+                      <div class="maxData">
+                        <div class="realData" style="width: 80.55%"></div>
+                      </div>
+                      <!-- 툴팁 영역 -->
+                      <div class="graphTooltip">
+                        <p>00:00~19:30</p>
+                        <!-- 
+												case : 휴일 인 경우
+												<p>10월1일(<span class="holi">일</span>)</p>
+												-->
+                        <ul>
+                          <li>Today: <span>1,611 N㎥</span></li>
+                        </ul>
+                        <!-- bg를 위한 div 태그 -->
+                        <div class="bg_tooltipLeft"></div>
+                        <div class="bg_tooltipRight"></div>
+                      </div>
+                      <!-- //툴팁 영역 -->
+                    </div>
+                    <!-- 어제 -->
+                    <div class="mGrap">
+                      <div class="maxData" style="width: 91.37%">
+                        <div class="realData" style="width: 100%"></div>
+                      </div>
+                      <!-- 툴팁 영역 -->
+                      <div class="graphTooltip">
+                        <p>00:00~19:30</p>
+                        <!-- 
+												case : 휴일 인 경우
+												<p>10월1일(<span class="holi">일</span>)</p>
+												-->
+                        <ul>
+                          <li>Yesterday: <span>1,737 N㎥</span></li>
+                        </ul>
+                        <!-- bg를 위한 div 태그 -->
+                        <div class="bg_tooltipLeft"></div>
+                        <div class="bg_tooltipRight"></div>
+                      </div>
+                      <!-- //툴팁 영역 -->
+                    </div>
+                    <!-- 년 -->
+                    <div class="bGrap">
+                      <div class="maxData" style="width: 100%">
+                        <div class="realData" style="width: 95.84%"></div>
+                      </div>
+                      <!-- 툴팁 영역 -->
+                      <div class="graphTooltip">
+                        <p>00:00~19:30</p>
+                        <!-- 
+												case : 휴일 인 경우
+												<p>10월1일(<span class="holi">일</span>)</p>
+												-->
+                        <ul>
+                          <li>Last Year: <span>1,822 N㎥</span></li>
+                        </ul>
+                        <!-- bg를 위한 div 태그 -->
+                        <div class="bg_tooltipLeft"></div>
+                        <div class="bg_tooltipRight"></div>
+                      </div>
+                      <!-- //툴팁 영역 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="table">
+                  <table>
+                    <thead>
+                      <tr class="head">
+                        <td class="title">Gas</td>
+                        <td class="timeAmount">Until 19:30</td>
+                        <td class="todayAmount">Total Daily</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tit05"><img src="/html/2014/bems/en/images/common/gas_icon1.gif" alt="" />Today</td>
+                        <td><span class="point2">1,611 N㎥</span></td>
+                        <td><span class="point2">-</span></td>
+                      </tr>
+                      <tr>
+                        <td class="tit05">
+                          <img src="/html/2014/bems/en/images/common/gas_icon2.gif" alt="" />Yesterday
+                        </td>
+                        <td>1,737 N㎥</td>
+                        <td>1,737 N㎥</td>
+                      </tr>
+                      <tr>
+                        <td class="tit05">
+                          <img src="/html/2014/bems/en/images/common/gas_icon3.gif" alt="" />Last Year
+                        </td>
+                        <td>1,822 N㎥</td>
+                        <td>1,901 N㎥</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //가스 DATA 가 있을 경우 -->
+              <!-- 가스 DATA 가 없을 경우 -->
+              <!--div class="gasArea">
+							<div class="topBox clear02">
+								<div class="icon"><img src="/html/2014/bems/en/images/common/icon_fire_off.gif" alt="불 아이콘"/></div>
+								<p class="nonData2">에너지 원이 확인되지 않아<br/>정보를 표시할 수 없습니다.</p>
+							</div>
+						</div-->
+              <!-- //가스 DATA 가 없을 경우 -->
+            </div>
+          </div>
+        </section>
+
+        <section class="smallBox elecPeak">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>Peak Electricity</h1>
+            </div>
+            <!-- data가 있을 경우 -->
+            <div class="peakBox clear02">
+              <div class="left">
+                <div class="data">
+                  1,239<span class="unit">kW</span
+                  ><span class="time"><span class="time01">Today</span><span class="time02">13:00</span></span>
+                </div>
+              </div>
+              <div class="warning">
+                <img src="/html/2014/bems/en/images/common/warning_step1.gif" alt="양호" />
+
+                <!-- 
+							<img src="/html/2014/bems/en/images/common/warning_step2.gif" alt="주의"/>
+							 -->
+                <!--
+							case 경고
+							<img src="/html/2014/bems/en/images/common/warning_step3.gif" alt="경고"/>
+							-->
+              </div>
+            </div>
+            <div class="dataBox">
+              <div id="chart01" class="cirGrap"></div>
+
+              <div class="tableData">
+                <table>
+                  <thead>
+                    <tr>
+                      <td colspan="2"><span>Real-Time Consumption</span></td>
+                    </tr>
+                    <tr>
+                      <td class="time" colspan="2">Today at 19: 30</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="data">820 <span>kW</span></td>
+                    </tr>
+                    <tr class="head">
+                      <td colspan="2"></td>
+                    </tr>
+                    <!-- //140102 게이지 데이터 부분 수정 -->
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><span>Peak Limits</span></td>
+                      <td>1,900 kW</td>
+                    </tr>
+
+                    <tr>
+                      <td><span>This Year</span></td>
+                      <td>1,928 kW</td>
+                    </tr>
+
+                    <tr>
+                      <td><span>Last Year</span></td>
+                      <td>1,998 kW</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //data가 있을 경우 -->
+
+            <!-- data가 없을 경우 -->
+            <!--div class="nonBox">
+						<div class="nonICon"><img src="/html/2014/bems/en/images/common/icon_nonData.gif" alt=""/></div>
+						<p>에너지원이 확인되지 않아<br/>정보를 표시할 수 없습니다.</p>
+					</div-->
+            <!-- //data가 없을 경우 -->
+          </div>
+        </section>
+
+        <section class="bigBox enUse">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>Energy Consumption</h1>
+              <div class="tabSelectBox mTab01">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><div><span>Daily</span></div></a
+                    >
+                  </li>
+                  <li class="over">
+                    <a href="#"
+                      ><div><span>Monthly</span></div></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><div><span>Yearly</span></div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="chart02" class="grapArea"></div>
+            <div id="chart02_2" class="grapArea" style="visibility: hidden"></div>
+            <div id="chart02_1" class="grapArea" style="visibility: hidden"></div>
+          </div>
+        </section>
+
+        <section class="bigBox usePattern">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>Today’s Energy Consumption Pattern</h1>
+              <div class="tabSelectBox mTab02">
+                <ul>
+                  <li class="over">
+                    <a href="#"
+                      ><div><span>Electricity</span></div></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><div><span>Gas</span></div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="conBox">
+              <div class="cusTomselec">
+                <div class="compare">Today’s Consumption vs</div>
+                <div class="cusArea">
+                  <select id="dataBox" tabindex="1" class="selecBox">
+                    <option value="yesterday">Yesterday</option>
+                    <option value="week" selected>Latest 7-day average</option>
+                    <option value="month">Latest 30-day average</option>
+                  </select>
+                </div>
+              </div>
+              <div id="chart03" class="grapArea2"></div>
+              <div id="chart03_1" class="grapArea2" style="visibility: hidden"></div>
+              <div id="chart03_2" class="grapArea2" style="visibility: hidden"></div>
+              <div id="chart04" class="grapArea2"></div>
+              <div id="chart04_1" class="grapArea2" style="visibility: hidden"></div>
+              <div id="chart04_2" class="grapArea2" style="visibility: hidden"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="smallBox charge">
+          <div class="wrapCon">
+            <div class="tit clear02">
+              <h1 class="out" style="display: none">Last Month’s Energy Bill</h1>
+              <h1 class="over">
+                Last Month’s <br />
+                Energy Bill
+              </h1>
+              <div class="numBox"><span class="unit">USD</span>&nbsp;88,007.48</div>
+            </div>
+            <!-- data가 있을 경우 -->
+            <div class="dataBox02 clear02">
+              <!--작년 동월의 납부요금 정보가 있을 경우 -->
+              <div class="left">
+                <div class="txt01">YOY</div>
+                <div class="data01">6.02<span>%</span></div>
+              </div>
+              <div class="icon">
+                <!--
+							<img src="/html/2014/bems/en/images/common/main_down_icon.gif" alt="down"/>
+							 -->
+                <img src="/html/2014/bems/en/images/common/main_up_icon.gif" alt="up" />
+                <!-- 
+							case same
+							<img src="/html/2014/bems/en/images/common/main_same_icon.gif" alt="same"/>
+							-->
+              </div>
+              <!--//작년 동월의 납부요금 정보가 있을 경우 -->
+              <!-- 작년 동월의 납부 요금 정보가 없을 경우 -->
+              <!--div class="non"><img src="/html/2014/bems/en/images/common/icon_lastYear_nonData.gif" alt=""/> <span>작년 동월의 납부요금 정보가 없습니다.</span></div-->
+              <!-- //작년 동월의 납부 요금 정보가 없을 경우 -->
+            </div>
+            <div class="dataTable">
+              <table>
+                <thead>
+                  <tr class="head">
+                    <td class="fir"></td>
+                    <td class="sec">Last Month</td>
+                    <td class="thr">MTM</td>
+                    <td class="four">YOY</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="color">
+                    <td class="fir">Total</td>
+                    <td class="sec">USD 88,007.48</td>
+                    <td class="thr">17.31%<img src="/html/2014/bems/en/images/common/table_icon_up.png" alt="" /></td>
+                    <td class="four">6.02%<img src="/html/2014/bems/en/images/common/table_icon_up.png" alt="" /></td>
+                  </tr>
+                  <tr>
+                    <td class="fir">Electricity</td>
+                    <td class="sec">USD 68,755.84</td>
+                    <td class="thr">19.14%<img src="/html/2014/bems/en/images/common/table_icon_up.png" alt="" /></td>
+                    <td class="four">1.05%<img src="/html/2014/bems/en/images/common/table_icon_up.png" alt="" /></td>
+                  </tr>
+                  <tr class="color">
+                    <td class="fir">Gas</td>
+                    <td class="sec">USD 19,251.64</td>
+                    <td class="thr">11.20%<img src="/html/2014/bems/en/images/common/table_icon_up.png" alt="" /></td>
+                    <td class="four">28.61%<img src="/html/2014/bems/en/images/common/table_icon_up.png" alt="" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- // data가 있을 경우 -->
+            <!-- data가 없을 경우 -->
+            <!--div class="nonBox">
+						<div class="nonICon"><img src="/html/2014/bems/en/images/common/icon_nonData.gif" alt=""/></div>
+						<p>9월 납부요금 정보가 존재하지 않아 <br/>정보를 표시할 수 없습니다.</p>
+						<div class="dataInput"><a href="#"><img src="/html/2014/bems/en/images/common/btn_en_enter.gif" alt="에너지 납부요금 입력하기"/></a></div>
+					</div-->
+            <!-- //data가 없을 경우 -->
+          </div>
+        </section>
+
+        <section class="smallBox preparing">
+          <div class="wrapCon">
+            <div class="tit clear02">
+              <h1 class="out" style="display: none">This Month’s Consumption vs. Limits</h1>
+              <h1 class="over">This Month’s <br />Consumption vs. Limits</h1>
+              <div class="numBox">59.0819 <span class="unit">toe</span></div>
+            </div>
+            <div class="dataBox03">
+              <div class="left">
+                <div class="txt01">Consumption</div>
+                <div class="data01">43.60<span>%</span></div>
+              </div>
+              <div class="icon">
+                <div class="bg"></div>
+                <div class="percenBox"><div class="percen"></div></div>
+
+                <div class="hIcon"><img src="/html/2014/bems/en/images/common/main_target_icon.png" alt="" /></div>
+              </div>
+            </div>
+
+            <div class="dataTable">
+              <table>
+                <thead>
+                  <tr class="head">
+                    <td class="fir"></td>
+                    <td class="sec no2">Limits</td>
+                    <td class="thr no2">Consumption</td>
+                    <td class="four no2">Rate</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="color">
+                    <td class="fir">Total</td>
+                    <td class="sec">135.5163 toe</td>
+                    <td class="thr">59.0819 toe</td>
+                    <td class="four">43.60%</td>
+                  </tr>
+                  <tr>
+                    <td class="fir">Electricity</td>
+                    <td class="sec">490,000 kWh</td>
+                    <td class="thr">199,732 kWh</td>
+                    <td class="four">40.76%</td>
+                  </tr>
+                  <tr class="color">
+                    <td class="fir">Gas</td>
+                    <td class="sec">214,000 N㎥</td>
+                    <td class="thr">99,390 N㎥</td>
+                    <td class="four">46.44%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- RSS -->
+      <div class="rss">
+        <div class="feedBox">
+          <div class="display">
+            <ul>
+              <li class="clear">
+                <p style="white-space: nowrap">
+                  <a href="#" target="_blank"><span class="tit">Kazakhstan goes East to Korea</span></a
+                  ><span class="part"><img src="/html/2014/bems/en/images/common/rss_part.gif" alt="" /></span>
+                  <span class="stit"
+                    >Kazakhstan’s top diplomat here is celebrating his country’s 22nd Independence Day on Monday after a
+                    milestone three-day visit by the country’s new prime minister, Serik Akhmetov.</span
+                  ><span class="place">&nbsp;- Cheonan branch</span>
+                </p>
+                <div class="date">[2013-12-12]</div>
+              </li>
+              <li class="clear">
+                <p style="white-space: nowrap">
+                  <a href="#" target="_blank"
+                    ><span class="tit">Hyun vows to get tough on public firms’ borrowing</span></a
+                  ><span class="part"><img src="/html/2014/bems/en/images/common/rss_part.gif" alt="" /></span>
+                  <span class="stit"
+                    >Deputy Prime Minister and Finance Minister Hyun Oh-seok said Wednesday that the government would
+                    require state-run enterprises ― especially the 12 companies whose debt has increased most ― to
+                    reduce their borrowing and executive bonuses.</span
+                  ><span class="place">&nbsp;- Cheonan branch</span>
+                </p>
+                <div class="date">[2013-12-11]</div>
+              </li>
+              <li class="clear">
+                <p style="white-space: nowrap">
+                  <a href="#" target="_blank"
+                    ><span class="tit">Korea to rely on nuclear plants for 29% of power supply by 2035</span></a
+                  ><span class="part"><img src="/html/2014/bems/en/images/common/rss_part.gif" alt="" /></span>
+                  <span class="stit"
+                    >The government plans to rely on nuclear power plants for 29 percent of the total electricity supply
+                    by 2035, in an apparent move to uphold the controversial policy to expand its nuclear energy.</span
+                  ><span class="place">&nbsp;- Cheonan branch</span>
+                </p>
+                <div class="date">[2013-12-10]</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rss_btn">
+          <a href="#"><img src="/html/2014/bems/en/images/common/rss_btn.gif" alt="더보기" /></a>
+        </div>
+      </div>
+      <!-- //RSS -->
+
+      <!-- footer -->
+      <footer>
+        <div class="leftBox clear">
+          <div class="logo">
+            <img src="/html/2014/bems/en/images/common/footer_logo.gif" alt="SK CLOUD BEMS" />
+          </div>
+          <div class="copyBox">
+            <p class="address">
+              SK Telecom,  11 Euljiro 2-Ga, Seoul, Korea <span>|</span> President: Ha Sung-min <span>|</span> Business
+              Registration Number: 104-81-37225
+            </p>
+            <p class="copy">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+            <p class="brow">
+              <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                ><img src="/html/2014/bems/en/images/common/footer_ie.gif" alt="Internet Explorer" /></a
+              ><img src="/html/2014/bems/en/images/common/footer_part.gif" alt="" class="part" />
+              <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                ><img src="/html/2014/bems/en/images/common/footer_chrome.gif" alt="Chrome" /></a
+              ><img src="/html/2014/bems/en/images/common/footer_part.gif" alt="" class="part" />
+              <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                ><img src="/html/2014/bems/en/images/common/footer_ff.gif" alt="FireFox" /></a
+              ><img src="/html/2014/bems/en/images/common/footer_part.gif" alt="" class="part" />
+              <a href="http://www.apple.com/kr/safari/" target="_blank"
+                ><img src="/html/2014/bems/en/images/common/footer_safari.gif" alt="Safari"
+              /></a>
+              <span
+                >* CLOUD BEMS Web Site is optimized for Internet Explorer 9, Chrome 4, Firefox 5, Safari 5, Opera
+                10.5</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="fBtn">
+          <a href="#"><img src="/html/2014/bems/en/images/common/footer_btn.gif" alt="" /></a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //container -->
+
+    <!-- 모달팝업 내용 -->
+    <style>
+      model {
+        margin: 0 !important;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function () {
+        $("#country_01").selectbox();
+      });
+    </script>
+    <div
+      id="modalEmail_1"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -147px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Email Address</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modalEmail_1').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the email address of the account you use.</p>
+            <div class="box02">
+              <p class="group01 clear02">
+                <span class="fl titleMark titleMark02">Current Email Address :</span>
+                <span class="fl pl9">CloudBEMS@sk.com</span>
+              </p>
+              <!-- [D] 변경할 이메일 주소 : default -->
+              <!--
+						<div class="group02 clear02">
+							<span class="fl titleMark mr10 pl21">New Email Address :</span>
+							<input type="text" class="fl input_style02 input01" />
+							<span class="fl dot">&#64;</span>
+							<div class="s10 fl ml10">
+								<select id="country_01">
+									<option value="v1">Please select.</option>
+									<option value="v2">naver.com</option>
+									<option value="v3">gmail.com</option>
+									<option value="v4">hanmail.net</option>
+									<option value="v5">hotmail.com</option>
+									<option value="v6">nate.com</option>
+									<option value="v7">yahoo.com</option>
+									<option value="v8">Direct Input</option>
+								</select>
+							</div>
+						</div>
+						-->
+
+              <!-- [D] 변경할 이메일 주소 : 직접 입력 시 (주석 처리)-->
+              <!--
+						<div class="group02 clear02">
+							<span class="fl titleMark mr10 pl21">New Email Address :</span>
+							<input type="text" class="fl input_style02 input01" />
+							<span class="fl dot">&#64;</span>
+							<span class="spanStyle"><input type="text" class="fl input_style02 input01" /></span>
+							<div class="s10 fl ml10">
+								<select id="country_01">
+									<option value="v1">Please select.</option>
+									<option value="v2">naver.com</option>
+									<option value="v3">gmail.com</option>
+									<option value="v4">hanmail.net</option>
+									<option value="v5">hotmail.com</option>
+									<option value="v6">nate.com</option>
+									<option value="v7">yahoo.com</option>
+									<option value="v8">Direct Input</option>
+								</select>
+							</div>
+						</div>
+						-->
+
+              <!-- [D] 변경할 이메일 주소 : 오류 메시지 (주석 처리) -->
+
+              <div class="group02 clear02">
+                <span class="fl titleMark mr10 pl21">New Email Address :</span>
+                <input type="text" class="fl input_style02 input01" />
+                <span class="fl dot">&#64;</span>
+                <span class="spanStyle"><input type="text" class="fl input_style02 input01" /></span>
+                <div class="s10 fl ml10">
+                  <select id="country_01">
+                    <option value="v1">Please select.</option>
+                    <option value="v2">naver.com</option>
+                    <option value="v3">gmail.com</option>
+                    <option value="v4">hanmail.net</option>
+                    <option value="v5">hotmail.com</option>
+                    <option value="v6">nate.com</option>
+                    <option value="v7">yahoo.com</option>
+                    <option value="v8">Direct Input</option>
+                  </select>
+                </div>
+                <p class="text02">The format of the email address is incorrect. Please check and try again.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a
+              href="#link"
+              onclick="
+                $('#modalEmail_1').modal('hide');
+                $('#modalEmail_2').modal({ keyboard: false });
+              "
+              class="on"
+              ><span>Confirm</span></a
+            >
+            <a href="#link" onclick="$('#modalEmail_1').modal('hide')" class="on"><span>Cancel</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+
+    <div
+      id="modalEmail_2"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -147px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Email Address</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modalEmail_2').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the email address of the account you use.</p>
+            <div class="box">
+              <div class="okMsg">
+                <p class="okTitle">Email address is changed.</p>
+                <p class="mt8">Your e-mail address is successfully changed.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a href="#link" onclick="$('#modalEmail_2').modal('hide')" class="on"><span>Close</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+
+    <div
+      id="modalPW_1"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -250px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Password</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modalPW_1').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the password of the account you use</p>
+            <!-- [D] default -->
+            <div class="box04">
+              <div class="group03 clear02 mt10">
+                <span class="fl titleMark03_01">Current Password :</span>
+                <input type="password" class="fl input_style02 input02" />
+              </div>
+              <div class="group03 clear02 mt10">
+                <span class="fl titleMark03_01">New Password :</span>
+                <input type="password" class="fl input_style02 input02" />
+              </div>
+              <div class="group03 clear02 mt10">
+                <span class="fl titleMark03">Confirm New Password :</span>
+                <input type="password" class="fl input_style02 input02" />
+              </div>
+            </div>
+
+            <!-- [D] 오류메시지 (주석처리) -->
+            <!--
+					<div class="box04">
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">Current Password :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">The password is incorrect.</p>
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">New Password :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">Please enter a password.</p>
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03">Confirm New Password :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">Please enter the password.</p>
+						</div>
+					</div>
+					-->
+          </div>
+
+          <ul class="pwList">
+            <li>
+              * The password must be up to 10 characters in English (upper and lowercase letters) and contain more than
+              2 numbers. <span>It must not include the ID.</span>
+            </li>
+            <li>
+              * To protect your personal information, please change your password regularly to a new one that you do not
+              use <span>for other web sites.</span>
+            </li>
+          </ul>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a
+              href="#link"
+              class="on"
+              onclick="
+                $('#modalPW_1').modal('hide');
+                $('#modalPW_2').modal({ keyboard: false });
+              "
+              ><span>Confirm</span></a
+            >
+            <a href="#link" onclick="$('#modalPW_1').modal('hide')" class="on"><span>Cancel</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+
+    <!-- 모달팝업 내용 -->
+    <style>
+      model {
+        margin: 0 !important;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function () {
+        $("#modal_01").selectbox();
+      });
+    </script>
+    <div
+      id="madalPW_2"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -147px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Password</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#madalPW_2').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the password of the account you use.</p>
+            <div class="box">
+              <div class="okMsg okMsg02">
+                <p class="okTitle">Password is changed.</p>
+                <p class="mt8">Your password is successfully changed.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a href="#link" onclick="$('#madalPW_2').modal('hide')" class="on"><span>Close</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+  </body>
+</html>

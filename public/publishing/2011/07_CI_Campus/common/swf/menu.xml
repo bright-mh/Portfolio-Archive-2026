@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+	<link name="금융실무" link="business/prima_introduction1.html" target="_self" />
+	<link name="금융전문" link="specialism/prima_introduction2.html" target="_self" />
+	<link name="글로벌심화" link="global_depth/global_partners.html" target="_self" />
+	<link name="리더쉽" link="leadership/woman_leadership.html" target="_self" />
+</menu>

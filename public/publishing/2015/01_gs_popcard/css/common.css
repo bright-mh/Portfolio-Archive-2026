@@ -1,0 +1,1136 @@
+@charset 'utf-8';
+
+/* layout */
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+#wrap {
+  position: relative;
+  padding: 0 15px 35px 15px;
+}
+
+/* common */
+.btnTop {
+  display: none;
+  position: fixed;
+  bottom: 35px;
+  right: 15px;
+  z-index: 100;
+}
+
+/* event list */
+#wrap.event {
+  padding-bottom: 80px;
+  background: #ededed;
+}
+.event .listBox {
+  margin-top: 7px;
+  padding: 7px 7px 18px 7px;
+  background: #fff;
+}
+.event .listBox:first-child {
+  margin-top: 0;
+}
+.event .listBox a.areaClick {
+  display: block;
+}
+.event .listBox .areaImg {
+  position: relative;
+}
+.event .listBox .ico_hot,
+.event .ico_new {
+  position: absolute;
+  bottom: -15px;
+  right: 5px;
+  width: 29px;
+  height: auto;
+}
+.event .listBox .title {
+  margin: 20px 8px 4px 8px;
+  color: #000;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.event .listBox .sledding {
+  margin: 0 8px;
+  font-size: 10px;
+  letter-spacing: -0.5px;
+}
+.event .listBox .sledding span {
+  display: inline-block;
+  margin-right: 3px;
+  color: #f35822;
+}
+.event .listBox.listEnd .areaImg span.dim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+  z-index: 10;
+}
+.event .listBox.listEnd .title,
+.event .listEnd .sledding,
+.event .listEnd .sledding span {
+  color: #999;
+}
+.event .btnMore {
+  position: absolute;
+  bottom: 24px;
+  left: 15px;
+  right: 15px;
+}
+.event .btnMore a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 9px 0;
+  text-align: center;
+}
+.event .btnMore a span {
+  display: inline-block;
+  padding-left: 15px;
+  background: url("../img/common/bg_more.png") no-repeat 0 45%;
+  background-size: 11px auto;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+}
+
+/* event detail */
+#wrap.eventDetail {
+  padding-bottom: 95px;
+}
+.eventDetail .detail {
+  padding-top: 25px;
+}
+.eventDetail .detail .title {
+  padding-bottom: 10px;
+  color: #000;
+  font-size: 15px;
+  letter-spacing: -0.5px;
+}
+.eventDetail .detail .sledding {
+  padding-bottom: 15px;
+  font-size: 10px;
+  letter-spacing: -0.5px;
+}
+.eventDetail .detail .sledding span.condition {
+  color: #f35822;
+}
+.eventDetail .detail .sledding span.term {
+  padding: 0 13px 0 3px;
+  background: url("../img/common/bg_line.png") no-repeat 100% 35%;
+  background-size: 1px auto;
+  letter-spacing: -0.25px;
+}
+.eventDetail .detail .sledding span.hits {
+  padding-left: 9px;
+}
+.eventDetail .detail .detailTxt {
+  padding: 15px 0 24px 0;
+  font-size: 11px;
+  line-height: 1.5em;
+  letter-spacing: -0.5px;
+}
+.eventDetail .detail .snsList {
+  width: 100%;
+  padding: 7px 0 6px 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+.eventDetail .detail .snsList ul {
+  float: right;
+}
+.eventDetail .detail .snsList ul li {
+  float: left;
+  padding-left: 8px;
+}
+.eventDetail .detail .snsList ul li:first-child {
+  padding-left: 0;
+}
+
+.btnGroup {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.btnGroup a {
+  display: inline-block;
+  margin-left: 12px;
+  padding: 6px 14px 5px 14px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 11px;
+  letter-spacing: -0.5px;
+}
+.btnGroup a:first-child {
+  margin-left: 0;
+}
+.btnGroup a.prev span {
+  padding-left: 10px;
+  background: url("../img/common/bg_arrow_left.png") no-repeat 0 45%;
+  background-size: 6px auto;
+}
+.btnGroup a.next span {
+  padding-right: 10px;
+  background: url("../img/common/bg_arrow_right.png") no-repeat 100% 45%;
+  background-size: 6px auto;
+}
+
+/* recommend coupon : 추천 쿠폰 */
+.recommendGroup .tabChoice {
+  margin-bottom: 30px;
+  background: #222;
+  overflow: hidden;
+}
+.recommendGroup .tabChoice li {
+  float: left;
+  width: 50%;
+}
+.recommendGroup .tabChoice li a {
+  display: block;
+  padding: 32px 0 4px 0;
+  border-bottom: 2px solid #222;
+  background: url("../img/common/bg_coupon01.png") no-repeat 50% 11px;
+  background-size: 31px auto;
+  color: #d6d6d6;
+  font-size: 8px;
+  text-align: center;
+  letter-spacing: -0.25px;
+}
+.recommendGroup .tabChoice li a span {
+  display: inline-block;
+  padding-bottom: 7px;
+}
+.recommendGroup .tabChoice li a.on {
+  border-bottom: 2px solid #f35822;
+  background: url("../img/common/bg_coupon01_on.png") no-repeat 50% 11px;
+  background-size: 31px auto;
+  color: #ff5400;
+}
+.recommendGroup .tabChoice li a.on span {
+  background: url("../img/common/bg_arrow_bottom.png") no-repeat 50% 100%;
+  background-size: 9px auto;
+}
+.recommendGroup .tabChoice li:last-child a {
+  background: url("../img/common/bg_coupon02.png") no-repeat 50% 11px;
+  background-size: 31px auto;
+}
+.recommendGroup .tabChoice li:last-child a.on {
+  background: url("../img/common/bg_coupon02_on.png") no-repeat 50% 11px;
+  background-size: 31px auto;
+}
+
+.couponBox {
+  position: relative;
+  height: 82px;
+  margin-top: 7px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background: url("../img/common/bg_couponBox_line.gif") repeat-x 0 0;
+  background-size: 1px 82px;
+}
+.couponBox:first-child {
+  margin-top: 0;
+}
+.couponBox a {
+  display: block;
+  overflow: hidden;
+}
+.couponBox .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 115px;
+  height: 82px;
+  background: url("../img/common/bg_couponBox_left.gif") no-repeat 0 0;
+  background-size: 95px 82px;
+}
+.couponBox .imgBox .thum {
+  margin: 8px 0 0 8px;
+}
+.couponBox .imgBox .thum img {
+  width: 69px;
+  height: 64px;
+}
+.couponBox .imgBox .badge {
+  position: absolute;
+  top: 27px;
+  left: 75px;
+}
+.couponBox .imgBox .badge img {
+  width: 26px;
+  height: 26px;
+}
+.couponBox .txtBox {
+  position: relative;
+  height: 71px;
+  margin: 11px 15px 0 115px;
+  color: #000;
+  font-size: 11px;
+  letter-spacing: -0.25px;
+}
+.couponBox .txtBox .company {
+  margin-bottom: 4px;
+  color: #666;
+}
+.couponBox .txtBox .company img {
+  width: auto;
+  height: 13px;
+}
+.couponBox .txtBox .txtCon {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 26px;
+}
+.couponBox .txtBox .deadline {
+  margin-top: 4px;
+  color: #666;
+  letter-spacing: -0.5px;
+}
+
+/* recommend coupon : 추천 쿠폰 상세 */
+.recommendDetail {
+  margin-top: 35px;
+}
+.recommendDetail .couponArea {
+  position: relative;
+  height: 114px;
+  margin-bottom: 24px;
+  border: 3px solid #000;
+  box-sizing: border-box;
+}
+.recommendDetail .couponArea .bgCoupon {
+  position: absolute;
+  top: -3px;
+  left: 105px;
+  width: 27px;
+  height: 123px;
+  background: url("../img/common/bg_couponDetail_line.gif") no-repeat 0 0;
+  background-size: 27px 123px;
+}
+.recommendDetail .couponArea .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105px;
+}
+.recommendDetail .couponArea .imgBox .thum {
+  padding: 9px 0 0 15px;
+}
+.recommendDetail .couponArea .imgBox .thum img {
+  width: 85px;
+  height: 91px;
+}
+.recommendDetail .couponArea .imgBox .badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.recommendDetail .couponArea .imgBox .badge img {
+  width: 26px;
+  height: 26px;
+}
+.recommendDetail .couponArea .txtBox {
+  display: table-cell;
+  height: 108px;
+  padding: 0 18px 0 142px;
+  color: #000;
+  font-size: 13px;
+  letter-spacing: -0.25px;
+  vertical-align: middle;
+}
+.recommendDetail .barCode {
+  margin-bottom: 20px;
+}
+.recommendDetail .barCode p {
+  padding-top: 6px;
+  color: #030303;
+  font-size: 18px;
+  font-weight: bold;
+}
+.recommendDetail .detailInfo {
+  padding: 10px 0 15px 0;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  color: #000;
+  font-size: 11px;
+  letter-spacing: -0.25px;
+}
+.recommendDetail .detailInfo li {
+  padding-top: 5px;
+}
+.recommendDetail .detailInfo li.exchange img {
+  height: 11px;
+}
+.recommendDetail .detailInfo span {
+  display: inline-block;
+  width: 56px;
+  color: #666;
+}
+.recommendDetail .notice {
+  margin: 15px 0 34px 0;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: -0.25px;
+}
+
+.btnDown {
+  text-align: center;
+}
+.btnDown a {
+  display: inline-block;
+  padding: 11px 43px 10px 43px;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 13px;
+}
+.btnSave a {
+  padding: 11px 54px 10px 54px;
+}
+
+/* recommend coupon : 추천 쿠폰 다운로드 완료 */
+.layerBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.8;
+  z-index: 1000;
+}
+.layerPopup .down {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 183px;
+  margin: -104px 0 0 -105px;
+  padding: 11px 15px 15px 15px;
+  background: #fff;
+  z-index: 1100;
+}
+.layerPopup .down .title {
+  padding-bottom: 11px;
+  border-bottom: 1px solid #080808;
+  color: #000;
+  font-size: 13px;
+  letter-spacing: -0.25px;
+}
+.layerPopup .down .txt {
+  margin-bottom: 39px;
+  padding-top: 67px;
+  background: url("../img/common/bg_layerpop.png") no-repeat 50% 17px;
+  background-size: 75px 39px;
+  color: #000;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: -0.25px;
+}
+.layerPopup .down .btnOk {
+  text-align: center;
+}
+.layerPopup .down .btnOk a {
+  display: inline-block;
+  padding: 9px 48px;
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+}
+.layerPopup .save .txt {
+  background: url("../img/common/bg_layerpop02.png") no-repeat 50% 18px;
+  background-size: 70px 38px;
+}
+
+/* receipt coupon : 받은 쿠폰함 - 교환/할인쿠폰 리스트 */
+.receiptTab {
+  height: 47px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.receiptTab li {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 43px;
+  text-align: center;
+}
+.receiptTab li a {
+  display: block;
+  height: 27px;
+  padding-top: 16px;
+  color: #888;
+  background: url("../img/common/bg_receiptTab01_off.gif") repeat-x 0 0;
+  font-size: 10px;
+  background-size: auto 43px;
+  letter-spacing: -0.25px;
+}
+.receiptTab li a.on {
+  color: #ff5400;
+  background: url("../img/common/bg_receiptTab01_on.gif") repeat-x 0 0;
+  background-size: auto 43px;
+}
+.receiptTab li a.on span {
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 9px;
+  height: 6px;
+  background: url("../img/common/bg_receiptTab.gif") no-repeat 0 0;
+  background-size: 9px 6px;
+}
+
+/* receipt coupon : 받은 쿠폰함 - 충전쿠폰 리스트 */
+.rechargeGroup {
+  /*display:none;*/
+}
+.numberBox {
+  margin-bottom: 30px;
+}
+.numberBox .title {
+  margin-bottom: 14px;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+}
+.numberBox .inputArea {
+  position: relative;
+}
+.numberBox .inputArea .txtArea {
+  height: 25px;
+  margin: 0 85px 7px 0;
+}
+.numberBox .inputArea .txtArea label {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  color: #797979;
+  font-size: 11px;
+}
+.numberBox .inputArea .txtArea input {
+  width: 100%;
+  height: 23px;
+  border: 0;
+  border-bottom: 2px solid #000;
+  background: url("../img/common/bg_input_line.gif") no-repeat 100% 100%;
+  background-size: 2px 8px;
+}
+.numberBox .inputArea .btnOk2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+.numberBox .inputArea .btnOk2 a {
+  display: block;
+  padding: 6px 29px 5px 30px;
+  background: #222;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: -0.25px;
+}
+.numberBox .noti {
+  color: #797979;
+  font-size: 11px;
+  letter-spacing: -0.25px;
+}
+
+.recharge .title {
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+}
+.recharge ul {
+  border-top: 1px solid #e5e5e5;
+}
+.recharge ul li {
+  position: relative;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
+  color: #797979;
+  font-size: 11px;
+  letter-spacing: -0.25px;
+}
+.recharge ul li .badge {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.recharge ul li .badge img {
+  width: 26px;
+  height: 26px;
+}
+.recharge ul li .txtArea {
+  margin: 0 48px 0 35px;
+}
+.recharge ul li .btnUse {
+  position: absolute;
+  top: 16px;
+  right: 0;
+}
+.recharge ul li .btnUse a {
+  display: block;
+  padding: 5px;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* faq */
+#wrap.faq {
+  padding: 35px 0 80px 0;
+}
+.selectArea {
+  position: relative;
+  margin: 0 15px;
+}
+.selectArea .inputTxt a {
+  display: block;
+  height: 33px;
+  border: 1px solid #000;
+  background: url("../img/common/bg_select_open01.gif") no-repeat 100% 0;
+  background-size: 39px 33px;
+  color: #666;
+  font-size: 11px;
+  font-weight: bold;
+  text-indent: 10px;
+  line-height: 35px;
+  letter-spacing: -0.5px;
+}
+.selectArea .inputTxt a.on {
+  background: url("../img/common/bg_select_close01.gif") no-repeat 100% 0;
+  background-size: 39px 33px;
+}
+
+.selectList {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+}
+.selectList ul {
+  border: 1px solid #000;
+  border-top: 0;
+  background: #fff;
+}
+.selectList ul li {
+  margin: 0 10px;
+}
+.selectList ul li a {
+  display: block;
+  padding: 12px 0;
+  border-top: 1px solid #666;
+  color: #000;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.selectList ul li:first-child a {
+  border-top: 0;
+}
+
+.faqList {
+  padding-top: 15px;
+}
+.faqList li .subject {
+  margin: 0 15px;
+  border-bottom: 1px solid #e5e5e5;
+  background: url("../img/common/bg_faq_list_off.png") no-repeat 0 50%;
+  background-size: 22px 19px;
+}
+.faqList li .subject a {
+  display: block;
+  padding: 14px 25px 14px 27px;
+  background: url("../img/common/bg_faq_list_open.png") no-repeat 100% 50%;
+  background-size: 13px 8px;
+  color: #797979;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 15px;
+  letter-spacing: -0.5px;
+}
+.faqList li .con {
+  display: none;
+  padding: 20px 15px;
+  background: #eee;
+  color: #797979;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.faqList li.on .subject {
+  border-bottom: 0;
+  background: url("../img/common/bg_faq_list_on.png") no-repeat 0 50%;
+  background-size: 22px 19px;
+}
+.faqList li.on .subject a {
+  background: url("../img/common/bg_faq_list_close.png") no-repeat 100% 50%;
+  background-size: 13px 8px;
+  color: #000;
+}
+.faqList li.on .con {
+  display: block;
+}
+
+/* notice list */
+#wrap.notice {
+  padding: 35px 15px 80px 15px;
+}
+.noticeList {
+  border-top: 1px solid #e5e5e5;
+}
+.noticeList li {
+  border-bottom: 1px solid #e5e5e5;
+}
+.noticeList li a {
+  display: block;
+  min-height: 40px;
+  padding-right: 17px;
+  background: url("../img/common/bg_arrow_right03.png") no-repeat 100% 50%;
+  background-size: 8px 13px;
+  color: #797979;
+  font-size: 11px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  letter-spacing: -0.5px;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.noticeList li a img {
+  width: 26px;
+  height: auto;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+/* notice detail */
+#wrap.noticeDetail {
+  padding: 25px 15px 80px 15px;
+}
+.noticeView .title {
+  position: relative;
+  display: table-cell;
+  height: 32px;
+  padding: 0 0 10px 30px;
+  color: #000;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+}
+.noticeView .title img {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 26px;
+  height: auto;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+.noticeView .title02 {
+  padding-bottom: 10px;
+  color: #000;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: -0.5px;
+}
+
+.noticeView .date {
+  margin-bottom: 16px;
+  color: #666;
+  font-size: 10px;
+}
+.noticeView .detailTxt {
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: -0.5px;
+}
+.noticeView .detailTxt img {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 360px) {
+  /* layout */
+  #wrap {
+    padding: 0 25px 40px 25px;
+  }
+
+  /* common */
+  .btnTop {
+    bottom: 40px;
+    right: 25px;
+  }
+
+  /* event list */
+  #wrap.event {
+    padding-bottom: 90px;
+  }
+  .event .listBox {
+    margin-top: 10px;
+    padding: 5px 5px 18px 5px;
+  }
+  .event .listBox .title {
+    margin: 22px 10px 4px 10px;
+  }
+  .event .btnMore {
+    bottom: 29px;
+    left: 25px;
+    right: 25px;
+  }
+  .event .btnMore a {
+    padding: 10px 0 9px 0;
+  }
+
+  /* event detail */
+  #wrap.eventDetail {
+    padding-bottom: 105px;
+  }
+  .eventDetail .detail {
+    padding-top: 30px;
+  }
+  .eventDetail .detail .sledding {
+    padding-bottom: 20px;
+  }
+  .eventDetail .detail .detailTxt {
+    padding: 15px 0 30px 0;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .btnGroup {
+    bottom: 40px;
+  }
+  .btnGroup a {
+    padding: 6px 14px 5px 14px;
+  }
+  .btnGroup a.prev span {
+    background-position: 0 38%;
+  }
+  .btnGroup a.next span {
+    background-position: 100% 38%;
+  }
+
+  /* recommend coupon : 추천 쿠폰 */
+  .recommendGroup .tabChoice {
+    margin-bottom: 35px;
+  }
+  .recommendGroup .tabChoice li a {
+    padding: 36px 0 5px 0;
+    background: url("../img/common/bg_coupon01.png") no-repeat 50% 11px;
+    background-size: 31px auto;
+    font-size: 9px;
+  }
+  .recommendGroup .tabChoice li a span {
+    padding-bottom: 9px;
+  }
+
+  .recommendList {
+    margin: 0 10px;
+  }
+  .couponBox {
+    height: 92px;
+    margin-top: 10px;
+    background-size: 1px 92px;
+  }
+  .couponBox .imgBox {
+    width: 125px;
+    height: 92px;
+    background-size: 103px 92px;
+  }
+  .couponBox .imgBox .thum {
+    margin: 11px 0 0 10px;
+  }
+  .couponBox .imgBox .thum img {
+    width: 75px;
+    height: 70px;
+  }
+  .couponBox .imgBox .badge {
+    top: 32px;
+    left: 81px;
+  }
+  .couponBox .imgBox .badge img {
+    width: 29px;
+    height: 29px;
+  }
+  .couponBox .txtBox {
+    height: 76px;
+    margin: 16px 20px 0 125px;
+    font-size: 12px;
+  }
+  .couponBox .txtBox .company {
+    margin-bottom: 2px;
+  }
+  .couponBox .txtBox .company img {
+    width: auto;
+    height: 15px;
+  }
+  .couponBox .txtBox .txtCon {
+    height: 28px;
+  }
+  .couponBox .txtBox .deadline {
+    letter-spacing: -1px;
+  }
+
+  /* recommend coupon : 추천 쿠폰 상세 */
+  .recommendDetail {
+    margin-top: 40px;
+  }
+  .recommendDetail .couponArea {
+    height: 130px;
+  }
+  .recommendDetail .couponArea .bgCoupon {
+    left: 109px;
+    height: 139px;
+    background: url("../img/common/bg_couponDetail_line02.gif") no-repeat 0 0;
+    background-size: 27px 139px;
+  }
+  .recommendDetail .couponArea .imgBox {
+    width: 109px;
+  }
+  .recommendDetail .couponArea .imgBox .thum {
+    padding: 10px 0 0 10px;
+  }
+  .recommendDetail .couponArea .imgBox .thum img {
+    width: 98px;
+    height: 104px;
+  }
+  .recommendDetail .couponArea .txtBox {
+    height: 124px;
+    padding: 0 22px 0 145px;
+    font-size: 15px;
+  }
+  .recommendDetail .barCode {
+    margin-bottom: 22px;
+  }
+  .recommendDetail .barCode p {
+    padding-top: 8px;
+    font-size: 20px;
+  }
+  .recommendDetail .detailInfo {
+    padding: 7px 0 15px 0;
+    font-size: 12px;
+  }
+  .recommendDetail .detailInfo li {
+    padding-top: 8px;
+  }
+  .recommendDetail .detailInfo li.exchange img {
+    height: 12px;
+  }
+  .recommendDetail .detailInfo span {
+    width: 57px;
+  }
+  .recommendDetail .notice {
+    margin: 20px 0 40px 0;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+  }
+
+  .btnDown a {
+    padding: 12px 48px 11px 48px;
+    font-size: 15px;
+  }
+  .btnSave a {
+    padding: 12px 60px 11px 60px;
+  }
+
+  /* recommend coupon : 추천 쿠폰 다운로드 완료 */
+  .layerPopup .down {
+    width: 206px;
+    height: 203px;
+    margin: -115px 0 0 -118px;
+    padding: 12px 15px 15px 15px;
+  }
+  .layerPopup .down .title {
+    padding-bottom: 8px;
+    font-size: 15px;
+  }
+  .layerPopup .down .txt {
+    margin-bottom: 43px;
+    padding-top: 79px;
+    background-position: 50% 26px;
+    background-size: 78px 42px;
+    font-size: 12px;
+  }
+  .layerPopup .down .btnOk a {
+    padding: 10px 55px;
+    font-size: 12px;
+  }
+  .layerPopup .save .txt {
+    background: url("../img/common/bg_layerpop02.png") no-repeat 50% 25px;
+    background-size: 75px 43px;
+  }
+
+  /* receipt coupon : 받은 쿠폰함 - 교환/할인쿠폰 리스트 */
+  .receiptGroup {
+    /*display:none;*/
+    margin: 0 10px;
+  }
+  .receiptTab {
+    height: 52px;
+    margin-bottom: 14px;
+  }
+  .receiptTab li {
+    height: 47px;
+  }
+  .receiptTab li a {
+    height: 30px;
+    padding-top: 17px;
+    background: url("../img/common/bg_receiptTab02_off.gif") repeat-x 0 0;
+    font-size: 11px;
+    background-size: 1px 47px;
+  }
+  .receiptTab li a.on {
+    background: url("../img/common/bg_receiptTab02_on.gif") repeat-x 0 0;
+    background-size: 1px 47px;
+  }
+
+  /* receipt coupon : 받은 쿠폰함 - 충전쿠폰 리스트 */
+  .numberBox {
+    margin-bottom: 35px;
+  }
+  .numberBox .inputArea .txtArea {
+    height: 30px;
+    margin: 0 87px 7px 0;
+  }
+  .numberBox .inputArea .txtArea label {
+    top: 8px;
+    font-size: 12px;
+  }
+  .numberBox .inputArea .txtArea input {
+    height: 28px;
+  }
+  .numberBox .inputArea .btnOk2 a {
+    padding: 8px 29px 8px 30px;
+    font-size: 12px;
+  }
+
+  .recharge ul li {
+    padding: 13px 0 14px 0;
+    font-size: 12px;
+  }
+  .recharge ul li .badge {
+    top: 13px;
+  }
+  .recharge ul li .badge img {
+    width: 29px;
+    height: 29px;
+  }
+  .recharge ul li .txtArea {
+    margin: 0 66px 0 39px;
+  }
+  .recharge ul li .btnUse {
+    top: 10px;
+    right: 0;
+  }
+  .recharge ul li .btnUse a {
+    padding: 10px;
+  }
+
+  /* faq */
+  #wrap.faq {
+    padding: 40px 0 90px 0;
+  }
+  .selectArea {
+    margin: 0 25px;
+  }
+  .selectArea .inputTxt a {
+    height: 38px;
+    background: url("../img/common/bg_select_open02.gif") no-repeat 100% 0;
+    background-size: 39px 38px;
+    font-size: 12px;
+    line-height: 38px;
+  }
+  .selectArea .inputTxt a.on {
+    background: url("../img/common/bg_select_close02.gif") no-repeat 100% 0;
+    background-size: 39px 38px;
+  }
+
+  .selectList {
+    top: 40px;
+  }
+  .selectList ul li a {
+    padding: 14px 0;
+    font-size: 12px;
+  }
+
+  .faqList li .subject {
+    margin: 0 25px;
+  }
+  .faqList li .subject a {
+    padding: 15px 25px 16px 30px;
+    color: #666;
+    font-size: 12px;
+  }
+  .faqList li .con {
+    padding: 20px 25px;
+    background: #eee;
+    color: #666;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  /* notice list */
+  #wrap.notice {
+    padding: 40px 25px 90px 25px;
+  }
+  .noticeList {
+    border-top: 1px solid #c7c7c7;
+  }
+  .noticeList li {
+    border-bottom: 1px solid #c7c7c7;
+  }
+  .noticeList li a {
+    min-height: 45px;
+    padding-right: 17px;
+    background: url("../img/common/bg_arrow_right02.png") no-repeat 100% 50%;
+    background-size: 8px 13px;
+    color: #666;
+    font-size: 12px;
+    line-height: 45px;
+  }
+  .noticeList li a img {
+    width: 29px;
+  }
+
+  /* notice detail */
+  #wrap.noticeDetail {
+    padding: 30px 25px 90px 25px;
+  }
+  .noticeView .title {
+    padding: 0 0 10px 33px;
+  }
+  .noticeView .title img {
+    top: 0;
+    width: 29px;
+  }
+
+  .noticeView .date {
+    margin-bottom: 19px;
+    color: #535353;
+    font-size: 11px;
+  }
+  .noticeView .detailTxt {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}

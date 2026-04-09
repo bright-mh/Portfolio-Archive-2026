@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.sub_gpPop #wrap {
+  min-width: 973px;
+}
+.sub_gpPop .tabDetailGroup .layerTwo {
+  margin: 0;
+  padding: 15px 0;
+}
+.sub_gpPop .tabBox {
+  margin: 20px 20px 0 20px;
+  border-bottom: 2px solid #d5dade;
+}
+.sub_gpPop .btn_timeList li a {
+  padding: 0 9px;
+}
+.sub_gpPop .btn_search {
+  position: absolute;
+  top: 15px;
+  left: 837px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sub_gpPop .BoxArea {
+  position: relative;
+  margin: 20px 20px 0 20px;
+  border-bottom: 2px solid #d5dade;
+}
+.sub_gpPop .BoxArea h1 {
+  margin: 0 0 10px 0;
+  color: #19191a;
+  font-size: 14px;
+  font-weight: bold;
+}
+.sub_gpPop .pagination {
+  margin: 20px 0 0 0;
+}
+
+.sub_gpPop .btn_area02 {
+  margin: 20px 0 0 0;
+  padding: 0 0 20px 0;
+  text-align: center;
+}

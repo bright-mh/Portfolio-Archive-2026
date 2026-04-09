@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>가스 사용량 | 에너지 모니터링 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/mo.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <!-- 2014-01-07 chart 공통 -->
+    <script>
+      jQuery(function () {
+        jQuery("#chart01").highcharts({
+          credits: { enabled: false },
+          chart: {
+            type: "spline",
+            spacing: [40, 0, 0, 0],
+            events: {
+              load: function (event) {
+                onChartLoaded("chart01");
+              },
+            }, // 2014-01-07 폰트 통일을 위해 추가
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          yAxis: {
+            lineWidth: 1,
+            title: {
+              text: " N㎥",
+            },
+            min: 0,
+            max: 10,
+            minorGridLineWidth: 0,
+            gridLineWidth: 1,
+            alternateGridColor: null,
+            tickInterval: 1,
+            tickColor: "#cccccc",
+          },
+          xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+              day: "%H:%M", //2014-01-06  x축 시간 표기 날짜 수정
+              hour: "%H:%M", //2014-01-06  x축 시간 표기 날짜 수정
+            },
+            maxZoom: 30 * 60 * 1000,
+            //tickInterval: 2 * 60 * 60 * 1000   //2014-01-06 X축 시간 간격 자동으로 설정
+            tickWidth: 0, //2014-01-06  x축 숫자와 그래프 사이 라인삭제
+            labels: {
+              style: {
+                "font-size": "11px", //2014-01-06 X축 사이즈 수정
+              },
+            },
+          },
+          plotOptions: {
+            line: {
+              lineWidth: 1,
+              states: {
+                hover: {
+                  lineWidth: 1,
+                },
+              },
+              marker: BC.marker01, // 2014-01-07 marker 통일
+            },
+          },
+
+          tooltip: {
+            valueSuffix: " N㎥",
+            dateTimeLabelFormats: {
+              hour: "%H:%M",
+            },
+            shared: false,
+            useHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat:
+              "<p>" +
+              '<span style="color: {series.color}">{series.name}: </span>' +
+              '<span style="text-align: right"> {point.y} </span> ' +
+              "</p> ",
+            footerFormat: "",
+            valueDecimals: 2,
+          },
+          labels: {
+            items: [
+              {
+                html: "누적 사용량 비율",
+                style: {
+                  left: "22px", //2014-01-06 누적 사용량 위치 변경
+                  top: "-22px",
+                  color: "#646566", //2014-01-06 누적 사용량 컬러 변경
+                  fontWeight: "bold",
+                  fontSize: "11px", //2014-01-06 누적 사용량 폰트 사이즈 변경
+                },
+              },
+            ],
+          },
+
+          series: [
+            {
+              name: "냉난방",
+              data: [
+                0.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 4.3, 5.1, 4.3, 5.2, 5.4,
+                4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9,
+                3.5, 5.1, 3.9, 4.9, 3.5, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 5.1, 3.9, 4.9, 3.9, 4.9, 3.5,
+                4.7, 4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 4.9, 3.5, 5.1, 3.9, 4.9, 3.9, 4.9, 3.5, 4.7, 4.3, 5.1, 4.3,
+                5.4, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7,
+              ],
+              marker: BC.marker01, // 2014-01-07 marker 통일
+              pointStart: Date.UTC(2013, 11, 14),
+              pointInterval: 15 * 60 * 1000,
+            },
+            {
+              name: "급탕",
+              data: [
+                4.3, 4.7, 4.3, 5.1, 4.3, 5.4, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 4.3, 5.1, 4.3, 5.2,
+                5.4, 4.7, 3.5, 4.1, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 4.4,
+                4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 5.2, 5.4, 2.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 2.9, 5.1, 3.9, 4.9, 3.5, 4.7,
+                4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 5.2, 5.4, 4.7, 3.5, 4.1, 2.9, 5.1, 3.9, 4.9, 3.5, 4.7, 4.3, 5.2, 5.4,
+                4.7, 3.5, 4.1, 5.6, 4.7, 4.7, 3.5, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 5.1, 3.9, 4.9,
+              ],
+              marker: BC.marker01, // 2014-01-07 marker 통일
+              pointStart: Date.UTC(2013, 11, 14),
+              pointInterval: 15 * 60 * 1000,
+            },
+            {
+              name: "취사",
+              data: [
+                4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 4.3, 5.1, 4.3, 5.2, 5.4,
+                4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 4.4,
+                4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 9.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5,
+                4.7, 4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 2.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7, 4.3, 5.1, 4.3, 5.2,
+                5.4, 4.7, 3.5, 4.1, 5.6, 4.4, 4.9, 5.1, 3.9, 4.9, 3.5, 4.7,
+              ],
+              marker: BC.marker01, // 2014-01-07 marker 통일
+              pointStart: Date.UTC(2013, 11, 14),
+              pointInterval: 15 * 60 * 1000,
+            },
+            {
+              type: "pie",
+              name: "누적 사용량 비율",
+              data: [
+                {
+                  name: "냉난방",
+                  y: 30,
+                  color: "#2058a4", // HY-1 color: Highcharts.getOptions().colors[0] // HY-1
+                },
+                {
+                  name: "급탕",
+                  y: 17,
+                  color: "#4682ee", // 일반동력
+                },
+                {
+                  name: "취사",
+                  y: 19,
+                  color: "#149bbe", // 냉동동력
+                },
+              ],
+              center: [50, 30], // 그래프의 x, y 좌표
+              size: 100,
+              showInLegend: false,
+              dataLabels: {
+                enabled: false,
+              },
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            borderColor: "#FFFFFF",
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#777777",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#777777",
+              fontWeight: "normal",
+            },
+          },
+          navigation: {
+            menuItemStyle: {
+              fontSize: "11px",
+            },
+          },
+          exporting: {
+            buttons: {
+              contextButton: {
+                align: "right",
+                y: -40,
+                x: -22,
+              },
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title01.gif" alt="에너지 모니터링" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02">
+              <a href="#link"><span>에너지원 별 사용량</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>목표대비 사용량</span></a>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>전기 사용량</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>계통 별 전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기 사용패턴</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>층별 전기사용량</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02 on">
+              <a href="#link"><span>가스 사용량</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>실내외 온도/습도</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>가스 사용량</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>에너지 모니터링<span>&gt;</span></li>
+                <li class="last">가스 사용량</li>
+              </ul>
+            </div>
+
+            <!-- 도움말, 인쇄, 북마크 -->
+            <div class="clear">
+              <ul class="sideList">
+                <li class="sideStyle01"><a href="#link">도움말</a></li>
+                <li class="sideStyle02"><a href="#link">인쇄</a></li>
+                <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                <li class="sideStyle03"><a href="#link">북마크</a></li>
+              </ul>
+            </div>
+            <!-- //도움말, 인쇄, 북마크 -->
+
+            <!-- 차트 영역 -->
+            <section class="BoxArea mt10">
+              <div class="boxBg">
+                <!--차트 삽입부분 : 높이 380px / visibility:hidden -->
+                <div id="chart01" style="min-width: 310px; height: 380px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //차트 영역 -->
+
+            <!-- 누적 사용량&주요정보 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!-- 누적 사용량 -->
+                <article class="tableGroup01">
+                  <h2>누적 사용량<span class="titleInfo">오늘 00:00 ~ 20:15까지의 누적 사용량</span></h2>
+                  <!-- [D] 가스 : class="accColor_gas" / 전기 : class="accColor_ele" -->
+                  <ul class="accumulate">
+                    <li class="accColor01">
+                      <span class="acc_Style01">냉난방</span>
+                      <span class="acc_Style02">288</span> <span class="acc_Style03">N㎥</span>
+                    </li>
+                    <li class="accColor02">
+                      <span class="acc_Style01">급탕</span>
+                      <span class="acc_Style02">199</span> <span class="acc_Style03">N㎥</span>
+                    </li>
+                    <li class="accColor03">
+                      <span class="acc_Style01">취사</span>
+                      <span class="acc_Style02">38</span> <span class="acc_Style03">N㎥</span>
+                    </li>
+                  </ul>
+                </article>
+                <!-- //누적 사용량 -->
+
+                <!-- 주요정보 -->
+                <article class="tableGroup01 mt40">
+                  <h2>주요정보<span class="titleInfo">오늘 00:00 ~ 20:15까지의 가스 사용량 주요정보</span></h2>
+                  <table class="table_style01">
+                    <caption class="blind">
+                      가스 사용량 주요정보
+                    </caption>
+                    <colgroup>
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 17%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col" colspan="2">최대</th>
+                        <th scope="col" colspan="2">최소</th>
+                        <th scope="col">평균</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="thStyle">냉난방</th>
+                        <td>13:15</td>
+                        <td>19,000.23 N㎥</td>
+                        <td>13:15</td>
+                        <td>19,000.23 N㎥</td>
+                        <td>19,000.23 N㎥</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="thStyle">급탕</th>
+                        <td>13:15</td>
+                        <td>19,000.23 N㎥</td>
+                        <td>13:15</td>
+                        <td>19,000.23 N㎥</td>
+                        <td>19,000.23 N㎥</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="thStyle">취사</th>
+                        <td>13:15</td>
+                        <td>19,000.23 N㎥</td>
+                        <td>13:15</td>
+                        <td>19,000.23 N㎥</td>
+                        <td>19,000.23 N㎥</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+                <!-- //주요정보 -->
+              </div>
+            </section>
+            <!-- //누적 사용량&주요정보 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

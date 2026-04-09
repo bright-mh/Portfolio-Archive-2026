@@ -1,0 +1,1007 @@
+@charset "utf-8";
+
+/* layout */
+.sub {
+  position: relative;
+  padding: 0 0 25px 0;
+}
+
+/* sub_사이트 바로가기 */
+.sub_header {
+  position: relative;
+  height: 31px;
+}
+.sub_header h1 {
+  padding: 4px 0 0 0;
+  color: #7375c2;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.sub_header .btn_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 31px;
+  height: 31px;
+}
+.sub_header .btn_go {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 31px;
+  height: 31px;
+}
+
+.sub_content {
+  margin: 20px 0 0 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+}
+.sub_content .siteList {
+  padding: 0 8px 15px 15px;
+}
+.sub_content .siteList ul {
+  width: 100%;
+  overflow: hidden;
+}
+.sub_content .siteList li {
+  float: left;
+  width: 33.33%;
+  margin: 15px 0 0 0;
+  text-align: center;
+}
+.sub_content .siteList li a {
+  display: inline-block;
+  width: 93px;
+  margin: 0 7px 0 0;
+}
+.sub_content .siteList li img {
+  width: 93px;
+  height: 60px;
+  border-radius: 3px;
+}
+.sub_content .siteList li img.imgStyle02 {
+  width: 93px;
+  height: 67px;
+  border-radius: 3px;
+}
+.sub_content .siteList li .subSc {
+  display: block;
+  width: 100%;
+  height: 16px;
+  margin-top: -16px;
+  border-radius: 0 0 3px 3px;
+  background: #616161;
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.3px;
+  line-height: 16px;
+}
+.sub_content .siteList li .movieTxt {
+  display: block;
+  height: 30px;
+  margin: 10px 0 0 0;
+  font-size: 11.5px;
+  text-align: left;
+  line-height: 15px;
+  letter-spacing: -0.5px;
+  overflow: hidden;
+}
+
+/* sub_사이트 추가 */
+.sub_content02 {
+  margin: 20px 0 0 0;
+}
+.siteAdd {
+  padding: 0 14px;
+}
+.siteAdd p {
+  height: 41px;
+  margin: 0 0 10px 0;
+  padding: 0 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 7px;
+}
+.siteAdd input[type="text"] {
+  width: 100%;
+  height: 41px;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+.siteAdd input[value] {
+  color: #b3b4dc;
+}
+
+/* 날씨 */
+.weatherBox {
+  padding: 15px;
+}
+.weatherBox .weatherGroup01 {
+  overflow: hidden;
+}
+.weatherBox .weatherLocation {
+  float: left;
+  padding: 0 0 13px 0;
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.weatherBox .weatherLocation img.weatherIcon {
+  width: 21px;
+  height: 21px;
+}
+.weatherBox .weatherLocation .location {
+  display: inline-block;
+  margin: 2px 0 0 0;
+  padding: 0 0 0 5px;
+  vertical-align: middle;
+}
+.weatherBox .locationSetup img {
+  width: 13px;
+  height: 13px;
+  padding: 4px 0 0 5px;
+}
+.weatherBox .presentDate {
+  float: right;
+  color: #777;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 13px;
+  letter-spacing: -0.5px;
+}
+.weatherBox .presentDate span {
+  display: inline-block;
+  padding: 3px 0 0 0;
+}
+.weatherBox .presentDate a {
+  display: inline-block;
+  margin: 2px 0 0 5px;
+}
+.weatherBox .presentDate a img.weatherRefresh {
+  width: 13px;
+  height: 13px;
+}
+.weatherBox .weatherGroup02 {
+  border-top: 2px solid #78baa9;
+  padding: 13px 0 0 0;
+  overflow: hidden;
+}
+.weatherBox .presentTemperature {
+  float: left;
+  margin: 0 0 15px 0;
+  padding: 4px 0 0 0;
+  color: #78baa9;
+  font-size: 63px;
+  font-weight: bold;
+  line-height: 53px;
+  letter-spacing: -6px;
+}
+.weatherBox ul.weatherChart {
+  float: right;
+  overflow: hidden;
+}
+.weatherBox ul.weatherChart li {
+  float: left;
+  margin: 0 0 0 5px;
+}
+.weatherBox ul.weatherChart li:nth-child(1) {
+  margin: 0;
+}
+.weatherBox ul.weatherChart li img {
+  width: 47px;
+  height: 47px;
+}
+.weatherBox ul.weatherChart li span {
+  display: block;
+  padding: 2px 0 0 0;
+  color: #78baa9;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 14px;
+  letter-spacing: -0.3px;
+}
+
+.weatherListBox {
+  margin: 10px 0 0 0;
+  padding: 15px 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+.weatherListBox li.listStyle {
+  padding: 20px 15px 16px 15px;
+  border-top: 1px solid #d6d6d6;
+  overflow: hidden;
+}
+.weatherListBox li.listStyle:nth-child(1) {
+  border-top: none;
+}
+.weatherListBox li.listStyle .listDate {
+  float: left;
+  margin: 0 15px 0 0;
+  text-align: center;
+}
+.weatherListBox li.listStyle .listDate img {
+  width: 38px;
+  height: 38px;
+}
+.weatherListBox li.listStyle .listDate span {
+  display: block;
+  margin: 3px 0 0 0;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.weatherListBox li.listStyle .weatherListGroup {
+  overflow: hidden;
+}
+.weatherListBox li.listStyle .weatherListGroup li {
+  float: left;
+  text-align: center;
+}
+.weatherListBox li.listStyle .weatherListGroup li.icon_Listweather {
+  width: 24.3%;
+}
+.weatherListBox li.listStyle .weatherListGroup li.icon_Listweather img {
+  width: 50px;
+  height: 50px;
+  margin-top: -3px;
+}
+.weatherListBox li.listStyle .weatherListGroup li.temperature {
+  width: 43.8%;
+  color: #000;
+  font-size: 43px;
+  font-weight: bold;
+  letter-spacing: -3px;
+}
+.weatherListBox li.listStyle .weatherListGroup li.rainfall {
+  width: 18.6%;
+  padding: 5px 0 0 0;
+}
+.weatherListBox li.listStyle .weatherListGroup li.rainfall img {
+  width: 24px;
+  height: 24px;
+}
+.weatherListBox li.listStyle .weatherListGroup li.rainfall span {
+  display: block;
+  padding: 5px 0 0 0;
+  font-size: 10px;
+  color: #777;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.weatherListBox li.listStyle .weatherListGroup li.humidity {
+  width: 13.3%;
+  padding: 5px 0 0 0;
+}
+.weatherListBox li.listStyle .weatherListGroup li.humidity img {
+  width: 24px;
+  height: 24px;
+}
+.weatherListBox li.listStyle .weatherListGroup li.humidity span {
+  display: block;
+  padding: 5px 0 0 0;
+  font-size: 10px;
+  color: #777;
+  font-weight: bold;
+}
+
+/* 오늘 뭘 듣지? */
+.musicTheme {
+  padding: 15px;
+}
+.musicTheme h2 {
+  margin: 0 0 15px 0;
+  color: #2e2e2e;
+  font-size: 15px;
+  font-weight: bold;
+}
+.musicTheme .themeContents {
+  position: relative;
+  min-height: 95px;
+}
+.musicTheme .themeContents img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 89px;
+  height: 89px;
+  border-radius: 3px;
+}
+.musicTheme .themeContents div {
+  margin: 0 0 0 105px;
+  color: #777;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.musicListBox {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+.musicListBox .allPlay {
+  padding: 11px 15px 10px 15px;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px 10px 0 0;
+  background: #ededed;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 13px;
+}
+.musicListBox .allPlay a {
+  display: inline-block;
+  padding: 0 18px 0 0;
+  background: url(../images/bg_allPlay.gif) no-repeat 100% 0;
+  background-size: contain;
+}
+.musicListBox .musicListGroup li.listStyle {
+  min-height: 45px;
+  padding: 6px 15px;
+  overflow: hidden;
+  border: 1px solid #d6d6d6;
+  border-bottom: none;
+  background: #ededed;
+}
+.musicListBox .musicListGroup li.listStyle:nth-child(1) {
+  border-top: none;
+}
+.musicListBox .musicListGroup li.listStyle:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+.musicListBox .musicListGroup li.listStyle:last-child {
+  padding-bottom: 11px;
+  border: 1px solid #d6d6d6;
+  border-radius: 0 0 10px 10px;
+}
+.musicListBox .musicListGroup li.listStyle .musicInfo {
+  position: relative;
+  float: left;
+}
+.musicListBox .musicListGroup li.listStyle .musicInfo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 2px;
+}
+.musicListBox .musicListGroup li.listStyle .musicInfo p {
+  margin: 0 0 0 55px;
+  padding: 2px 0 0 0;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+}
+.musicListBox .musicListGroup li.listStyle .musicInfo p span {
+  display: block;
+  color: #a9a9a9;
+  font-size: 12px;
+  font-weight: bold;
+}
+.musicListBox .musicListGroup li.listStyle .choice {
+  float: right;
+  overflow: hidden;
+}
+.musicListBox .musicListGroup li.listStyle .choice li {
+  float: left;
+  margin: 0 0 0 10px;
+  padding: 10px 0 0 0;
+}
+.musicListBox .musicListGroup li.listStyle .choice li:nth-child(1) {
+  margin: 0;
+}
+.musicListBox .musicListGroup li.listStyle .choice li img {
+  width: 25px;
+  height: 25px;
+}
+
+/* sub_오늘 하루 특가 */
+.sub_todayTime {
+  margin: 20px 0 0 0;
+  padding: 20px 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  text-align: center;
+}
+.sub_todayTime .todayTimeBox {
+  display: inline-block;
+}
+.sub_todayTime h2 {
+  margin: 0 0 15px 0;
+  padding: 0 0 0 23px;
+  background: url(../images/icon_time.gif) 0 0 no-repeat;
+  background-size: contain;
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+}
+.sub_todayTime span.timeNum {
+  display: inline-block;
+  width: 30px;
+  height: 46px;
+  margin: 0 5px 0 0;
+  border-radius: 1px;
+  background: #ed9249;
+  color: #fff;
+  font-size: 43px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 46px;
+}
+.sub_todayTime span.timeDivision {
+  display: inline-block;
+  width: 4px;
+  height: 46px;
+  margin: 0 8px 0 10px;
+  padding: 0;
+  background: url(../images/bg_timeLine.gif) no-repeat 0 0;
+  background-size: contain;
+  font-size: 43px;
+  text-indent: -99999999px;
+}
+.sub_todayTime span:nth-child(2),
+.sub_todayTime span:nth-child(5),
+.sub_todayTime span:nth-child(8) {
+  margin: 0;
+}
+
+.todayListBox {
+  margin: 10px 0 0 0;
+}
+.todayListBox li {
+  position: relative;
+  margin: 20px 0 0 0;
+}
+.todayListBox li:nth-child(1) {
+  margin: 0;
+}
+.todayListBox img {
+  width: 100%;
+  border-radius: 10px;
+}
+.todayListBox .discount {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 63px;
+  height: 39px;
+  padding: 25px 0 0 0;
+  border-radius: 0 0 32px 32px;
+  background: #ed9249;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 21px;
+}
+.todayListBox .goodsInfo {
+  margin: 8px 0 0 0;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  overflow: hidden;
+  line-height: 18px;
+}
+.todayListBox .goodsInfo span.goodsName {
+  display: block;
+  float: left;
+  color: #000;
+}
+.todayListBox .goodsInfo span.goodsPrice {
+  display: block;
+  float: right;
+  color: #ed9249;
+}
+
+/* sub_화제의 영상 */
+.movieListBox {
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+.movieListBox li {
+  position: relative;
+  min-height: 67px;
+  padding: 10px 15px;
+  border-top: 1px solid #d6d6d6;
+}
+.movieListBox li:nth-child(1) {
+  border-top: none;
+}
+.movieListBox li a {
+  display: inline-block;
+  margin: 0 0 0 103px;
+}
+.movieListBox li img {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 93px;
+  height: 67px;
+  border-radius: 3px;
+}
+.movieListBox li .txtBox {
+  font-size: 13px;
+  margin-top: -2px;
+  letter-spacing: -1px;
+  line-height: 18px;
+}
+.movieListBox li .txtBox .movieContent {
+  margin: 0 0 8px 0;
+  color: #525252;
+}
+.movieListBox li .txtBox .movieTitle {
+  color: #000;
+  font-weight: bold;
+}
+
+/* sub_주요 뉴스 */
+.newsListBox {
+  margin: 10px 0 0 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+.newsListBox li {
+  position: relative; /*min-height:67px;*/
+  padding: 10px 15px;
+  border-top: 1px solid #d6d6d6;
+}
+.newsListBox li:nth-child(1) {
+  border-top: none;
+}
+.newsListBox li a {
+  display: inline-block;
+  margin: 0;
+}
+.newsListBox li .txtBox {
+  /*margin-top:-2px;*/
+  line-height: 18px;
+}
+.newsListBox li .txtBox .newsTitle {
+  margin: 0 0 8px 0;
+  color: #000;
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+.newsListBox li .txtBox .newsContent {
+  color: #444;
+  font-size: 12px;
+}
+.newsListBox li .txtBox .newsInfo {
+  color: #888;
+  font-size: 12px;
+}
+.newsListBox li.newsTypeImg {
+  min-height: 80px;
+}
+.newsListBox li.newsTypeImg a {
+  display: inline-block;
+  margin: 0 0 0 90px;
+}
+.newsListBox li.newsTypeImg img {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 2px;
+}
+
+/* sub_버튼 */
+.btm_click {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 43px;
+  border-radius: 7px 7px 0 0;
+  background: #7375c2;
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+.btm_click a {
+  display: block;
+  height: 33px;
+  padding: 10px 0 0 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+.btm_click a span {
+  padding: 0 0 0 28px;
+  background: url(../images/bg_warning.png) 0 0 no-repeat;
+  background-size: contain;
+}
+
+.btnBox {
+  text-align: center;
+}
+.btnBox a {
+  display: block;
+  width: 46.5%; /*width:137px;*/
+  height: 34px;
+  padding: 0;
+  border: 1px solid #7375c2;
+  border-radius: 17px;
+  background: #7375c2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 34px;
+}
+.btnBox a.btn_ok {
+  float: left;
+}
+.btnBox a.btn_cancle {
+  float: right;
+  border-color: #777;
+  background: #777;
+}
+
+/* color */
+.colorWeather {
+  color: #78baa9 !important;
+}
+.colorWeatherbg {
+  background-color: #78baa9 !important;
+}
+.colorMusic {
+  color: #2e2e2e !important;
+}
+.colorMusicbg {
+  background-color: #2e2e2e !important;
+}
+.colorOrange {
+  color: #ed9249 !important;
+}
+.colorOrangebg {
+  background-color: #ed9249 !important;
+}
+.colorMovie {
+  color: #c4c34d !important;
+}
+.colorMoviebg {
+  background-color: #c4c34d !important;
+}
+.colorNews {
+  color: #89c7ee !important;
+}
+.colorNewsbg {
+  background-color: #89c7ee !important;
+}
+
+/* 320 이하 */
+@media only screen and (max-width: 320px) {
+  /* layout */
+  .sub {
+    position: relative;
+    padding: 0 0 17px 0;
+  }
+
+  /* sub_사이트 바로가기 */
+  .sub_content .siteList {
+    padding: 0 7px 13px 13px;
+  }
+  .sub_content .siteList li {
+    float: left;
+    width: 33.33%;
+    margin: 13px 0 0 0;
+    text-align: center;
+  }
+  .sub_content .siteList li a {
+    display: inline-block;
+    width: 83px;
+    margin: 0 6px 0 0;
+  }
+  .sub_content .siteList li img {
+    width: 83px;
+    height: 53px;
+    border-radius: 3px;
+  }
+  .sub_content .siteList li img.imgStyle02 {
+    width: 85px;
+    height: 60px;
+    border-radius: 3px;
+  }
+  .sub_content .siteList li .subSc {
+    display: block;
+    width: 100%;
+    height: 14px;
+    margin-top: -14px;
+    border-radius: 0 0 3px 3px;
+    background: #616161;
+    -webkit-opacity: 0.8;
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -0.3px;
+    line-height: 14px;
+  }
+
+  /* sub_사이트 추가 */
+  .siteAdd {
+    padding: 0 13px;
+  }
+
+  /* 날씨 */
+  .weatherBox .presentTemperature {
+    float: left;
+    margin: 0 0 15px 0;
+    padding: 4px 0 0 0;
+    color: #78baa9;
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 45px;
+    letter-spacing: -6px;
+  }
+  .weatherBox ul.weatherChart li img {
+    width: 42px;
+    height: 42px;
+  }
+  .weatherBox ul.weatherChart li span {
+    display: block;
+    padding: 2px 0 0 0;
+    color: #78baa9;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 14px;
+    letter-spacing: -0.3px;
+  }
+
+  .weatherListBox li.listStyle .listDate {
+    float: left;
+    margin: 0 12px 0 0;
+    text-align: center;
+  }
+
+  /* sub_오늘 하루 특가 */
+
+  /* sub_화제의 영상 */
+  .movieListBox {
+    margin: 10px 0 0 0;
+    padding: 10px 0;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    background: #f7f7f7;
+  }
+  .movieListBox li {
+    position: relative;
+    min-height: 60px;
+    padding: 9px 13px 9px 13px;
+    border-top: 1px solid #d6d6d6;
+  }
+  .movieListBox li a {
+    display: inline-block;
+    margin: 0 0 0 93px;
+  }
+  .movieListBox li img {
+    display: inline-block;
+    position: absolute;
+    top: 9px;
+    left: 13px;
+    width: 85px;
+    height: 60px;
+    border-radius: 3px;
+  }
+  .movieListBox li .txtBox {
+    font-size: 13px;
+    margin-top: -1px;
+    letter-spacing: -1px;
+    line-height: 17px;
+  }
+
+  /* sub_주요 뉴스 */
+  .newsListBox li {
+    position: relative;
+    padding: 10px 13px;
+    border-top: 1px solid #d6d6d6;
+  }
+  .newsListBox li.newsTypeImg {
+    min-height: 72px;
+  }
+  .newsListBox li.newsTypeImg a {
+    display: inline-block;
+    margin: 0 0 0 82px;
+  }
+  .newsListBox li.newsTypeImg img {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    width: 72px;
+    height: 72px;
+    border-radius: 2px;
+  }
+}
+
+/* 480 이상 */
+@media only screen and (min-width: 480px) {
+  body {
+    width: 422px;
+    margin: 0 auto;
+  }
+
+  /* 사이트 바로가기 */
+  .sub_content .siteList {
+    padding: 0 6px 15px 6px;
+  }
+  .sub_content .siteList li a {
+    display: inline-block;
+    width: 93px;
+    margin: 0 21px;
+  }
+
+  /* sub_사이트 추가 */
+  .siteAdd {
+    padding: 0 29px;
+  }
+
+  /* 날씨 */
+  .weatherBox {
+    padding: 15px 29px;
+  }
+  .weatherBox ul.weatherChart li {
+    float: left;
+    margin: 0 0 0 20px;
+  }
+
+  .weatherListBox li.listStyle .listDate {
+    float: left;
+    width: 94px;
+    margin: 0 0 0 13px;
+    padding: 0;
+    text-align: left;
+  }
+  .weatherListBox li.listStyle .weatherListGroup li {
+    float: left;
+    text-align: left;
+  }
+  .weatherListBox li.listStyle .weatherListGroup li.icon_Listweather {
+    width: 85px;
+  }
+  .weatherListBox li.listStyle .weatherListGroup li.temperature {
+    width: 116px;
+    margin: 0;
+    color: #000;
+    font-size: 43px;
+    font-weight: bold;
+    letter-spacing: -3px;
+  }
+  .weatherListBox li.listStyle .weatherListGroup li.rainfall {
+    width: 45px;
+    padding: 5px 0 0 0;
+    text-align: center;
+  }
+  .weatherListBox li.listStyle .weatherListGroup li.humidity {
+    width: 29px;
+    padding: 5px 0 0 0;
+    text-align: center;
+  }
+
+  /* sub_오늘 하루 특가 */
+  .todayListBox .discount {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 63px;
+    height: 39px;
+    padding: 25px 0 0 0;
+    border-radius: 0 0 32px 32px;
+    background: #ed9249;
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 21px;
+  }
+
+  /* sub_화제의 영상 */
+  .movieListBox li {
+    position: relative;
+    min-height: 67px;
+    padding: 10px 27px 10px 15px;
+    border-top: 1px solid #d6d6d6;
+  }
+  .movieListBox li a {
+    display: inline-block;
+    margin: 0 0 0 117px;
+  }
+  .movieListBox li img {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 27px;
+    width: 93px;
+    height: 67px;
+    border-radius: 3px;
+  }
+
+  /* sub_주요 뉴스 */
+  .newsListBox li {
+    position: relative;
+    padding: 10px 27px;
+    border-top: 1px solid #d6d6d6;
+  }
+  .newsListBox li.newsTypeImg img {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 27px;
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+  }
+}
+
+/* 날씨 지역 바 */
+div.weatherBar {
+  display: none;
+  z-index: 15;
+  background: #fff;
+  position: fixed;
+  top: 10px;
+  right: -303px;
+  border-radius: 21px;
+  padding: 10px 30px 0px 15px;
+  border: 1px solid #d6d6d6;
+}
+div.weatherBar div.listCon ul li {
+  height: 21px;
+  width: 238px;
+  border-radius: 16px;
+  background: #d0d0d0;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 8px 2px 2px 16px;
+  cursor: pointer;
+}
+div.weatherBar div.listCon ul li span.listBul {
+  text-align: center;
+  display: inline-block;
+}
+div.weatherBar div.listCon ul li span.listBul img {
+  display: inline-block;
+  height: 15px;
+  width: auto;
+  max-width: 23px;
+}
+div.weatherBar div.listCon ul li span.onoff {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 19px;
+  height: 19px;
+  display: none;
+}
+div.weatherBar div.listCon ul li span.listTitle {
+  size: 14px;
+  color: #fff;
+  letter-spacing: -0.3px;
+  line-height: 15px;
+  position: absolute;
+  top: 8px;
+  font-weight: bold;
+}

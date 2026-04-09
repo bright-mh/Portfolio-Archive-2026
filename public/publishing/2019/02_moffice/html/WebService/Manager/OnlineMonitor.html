@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>실시간 모니터링 현황</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 1024*745 -->
+  <body class="popup" style="width: 1024px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>실시간 모니터링 현황</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- monitoring_box -->
+      <div class="monitoring_box">
+        <!-- 모니터링 현황 -->
+        <div class="monitoring_status">
+          <ul class="monitoring_list">
+            <li class="pc_on">
+              <p>접속 PC</p>
+              <strong>1,800</strong><span>대</span>
+            </li>
+            <li class="pc_on">
+              <p>접속 사용자</p>
+              <strong>1,700</strong><span>명</span>
+            </li>
+            <li class="pc_off">
+              <p>미접속 PC</p>
+              <strong>100</strong><span>대</span>
+            </li>
+            <li class="pc_off">
+              <p>미접속 사용자</p>
+              <strong>200</strong><span>명</span>
+            </li>
+          </ul>
+          <p class="txt_tip">* PC OFF의 기준은 AP서버와 2분 이상 통신이 이루어지지 않은 경우입니다.</p>
+        </div>
+        <!-- //모니터링 현황 -->
+
+        <!-- 새로고침 -->
+        <div class="refresh_cycle">
+          <p class="title_refresh">새로고침 주기</p>
+          <div class="refresh_box">
+            <input type="text" name="" value="1" title="분 단위" />
+            <span><strong>분 마다</strong>새로고침</span>
+          </div>
+
+          <!-- 실행 버튼 -->
+          <div class="refresh_btn">
+            <a href="#none" class="btn_start on">실행</a>
+            <a href="#none" class="btn_start">실행</a>
+          </div>
+          <!-- //실행 버튼 -->
+        </div>
+        <!-- //새로고침 -->
+      </div>
+      <!-- //monitoring_box -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents">
+        <!-- search area -->
+        <div class="search_area">
+          <h2 class="tbl_title">PC-ON/OFF 검색</h2>
+          <div class="tbl_search">
+            <table>
+              <colgroup>
+                <col style="width: 128px" />
+                <col style="width: 334.4px" />
+                <col style="width: 128px" />
+                <col style="width: 334px" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">부서</th>
+                  <td colspan="3">
+                    <a href="#none" title="새창 열림" class="btn_md icon_md_choice_blue">선택</a>
+                    <div class="ip_box" style="width: 253px">
+                      <input type="text" value="" readonly="readonly" placeholder="부서를 선택해주세요." />
+                      <a href="#none" class="icon_delete_full_blue">삭제</a>
+                    </div>
+                    <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                    <input type="checkbox" id="" name="" value="" class="ml12" /><label for="">하위부서 포함</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">이름 / 사번</th>
+                  <td>
+                    <div class="ip_box">
+                      <input type="text" name="" value="" title="이름 / 사번" />
+                      <a href="#none" class="icon_delete_full_blue">삭제</a>
+                    </div>
+                  </td>
+                  <th scope="row">구분</th>
+                  <td>
+                    <select name="" title="구분" style="width: 100%">
+                      <option value="">전체</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션4</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- btn -->
+          <div class="btn_area">
+            <a href="#none" class="btn_big bg_blue icon_big_search">검색</a>
+          </div>
+          <!-- //btn -->
+        </div>
+        <!-- //search area -->
+
+        <!-- result_area -->
+        <div class="result_area">
+          <!-- result_top -->
+          <div class="result_top clearfix">
+            <div class="fl_left">
+              <p class="totla_num">총 <span>0</span>건</p>
+            </div>
+          </div>
+          <!-- //result_top -->
+
+          <!-- tbl_default -->
+          <div class="tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: 120px" />
+                <col style="width: auto" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 150px" />
+                <col style="width: 100px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"><a href="#none">사번</a></th>
+                  <th scope="col"><a href="#none">부서</a></th>
+                  <th scope="col"><a href="#none">이름</a></th>
+                  <th scope="col"><a href="#none">직급</a></th>
+                  <th scope="col"><a href="#none">시작시</a></th>
+                  <th scope="col"><a href="#none">종료시</a></th>
+                  <th scope="col"><a href="#none">PC IP</a></th>
+                  <th scope="col"><a href="#none">ON/OFF</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">검색된 데이터가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td>20131101</td>
+                  <td>제이니스</td>
+                  <td>이승우</td>
+                  <td>부장</td>
+                  <td>09:00</td>
+                  <td>17:00</td>
+                  <td>106.241.31.92</td>
+                  <td>ON</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_default -->
+
+          <!-- result_paging -->
+          <div class="result_paging">
+            <!-- paging -->
+            <div class="paging">
+              <a href="#none" class="btn_start">처음으로</a>
+              <a href="#none" class="btn_prev">이전</a>
+              <strong>1</strong>
+              <a href="#none">2</a>
+              <a href="#none">3</a>
+              <a href="#none">4</a>
+              <a href="#none">5</a>
+              <a href="#none">6</a>
+              <a href="#none">7</a>
+              <a href="#none">8</a>
+              <a href="#none">9</a>
+              <a href="#none">10</a>
+              <a href="#none" class="btn_next">다음</a>
+              <a href="#none" class="btn_end">맨끝으로</a>
+            </div>
+            <!-- //paging -->
+            <p class="page_num"><strong>3</strong>/<span>10</span></p>
+          </div>
+          <!-- //result_paging -->
+        </div>
+        <!-- //result_area -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

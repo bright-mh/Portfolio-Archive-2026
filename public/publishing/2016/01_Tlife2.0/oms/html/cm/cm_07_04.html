@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>수수료 관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb3:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(2)>ul>li:eq(3)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb3">
+                <a href="#">쿠폰 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">쿠폰 발급현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">무료 쿠폰 발급현황</a></li>
+                      <li><a href="#">유료 쿠폰 발급현황</a></li>
+                      <li><a href="#">디지털 콘텐츠 발급 현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">쿠폰 획득현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">쿠폰 획득현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">정산관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">대사내역</a></li>
+                      <li><a href="#">정산현황</a></li>
+                      <li><a href="#">수수료 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>쿠폰 관리</span>
+              <span>정산관리</span>
+              <strong>수수료 관리</strong>
+            </div>
+            <h3 class="tit">수수료 관리</h3>
+            <ul class="guide">
+              <li>결제수단 별 PG사 수수료를 조회/관리할 수 있습니다.</li>
+              <li>
+                재계약 등으로 인해 수수료가 변경될 경우 미리 수수료를 등록하여 지정된 일자의 결제 건부터 적용되도록
+                합니다. 단, 적용 중인 수수료 율을 변경하거나 소급적용이 필요한 경우 T life 사업팀에 별도 연락하시기
+                바랍니다.
+              </li>
+            </ul>
+
+            <!-- 현재 수수료 테이블 -->
+            <h4 class="tit">현재 수수료 <span class="add_info2">(VAT 별도)</span></h4>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>신용카드와 휴대폰에 따른 결제수단 별 현재 수수료 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">신용카드</th>
+                      <td>2.43 %(2016.08.21 00:00~현재)</td>
+                      <th scope="row">휴대폰</th>
+                      <td>5.21 % (2016.08.21 00:00~현재)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //현재 수수료 테이블 -->
+
+            <!-- 적용이력 및 관리 -->
+            <h4 class="tit">적용이력 및 관리</h4>
+            <div class="table_list_btm">
+              <div class="total_area">
+                <div class="sel_box">
+                  <a href="#" class="btn_long btn_new" target="_blank" title="새창 열림">수수료 등록</a>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >번호, 등록일시, 등록자, 결제수단, 수수료, 적용 시작일, 상태, 수정버튼, 삭제버튼이 있는 적용이력
+                      및 관리 리스트</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col style="*" />
+                    <col style="*" />
+                    <col style="*" />
+                    <col style="*" />
+                    <col style="*" />
+                    <col style="*" />
+                    <col style="width: 150px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">등록일시</th>
+                      <th scope="col">등록자</th>
+                      <th scope="col">결제수단</th>
+                      <th scope="col">수수료</th>
+                      <th scope="col">적용 시작일</th>
+                      <th scope="col">상태</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 내용이 없을 시, -->
+                    <tr>
+                      <td colspan="8">등록된 내역이 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td class="num">20</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">19</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>- (탈퇴회원)</td>
+                      <td>휴대폰</td>
+                      <td>5.21 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">18</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용 중</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="num">17</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>휴대폰</td>
+                      <td>5.21 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용 중</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="num">16</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>- (탈퇴회원)</td>
+                      <td>휴대폰</td>
+                      <td>5.21 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용종료</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="num">15</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">14</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">13</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">12</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">11</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">10</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">9</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">8</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">7</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">6</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">5</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">4</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">3</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">2</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="num">1</td>
+                      <td>2016.08.21&nbsp;&nbsp;19:12</td>
+                      <td>김미선 (ooiudll98)</td>
+                      <td>신용카드</td>
+                      <td>2.43 %</td>
+                      <td>2016.08.21&nbsp;&nbsp;00:00</td>
+                      <td>적용대기</td>
+                      <td>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">수정</a>
+                        <a href="#" class="btn_small">삭제</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- paging -->
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+              <!-- //paging -->
+            </div>
+            <!-- //적용이력 및 관리 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

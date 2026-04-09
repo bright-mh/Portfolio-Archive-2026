@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* 차트 데이터 툴팁 */
+.tableTooltip a {
+  position: absolute;
+  top: 0;
+  left: 88px;
+}
+.tableTooltip p {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 107px;
+  top: -15px;
+  width: 311px;
+  height: 60px;
+  padding: 16px 0 0 22px;
+  background: url("/html/2014/bems/images/common/bg_tooltip_02.png") no-repeat 0 0;
+  color: #ed6d53;
+  font-size: 11px;
+  line-height: 16px;
+  z-index: 10;
+}
+
+/* 2013-12-16 추가 */
+.an_txtInfo {
+  margin: 0 0 7px 0;
+  color: #898a8c;
+}
+.an_txtInfo .point {
+  color: #ea6c52;
+}
+
+.an_effectBtn {
+  position: absolute;
+  top: 0;
+  left: 463px;
+  clear: both;
+}
+/* //2013-12-16 추가 */
+
+/* 1600 이상 */
+@media only screen and (min-width: 1600px) {
+}
+
+/* 2014-01-21 에너지 사용량 패턴분석:범례 부분 영역 확보_수정  */
+/* 2014-01-06 에너지 사용량 패턴분석:범례 부분 폰트 크기_수정 */
+.chartList {
+  text-align: center;
+}
+.chartList li {
+  display: inline;
+  margin: 0 20px 0 0;
+  color: #898a8c;
+  font-size: 12px;
+  line-height: 16px;
+}
+/* //2014-01-06 에너지 사용량 패턴분석:범례 부분 폰트 크기_수정 */
+.chartList li.listStyle03 {
+  margin: 0;
+}
+.chartList li span {
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  margin: 0 5px 0 0;
+  vertical-align: top;
+}
+.chartList li.listStyle01 span {
+  background: #d9e6b9;
+}
+.chartList li.listStyle02 span {
+  background: #fceed4;
+}
+.chartList li.listStyle03 span {
+  background: #f4d5d5;
+}
+/* //2014-01-21 에너지 사용량 패턴분석:범례 부분 영역 확보_수정  */

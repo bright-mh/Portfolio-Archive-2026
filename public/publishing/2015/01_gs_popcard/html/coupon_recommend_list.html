@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>GS POP Card</title>
+    <link rel="stylesheet" href="../css/default.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/common.js"></script>
+  </head>
+  <body>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- 쿠폰함 -->
+      <section class="recommendGroup">
+        <ul class="tabChoice">
+          <li>
+            <a href="#" class="on"><span>추천쿠폰</span></a>
+          </li>
+          <li>
+            <a href="#"><span>받은 쿠폰함</span></a>
+          </li>
+        </ul>
+
+        <!-- 추천쿠폰 리스트 -->
+        <div class="recommendList">
+          <article class="couponBox">
+            <a href="#">
+              <div class="imgBox">
+                <p class="thum"><img src="../img/coupon/coupon_thum01.jpg" alt="미닛메이드 오렌지 1.5L" /></p>
+                <p class="badge"><img src="../img/icon/icon_discount.png" alt="할인" /></p>
+              </div>
+              <div class="txtBox">
+                <p class="company"><img src="../img/coupon/txt_gs_super.gif" alt="GS Supermarket" /></p>
+                <p class="txtCon">
+                  미닛메이드 오렌지 1.5L 600원 할인 미닛메이드 오렌지 1.5L 600원 할인 미닛메이드 오렌지 1.5L 600원 할인
+                </p>
+                <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="couponBox">
+            <a href="#">
+              <div class="imgBox">
+                <p class="thum"><img src="../img/coupon/coupon_thum02.jpg" alt="왕돈까스 도시락" /></p>
+                <p class="badge"><img src="../img/icon/icon_exchange.png" alt="교환" /></p>
+              </div>
+              <div class="txtBox">
+                <p class="company"><img src="../img/coupon/txt_gs25.gif" alt="GS25" /></p>
+                <p class="txtCon">왕돈까스 도시락 교환권</p>
+                <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="couponBox">
+            <a href="#">
+              <div class="imgBox">
+                <p class="thum"><img src="../img/coupon/coupon_thum03.jpg" alt="쿠폰" /></p>
+                <p class="badge"><img src="../img/icon/icon_recharge.png" alt="충전" /></p>
+              </div>
+              <div class="txtBox">
+                <p class="company">모바일 팝 어플리케이션</p>
+                <p class="txtCon">POP 카드 2,000원 충전 쿠폰</p>
+                <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="couponBox">
+            <a href="#">
+              <div class="imgBox">
+                <p class="thum"><img src="../img/coupon/coupon_thum03.jpg" alt="쿠폰" /></p>
+                <p class="badge"><img src="../img/icon/icon_addition.png" alt="추가" /></p>
+              </div>
+              <div class="txtBox">
+                <p class="company">모바일 팝 어플리케이션</p>
+                <p class="txtCon">5% 추가 충전 쿠폰</p>
+                <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="couponBox">
+            <a href="#">
+              <div class="imgBox">
+                <p class="thum"><img src="../img/coupon/coupon_thum04.jpg" alt="다우니 아로바 주얼리" /></p>
+                <p class="badge"><img src="../img/icon/icon_discount.png" alt="할인" /></p>
+              </div>
+              <div class="txtBox">
+                <p class="company"><img src="../img/coupon/txt_gs_super.gif" alt="GS Supermarket" /></p>
+                <p class="txtCon">다우니 아로바 주얼리 set 구매시 1000원 할인</p>
+                <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+              </div>
+            </a>
+          </article>
+        </div>
+        <!-- //추천쿠폰 리스트 -->
+
+        <!-- 받은 쿠폰함 -->
+        <div class="receiptGroup" style="display: none">
+          <ul class="receiptTab">
+            <!-- bg를 위한 span 태그 -->
+            <li>
+              <a href="#" class="on">교환/할인쿠폰<span></span></a>
+            </li>
+            <li>
+              <a href="#">충전쿠폰<span></span></a>
+            </li>
+          </ul>
+
+          <!-- 교환/할인쿠폰 리스트 -->
+          <section class="exchangeGroup">
+            <article class="couponBox">
+              <a href="#">
+                <div class="imgBox">
+                  <p class="thum"><img src="../img/coupon/coupon_thum01.jpg" alt="미닛메이드 오렌지 1.5L" /></p>
+                  <p class="badge"><img src="../img/icon/icon_discount.png" alt="할인" /></p>
+                </div>
+                <div class="txtBox">
+                  <p class="company"><img src="../img/coupon/txt_gs_super.gif" alt="GS Supermarket" /></p>
+                  <p class="txtCon">
+                    미닛메이드 오렌지 1.5L 600원 할인 미닛메이드 오렌지 1.5L 600원 할인 미닛메이드 오렌지 1.5L 600원
+                    할인
+                  </p>
+                  <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="couponBox">
+              <a href="#">
+                <div class="imgBox">
+                  <p class="thum"><img src="../img/coupon/coupon_thum02.jpg" alt="왕돈까스 도시락" /></p>
+                  <p class="badge"><img src="../img/icon/icon_exchange.png" alt="교환" /></p>
+                </div>
+                <div class="txtBox">
+                  <p class="company"><img src="../img/coupon/txt_gs25.gif" alt="GS25" /></p>
+                  <p class="txtCon">왕돈까스 도시락 교환권</p>
+                  <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="couponBox">
+              <a href="#">
+                <div class="imgBox">
+                  <p class="thum"><img src="../img/coupon/coupon_thum04.jpg" alt="다우니 아로바 주얼리" /></p>
+                  <p class="badge"><img src="../img/icon/icon_discount.png" alt="할인" /></p>
+                </div>
+                <div class="txtBox">
+                  <p class="company"><img src="../img/coupon/txt_gs_super.gif" alt="GS Supermarket" /></p>
+                  <p class="txtCon">다우니 아로바 주얼리 set 구매시 1000원 할인</p>
+                  <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="couponBox">
+              <a href="#">
+                <div class="imgBox">
+                  <p class="thum"><img src="../img/coupon/coupon_thum02.jpg" alt="왕돈까스 도시락" /></p>
+                  <p class="badge"><img src="../img/icon/icon_exchange.png" alt="교환" /></p>
+                </div>
+                <div class="txtBox">
+                  <p class="company"><img src="../img/coupon/txt_gs25.gif" alt="GS25" /></p>
+                  <p class="txtCon">왕돈까스 도시락 교환권</p>
+                  <p class="deadline">2015. 02. 05 ~ 2015. 03. 31</p>
+                </div>
+              </a>
+            </article>
+          </section>
+          <!-- //교환/할인쿠폰 리스트 -->
+
+          <!-- 충전쿠폰 리스트 -->
+          <section class="rechargeGroup" style="display: none">
+            <article class="numberBox">
+              <p class="title">충전 쿠폰 번호 직접 입력</p>
+              <div class="inputArea">
+                <!-- [D] lable for 와 input id 값을 항상 동일하게 적용시켜 주세요. -->
+                <p class="txtArea">
+                  <label for="cpNum">쿠폰번호 직접입력</label><input type="text" id="cpNum" name="" value="" />
+                </p>
+                <p class="btnOk2"><a href="#">확인</a></p>
+              </div>
+              <p class="noti">해당 기간 동안 사용하지 않은 쿠폰은 자동소멸 됩니다.</p>
+            </article>
+
+            <div class="recharge">
+              <p class="title">충전쿠폰 리스트</p>
+              <ul>
+                <li>
+                  <p class="badge"><img src="../img/icon/icon_recharge.png" alt="충전" /></p>
+                  <div class="txtArea">
+                    <p class="txt">충전쿠폰 3,000원</p>
+                    <p class="deadline">2015.01.25까지 사용가능</p>
+                  </div>
+                  <p class="btnUse"><a href="#">사용하기</a></p>
+                </li>
+                <li>
+                  <p class="badge"><img src="../img/icon/icon_addition.png" alt="추가" /></p>
+                  <div class="txtArea">
+                    <p class="txt">추가 충전쿠폰 5%</p>
+                    <p class="deadline">2015.01.25까지 사용가능</p>
+                  </div>
+                  <p class="btnUse"><a href="#">사용하기</a></p>
+                </li>
+                <li>
+                  <p class="badge"><img src="../img/icon/icon_recharge.png" alt="충전" /></p>
+                  <div class="txtArea">
+                    <p class="txt">충전쿠폰 3,000원</p>
+                    <p class="deadline">2015.01.25까지 사용가능</p>
+                  </div>
+                  <p class="btnUse"><a href="#">사용하기</a></p>
+                </li>
+                <li>
+                  <p class="badge"><img src="../img/icon/icon_recharge.png" alt="충전" /></p>
+                  <div class="txtArea">
+                    <p class="txt">충전쿠폰 5,000원</p>
+                    <p class="deadline">2015.01.25까지 사용가능</p>
+                  </div>
+                  <p class="btnUse"><a href="#">사용하기</a></p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- //충전쿠폰 리스트 -->
+        </div>
+        <!-- //받은 쿠폰함 -->
+      </section>
+      <!-- //쿠폰함 -->
+
+      <p class="btnTop">
+        <a href="#wrap"><img src="../img/icon/icon_top.png" width="55" alt="top" /></a>
+      </p>
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

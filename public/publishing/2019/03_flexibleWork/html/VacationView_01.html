@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>휴가신청</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../resources/js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../resources/css/user.css" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- header -->
+    <header>
+      <div class="inner_header">
+        <div class="header_top">
+          <!-- [D] img태그 alt값에 회사명 입력해 주세요. -->
+          <h1 class="logo">
+            <a href="#none"><img src="../resources/img/logo/img_logo.png" alt="회사명 입력" style="height: 36px" /></a>
+          </h1>
+          <p class="user_info">개발팀 이승우 부장 (20131101)</p>
+          <div class="right_area">
+            <p class="company_info">JNESS</p>
+            <p class="today">2019-09-23 (월)</p>
+          </div>
+        </div>
+
+        <!-- GNB : menu -->
+        <nav class="gnb_area">
+          <h2 class="blind">메뉴</h2>
+          <ul>
+            <!-- [D] 선택 시, li태그에 class="on" 추가 -->
+            <li><a href="#none">근무일정확인</a></li>
+            <li><a href="#none">유연근무신청</a></li>
+            <li class="on"><a href="#none">휴가신청</a></li>
+            <li><a href="#none">출장신청</a></li>
+          </ul>
+        </nav>
+        <!-- //GNB : menu -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- contents -->
+    <div class="contents">
+      <h2 class="title_cont pb0">휴가신청</h2>
+
+      <!-- btn_top_area -->
+      <div class="btn_top_area">
+        <a href="#none" class="btn_md bg_gray">신청내역조회</a>
+      </div>
+      <!-- //btn_top_area -->
+
+      <!-- request_area -->
+      <div class="bg_box request_area">
+        <!-- tbl_request -->
+        <div class="tbl_request">
+          <table>
+            <colgroup>
+              <col style="width: 124px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">휴가명 :</th>
+                <td>
+                  <select name="" title="휴가명 선택" style="width: 441px">
+                    <option value="">연차 (잔여 : 6일 4H)</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+
+                  <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                  <input type="radio" name="" id="" value="" /><label for="">종일</label>
+                  <input type="radio" name="" id="" value="" /><label for="">오전반차</label>
+                  <input type="radio" name="" id="" value="" /><label for="">오후반차</label>
+                  <input type="radio" name="" id="" value="" /><label for="">시간단위</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">휴가기간 :</th>
+                <td>
+                  <!-- [D] input 태그에 disabled 시, 바로 위 div 태그에도 class="disabled" 추가 -->
+                  <div class="input_calendar startDate" style="width: 210px">
+                    <input type="text" name="" value="2019-07-05" title="시작일" />
+                    <img src="../resources/img/icon_calendar.png" alt="달력" />
+                  </div>
+                  ~
+                  <div class="input_calendar endDate" style="width: 210px">
+                    <input type="text" name="" value="2019-07-05" title="종료일" />
+                    <img src="../resources/img/icon_calendar.png" alt="달력" />
+                  </div>
+                  <span class="ml12">0.5일</span>
+                  <a href="#none" class="btn_uni ml12">신청가능여부확인</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">휴가시간 :</th>
+                <td>
+                  <select name="" title="시작시 시 선택" style="width: 105px">
+                    <option value="">00시</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                  <select name="" title="시작시 분 선택" style="width: 104px">
+                    <option value="">00분</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                  <select name="" title="시간 선택" class="ml13" style="width: 212px">
+                    <option value="">00시간</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">휴가사유 :</th>
+                <td>
+                  <textarea
+                    name=""
+                    id=""
+                    placeholder="휴가사유는 입력하지 않아도 결제됩니다."
+                    style="height: 60px"
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_request -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue">신청하기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //request_area -->
+
+      <!-- payment_area -->
+      <div class="payment_area">
+        <div class="title_area">
+          <h3 class="title_h3">결재 정보</h3>
+        </div>
+
+        <div class="bg_box">
+          <!-- 결재자 -->
+          <div>
+            <div class="payment_top">
+              <h4 class="title_h4">결재자</h4>
+            </div>
+
+            <!-- 결재자 리스트 -->
+            <div class="payment_line">
+              <ul class="payment_line_list">
+                <li class="no_data">등록된 결재자가 없습니다.</li>
+                <li>
+                  <p class="profile_img"></p>
+                  <div class="txt_detail">
+                    <p class="txt">서비스 사업부 홍길동 과장</p>
+                    <p class="txt_date">2019-12-23 11:43</p>
+                  </div>
+                  <p class="badge_payment1">본인</p>
+                  <!--
+								<p class="badge_payment2">승인</p>
+								<p class="badge_payment3">미승인</p>
+								<p class="badge_payment4">반려</p>
+								-->
+                </li>
+                <li>
+                  <p class="profile_img"></p>
+                  <div class="txt_detail">
+                    <p class="txt">서비스 사업부 라길동 부장</p>
+                    <p class="txt_date">2019-12-23 11:43</p>
+                  </div>
+                  <!--
+								<p class="badge_payment1">본인</p>
+								<p class="badge_payment2">승인</p>
+								<p class="badge_payment3">미승인</p>
+								<p class="badge_payment4">반려</p>
+								-->
+                </li>
+                <li>
+                  <p class="profile_img"></p>
+                  <div class="txt_detail">
+                    <p class="txt">서비스 사업부 마길동 이사</p>
+                    <p class="txt_date">2019-12-23 11:43</p>
+                  </div>
+                  <!--
+								<p class="badge_payment1">본인</p>
+								<p class="badge_payment2">승인</p>
+								<p class="badge_payment3">미승인</p>
+								<p class="badge_payment4">반려</p>
+								-->
+                </li>
+              </ul>
+            </div>
+            <!-- //결재자 리스트 -->
+          </div>
+          <!-- //결재자 -->
+        </div>
+      </div>
+      <!-- //payment_area -->
+    </div>
+    <!-- //contents -->
+  </body>
+</html>

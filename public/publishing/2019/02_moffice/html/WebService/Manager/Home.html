@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="main">
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="user_box">
+          <p>지진희 (제이니스)</p>
+        </div>
+        <div class="logo_box">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 30px / 가로크기는 비율로 자동조정 -->
+          <h1>
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 30px" /></a>
+          </h1>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- LNB : left menu -->
+        <nav class="lnb_area">
+          <h2 class="blind">운영자 메뉴</h2>
+          <ul class="lnb_list">
+            <!-- [D] 1Depth 선택 시, li태그에 class="on" 추가 -->
+            <li class="list_basic1">
+              <a href="#none" class="depth1">사내정보</a>
+              <!-- [D] 2Depth 선택 시, li태그에 class="on" 추가 -->
+              <ul>
+                <li><a href="#none">공지사항 관리</a></li>
+                <li><a href="#none">사원정보 관리</a></li>
+                <li><a href="#none">휴일정보 관리</a></li>
+                <li><a href="#none">운영자 관리</a></li>
+                <li><a href="#none">부서별 운영자 관리</a></li>
+                <li><a href="#none">결재자 관리</a></li>
+                <li><a href="#none">그룹 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic6">
+              <a href="#none" class="depth1">PC 사용 현황</a>
+              <ul>
+                <li><a href="#none">미승인 신청 현황</a></li>
+                <li><a href="#none">전체 신청 현황</a></li>
+                <li><a href="#none">PC ON/OFF 조회</a></li>
+                <li><a href="#none">PC-LOG 조회</a></li>
+                <li><a href="#none">PC-IDLE 조회</a></li>
+                <li><a href="#none">자리비움 조회</a></li>
+              </ul>
+            </li>
+            <li class="list_basic7">
+              <a href="#none" class="depth1">통계</a>
+              <ul>
+                <li><a href="#none">PC ON/OFF 통계</a></li>
+                <li><a href="#none">연장근무시간 통계</a></li>
+                <li><a href="#none">설치현황 통계</a></li>
+              </ul>
+            </li>
+            <li class="list_basic5">
+              <a href="#none" class="depth1">PC 사용자</a>
+              <ul>
+                <li><a href="#none">휴가자 관리</a></li>
+                <li><a href="#none">비대상자 관리</a></li>
+                <li><a href="#none">차단 예외자 관리</a></li>
+                <li><a href="#none">사용자 초기화 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic2">
+              <a href="#none" class="depth1">근무정책</a>
+              <ul>
+                <li><a href="#none">근무정책 관리</a></li>
+                <li><a href="#none">근무정책 적용</a></li>
+              </ul>
+            </li>
+            <li class="list_basic3">
+              <a href="#none" class="depth1">차단정책</a>
+              <ul>
+                <li><a href="#none">이미지 파일 관리</a></li>
+                <li><a href="#none">차단정책 관리</a></li>
+                <li><a href="#none">차단정책 적용</a></li>
+                <li><a href="#none">알림창 관리</a></li>
+                <li><a href="#none">차단창 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic4">
+              <a href="#none" class="depth1">제한정책</a>
+              <ul>
+                <li><a href="#none">제한정책 관리</a></li>
+                <li><a href="#none">제한정책 적용</a></li>
+              </ul>
+            </li>
+            <li class="list_basic8">
+              <a href="#none" class="depth1">시스템</a>
+              <ul>
+                <li><a href="#none">설치현황 관리</a></li>
+                <li><a href="#none">데몬로그 조회</a></li>
+                <li><a href="#none">프로그램 설정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- //LNB : left menu -->
+
+        <!-- contents -->
+        <div class="contents">
+          <!-- 그룹1 : row_grouping -->
+          <div class="row_grouping clearfix">
+            <!-- 오늘의 연장근무 -->
+            <!-- [D] div 태그에 sample 클래스 추가 시, [sample] 텍스트 보임 -->
+            <div class="fl_left white_bgbox today_work_overtime sample">
+              <h2 class="box_title">오늘의 연장근무</h2>
+              <div class="total_box">
+                <p class="title">전체신청</p>
+                <div class="num">20,000<span>건</span></div>
+              </div>
+              <ul class="info_list">
+                <li>
+                  <p class="title">대기중</p>
+                  <div class="num">1,600<span>건</span></div>
+                  <p class="percent">80%</p>
+                </li>
+                <li>
+                  <p class="title">승인</p>
+                  <div class="num">100<span>건</span></div>
+                  <p class="percent">5%</p>
+                </li>
+                <li>
+                  <p class="title">반려</p>
+                  <div class="num">300<span>건</span></div>
+                  <p class="percent">15%</p>
+                </li>
+              </ul>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+            <!-- //오늘의 연장근무 -->
+
+            <!-- 접속 & 미접속 PC, 사용자 통계 -->
+            <div class="fl_left white_bgbox connect_unconnect">
+              <ul class="info_list">
+                <li>
+                  <p class="title">접속 PC</p>
+                  <div class="num">1,800<span>대</span></div>
+                </li>
+                <li>
+                  <p class="title">미접속 PC</p>
+                  <div class="num">100<span>대</span></div>
+                </li>
+                <li>
+                  <p class="title">접속 사용자</p>
+                  <div class="num">1,700<span>명</span></div>
+                </li>
+                <li>
+                  <p class="title">미접속 사용자</p>
+                  <div class="num">200<span>명</span></div>
+                </li>
+              </ul>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+            <!-- //접속 & 미접속 PC, 사용자 통계 -->
+          </div>
+          <!-- //그룹1 : row_grouping -->
+
+          <!-- 그룹2 : row_grouping -->
+          <div class="row_grouping clearfix three_column">
+            <!-- 휴가자 수 -->
+            <div class="fl_left white_bgbox vacationer">
+              <p class="title">휴가자 수</p>
+              <div class="num">156<span>명</span></div>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+            <!-- //휴가자 수 -->
+
+            <!-- 차단예외자 -->
+            <div class="fl_left white_bgbox block_exception">
+              <p class="title">차단예외자</p>
+              <div class="num">36<span>명</span></div>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+            <!-- //차단예외자 -->
+
+            <!-- 데몬실행 성공 & 실패 -->
+            <div class="fl_left white_bgbox daemon_run">
+              <ul class="info_list">
+                <li>
+                  <p class="title">데몬실행 성공</p>
+                  <div class="num">8009<span>건</span></div>
+                </li>
+                <li>
+                  <p class="title">데몬실행 실패</p>
+                  <div class="num">12<span>건</span></div>
+                </li>
+              </ul>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+            <!-- //데몬실행 성공 & 실패 -->
+          </div>
+          <!-- //그룹2 : row_grouping -->
+
+          <!-- 그룹3 : row_grouping -->
+          <div class="row_grouping clearfix">
+            <div class="white_bgbox">
+              <div class="flex_box">
+                <div class="flex_item">
+                  <p class="title">평일 차단</p>
+                  <!-- [D] '차단함' 일때, div태그에 class="cut_off" 추가 -->
+                  <div class="info_txt cut_off">차단함</div>
+                </div>
+                <div class="flex_item">
+                  <p class="title">휴일 차단</p>
+                  <div class="info_txt cut_off">차단함</div>
+                </div>
+                <div class="flex_item">
+                  <p class="title">휴가자</p>
+                  <div class="info_txt cut_off">차단함</div>
+                </div>
+                <div class="flex_item">
+                  <p class="title">휴직자</p>
+                  <div class="info_txt">차단안함</div>
+                </div>
+                <div class="flex_item">
+                  <p class="title">퇴직자</p>
+                  <div class="info_txt">차단안함</div>
+                </div>
+                <!-- 요일 차단 -->
+                <div class="flex_item">
+                  <p class="title">요일 차단</p>
+                  <ul class="list_day">
+                    <!-- [D] 차단 시, li태그에 class="cut_off" 추가 -->
+                    <li>월</li>
+                    <li class="cut_off">화</li>
+                    <li>수</li>
+                    <li class="cut_off">목</li>
+                    <li>금</li>
+                  </ul>
+                  <div class="list_legend">
+                    <span class="cut_off">차단함</span>
+                    <span>차단안함</span>
+                  </div>
+                </div>
+                <!-- //요일 차단 -->
+                <div class="flex_item">
+                  <p class="title">특정일</p>
+                  <!-- [D] '없음' 일때, div태그에 class="none" 추가 -->
+                  <div class="info_txt none">없음</div>
+                </div>
+              </div>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+          </div>
+          <!-- //그룹3 : row_grouping -->
+
+          <!-- 그룹4 : row_grouping -->
+          <div class="row_grouping clearfix">
+            <div class="white_bgbox">
+              <!-- 설치현황 -->
+              <div class="install_status">
+                <dl>
+                  <dt>설치 PC 대수</dt>
+                  <dd>
+                    <div class="table_cell">10,255대</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>설치사용자 수</dt>
+                  <dd>
+                    <div class="table_cell">756명</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>미인증 PC</dt>
+                  <dd>
+                    <div class="table_cell">00대</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>최신버전</dt>
+                  <dd>
+                    <div class="table_cell">300.00.00.900</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>업그레이드 대기</dt>
+                  <dd>
+                    <div class="table_cell">684대</div>
+                  </dd>
+                </dl>
+              </div>
+              <!-- //설치현황 -->
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+          </div>
+          <!-- //그룹4 : row_grouping -->
+
+          <!-- 그룹5 : row_grouping -->
+          <div class="row_grouping clearfix">
+            <div class="white_bgbox statistic_box">
+              <!-- 연장근무시간 통계 -->
+              <div class="time_boxing">
+                <h2 class="box_title">연장근무시간 통계</h2>
+                <div class="total_box">
+                  <p class="time"><span class="hour">16</span>:<span class="minute">30</span></p>
+                </div>
+              </div>
+              <!-- //연장근무시간 통계 -->
+
+              <!-- 부서 TOP 5 -->
+              <div class="top5_boxing">
+                <h3 class="title_top5">부서 TOP 5</h3>
+                <!-- tbl_top5 : no_data -->
+                <div class="tbl_top5 no_data">No data</div>
+                <!-- //tbl_top5 : no_data -->
+              </div>
+              <!-- //부서 TOP 5 -->
+
+              <!-- 개인 TOP 5 -->
+              <div class="top5_boxing">
+                <h3 class="title_top5">개인 TOP 5</h3>
+                <!-- tbl_top5 -->
+                <div class="tbl_top5">
+                  <table>
+                    <colgroup>
+                      <col style="width: 26px" />
+                      <col style="width: 178px" />
+                      <col style="width: 120px" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="ranking">1</th>
+                        <td class="rangker">장유탁 사원</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">2</th>
+                        <td class="rangker">이준 대리</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">3</th>
+                        <td class="rangker">지진희 부장</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">4</th>
+                        <td class="rangker">한지만 차장</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">5</th>
+                        <td class="rangker">이민호 대리</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl_top5 -->
+              </div>
+              <!-- //개인 TOP 5 -->
+
+              <p class="txt_info">* 주 평균시간</p>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+          </div>
+          <!-- //그룹5 : row_grouping -->
+
+          <!-- 그룹6 : row_grouping -->
+          <div class="row_grouping clearfix">
+            <div class="white_bgbox statistic_box">
+              <!-- 심야근무시간 통계 -->
+              <div class="time_boxing">
+                <h2 class="box_title">심야근무시간 통계</h2>
+                <div class="total_box">
+                  <p class="time"><span class="hour">16</span>:<span class="minute">30</span></p>
+                </div>
+              </div>
+              <!-- //심야근무시간 통계 -->
+
+              <!-- 부서 TOP 5 -->
+              <div class="top5_boxing">
+                <h3 class="title_top5">부서 TOP 5</h3>
+                <!-- tbl_top5 -->
+                <div class="tbl_top5">
+                  <table>
+                    <colgroup>
+                      <col style="width: 26px" />
+                      <col style="width: 178px" />
+                      <col style="width: 120px" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="ranking">1</th>
+                        <td class="rangker">개발 3팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">2</th>
+                        <td class="rangker">개발 2팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">3</th>
+                        <td class="rangker">개발 4팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">4</th>
+                        <td class="rangker">지원팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">5</th>
+                        <td class="rangker">SI 팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl_top5 -->
+              </div>
+              <!-- //부서 TOP 5 -->
+
+              <!-- 개인 TOP 5 -->
+              <div class="top5_boxing">
+                <h3 class="title_top5">개인 TOP 5</h3>
+                <!-- tbl_top5 -->
+                <div class="tbl_top5">
+                  <table>
+                    <colgroup>
+                      <col style="width: 26px" />
+                      <col style="width: 178px" />
+                      <col style="width: 120px" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="ranking">1</th>
+                        <td class="rangker">장유탁 사원</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">2</th>
+                        <td class="rangker">이준 대리</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">3</th>
+                        <td class="rangker">지진희 부장</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">4</th>
+                        <td class="rangker">한지만 차장</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">5</th>
+                        <td class="rangker">이민호 대리</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl_top5 -->
+              </div>
+              <!-- //개인 TOP 5 -->
+
+              <p class="txt_info">* 주 평균시간</p>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+          </div>
+          <!-- //그룹6 : row_grouping -->
+
+          <!-- 그룹7 : row_grouping -->
+          <div class="row_grouping clearfix">
+            <div class="white_bgbox statistic_box">
+              <!-- 자리비움시간 통계 -->
+              <div class="time_boxing">
+                <h2 class="box_title">자리비움시간 통계</h2>
+                <div class="total_box">
+                  <p class="time"><span class="hour">16</span>:<span class="minute">30</span></p>
+                </div>
+              </div>
+              <!-- //자리비움시간 통계 -->
+
+              <!-- 부서 TOP 5 -->
+              <div class="top5_boxing">
+                <h3 class="title_top5">부서 TOP 5</h3>
+                <!-- tbl_top5 -->
+                <div class="tbl_top5">
+                  <table>
+                    <colgroup>
+                      <col style="width: 26px" />
+                      <col style="width: 178px" />
+                      <col style="width: 120px" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="ranking">1</th>
+                        <td class="rangker">개발 3팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">2</th>
+                        <td class="rangker">개발 2팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">3</th>
+                        <td class="rangker">개발 4팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">4</th>
+                        <td class="rangker">지원팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">5</th>
+                        <td class="rangker">SI 팀</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl_top5 -->
+              </div>
+              <!-- //부서 TOP 5 -->
+
+              <!-- 개인 TOP 5 -->
+              <div class="top5_boxing">
+                <h3 class="title_top5">개인 TOP 5</h3>
+                <!-- tbl_top5 -->
+                <div class="tbl_top5">
+                  <table>
+                    <colgroup>
+                      <col style="width: 26px" />
+                      <col style="width: 178px" />
+                      <col style="width: 120px" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="ranking">1</th>
+                        <td class="rangker">장유탁 사원</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">2</th>
+                        <td class="rangker">이준 대리</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">3</th>
+                        <td class="rangker">지진희 부장</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">4</th>
+                        <td class="rangker">한지만 차장</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="ranking">5</th>
+                        <td class="rangker">이민호 대리</td>
+                        <td class="record">00시간 00분</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl_top5 -->
+              </div>
+              <!-- //개인 TOP 5 -->
+
+              <p class="txt_info">* 주 평균시간</p>
+              <!-- btn -->
+              <a href="#none" class="btn_more">MORE</a>
+              <!-- //btn -->
+            </div>
+          </div>
+          <!-- //그룹7 : row_grouping -->
+
+          <!-- 그룹8 : row_grouping -->
+          <div class="row_grouping clearfix">
+            <div class="white_bgbox">
+              <!-- 다운로드 주소 -->
+              <div class="install_status download">
+                <dl>
+                  <dt>다운로드 주소1</dt>
+                  <dd>
+                    <div class="table_cell">
+                      <a href="http://dev.moffice.kr/Download/DEV_install.exe" class="link"
+                        >http://dev.moffice.kr/Download/DEV_install.exe</a
+                      >
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>다운로드 주소2</dt>
+                  <dd>
+                    <div class="table_cell">
+                      <a href="http://dev.moffice.kr/Download/DEV_install.exe" class="link"
+                        >http://dev.moffice.kr/Download/DEV_install.exe</a
+                      >
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <!-- //다운로드 주소 -->
+            </div>
+          </div>
+          <!-- //그룹8 : row_grouping -->
+
+          <!-- TOP btn -->
+          <a href="#none" class="btn_top">TOP</a>
+          <!-- //TOP btn -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <!-- <footer>
+			<div class="fl_left"><img src="../../common/img/logo_footer.png" alt="M.office"></div>
+			<div class="fl_right">&copy; 2019 JNESS Corp. All Rights Reserved.</div>
+		</footer> -->
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

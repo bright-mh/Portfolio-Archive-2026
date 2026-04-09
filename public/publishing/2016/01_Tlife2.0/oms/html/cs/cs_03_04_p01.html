@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+	<title>쿠폰 조회 | T life</title>
+	<link type="text/css" rel="stylesheet" href="../../css/common.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+	<!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script>  
+		$(function(){
+			//달력
+			$( ".pickerArea" ).datepicker({
+				showOn: "button",
+				buttonImage: "../../img/img_calender.gif",
+				buttonImageOnly: true,
+				showButtonPanel: true,
+				dateFormat : "yy/mm/dd",
+				showAnim : "",
+				showOtherMonths: true,
+				selectOtherMonths: true,
+				changeMonth: false,
+				changeYear: false,
+				numberOfMonths: 1,
+				showButtonPanel: false,
+				minDate: -20,
+				maxDate: "+1111M +1000D",
+				showWeek: false,
+				firstDay: 1,
+				beforeShow: function(input) {
+					var i_offset= $(input).offset(); 
+					setTimeout(function(){
+						$('#ui-datepicker-div').css({'top':i_offset.top+ 35, 'bottom':'', 'left':i_offset.left});  
+					})
+				}
+			});
+		});
+    </script>
+</head>
+<body>
+	<!-- 전체 감싸기 -->
+	<div id="wrap" class="layerpop">
+		<div class="popup">
+			<div class="top">
+				<h2>쿠폰 조회</h2>
+				<div class="btn_clo">
+					<a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+				</div>
+			</div> 
+
+			<div class="cont heig1">
+				<!-- 쿠폰조회 검색 -->
+				<div class="table_list_top">
+					<div class="table_wrap">
+						<table class="tbl_list">
+							<caption>
+								<strong>쿠폰 구분, 등록일, 검색어가 있는 쿠폰 조회 검색 입력 서식</strong>
+							</caption>
+							<colgroup>
+								<col style="width:100px">
+								<col style="width:*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<label for="coupon">쿠폰 구분</label>
+									</th>
+									<td>
+										<select id="coupon" style="width:150px">
+											<option>--</option>
+											<option>무료쿠폰</option>
+											<option>유료쿠폰</option>
+											<option>디지털콘텐츠</option>
+											<option>음악채널</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">등록일</th>
+									<td>
+										<input type="text" value="2016-06-23" class="wid_calendar pickerArea" title="쿠폰 등록 시작일" /> 
+										&nbsp;~&nbsp;
+										<input type="text" value="2016-06-23" class="wid_calendar pickerArea" title="쿠폰 등록 종료일" /> 
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="details">검색어</label></th>
+									<td>
+										<select id="details" style="width:200px">
+											<option>쿠폰명 (콘텐츠&채널 명)</option>
+											<option>쿠폰ID (타이틀ID)</option>
+										</select>
+										<input type="text" class="wid_per80" title="쿠폰명 검색" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="btngroup">
+						<div class="btn_right">
+							<a href="#" class="btn_search">검색</a>
+						</div>
+					</div>
+				</div>
+				<!-- //쿠폰조회 검색 -->
+
+				<!-- 쿠폰조회 검색 리스트 -->
+				<div class="table_list_btm">
+					<div class="total_area">
+						<p class="total_num">총 검색 수 : <strong>0</strong> 건</p>
+						<div class="sel_box">
+							<select>
+								<option>20개씩 보기</option>
+								<option>50개씩 보기</option>
+								<option>100개씩 보기</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="table_wrap">
+						<table class="tbl_list">
+							<caption>
+								<strong>쿠폰조회 검색 결과 리스트</strong>
+							</caption>
+							<colgroup>
+								<col style="width:*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>상단 검색영역으로 쿠폰을 조회해 주세요.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				<!-- //쿠폰조회 검색 리스트 -->
+
+				<div class="btngroup">
+					<div class="btn_center">
+						<a href="#" class="btn_cancel">취소</a>
+						<a href="#" class="btn_save">저장</a>
+					</div>
+				</div>
+            </div>
+			<!-- //cont -->
+        </div>
+        <!-- // popup -->
+	</div>
+	<!-- //전체 감싸기 -->
+</body>
+</html>

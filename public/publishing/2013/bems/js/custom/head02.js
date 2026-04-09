@@ -1,0 +1,38 @@
+/*
+ * "군 관리 팝업"에 사용하는 js :
+ * 군관리 팝업에서는 head.js 와 차이점 : common.js, gnb_layout.js 파일이 들어가지 않습니다.
+ * */
+
+var str =
+  "<title>CLOUD BEMS</title>" +
+  '<!-- <link rel="shortcut icon" href="images/qiip.ico" type="image/x-icon" /> -->' +
+  '<meta charset="utf-8" />' +
+  '<meta http-equiv="X-UA-Compatible" content="IE=edge" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/custom/bootstrap.min.custom.css" media="screen" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/bootstrap-responsive.css" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/custom/jquery.dataTables.custom.css" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/TableTools.css" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/datepicker.css" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/select2.css" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/dataTables.bootstrap.css" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/custom/common.css" />' +
+  '<link rel="stylesheet" type="text/css" href="/html/2014/bems/css/custom/layout.css" />' +
+  '<script type="text/javascript" src="/html/2014/bems/js/jquery-1.7.2.min.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/bootstrap.min.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/jquery.dataTables.min.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/ZeroClipboard.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/TableTools.min.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/dataTables.bootstrap.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/bootstrap-datepicker.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/highcharts.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/highcharts-more.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/exporting.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/select2.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/jquery.selectbox-0.2.min.js"></script>' +
+  "<!--[if lt IE 9]>" +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/html5.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/response.min.js"></script>' +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/css3-mediaqueries.js"></script>' +
+  "<![endif]-->" +
+  '<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/TweenMax.js"></script>';
+document.write(str);

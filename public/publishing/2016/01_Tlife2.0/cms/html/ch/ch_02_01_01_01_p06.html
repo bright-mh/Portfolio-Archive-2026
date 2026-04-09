@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일괄배포 확인 팝업 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>일괄배포 확인</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <!-- 스크롤 -->
+          <div class="scroll_wrap2">
+            <ul class="guide">
+              <li>하단의 [이전/다음] 버튼을 눌러 상품 상세정보를 모두 확인하신 후 일괄배포를 진행하시기 바랍니다.</li>
+              <li>등록대기 상품은 추가정보 저장 완료 후 일괄배포가 가능합니다.</li>
+            </ul>
+
+            <!-- 일괄배포 확인 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list visible">
+                  <caption>
+                    <strong
+                      >배포상태, 쿠폰 ID, 기초상품 ID, 캠페인, 유형, 쿠폰 전시기간, 쿠폰 사용 만료일, 제휴사(발행처),
+                      T멤버십 가맹여부, 발행처 쿠폰 ID, 관리 쿠폰명, 브랜드 명, 전시 쿠폰명, 전시 카테고리, 키워드,
+                      쿠폰유형, 쿠폰 정가, 할인가, 대표 이미지, 쿠폰 상세정보, 쿠폰 발급 총 수량, 쿠폰 번호 등록,
+                      담당자, 연락처가 있는 일괄배포 확인</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 140px" />
+                    <col style="width: *" />
+                    <col style="width: 140px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">배포상태</th>
+                      <td colspan="3">등록대기</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰ID</th>
+                      <td>SALE_161214105230140</td>
+                      <th scope="row">기초상품 ID</th>
+                      <td>BASE_160926173317122</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">캠페인</th>
+                      <td>T라이프 (CH_0001)</td>
+                      <td colspan="2">티라이프 무료쿠폰 (CAMPID_202016)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유형</th>
+                      <td colspan="3">제휴쿠폰</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 전시기간</th>
+                      <td colspan="3">2016.02.01 ~ 2016.05.31</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 사용 만료일</th>
+                      <td colspan="3">2016.05.31</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제휴사(발행처)</th>
+                      <td colspan="3">맥도날드</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">T멤버십 가맹여부</th>
+                      <td colspan="3">가맹</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">발행처 쿠폰 ID</th>
+                      <td colspan="3">JHSC_00911D</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">관리 쿠폰명</th>
+                      <td colspan="3">맥도날드 2월 신제품 쿠폰</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">브랜드 명</th>
+                      <td colspan="3">맥도날드</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전시 쿠폰명</th>
+                      <td colspan="3">봄, 새학기 세트 30% 할인 쿠폰</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span class="ess">전시 카테고리</span></th>
+                      <td colspan="3">
+                        <select title="전시 첫번째 카테고리" style="width: 140px">
+                          <option selected="selected">선택하세요.</option>
+                          <option>생활쿠폰</option>
+                        </select>
+                        &nbsp;&nbsp;&gt;&nbsp;&nbsp;
+                        <select title="전시 두번째 카테고리" disabled="disabled">
+                          <option selected="selected">선택하세요.</option>
+                          <option>커피/음료</option>
+                          <option>푸드/외식</option>
+                          <option>뷰티/쇼핑</option>
+                          <option>문화/기타</option>
+                        </select>
+                        &nbsp;&nbsp;&gt;&nbsp;&nbsp;
+                        <select title="전시 세번째 카테고리" disabled="disabled">
+                          <option selected="selected">선택하세요.</option>
+                          <option>미정</option>
+                        </select>
+
+                        <!-- 유형이 이모티콘인 경우 --
+											<select title="전시 첫번째 카테고리" disabled="disabled">
+												<option selected="selected">디지털콘텐츠</option>
+											</select>
+											&nbsp;&nbsp;&gt;&nbsp;&nbsp;
+											<select title="전시 두번째 카테고리" disabled="disabled">
+												<option selected="selected">이모티콘</option>
+											</select>
+											&nbsp;&nbsp;&gt;&nbsp;&nbsp;
+											<select title="전시 세번째 카테고리" disabled="disabled">
+												<option selected="selected">선택하세요.</option>
+												<option>미정</option>
+											</select>
+											<!-- //유형이 이모티콘인 경우 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span class="ess">키워드</span></th>
+                      <td colspan="3">
+                        <div class="keyword_wrap">
+                          <a href="#" class="btn_small btn_keyword">키워드 선택</a>
+                          &nbsp;<span class="keywords">일상, 게임, 국내여행, 산뜻, 설렘</span>
+
+                          <div class="keyword_box" style="display: none">
+                            <div class="top_area">
+                              <label for="bigclass">대분류 선택</label>
+                              <select id="bigclass" title="대분류 선택" style="width: 140px">
+                                <option>일반</option>
+                                <option>대분류 목록</option>
+                              </select>
+                              <a href="#" class="btn_small close">완료</a>
+                            </div>
+                            <div class="keyword_group">
+                              <dl>
+                                <dt>감정</dt>
+                                <dd>
+                                  <div class="scroll_wrap">
+                                    <label for="subclass1_1"><input type="checkbox" id="subclass1_1" /> 기쁨</label>
+                                    <label for="subclass1_2"><input type="checkbox" id="subclass1_2" /> 슬픔</label>
+                                    <label for="subclass1_3"><input type="checkbox" id="subclass1_3" /> 기쁨</label>
+                                    <label for="subclass1_4"><input type="checkbox" id="subclass1_4" /> 행복</label>
+                                    <label for="subclass1_5"><input type="checkbox" id="subclass1_5" /> 분노</label>
+                                    <label for="subclass1_6"><input type="checkbox" id="subclass1_6" /> 그리움</label>
+                                    <label for="subclass1_7"><input type="checkbox" id="subclass1_7" /> 우울</label>
+                                    <label for="subclass1_8"><input type="checkbox" id="subclass1_8" /> 설렘</label>
+                                    <label for="subclass1_9"><input type="checkbox" id="subclass1_9" /> 쓸쓸</label>
+                                  </div>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>계절/날씨</dt>
+                                <dd>
+                                  <div class="scroll_wrap">
+                                    <label for="subclass2_1"><input type="checkbox" id="subclass2_1" /> 봄</label>
+                                    <label for="subclass2_2"><input type="checkbox" id="subclass2_2" /> 여름</label>
+                                    <label for="subclass2_3"><input type="checkbox" id="subclass2_3" /> 가을</label>
+                                    <label for="subclass2_4"><input type="checkbox" id="subclass2_4" /> 겨울</label>
+                                    <label for="subclass2_5"><input type="checkbox" id="subclass2_5" /> 따뜻</label>
+                                    <label for="subclass2_6"><input type="checkbox" id="subclass2_6" /> 산뜻</label>
+                                    <label for="subclass2_7"><input type="checkbox" id="subclass2_7" /> 시원</label>
+                                    <label for="subclass2_8"><input type="checkbox" id="subclass2_8" /> 서늘</label>
+                                    <label for="subclass2_9"><input type="checkbox" id="subclass2_9" /> 추운</label>
+                                    <label for="subclass2_10"
+                                      ><input type="checkbox" id="subclass2_10" /> 안개자욱</label
+                                    >
+                                  </div>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>생활/쇼핑</dt>
+                                <dd>
+                                  <div class="scroll_wrap">
+                                    <label for="subclass3_1"><input type="checkbox" id="subclass3_1" /> 일상</label>
+                                    <label for="subclass3_2"
+                                      ><input type="checkbox" id="subclass3_2" /> 육아·결혼</label
+                                    >
+                                    <label for="subclass3_3"><input type="checkbox" id="subclass3_3" /> 반려동물</label>
+                                    <label for="subclass3_4"
+                                      ><input type="checkbox" id="subclass3_4" /> 패션·미용</label
+                                    >
+                                    <label for="subclass3_5"
+                                      ><input type="checkbox" id="subclass3_5" /> 인테리어/DIV
+                                      인테리어/DIV인테리어/DIV</label
+                                    >
+                                    <label for="subclass3_6"
+                                      ><input type="checkbox" id="subclass3_6" /> 요리·레시피</label
+                                    >
+                                  </div>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>취미/여행</dt>
+                                <dd>
+                                  <div class="scroll_wrap">
+                                    <label for="subclass4_1"><input type="checkbox" id="subclass4_1" /> 게임</label>
+                                    <label for="subclass4_2"><input type="checkbox" id="subclass4_2" /> 스포츠</label>
+                                    <label for="subclass4_3"><input type="checkbox" id="subclass4_3" /> 사진</label>
+                                    <label for="subclass4_4"><input type="checkbox" id="subclass4_4" /> 자동차</label>
+                                    <label for="subclass4_5"
+                                      ><input type="checkbox" id="subclass4_5" /> 취미 취미 취미 취미 취미 취미</label
+                                    >
+                                    <label for="subclass4_6"><input type="checkbox" id="subclass4_6" /> 국내여행</label>
+                                    <label for="subclass4_7"><input type="checkbox" id="subclass4_7" /> 세계여행</label>
+                                    <label for="subclass4_8"><input type="checkbox" id="subclass4_8" /> 맛집</label>
+                                    <label for="subclass4_9"><input type="checkbox" id="subclass4_9" /> 맛집2</label>
+                                    <label for="subclass4_10"><input type="checkbox" id="subclass4_10" /> 맛집3</label>
+                                    <label for="subclass4_11"><input type="checkbox" id="subclass4_11" /> 맛집4</label>
+                                  </div>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>푸드</dt>
+                                <dd>
+                                  <div class="scroll_wrap">
+                                    <label for="subclass5_1"><input type="checkbox" id="subclass5_1" /> 외식</label>
+                                    <label for="subclass5_2"><input type="checkbox" id="subclass5_2" /> 배달음식</label>
+                                    <label for="subclass5_3"><input type="checkbox" id="subclass5_3" /> 도시락</label>
+                                    <label for="subclass5_4"
+                                      ><input type="checkbox" id="subclass5_4" /> 카페·디저트</label
+                                    >
+                                    <label for="subclass5_5"><input type="checkbox" id="subclass5_5" /> 베이커리</label>
+                                    <label for="subclass5_6"><input type="checkbox" id="subclass5_6" /> 술집</label>
+                                  </div>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>감정</dt>
+                                <dd>
+                                  <div class="scroll_wrap">
+                                    <label for="subclass6_1"><input type="checkbox" id="subclass6_1" /> 기쁨</label>
+                                    <label for="subclass6_2"><input type="checkbox" id="subclass6_2" /> 기쁨</label>
+                                    <label for="subclass6_3"><input type="checkbox" id="subclass6_3" /> 기쁨</label>
+                                    <label for="subclass6_4"><input type="checkbox" id="subclass6_4" /> 기쁨</label>
+                                    <label for="subclass6_5"><input type="checkbox" id="subclass6_5" /> 기쁨</label>
+                                    <label for="subclass6_6"><input type="checkbox" id="subclass6_6" /> 기쁨</label>
+                                    <label for="subclass6_7"><input type="checkbox" id="subclass6_7" /> 기쁨</label>
+                                    <label for="subclass6_8"><input type="checkbox" id="subclass6_8" /> 기쁨</label>
+                                    <label for="subclass6_9"><input type="checkbox" id="subclass6_9" /> 기쁨</label>
+                                    <label for="subclass6_10"><input type="checkbox" id="subclass6_10" /> 기쁨</label>
+                                    <label for="subclass6_11"><input type="checkbox" id="subclass6_11" /> 기쁨</label>
+                                  </div>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>감정</dt>
+                                <dd>
+                                  <div class="scroll_wrap">
+                                    <label for="subclass7_1"><input type="checkbox" id="subclass7_1" /> 기쁨</label>
+                                    <label for="subclass7_2"><input type="checkbox" id="subclass7_2" /> 기쁨</label>
+                                    <label for="subclass7_3"><input type="checkbox" id="subclass7_3" /> 기쁨</label>
+                                    <label for="subclass7_4"><input type="checkbox" id="subclass7_4" /> 기쁨</label>
+                                    <label for="subclass7_5"><input type="checkbox" id="subclass7_5" /> 기쁨</label>
+                                    <label for="subclass7_6"><input type="checkbox" id="subclass7_6" /> 기쁨</label>
+                                    <label for="subclass7_7"><input type="checkbox" id="subclass7_7" /> 기쁨</label>
+                                    <label for="subclass7_8"><input type="checkbox" id="subclass7_8" /> 기쁨</label>
+                                    <label for="subclass7_9"><input type="checkbox" id="subclass7_9" /> 기쁨</label>
+                                    <label for="subclass7_10"><input type="checkbox" id="subclass7_10" /> 기쁨</label>
+                                    <label for="subclass7_11"><input type="checkbox" id="subclass7_11" /> 기쁨</label>
+                                  </div>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="caution caution_top">최소 1개, 최대 10개까지 선택가능합니다.</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰유형</th>
+                      <td colspan="3">비율할인 100</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 정가</th>
+                      <td>10,000</td>
+                      <th scope="row">할인가</th>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">대표 이미지</th>
+                      <td colspan="3">342145.png</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 상세정보</th>
+                      <td colspan="3">
+                        MIN_342145.png<br />
+                        <strong>[유의사항]</strong><br />
+                        -교환 유효기간은 발행일로부터 90일입니다.<br />
+                        -신용카드 결제는 1,000원 이상부터 결제가능합니다.<br /><br />
+
+                        <strong>[매장안내]</strong><br />
+                        -무등경기장 및 을지병원 내 매장에서는 교환이 불가합니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 발급 총 수량</th>
+                      <td colspan="3">1,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 번호 등록</th>
+                      <td colspan="3">
+                        바코드형 쿠폰<br />
+                        Feb_McD_20160201.CSV<br />
+                        2,000
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">담당자</th>
+                      <td>김석민</td>
+                      <th scope="row">연락처</th>
+                      <td>010-4455-8888</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //일괄배포 확인 -->
+          </div>
+          <!-- //스크롤 -->
+
+          <div class="btngroup effect2">
+            <div class="btn_left">
+              <!-- [D] 활성화 시, a태그에 class="dimmed" 삭제 -->
+              <a href="#" class="btn_default dimmed">일괄배포</a>
+              <!-- <a href="#" class="btn_default">일괄배포</a> -->
+              <a href="#" class="btn_new">등록</a>
+            </div>
+            <p class="page_num">1/36</p>
+            <div class="btn_right">
+              <a href="#" class="btn_cancel">이전</a>
+              <a href="#" class="btn_save">다음</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

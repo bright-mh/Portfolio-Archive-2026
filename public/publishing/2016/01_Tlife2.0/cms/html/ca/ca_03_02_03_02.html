@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>신규 캠페인 등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy.mm.dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p>CMS 관리자 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb3_3:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb3_3:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb3_3:eq(0)>ul>li:eq(1)>ul>li:eq(2)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb3_3">
+                <a href="#">회원관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">회원관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">회원관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">계약관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">제휴사 정보 관리</a></li>
+                      <li><a href="#">채널 정보 관리</a></li>
+                      <li><a href="#">캠페인 정보 관리</a></li>
+                      <li><a href="#">브랜드 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>회원관리</span>
+              <span>계약관리</span>
+              <span>캠페인 정보 관리</span>
+              <strong>신규 캠페인 등록</strong>
+            </div>
+
+            <h3 class="tit">신규 캠페인 등록</h3>
+            <ul class="guide">
+              <li>신규 캠페인 정보를 등록합니다.</li>
+              <li>캠페인 정보를 기반으로 회원 및 판매상품이 관리되니, 정확하게 입력해 주시기 바랍니다.</li>
+            </ul>
+
+            <!-- 신규 캠페인 등록 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <span class="ess">필수 입력 항목입니다.</span>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >CMS 캠페인 ID, 판매채널 (채널 ID), 제휴사 명, 제휴코드, 상품구분, 캠페인 명, 캠페인 ID, 전시기간,
+                      담당자, 연락처가 있는 신규 캠페인 등록 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">CMS 캠페인 ID</th>
+                      <td colspan="3">시스템 자동출력</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">판매채널 (채널 ID)</span>
+                      </th>
+                      <td colspan="3">
+                        <select title="판매채널 (채널 ID)" style="width: 240px">
+                          <option>판매채널</option>
+                          <option>T라이프 (CH_0001)</option>
+                          <option>쿠키즈 (CH_0002)</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">제휴사 명</span>
+                      </th>
+                      <td>
+                        <select title="제휴사명" style="width: 240px">
+                          <option>제휴사</option>
+                          <option>기프티콘 (앰엔서비스)</option>
+                          <option>기프티쇼 (E&amp;M)</option>
+                        </select>
+                      </td>
+                      <th scope="row">제휴코드</th>
+                      <td>시스템 자동출력</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">상품구분</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="division1" name="division" /><label for="division1" class="radio_range"
+                          >유료</label
+                        >
+                        <input type="radio" id="division2" name="division" /><label for="division2" class="radio_range"
+                          >무료</label
+                        >
+                        <span class="comment">선택된 유형의 상품만 등록/관리 가능합니다.</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">캠페인 명</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="wid_per50" title="캠페인 명" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">캠페인ID</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="wid_per30" title="캠페인ID" />
+                        <span class="caution caution_left">제휴사 캠페인 ID를 입력하세요.</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">전시기간</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" title="전시기간 시작일" class="wid_calendar pickerArea" />
+                        &nbsp;~&nbsp;
+                        <input type="text" title="전시기간 종료일" class="wid_calendar pickerArea" />
+                        <span class="caution caution_left"
+                          >YYYY.MM.DD 형식으로 직접 입력할 수 있습니다. (예: 2016.07.08)</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">담당자</th>
+                      <td><input type="text" class="wid_per50" title="담당자 입력" placeholder="이름" /></td>
+                      <th scope="row">연락처</th>
+                      <td>
+                        <input type="text" class="wid_per50" title="연락처 입력" placeholder="010-1234-5678" />
+                        <span>
+                          <a href="#" class="btn_small">추가</a>
+                          <a href="#" class="btn_small">삭제</a>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //신규 캠페인 등록 테이블 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_cancel">취소</a>
+                <a href="#" class="btn_new">캠페인 등록</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

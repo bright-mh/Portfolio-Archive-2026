@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>추천앱 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+
+        //OS 선택 컨트롤
+        $("input:radio[name='os_choice']").each(function () {
+          $(this).click(function () {
+            var val = $(this).val();
+            if (val == "android") {
+              $(".ip_ios").attr("disabled", true);
+              $(".ip_android").attr("disabled", false);
+            } else if (val == "ios") {
+              $(".ip_ios").attr("disabled", false);
+              $(".ip_android").attr("disabled", true);
+            } else {
+              $(".ip_android,.ip_ios").attr("disabled", false);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb5:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(3)").addClass("on");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(3)>ul>li:eq(1)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb5">
+                <a href="#">프로모션 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">팝업관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">팝업관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Push 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">Push 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이벤트 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이벤트 배너관리</a></li>
+                      <li><a href="#">이달의 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 티켓관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">추천앱 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">추천앱 배너관리</a></li>
+                      <li><a href="#">추천앱 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">위젯관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">위젯관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>프로모션 관리</span>
+              <span>추천앱 관리</span>
+              <span>추천앱 관리</span>
+              <strong>추천앱 수정/조회</strong>
+            </div>
+            <h3 class="tit">추천앱 수정/조회</h3>
+
+            <!-- 추천앱 수정/조회 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >App 타이틀, 서브 타이틀, OS 선택, App. ID((Package name &amp; 실행 URL 스킴), App. 다운로드 URL,
+                      App 아이콘, 이미지, 소개 메시지, 소개 페이지, 상세설명, 부가내용, 티켓 설정, 카테고리 선택, SKT
+                      only Tag, 노출 설정이 있는 추천앱 수정/조회 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="title" class="ess">App 타이틀</label>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" id="title" class="wid_per80" value="추천앱 수정/조회" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="sub_title" class="ess">서브 타이틀</label>
+                      </th>
+                      <td colspan="3">
+                        <input
+                          type="text"
+                          id="sub_title"
+                          class="wid_per80"
+                          maxlength="15"
+                          placeholder="최대 15자 입력 가능"
+                          value="스팸차단, 114검색, 테마, 자동녹음까지!"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span class="ess">OS 선택</span></th>
+                      <td colspan="3">
+                        <input type="radio" id="osAll" name="os_choice" value="all" checked="checked" /><label
+                          for="osAll"
+                          class="radio_range"
+                          >Android + IOS</label
+                        >
+                        <input type="radio" id="android" value="android" name="os_choice" /><label
+                          for="android"
+                          class="radio_range"
+                          >Android</label
+                        >
+                        <input type="radio" id="ios" value="ios" name="os_choice" /><label for="ios" class="radio_range"
+                          >IOS</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">App. ID<br />(Package name &amp;<br />실행 URL 스킴)</span>
+                      </th>
+                      <td colspan="3">
+                        <p class="mission_details">
+                          <span>Android :</span>
+                          <input
+                            type="text"
+                            class="wid_per80 ip_android"
+                            title="Android id 입력"
+                            placeholder="Android Package name을 입력하세요."
+                            value="com.skt.prod.tphonelite"
+                          />
+                        </p>
+                        <p class="mission_details">
+                          <span>IOS :</span>
+                          <input
+                            type="text"
+                            class="wid_per80 ip_ios"
+                            title="IOS id 입력"
+                            placeholder="IOS 실행 URL 스킴을 입력 하세요."
+                            value="com.skt.prod.tphonelite"
+                          />
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span class="ess">App. 다운로드 URL</span></th>
+                      <td colspan="3">
+                        <p class="mission_details">
+                          <span class="txt_range">Android_Google play :</span>
+                          <input
+                            type="text"
+                            class="wid_per80 ip_android"
+                            title="Android_Google play URL 입력"
+                            value="https://play.google.com/store/apps/details?id=skplanet.musicmate"
+                          />
+                        </p>
+                        <p class="mission_details">
+                          <span class="txt_range">Android_One store :</span>
+                          <input
+                            type="text"
+                            class="wid_per80 ip_android"
+                            title="Android_One store URL 입력"
+                            value="https://itunes.apple.com/kr/app/myujigmeiteu-musicmate/id1013745397?mt=8"
+                          />
+                        </p>
+                        <p class="mission_details">
+                          <span>IOS :</span>
+                          <input
+                            type="text"
+                            class="wid_per80 ip_ios"
+                            title="IOS URL 입력"
+                            value="https://play.google.com/store/apps/details?id=com.skt.prod.tphonelite"
+                          />
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">App 아이콘</span>
+                      </th>
+                      <td colspan="3">
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="추천앱 이미지" width="80" height="80" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice">파일선택</label>
+                            <input type="file" id="file_choice" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>OOO*OOOpx 의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이미지</span>
+                      </th>
+                      <td colspan="3">
+                        T 서비스 소개 이미지는 기본 3개 등록이며, 최대 5개까지 등록이 가능 합니다.
+                        <ul class="caution_list">
+                          <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                          <li>OOO*OOOpx 의 PNG 파일업로드</li>
+                        </ul>
+
+                        <div class="gap_top">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_img1">파일선택</label>
+                            <input type="file" id="file_img1" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                            <a href="#" class="btn_small">이미지 추가</a>
+                          </div>
+                        </div>
+                        <div class="gap_top">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_img2">파일선택</label>
+                            <input type="file" id="file_img2" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                            <a href="#" class="btn_small">이미지 추가</a>
+                          </div>
+                        </div>
+                        <div class="gap_top">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_img3">파일선택</label>
+                            <input type="file" id="file_img3" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                            <a href="#" class="btn_small dimmed">이미지 추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">소개 메시지</span>
+                      </th>
+                      <td colspan="3">
+                        <textarea class="wid_per80" rows="3" title="소개 메시지">
+통신사, 단말 관계없이 누구나 사용 가능한 T전화(티전화) 다운로드 앱을 이용해 보세요! </textarea
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">소개 페이지</th>
+                      <td colspan="3">
+                        <input type="text" class="wid_per80" title="소개 페이지" value="http://" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">상세설명</span>
+                      </th>
+                      <td colspan="3">
+                        <textarea class="wid_per80" rows="3" title="상세설명">
+1. 안심통화 
+보이스 피싱, 광고전화, T전화가 미리 알려드립니다!
+하루가 멀다 하고 오는 광고전화, 받기 전에 누구인지 알고 예방할 수 있는 편리함!</textarea
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부가내용</th>
+                      <td colspan="3">
+                        <p>
+                          업데이트 날짜 :
+                          <input type="text" title="업데이트 날짜" value="2016-11-01" class="wid_calendar pickerArea" />
+                        </p>
+                        <p class="gap_top">현재버전 : ver &nbsp;<input type="text" title="현재버전" value="2.8.7" /></p>
+                        <p class="gap_top">크기 : <input type="text" title="크기" value="11" /> Mb</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span class="ess">티켓 설정</span></th>
+                      <td colspan="3"><input type="text" title="티켓 설정" value="5" /> &nbsp;장 적립</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span class="ess">카테고리 선택</span></th>
+                      <td colspan="3">
+                        <select id="category" title="카테고리 선택" style="width: 140px">
+                          <option>T만의 폼나는 앱</option>
+                          <option>커뮤니케이션</option>
+                          <option>영상음악</option>
+                          <option>펀</option>
+                          <option>쇼핑쿠폰</option>
+                          <option>세이프티</option>
+                          <option>지도</option>
+                          <option>고객Care</option>
+                          <option>키즈청소년</option>
+                          <option>제휴</option>
+                          <option>기타</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">SKT only Tag</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="tag1" name="tag" checked="checked" /><label
+                          for="tag1"
+                          class="radio_range"
+                          >Y</label
+                        >
+                        <input type="radio" id="tag2" name="tag" /><label for="tag2" class="radio_range">N</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">노출 설정</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="exposure1" name="exposure" checked="checked" /><label
+                          for="exposure1"
+                          class="radio_range"
+                          >Y</label
+                        >
+                        <input type="radio" id="exposure2" name="exposure" /><label for="exposure2" class="radio_range"
+                          >N</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">작성자 (ID)</th>
+                      <td>Gildong00 (Master)</td>
+                      <th scope="row">작성일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수정자 (ID)</th>
+                      <td>Gildong00 (Master)</td>
+                      <th scope="row">수정일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_left">
+                  <a href="#" class="btn_delete">삭제</a>
+                </div>
+                <div class="btn_right">
+                  <a href="#" class="btn_cancel">취소</a>
+                  <a href="#" class="btn_save">저장</a>
+                </div>
+              </div>
+            </div>
+            <!-- //추천앱 수정/조회 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

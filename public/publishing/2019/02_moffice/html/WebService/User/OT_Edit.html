@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>PC 사용 신청</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 780*700 -->
+  <body class="user_popup" style="width: 780px">
+    <!-- user_pop_wrap -->
+    <div class="user_pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>PC 사용 신청</h1>
+        <a href="#none" class="btn_close">닫기</a>
+      </header>
+      <!-- //header -->
+
+      <!-- user_pop_contents -->
+      <div class="user_pop_contents">
+        <!-- 연장근무 사용시간 -->
+        <div class="user_overtime_use">
+          <ul class="user_flex_box">
+            <!-- <li>
+						<div class="period_box">
+							<p class="title day">일</p>
+							<ul class="possible_list">
+								<li>신청 가능<span>제한없음</span></li>
+								<li>금주 사용<span>00:00</span></li>
+							</ul>
+						</div>
+					</li> -->
+            <li>
+              <div class="period_box">
+                <p class="title week">주</p>
+                <ul class="possible_list">
+                  <li>신청 가능<span>제한없음</span></li>
+                  <li>금주 사용<span>00:00</span></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="period_box">
+                <p class="title month">월</p>
+                <ul class="possible_list">
+                  <li>신청 가능<span>제한없음</span></li>
+                  <li>금주 사용<span>00:00</span></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- //연장근무 사용시간 -->
+
+        <!-- user_tbl_row_default -->
+        <div class="user_tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 143px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">신청일</th>
+                <td>
+                  <div class="ip_calendar">
+                    <input type="text" name="" value="2019-07-05" title="시작일" />
+                    <img src="../../common/img/user_icon_calendar.png" alt="달력" class="img_carlendar" />
+                  </div>
+                  <span class="day_week">수요일</span>
+                  <span class="day_week_info">신청가능일이 아닙니다.</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">신청시간</th>
+                <td>
+                  <!-- 정규외 -->
+                  <select name="" title="선택" class="sel_choice" style="width: 185px">
+                    <option value="">정규외 (00:00~09:00)</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                  <!-- //정규외 -->
+                  <select name="" title="시작 시" style="width: 60px">
+                    <option value="">18</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                  :
+                  <select name="" title="시작 분" style="width: 60px">
+                    <option value="">00</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                  ~
+                  <select name="" title="종료 시" style="width: 60px">
+                    <option value="">00</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                  :
+                  <select name="" title="종료 분" style="width: 60px">
+                    <option value="">00</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                  <span class="day_week_info color_blue">내용내용</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">신청사유</th>
+                <td>
+                  <textarea
+                    name=""
+                    cols=""
+                    rows=""
+                    placeholder="신청사유를 입력해 주세요."
+                    style="width: 100%; height: 168px"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">결재자</th>
+                <td>
+                  <div class="user_tbl_box">
+                    <!-- 목록 -->
+                    <div class="box_top">
+                      <div class="title">목록</div>
+                      <div class="table_cell">
+                        <!-- user_scroll_cover -->
+                        <div class="user_scroll_cover">
+                          <!-- user_in_tbl_default -->
+                          <!-- [D] 스크롤 높이 줄일 때 max-height값 수정 -->
+                          <div class="user_in_tbl_default" style="max-height: 120px">
+                            <table>
+                              <colgroup>
+                                <col style="width: 100px" />
+                                <col style="width: 170px" />
+                                <col style="width: 80px" />
+                                <col style="width: 80px" />
+                                <col style="width: auto" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col"><a href="#none">사번</a></th>
+                                  <th scope="col"><a href="#none">담당부서</a></th>
+                                  <th scope="col"><a href="#none">이름</a></th>
+                                  <th scope="col"><a href="#none">직급</a></th>
+                                  <th scope="col"><a href="#none">선택</a></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>20160401</td>
+                                  <td>제이니스</td>
+                                  <td>오광섭</td>
+                                  <td>부장</td>
+                                  <td><a href="#none" class="btn_sm bg_sky">선택</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- user_in_tbl_default -->
+                        </div>
+                        <!-- //user_scroll_cover -->
+                      </div>
+                    </div>
+                    <!-- 목록 -->
+
+                    <!-- 선택 -->
+                    <div class="box_btm">
+                      <div class="title">선택</div>
+                      <div class="table_cell">
+                        <!-- user_in_tbl_default -->
+                        <div class="user_in_tbl_default">
+                          <table>
+                            <colgroup>
+                              <col style="width: 100px" />
+                              <col style="width: 170px" />
+                              <col style="width: 80px" />
+                              <col style="width: 80px" />
+                              <col style="width: auto" />
+                            </colgroup>
+                            <tbody>
+                              <!-- 결재자 선택 전 -->
+                              <tr>
+                                <td colspan="100">추가된 데이터가 없습니다.</td>
+                              </tr>
+                              <!-- 결재자 선택 후 -->
+                              <tr>
+                                <td>20160401</td>
+                                <td>제이니스</td>
+                                <td>오광섭</td>
+                                <td>부장</td>
+                                <td><a href="#none" class="btn_sm bg_pink">삭제</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- user_in_tbl_default -->
+                      </div>
+                    </div>
+                    <!-- //선택 -->
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //user_tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <!-- [D] 레이어 팝업열기 : 버튼이나 링크 영역에 onclick="popupOpen('#팝업아이디')" 삽입! -->
+          <a href="#none" class="btn_big bg_deepblue" onclick="popupOpen('#layerpop01')">신청하기</a>
+        </div>
+
+        <!-- <div class="btn_area">
+				<a href="#none" class="btn_big bg_pink">취소하기</a>
+			</div> -->
+        <!-- //btn -->
+      </div>
+      <!-- //user_pop_contents -->
+    </div>
+    <!-- //user_pop_wrap -->
+
+    <!-- layer_popup -->
+    <div class="layer_bg full"></div>
+    <!-- [D] div 태그에 id 값으로 onclick에 사용된 팝업아이디를 넣어주세요. -->
+    <div class="layer_popup" id="layerpop01">
+      <!-- header -->
+      <header>
+        <h1>긴급 PC사용 신청</h1>
+        <a href="#none" class="btn_layer_close close">닫기</a>
+      </header>
+      <!-- //header -->
+      <!-- layer_contents -->
+      <div class="layer_contents full_eft">
+        <!-- cont_area -->
+        <!-- [D] 이미지에 따라 div 태그에 class="bg1 ~ bg3" 까지 클래스명 추가 -->
+        <div class="cont_area bg1">
+          <div class="txt_area">
+            <p class="title">PC사용 신청이 완료되었습니다.</p>
+            <p class="detail_bg">신청시간 : 2020년 2월 16일 19시 00분 ~ 21시 00분</p>
+            <p class="detail">* 신청 건이 승인되면 PC사용이 가능합니다.</p>
+          </div>
+
+          <!-- <div class="txt_area">
+					PC사용 신청이 완료되었습니다.
+				</div> -->
+
+          <div class="btn_area btm">
+            <a href="#none" class="btn_big bg_blue">확인</a>
+            <a href="#none" class="btn_big bg_sky_line close">취소</a>
+          </div>
+        </div>
+        <!-- //cont_area -->
+      </div>
+      <!-- //layer_contents -->
+    </div>
+    <!-- //layer_popup -->
+  </body>
+</html>

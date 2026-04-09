@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>블랙리스트 조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>블랙리스트 조회</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>블랙리스트로 등록된 회원의 사유 및 블랙리스트 해제를 할수 있습니다.</li>
+          </ul>
+
+          <!-- 블랙리스트 조회 리스트 -->
+          <div class="table_list">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>회원정보, 등록일, 등록사유가 있는 블랙리스트 조회 정보</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <!-- MDN 회원일 경우 -->
+                  <tr>
+                    <th rowspan="3" scope="row">회원정보</th>
+                    <td><strong>회원 구분</strong> : MDN</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ID</strong> : 010****5678</td>
+                  </tr>
+                  <tr>
+                    <td><strong>닉네임</strong> : -</td>
+                  </tr>
+                  <!-- //MDN 회원일 경우 -->
+                  <!-- T아이디 회원일 경우1 -->
+                  <tr>
+                    <th rowspan="3" scope="row">회원정보</th>
+                    <td><strong>회원 구분</strong> : T아이디</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ID</strong> : flashbug1***</td>
+                  </tr>
+                  <tr>
+                    <td><strong>닉네임</strong> : 쨍경수</td>
+                  </tr>
+                  <!-- //T아이디 회원일 경우1 -->
+                  <!-- T아이디 회원일 경우2 -->
+                  <tr>
+                    <th rowspan="3" scope="row">회원정보</th>
+                    <td><strong>회원 구분</strong> : T아이디</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ID</strong> : testid1***@nate.com</td>
+                  </tr>
+                  <tr>
+                    <td><strong>닉네임</strong> : 범들소환</td>
+                  </tr>
+                  <!-- //T아이디 회원일 경우2 -->
+                  <tr>
+                    <th scope="row">등록일</th>
+                    <td>2016-06-18</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">등록사유</th>
+                    <td>
+                      <textarea class="wid_per80" rows="3" title="등록사유">상습 어뷰징 고객 입니다.</textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //블랙리스트 조회 리스트 -->
+
+          <div class="btngroup">
+            <div class="btn_left">
+              <a href="#" class="btn_delete">해제</a>
+            </div>
+            <div class="btn_right">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_save">저장</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

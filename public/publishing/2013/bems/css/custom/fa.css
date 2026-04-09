@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* 2014-02-13 가로스크롤 드래그 문제_추가01 */
+article.xScroll_bar {
+  overflow-x: scroll;
+  position: relative;
+}
+/* //2014-02-13 가로스크롤 드래그 문제_추가01 */
+
+.inquiry {
+  width: 402px;
+  min-height: 28px;
+  padding: 0 0 0 10px;
+  border: 1px solid #b3b3b3;
+  background: #fff url("/html/2014/bems/images/common/bg_box_line.gif") repeat-x 0 0;
+}
+.inquiry .title {
+  width: 100px;
+  margin: 3px 10px 3px 0;
+  padding: 5px 0 0 0;
+  line-height: 16px;
+}
+.inquiry ul {
+  width: 292px;
+  margin: 0 0 3px 0;
+  overflow: hidden;
+}
+.inquiry ul li {
+  float: left;
+  height: 20px;
+  margin: 3px 10px 0 0;
+  border: 1px solid #c7c7c7;
+  background: #e6e6e6;
+  color: #4b4b4c;
+  font-size: 11px;
+  overflow: hidden;
+}
+.inquiry ul li .txtStyle {
+  display: block;
+  padding: 4px 9px 6px 9px;
+}
+
+.fixed_box {
+  position: relative;
+  min-width: 1288px;
+}
+
+/* 1600 이상 */
+@media only screen and (min-width: 1600px) {
+  .fixed_box {
+    width: 100%;
+  }
+
+  /* 2014-02-13 가로스크롤 드래그 문제_추가02 */
+  .tableGroup01 .fixed_layout {
+    position: relative;
+    min-width: 600px;
+  }
+  article.xScroll_bar {
+    overflow-x: hidden !important;
+  }
+  /* //2014-02-13 가로스크롤 드래그 문제_추가02 */
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>::: 크레듀에 오신것을 환영합니다:::</title>
+    <link href="../common/css/import.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../common/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../common/js/jquery.marquee.js"></script>
+    <script type="text/javascript" src="../common/js/select_design.js"></script>
+  </head>
+
+  <body>
+    <!-- [D] 팝업의 크기 400x388 -->
+
+    <div class="popup">
+      <h1>
+        <img
+          src="../common/img/title_popup_write.gif"
+          width="80"
+          height="16"
+          alt="수강후기 작성"
+          title="수강후기 작성"
+        />
+      </h1>
+
+      <div class="pop_style1">
+        <div><img src="../common/img/popup_top.gif" width="360" height="10" alt="" /></div>
+
+        <!-- 팝업 내용 -->
+        <div class="pop_certify2">
+          <div class="certify2_top">
+            <label class="study_point">학습 평점</label>
+            <div class="select">
+              <select id="select_4" style="width: 71px; height: 19px; display: none">
+                <option value="#">5점</option>
+                <option value="#">4점</option>
+                <option value="#">3점</option>
+                <option value="#">2점</option>
+                <option value="#">1점</option>
+              </select>
+              <script type="text/javascript">
+                makeSelectBoxGlobal(
+                  "select_4",
+                  "selectBoxSelectedAreaGlobal",
+                  "#a9a9a9",
+                  "../common/img/btn_arrow.gif",
+                  "selectBoxOptionGlobal",
+                  "selectBoxSelectedAreaFocusGlobal",
+                  "selectBoxOptionOverGlobal",
+                );
+              </script>
+            </div>
+          </div>
+
+          <div class="textarea"><textarea name="" cols="" rows="">내용 입력</textarea></div>
+
+          <div class="join_event">
+            <p class="text">
+              이벤트에 참여하신 수강후기 작성자 분 중 좋은 수강후기를<br />
+              작성 해 주신 분 중 <span>매월 5분을 선정하여 영화관람권</span>을 드립니다.
+            </p>
+            <p class="check">
+              <input type="checkbox" name="join_event" id="join_event" /><label for="join_event">이벤트 참여</label>
+              <a href="#" class="btn">이벤트 자세히보기</a>
+            </p>
+          </div>
+        </div>
+        <!-- //팝업 내용 -->
+
+        <div><img src="../common/img/popup_bottom.gif" width="360" height="10" alt="" /></div>
+
+        <ul class="pop_btn">
+          <li>
+            <a href="#"><img src="../common/img/btn_ok.gif" alt="확인" title="확인" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/btn_cancel2.gif" alt="취소" title="취소" /></a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#" class="close"><img src="../common/img/btn_close.gif" alt="닫기" title="닫기" /></a>
+    </div>
+  </body>
+</html>

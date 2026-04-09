@@ -1,0 +1,1298 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+      name="viewport"
+    />
+
+    <link href="../common/css/contents.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/basic.js"></script>
+
+    <title>꿈날개</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="header" class="sub_header">
+        <h1 class="sub_title" style="width: 94px">
+          <img src="../common/img/title_diagnostic1_01.png" alt="직업선호도검사" />
+        </h1>
+        <p class="prev_page">
+          <a href="#"><img src="../common/img/btn_prev_page.png" alt="이전" /></a>
+        </p>
+        <p class="all_view">
+          <a href="#"><img src="../common/img/btn_all_view.png" alt="메뉴보기" /></a>
+        </p>
+      </div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- 직업선호도 검사_프로세스 본문 -->
+        <div class="job_process_contents">
+          <!-- 상단 설명 -->
+          <div class="job_process">
+            <p>직업에 대한 적합도를 측정해 <span>직업선택에 필요한 정보제공</span></p>
+            <p>
+              예상소요시간은 <span class="style1">2분</span>이내<span class="style2">(총 <span>36문항</span>)</span>
+            </p>
+          </div>
+          <!-- //상단 설명 -->
+
+          <!-- 설문 리스트 -->
+          <div class="process_listbox">
+            <div class="box_title">
+              <p>
+                <img
+                  src="../common/img/process_box_title.png"
+                  alt="아래 설문 문항을 읽으시고 정확하게 답변 해 주세요."
+                />
+              </p>
+            </div>
+
+            <ol class="process_list">
+              <li>
+                <p class="question">1. 나는 기계나 전기, 전자제품을 조작하는 활동을 좋아한다.</p>
+                <div>
+                  <!-- [D] 글씨를 클릭해도 radio 버튼이 선택될 수 있도록 각 라디오버튼의 id값과 label for 값을 동일하게 넣어 주세요. -->
+                  <p class="choice1">
+                    <input type="radio" id="question1_1" name="question_1" value="" /><label
+                      for="question1_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question1_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question1_2" name="question_1" value="" /><label
+                      for="question1_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question1_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question1_3" name="question_1" value="" /><label
+                      for="question1_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question1_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question1_4" name="question_1" value="" /><label
+                      for="question1_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question1_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">2. 나는 도구를 이용해 무엇을 만드는 일을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question2_1" name="question_2" value="" /><label
+                      for="question2_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question2_1.click()}ImgChangeMatch(this)"
+                      onClick="radio_check(1)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question2_2" name="question_2" value="" /><label
+                      for="question2_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question2_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question2_3" name="question_2" value="" /><label
+                      for="question2_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question2_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question2_4" name="question_2" value="" /><label
+                      for="question2_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question2_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">3. 나는 기계나 전기, 전자제품을 잘 조작한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question3_1" name="question_3" value="" /><label
+                      for="question3_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question3_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question3_2" name="question_3" value="" /><label
+                      for="question3_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question3_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question3_3" name="question_3" value="" /><label
+                      for="question3_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question3_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question3_4" name="question_3" value="" /><label
+                      for="question3_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question3_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">4. 나는 도구를 사용해 무언가 만드는 일을 잘한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question4_1" name="question_4" value="" /><label
+                      for="question4_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question4_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question4_2" name="question_4" value="" /><label
+                      for="question4_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question4_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question4_3" name="question_4" value="" /><label
+                      for="question4_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question4_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question4_4" name="question_4" value="" /><label
+                      for="question4_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question4_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">5. 나는 기술자로서의 재능을 발휘하는 일에 적합하다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question5_1" name="question_5" value="" /><label
+                      for="question5_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question5_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question5_2" name="question_5" value="" /><label
+                      for="question5_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question5_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question5_3" name="question_5" value="" /><label
+                      for="question5_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question5_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question5_4" name="question_5" value="" /><label
+                      for="question5_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question5_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">6. 나는 기계나 도구를 가지고 하는 일에 적합하다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question6_1" name="question_6" value="" /><label
+                      for="question6_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question6_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question6_2" name="question_6" value="" /><label
+                      for="question6_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question6_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question6_3" name="question_6" value="" /><label
+                      for="question6_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question6_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question6_4" name="question_6" value="" /><label
+                      for="question6_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question6_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">7. 나는 과학적으로 문제를 분석하고 해결하는 것을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question7_1" name="question_7" value="" /><label
+                      for="question7_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question7_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question7_2" name="question_7" value="" /><label
+                      for="question7_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question7_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question7_3" name="question_7" value="" /><label
+                      for="question7_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question7_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question7_4" name="question_7" value="" /><label
+                      for="question7_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question7_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">8. 나는 수학적인 문제를 분석하고 해결하는 것을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question8_1" name="question_8" value="" /><label
+                      for="question8_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question8_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question8_2" name="question_8" value="" /><label
+                      for="question8_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question8_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question8_3" name="question_8" value="" /><label
+                      for="question8_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question8_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question8_4" name="question_8" value="" /><label
+                      for="question8_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question8_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">9. 나는 과학적인 실험이나 연구를 수행할 자신이 있다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question9_1" name="question_9" value="" /><label
+                      for="question9_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question9_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question9_2" name="question_9" value="" /><label
+                      for="question9_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question9_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question9_3" name="question_9" value="" /><label
+                      for="question9_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question9_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question9_4" name="question_9" value="" /><label
+                      for="question9_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question9_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">10. 나는 자연현상을 탐구하고 연구하는 일을 잘 할 수 있다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question10_1" name="question_10" value="" /><label
+                      for="question10_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question10_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question10_2" name="question_10" value="" /><label
+                      for="question10_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question10_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question10_3" name="question_10" value="" /><label
+                      for="question10_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question10_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question10_4" name="question_10" value="" /><label
+                      for="question10_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question10_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">11. 나는 과학적이고 수학적으로 문제들을 연구하는 일에 적합하다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question11_1" name="question_11" value="" /><label
+                      for="question11_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question11_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question11_2" name="question_11" value="" /><label
+                      for="question11_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question11_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question11_3" name="question_11" value="" /><label
+                      for="question11_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question11_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question11_4" name="question_11" value="" /><label
+                      for="question11_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question11_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">12. 나는 새로운 지식을 탐색하고 공부하는 일이 잘 맞는다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question12_1" name="question_12" value="" /><label
+                      for="question12_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question12_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question12_2" name="question_12" value="" /><label
+                      for="question12_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question12_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question12_3" name="question_12" value="" /><label
+                      for="question12_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question12_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question12_4" name="question_12" value="" /><label
+                      for="question12_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question12_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">13. 나는 예술 활동과 같은 창조적인 일들을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question13_1" name="question_13" value="" /><label
+                      for="question13_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question13_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question13_2" name="question_13" value="" /><label
+                      for="question13_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question13_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question13_3" name="question_13" value="" /><label
+                      for="question13_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question13_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question13_4" name="question_13" value="" /><label
+                      for="question13_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question13_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">14. 나는 디자인, 만화, 영화와 같은 창작 활동을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question14_1" name="question_14" value="" /><label
+                      for="question14_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question14_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question14_2" name="question_14" value="" /><label
+                      for="question14_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question14_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question14_3" name="question_14" value="" /><label
+                      for="question14_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question14_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question14_4" name="question_14" value="" /><label
+                      for="question14_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question14_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">15. 나는 창조적인 일을 잘하는 편이다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question15_1" name="question_15" value="" /><label
+                      for="question15_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question15_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question15_2" name="question_15" value="" /><label
+                      for="question15_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question15_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question15_3" name="question_15" value="" /><label
+                      for="question15_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question15_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question15_4" name="question_15" value="" /><label
+                      for="question15_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question15_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">16. 나는 예술적인 감각이 우수한 편이다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question16_1" name="question_16" value="" /><label
+                      for="question16_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question16_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question16_2" name="question_16" value="" /><label
+                      for="question16_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question16_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question16_3" name="question_16" value="" /><label
+                      for="question16_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question16_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question16_4" name="question_16" value="" /><label
+                      for="question16_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question16_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">17. 나는 독창적이고 창조적인 활동이 잘 맞는다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question17_1" name="question_17" value="" /><label
+                      for="question17_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question17_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question17_2" name="question_17" value="" /><label
+                      for="question17_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question17_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question17_3" name="question_17" value="" /><label
+                      for="question17_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question17_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question17_4" name="question_17" value="" /><label
+                      for="question17_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question17_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">18. 나는 창의성을 발휘하여 새로운 것을 표현하는 활동이 잘 맞는다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question18_1" name="question_18" value="" /><label
+                      for="question18_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question18_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question18_2" name="question_18" value="" /><label
+                      for="question18_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question18_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question18_3" name="question_18" value="" /><label
+                      for="question18_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question18_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question18_4" name="question_18" value="" /><label
+                      for="question18_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question18_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">19. 나는 다른 사람들과 함게 일하는 것을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question19_1" name="question_19" value="" /><label
+                      for="question19_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question19_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question19_2" name="question_19" value="" /><label
+                      for="question19_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question19_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question19_3" name="question_19" value="" /><label
+                      for="question19_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question19_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question19_4" name="question_19" value="" /><label
+                      for="question19_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question19_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">20. 나는 다른 사람들에게 내가 아는 것을 가르쳐 주는 것을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question20_1" name="question_20" value="" /><label
+                      for="question20_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question20_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question20_2" name="question_20" value="" /><label
+                      for="question20_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question20_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question20_3" name="question_20" value="" /><label
+                      for="question20_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question20_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question20_4" name="question_20" value="" /><label
+                      for="question20_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question20_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">21. 나는 사람들을 도와주는 활동을 잘 하는 편이다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question21_1" name="question_21" value="" /><label
+                      for="question21_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question21_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question21_2" name="question_21" value="" /><label
+                      for="question21_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question21_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question21_3" name="question_21" value="" /><label
+                      for="question21_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question21_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question21_4" name="question_21" value="" /><label
+                      for="question21_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question21_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">22. 나는 사람들의 고민을 잘 들어주고 상담해준다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question22_1" name="question_22" value="" /><label
+                      for="question22_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question22_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question22_2" name="question_22" value="" /><label
+                      for="question22_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question22_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question22_3" name="question_22" value="" /><label
+                      for="question22_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question22_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question22_4" name="question_22" value="" /><label
+                      for="question22_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question22_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">23. 나는 어려운 사람들에게 도움을 주는 일이 잘 맞는다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question23_1" name="question_23" value="" /><label
+                      for="question23_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question23_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question23_2" name="question_23" value="" /><label
+                      for="question23_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question23_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question23_3" name="question_23" value="" /><label
+                      for="question23_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question23_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question23_4" name="question_23" value="" /><label
+                      for="question23_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question23_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">24. 나는 내가 알고있는 것을 다른사람들에게 가르쳐 주는 일이 어울린다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question24_1" name="question_24" value="" /><label
+                      for="question24_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question24_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question24_2" name="question_24" value="" /><label
+                      for="question24_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question24_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question24_3" name="question_24" value="" /><label
+                      for="question24_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question24_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question24_4" name="question_24" value="" /><label
+                      for="question24_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question24_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">25. 나는 조직을 관리 경영하는 활동을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question25_1" name="question_25" value="" /><label
+                      for="question25_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question25_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question25_2" name="question_25" value="" /><label
+                      for="question25_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question25_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question25_3" name="question_25" value="" /><label
+                      for="question25_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question25_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question25_4" name="question_25" value="" /><label
+                      for="question25_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question25_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">26. 나는 활동적으로 조직을 지도 감독하는 활동을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question26_1" name="question_26" value="" /><label
+                      for="question26_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question26_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question26_2" name="question_26" value="" /><label
+                      for="question26_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question26_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question26_3" name="question_26" value="" /><label
+                      for="question26_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question26_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question26_4" name="question_26" value="" /><label
+                      for="question26_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question26_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">27. 나는 상품 판매하는 일을 잘 할 수 있다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question27_1" name="question_27" value="" /><label
+                      for="question27_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question27_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question27_2" name="question_27" value="" /><label
+                      for="question27_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question27_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question27_3" name="question_27" value="" /><label
+                      for="question27_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question27_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question27_4" name="question_27" value="" /><label
+                      for="question27_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question27_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">28. 나는 리더쉽을 발휘하는 활동을 잘 할 수 있다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question28_1" name="question_28" value="" /><label
+                      for="question28_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question28_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question28_2" name="question_28" value="" /><label
+                      for="question28_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question28_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question28_3" name="question_28" value="" /><label
+                      for="question28_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question28_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question28_4" name="question_28" value="" /><label
+                      for="question28_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question28_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">29. 나는 기업을 관리하고 경영하는 일이 어울린다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question29_1" name="question_29" value="" /><label
+                      for="question29_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question29_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question29_2" name="question_29" value="" /><label
+                      for="question29_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question29_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question29_3" name="question_29" value="" /><label
+                      for="question29_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question29_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question29_4" name="question_29" value="" /><label
+                      for="question29_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question29_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">30. 나는 활동적으로 조직을 지도 감독하는 일이 잘 맞는다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question30_1" name="question_30" value="" /><label
+                      for="question30_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question30_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question30_2" name="question_30" value="" /><label
+                      for="question30_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question30_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question30_3" name="question_30" value="" /><label
+                      for="question30_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question30_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question30_4" name="question_30" value="" /><label
+                      for="question30_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question30_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">31. 나는 일정한 규칙에 따르는 일을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question31_1" name="question_31" value="" /><label
+                      for="question31_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question31_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question31_2" name="question_31" value="" /><label
+                      for="question31_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question31_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question31_3" name="question_31" value="" /><label
+                      for="question31_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question31_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question31_4" name="question_31" value="" /><label
+                      for="question31_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question31_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">32. 나는 문서작성이나 자료 정리하는 일을 좋아한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question32_1" name="question_32" value="" /><label
+                      for="question32_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question32_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question32_2" name="question_32" value="" /><label
+                      for="question32_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question32_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question32_3" name="question_32" value="" /><label
+                      for="question32_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question32_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question32_4" name="question_32" value="" /><label
+                      for="question32_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question32_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">33. 나는 문서정리나 자료를 관리하는 활동을 잘한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question33_1" name="question_33" value="" /><label
+                      for="question33_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question33_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question33_2" name="question_33" value="" /><label
+                      for="question33_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question33_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question33_3" name="question_33" value="" /><label
+                      for="question33_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question33_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question33_4" name="question_33" value="" /><label
+                      for="question33_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question33_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">34. 나는 순서가 정해져 있는 반복적인 일을 잘한다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question34_1" name="question_34" value="" /><label
+                      for="question34_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question34_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question34_2" name="question_34" value="" /><label
+                      for="question34_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question34_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question34_3" name="question_34" value="" /><label
+                      for="question34_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question34_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question34_4" name="question_34" value="" /><label
+                      for="question34_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question34_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">35. 나는 정리된 환경에서 정해진 규칙에 따라 처리하는 일이 어울린다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question35_1" name="question_35" value="" /><label
+                      for="question35_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question35_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question35_2" name="question_35" value="" /><label
+                      for="question35_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question35_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question35_3" name="question_35" value="" /><label
+                      for="question35_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question35_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question35_4" name="question_35" value="" /><label
+                      for="question35_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question35_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p class="question">36. 나는 주어진 업무를 계획대로 처리하는 일에 적합하다.</p>
+                <div>
+                  <p class="choice1">
+                    <input type="radio" id="question36_1" name="question_36" value="" /><label
+                      for="question36_1"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question36_1.click()}ImgChangeMatch(this)"
+                      >매우그렇다</label
+                    >
+                  </p>
+                  <p class="choice2">
+                    <input type="radio" id="question36_2" name="question_36" value="" /><label
+                      for="question36_2"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question36_2.click()}ImgChangeMatch(this)"
+                      >그렇다</label
+                    >
+                  </p>
+                  <p class="choice3">
+                    <input type="radio" id="question36_3" name="question_36" value="" /><label
+                      for="question36_3"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question36_3.click()}ImgChangeMatch(this)"
+                      >그렇지않다</label
+                    >
+                  </p>
+                  <p class="choice4">
+                    <input type="radio" id="question36_4" name="question_36" value="" /><label
+                      for="question36_4"
+                      onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){question36_4.click()}ImgChangeMatch(this)"
+                      >절대그렇지않다</label
+                    >
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="process_btn">
+              <p class="text">
+                (선택완료&#47;전체문항) <span class="style2">27</span> <span class="style3">&#47;</span>
+                <span class="style4">36</span>
+              </p>
+              <p>
+                <a href="#"><img src="../common/img/btn_result_show.png" alt="진단결과보기" /></a>
+              </p>
+            </div>
+          </div>
+          <!-- //설문 리스트 -->
+        </div>
+        <!-- //직업선호도 검사_프로세스 본문 -->
+      </div>
+      <!-- container -->
+
+      <div id="floater">
+        <div class="floater_inner">
+          <p class="center_call">
+            <a href="tel:0318999119"><img src="../common/img/btn_call.png" alt="학습지원 센터 031-8999-119" /></a>
+          </p>
+          <ul class="floater_btn1">
+            <li class="btn1">
+              <a href="#"><img src="../common/img/floater_btn1_01.png" alt="꿈날개 소개" /></a>
+            </li>
+            <li class="btn2">
+              <a href="#"><img src="../common/img/floater_btn1_02.png" alt="개인정보처리방침" /></a>
+            </li>
+            <li class="btn3">
+              <a href="#"><img src="../common/img/floater_btn1_03.png" alt="이용약관" /></a>
+            </li>
+            <li class="btn4">
+              <a href="http://www.dream.go.kr/" target="_blank"
+                ><img src="../common/img/floater_btn1_04.png" alt="PC버전"
+              /></a>
+            </li>
+          </ul>
+          <ul class="floater_btn2">
+            <li>
+              <a href="#"><img src="../common/img/btn_login.png" alt="로그인" /></a>
+            </li>
+            <li class="btn_top" onClick="btn_top()"><img src="../common/img/btn_top.png" alt="맨위로" /></li>
+          </ul>
+          <p class="floater_copy">
+            <img src="../common/img/floater_copy.png" alt="Gyeoggi Women’s Development Center" />
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>OMS 권한 설정 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>OMS 권한 설정</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>권한 변경 시에는 설정 후 반드시 운영자 정보를 저장해야 변경된 정보로 설정됩니다.</li>
+          </ul>
+
+          <div class="all">
+            <div class="chk_all"><input type="checkbox" id="chk01" /><label for="chk01">전체</label></div>
+            <ul class="menu_list">
+              <li>
+                <h3><input type="checkbox" id="chk02" /><label for="chk02">사용자 관리</label></h3>
+                <div class="chk_list">
+                  <span><input type="checkbox" id="chk02_01" /><label for="chk02_01">운영자 정보</label></span>
+                  <span><input type="checkbox" id="chk02_02" /><label for="chk02_02">T life 회원정보</label></span>
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk03" /><label for="chk03">전시관리</label></h3>
+                <div class="chk_list">
+                  <span><input type="checkbox" id="chk03_01" /><label for="chk03_01">전시 관리</label></span>
+                  <span><input type="checkbox" id="chk03_02" /><label for="chk03_02">상품 등록 관리</label></span>
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk04" /><label for="chk04">쿠폰관리</label></h3>
+                <div class="chk_list">
+                  <span><input type="checkbox" id="chk04_01" /><label for="chk04_01">쿠폰 발급 현황</label></span>
+                  <span><input type="checkbox" id="chk04_02" /><label for="chk04_02">쿠폰 획득현황</label></span>
+                  <span><input type="checkbox" id="chk04_03" /><label for="chk04_03">정산관리</label></span>
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk05" /><label for="chk05">고객지원</label></h3>
+                <div class="chk_list">
+                  <span><input type="checkbox" id="chk05_01" /><label for="chk05_01">1:1 문의관리</label></span>
+                  <span><input type="checkbox" id="chk05_02" /><label for="chk05_02">공지사항</label></span>
+                  <span><input type="checkbox" id="chk05_03" /><label for="chk05_03">경품발급관리</label></span>
+                  <span><input type="checkbox" id="chk05_04" /><label for="chk05_04">광고성 정보 수신동의</label></span>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="menu_list">
+              <li>
+                <h3><input type="checkbox" id="chk06" /><label for="chk06">프로모션 관리</label></h3>
+                <div class="chk_list">
+                  <span><input type="checkbox" id="chk06_01" /><label for="chk06_01">팝업 관리</label></span>
+                  <span><input type="checkbox" id="chk06_02" /><label for="chk06_02">Push 관리</label></span>
+                  <span><input type="checkbox" id="chk06_03" /><label for="chk06_03">이벤트 관리</label></span>
+                  <span><input type="checkbox" id="chk06_04" /><label for="chk06_04">추천앱 관리</label></span>
+                  <span><input type="checkbox" id="chk06_05" /><label for="chk06_05">위젯관리</label></span>
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk07" /><label for="chk07">사이트 관리</label></h3>
+                <div class="chk_list">
+                  <span><input type="checkbox" id="chk07_01" /><label for="chk07_01">코드 관리</label></span>
+                  <span><input type="checkbox" id="chk07_02" /><label for="chk07_02">요금제 관리</label></span>
+                  <span><input type="checkbox" id="chk07_03" /><label for="chk07_03">닉네임 금칙어 관리</label></span>
+                  <span><input type="checkbox" id="chk07_08" /><label for="chk07_08">전시 키워드 관리</label></span>
+                  <span><input type="checkbox" id="chk07_04" /><label for="chk07_04">이용안내</label></span>
+                  <span><input type="checkbox" id="chk07_05" /><label for="chk07_05">App 버전관리</label></span>
+                  <span><input type="checkbox" id="chk07_06" /><label for="chk07_06">약관 관리</label></span>
+                  <span><input type="checkbox" id="chk07_07" /><label for="chk07_07">서비스 점검 관리</label></span>
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk08" /><label for="chk08">통계 관리</label></h3>
+                <div class="chk_list">
+                  <span><input type="checkbox" id="chk08_01" /><label for="chk08_01">가입통계</label></span>
+                  <span><input type="checkbox" id="chk08_02" /><label for="chk08_02">서비스 통계</label></span>
+                  <span><input type="checkbox" id="chk08_03" /><label for="chk08_03">회원유형별 상세통계</label></span>
+                  <span><input type="checkbox" id="chk08_04" /><label for="chk08_04">자동발급 쿠폰통계</label></span>
+                  <span><input type="checkbox" id="chk08_05" /><label for="chk08_05">사용완료 쿠폰통계</label></span>
+                </div>
+              </li>
+              <!-- 정렬을 위해 넣어둠(지우지 말 것) -->
+              <li>
+                <h3>&nbsp;</h3>
+                <div class="chk_list"></div>
+              </li>
+              <!-- //정렬을 위해 넣어둠(지우지 말 것) -->
+            </ul>
+          </div>
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_save">선택완료</a>
+              <a href="#" class="btn_cancel">취소</a>
+            </div>
+          </div>
+          <!-- //btngroup-->
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

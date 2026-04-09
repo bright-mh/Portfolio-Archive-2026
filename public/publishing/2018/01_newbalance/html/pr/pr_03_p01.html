@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>New Balance Korea</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../../js/html5.js"></script>
+      <script type="text/javascript" src="../../js/ui_ie9.js"></script>
+    <![endif]-->
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+  </head>
+  <body>
+    <div class="expand_view">
+      <h1>WOMEN 하이웨스트 여름 경량 10부 솔리드 레깅스</h1>
+      <div class="viewer">
+        <a href="#none" class="prev"><span class="blind">이전</span></a>
+        <a href="#none" class="next"><span class="blind">다음</span></a>
+        <img src="../../img/dummy/pr_zoom01_1_1000.png" id="bgimg" alt="" />
+      </div>
+      <div class="thumb_wrap">
+        <span class="thumb active"
+          ><a href="../../img/dummy/pr_zoom01_1_1000.png"><img src="../../img/dummy/pr_zoom01_1_98.png" alt="" /></a
+        ></span>
+        <span class="thumb"
+          ><a href="../../img/dummy/pr_zoom01_2_1000.png"><img src="../../img/dummy/pr_zoom01_2_98.png" alt="" /></a
+        ></span>
+        <span class="thumb"
+          ><a href="../../img/dummy/pr_zoom01_3_1000.png"><img src="../../img/dummy/pr_zoom01_3_98.png" alt="" /></a
+        ></span>
+        <span class="thumb"
+          ><a href="../../img/dummy/pr_zoom01_4_1000.png"><img src="../../img/dummy/pr_zoom01_4_98.png" alt="" /></a
+        ></span>
+        <span class="thumb"
+          ><a href="../../img/dummy/pr_zoom01_5_1000.png"><img src="../../img/dummy/pr_zoom01_5_98.png" alt="" /></a
+        ></span>
+      </div>
+    </div>
+
+    <script>
+      var bgimg = $("#bgimg");
+      var prevImageBtn = $(".viewer .prev");
+      var nextImageBtn = $(".viewer .next");
+      var thumbWrap = $(".expand_view .thumb_wrap");
+      var thumb = thumbWrap.find(".thumb");
+
+      bgImgSize();
+
+      thumb.find("a").on("focusein click", function (event) {
+        event.preventDefault();
+        var $this = $(this);
+        var thisSrc = $this.attr("href");
+        $this.parents(".thumb").addClass("active").siblings().removeClass("active");
+        bgimg.attr("src", thisSrc);
+      });
+
+      prevImageBtn.click(function () {
+        var thisThumb = thumbWrap.find(".active");
+        var prevImage = thisThumb.prev().find("a").attr("href");
+        thisThumb.prev().addClass("active").siblings().removeClass("active");
+        if (prevImage == null) {
+          var prevImage = thumb.last().find("a").attr("href");
+          thumb.last().addClass("active").siblings().removeClass("active");
+        }
+        bgimg.attr("src", prevImage);
+      });
+
+      nextImageBtn.click(function () {
+        var thisThumb = thumbWrap.find(".active");
+        var nextImage = thisThumb.next().find("a").attr("href");
+        thisThumb.next().addClass("active").siblings().removeClass("active");
+        if (nextImage == null) {
+          var nextImage = thumb.first().find("a").attr("href");
+          thumb.first().addClass("active").siblings().removeClass("active");
+        }
+        bgimg.attr("src", nextImage);
+      });
+
+      $(window).resize(function () {
+        bgImgSize();
+      });
+
+      function bgImgSize() {
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+        if (winHeight / winWidth < 1) {
+          bgimg.css({ width: winHeight, height: winHeight });
+        } else {
+          bgimg.css({ height: winWidth, width: winWidth });
+        }
+        bgimg.css("margin-top", (winHeight - bgimg.height()) / 2);
+      }
+    </script>
+  </body>
+</html>

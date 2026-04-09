@@ -1,0 +1,17 @@
+body {
+  background: #333;
+  color: #fafafa;
+}
+h1 {
+  font-size: 2em;
+  color: #fd0;
+  font-family: Arial;
+}
+a {
+  color: #fff;
+  font-size: 13px;
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+  line-height: 20px;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <link href="/html/2014/bems/css/custom/etc.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery-1.7.2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".login .input_style04").bind("focus", function () {
+          $(this).css("background", "none").css("background", "#fff");
+        });
+        $(".login .input_style04").bind("blur", function () {
+          if ($(this).val() == "") {
+            if ($(this).hasClass("input_style04_01")) {
+              $(this).css(
+                "background",
+                "#fff url(/html/2014/bems/images/common/bg_login_input01.gif) no-repeat 10px 6px",
+              );
+            } else {
+              $(this).css(
+                "background",
+                "#fff url(/html/2014/bems/images/common/bg_login_input02.gif) no-repeat 10px 6px",
+              );
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body class="login">
+    <!-- wrap -->
+    <div id="wrap_login">
+      <div id="container_login">
+        <div class="contents_login">
+          <h1><img src="/html/2014/bems/images/common/logo_login.gif" alt="CLOUD BEMS" /></h1>
+          <input type="text" class="input_style04 input_style04_01" />
+          <input type="password" class="input_style04 input_style04_02" />
+          <!-- [D] 오류 메시지 : 주석처리해 놓음 -->
+          <!--
+				<p class="txt_msg">아이디를 입력해 주세요.</p>
+				-->
+          <!--
+				<p class="txt_msg">비밀번호를 입력해 주세요.</p>
+				-->
+          <!--
+				<p class="txt_msg">입력하신 아이디와 비밀번호가 일치하지 않습니다.</p>
+				-->
+
+          <!-- 2013-12-16 버튼 기능 수정 -->
+          <p class="btn_login">
+            <a href="#link"><span>로그인</span></a>
+          </p>
+          <!-- //2013-12-16 버튼 기능 수정 -->
+          <ul class="loginList">
+            <li>이미 부여 받은 사이트의 아이디와 패스워드를 입력하세요.</li>
+            <li>아이디 또는 비밀번호를 분실하신 고객님께서는 CLOUD BEMS 운영팀에 문의해주시기 바랍니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>그린 i-net</title>
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <link rel="stylesheet" type="text/css" href="../common/css/mobile_ui.css" />
+    <script type="text/javascript" src="../common/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../common/js/mobile_ui.js"></script>
+  </head>
+  <body>
+    <div class="wrap sub set_time">
+      <header>
+        <div class="header_top">
+          <h1 class="logo_momi"><img src="../common/img/logo_momi.png" alt="momi home" /></h1>
+          <p class="txt_license">GR-1509-CQRZ-6659</p>
+        </div>
+
+        <!-- gnb -->
+        <nav class="gnb">
+          <ul class="gnb_list">
+            <!-- [D] 선택 시, li 태그에 class="on" 추가 -->
+            <li><a href="#none">요약</a></li>
+            <li class="on"><a href="#none">시간설정</a></li>
+            <li><a href="#none">차단설정</a></li>
+            <li><a href="#none">기록조회</a></li>
+          </ul>
+        </nav>
+        <!-- //gnb -->
+      </header>
+
+      <!-- contents -->
+      <div class="contents">
+        <!-- PC 사용시간 -->
+        <div class="grouping">
+          <h2 class="group_title">PC 사용시간</h2>
+
+          <!-- bg_white_box -->
+          <div class="bg_white_box">
+            <!-- [D] id와 label 값을 동일하게 넣어 주세요. -->
+            <input type="radio" name="" id="" class="ip_radio" checked="checked" /><label for="">제한없음</label>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box flex_box">
+            <div class="choice">
+              <input type="radio" name="" id="" class="ip_radio" /><label for="">하루사용시간</label>
+            </div>
+            <div class="write">
+              <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+              <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+            </div>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box flex_box">
+            <div class="choice">
+              <input type="radio" name="" id="" class="ip_radio" /><label for="">평일/주말 설정</label>
+            </div>
+            <div class="write">
+              <p class="line_change">
+                평일 :
+                <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+                <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+              </p>
+              <p class="line_change">
+                주말 :
+                <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+                <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+              </p>
+            </div>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box">
+            <input type="radio" name="" id="" class="ip_radio" disabled="disabled" /><label for=""
+              >요일별 상세설정</label
+            >
+            <p class="txt_tip">* PC에서만 설정이 가능합니다.</p>
+          </div>
+          <!-- //bg_white_box -->
+        </div>
+        <!-- //PC 사용시간 -->
+
+        <!-- 게임 사용시간 -->
+        <div class="grouping">
+          <h2 class="group_title">게임 사용시간</h2>
+
+          <!-- bg_white_box -->
+          <div class="bg_white_box">
+            <!-- [D] id와 label 값을 동일하게 넣어 주세요. -->
+            <input type="radio" name="" id="" class="ip_radio" /><label for="">제한없음</label>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box flex_box">
+            <div class="choice">
+              <input type="radio" name="" id="" class="ip_radio" checked="checked" /><label for="">하루사용시간</label>
+            </div>
+            <div class="write">
+              <input type="text" name="" value="0" class="ip_txt40" /> 시간
+              <input type="text" name="" value="0" class="ip_txt40 ml4" /> 분
+            </div>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box flex_box">
+            <div class="choice">
+              <input type="radio" name="" id="" class="ip_radio" /><label for="">평일/주말 설정</label>
+            </div>
+            <div class="write">
+              <p class="line_change">
+                평일 :
+                <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+                <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+              </p>
+              <p class="line_change">
+                주말 :
+                <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+                <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+              </p>
+            </div>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box">
+            <input type="radio" name="" id="" class="ip_radio" disabled="disabled" /><label for=""
+              >요일별 상세설정</label
+            >
+            <p class="txt_tip">* PC에서만 설정이 가능합니다.</p>
+          </div>
+          <!-- //bg_white_box -->
+        </div>
+        <!-- //게임 사용시간 -->
+
+        <!-- 인터넷 사용시간 -->
+        <div class="grouping">
+          <h2 class="group_title">인터넷 사용시간</h2>
+
+          <!-- bg_white_box -->
+          <div class="bg_white_box">
+            <!-- [D] id와 label 값을 동일하게 넣어 주세요. -->
+            <input type="radio" name="" id="" class="ip_radio" /><label for="">제한없음</label>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box day_week_setting">
+            <input type="radio" name="" id="" class="ip_radio" checked="checked" /><label for="">요일별 상세설정</label>
+
+            <!-- show_setting -->
+            <!-- [D] 요일별 상세설정 선택 시, style="display:block" -->
+            <div class="show_setting" style="display: block">
+              <div class="detail_area">
+                <ul class="txt_tip_list">
+                  <li>* 한칸은 30분 단위</li>
+                  <li>* 요일 선택시 해당 요일 전체 선택/해제 가능</li>
+                  <li>* 선택된 시간 동안 인터넷 사용 가능</li>
+                </ul>
+                <a href="#none" class="btn_26 bg_white btn_inline">시간초기화</a>
+              </div>
+              <!-- tbl_day_week -->
+              <div class="tbl_day_week">
+                <table>
+                  <colgroup>
+                    <col style="width: 4.3%" />
+                    <col style="width: 5.9%" />
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <!-- [D] 요일 선택 시, a 태그에 class="on" 추가 (토글) -->
+                      <th colspan="2"><span>&nbsp;</span></th>
+                      <th scope="col"><a href="#none">월</a></th>
+                      <th scope="col"><a href="#none">화</a></th>
+                      <th scope="col"><a href="#none">수</a></th>
+                      <th scope="col"><a href="#none">목</a></th>
+                      <th scope="col"><a href="#none">금</a></th>
+                      <th scope="col"><a href="#none">토</a></th>
+                      <th scope="col"><a href="#none">일</a></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- 오전 12 -->
+                    <tr>
+                      <td rowspan="24" class="title_hours">
+                        <p>오<span class="eft">전</span></p>
+                      </td>
+                      <td rowspan="2" class="txt_time"><p>12</p></td>
+                      <!-- [D] id와 label 값을 동일하게 넣어 주세요. -->
+                      <td>
+                        <input type="checkbox" name="" id="" class="ip_chekbox2" checked="checked" /><label for=""
+                          >선택</label
+                        >
+                      </td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 12 -->
+                    <!-- 오전 1 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>1</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 1 -->
+                    <!-- 오전 2 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>2</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 2 -->
+                    <!-- 오전 3 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>3</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 3 -->
+                    <!-- 오전 4 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>4</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 4 -->
+                    <!-- 오전 5 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>5</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 5 -->
+                    <!-- 오전 6 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>6</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 6 -->
+                    <!-- 오전 7 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>7</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 7 -->
+                    <!-- 오전 8 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>8</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 8 -->
+                    <!-- 오전 9 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>9</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 9 -->
+                    <!-- 오전 10 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>10</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 10 -->
+                    <!-- 오전 11 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>11</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오전 11 -->
+                    <!-- 오후 12 -->
+                    <tr>
+                      <td rowspan="24" class="title_hours afternoon">
+                        <p>오<span class="eft">후</span></p>
+                      </td>
+                      <td rowspan="2" class="txt_time"><p>12</p></td>
+                      <!-- [D] id와 label 값을 동일하게 넣어 주세요. -->
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 12 -->
+                    <!-- 오후 1 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>1</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 1 -->
+                    <!-- 오후 2 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>2</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 2 -->
+                    <!-- 오후 3 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>3</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 3 -->
+                    <!-- 오후 4 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>4</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 4 -->
+                    <!-- 오후 5 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>5</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 5 -->
+                    <!-- 오후 6 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>6</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 6 -->
+                    <!-- 오후 7 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>7</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 7 -->
+                    <!-- 오후 8 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>8</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 8 -->
+                    <!-- 오후 9 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>9</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 9 -->
+                    <!-- 오후 10 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>10</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 10 -->
+                    <!-- 오후 11 -->
+                    <tr>
+                      <td rowspan="2" class="txt_time"><p>11</p></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                      <td><input type="checkbox" name="" id="" class="ip_chekbox2" /><label for="">선택</label></td>
+                    </tr>
+                    <!-- //오후 11 -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_day_week -->
+            </div>
+            <!-- show_setting -->
+          </div>
+          <!-- //bg_white_box -->
+        </div>
+        <!-- //인터넷 사용시간 -->
+
+        <!-- 메신저 사용시간 -->
+        <div class="grouping">
+          <h2 class="group_title">메신저 사용시간</h2>
+
+          <!-- bg_white_box -->
+          <div class="bg_white_box">
+            <!-- [D] id와 label 값을 동일하게 넣어 주세요. -->
+            <input type="radio" name="" id="" class="ip_radio" checked="checked" /><label for="">제한없음</label>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box flex_box">
+            <div class="choice">
+              <input type="radio" name="" id="" class="ip_radio" /><label for="">하루사용시간</label>
+            </div>
+            <div class="write">
+              <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+              <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+            </div>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box flex_box">
+            <div class="choice">
+              <input type="radio" name="" id="" class="ip_radio" /><label for="">평일/주말 설정</label>
+            </div>
+            <div class="write">
+              <p class="line_change">
+                평일 :
+                <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+                <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+              </p>
+              <p class="line_change">
+                주말 :
+                <input type="text" name="" value="0" class="ip_txt40" disabled="disabled" /> 시간
+                <input type="text" name="" value="0" class="ip_txt40 ml4" disabled="disabled" /> 분
+              </p>
+            </div>
+          </div>
+          <!-- //bg_white_box -->
+          <!-- bg_white_box -->
+          <div class="bg_white_box">
+            <input type="radio" name="" id="" class="ip_radio" disabled="disabled" /><label for=""
+              >요일별 상세설정</label
+            >
+            <p class="txt_tip">* PC에서만 설정이 가능합니다.</p>
+          </div>
+          <!-- //bg_white_box -->
+        </div>
+        <!-- //메신저 사용시간 -->
+
+        <!-- btn_area -->
+        <div class="btn_area">
+          <a href="#none" class="btn_40 bg_yellow">적용</a>
+        </div>
+        <!-- //btn_area -->
+      </div>
+      <!-- //contents -->
+
+      <p class="logout"><a href="#none">로그아웃</a></p>
+    </div>
+  </body>
+</html>

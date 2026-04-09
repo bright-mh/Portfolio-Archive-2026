@@ -1,0 +1,129 @@
+/**
+    AN_TIME_GS_001
+    에너지분석 > 에너지 사용량 패턴분석 > 가스 사용패턴 > 평균사용량
+*/
+
+$(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'line',
+                spacing: [40,0,0,0], 
+		events: { load: function(event) { onChartLoaded('chart01');} } // 2014-01-07 폰트 통일을 위해 추가			
+            },
+            title: {
+                text: ''
+            },
+            credits: false,
+            xAxis: {
+                tickWidth: 0,
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                hour: '%H'
+                },
+                tickInterval: 1 * 60 * 60 * 1000
+            },
+            yAxis: [
+            {
+                min:0,
+                lineWidth:1,
+                title: {
+                    text: 'N㎥'
+                },
+                labels:{
+                    formatter: function() {
+                        return this.value ;
+                    }
+                }
+            }
+            ,
+            {
+                min:0,
+                max:10,
+                lineWidth:1,
+                tickInterval :2,
+                title: {
+                    text: '℃'
+                },
+                labels:{
+                    formatter: function() {
+                        return this.value ;
+                    }
+                },
+                opposite: 1
+            }
+            ]
+            ,
+            plotOptions: {
+            },
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom',
+                floating: false,
+                backgroundColor: '#FFFFFF',
+                borderColor: '#FFFFFF',
+                borderWidth: 0,
+                style:{
+                    fontSize:'10px',
+                    color:'#777777',
+                    fontWeight:'normal'
+                },
+                title:{
+                    style:{
+                        fontSize:'10px',
+                        color:'#777777',
+                        fontWeight:'normal'
+                    }
+                }
+            },
+			tooltip: {
+				valueSuffix: ' kWh',
+				shared: false,
+				useHTML: true,
+				headerFormat: '{point.key}<br />',
+				pointFormat: '<p>' + 
+				'<span style="color: {series.color}">{series.name}: </span>' +
+				'<span style="text-align: right"> {point.y} </span> ' + 
+				'</span> ',
+				footerFormat: '',
+				valueDecimals: 2
+			},	
+            series: [
+             {
+                name: '오늘사용량',
+                data: [130,120,125,120,130,150,180,210,250,280,260,240,250,240,270,250,180,140,150,160],
+                pointStart: Date.UTC(2013, 11, 14),
+                pointInterval: 1 * 60 * 60 * 1000,
+                marker:{ enabled: false, symbol: 'circle', radius: 2, lineWidth: 1}
+            }
+            ,
+             {
+                 name: '비교대상',
+                 data: [135,125,120,125,135,190,185,215,255,285,265,245,255,245,275,255,185,145,155,165,185,175,165,145,155],
+                 pointInterval: 1 * 60 * 60 * 1000,
+                 pointStart: Date.UTC(2013, 11, 14),
+                 marker:{ enabled: false, symbol: 'circle', radius: 2, lineWidth: 1},
+                 dashStyle: 'Dash',
+            }                
+            ,
+             {
+                 name: '외기온도',
+                 data: [235,225,220,225,235,290,285,315,355,385,365,245,155,145,275,355,285,245,255,265,185,75,65,45,55],
+                 pointInterval: 1 * 60 * 60 * 1000,
+                 pointStart: Date.UTC(2013, 11, 14),
+                 marker:{ enabled: false, symbol: 'circle', radius: 2, lineWidth: 1}
+            }                
+                
+            ],
+            exporting: {
+				buttons:{
+					contextButton: {
+						align:'right',
+						y:-40, 
+						x:-22
+					}
+				}
+			}
+        });
+    });
+    

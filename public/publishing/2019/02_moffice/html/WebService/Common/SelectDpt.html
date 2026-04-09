@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>부서 선택</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*521 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>부서 선택</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- department_search -->
+        <div class="department_search clearfix">
+          <!-- 상단 : 조직도 -->
+          <div class="fl_left">
+            <!-- 조직도 영역 -->
+            <div>
+              <img src="../../common/img/dummy_organization.png" alt="조직도" />
+            </div>
+            <!-- //조직도 영역 -->
+          </div>
+          <!-- //상단 : 조직도 -->
+          <!-- 상단 : 부서명 검색 영역 -->
+          <div class="fl_left">
+            <!-- tbl_row_default -->
+            <div class="tbl_row_default">
+              <table>
+                <colgroup>
+                  <col style="width: 100px" />
+                  <col style="width: auto" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">부서명</th>
+                    <td>
+                      <div class="ip_box" style="width: 280px">
+                        <input type="text" name="" value="" title="부서명" />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                      <a href="#none" class="btn_md icon_md_search_blue">검색</a>
+                      <input type="checkbox" id="" name="" value="" class="ml12" /><label for="">하위부서 포함</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl_row_default -->
+
+            <!-- result_area -->
+            <div class="result_area">
+              <!-- tbl_default -->
+              <div class="tbl_default">
+                <table>
+                  <colgroup>
+                    <col style="width: 100px" />
+                    <col style="width: auto" />
+                    <col style="width: 80px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">부서명</th>
+                      <th scope="col">상/하위 부서</th>
+                      <th scope="col">비고</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="no_data">
+                      <td colspan="100">검색된 데이터가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>개발4팀</td>
+                      <td class="left">제이니스 &gt; 개발부 &gt; 개발4팀</td>
+                      <td><a href="#none" class="btn_sm bg_sky">선택</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_default -->
+            </div>
+            <!-- //result_area -->
+          </div>
+          <!-- //상단 : 부서명 검색 영역 -->
+        </div>
+        <!-- //department_search -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

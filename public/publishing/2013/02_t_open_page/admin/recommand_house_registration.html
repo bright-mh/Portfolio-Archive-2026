@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <title>T open page</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+    />
+    <!-- 131002 수정 -->
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.2.custom.min.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/common_cal.js"></script>
+    <script type="text/javascript" src="js/content/content_list.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- //131002 수정 -->
+  </head>
+
+  <body>
+    <p id="skipNavi"><a href="#contents">본문바로가기</a></p>
+
+    <header class="header">
+      <div class="hwrap">
+        <h1>
+          <a href="#none"><img src="img/admin_logo.gif" alt="T open page" /></a>
+        </h1>
+
+        <!-- 131002_수정 -->
+        <section class="login">
+          <ul>
+            <li class="listStyle01">[ openpage admin님 ]</li>
+            <li class="listStyle02"><span>최종 접속일</span> &#47; 2013-09-25 16:07:08</li>
+            <li class="listStyle03 state"><a href="#none">LOGOUT</a></li>
+          </ul>
+        </section>
+        <!-- //131002_수정 -->
+
+        <nav class="gnb">
+          <ul>
+            <li class="on"><a href="#none">전시 관리</a></li>
+            <li><a href="#none">통계</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <article class="container">
+      <div class="wrap">
+        <div class="wrap_in">
+          <nav class="lnb">
+            <h2>전시 관리</h2>
+            <ul>
+              <li><a href="#none">전체 전시 현황</a></li>
+              <li><a href="#none">전체 패널 관리</a></li>
+              <li>
+                <a href="#none">사이트 바로가기 <br />패널</a>
+              </li>
+              <li class="on"><a href="#none">오늘의 추천 패널</a></li>
+              <li><a href="#none">하우스 배너 관리</a></li>
+              <li><a href="#none">광고주 관리</a></li>
+            </ul>
+          </nav>
+
+          <!-- contents -->
+          <div id="contents" class="contents">
+            <section class="title">
+              <!-- 130930_수정 -->
+              <h3>오늘의 추천<span class="mark">&gt;</span>Slot 1</h3>
+              <!-- //130930_수정 -->
+              <!-- 131002_수정 -->
+              <p class="location">
+                <a href="#none">전시 관리</a>&gt;<a href="#none">오늘의 추천</a>&gt;<a href="#none">Slot 상세</a>&gt;<a
+                  href="#none"
+                  class="last"
+                  >NEW 하우스 배너 등록</a
+                >
+              </p>
+              <!-- //131002_수정 -->
+            </section>
+
+            <!-- NEW 하우스 배너 등록 -->
+            <section class="panel_registration">
+              <h4>NEW 하우스 배너 등록</h4>
+
+              <h5>Slot 1</h5>
+
+              <table cellspacing="0" cellpadding="0" class="registration registration2">
+                <colgroup>
+                  <col width="125px" />
+                  <col width="*" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      하우스 배너명 <span class="necessity"><img src="img/icon_necessity.gif" alt="필수 입력" /></span>
+                    </th>
+                    <td>
+                      <span class="input_text01 form_wm02">
+                        <input type="text" title="하우스 배너명 입력" />
+                      </span>
+                      <span class="stxt02">0 bytes / 20 bytes </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="th_style">
+                      이미지 <span class="necessity"><img src="img/icon_necessity.gif" alt="필수 입력" /></span>
+                    </th>
+                    <td class="td_style">
+                      <span class="type06"><img src="img/noImg03.gif" alt="no Img" /></span>
+                      <div class="box">
+                        <span class="input_text_file form_wmfile04 type02">
+                          <input type="text" title="이미지 주소" readonly="readonly" />
+                        </span>
+                        <span class="type03"
+                          >PNG, <span class="pointColor">296</span> <span class="pointColor02">x 140</span> px</span
+                        >
+                      </div>
+                      <span class="type04">
+                        <!--<a href="#none" class="btn_gray04"><span>이미지첨부</span></a>-->
+                        <span
+                          id="fileInputForm"
+                          style="
+                            display: block;
+                            position: relative;
+                            float: left;
+                            width: 93px;
+                            height: 30px;
+                            overflow: hidden;
+                            cursor: pointer;
+                            background: url(&quot;img/btn_file.gif&quot;) no-repeat 0 0;
+                            cursor: pointer;
+                          "
+                        >
+                          <input
+                            type="file"
+                            id="atch_file"
+                            name="atch_file"
+                            value=""
+                            style="width: 90px; height: 29px; filter: alpha(opacity=0); opacity: 0; -moz-opacity: 0"
+                          />
+                        </span>
+                        <a class="btn_none" style="float: left"><span>다운로드</span></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      링크 URL <span class="necessity"><img src="img/icon_necessity.gif" alt="필수 입력" /></span>
+                    </th>
+                    <td>
+                      <span class="input_text01 form_wm02">
+                        <input type="text" title="링크 URL 입력" />
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="btn_area mt44">
+                <a href="#none" class="btn_gray03 mr3"><span>등록</span></a>
+                <a href="#none" class="btn_gray03"><span>취소</span></a>
+                <a href="#none" class="btn_gray03 rbtn"><span>목록</span></a>
+              </div>
+            </section>
+            <!-- //NEW 하우스 배너 등록 -->
+          </div>
+          <!-- //contents -->
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <address>
+        <p><img src="img/img_footer.png" alt="" /></p>
+        <ul class="blind">
+          <li><strong>대표이사</strong> 서진우</li>
+          <li><strong>주소</strong> 서울 중구 을지로2가 11</li>
+          <li><strong>사업자등록번호</strong> 104-86-36968</li>
+          <li><strong>통신판매업신고</strong> 제2011-서울중구-1333호</li>
+          <li><strong>Copyright</strong> 2013 SK Planet.</li>
+          <li><strong>고객센터</strong> 1588-7898 (월~금 9:00~18:00, 공휴일 휴무)</li>
+          <li><strong>기술문의</strong> support@t-ad.co.kr</li>
+          <li><strong>SDK 배포/사업문의</strong> svcadmin@t-ad.co.kr</li>
+        </ul>
+      </address>
+    </footer>
+  </body>
+</html>

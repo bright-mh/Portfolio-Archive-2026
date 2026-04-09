@@ -1,0 +1,390 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <title>GS Pop Card :: Coding List</title>
+    <meta charset="utf-8" />
+
+    <style type="text/css">
+      body,
+      td {
+        margin: 10px;
+        font: 11px dotum;
+        color: #666666;
+      }
+      a:link {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:active {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:visited {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #d20e0e;
+      }
+
+      /* index  */
+      .list {
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table th {
+        color: #fff;
+        height: 25px;
+        font-size: 11px;
+        background: #aaa;
+        padding: 2px 0 0 5px;
+        text-align: left;
+      }
+      table td {
+        border-bottom: 1px solid #e3e3e3;
+        color: #333333;
+        font-size: 11px;
+        height: 22px;
+        padding: 3px 0 3px 5px;
+      }
+      table td.one {
+        color: #f50002;
+        font-size: 12px;
+      }
+      table td.two {
+      }
+      span.lt {
+        text-decoration: line-through;
+      }
+      table td.gr {
+        color: #008400;
+      }
+      table td.three {
+      }
+      table td.Folder {
+        font-family: verdana;
+      }
+      table td.filename {
+        font-family: verdana;
+        color: #aaa;
+      }
+      table td.type {
+        font-family: verdana;
+        color: #1928a5;
+      }
+      table td.js-link {
+        font-family: verdana;
+        color: #147393;
+      }
+      table td.depth {
+        font-weight: bold;
+      }
+      table td.etc .edit {
+        color: #999;
+        line-height: 130%;
+        padding-top: 3px;
+      }
+
+      .tab {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #6ba5d0;
+        padding: 2px 0 0 5px;
+        text-align: center;
+        border-left: 1px solid #e3e3e3;
+        font-weight: bold;
+      }
+      .tab a:link {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:visited {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:active {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:hover {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .tab_on {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #2a83c5;
+      }
+      .tab2 {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #c0d0ff;
+        padding: 2px 0 0 5px;
+        text-align: center;
+        border-left: 1px solid #e3e3e3;
+        font-weight: bold;
+      }
+      .tab_on2 {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #2a83c5;
+      }
+      .total {
+        color: #666666;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 5px 0 10px 0;
+        padding: 0;
+      }
+      ol,
+      li {
+        list-style: none;
+      }
+      .line {
+        height: 1px;
+        background: #e3e3e3;
+      }
+      .pop {
+        color: #008400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="total">
+      <strong style="color: #f50002">GS Pop Card :: Coding List</strong>
+    </div>
+
+    <div style="border-top: 1px solid #ccc; padding: 10px 0 0 0">
+      <ul style="margin: 5px 0 10px 0; padding-left: 0">
+        <li style="font-size: 12px; font-weight: bold; line-height: 18px">
+          - 최초 작성일 : <span style="color: #666; font-weight: normal">2015-03-03</span>
+        </li>
+        <li style="font-size: 12px; font-weight: bold; line-height: 18px">
+          - 최종 업데이트 : <span style="color: #666; font-weight: normal">2015-04-21</span>
+        </li>
+      </ul>
+    </div>
+
+    <div id="list">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <colgroup>
+          <col width="14%" />
+          <col width="14%" />
+          <col width="14%" />
+          <col width="14%" />
+          <col width="14%" />
+          <col width="16%" />
+          <col width="14%" />
+        </colgroup>
+        <tr>
+          <th>1Depth</th>
+          <th>2Depth</th>
+          <th>3Depth</th>
+          <th>4Depth</th>
+          <th>type</th>
+          <th>File-name</th>
+          <th>비고</th>
+        </tr>
+        <!-- 이벤트 -->
+        <tr>
+          <td class="one">이벤트</td>
+          <td class="two">리스트</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/event_list.html" target="_blank">event_list</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">상세</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/event_detail.html" target="_blank">event_detail</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td colspan="7" class="line"></td>
+        </tr>
+
+        <!-- 쿠폰함 -->
+        <tr>
+          <td class="one">쿠폰함</td>
+          <td class="two">추천 쿠폰</td>
+          <td class="three">리스트</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/coupon_recommend_list.html" target="_blank">coupon_recommend_list</a></td>
+          <td class="etc">
+            '교환/할인쿠폰 리스트', <br />
+            '충전쿠폰' 포함
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">상세1</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename">
+            <a href="html/coupon_recommend_detail01.html" target="_blank">coupon_recommend_detail01</a>
+          </td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">상세2</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename">
+            <a href="html/coupon_recommend_detail02.html" target="_blank">coupon_recommend_detail02</a>
+          </td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">상세3</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename">
+            <a href="html/coupon_recommend_detail03.html" target="_blank">coupon_recommend_detail03</a>
+          </td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">다운로드 완료</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename">
+            <a href="html/coupon_recommend_download.html" target="_blank">coupon_recommend_download</a>
+          </td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">받은 쿠폰</td>
+          <td class="three">교환/할인쿠폰</td>
+          <td class="four">상세</td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/coupon_receipt_detail.html" target="_blank">coupon_receipt_detail</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">저장완료</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename">
+            <a href="html/coupon_receipt_storage.html" target="_blank">coupon_receipt_storage</a>
+          </td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td colspan="7" class="line"></td>
+        </tr>
+
+        <!-- 임시 이벤트 -->
+        <tr>
+          <td class="one">임시 이벤트</td>
+          <td class="two">리스트</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/event_list02.html" target="_blank">event_list02</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">상세</td>
+          <td class="three">GS25에서 모바일팝 결제</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/event_detail01.html" target="_blank">event_detail01</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">GS수퍼마켓에서 모바일팝 결제</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/event_detail02.html" target="_blank">event_detail02</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">모바일팝 결제 자동 적립</td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/event_detail03.html" target="_blank">event_detail03</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td colspan="7" class="line"></td>
+        </tr>
+
+        <!-- FAQ -->
+        <tr>
+          <td class="one">FAQ</td>
+          <td class="two">리스트</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/faq.html" target="_blank">faq</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td colspan="7" class="line"></td>
+        </tr>
+
+        <!-- 공지사항 -->
+        <tr>
+          <td class="one">공지사항</td>
+          <td class="two">리스트</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/notice_list.html" target="_blank">notice_list</a></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">상세</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="Type"></td>
+          <td class="filename"><a href="html/notice_detail.html" target="_blank">notice_detail</a></td>
+          <td class="etc"></td>
+        </tr>
+
+        <tr>
+          <td colspan="7" class="line"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>조정내역 등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>조정내역 등록</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>CMS 정산금액에 대한 보정 및 결손 처리 내역을 등록할 수 있습니다.</li>
+            <li>등록된 조정내역은 해당 정산월의 조정액 및 정산금액에 합산됩니다.</li>
+          </ul>
+
+          <!-- 조정내역 등록 -->
+          <div class="table_list">
+            <div class="comm_right">
+              <em class="ess">필수 입력 항목입니다.</em>
+            </div>
+
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>정산월, 등록일시, 요청자, CMS 캠페인 ID, 조정액, 사유가 있는 조정내역 등록 입력 서식</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">정산월</th>
+                    <td>2016.08</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">등록일시</th>
+                    <td>시스템 자동출력</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">요청자</th>
+                    <td>김미선 (ooiudll98)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CMS 캠페인 ID</th>
+                    <td>CCM_CAMP_0050</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="ess">조정액</span>
+                    </th>
+                    <td>
+                      <input type="radio" id="amount_plus" name="amount" checked="checked" /><label
+                        for="amount_plus"
+                        class="radio_range"
+                        >가산</label
+                      >
+                      <input type="radio" id="amount_minus" name="amount" /><label
+                        for="amount_minus"
+                        class="radio_range"
+                        >차감</label
+                      >
+
+                      <div class="gap_top2"><input type="text" class="wid_px200" title="조정액 입력" /> 원</div>
+
+                      <ul class="caution_list">
+                        <li>가산: 익월에 추가지급 해야하는 경우</li>
+                        <li>차감: 익월 정산금액에서 제외해야하는 경우</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="ess">사유</span>
+                    </th>
+                    <td>
+                      <textarea class="wid_per80" rows="5" placeholder="조정 사유를 입력해주세요."></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //조정내역 등록 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_new">등록</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

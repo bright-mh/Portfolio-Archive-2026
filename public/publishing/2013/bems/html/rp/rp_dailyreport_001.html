@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>일간리포트 | 리포트 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/rp.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+        $("#country_01").selectbox();
+        $("#country_02").selectbox();
+      });
+    </script>
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+    <script src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <script src="chartScripts/RP_DAILYREPORT_001.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title06.gif" alt="리포트" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02 on">
+              <a href="#link"><span>일간 리포트</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>월간 리포트</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>일간 리포트</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>리포트<span>&gt;</span></li>
+                <li class="last">일간 리포트</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <section class="tabBox">
+              <div class="boxBg">
+                <div class="tabTitleGroup">
+                  <ul class="tabSideList">
+                    <li class="tabSideStyle01"><a href="#link">도움말</a></li>
+                    <li class="tabSideStyle02"><a href="#link">인쇄</a></li>
+                    <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                    <li class="tabSideStyle03"><a href="#link">북마크</a></li>
+                  </ul>
+                </div>
+
+                <!-- 탭 상세 -->
+                <div class="tabDetailGroup">
+                  <div class="layerGroup clear02">
+                    <!-- 층 그룹 -->
+                    <div class="fl">
+                      <!-- layerOne -->
+                      <div class="layerOne clear02 pb15">
+                        <div class="fl clear">
+                          <label for="input_date">날짜선택</label>
+                          <input
+                            type="text"
+                            name="input_date"
+                            id="input_date"
+                            class="fl input_date w120"
+                            value="2013-08-08"
+                          />
+                        </div>
+                      </div>
+                      <!-- //layerOne -->
+                    </div>
+                    <!-- //층 그룹 -->
+                    <p class="btn_search02">
+                      <a href="#link"><span>검색</span></a>
+                    </p>
+                  </div>
+                </div>
+                <!-- //탭 상세 -->
+              </div>
+            </section>
+            <!-- //탭영역 -->
+
+            <!-- 실내외 온도/습도 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <article class="tableGroup01">
+                  <h2>실내외 온도/습도</h2>
+                  <table class="table_style01">
+                    <caption class="blind">
+                      실내외 온도/습도 정보
+                    </caption>
+                    <colgroup>
+                      <col style="width: 14.3%" />
+                      <col style="width: 14.2%" />
+                      <col style="width: 14.3%" />
+                      <col style="width: 14.3%" />
+                      <col style="width: 14.3%" />
+                      <col style="width: 14.3%" />
+                      <col style="width: 14.3%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th colspan="2" scope="col">2013년 11월 05일</th>
+                        <th colspan="2" scope="col">최대</th>
+                        <th colspan="2" scope="col">최소</th>
+                        <th scope="col">평균</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th rowspan="2" class="thStyle">온도(℃)</th>
+                        <th class="thStyle">실내</th>
+                        <td>13:15</td>
+                        <td>12 ℃</td>
+                        <td>23:00</td>
+                        <td>12 ℃</td>
+                        <td>12 ℃</td>
+                      </tr>
+                      <tr>
+                        <th class="thStyle">실외</th>
+                        <td>13:15</td>
+                        <td>12 ℃</td>
+                        <td>23:00</td>
+                        <td>12 ℃</td>
+                        <td>12 ℃</td>
+                      </tr>
+                      <tr>
+                        <th rowspan="2" class="thStyle">습도(%)</th>
+                        <th class="thStyle">실내</th>
+                        <td>13:15</td>
+                        <td>12 %</td>
+                        <td>13:15</td>
+                        <td>12 %</td>
+                        <td>12 %</td>
+                      </tr>
+                      <tr>
+                        <th class="thStyle">실외</th>
+                        <td>13:15</td>
+                        <td>12 %</td>
+                        <td>13:15</td>
+                        <td>12 %</td>
+                        <td>12 %</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+              </div>
+            </section>
+            <!-- //실내외 온도/습도 -->
+
+            <!-- 시간대별 전기 사용 패턴&전기사용량 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!-- 시간대별 전기 사용 패턴 -->
+                <article>
+                  <h2 class="mb0">
+                    시간대별 전기 사용 패턴<span class="titleInfo">11월05일(화) 사용량 vs 최근 1주일 평균</span>
+                  </h2>
+                  <!--차트 삽입부분 -->
+                  <div id="chart01" style="min-width: 310px; height: 333px; margin: 0 auto"></div>
+                  <!--//차트 삽입부분 -->
+                  <!-- 2013-12-24 범례 추가 -->
+                  <ul class="chartList clear02">
+                    <li class="listStyle01">경부하</li>
+                    <li class="listStyle02">중부하</li>
+                    <li class="listStyle03">최대부하</li>
+                  </ul>
+                  <!-- //2013-12-24 범례 추가 -->
+                </article>
+                <!-- //시간대별 전기 사용 패턴 -->
+
+                <!-- 시간대별 전기 사용량 -->
+                <div class="mt40">
+                  <h2 class="mb0">시간대별 전기 사용량</h2>
+                  <article class="boxLeft02">
+                    <!--차트 삽입부분 -->
+                    <div id="chart02" style="min-width: 220px; height: 248px; margin: 0 auto"></div>
+                    <!--//차트 삽입부분 -->
+                  </article>
+
+                  <!-- 테이블 영역 -->
+                  <article class="boxRight02 topStyle">
+                    <table class="table_style01">
+                      <caption class="blind">
+                        시간대별 전기사용량 정보
+                      </caption>
+                      <colgroup>
+                        <col style="width: 17.9%" />
+                        <col style="width: 23.8%" />
+                        <col style="width: 20.8%" />
+                        <col style="width: 19%" />
+                        <col style="width: 18.6%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">시간대</th>
+                          <th scope="col">요금</th>
+                          <th scope="col">사용량</th>
+                          <th scope="col">비중</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="thStyle">경부하</th>
+                          <td>23:00~09:00</td>
+                          <td>20원/kWh</td>
+                          <td>600 kWh</td>
+                          <td>31.24 %</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="thStyle">중부하</th>
+                          <td>
+                            09:00~10:00<br />
+                            12:00~17:00<br />
+                            20:00~22:00
+                          </td>
+                          <td>20원/kWh</td>
+                          <td>600 kWh</td>
+                          <td>31.24 %</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="thStyle">최대부하</th>
+                          <td>
+                            09:00~10:00<br />
+                            12:00~17:00<br />
+                            20:00~22:00
+                          </td>
+                          <td>20원/kWh</td>
+                          <td>600 kWh</td>
+                          <td>31.24 %</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="mt15 txt4b4b4c">시간대 및 요금은 겨울철(11~2월)의 기준 정보가 적용되어 표시됩니다.</p>
+                  </article>
+                </div>
+                <!-- //시간별 전기 사용량 -->
+              </div>
+            </section>
+            <!-- //시간대별 전기 사용 패턴&전기사용량 -->
+
+            <!-- 시간대별 가스 사용 패턴 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <h2 class="mb0">
+                  시간대별 가스 사용 패턴<span class="titleInfo">11월05일(화) 사용량 vs 최근 1주일 평균</span>
+                </h2>
+                <!--차트 삽입부분 -->
+                <div id="chart03" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //시간대별 가스 사용 패턴 -->
+
+            <!-- 1일 에너지 사용량 비교 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <article>
+                  <h2>1일 에너지 사용량 비교</h2>
+                  <div class="graphBox">
+                    <div class="graphGroup">
+                      <div class="graphDiv">
+                        <p class="graphTitle">11/05(화)</p>
+                        <div class="bgGraph">
+                          <div class="to" style="width: 100%">
+                            <span class="graphBar elec" style="width: 60%"
+                              ><img src="/html/2014/bems/images/common/icon_elec.png" alt="electronic icon"
+                            /></span>
+                            <span class="graphBar gas" style="width: 40%"
+                              ><img src="/html/2014/bems/images/common/icon_gas.png" alt="gas icon"
+                            /></span>
+                          </div>
+                        </div>
+                        <!-- 툴팁 영역 -->
+                        <div class="graphTooltip tip_elec" style="left: 392px; top: 215px; display: none">
+                          <p></p>
+                          <ul style="padding-top: 10px">
+                            <li style="padding-bottom: 10px">전체 : <span>4.5091475 toe</span></li>
+                            <li>전기 : 111.11 kWh</li>
+                            <!--li>가스 : 222.22 N㎥</li-->
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <div class="graphTooltip tip_gas" style="left: 392px; top: 215px; display: none">
+                          <ul style="padding-top: 10px">
+                            <li style="padding-bottom: 10px">전체 : <span>4.5091475 toe</span></li>
+                            <!--li>전기 : 111.11 kWh</li-->
+                            <li>가스 : 222.22 N㎥</li>
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <!-- //툴팁 영역 -->
+                      </div>
+
+                      <div class="graphDiv">
+                        <p class="graphTitle">11/04(월)</p>
+                        <div class="bgGraph bgGraph_02">
+                          <div class="yester" style="width: 90.71%">
+                            <span class="graphBar elec" style="width: 60%"
+                              ><img src="/html/2014/bems/images/common/icon_elec.png" alt="electronic icon"
+                            /></span>
+                            <span class="graphBar gas" style="width: 40%"
+                              ><img src="/html/2014/bems/images/common/icon_gas.png" alt="gas icon"
+                            /></span>
+                          </div>
+                        </div>
+                        <!-- 툴팁 영역 -->
+                        <div class="graphTooltip tip_elec" style="left: 375px; top: 232px; display: none">
+                          <ul style="padding-top: 10px">
+                            <li style="padding-bottom: 10px">전체 : <span>4.5091400 toe</span></li>
+                            <li>전기 : 110.11 kWh</li>
+                            <!--li>가스 : 220.22 N㎥</li-->
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <div class="graphTooltip tip_gas" style="left: 375px; top: 232px; display: none">
+                          <ul style="padding-top: 10px">
+                            <li style="padding-bottom: 10px">전체 : <span>4.5091400 toe</span></li>
+                            <!--li>전기 : 110.11 kWh</li-->
+                            <li>가스 : 220.22 N㎥</li>
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <!-- //툴팁 영역 -->
+                      </div>
+                    </div>
+                    <div class="totalGroup">
+                      <div class="textGroup01">
+                        <span class="textStyle01">11월 04일 대비</span>
+                        <!-- [D] 증가일 경우 class="textIncrease" -->
+                        <span class="textStyle02">110.23</span> <span class="textStyle03">%</span>
+                      </div>
+                      <div class="textGroup02"><span class="textDecrease">감소</span></div>
+                    </div>
+                  </div>
+                  <table class="table_style01">
+                    <caption class="blind">
+                      에너지 사용량 비교
+                    </caption>
+                    <colgroup>
+                      <col style="width: 16%" />
+                      <col style="width: 28%" />
+                      <col style="width: 28%" />
+                      <col style="width: 28%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">전기</th>
+                        <th scope="col">가스</th>
+                        <th scope="col">전체</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="thStyle">11월 05일 (화)</th>
+                        <td>111.11 kWh</td>
+                        <td>222.22 N㎥</td>
+                        <td>4.5091475 toe</td>
+                      </tr>
+                      <tr>
+                        <th class="thStyle">11월 04일 (월)</th>
+                        <td>110.11 kWh</td>
+                        <td>220.22 N㎥</td>
+                        <td>4.5091400 toe</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+                <br /><br /><br />
+                <article class="use_goal">
+                  <h2>목표 대비 에너지 사용량</h2>
+                  <div class="energe_mesure">
+                    <div class="energy_use">
+                      <div class="total_use">
+                        <h3>전체 에너지 사용량</h3>
+                        <p class="bgGraph">
+                          <span class="graphBar" style="width: 40%"></span>
+                        </p>
+                        <p class="unit">toe</p>
+                        <!-- 131203_validation 오류 문제로 수정 -->
+                        <table style="table-layout: fixed; width: 100%">
+                          <!-- //131203_validation 오류 문제로 수정 -->
+                          <colgroup>
+                            <col style="width: 50%" />
+                            <col style="width: 50%" />
+                          </colgroup>
+                          <tr>
+                            <th><img src="/html/2014/bems/images/common/bullet.png" alt="" />11월 사용량</th>
+                            <td>191.8900000</td>
+                          </tr>
+                          <tr>
+                            <th><img src="/html/2014/bems/images/common/bullet-04.png" alt="" />11월 목표 사용량</th>
+                            <td>191.8900000</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="energy_use">
+                      <div class="elec_use">
+                        <h3>전기 사용량</h3>
+                        <p class="bgGraph">
+                          <span class="graphBar" style="width: 80%"></span>
+                        </p>
+                        <p class="unit">kWh</p>
+                        <!-- 131203_validation 오류 문제로 수정 -->
+                        <table style="table-layout: fixed; width: 100%">
+                          <!-- //131203_validation 오류 문제로 수정 -->
+                          <colgroup>
+                            <col style="width: 50%" />
+                            <col style="width: 50%" />
+                          </colgroup>
+                          <tr>
+                            <th><img src="/html/2014/bems/images/common/bullet-02.png" alt="" />11월 사용량</th>
+                            <td>191.89</td>
+                          </tr>
+                          <tr>
+                            <th><img src="/html/2014/bems/images/common/bullet-05.png" alt="" />11월 목표 사용량</th>
+                            <td>9.300</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="energy_use">
+                      <div class="gas_use pr0">
+                        <h3>가스 사용량</h3>
+                        <p class="bgGraph">
+                          <span class="graphBar" style="width: 60%"></span>
+                        </p>
+                        <p class="unit">N㎥</p>
+                        <!-- 131203_validation 오류 문제로 수정 -->
+                        <table style="table-layout: fixed; width: 100%">
+                          <!-- //131203_validation 오류 문제로 수정 -->
+                          <colgroup>
+                            <col style="width: 50%" />
+                            <col style="width: 50%" />
+                          </colgroup>
+                          <tr>
+                            <th><img src="/html/2014/bems/images/common/bullet-03.png" alt="" />11월 사용량</th>
+                            <td>191.89</td>
+                          </tr>
+                          <tr>
+                            <th><img src="/html/2014/bems/images/common/bullet.gif" alt="" />11월 목표 사용량</th>
+                            <td>9.300</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <!-- //1일 에너지 사용량 비교 -->
+
+            <!-- 주요 설비 운전현황 -->
+            <!-- 2014-02-13 테이블 하단 배치_수정 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <article class="tableGroup01">
+                  <h2>주요 설비 운전현황</h2>
+                  <!-- 오늘 -->
+                  <div>
+                    <h3 class="hTitle">11.05(화)</h3>
+                    <table class="table_style01">
+                      <caption class="blind">
+                        에너지 사용량 비교
+                      </caption>
+                      <colgroup>
+                        <col style="width: 14%" />
+                        <col style="width: 38.5%" />
+                        <col style="width: 16.6%" />
+                        <col style="width: 10.3%" />
+                        <col style="width: 10.3%" />
+                        <col style="width: 10.3%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th colspan="2" scope="col">설비명</th>
+                          <th scope="col">에너지 사용량</th>
+                          <th scope="col">가동시간</th>
+                          <th scope="col">성능</th>
+                          <th scope="col">부화율</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th rowspan="10" class="thStyle">냉열원</th>
+                          <th class="thStyle">
+                            <p class="merchine_nm thStyle" title="냉동기 1호냉동기 1호냉동기 1호냉동기 1호냉동기 1호">
+                              냉동기 1호냉동기 1호냉동기 1호냉동기 1호냉동기 1호
+                            </p>
+                          </th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm thStyle" title="냉동기 2호">냉동기 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉동기 3호">냉동기 3호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="펌프기 1호">펌프기 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="펌프기 2호">펌프기 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉각탑 1호">냉각탑 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉각탑 2호">냉각탑 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉각탑 공통">냉각탑 공통</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="에어컨(PAC)">에어컨(PAC)</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="헤다">헤다</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="6" class="thStyle">온열원</th>
+                          <th class="thStyle"><p class="merchine_nm" title="보일러 1호">보일러 1호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="보일러 2호">보일러 2호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="보일러 3호">보일러 3호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="열교환기 1호">열교환기 1호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="열교환기 2호">열교환기 2호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="열교환기 3호">열교환기 3호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="5" class="thStyle">냉온열원 <br />공통</th>
+                          <th class="thStyle"><p class="merchine_nm" title="히트펌프 1호">히트펌프 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="히트펌프 2호">히트펌프 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="히트펌프 3호">히트펌프 3호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="순환펌프 1호">순환펌프 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="순환펌프 2호">순환펌프 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //오늘 -->
+                  <!-- 어제 -->
+                  <div class="mt20">
+                    <h3 class="hTitle">11.04(월)</h3>
+                    <table class="table_style01">
+                      <caption class="blind">
+                        에너지 사용량 비교
+                      </caption>
+                      <colgroup>
+                        <col style="width: 14%" />
+                        <col style="width: 38.5%" />
+                        <col style="width: 16.6%" />
+                        <col style="width: 10.3%" />
+                        <col style="width: 10.3%" />
+                        <col style="width: 10.3%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th colspan="2" scope="col">설비명</th>
+                          <th scope="col">에너지 사용량</th>
+                          <th scope="col">가동시간</th>
+                          <th scope="col">성능</th>
+                          <th scope="col">부화율</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th rowspan="10" class="thStyle">냉열원</th>
+                          <th class="thStyle">
+                            <p class="merchine_nm thStyle" title="냉동기 1호냉동기 1호냉동기 1호냉동기 1호냉동기 1호">
+                              냉동기 1호냉동기 1호냉동기 1호냉동기 1호냉동기 1호 냉동
+                            </p>
+                          </th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm thStyle" title="냉동기 2호">냉동기 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉동기 3호">냉동기 3호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="펌프기 1호">펌프기 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="펌프기 2호">펌프기 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉각탑 1호">냉각탑 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉각탑 2호">냉각탑 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="냉각탑 공통">냉각탑 공통</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="에어컨(PAC)">에어컨(PAC)</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="헤다">헤다</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="6" class="thStyle">온열원</th>
+                          <th class="thStyle"><p class="merchine_nm" title="보일러 1호">보일러 1호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="보일러 2호">보일러 2호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="보일러 3호">보일러 3호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="열교환기 1호">열교환기 1호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="열교환기 2호">열교환기 2호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="열교환기 3호">열교환기 3호</p></th>
+                          <td>111.11N㎥</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="5" class="thStyle">냉온열원 <br />공통</th>
+                          <th class="thStyle"><p class="merchine_nm" title="히트펌프 1호">히트펌프 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="히트펌프 2호">히트펌프 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="히트펌프 3호">히트펌프 3호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="순환펌프 1호">순환펌프 1호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                        <tr>
+                          <th class="thStyle"><p class="merchine_nm" title="순환펌프 2호">순환펌프 2호</p></th>
+                          <td>111.11kWh</td>
+                          <td>10시간</td>
+                          <td>4.01</td>
+                          <td>11.11%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //어제 -->
+                </article>
+                <p class="excelDown">
+                  상세 리포트 보기 : <a href="#link"><span class="under_line">2013-11-15(화)_상세리포트.xls</span></a>
+                </p>
+              </div>
+            </section>
+            <!-- //2014-02-13 테이블 하단 배치_수정 -->
+            <!-- //주요 설비 운전현황 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>판매상품관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy.mm.dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p><em>[T라이프]</em> 채널 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2_2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2_2:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb2_2:eq(0)>ul>li:eq(0)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2_2">
+                <a href="#">무료상품관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">상품관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">판매상품 관리</a></li>
+                      <li><a href="#">캠페인 정보 조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">쿠폰 발급현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">쿠폰 발급현황</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>무료상품관리</span>
+              <span>상품관리</span>
+              <strong>판매상품 관리</strong>
+            </div>
+            <h3 class="tit">판매상품 관리</h3>
+            <ul class="guide">
+              <li>판매상품 등록 및 관리를 할 수 있습니다.</li>
+              <li>등록대기 상품은 추가정보 등록 이후 배포하기 버튼을 눌러 판매채널에 배포할 수 있습니다.</li>
+              <li>기초상품정보가 수정될 경우 수정된 정보가 판매채널에 재배포 됩니다.</li>
+            </ul>
+
+            <!-- 판매상품 관리 검색 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap visible">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>등록일, 배포일, 배포상태, 유형선택, 상세검색이 있는 판매상품 관리 검색 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">등록일</th>
+                      <td colspan="3">
+                        <input type="text" title="등록일 검색 시작일" class="wid_calendar pickerArea" />
+                        &nbsp;~&nbsp;
+                        <input type="text" title="등록일 검색 종료일" class="wid_calendar pickerArea" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">배포일</th>
+                      <td colspan="3">
+                        <input type="text" title="배포일 검색 시작일" class="wid_calendar pickerArea" />
+                        &nbsp;~&nbsp;
+                        <input type="text" title="배포일 검색 종료일" class="wid_calendar pickerArea" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">배포상태</th>
+                      <td>
+                        <select title="배포상태 선택" style="width: 180px">
+                          <option>전체</option>
+                          <option>등록대기</option>
+                          <option>배포대기</option>
+                          <option>배포실패</option>
+                          <option>배포완료</option>
+                          <option>배포완료(발급중지 중)</option>
+                        </select>
+                      </td>
+                      <th>유형선택</th>
+                      <td>
+                        <div class="pattern_area">
+                          <a href="#" class="btn_small btn_pattern">유형선택</a>
+                          <div class="layer_box">
+                            <dl>
+                              <dt>쿠폰 유형 선택</dt>
+                              <dd>
+                                <label for="coupon1"
+                                  ><input type="checkbox" id="coupon1" checked="checked" /> 제휴쿠폰</label
+                                >
+                                <label for="coupon2"
+                                  ><input type="checkbox" id="coupon2" checked="checked" /> oksusu쿠폰</label
+                                >
+                                <label for="coupon3"
+                                  ><input type="checkbox" id="coupon3" checked="checked" /> TFP쇼핑쿠폰</label
+                                >
+                                <label for="coupon4"
+                                  ><input type="checkbox" id="coupon4" checked="checked" /> 이모티콘</label
+                                >
+                              </dd>
+                            </dl>
+                          </div>
+                          <!-- [D]선택된 유형 노출 영역 -->
+                          &nbsp;<span>전체</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">상세검색</th>
+                      <td colspan="3">
+                        <select title="상세검색 선택">
+                          <option>관리 쿠폰명</option>
+                          <option>쿠폰 ID</option>
+                          <option>기초상품 ID</option>
+                          <option>제휴사(발행처)</option>
+                        </select>
+                        <input type="text" title="상세검색 텍스트 입력" class="wid_per50" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_delete">초기화</a>
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+            <!-- //판매상품 관리 검색 테이블 -->
+
+            <!-- 판매상품 관리 리스트 목록 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <p class="total_num">총 <strong>3,502</strong> 건</p>
+                <div class="sel_box">
+                  <a href="#" class="btn_long btn_default" target="_blank" title="새창 열림">일괄배포</a>
+                  <a href="#" class="btn_long btn_excel">엑셀 다운로드</a>
+                  <select>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <div class="table_box1300">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong
+                        >번호, 등록일, 배포일, 유형, 쿠폰 ID, 기초상품 ID, 관리 쿠폰명, 쿠폰유형, TM 가맹 여부, 쿠폰사용
+                        만료일, 제휴사(발행처), 수량, 배포상태, 긴급발급중지 정보를 제공합니다.</strong
+                      >
+                    </caption>
+                    <colgroup>
+                      <col style="width: 30px" />
+                      <col style="width: 50px" />
+                      <col style="width: 80px" />
+                      <col style="width: 80px" />
+                      <col style="width: 80px" />
+                      <col style="width: 85px" />
+                      <col style="width: 95px" />
+                      <col style="width: *" />
+                      <col style="width: 70px" />
+                      <col style="width: 65px" />
+                      <col style="width: 80px" />
+                      <col style="width: 80px" />
+                      <col style="width: 60px" />
+                      <col style="width: 95px" />
+                      <col style="width: 70px" />
+                      <col style="width: 90px" />
+                      <col style="width: 110px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col"><input type="checkbox" title="모두 선택" /></th>
+                        <th scope="col">번호</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">배포일</th>
+                        <th scope="col">유형</th>
+                        <th scope="col">쿠폰 ID</th>
+                        <th scope="col">기초상품 ID</th>
+                        <th scope="col">관리 쿠폰명</th>
+                        <th scope="col">쿠폰유형</th>
+                        <th scope="col">TM 가맹<br />여부</th>
+                        <th scope="col">쿠폰사용<br />만료일</th>
+                        <th scope="col">제휴사<br />(발행처)</th>
+                        <th scope="col">수량</th>
+                        <th scope="col" colspan="2">배포상태</th>
+                        <th scope="col" colspan="2">긴급발급중지</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- [D] 내용이 없을 시, -->
+                      <tr>
+                        <td colspan="17">등록된 내역이 없습니다.</td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">20</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>등록대기</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"><input type="checkbox" title="해당 리스트 선택" /></td>
+                        <td class="num">19</td>
+                        <td>2016.02.26</td>
+                        <td>-</td>
+                        <td>oksusu쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>N</td>
+                        <td>2016.02.26</td>
+                        <td>-</td>
+                        <td>1,000</td>
+                        <td>등록대기</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"><input type="checkbox" title="해당 리스트 선택" /></td>
+                        <td class="num">18</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>TFP쇼핑쿠폰</td>
+                        <td>TL_154875</td>
+                        <td>BAS_457844</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>N</td>
+                        <td>2016.02.26</td>
+                        <td>-</td>
+                        <td>12,000</td>
+                        <td>
+                          <p class="red gap_btm">배포실패</p>
+                          <a href="#" class="btn_small">배포하기</a>
+                        </td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">17</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>oksusu쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>금액할인 1,000원</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>미니스톱</td>
+                        <td>12,000</td>
+                        <td><a href="#" class="btn_small">배포하기</a></td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td><span class="red">발급중지 중</span></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">16</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>oksusu쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>정액쿠폰 1,000원</td>
+                        <td>N</td>
+                        <td>2016.02.26</td>
+                        <td>미니스톱</td>
+                        <td>12,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td><span class="red">쿠폰 총 2,500개 재발급 완료</span></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">15</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>번들쿠폰</td>
+                        <td>N</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">14</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>번들쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">13</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">12</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">11</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">10</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"><input type="checkbox" title="해당 리스트 선택" /></td>
+                        <td class="num">9</td>
+                        <td>2016.02.26</td>
+                        <td>-</td>
+                        <td>oksusu쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>-</td>
+                        <td>1,000</td>
+                        <td><a href="#" class="btn_small">배포하기</a></td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"><input type="checkbox" title="해당 리스트 선택" /></td>
+                        <td class="num">8</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>TFP쇼핑쿠폰</td>
+                        <td>TL_154875</td>
+                        <td>BAS_457844</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>-</td>
+                        <td>12,000</td>
+                        <td>등록대기</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">7</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>oksusu쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>금액할인 1,000원</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>미니스톱</td>
+                        <td>12,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td><span class="red">발급중지 중</span></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">6</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>oksusu쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>정액쿠폰 1,000원</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>미니스톱</td>
+                        <td>12,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td><span class="red">쿠폰 총 2,500개 재발급 완료</span></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">5</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>번들쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">4</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>번들쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">3</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">2</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num"></td>
+                        <td class="num">1</td>
+                        <td>2016.02.26</td>
+                        <td>2016.02.26</td>
+                        <td>제휴쿠폰</td>
+                        <td>TL_789456</td>
+                        <td>BAS_457845</td>
+                        <td class="left">
+                          <a href="#" class="link">[한불수교 130주년 콜라보 제품] 프랑스 정통 크로크무슈 미식</a>
+                        </td>
+                        <td>무료쿠폰</td>
+                        <td>Y</td>
+                        <td>2016.02.26</td>
+                        <td>메가박스</td>
+                        <td>1,000</td>
+                        <td>배포완료</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">히스토리보기</a></td>
+                        <td>-</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+            </div>
+            <!-- //판매상품 관리 리스트 목록 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

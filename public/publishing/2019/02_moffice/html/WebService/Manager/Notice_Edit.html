@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>공지사항</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 1024*745 -->
+  <body class="popup" style="width: 1024px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>공지사항</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents">
+        <!-- tip area -->
+        <div class="tip_area">
+          <p class="blind">TIP</p>
+          <div class="tip_box">
+            <ul class="tip_list">
+              <li>상태를 공개로 설정한 경우에만 사용자에게 전달됩니다.</li>
+              <li>Top 공지로 지정하여 목록의 상위에 노출시킬 수 있습니다.</li>
+              <li>배포일시를 미래의 날짜로 지정하여 예약할 수 있습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- //tip area -->
+
+        <!-- tbl_row_default -->
+        <div class="tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 143px" />
+              <col style="width: 339px" />
+              <col style="width: 143px" />
+              <col style="width: 339px" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">제목</th>
+                <td colspan="3">
+                  <input type="text" name="" value="" title="제목" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">메시지 내용</th>
+                <td colspan="3">
+                  <!-- [D] editor 영역 -->
+                  <div>
+                    <img src="../../common/img/dummy_editor.png" alt="" />
+                  </div>
+                  <!-- // editor 영역 -->
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">상태</th>
+                <td>
+                  <select title="상태 선택" style="width: 150px">
+                    <option value="">공개</option>
+                    <option value="">비공개</option>
+                  </select>
+                  <input type="checkbox" id="checkboxTop" value="" />
+                  <label for="checkboxTop">Top공지로 지정 </label>
+                </td>
+                <th scope="row">배포일시</th>
+                <td>
+                  <div class="ip_calendar">
+                    <input type="text" value="2019-07-05" title="날짜 선택" />
+                    <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                  </div>
+                  <input type="text" value="18:00" title="시간" class="center" style="width: 70px" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">대상</th>
+                <td colspan="3">
+                  <select title="대상 선택" style="width: 322px">
+                    <option value="">전체 공지</option>
+                    <option value="">부서 공지</option>
+                    <option value="">그룹 공지</option>
+                  </select>
+                  <!-- 부서공지&그룹공지 선택시 추가 내용 -->
+                  <a href="#none" title="" class="btn_md icon_md_choice_blue ml4">선택</a>
+                  <div class="ip_box" style="width: 253px">
+                    <input type="text" name="" value="" readonly="readonly" />
+                    <a href="#none" class="icon_delete_full_blue">삭제</a>
+                  </div>
+                  <!-- 부서공지&그룹공지 선택시 추가 내용 -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <span class="left_position"><a href="#none" class="btn_md icon_md_delete_red">삭제</a></span>
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">저장</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>캠페인 정보 상세 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p><em>[T라이프]</em> 채널 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2_2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2_2:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb2_2:eq(0)>ul>li:eq(0)>ul>li:eq(1)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2_2">
+                <a href="#">무료상품관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">상품관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">판매상품 관리</a></li>
+                      <li><a href="#">캠페인 정보 조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">쿠폰 발급현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">쿠폰 발급현황</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>무료상품관리</span>
+              <span>상품관리</span>
+              <span>캠페인 정보 조회</span>
+              <strong>캠페인 정보 상세</strong>
+            </div>
+
+            <h3 class="tit">캠페인 정보 상세</h3>
+
+            <!-- 캠페인 정보 상세 테이블 -->
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >최초 등록일, CMS 캠페인 ID, 판매채널 (채널 ID), 제휴사 명, 제휴코드, 상품구분, 캠페인 명, 캠페인
+                      ID, 전시기간, 담당자, 연락처가 있는 캠페인 정보 상세</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">최초 등록일</th>
+                      <td colspan="3">
+                        2016.02.28 &nbsp;&nbsp;<a href="#" class="link" target="_blank" title="새창 열림"
+                          >히스토리 보기</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">CMS 캠페인 ID</th>
+                      <td colspan="3">CCM_CAMP_0001</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">판매채널 (채널 ID)</th>
+                      <td colspan="3">T라이프 (CH_0001)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제휴사 명</th>
+                      <td>기프티콘 (앰엔서비스)</td>
+                      <th scope="row">제휴코드</th>
+                      <td>MNS0001</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">상품구분</th>
+                      <td colspan="3">유료</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">캠페인 명</th>
+                      <td colspan="3">티라이프 유료쿠폰</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">캠페인 ID</th>
+                      <td colspan="3">CAMPID_202015</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전시기간</th>
+                      <td colspan="3">2016.02.28 ~ 2099.12.31</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">담당자</th>
+                      <td>김석민</td>
+                      <th scope="row">연락처</th>
+                      <td>010-3131-1313</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //캠페인 정보 상세 테이블 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_save">확인</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

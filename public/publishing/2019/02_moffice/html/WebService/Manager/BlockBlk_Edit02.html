@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>차단창 편집모드</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*660 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>차단창 편집모드</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- tbl_row_default -->
+        <div class="tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 160px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">이름</th>
+                <td>
+                  <input type="text" name="" value="" title="이름" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">용도</th>
+                <td>
+                  <select name="" title="용도" style="width: 100%">
+                    <option value="">전체</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">긴급신청 버튼</th>
+                <td>
+                  <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                  <input type="radio" id="" name="" value="" /><label for="">보임</label>
+                  <input type="radio" id="" name="" value="" /><label for="">숨김</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">일시사용 버튼</th>
+                <td class="ect">
+                  <!-- box_change -->
+                  <div class="box_change">
+                    <input type="radio" id="" name="" value="" /><label for="">보임</label>
+                    <input type="radio" id="" name="" value="" /><label for="">숨김</label>
+
+                    <!-- bg_box -->
+                    <div class="bg_box clearfix">
+                      <p class="title fl_left">사용가능시간</p>
+                      <div class="fl_left">
+                        <div class="line_change">
+                          <select name="" title="시간 선택" style="width: 90px">
+                            <option value="">00시간</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="분 선택" class="mr4" style="width: 90px">
+                            <option value="">00분</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          까지
+                        </div>
+                        <div class="line_change">
+                          <input type="text" name="" value="00" title="횟수" class="center mr4" style="width: 60px" />
+                          회
+                          <span class="ml8">1회당</span>
+                          <input type="text" name="" value="00" title="분" class="center ml4 mr4" style="width: 60px" />
+                          분
+                          <input type="checkbox" id="" name="" value="" class="ml12" /><label for="">시간 보장</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //bg_box -->
+                  </div>
+                  <!-- //box_change -->
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">이미지</th>
+                <td class="ect">
+                  <!-- box_change -->
+                  <div class="box_change">
+                    <select name="" title="이미지 선택" style="width: 100%">
+                      <option value="">전체</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션4</option>
+                    </select>
+                    <div class="img_area">
+                      <a href="../../common/img/dummy_notice_window02.png" target="_blank" title="새창 열림">
+                        <img src="../../common/img/dummy_notice_window02.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <!-- //box_change -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">저장</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

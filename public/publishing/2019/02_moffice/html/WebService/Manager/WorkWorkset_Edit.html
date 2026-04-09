@@ -1,0 +1,1397 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>근무표</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*745 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>근무표</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- tip area -->
+        <div class="tip_area">
+          <p class="blind">TIP</p>
+          <div class="tip_box">
+            <ul class="tip_list">
+              <li>내용</li>
+            </ul>
+          </div>
+        </div>
+        <!-- //tip area -->
+
+        <!-- workset area -->
+        <div class="workset">
+          <!-- search area -->
+          <div class="search_area">
+            <div class="tbl_search">
+              <table>
+                <colgroup>
+                  <col style="width: 128px" />
+                  <col style="width: auto" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">근무표명</th>
+                    <td>
+                      <input type="text" name="" value="" title="검색어" style="width: 334px" />
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="checkbox" id="" name="" value="" /><label for="">기본근무표</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //search area -->
+
+          <!-- program_setting -->
+          <div class="program_setting time_correction">
+            <!-- 월요일 -->
+            <div class="grouping_ty1">
+              <p class="group_title">월요일</p>
+              <!-- tbl_row_program -->
+              <div class="tbl_row_prorgam">
+                <table>
+                  <colgroup>
+                    <col style="width: 100%" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_row_program -->
+            </div>
+            <!-- //월요일 -->
+
+            <!-- 화요일 -->
+            <div class="grouping_ty1">
+              <p class="group_title">화요일</p>
+              <!-- tbl_row_program -->
+              <div class="tbl_row_prorgam">
+                <table>
+                  <colgroup>
+                    <col style="width: 100%" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_row_program -->
+            </div>
+            <!-- //화요일 -->
+
+            <!-- 수요일 -->
+            <div class="grouping_ty1">
+              <p class="group_title">수요일</p>
+              <!-- tbl_row_program -->
+              <div class="tbl_row_prorgam">
+                <table>
+                  <colgroup>
+                    <col style="width: 100%" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_row_program -->
+            </div>
+            <!-- //수요일 -->
+
+            <!-- 목요일 -->
+            <div class="grouping_ty1">
+              <p class="group_title">목요일</p>
+              <!-- tbl_row_program -->
+              <div class="tbl_row_prorgam">
+                <table>
+                  <colgroup>
+                    <col style="width: 100%" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_row_program -->
+            </div>
+            <!-- //목요일 -->
+
+            <!-- 금요일 -->
+            <div class="grouping_ty1">
+              <p class="group_title">금요일</p>
+              <!-- tbl_row_program -->
+              <div class="tbl_row_prorgam">
+                <table>
+                  <colgroup>
+                    <col style="width: 100%" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_row_program -->
+            </div>
+            <!-- //금요일 -->
+
+            <!-- 토요일 -->
+            <div class="grouping_ty1">
+              <p class="group_title">토요일</p>
+              <!-- tbl_row_program -->
+              <div class="tbl_row_prorgam">
+                <table>
+                  <colgroup>
+                    <col style="width: 100%" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_row_program -->
+            </div>
+            <!-- //토요일 -->
+
+            <!-- 일요일 -->
+            <div class="grouping_ty1">
+              <p class="group_title">일요일</p>
+              <!-- tbl_row_program -->
+              <div class="tbl_row_prorgam">
+                <table>
+                  <colgroup>
+                    <col style="width: 100%" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="box_input pl0 ml91">
+                          <select name="" title="시작 시" style="width: 60px">
+                            <option value="">18</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="시작 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          ~
+                          <select name="" title="종료 시" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          :
+                          <select name="" title="종료 분" style="width: 60px">
+                            <option value="">00</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <select name="" title="선택1" class="ml26" style="width: 90px">
+                            <option value="">정규외</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+                          <select name="" title="선택2" style="width: 90px">
+                            <option value="">전일</option>
+                            <option value="">옵션1</option>
+                            <option value="">옵션2</option>
+                            <option value="">옵션3</option>
+                            <option value="">옵션4</option>
+                          </select>
+
+                          <div class="btn_area btn_box3 ml26">
+                            <a href="#none" class="btn_sm bg_pink">삭제</a>
+                            <a href="#none" class="btn_sm bg_sky_line ml1">추가</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_row_program -->
+            </div>
+            <!-- //일요일 -->
+          </div>
+          <!-- //program_setting -->
+        </div>
+        <!-- //workset area -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <span class="left_position"><a href="#none" class="btn_md icon_md_delete_red">삭제</a></span>
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">저장</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="user_main">
+    <!-- header -->
+    <header>
+      <div class="user_inner_header">
+        <div class="header_top">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 36px / 가로크기는 비율로 자동조정 -->
+          <h1 class="logo">
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 36px" /></a>
+          </h1>
+          <p class="user_info">개발팀 이승우 부장 (20131101)</p>
+          <div class="right_area">
+            <p class="company_info">JNESS</p>
+            <p class="today">2019-09-23 (월)</p>
+          </div>
+        </div>
+
+        <!-- GNB -->
+        <nav class="user_gnb_area">
+          <h2 class="blind">사용자 메뉴</h2>
+          <a href="#none" class="btn_gnb left">HOME</a>
+          <ul>
+            <!-- [D] 선택 시, li태그에 class="on" 추가 -->
+            <li><a href="#none">연장근무</a></li>
+            <li><a href="#none">자리비움</a></li>
+            <li><a href="#none">PC사용현황</a></li>
+            <li><a href="#none">공지사항</a></li>
+          </ul>
+          <a href="#none" class="btn_gnb right">인증 초기화</a>
+          <!-- <p class="btn_gnb right standby">인증 대기중</p> -->
+        </nav>
+        <!-- //GNB -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- contents -->
+    <div class="user_contents">
+      <!-- 그룹1 : user_row_group -->
+      <div class="user_row_group clearfix">
+        <!-- 오늘의 근무 영역 -->
+        <!-- [D] div 태그에 sample 클래스 추가 시, [sample] 텍스트 보임 -->
+        <div class="fl_left user_white_bgbox user_today_work_box sample">
+          <!-- top_area -->
+          <div class="top_area">
+            <div class="period_box">
+              <!-- [D] 이전&다음 버튼 disabled 시, 해당 버튼의 a태그에 class="disabled" 추가 -->
+              <a href="#none" class="btn_main_prev disabled">이전</a>
+              <strong>2019-08-30 (금)</strong>
+              <a href="#none" class="btn_main_next">다음</a>
+            </div>
+            <a href="#none" class="btn_main_today">오늘</a>
+          </div>
+          <!-- //top_area -->
+
+          <!-- cont_area -->
+          <div class="cont_area clearfix">
+            <!-- left 영역 : 오늘의 근무 -->
+            <div class="fl_left user_blue_bgbox today_work">
+              <!-- case1 : 근무일 -->
+              <div class="cont">
+                <div class="total_box">
+                  <p class="time"><span class="hour">05</span>:<span class="minute">30</span></p>
+                </div>
+
+                <div class="txt_box">
+                  <p class="title">오늘의 근무</p>
+                  <ul class="time_list">
+                    <li>00:00~03:00</li>
+                    <li>22:00~00:00</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- //case1 : 근무일 -->
+
+              <!-- case2 : 휴무일 -->
+              <!-- [D] div 태그에 class="day_off" 추가 -->
+              <div class="cont day_off" style="display: none">
+                <div class="total_box">DAY OFF</div>
+
+                <div class="txt_box">
+                  <p class="title">오늘의 근무</p>
+                  <!-- [D] 공백 없이 최대 6글자 -->
+                  <p class="txt">한글날</p>
+                </div>
+              </div>
+              <!-- //case2 : 휴무일 -->
+            </div>
+            <!-- //left 영역 : 오늘의 근무 -->
+
+            <!-- right 영역 : 차단정책 & 예외정책 -->
+            <div class="fl_left right_area">
+              <!-- 차단정책 -->
+              <div class="user_blue_bgbox block_policy">
+                <!-- case1 : 휴일차단 -->
+                <div class="txt_box" style="display: none">
+                  <p><span class="title">차단정책</span></p>
+                  <p><span class="txt">휴일차단</span></p>
+                </div>
+                <!-- //case1 : 휴일차단 -->
+
+                <!-- case2 : 휴가자 차단 -->
+                <div class="txt_box">
+                  <p><span class="title">차단정책</span></p>
+                  <p><span class="txt2">휴가자 차단</span></p>
+                  <p><spna class="time">09:00~13:00</spna></p>
+                </div>
+                <!-- //case2 : 휴가자 차단 -->
+              </div>
+              <!-- //차단정책 -->
+
+              <!-- 예외정책 -->
+              <div class="user_blue_bgbox exception_policy">
+                <!-- case1 : 차단예외 -->
+                <div class="txt_box">
+                  <p><span class="title">예외정책</span></p>
+                  <p><span class="txt">차단예외</span></p>
+                </div>
+                <!-- //case1 : 차단예외 -->
+
+                <!-- case2 : 시간 -->
+                <div class="txt_box" style="display: none">
+                  <p><span class="title">예외정책</span></p>
+                  <p><spna class="time">18:00~20:00</spna></p>
+                </div>
+                <!-- //case2 : 시간 -->
+              </div>
+              <!-- //예외정책 -->
+            </div>
+            <!-- //right 영역 : 차단정책 & 예외정책 -->
+          </div>
+          <!-- //cont_area -->
+        </div>
+        <!-- //오늘의 근무 영역 -->
+
+        <!-- 이번주 근무 시간 영역 -->
+        <div class="fl_left user_white_bgbox user_week_work_box">
+          <!-- top_area -->
+          <div class="top_area">
+            <div class="period_box">
+              <!-- [D] 이전&다음 버튼 disabled 시, 해당 버튼의 a태그에 class="disabled" 추가 -->
+              <a href="#none" class="btn_main_prev">이전</a>
+              <strong>2019-07-05 ~ 2019-08-06</strong>
+              <a href="#none" class="btn_main_next">다음</a>
+            </div>
+          </div>
+          <!-- //top_area -->
+
+          <!-- cont_area -->
+          <div class="cont_area clearfix">
+            <!-- 정규근무 -->
+            <div class="fl_left total_box regular">
+              <p class="title">정규근무</p>
+              <p class="time"><span class="hour">16</span>:<span class="minute">00</span></p>
+            </div>
+            <!-- //정규근무 -->
+
+            <!-- 연장근무 -->
+            <div class="fl_right total_box extension">
+              <p class="title">연장근무</p>
+              <p class="time"><span class="hour">04</span>:<span class="minute">00</span></p>
+            </div>
+            <!-- //연장근무 -->
+
+            <!-- 총합 -->
+            <div class="fl_left total_box total_sum">
+              <p class="title">총합</p>
+              <p class="time"><span class="hour">20</span>:<span class="minute">00</span></p>
+            </div>
+            <!-- //총합 -->
+          </div>
+          <!-- //cont_area -->
+        </div>
+        <!-- //이번주 근무 시간 영역 -->
+      </div>
+      <!-- //그룹 : user_row_group -->
+
+      <!-- 그룹2 : user_row_group -->
+      <div class="user_row_group clearfix">
+        <!-- 주간 근무 현황 -->
+        <div class="fl_left user_white_bgbox user_weekly_status">
+          <!-- top_area -->
+          <div class="top_area">
+            <h3 class="title">주간 근무 현황</h3>
+            <div class="period_box">
+              <!-- [D] 이전&다음 버튼 disabled 시, 해당 버튼의 a태그에 class="disabled" 추가 -->
+              <a href="#none" class="btn_main_prev">이전</a>
+              <strong>2019-08-26 ~ 2019-09-01</strong>
+              <a href="#none" class="btn_main_next">다음</a>
+            </div>
+          </div>
+          <!-- //top_area -->
+
+          <!-- chart_area -->
+          <div class="chart_area" style="height: 292px">
+            <!-- 챠트 영역 : 704*240 -->
+            <div><img src="../../common/img/user_dummy_main_chart01.png" alt="" /></div>
+            <!-- //챠트 영역 -->
+          </div>
+          <!-- //chart_area -->
+
+          <!-- 범례 -->
+          <ul class="category_list">
+            <li class="regularity">정규근무</li>
+            <li class="extension">연장근무</li>
+            <li class="regularity_plan">정규근무 계획</li>
+            <li class="extension_plan">연장근무 계획</li>
+          </ul>
+          <!-- //범례 -->
+        </div>
+        <!-- //주간 근무 현황 -->
+
+        <!-- 월간 근무 현황 -->
+        <div class="fl_left user_white_bgbox user_monthly_status">
+          <!-- top_area -->
+          <div class="top_area">
+            <h3 class="title">월간 근무 현황</h3>
+          </div>
+          <!-- //top_area -->
+
+          <!-- chart_area -->
+          <div class="chart_area" style="height: 292px">
+            <!-- 챠트 영역 : 319*240 -->
+            <div><img src="../../common/img/user_dummy_main_chart02.png" alt="" /></div>
+            <!-- //챠트 영역 -->
+          </div>
+          <!-- //chart_area -->
+
+          <!-- 범례 -->
+          <ul class="category_list">
+            <li class="regularity">정규근무</li>
+            <li class="extension">연장근무</li>
+          </ul>
+          <!-- //범례 -->
+        </div>
+        <!-- //월간 근무 현황 -->
+      </div>
+      <!-- //그룹2 : user_row_group -->
+    </div>
+    <!-- //contents -->
+  </body>
+</html>

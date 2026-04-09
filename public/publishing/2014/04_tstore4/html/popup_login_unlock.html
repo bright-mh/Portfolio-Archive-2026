@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layers");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layers" style="width: 450px">
+      <div class="layers-header2">
+        <h1><img src="../img/popup/h1_login.gif" alt="로그인 잠금 해제" /></h1>
+        <div class="header-group login"></div>
+      </div>
+      <div class="layers-contents3">
+        <div class="unlock">
+          <img src="../img/popup/icon_unlock.gif" alt="로그인 잠금 해제" />
+          <p class="description_trans"><span>로그인 잠금이 해제</span>되었습니다.</p>
+          <p class="footnote">휴대기기에서 T store를 이용해보세요.</p>
+        </div>
+        <p class="okBtn">
+          <a href="#"><img src="../img/common/btn/btn_ok2.gif" alt="확인" /></a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

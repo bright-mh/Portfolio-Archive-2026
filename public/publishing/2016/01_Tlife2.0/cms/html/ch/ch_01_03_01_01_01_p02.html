@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>주문내역 등록 팝업 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy/mm/dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+        //파일 업로드
+        var fileTarget = $(".filebox .file_hidden");
+
+        fileTarget.on("change", function () {
+          if (window.FileReader) {
+            // modern browser
+            var filename = $(this)[0].files[0].name;
+          } else {
+            // old IE
+            var filename = $(this).val().split("/").pop().split("\\").pop();
+          }
+
+          $(this).siblings(".file_name").val(filename);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>주문내역 등록 팝업</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>대상일자 선택 후 판매채널 Admin에서 생성된 ‘일별 CMS 주문내역’ 파일을 등록해주세요.</li>
+            <li>
+              대상일자는 채널 Admin-CMS 간 대사(주문내역 비교) 를 하고자 하는 일자이며, ‘일별 CMS 주문내역’ 다운로드 시
+              선택한 일자가 해당 파일의 대상일자 입니다.
+            </li>
+            <li>
+              이미 대사완료 한 대상일자를 다시 선택하여 새로운 파일을 등록할 수 있으며, 목록에서 주문내역 등록일 별
+              대사결과를 확인할 수 있습니다. 단, 선택한 대상일자가 대사처리 중이거나 1개월 이전인 경우 주문내역을 등록할
+              수 없습니다.
+            </li>
+          </ul>
+
+          <!-- 대상일자/주문일자 테이블 -->
+          <div class="table_list_top">
+            <div class="comm_right">
+              <em class="ess">필수 입력 항목입니다.</em>
+            </div>
+
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>대상일자, CMS 캠페인 ID, 주문내역등록이 있는 주문내역 등록 정보</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row"><span class="ess">대상일자</span></th>
+                    <td>
+                      <input type="text" title="대상일자 선택" value="2016.07.09" class="wid_calendar pickerArea" />
+                    </td>
+                    <th scope="row"><span class="ess">CMS 캠페인 ID</span></th>
+                    <td>
+                      <select title="CMS 캠페인 ID" style="width: 260px">
+                        <option>CCM_CAMP_0050</option>
+                        <option>CCM_CAMP_0050</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><span class="ess">주문내역등록</span></th>
+                    <td colspan="3">
+                      <div class="filebox">
+                        <input type="text" class="file_name" title="선택된 파일명" readonly="readonly" />
+
+                        <label for="file_choice">파일선택</label>
+                        <input type="file" id="file_choice" class="file_hidden" />
+                      </div>
+                      <ul class="caution_list">
+                        <li>파일명에 특수문자(!@#$_,등) 및 공백이 포함된 경우 오류가 발생할 수 있습니다.</li>
+                        <li>csv 파일만 등록 가능</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_small">추가</a>
+                <a href="#" class="btn_small">삭제</a>
+              </div>
+            </div>
+          </div>
+          <!-- //대상일자/주문일자 테이블 -->
+
+          <!-- 대상일자/주문일자 추가 테이블 -->
+          <div class="table_list">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>대상일자, CMS 캠페인 ID, 주문내역등록 정보 입력</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row"><span class="ess">대상일자</span></th>
+                    <td>
+                      <input type="text" title="대상일자 선택" value="2016.07.09" class="wid_calendar pickerArea" />
+                    </td>
+                    <th scope="row"><span class="ess">CMS 캠페인 ID</span></th>
+                    <td>
+                      <select title="CMS 캠페인 ID" style="width: 260px">
+                        <option>CCM_CAMP_0050</option>
+                        <option>CCM_CAMP_0050</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><span class="ess">주문내역등록</span></th>
+                    <td colspan="3">
+                      <div class="filebox">
+                        <input type="text" class="file_name" title="선택된 파일명" readonly="readonly" />
+
+                        <label for="file_choice2">파일선택</label>
+                        <input type="file" id="file_choice2" class="file_hidden" />
+                      </div>
+                      <ul class="caution_list">
+                        <li>파일명에 특수문자(!@#$_,등) 및 공백이 포함된 경우 오류가 발생할 수 있습니다.</li>
+                        <li>csv 파일만 등록 가능</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_small">추가</a>
+                <a href="#" class="btn_small">삭제</a>
+              </div>
+            </div>
+          </div>
+          <!-- //대상일자/주문일자 추가 테이블 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_new">등록</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>GS건설 LCCO2평가 시스템</title>
+<link rel="stylesheet" type="text/css" href="../../common/css/import.css" />
+<script type="text/javascript" src="../../common/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="../../common/js/gsconst.js"></script>
+</head>
+
+<body>
+	<div class="hidden">
+		<a href="#content" class="hidden">본문 바로가기</a>
+	</div>
+
+	<!-- 서브에 쓰이는 좌측, 우측 BG -->
+	<div class="sub_bg_left"></div>
+	<div class="sub_bg_right"></div>
+	<!-- //서브에 쓰이는 좌측, 우측 BG -->
+
+	<!-- header -->
+	<div id="header">
+		<div class="header_inner">
+			<h1><img src="../../common/img/logo.png" width="227" height="39" alt="GS건설 LCCO2평가 시스템" title="GS건설 LCCO2평가 시스템" class="png24" /></h1>
+
+			<h2 class="hidden">메뉴</h2>
+			<!-- [D] 활성화 된 메뉴에 _on 추가 -->
+			<ul>
+				<li><a href="#"><img src="../../common/img/gnb01.gif" width="170" height="44" alt="HOME" title="HOME" /></a></li>
+				<li><a href="#"><img src="../../common/img/gnb02_on.gif" width="170" height="44" alt="평가시스템" title="평가시스템" /></a></li>
+				<!-- <li><a href="#"><img src="../../common/img/gnb03_on.gif" width="170" height="44" alt="관리자 모드" title="관리자 모드" /></a></li> -->
+				<li><a href="#"><img src="../../common/img/gnb04.gif" width="170" height="44" alt="정보수정" title="정보수정" /></a></li>
+				<li><a href="#"><img src="../../common/img/gnb05.gif" width="170" height="44" alt="로그아웃" title="로그아웃" /></a></li>
+			</ul>
+		</div> 
+	</div>
+	<!-- //header -->
+
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<!-- side navigation -->
+			<div class="snb">
+				<h2><img src="../../common/img/title_snb01.png" width="115" height="43" alt="평가시스템-Evaluation System" title="평가시스템-Evaluation System" class="png24" /></h2>
+				<ul class="snb_1">
+				<!-- [D] 활성화 된 메뉴에 _on 추가 -->
+					<li><a href="#"><img src="../../common/img/snb02_01.gif" width="151" alt="프로젝트" title="프로젝트" /></a>
+						<ul class="snb_2" style="display:none">
+							<li><img src="../../common/img/snb02_01_01.gif" width="151" height="20" alt="개요" title="개요" /></li>
+							<li><img src="../../common/img/snb02_01_02.gif" width="151" height="20" alt="상세프로젝트" title= "상세프로젝트"/>
+								<ul>
+									<li><a href="#"><img src="../../common/img/snb02_01_02_01.gif" width="151" height="19" alt="기본정보" title="기본정보" /></a></li>
+									<li><a href="#"><img src="../../common/img/snb02_01_02_02.gif" width="151" height="20" alt="건설단계" title="건설단계" /></a></li>
+									<li><a href="#"><img src="../../common/img/snb02_01_02_03.gif" width="151" height="20" alt="운용단계" title="운용단계" /></a></li>
+									<li><a href="#"><img src="../../common/img/snb02_01_02_04.gif" width="151" height="20" alt="철거단계" title="철거단계" /></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><img src="../../common/img/snb02_02.gif" width="151" alt="대안템플릿" title="대안템플릿" /></a>
+						<ul class="snb_2" style="display:none">
+							<li><img src="../../common/img/snb02_02_01.gif" width="151" height="20" alt="기본정보" title="기본정보" /></li>
+							<li><img src="../../common/img/snb02_02_02.gif" width="151" height="20" alt="대안입력" title="대안입력" /></li>
+						</ul>
+					</li>
+					<li><img src="../../common/img/snb02_03_on.gif" width="151" alt="LCCO₂ 평가" title="LCCO₂ 평가" />
+						<ul class="snb_2">
+							<li><img src="../../common/img/snb02_03_01_on.gif" width="151" height="20" alt="개별평가" title="개별평가" />
+								<ul>
+									<li><a href="#"><img src="../../common/img/snb02_03_01_01_on.gif" width="151" height="19" alt="요약결과" title="요약결과" /></a></li>
+									<li><a href="#"><img src="../../common/img/snb02_03_01_02.gif" width="151" height="20" alt="상세결과" title="상세결과" /></a></li>
+								</ul>
+							</li>
+							<li><a href="#"><img src="../../common/img/snb02_03_02.gif" width="151" height="20" alt="비교평가" title="비교평가" /></a>
+								<ul>
+									<li><a href="#"><img src="../../common/img/snb02_03_01_01.gif" width="151" height="19" alt="요약결과" title="요약결과" /></a></li>
+									<li><a href="#"><img src="../../common/img/snb02_03_01_02.gif" width="151" height="20" alt="상세결과" title="상세결과" /></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //side navigation -->
+
+			<!-- content -->
+			<div id="content">
+				<div class="location"><p><span class="location_bg1">Home</span> <span class="location_bg2">LCCO₂ 평가</span> <span class="location_bg3">프로젝트 평가</span></p></div>
+
+				<h1><img src="../../common/img/title_sub02_3_6.png" width="162" height="25" alt="개별평가(요약결과)" title="개별평가(요약결과)" class="png24" /></h1>
+
+				<!-- 본문내용 -->
+				<div class="substance">
+					<!-- 그룹핑 --> 
+					<div style="padding-bottom:25px">
+						<!-- 그룹 -->
+						<div class="group4">
+							<p class="img_style"><img src="../../common/img/pro_img.jpg" width="303" height="223" alt="프로젝트 이미지" title="프로젝트 이미지" /></p>
+						<!-- //그룹 -->
+						</div>
+
+						<!-- 그룹 -->
+						<div class="group5">
+							<table border="0" cellspacing="0" cellpadding="0" summary="프로젝트 설명이 나타나 있는 표입니다." class="table3">
+								<caption class="hidden">프로젝트 생성 표</caption>
+								<colgroup>
+									<col width="127px" />
+									<col width="500px" />
+								</colgroup>
+								<tbody>
+									<!-- [D] label명과 id, name 값을 동일하게 입력할 것 -->
+									<tr>
+										<th scope="row"><img src="../../common/img/title_th1.gif" width="97" height="15" alt="프로젝트 이름" title="프로젝트 이름" /></th>
+										<td class="no_right"><span>프로젝트 이름</span></td>
+									</tr>
+									<tr>
+										<th scope="row"><img src="../../common/img/title_th2.gif" width="97" height="15" alt="프로젝트 위치" title="프로젝트 위치" /></th>
+										<td class="no_right">프로젝트 위치</td>
+									</tr>
+									<tr>
+										<th scope="row"><img src="../../common/img/title_th3.gif" width="97" height="15" alt="사용DB" title="사용DB" /></th>
+										<td class="no_right">사용DB</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //그룹 -->
+
+						<!-- clear를 위한 div -->
+						<div class="clear"></div>
+					</div>
+					<!-- //그룹핑 -->
+
+					<!-- 그룹 -->
+					<div style="margin-bottom:25px">
+						<h2><img src="../../common/img/title_h3_14.png" width="80" height="15" alt="평가개요" title="평가개요" class="png24" /></h2>
+
+						<!-- 박스 bg그룹 -->
+						<div>
+							<!-- bg박스 -->
+							<div class="para_box">
+								<!-- bg박스 내용 -->
+								<div class="box_contents">
+									<h3><img src="../../common/img/title_box_01.gif" alt="CO₂ 배출량(전생애 주기)" title="CO₂ 배출량(전생애 주기)" /></h3>
+									<dl>
+										<dt>총 배출량 :</dt>
+										<dd>
+											<span class="span_style2">10</span> 
+											<span class="span_style3">Ton-CO₂</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>단위면적 배출량 :</dt>
+										<dd>
+											<span class="span_style2">10</span>
+											<span class="span_style3">Ton-CO₂&#47;m²</span>
+										</dd>
+									</dl>
+									<!-- clear를 위한 div -->
+									<div class="clear"></div>
+								</div>
+								<!-- //bg박스 내용 -->
+							</div>
+							<!-- //bg박스 -->
+
+							<!-- bg박스 -->
+							<div class="para_box">
+								<!-- bg박스 내용 -->
+								<div class="box_contents">
+									<h3><img src="../../common/img/title_box_02.gif" alt="에너지 사용량(전생애 주기)" title="에너지 사용량(전생애 주기)" /></h3>
+									<dl>
+										<dt>총 사용량 :</dt>
+										<dd>
+											<span class="span_style2">10</span> 
+											<span class="span_style3">J</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>단위면적 사용량 :</dt>
+										<dd>
+											<span class="span_style2">10</span> 
+											<span class="span_style3">J/㎡</span>
+										</dd>
+									</dl>
+									<!-- clear를 위한 div -->
+									<div class="clear"></div>
+								</div>
+								<!-- //bg박스 내용 -->
+							</div>
+							<!-- //bg박스 -->
+
+							<!-- bg박스 -->
+							<div class="para_box">
+								<!-- bg박스 내용 -->
+								<div class="box_contents">
+									<h3><img src="../../common/img/title_box_03.gif" alt="CO₂ 비용(단위면적기준)" title="CO₂ 비용(단위면적기준)" /></h3>
+									<dl>
+										<dt>비용 :</dt>
+										<dd>
+											<span class="span_style2">10</span> 
+											<span class="span_style3">원</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>소나무 :</dt>
+										<dd>
+											<span class="span_style2">10</span>
+											<span class="span_style3">그루</span>
+										</dd>
+									</dl>
+									<!-- clear를 위한 div -->
+									<div class="clear"></div>
+								</div>
+								<!-- //bg박스 내용 -->
+							</div>
+							<!-- //bg박스 -->
+
+							<!-- bg박스 -->
+							<div class="para_box" style="margin-right:-10px">
+								<!-- bg박스 내용 -->
+								<div class="box_contents2">
+									<h3><img src="../../common/img/title_box_05.gif" alt="CO₂ 감소율(표준 건축물 유형대비)" title="CO₂ 감소율(표준 건축물 유형대비)" /></h3>
+									<p><span class="span_style2">10 </span><span class="span_style3">% 감소</span></p>
+									<!-- clear를 위한 div -->
+									<div class="clear"></div>
+								</div>
+								<!-- //bg박스 내용 -->
+							</div>
+							<!-- //bg박스 -->
+
+							<!-- clear를 위한 div -->
+							<div class="clear"></div>
+						</div>
+						<!-- //박스 bg그룹 -->
+					</div>
+					<!-- //그룹 -->
+
+					<!-- 그룹 -->
+					<div style="margin:0 0 18px 0">
+						<h2><img src="../../common/img/title_h3_15.png" width="123" height="15" alt="CO₂ 배출량 분석" title="CO₂ 배출량 분석" class="png24" /></h2>
+
+						<p class="radio_box">
+							<span>평가기준:</span>
+							<span><input type="radio" id="abc" name="radio" checked="checked" /><label for="abc">물량</label></span>
+							<span><input type="radio" id="bcd" name="radio" /><label for="bcd">비용</label></span>
+
+							<span>평가결과:</span>
+							<span><input type="radio" id="abc" name="radio" checked="checked" /><label for="abc">단위면적</label></span>
+							<span><input type="radio" id="bcd" name="radio" /><label for="bcd">단위면적</label></span>
+						</p>
+					</div>
+					<!-- //그룹 -->
+
+					<!-- 그룹 -->
+					<div style="margin:0 0 14px 0">
+						<h3><img src="../../common/img/title_blue_11.gif" width="136" height="16" alt="단계별 CO₂ 발생 분석" title="단계별 CO₂ 발생 분석" /></h3>
+
+						<!-- 그룹핑 -->
+						<div class="grouping">
+							<!-- 그룹핑 왼쪽 -->
+							<div class="group6">
+								<!-- 그래프 영역 -->
+								<div>
+									<p><img src="../../common/img/graph_01.gif" alt="그래프" title="그래프" /></p>
+								</div>
+								<!-- //그래프 영역 -->
+
+								<p class="txt_style">&lt;CO₂ 발생량 분석&gt;</p>
+							</div>
+							<!-- //그룹핑 왼쪽 -->
+
+							<!-- 그룹핑 오른쪽 -->
+							<div class="group7">
+								<table border="0" cellspacing="0" cellpadding="0" summary="단계, CO₂ 발생량, 발생합을 나타낸 표입니다." class="table1">
+									<caption class="hidden">단계에 따른 CO₂ 발생량 표</caption>
+									<colgroup>
+										<col width="129px" />
+										<col width="97px" />
+										<col width="145px" />
+										<col width="106px" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2" style="border-left:1px solid #e4e4e3">단계</th>
+											<th scope="col">CO₂ 배출량<br />(kg-CO2&frasl;m&sup2;)</th>
+											<th scope="col">비율(%)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="last">
+											<td rowspan="3" style="border-left:1px solid #e4e4e3">건설단계</td>
+											<td>자재생산</td>
+											<td>총량</td>
+											<td>12.34%</td>
+										</tr>
+										<tr>
+											<td>운송</td>
+											<td>&nbsp;</td>
+											<td>12.34%</td>
+										</tr>
+										<tr>
+											<td>시공</td>
+											<td>&nbsp;</td>
+											<td>12.34%</td>
+										</tr>
+										<tr>
+											<td style="border-left:1px solid #e4e4e3">운영단계</td>
+											<td>운영</td>
+											<td>&nbsp;</td>
+											<td>12.34%</td>
+										</tr>
+										<tr>
+											<td style="border-left:1px solid #e4e4e3">&nbsp;</td>
+											<td>유지관리</td>
+											<td>&nbsp;</td>
+											<td>12.34%</td>
+										</tr>
+										<tr>
+											<td style="border-left:1px solid #e4e4e3">철거단계</td>
+											<td>해체</td>
+											<td>&nbsp;</td>
+											<td>12.34%</td>
+										</tr>
+										<td style="border-left:1px solid #e4e4e3">&nbsp;</td>
+											<td>운송</td>
+											<td>&nbsp;</td>
+											<td>12.34%</td>
+										</tr>
+										<tr>
+											<td style="border-left:1px solid #e4e4e3">합계</td>
+											<td>폐기</td>
+											<td>&nbsp;</td>
+											<td>12.34%</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="txt_style">&lt;단계별 CO₂배출량 상세&gt;</p>
+							</div>
+							<!-- //그룹핑 오른쪽 -->
+
+							<!-- clear를 위한 div -->
+							<div class="clear"></div>
+						</div>
+						<!-- //그룹핑 -->
+					</div>
+					<!-- //그룹 -->
+
+<!--시작-->
+					<!-- 그룹 -->
+					<div style="margin:0 0 14px 0">
+						<h3><img src="../../common/img/title_blue_12.gif" alt="주요 자재 CO₂ 발생 분석" title="주요 자재 CO₂ 발생 분석" /></h3>
+
+						<!-- 그룹핑 -->
+						<div class="grouping">
+							<!-- 그룹핑 왼쪽 -->
+							<div class="group6">
+								<!-- 그래프 영역 -->
+								<div>
+									<p><img src="../../common/img/graph_02.gif" alt="그래프" title="그래프" /></p>
+								</div>
+								<!-- //그래프 영역 -->
+
+								<table border="0" cellspacing="0" cellpadding="0" summary="자재분류별 CO₂ 발생량을 나타낸 표입니다." class="table1" style="margin-top:20px">
+									<caption class="hidden">주요재료단계 CO₂ 발생량 상세 표</caption>
+									<colgroup>
+										<col width="98px" />
+										<col width="75px" />
+										<col width="75px" />
+										<col width="75px" />
+										<col width="75px" />
+										<col width="74px" />
+									</colgroup> 
+									<thead>
+										<tr>
+											<th scope="col" style="border-left:1px solid #e4e4e3">&nbsp;</th>
+											<th scope="col">자재1</th>
+											<th scope="col">자재2</th>
+											<th scope="col">자재3</th>
+											<th scope="col">자재4</th>
+											<th scope="col">자재5</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="last">
+											<td style="border-left:1px solid #e4e4e3">CO₂ 발생량</td>
+											<td>---</td>
+											<td>---</td>
+											<td>---</td>
+											<td>---</td>
+											<td>---</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="txt_style">&lt;주요재료단계 CO₂ 발생량 상세&gt;</p>
+							</div>
+							<!-- //그룹핑 왼쪽 -->
+
+							<!-- 그룹핑 오른쪽 -->
+							<div class="group7">
+								<!-- 그래프 영역 -->
+								<div>
+									<p><img src="../../common/img/graph_04.gif" width="481" height="251" alt="그래프" title="그래프" /></p>
+								</div>
+								<!-- //그래프 영역 -->
+
+								<table border="0" cellspacing="0" cellpadding="0" summary="전기사용, 가스사용에 다른 CO₂ 발생량을 나타낸 표입니다." class="table1" style="margin-top:20px">
+									<caption class="hidden">운영단계 CO₂ 발생량 분석 표</caption>
+									<colgroup>
+										<col width="98px" />
+										<col width="184px" />
+										<col width="195px" />
+									</colgroup> 
+									<thead>
+										<tr>
+											<th scope="col" style="border-left:1px solid #e4e4e3">&nbsp;</th>
+											<th scope="col">전기사용 CO₂발생량</th>
+											<th scope="col">가스사용 CO₂발생량</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="last">
+											<td style="border-left:1px solid #e4e4e3"> CO₂ 발생량</td>
+											<td>---</td>
+											<td>---</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="txt_style">&lt;운영단계 CO₂ 발생량 분석&gt;</p>
+							</div>
+							<!-- //그룹핑 오른쪽 -->
+
+							<!-- clear를 위한 div -->
+							<div class="clear"></div>
+						</div>
+						<!-- //그룹핑 -->
+					</div>
+					<!-- //그룹 -->
+
+<!--끝-->
+
+					<!-- 그룹 -->
+					<div style="margin-bottom:50px">
+						<h2><img src="../../common/img/title_h3_16.png" width="138" height="15" alt="LCCO₂ 발생량 분석" title="LCCO₂ 발생량 분석" class="png24" /></h2>
+
+						<!-- 그룹핑 -->
+						<div class="grouping">
+							<!-- 그룹핑 왼쪽 -->
+							<div class="group6">
+								<!-- 그래프 영역 -->
+								<div>
+									<p><img src="../../common/img/graph_03.gif" width="481" height="241" alt="그래프" title="그래프" /></p>
+								</div>
+								<!-- //그래프 영역 -->
+							</div>
+							<!-- //그룹핑 왼쪽 -->
+
+							<!-- 그룹핑 오른쪽 -->
+							<div class="group7">
+								<!-- 박스 bg그룹 -->
+								<div>
+									<!-- bg박스 -->
+									<div class="para_box2">
+										<!-- bg박스 내용 -->
+										<div class="box_contents3">
+											<dl>
+												<dt><img src="../../common/img/box_title_01.gif" width="89" height="36" alt="CO₂ 배출량(프로젝트 내구수명)" title="CO₂ 배출량(프로젝트 내구수명)" /></dt>
+												<dd>
+													<span class="span_style2">10</span>
+													<span class="span_style3">년</span>
+												</dd>
+											</dl>
+											<!-- clear를 위한 div -->
+											<div class="clear"></div>
+										</div>
+										<!-- //bg박스 내용 -->
+									</div>
+									<!-- //bg박스 -->
+
+									<!-- bg박스 -->
+									<div class="para_box2">
+										<!-- bg박스 내용 -->
+										<div class="box_contents3">
+											<dl>
+												<dt><img src="../../common/img/box_title_02.gif" width="212" height="36" alt="재료-운영단계 CO₂발생 도달 년수(동일 CO₂ 발생량 기간)" title="재료-운영단계 CO₂발생 도달 년수(동일 CO₂ 발생량 기간)" /></dt>
+												<dd>
+													<span class="span_style7">총 사용량 :</span><span class="span_style2">10</span>
+													<span class="span_style3">년</span>
+												</dd>
+											</dl>
+											<!-- clear를 위한 div -->
+											<div class="clear"></div>
+										</div>
+										<!-- //bg박스 내용 -->
+									</div>
+									<!-- //bg박스 -->
+
+									<!-- bg박스 -->
+									<div class="para_box2">
+										<!-- bg박스 내용 -->
+										<div class="box_contents3">
+											<dl>
+												<dt><img src="../../common/img/box_title_03.gif" width="229" height="36" alt="재료-운영단계 (수명)년간 CO₂발생량(동일 CO₂ 발생량 기간)" title="재료-운영단계 (수명)년간 CO₂발생량(동일 CO₂ 발생량 기간)" /></dt>
+												<dd>
+													<span class="span_style2">10</span>
+													<span class="span_style3">Ton-CO₂</span>
+												</dd>
+											</dl>
+											<!-- clear를 위한 div -->
+											<div class="clear"></div>
+										</div>
+										<!-- //bg박스 내용 -->
+									</div>
+									<!-- //bg박스 -->
+								</div>
+								<!-- //박스 bg그룹 -->
+							</div>
+							<!-- //그룹핑 오른쪽 -->
+
+							<!-- clear를 위한 div -->
+							<div class="clear"></div>
+						</div>
+						<!-- //그룹핑 -->
+					</div>
+					<!-- //그룹 -->
+
+					<div class="txt_style2"><p>평가자 : GS건설 신도시연구소속 이현국연구원 <span>ㅣ</span> 평가날짜 : 2011-04-16</p></div>
+
+					<!-- 버튼 -->
+					<p class="btn_area2">
+						<a href="#"><img src="../../common/img/btn_result.gif" width="118" height="36" alt="상세결과" title="상세결과" /></a>
+						<a href="#" onclick="window.print()"><img src="../../common/img/btn_print.gif" width="118" height="36" alt="인쇄" title="인쇄" /></a>
+					</p>
+
+				</div>
+				<!-- //본문내용 -->
+			</div>
+			<!-- //content -->
+			<!-- clear를 위한 div -->
+			<div class="clear"></div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- wrap -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="footer_inner">
+			<p class="db_manager"><span class="department">GS건설 신도시연구팀</span> <span class="manager">이현국 전임연구원</span></p>
+			<p class="db_ver">DB Version : 2011-07-01</p>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>
+</html>

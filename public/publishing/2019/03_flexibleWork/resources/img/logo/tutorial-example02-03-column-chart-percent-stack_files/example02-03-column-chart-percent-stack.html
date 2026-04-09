@@ -1,0 +1,1645 @@
+<!doctype html>
+<!-- saved from url=(0092)https://nhn.github.io/tui.chart/latest/examples/example02-03-column-chart-percent-stack.html -->
+<html>
+  <head lang="kr">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>2.3 [Column Chart] percent stack</title>
+    <link rel="stylesheet" type="text/css" href="./tui-chart.css" />
+    <link rel="stylesheet" type="text/css" href="./codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="./lint.css" />
+    <link rel="stylesheet" type="text/css" href="./neo.css" />
+    <link rel="stylesheet" type="text/css" href="./example.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="code-html" id="code-html">
+        <div id="chart-area">
+          <div class="tui-chart tui-column-chart" style="width: 744px; height: 280px">
+            <svg
+              height="280"
+              version="1.1"
+              width="744"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              style="overflow: hidden; position: relative"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="744"
+                height="280"
+                rx="0"
+                ry="0"
+                fill="#ffffff"
+                stroke="#000"
+                stroke-width="0"
+                fill-opacity="1"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1"
+              ></rect>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M40,190.33333333333331H711"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M40,109.66666666666666H711"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M40,29H711"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M710,29V271"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M615.1428571428571,29V271"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M519.2857142857142,29V271"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M423.4285714285714,29V271"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M327.57142857142856,29V271"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M231.7142857142857,29V271"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <path
+                fill="none"
+                stroke="#0000ff"
+                d="M135.85714285714283,29V271"
+                stroke-width="1"
+                stroke-opacity="0.05"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0.05"
+              ></path>
+              <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">Created with Raphaël @@VERSION</desc>
+              <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
+                <filter id="glow">
+                  <feflood result="flood" flood-color="#ffffff" flood-opacity="0.5"></feflood>
+                  <fecomposite in="flood" result="mask" in2="SourceGraphic" operator="in"></fecomposite>
+                  <femorphology in="mask" result="dilated" operator="dilate" radius="2"></femorphology>
+                  <fegaussianblur in="dilated" result="blurred" stdDeviation="1"></fegaussianblur>
+                  <femerge>
+                    <femergenode in="blurred"></femergenode>
+                    <femergenode in="SourceGraphic"></femergenode>
+                  </femerge>
+                </filter>
+                <filter id="shadow" x="-15%" y="-15%" width="180%" height="180%">
+                  <feoffset result="offOut" in="SourceAlpha" dx="2" dy="2"></feoffset>
+                  <fegaussianblur result="blurOut" in="offOut" stdDeviation="2"></fegaussianblur>
+                  <feblend in="SourceGraphic" in2="blurOut" mode="normal"></feblend>
+                </filter>
+              </defs>
+              <rect
+                x="67.55892857142857"
+                y="141.46666666666667"
+                width="40.739285714285714"
+                height="128.53333333333333"
+                rx="0"
+                ry="0"
+                fill="#4ab8ed"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="67.55892857142857"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#dbeaf4"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="67.55892857142857"
+                y="109.33333333333334"
+                width="40.739285714285714"
+                height="32.13333333333333"
+                rx="0"
+                ry="0"
+                fill="#f95d77"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="67.55892857142857"
+                y="108.33333333333334"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f6cad1"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="546.844642857143"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#4ab8ed"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="546.844642857143"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#dbeaf4"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="546.844642857143"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f95d77"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="546.844642857143"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f6cad1"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <text
+                x="10"
+                y="15.895"
+                text-anchor="start"
+                font-family="Arial"
+                font-size="11px"
+                stroke="none"
+                fill="#bbbbbb"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: start;
+                  font-family: Arial;
+                  font-size: 11px;
+                  font-weight: bold;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="auto"
+                font-weight="bold"
+                transform="matrix(1,0,0,1,0,0)"
+              >
+                <tspan dy="3.9965624999999996" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">(H)</tspan>
+              </text>
+              <text
+                x="10"
+                y="271"
+                text-anchor="start"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: start;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">0</tspan>
+              </text>
+              <text
+                x="10"
+                y="190"
+                text-anchor="start"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: start;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">5</tspan>
+              </text>
+              <text
+                x="10"
+                y="110"
+                text-anchor="start"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: start;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">10</tspan>
+              </text>
+              <text
+                x="10"
+                y="30"
+                text-anchor="start"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: start;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">15</tspan>
+              </text>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M40,29V271"
+                stroke-width="1"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M40,29H35"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M40,109.66666666666666H35"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M40,190.33333333333331H35"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M40,270H35"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <text
+                x="88"
+                y="283"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: middle;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">8/26</tspan>
+              </text>
+              <text
+                x="184"
+                y="283"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: middle;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">8/27</tspan>
+              </text>
+              <text
+                x="280"
+                y="283"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: middle;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">8/28</tspan>
+              </text>
+              <text
+                x="376"
+                y="283"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: middle;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">8/29</tspan>
+              </text>
+              <text
+                x="471"
+                y="283"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: middle;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">8/30</tspan>
+              </text>
+              <text
+                x="567"
+                y="283"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: middle;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">8/31</tspan>
+              </text>
+              <text
+                x="663"
+                y="283"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="12px"
+                stroke="none"
+                fill="#666666"
+                style="
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                  text-anchor: middle;
+                  font-family: Arial;
+                  font-size: 12px;
+                  font-weight: normal;
+                  user-select: none;
+                  cursor: default;
+                "
+                dominant-baseline="central"
+                font-weight="normal"
+              >
+                <tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">9/1</tspan>
+              </text>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M40,270H711"
+                stroke-width="1"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M40,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M135.85714285714283,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M231.7142857142857,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M327.57142857142856,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M423.4285714285714,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M519.2857142857142,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M615.1428571428571,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <path
+                fill="none"
+                stroke="#dbeaf4"
+                d="M710,270V275"
+                opacity="0.5"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5"
+              ></path>
+              <rect
+                x="642.7017857142857"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#4ab8ed"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="642.7017857142857"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#dbeaf4"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="642.7017857142857"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f95d77"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="642.7017857142857"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f6cad1"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="450.9875"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#4ab8ed"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="450.9875"
+                y="141.46666666666667"
+                width="40.739285714285714"
+                height="128.53333333333333"
+                rx="0"
+                ry="0"
+                fill="#dbeaf4"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="450.9875"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f95d77"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="450.9875"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f6cad1"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="355.1303571428571"
+                y="269"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#4ab8ed"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="355.1303571428571"
+                y="141.46666666666667"
+                width="40.739285714285714"
+                height="128.53333333333333"
+                rx="0"
+                ry="0"
+                fill="#dbeaf4"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="355.1303571428571"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f95d77"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="355.1303571428571"
+                y="77.19999999999999"
+                width="40.739285714285714"
+                height="64.26666666666667"
+                rx="0"
+                ry="0"
+                fill="#f6cad1"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="163.41607142857143"
+                y="141.46666666666667"
+                width="40.739285714285714"
+                height="128.53333333333333"
+                rx="0"
+                ry="0"
+                fill="#4ab8ed"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="163.41607142857143"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#dbeaf4"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="163.41607142857143"
+                y="125.4"
+                width="40.739285714285714"
+                height="16.066666666666666"
+                rx="0"
+                ry="0"
+                fill="#f95d77"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="163.41607142857143"
+                y="124.4"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f6cad1"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="0"
+                y="0"
+                width="1"
+                height="1"
+                rx="0"
+                ry="0"
+                fill="#ffffff"
+                stroke="#ffffff"
+                fill-opacity="0"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0"
+                stroke-width="1"
+                filter="url(#shadow)"
+              ></rect>
+              <rect
+                x="259.2732142857143"
+                y="141.46666666666667"
+                width="40.739285714285714"
+                height="128.53333333333333"
+                rx="0"
+                ry="0"
+                fill="#4ab8ed"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1"
+                opacity="1"
+              ></rect>
+              <rect
+                x="259.2732142857143"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#dbeaf4"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="259.2732142857143"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f95d77"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+              <rect
+                x="259.2732142857143"
+                y="140.46666666666667"
+                width="40.739285714285714"
+                height="2"
+                rx="0"
+                ry="0"
+                fill="#f6cad1"
+                stroke="none"
+                class="auto-shape-rendering"
+                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.4"
+                opacity="0.4"
+              ></rect>
+            </svg>
+            <div class="tui-chart-tooltip-area" style="top: 19px; left: 30px">
+              <div class="tui-chart-tooltip" data-chart-type="column" data-showed="false" style="">
+                <div class="tui-chart-default-tooltip">
+                  <div class="tui-chart-tooltip-head show">8/28</div>
+                  <div class="tui-chart-tooltip-body">
+                    <span class="tui-chart-legend-rect column" style="background-color: #4ab8ed"></span
+                    ><span>정규근무</span><span class="tui-chart-tooltip-value">8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tui-chart-series-custom-event-area"
+              style="width: 691px; height: 261px; top: 19px; left: 30px; cursor: default"
+            >
+              <div style="background-color: rgb(255, 255, 255); height: 261px; opacity: 0"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-area">
+        <div id="error-dim" class="">
+          <span id="error-text"></span>
+          <div id="error-stack"></div>
+          <span id="go-to-dev-tool">For more detail, open browser's developer tool and check it out.</span>
+        </div>
+        <div class="try-it-area">
+          <h3>try it</h3>
+          <div class="CodeMirror cm-s-neo CodeMirror-focused" style="width: 800px; height: 500px">
+            <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 157px; left: 159px">
+              <textarea
+                autocorrect="false"
+                autocapitalize="false"
+                spellcheck="false"
+                style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none"
+                tabindex="0"
+              ></textarea>
+            </div>
+            <div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="bottom: 17px; display: block">
+              <div style="min-width: 1px; height: 1466px"></div>
+            </div>
+            <div
+              class="CodeMirror-hscrollbar"
+              tabindex="-1"
+              cm-not-content="true"
+              style="right: 17px; left: 47px; display: block"
+            >
+              <div style="height: 100%; min-height: 1px; width: 843px"></div>
+            </div>
+            <div
+              class="CodeMirror-scrollbar-filler"
+              cm-not-content="true"
+              style="height: 17px; width: 17px; display: block"
+            ></div>
+            <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+            <div class="CodeMirror-scroll" tabindex="-1" draggable="false">
+              <div
+                class="CodeMirror-sizer"
+                style="
+                  margin-left: 47px;
+                  margin-bottom: -17px;
+                  border-right-width: 13px;
+                  min-height: 1466px;
+                  min-width: 843px;
+                  padding-right: 17px;
+                  padding-bottom: 17px;
+                "
+              >
+                <div style="position: relative; top: 144px">
+                  <div class="CodeMirror-lines" role="presentation">
+                    <div role="presentation" style="position: relative; outline: none">
+                      <div class="CodeMirror-measure">
+                        <pre>x</pre>
+                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div>
+                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>63</div></div>
+                      </div>
+                      <div class="CodeMirror-measure">
+                        <pre
+                          class="CodeMirror-line"
+                          role="presentation"
+                        ><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">tui</span>.<span class="cm-property">chart</span>.<span class="cm-property">columnChart</span>(<span class="cm-variable">container</span>, <span class="cm-variable">data</span>, <span class="cm-variable">options</span>);</span></pre>
+                      </div>
+                      <div style="position: relative; z-index: 1"></div>
+                      <div class="CodeMirror-cursors" style="">
+                        <div class="CodeMirror-cursor" style="left: 112px; top: 342px; height: 18px">&nbsp;</div>
+                      </div>
+                      <div class="CodeMirror-code" role="presentation" style="">
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              9
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        },</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              10
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              11
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-property">name</span>: <span class="cm-string">'정규근무 계획'</span>,</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              12
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-property">data</span>: [<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">8</span>, <span class="cm-number">8</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>]</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              13
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        },</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              14
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              15
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-property">name</span>: <span class="cm-string">'연장근무'</span>,</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              16
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-property">data</span>: [<span class="cm-number">2</span>, <span class="cm-number">1</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>]</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              17
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        },</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              18
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              19
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-property">name</span>: <span class="cm-string">'연장근무 계획'</span>,</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              20
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-property">data</span>: [<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">4</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>]</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              21
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        }</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              22
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    ]</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              23
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">};</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              24
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">options</span> <span class="cm-operator">=</span> {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              25
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">chart</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              26
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">width</span>: <span class="cm-number">744</span>,</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              27
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">height</span>: <span class="cm-number">310</span>,</span></pre>
+                        </div>
+                        <div class="CodeMirror-activeline" style="position: relative">
+                          <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                          <div
+                            class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                            style="left: -47px; width: 47px"
+                          ></div>
+                          <div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              28
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">title</span>: <span class="cm-string">''</span>,</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              29
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">format</span>: <span class="cm-string">'2'</span></span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              30
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    },</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              31
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">yAxis</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              32
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">title</span>: <span class="cm-string">'(H)'</span></span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              33
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    },</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              34
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">series</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              35
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">stackType</span>: <span class="cm-string">'normal'</span></span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              36
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    },</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              37
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">tooltip</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              38
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">grouped</span>: <span class="cm-atom">false</span></span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              39
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    },</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              40
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">legend</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              41
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">visible</span>: <span class="cm-atom">false</span></span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              42
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    },</span></pre>
+                        </div>
+                        <div style="position: relative" class="">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              43
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">chartExportMenu</span>: {</span></pre>
+                        </div>
+                        <div class="" style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              44
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">visible</span>: <span class="cm-atom">false</span></span></pre>
+                        </div>
+                        <div class="" style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              45
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              46
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">};</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              47
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">theme</span> <span class="cm-operator">=</span> {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              48
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">chart</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              49
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">fontFamily</span>: [</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              50
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'NanumGothic'</span>, <span class="cm-string">'나눔고딕'</span>, <span class="cm-string">'Apple SD Gothic Neo'</span>, <span class="cm-string">'Malgun Gothic'</span>, <span class="cm-string">'맑은고딕'</span>, <span class="cm-string">'Dotum'</span>, <span class="cm-string">'돋움'</span>, <span class="cm-string">'sans-serif'</span></span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              51
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        ]</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              52
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    },</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              53
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">series</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              54
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">colors</span>: [</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              55
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'#4ab8ed'</span>, <span class="cm-string">'#dbeaf4'</span>, <span class="cm-string">'#f95d77'</span>, <span class="cm-string">'#f6cad1'</span></span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              56
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        ]</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              57
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    },</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              58
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">xAxis</span>: {</span></pre>
+                        </div>
+                        <div style="position: relative">
+                          <div class="CodeMirror-gutter-wrapper" style="left: -47px">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px">
+                              59
+                            </div>
+                          </div>
+                          <pre
+                            class="CodeMirror-line"
+                            role="presentation"
+                          ><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-property">label</span>: {</span></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="position: absolute; height: 13px; width: 1px; border-bottom: 17px solid transparent; top: 1466px"
+              ></div>
+              <div class="CodeMirror-gutters" style="height: 1496px; left: 0px">
+                <div class="CodeMirror-gutter CodeMirror-lint-markers"></div>
+                <div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 21px"></div>
+              </div>
+            </div>
+          </div>
+          <div class="apply-btn-area">
+            <button class="btn" onclick="evaluationCode(chartCM, codeString)">Run it!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Import chart.js and dependencies-->
+    <script type="text/javascript" src="./core.js.다운로드"></script>
+    <script type="text/javascript" src="./tui-code-snippet.min.js.다운로드"></script>
+    <script type="text/javascript" src="./raphael.js.다운로드"></script>
+    <script src="./tui-chart.js.다운로드"></script>
+    <script class="code-js" id="code-js">
+      var container = document.getElementById("chart-area");
+      var data = {
+        categories: ["May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        series: [
+          {
+            name: "Budget",
+            data: [4000, 5000, 3000, 5000, 7000, 6000, 4000, 1000],
+          },
+          {
+            name: "Income",
+            data: [7000, 8000, 1000, 7000, 2000, 7000, 3000, 5000],
+          },
+          {
+            name: "Expenses",
+            data: [-5000, -4000, -4000, -6000, -3000, -4000, -5000, -7000],
+          },
+          {
+            name: "Debt",
+            data: [-3000, -6000, -3000, -3000, -1000, -2000, -4000, -3000],
+          },
+        ],
+      };
+      var options = {
+        chart: {
+          width: 1160,
+          height: 540,
+          title: "Monthly Revenue",
+          format: "1,000",
+        },
+        yAxis: {
+          title: "Amount",
+        },
+        xAxis: {
+          title: "Month",
+        },
+        series: {
+          stackType: "percent",
+          barWidth: 60,
+        },
+        tooltip: {
+          grouped: true,
+        },
+        legend: {
+          align: "bottom4000",
+        },
+      };
+      var theme = {
+        series: {
+          colors: [
+            "#83b14e",
+            "#458a3f",
+            "#295ba0",
+            "#2a4175",
+            "#289399",
+            "#289399",
+            "#617178",
+            "#8a9a9a",
+            "#516f7d",
+            "#dddddd",
+          ],
+        },
+      };
+
+      // For apply theme
+
+      // tui.chart.registerTheme('myTheme', theme);
+      // options.theme = 'myTheme';
+
+      tui.chart.columnChart(container, data, options);
+    </script>
+    <!--For tutorial page-->
+    <script src="./codemirror.js.다운로드"></script>
+    <script src="./jshint.js.다운로드"></script>
+    <script src="./matchbrackets.js.다운로드"></script>
+    <script src="./active-line.js.다운로드"></script>
+    <script src="./javascript.js.다운로드"></script>
+    <script src="./lint.js.다운로드"></script>
+    <script src="./javascript-lint.js.다운로드"></script>
+    <script src="./example.js.다운로드"></script>
+
+    <i title="Raphaël Colour Picker" style="display: none; color: blue"></i>
+  </body>
+</html>

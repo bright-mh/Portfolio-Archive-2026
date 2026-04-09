@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>PC 사용기록 계산(스레드)</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*214 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>PC 사용기록 계산(스레드)</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- tbl_row_default -->
+        <div class="tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 100px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">날짜</th>
+                <td>
+                  <div class="ip_calendar">
+                    <input type="text" name="" value="2019-07-05" title="시작일" />
+                    <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                  </div>
+                  ~
+                  <div class="ip_calendar">
+                    <input type="text" name="" value="2019-07-05" title="종료일" />
+                    <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue icon_big_choice_white">실행</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

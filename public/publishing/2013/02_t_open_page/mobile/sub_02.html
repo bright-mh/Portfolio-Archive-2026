@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="css/frontMain.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="css/sub.css" type="text/css" media="screen,print" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dot-1.5.6-packed.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.compatibility.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+  </head>
+
+  <body>
+    <div class="sub">
+      <header class="sub_header">
+        <h1 class="colorWeather">날씨</h1>
+        <a href="#none" class="btn_back"><img src="images/btn_sub_back_02.gif" alt="뒤로" /></a>
+        <a href="#none" class="btn_go"><img src="images/btn_sub_go_02.gif" alt="go" /></a>
+      </header>
+
+      <!-- 날씨 정보 -->
+      <section class="sub_content">
+        <div class="weatherBox">
+          <div class="weatherGroup01">
+            <p class="weatherLocation">
+              <img src="images/icon_weather_m01.png" alt="맑음" class="weatherIcon" /><span class="location"
+                >광화문 우체국</span
+              ><a href="#none" class="locationSetup"><img src="images/btn_setup.gif" alt="설정" /></a>
+            </p>
+            <p class="presentDate">
+              <span>오후 12 : 21</span
+              ><a href="#none"><img src="images/icon_refresh.gif" class="weatherRefresh" alt="새로고침" /></a>
+            </p>
+          </div>
+          <div class="weatherGroup02">
+            <p class="presentTemperature">30℃</p>
+            <ul class="weatherChart">
+              <li><img src="images/icon_circle_rainfall.gif" alt="강수량" /><span>10mm</span></li>
+              <li><img src="images/icon_circle_humidity.gif" alt="습도" /><span>습함</span></li>
+              <li><img src="images/icon_circle_wind.gif" alt="풍향" /><span>3m/s</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- //날씨 정보 -->
+
+      <!-- 시간별 날씨 정보 -->
+      <section>
+        <ul class="weatherListBox">
+          <li class="listStyle">
+            <p class="listDate"><img src="images/icon_timeGray.png" alt="" /><span>오전 12:00</span></p>
+            <ul class="weatherListGroup">
+              <li class="icon_Listweather"><img src="images/icon_weather_m01.png" alt="맑음" /></li>
+              <li class="temperature">30℃</li>
+              <li class="rainfall"><img src="images/icon_grayWeather01.png" alt="강수량" /><span>1mm</span></li>
+              <li class="humidity"><img src="images/icon_grayWeather02.png" alt="습도" /><span>습함</span></li>
+            </ul>
+          </li>
+          <li class="listStyle">
+            <p class="listDate"><img src="images/icon_timeGray03.png" alt="" /><span>오전 03:00</span></p>
+            <ul class="weatherListGroup">
+              <li class="icon_Listweather"><img src="images/icon_weather_m17.png" alt="구름" /></li>
+              <li class="temperature">29℃</li>
+              <li class="rainfall"><img src="images/icon_grayWeather01.png" alt="강수량" /><span>3mm</span></li>
+              <li class="humidity"><img src="images/icon_grayWeather02.png" alt="습도" /><span>습함</span></li>
+            </ul>
+          </li>
+          <li class="listStyle">
+            <p class="listDate"><img src="images/icon_timeGray06.png" alt="" /><span>오전 06:00</span></p>
+            <ul class="weatherListGroup">
+              <li class="icon_Listweather"><img src="images/icon_weather_m21.png" alt="비" /></li>
+              <li class="temperature">30℃</li>
+              <li class="rainfall"><img src="images/icon_grayWeather01.png" alt="강수량" /><span>3mm</span></li>
+              <li class="humidity"><img src="images/icon_grayWeather02.png" alt="습도" /><span>습함</span></li>
+            </ul>
+          </li>
+          <li class="listStyle">
+            <p class="listDate"><img src="images/icon_timeGray09.png" alt="" /><span>오전 09:00</span></p>
+            <ul class="weatherListGroup">
+              <li class="icon_Listweather"><img src="images/icon_weather_m01.png" alt="맑음" /></li>
+              <li class="temperature">30℃</li>
+              <li class="rainfall"><img src="images/icon_grayWeather01.png" alt="강수량" /><span>3mm</span></li>
+              <li class="humidity"><img src="images/icon_grayWeather02.png" alt="습도" /><span>습함</span></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <!-- /시간별 날씨 정보 -->
+
+      <!-- <p class="btm_click colorWeatherbg"><a href="#none"><span>Release to close</span></a></p> -->
+    </div>
+    <div>
+      <div class="weatherBar">
+        <div class="listCon">
+          <ul>
+            <li>
+              <span class="listTitle">서울</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">인천 · 서해 5도</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">경기남부 · 수원</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">영서 · 춘천</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">영동 · 강릉</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">충남 · 청주</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">충북 · 대전</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">경북 · 대구</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">경남 · 부산</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">울릉· 독도</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">전남 · 광주</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li>
+              <span class="listTitle">전북 · 전주</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+            <li class="noMB;">
+              <span class="listTitle">제주</span>
+              <span class="onoff"><img src="images/check.gif" alt="사이트 삭제추가" /></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

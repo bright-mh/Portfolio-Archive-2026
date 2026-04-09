@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+	<title>T open page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<!-- 131002 수정 -->
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.2.custom.min.css" />
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js"></script>
+	<script type="text/javascript" src="js/common_cal.js"></script>
+	<script type="text/javascript" src="js/content/content_list.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<!-- //131002 수정 -->
+</head>
+
+<body>
+	<p id="skipNavi"><a href="#contents">본문바로가기</a></p>
+
+	<header class="header">
+		<div class="hwrap">
+			<h1><a href="#none"><img src="img/admin_logo.gif" alt="T open page" /></a></h1>
+
+			<!-- 131002_수정 -->
+			<section class="login">
+				<ul>
+					<li class="listStyle01">[ openpage admin님 ]</li>
+					<li class="listStyle02"><span>최종 접속일</span> &#47; 2013-09-25 16:07:08</li>
+					<li class="listStyle03 state"><a href="#none">LOGOUT</a></li>
+				</ul>
+			</section>
+			<!-- //131002_수정 -->
+
+			<nav class="gnb">
+				<ul>
+					<li class="on"><a href="#none">전시 관리</a></li>
+					<li><a href="#none">통계</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<article class="container">
+		<div class="wrap">
+			<div class="wrap_in">
+				<nav class="lnb">
+					<h2>전시 관리</h2>
+					<ul>
+						<li><a href="#none">전체 전시 현황</a></li>
+						<li class="on"><a href="#none">전체 패널 관리</a></li>
+						<li><a href="#none">사이트 바로가기 <br />패널</a></li>
+						<li><a href="#none">오늘의 추천 패널</a></li>
+						<li><a href="#none">하우스 배너 관리</a></li>
+						<li><a href="#none">광고주 관리</a></li>
+					</ul>
+				</nav>
+
+				<!-- contents -->
+				<div id="contents" class="contents">
+					<section class="title">
+						<h3>전체 패널 관리</h3>
+						<!-- 131002_수정 -->
+						<p class="location"><a href="#none">전시 관리</a>&gt;<a href="#none" class="last">전체 패널 관리</a></p>
+						<!-- //131002_수정 -->
+					</section>
+
+					<!-- search -->
+					<section class="search">
+						<table cellspacing="0" cellpadding="0" class="tb_management">
+							<colgroup>
+								<col width="8%" />
+								<col width="48%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">패널 관리</th>
+									<td colspan="2">
+										<!-- select -->
+										<div class="slt select fl">
+											<a href="#none" class="title" title="콘텐츠유헝">전체</a>
+											<ul>
+												<li><a href="#none">전체</a></li>
+												<li><a href="#none">API연동</a></li>
+												<li><a href="#none">운영자 편집</a></li>
+											</ul>
+										</div>
+										<!-- //select -->
+									</td>
+								</tr>
+								<tr>
+									<th>검색조건</th>
+									<td>
+										<!-- select -->
+										<div class="slt select fl">
+											<a href="#none" class="title" title="패널유헝">패널 명</a>
+											<ul>
+												<li><a href="#none">패널 명</a></li>
+												<li><a href="#none">패널 ID</a></li>
+												<li><a href="#none">광고주</a></li>
+											</ul>
+										</div>
+										<!-- //select -->
+										<span class="input_text02 form_w20 ml13">
+											<input type="text" />
+											<a href="#none" class="calendar"><img src="img/ico_search.png" alt="검색" /></a>
+										</span>
+									</td>
+									<td class="type01">
+										<span class="mr10">서비스 최근 반영일 : 2013-09-02</span> <a href="#none" class="btn_blue02"><span>서비스 최종반영</span><a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3" class="type01">
+										<a href="#none" class="btn_gray04"><span>미리보기</span></a>
+										<a href="#none" class="btn_gray08"><span>New 패널 등록</span></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<!-- search -->
+
+					<!-- 활성 패널 -->
+					<section class="reference_wrap">
+						<h4 class="title">활성 패널(리스트 ON)</h4>
+
+						<div class="choiceDiv">
+							<table cellspacing="0" cellpadding="0" class="tb_reference2">
+								<colgroup>
+									<col width="37px;" />
+									<col width="64px" />
+									<col width="117px " />
+									<col width="*" />
+									<col width="100px" />
+									<col width="136px" />
+									<col width="136px" />
+									<col width="118px" />
+								</colgroup>
+								<thead>
+									<tr class="title_style">
+										<th scope="col" colspan="2"><span>메인순서</span></th>
+										<th scope="col"><span>이미지</span></th>
+										<th scope="col"><span>패널 명</span></th>
+										<th scope="col"><span>패널종류</span></th>
+										<th scope="col"><span>리스트</span></th>
+										<th scope="col"><span>메인</span></th>
+										<th scope="col"><span>등록일</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="num">1</td>
+										<td>
+											<a href="#none" class="mr5"><img src="img/ico_arrow_up.png" alt="위" /></a>
+											<a href="#none"><img src="img/ico_arrow_down.png" alt="아래" /></a>
+										</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01"><a href="#none">사이트 바로 가기</a></td>
+										<td>운영자 편집</td>
+										<td>
+											<!-- [D] radio 버튼의 id 값과 label의 id값을 동일하게 넣어 주세요. -->
+											<span class="mr15"><input type="radio" id="vitalityList01" name="vitalityList01" value="ON" /><label for="vitalityList01">ON</label></span>
+											<input type="radio" id="vitalityList01_02" name="vitalityList01" value="OFF" /><label for="vitalityList01_02">OFF</label>
+										</td>
+										<td>
+											<input type="radio" id="vitalityMain01" name="on_off01" value="ON" /><label for="vitalityMain01">ON</label>&nbsp;&nbsp;&nbsp;
+											<input type="radio" id="vitalityMain01_02" name="on_off01" value="OFF" /><label for="vitalityMain01_02">OFF</label>
+										</td>
+										<td>2013-03-23</td>
+									</tr>
+									<tr>
+										<td class="num">2</td>
+										<td>
+											<a href="#none" class="mr5"><img src="img/ico_arrow_up.png" alt="위" /></a>
+											<a href="#none"><img src="img/ico_arrow_down.png" alt="아래" /></a>
+										</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01"><a href="#none">날씨</a></td>
+										<td>API 연동</td>
+										<td>
+											<!-- [D] radio 버튼의 id 값과 label의 id값을 동일하게 넣어 주세요. -->
+											<span class="mr15"><input type="radio" id="vitalityList02" name="vitalityList02" value="ON" /><label for="vitalityList02">ON</label></span>
+											<input type="radio" id="vitalityList02_02" name="vitalityList02" value="OFF" /><label for="vitalityList02_02">OFF</label>
+										</td>
+										<td>
+											<input type="radio" id="vitalityMain02" name="vitalityMain02" value="ON" /><label for="vitalityMain02">ON</label>&nbsp;&nbsp;&nbsp;
+											<input type="radio" id="vitalityMain02_02" name="vitalityMain02" value="OFF" /><label for="vitalityMain02_02">OFF</label>
+										</td>
+										<td>2013-03-23</td>
+									</tr>
+									<tr>
+										<td class="num">3</td>
+										<td>
+											<a href="#none" class="mr5"><img src="img/ico_arrow_up.png" alt="위" /></a>
+											<a href="#none"><img src="img/ico_arrow_down.png" alt="아래" /></a>
+										</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01"><a href="#none">오늘의 추천</a></td>
+										<td>운영자 편집</td>
+										<td>
+											<!-- [D] radio 버튼의 id 값과 label의 id값을 동일하게 넣어 주세요. -->
+											<span class="mr15"><input type="radio" id="vitalityList03" name="vitalityList03" value="ON" /><label for="vitalityList03">ON</label></span>
+											<input type="radio" id="vitalityList03_02" name="vitalityList03" value="OFF" /><label for="vitalityList03_02">OFF</label>
+										</td>
+										<td>
+											<input type="radio" id="vitalityMain03" name="vitalityMain03" value="ON" /><label for="vitalityMain03">ON</label>&nbsp;&nbsp;&nbsp;
+											<input type="radio" id="vitalityMain03_02" name="vitalityMain03" value="OFF" /><label for="vitalityMain03_02">OFF</label>
+										</td>
+										<td>2013-03-23</td>
+									</tr>
+									<!-- [D] 검색결과가 없을 시,-->
+									<!--
+									<tr>
+										<td colspan="8" class="nolist">검색결과가 없습니다.</td>
+									</tr>
+									-->
+								</tbody>
+							</table>
+						</div>
+					</section>
+					<!-- //활성 패널 -->
+
+					<!-- 비활성 패널 -->
+					<section class="reference_wrap">
+						<h4 class="title">비활성 패널(리스트 OFF)</h4>
+
+						<table cellspacing="0" cellpadding="0" class="tb_reference">
+							<colgroup>
+								<col width="52px;" />
+								<col width="113px" />
+								<col width="*" />
+								<col width="100px" />
+								<col width="136px" />
+								<col width="118px" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No.</th>
+									<th scope="col">이미지</th>
+									<th scope="col">패널 명</th>
+									<th scope="col">패널종류</th>
+									<th scope="col">리스트</th>
+									<th scope="col">등록일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="num">12</td>
+									<td><img src="img/bg_noImg.gif" alt="" /></td>
+									<td class="type01"><a href="#none">프로야구</a></td>
+									<td>API 연동</td>
+									<td>
+										<!-- [D] radio 버튼의 id 값과 label의 id값을 동일하게 넣어 주세요. -->
+										<span class="mr15"><input type="radio" id="non_vitalityList01" name="non_vitalityList01" value="ON" /><label for="non_vitalityList01">ON</label></span>
+										<input type="radio" id="non_vitalityList01_02" name="non_vitalityList01" value="OFF" /><label for="non_vitalityList01_02">OFF</label>
+									</td>
+									<td>2013-03-23</td>
+								</tr>
+								<tr>
+									<td class="num">13</td>
+									<td><img src="img/bg_noImg.gif" alt="" /></td>
+									<td class="type01"><a href="#none">요일별 웹툰</a></td>
+									<td>API 연동</td>
+									<td>
+										<!-- [D] radio 버튼의 id 값과 label의 id값을 동일하게 넣어 주세요. -->
+										<span class="mr15"><input type="radio" id="non_vitalityList02" name="non_vitalityList02" value="ON" /><label for="non_vitalityList02">ON</label></span>
+										<input type="radio" id="non_vitalityList02_02" name="non_vitalityList02" value="OFF" /><label for="non_vitalityList02_02">OFF</label>
+									</td>
+									<td>2013-03-23</td>
+								</tr>
+								<tr>
+									<td class="num">14</td>
+									<td><img src="img/bg_noImg.gif" alt="" /></td>
+									<td class="type01"><a href="#none">Hot issue</a></td>
+									<td>API 연동</td>
+									<td>
+										<!-- [D] radio 버튼의 id 값과 label의 id값을 동일하게 넣어 주세요. -->
+										<span class="mr15"><input type="radio" id="non_vitalityList03" name="non_vitalityList03" value="ON" /><label for="non_vitalityList03">ON</label></span>
+										<input type="radio" id="non_vitalityList03_02" name="non_vitalityList03" value="OFF" /><label for="non_vitalityList03_02">OFF</label>
+									</td>
+									<td>2013-03-23</td>
+								</tr>
+								<!-- [D] 검색결과가 없을 시,-->
+								<!--
+								<tr>
+									<td colspan="6" class="nolist">검색결과가 없습니다.</td>
+								</tr>
+								-->
+							</tbody>
+						</table>
+					</section>
+					<!-- //비활성 패널 -->
+				</div>
+				<!-- //contents -->
+			</div>
+		</div>
+	</article>
+
+	<footer>
+		<address>
+			<p><img src="img/img_footer.png" alt="" /></p>
+			<ul class="blind">
+				<li><strong>대표이사</strong> 서진우</li>
+				<li><strong>주소</strong> 서울 중구 을지로2가 11</li>
+				<li><strong>사업자등록번호</strong> 104-86-36968</li>
+				<li><strong>통신판매업신고</strong> 제2011-서울중구-1333호</li>
+				<li><strong>Copyright</strong>      2013 SK Planet.</li>
+				<li><strong>고객센터</strong> 1588-7898 (월~금 9:00~18:00, 공휴일 휴무)</li>
+				<li><strong>기술문의</strong> support@t-ad.co.kr</li>
+				<li><strong>SDK 배포/사업문의</strong> svcadmin@t-ad.co.kr</li>
+			</ul>
+		</address>
+	</footer>
+</body>
+</html>

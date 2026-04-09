@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layers");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+
+        var info = $(".info").find("a");
+        info.click(function (e) {
+          e.preventDefault();
+          var dp = $(".tooltip").css("display");
+          if (dp == "none") {
+            $(".tooltip").css("display", "block");
+          } else {
+            $(".tooltip").css("display", "none");
+          }
+        });
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layers" style="width: 594px">
+      <div class="layers-header2">
+        <h1><img src="../img/popup/h1_pwc.gif" alt="비밀번호 변경" /></h1>
+        <div class="header-group login"></div>
+      </div>
+      <div class="layers-contents">
+        <p class="pop_title">
+          현재 비밀번호를 입력하신 후 <strong>새로 사용할 비밀번호를 입력</strong>해 주세요.<br />
+          One ID 통합 회원인 경우 비밀번호 변경은 <a href="#">One ID 포탈</a>에서 하실 수 있습니다.
+        </p>
+        <p class="layers-desc2">T store 아이디</p>
+        <label for="idInput" style="display: none">ID 입력</label>
+        <input id="idInput" type="text" class="text" /><br />
+        <p class="layers-desc2 mt7">현재 비밀번호</p>
+        <label for="idInput2" style="display: none">비밀번호 입력</label>
+        <input id="idInput2" type="password" class="text warning" />
+        <span class="info warning2">현재 비밀번호를 입력해 주세요.</span>
+        <p class="layers-desc2 mt7">새 비밀번호</p>
+        <label for="idInput3" style="display: none">비밀번호 입력</label>
+        <input id="idInput3" type="password" class="text" />
+        <!--	<span class="info"><a href="#"><img src="../img/popup/bullet01.png" alt="" /></a> 비밀번호 등급 <em>사용불가</em></span><br />--><!-- 시작할 때 -->
+        <span class="info proper"
+          ><a href="#"><img src="../img/popup/bullet01_b.png" alt="" /></a> 비밀번호 등급 <em>적정</em></span
+        ><br />
+        <!--	<span class="info warning2">새로 사용할 비밀번호 확인을 입력해 주세요.</span>-->
+        <p class="layers-desc2 mt7">새 비밀번호 확인</p>
+        <label for="idInput4" style="display: none">비밀번호 입력</label>
+        <input id="idInput4" type="password" class="text warning" />
+        <!--	<span class="info">새로 사용할 비밀번호 확인을 입력해 주세요.</span> --><!-- 시작할 때 -->
+        <span class="info warning">새 비밀번호와 새 비밀번호 확인이<br />일치하지 않습니다. </span>
+        <!--	<span class="info warning3">새 비밀번호와 새 비밀번호 확인이 <br />일치합니다.</span>-->
+        <div class="tooltip">
+          <img
+            src="../img/popup/pop_pwc.png"
+            alt="비밀번호는 6~16자의 영문대소문자, 숫자, 특수 문자만 사용할 수 있습니다"
+          />
+        </div>
+        <div class="description_pwc">
+          <ul>
+            <li>비밀번호는 <em>6~16자의 영문대소문자, 숫자 및 하단의 사용가능 특수문자만 사용</em>할 수 있습니다.</li>
+            <li>사용가능 특수문자 : ! # $ % & ( ) * + , - . / : ; = ? @ [ \ ] ^ _ | ~ `</li>
+            <li>아이디와 비밀번호가 유사한 경우 비밀번호 설정이 불가합니다.</li>
+          </ul>
+        </div>
+        <p class="layers-desc2">보안문자</p>
+        <div class="text">
+          <span><img src="../img/popup/sample.gif" alt="" /></span>
+          <span class="reload"
+            ><a href="#"><img src="../img/popup/icon_reload.gif" alt="문자 다시받기" /> 문자 다시받기</a></span
+          >
+        </div>
+        <label for="textInput" style="display: none">그림문자 입력</label>
+        <input id="textInput" type="text" class="text" placeholder="그림에 보이는 문자를 입력해주세요." />
+        <div class="description_pwc2">
+          <ul>
+            <li>
+              One ID 회원님의 경우 One ID 포탈에서 비밀번호를 변경하시면 SK 플래닛 One ID의 다른 서비스의 비밀번호도
+              <br />
+              &nbsp;&nbsp;함께 변경됩니다.
+            </li>
+          </ul>
+        </div>
+        <div class="close">
+          <a href="#"><img src="../img/common/btn/btn_ok2.gif" alt="확인" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

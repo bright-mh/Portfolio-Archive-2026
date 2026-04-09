@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layers");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layers" style="width: 474px">
+      <div class="layers-header2">
+        <h1><img src="../img/popup/h1_info1.gif" alt="이용안내" /></h1>
+        <div class="header-group login"></div>
+      </div>
+      <div class="layers-contents">
+        <p class="layers-desc12">’DRM’이란?</p>
+        <p class="description2">
+          컨텐츠 불법복제 방지 기능으로 DRM 여부에 따라 다운로드 받으신 컨텐츠를 <br />사용할 수 있는 기기에 차이가
+          있습니다.
+        </p>
+        <div class="drmInfo1 case2 mb23">
+          <ul>
+            <li>
+              <span class="info1">DRM 상품</span>
+              <span class="info2"> : ‘컨텐츠를 구매한 휴대기기’에서만 이용 가능.</span>
+            </li>
+            <li>
+              <span class="info1">Non-DRM 상품</span>
+              <span class="info2">: ‘모든 PC 및 등록된 휴대 기기’에서 이용 가능.</span>
+            </li>
+            <li>
+              <span class="info2"
+                >VOD컨텐츠의 사용은 컨텐츠 제공계약에 따라 대한민국으로 한정되어 있습니다. 로밍 등의 상황으로 이용하시는
+                경우에는 VOD 구매 및 다운로드, 대여 상품의 재생이 불가능합니다.</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="close">
+          <a href="#"><img src="../img/common/btn/btn_close.gif" alt="닫기" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

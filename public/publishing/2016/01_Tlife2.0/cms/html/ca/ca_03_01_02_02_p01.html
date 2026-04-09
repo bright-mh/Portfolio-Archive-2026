@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>메뉴 권한 확인 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>메뉴 권한 확인</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>해당 계정에 부여된 메뉴별 접근 권한을 설정할 수 있습니다.</li>
+          </ul>
+
+          <!-- 메뉴 권한 확인 -->
+          <div class="all">
+            <div class="chk_all">
+              <input type="checkbox" id="chk01" checked="checked" /><label for="chk01">전체</label>
+            </div>
+            <ul class="menu_list">
+              <li>
+                <h3><input type="checkbox" id="chk02" checked="checked" /><label for="chk02">무료상품관리</label></h3>
+                <div class="chk_list">
+                  <span
+                    ><input type="checkbox" id="chk02_01" checked="checked" /><label for="chk02_01"
+                      >상품관리</label
+                    ></span
+                  >
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk03" checked="checked" /><label for="chk03">유료상품관리</label></h3>
+                <div class="chk_list">
+                  <span
+                    ><input type="checkbox" id="chk03_01" checked="checked" /><label for="chk03_01"
+                      >상품관리</label
+                    ></span
+                  >
+                  <span
+                    ><input type="checkbox" id="chk03_02" checked="checked" /><label for="chk03_02"
+                      >쿠폰발급 현황</label
+                    ></span
+                  >
+                  <span
+                    ><input type="checkbox" id="chk03_03" checked="checked" /><label for="chk03_03"
+                      >정산관리</label
+                    ></span
+                  >
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk04" checked="checked" /><label for="chk04">회원관리</label></h3>
+                <div class="chk_list">
+                  <span
+                    ><input type="checkbox" id="chk04_01" checked="checked" /><label for="chk04_01"
+                      >회원관리</label
+                    ></span
+                  >
+                  <span
+                    ><input type="checkbox" id="chk04_02" checked="checked" /><label for="chk04_02"
+                      >계약관리</label
+                    ></span
+                  >
+                </div>
+              </li>
+              <li>
+                <h3><input type="checkbox" id="chk05" checked="checked" /><label for="chk05">통계관리</label></h3>
+                <div class="chk_list">
+                  <span
+                    ><input type="checkbox" id="chk05_01" checked="checked" /><label for="chk05_01"
+                      >통계관리</label
+                    ></span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //메뉴 권한 확인 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_save">저장</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

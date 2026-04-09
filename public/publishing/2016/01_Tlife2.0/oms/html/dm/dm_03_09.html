@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>혜택 관리 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시관리</span>
+              <span>상품등록관리</span>
+              <span>혜택 관리</span>
+              <strong>혜택 관리 수정 / 조회</strong>
+            </div>
+            <h3 class="tit">혜택 관리 수정 / 조회</h3>
+
+            <p class="top_guide">
+              ※ 현재 상세 화면의 혜택은 전시 시작 중인 혜택이기 때문에
+              <span class="red">삭제 및 수정이 불가</span> 합니다.
+            </p>
+            <!-- 기본정보 -->
+            <h4 class="tit">기본 정보</h4>
+            <div class="table_list_top">
+              <!-- 생활 쿠폰 무료일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>혜택명, 전시기간, 카테고리가 있는 기본 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">혜택명</th>
+                      <td>뚜레주르 아이스크림 콘 3종 50% 할인</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전시기간</th>
+                      <td>2016-06-23 ~ 2016-06-23</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">카테고리</th>
+                      <td>생활 쿠폰 &gt; 커피 / 음료 (무료)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //생활 쿠폰 무료일 경우 -->
+
+              <!-- 생활 쿠폰 유료일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>혜택명, 전시기간, 카테고리가 있는 기본 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">혜택명</th>
+                      <td>뚜레주르 아이스크림 콘 3종 50% 할인</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전시기간</th>
+                      <td>2016-06-23 ~ 2016-06-23</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">카테고리</th>
+                      <td>생활 쿠폰 &gt; 커피 / 음료 (유료)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //생활 쿠폰 유료일 경우 -->
+
+              <!-- 디지털 콘텐츠일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>혜택명, 전시기간, 카테고리가 있는 기본 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">혜택명</th>
+                      <td>마음의 소리</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전시기간</th>
+                      <td>2016-06-23 ~ 2016-06-23</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">카테고리</th>
+                      <td>디지털콘텐츠 &gt; 웹툰</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //디지털 콘텐츠일 경우 -->
+            </div>
+            <!-- //기본 정보 -->
+
+            <!-- 노출 정보 -->
+            <h4 class="tit">노출 정보</h4>
+            <div class="table_list_top">
+              <!-- 일반형 display type 일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Display Type, 부가정보, Tag 정보가 있는 노출 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Display Type</th>
+                      <td>일반형</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부가정보</th>
+                      <td>
+                        1) 성별 : 남자<br />
+                        2) 연령 : 20대<br />
+                        3) 관심사 : 스포츠<br />
+                        4) 선호 카테고리 : 문화 / 기타
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Tag 정보</th>
+                      <td>HOT</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //일반형 display type 일 경우 -->
+
+              <!-- 빅딜형 display type 일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Display Type, 부가정보, Tag 정보가 있는 노출 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Display Type</th>
+                      <td>빅딜형</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부가정보</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Tag 정보</th>
+                      <td>HOT</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //빅딜형 display type 일 경우 -->
+
+              <!-- 핫딜 for 신규고객일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Display Type, 부가정보, Tag 정보가 있는 노출 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Display Type</th>
+                      <td>핫딜 for 신규고객</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부가정보</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Tag 정보</th>
+                      <td>HOT</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //핫딜 for 신규고객일 경우 -->
+            </div>
+            <!-- //노출 정보 -->
+
+            <!-- 혜택 정보 -->
+            <h4 class="tit">혜택 정보</h4>
+            <div class="table_list_top">
+              <!-- 선착순 deal type &gt; ‘남은수량 표시 함’ 선택 시 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Deal Type, 쿠폰 Type이 있는 혜택 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Deal Type</th>
+                      <td>선착순 (남은수량 표시 함)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 Type</th>
+                      <td>기본 + 추가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //선착순 deal type &gt; ‘남은수량 표시 함’ 선택 시 -->
+
+              <!-- 선착순 deal type &gt; ‘남은수량 표시 안함’ 선택 시 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Deal Type, 쿠폰 Type이 있는 혜택 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Deal Type</th>
+                      <td>선착순 (남은수량 표시 안함)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 Type</th>
+                      <td>기본 + 추가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //선착순 deal type &gt; ‘남은수량 표시 안함’ 선택 시 -->
+
+              <!-- 응모형 deal type -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Deal Type, 쿠폰 Type이 있는 혜택 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Deal Type</th>
+                      <td>응모형 (블랙리스트 당첨여부 : 불가 / 중복당첨 설정여부 : 불가)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 Type</th>
+                      <td>기본 + 추가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //응모형 deal type -->
+
+              <!-- 무제한 deal type 일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Deal Type, 쿠폰 Type이 있는 혜택 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Deal Type</th>
+                      <td>무제한</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 Type</th>
+                      <td>기본 + 추가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //무제한 deal type 일 경우 -->
+
+              <!-- 즉석당첨형 deal type &gt; ‘남은수량 표시 함’ 선택 시 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Deal Type, 쿠폰 Type이 있는 혜택 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Deal Type</th>
+                      <td>즉석당첨형 (남은수량 표시 함) / 당첨률 : 45 %</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 Type</th>
+                      <td>기본 + 추가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //즉석당첨형 deal type &gt; ‘남은수량 표시 함’ 선택 시 -->
+
+              <!-- 즉석당첨형 deal type &gt; ‘남은수량 표시 안함’ 선택 시 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>혜택 정보</strong>
+                    <strong>Deal Type, 쿠폰 Type이 있는 혜택 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Deal Type</th>
+                      <td>즉석당첨형 (남은수량 표시 안함)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰 Type</th>
+                      <td>기본 + 추가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //즉석당첨형 deal type &gt; ‘남은수량 표시 안함’ 선택 시 -->
+            </div>
+            <!-- //혜택 정보 -->
+
+            <!-- 쿠폰 정보 -->
+            <h4 class="tit">쿠폰 정보</h4>
+            <div class="table_list">
+              <!-- 생활쿠폰 : 무료일 경우  -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>쿠폰명, 가격, 총수량, 유효기간, 사용자 정보, 미션정보가 있는 쿠폰 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">쿠폰명</th>
+                      <td>스타벅스 아이스 아메리카노 반값 쿠폰!</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">가격</th>
+                      <td>2,500</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">총수량</th>
+                      <td>100,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유효기간</th>
+                      <td>2016.12.31</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사용자 정보</th>
+                      <td>SKT (OO 요금제)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">미션 정보</th>
+                      <td>
+                        <div class="table_list">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>티켓수량 정보, 친구초대 미션, 그 외 미션 목록이 있는 미션 정보</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">티켓수량 정보</th>
+                                  <td>OO 개</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">친구초대 미션</th>
+                                  <td>참여자 : OO명 ㅣ 제한시간 : OO 분 후 종료</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" rowspan="3">그 외 미션 목록</th>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >대한민국 국민 방송 SKB 고객 조사</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >내 아이는 내가 지킨다 쿠키즈 두둥!</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림">T map은 무료다!!!</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //생활쿠폰 : 무료일 경우  -->
+
+              <!-- 생활쿠폰 : 유료일 경우  -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>쿠폰명, 유형, 총수량, 유효기간, 사용자 정보, 미션정보가 있는 쿠폰 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">쿠폰명</th>
+                      <td>스타벅스 아이스 아메리카노 반값 쿠폰!</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유형</th>
+                      <td>80%할인 쿠폰</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">총수량</th>
+                      <td>100,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유효기간</th>
+                      <td>2016.12.31</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사용자 정보</th>
+                      <td>SKT (OO 요금제)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">미션 정보</th>
+                      <td>
+                        <div class="table_list">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>티켓수량 정보, 친구초대 미션, 그 외 미션 목록이 있는 미션 정보</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">티켓수량 정보</th>
+                                  <td>OO 개</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">친구초대 미션</th>
+                                  <td>참여자 : OO명 ㅣ 제한시간 : OO 분 후 종료</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" rowspan="3">그 외 미션 목록</th>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >대한민국 국민 방송 SKB 고객 조사</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >내 아이는 내가 지킨다 쿠키즈 두둥!</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림">T map은 무료다!!!</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //생활쿠폰 : 유료일 경우  -->
+
+              <!-- 디지털콘텐츠 : 이모티콘일 경우  -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>쿠폰명, 총수량, 유효기간, 사용자 정보, 미션정보가 있는 쿠폰 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">쿠폰명</th>
+                      <td>엄지 척!!! 히트다 히트</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">총수량</th>
+                      <td>100,000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유효기간</th>
+                      <td>OO일</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사용자 정보</th>
+                      <td>SKT (OO 요금제)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">미션 정보</th>
+                      <td>
+                        <div class="table_list">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>티켓수량 정보, 친구초대 미션, 그 외 미션 목록이 있는 미션 정보</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">티켓수량 정보</th>
+                                  <td>OO 개</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">친구초대 미션</th>
+                                  <td>참여자 : OO명 ㅣ 제한시간 : OO 분 후 종료</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" rowspan="3">그 외 미션 목록</th>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >대한민국 국민 방송 SKB 고객 조사</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >내 아이는 내가 지킨다 쿠키즈 두둥!</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림">T map은 무료다!!!</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //디지털콘텐츠 : 이모티콘일 경우  -->
+
+              <!-- 디지털콘텐츠 : 코믹 이북 &gt; 단행본일 경우  -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>콘텐츠 명, 콘텐츠 유형, 유효기간, 사용자 정보, 미션정보가 있는 쿠폰 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">콘텐츠 명</th>
+                      <td>열혈강호 62권</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">콘텐츠 유형</th>
+                      <td>단행본</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유효기간</th>
+                      <td>OO일</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사용자 정보</th>
+                      <td>SKT (OO 요금제)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">미션 정보</th>
+                      <td>
+                        <div class="table_list">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>티켓수량 정보, 친구초대 미션, 그 외 미션 목록이 있는 미션 정보</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">티켓수량 정보</th>
+                                  <td>OO 개</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">친구초대 미션</th>
+                                  <td>참여자 : OO명 ㅣ 제한시간 : OO 분 후 종료</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" rowspan="3">그 외 미션 목록</th>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >대한민국 국민 방송 SKB 고객 조사</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >내 아이는 내가 지킨다 쿠키즈 두둥!</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림">T map은 무료다!!!</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //디지털콘텐츠 : 코믹 이북 &gt; 단행본일 경우  -->
+
+              <!-- 디지털콘텐츠 : 코믹 이북 &gt; 시리즈일 경우  -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>콘텐츠 명, 콘텐츠 유형, 유효기간, 사용자 정보, 미션정보가 있는 쿠폰 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">콘텐츠 명</th>
+                      <td>열혈강호 62권</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">콘텐츠 유형</th>
+                      <td>시리즈</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유효기간</th>
+                      <td>OO일</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사용자 정보</th>
+                      <td>SKT (OO 요금제)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">미션 정보</th>
+                      <td>
+                        <div class="table_list">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>티켓수량 정보, 친구초대 미션, 그 외 미션 목록이 있는 미션 정보</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">티켓수량 정보</th>
+                                  <td>OO 개</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">친구초대 미션</th>
+                                  <td>참여자 : OO명 ㅣ 제한시간 : OO 분 후 종료</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" rowspan="3">그 외 미션 목록</th>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >대한민국 국민 방송 SKB 고객 조사</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >내 아이는 내가 지킨다 쿠키즈 두둥!</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#" class="link" target="_blank" title="새창 열림">T map은 무료다!!!</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //디지털콘텐츠 : 코믹 이북 &gt; 시리즈일 경우  -->
+
+              <!-- 디지털콘텐츠 : 실시간 TV일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>콘텐츠명, 콘텐츠 유형, 유효기간 정보가 있는 쿠폰 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">콘텐츠명</th>
+                      <td>oksusu 실시간TV</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">콘텐츠 유형</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유효기간</th>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //디지털콘텐츠 : 실시간 TV일 경우 -->
+
+              <!-- 디지털콘텐츠 : 영화 VOD, 방송 VOD일 경우 -->
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>콘텐츠명, 콘텐츠 유형, 유효기간 정보가 있는 쿠폰 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">콘텐츠명</th>
+                      <td>oksusu VOD</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">콘텐츠 유형</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">유효기간</th>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //디지털콘텐츠 : 영화 VOD, 방송 VOD일 경우 -->
+            </div>
+            <!-- //쿠폰 정보 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_save">확인</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

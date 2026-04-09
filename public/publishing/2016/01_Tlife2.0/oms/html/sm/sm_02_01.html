@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>서비스 통계 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb9:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb9:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb9:eq(0)>ul>li:eq(1)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb9">
+                <a href="#">통계 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">가입통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">가입통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">서비스 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">서비스 통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">회원 유형별 상세 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">회원 유형별 상세 통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">자동발급 쿠폰 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">자동발급 통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">사용완료 쿠폰 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">사용완료 쿠폰 조회</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>통계 관리</span>
+              <strong>서비스 통계</strong>
+            </div>
+            <h3 class="tit">서비스 통계</h3>
+
+            <!-- 탭 메뉴 -->
+            <div class="tabmenu">
+              <ul class="tab">
+                <li><a href="#" class="on">Daily</a></li>
+                <li><a href="#">제휴사별</a></li>
+              </ul>
+            </div>
+            <!-- // 탭 메뉴 -->
+
+            <!-- 서비스통계 검색 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>전시일, Deal유형, 쿠폰유형, Display 유형이 있는 서비스 통계 Daily 검색 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">전시일</th>
+                      <td>
+                        <input
+                          type="text"
+                          title="전시기간 검색 시작일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        &nbsp;~&nbsp;
+                        <input
+                          type="text"
+                          title="전시기간 검색 종료일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        <ul class="term_list">
+                          <li><a href="#" class="btn_small on">1일</a></li>
+                          <li><a href="#" class="btn_small">7일</a></li>
+                          <li><a href="#" class="btn_small">1개월</a></li>
+                          <li><a href="#" class="btn_small">3개월</a></li>
+                          <li><a href="#" class="btn_small">1년</a></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Deal유형</th>
+                      <td>
+                        <input type="checkbox" id="deal1" checked="checked" /><label for="deal1" class="radio_range"
+                          >선착순
+                        </label>
+                        <input type="checkbox" id="deal2" checked="checked" /><label for="deal2" class="radio_range"
+                          >응모형</label
+                        >
+                        <input type="checkbox" id="deal3" checked="checked" /><label for="deal3" class="radio_range"
+                          >무제한</label
+                        >
+                        <input type="checkbox" id="deal4" checked="checked" /><label for="deal4" class="radio_range"
+                          >즉석당첨형</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰유형</th>
+                      <td>
+                        <input type="checkbox" id="coupon1" checked="checked" /><label for="coupon1" class="radio_range"
+                          >무료쿠폰</label
+                        >
+                        <input type="checkbox" id="coupon2" checked="checked" /><label for="coupon2" class="radio_range"
+                          >유료쿠폰</label
+                        >
+                        <input type="checkbox" id="coupon3" checked="checked" /><label for="coupon3" class="radio_range"
+                          >디지털콘텐츠</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Display 유형</th>
+                      <td>
+                        <input type="checkbox" id="display1" checked="checked" /><label
+                          for="display1"
+                          class="radio_range"
+                          >일반형</label
+                        >
+                        <input type="checkbox" id="display2" checked="checked" /><label
+                          for="display2"
+                          class="radio_range"
+                          >빅딜형</label
+                        >
+                        <input type="checkbox" id="display3" checked="checked" /><label
+                          for="display3"
+                          class="radio_range"
+                          >핫딜 For 신규고객</label
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_delete">초기화</a>
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+            <!-- //서비스통계 검색 테이블 -->
+
+            <!-- 서비스통계 리스트 목록 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <p class="warning orange">※ 7월 27일 기준 집계입니다. (기준일 = 조회일 기준 직전일로 노출)</p>
+                <div class="sel_box">
+                  <a href="#" class="btn_long btn_excel">엑셀파일 다운로드</a>
+                  <select>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <div class="table_box2300">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>서비스통계 Daily 검색 결과 리스트</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 3.5%" />
+                      <col style="width: 3.5%" />
+                      <col style="width: 4%" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: 5.5%" />
+                      <col style="width: 3.5%" />
+                      <col style="width: 5%" />
+                      <col style="width: 4%" />
+                      <col style="width: 5.5%" />
+                      <col style="width: 3.5%" />
+                      <col style="width: 3.5%" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="13" rowspan="4" class="br_style">total</th>
+                        <th scope="col" colspan="5" class="br_style">기본딜</th>
+                        <th scope="col" colspan="12">추가딜</th>
+                      </tr>
+                      <tr>
+                        <th scope="col" rowspan="2" class="bg_blue">쿠폰 총<br />공급수</th>
+                        <th scope="col" class="bg_blue">쿠폰<br />발급수</th>
+                        <th scope="col" rowspan="2" class="bg_blue">발급<br />소진율</th>
+                        <th scope="col" rowspan="2" class="bg_blue">쿠폰<br />사용수</th>
+                        <th scope="col" rowspan="2" class="br_style bg_blue">쿠폰<br />사용율</th>
+                        <th scope="col" rowspan="2" class="bg_blue">쿠폰 총<br />공급수</th>
+                        <th scope="col" colspan="4" class="bg_blue">미션</th>
+                        <th scope="col" rowspan="2" class="bg_blue">실패딜<br />평균<br />투표수</th>
+                        <th scope="col" colspan="3" class="bg_blue">쿠폰 발급수</th>
+                        <th scope="col" rowspan="2" class="bg_blue">발급<br />소진율</th>
+                        <th scope="col" rowspan="2" class="bg_blue">쿠폰<br />사용수</th>
+                        <th scope="col" rowspan="2" class="bg_blue">쿠폰<br />사용율</th>
+                      </tr>
+                      <tr>
+                        <th scope="col" class="bg_blue bl_line">전체</th>
+                        <th scope="col" class="bg_blue">생성수</th>
+                        <th scope="col" class="bg_blue">참여수</th>
+                        <th scope="col" class="bg_blue">성공수</th>
+                        <th scope="col" class="bg_blue">실패수</th>
+                        <th scope="col" class="bg_blue">전체</th>
+                        <th scope="col" class="bg_blue">미션</th>
+                        <th scope="col" class="bg_blue">티켓</th>
+                      </tr>
+                      <tr>
+                        <td>5,000</td>
+                        <td>2,500</td>
+                        <td>41.81%</td>
+                        <td>544</td>
+                        <td class="br_style">30.98%</td>
+                        <td>5,000</td>
+                        <td>1,283</td>
+                        <td>3,663</td>
+                        <td>865</td>
+                        <td>408</td>
+                        <td>0.3</td>
+                        <td>2,500</td>
+                        <td>500</td>
+                        <td>2,000</td>
+                        <td>41.81%</td>
+                        <td>544</td>
+                        <td>30.98%</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="col" class="bg_blue">시작일자</th>
+                        <th scope="col" class="bg_blue">종료일자</th>
+                        <th scope="col" class="bg_blue">관리번호</th>
+                        <th scope="col" class="bg_blue">Deal유형</th>
+                        <th scope="col" class="bg_blue">쿠폰유형</th>
+                        <th scope="col" class="bg_blue">Display<br />유형</th>
+                        <th scope="col" class="bg_blue">카테고리</th>
+                        <th scope="col" class="bg_blue">쿠폰ID</th>
+                        <th scope="col" class="bg_blue">관리쿠폰명</th>
+                        <th scope="col" class="bg_blue">제휴사<br />(발행처)</th>
+                        <th scope="col" class="bg_blue">Time Offer<br />사용여부</th>
+                        <th scope="col" class="bg_blue">쿠폰매진<br />일시</th>
+                        <th scope="col" class="br_style bg_blue">쿠폰매진<br />소요시간</th>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="br_style bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                        <td class="bt_line"></td>
+                      </tr>
+                      <tr>
+                        <td>2016.07.01<br />13:00</td>
+                        <td>2016.07.05 15:00</td>
+                        <td>20160727001</td>
+                        <td>응모형</td>
+                        <td>유료</td>
+                        <td>핫딜for 신규고객</td>
+                        <td>생활쿠폰 &gt; 커피</td>
+                        <td>S0123456</td>
+                        <td>바닐라라떼</td>
+                        <td>폴바셋</td>
+                        <td>O<br />(2016.07.01 13:00 ~ <br />2016.07.01 15:00)</td>
+                        <td>2016.07.20<br />12:01:22</td>
+                        <td class="br_style">hh:mm:ss</td>
+                        <td>600</td>
+                        <td>500</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td class="br_style">46.60%</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>155</td>
+                        <td>100</td>
+                        <td>45</td>
+                        <td>1.18</td>
+                        <td>500</td>
+                        <td>100</td>
+                        <td>400</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td>46.60%</td>
+                      </tr>
+                      <tr>
+                        <td>2016.07.01<br />13:00</td>
+                        <td>2016.07.05 15:00</td>
+                        <td>20160727001</td>
+                        <td>선착순</td>
+                        <td>무료쿠폰</td>
+                        <td>빅딜</td>
+                        <td>생활쿠폰 &gt; 커피</td>
+                        <td>S0123456</td>
+                        <td>아이스 아메리카노</td>
+                        <td>스타벅스코리아</td>
+                        <td>O<br />(2016.07.01 13:00 ~ <br />2016.07.01 15:00)</td>
+                        <td>-</td>
+                        <td class="br_style"></td>
+                        <td>600</td>
+                        <td>500</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td class="br_style">46.60%</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>155</td>
+                        <td>100</td>
+                        <td>45</td>
+                        <td>0</td>
+                        <td>500</td>
+                        <td>100</td>
+                        <td>400</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td>46.60%</td>
+                      </tr>
+                      <tr>
+                        <td>2016.07.01<br />13:00</td>
+                        <td>2016.07.05 15:00</td>
+                        <td>20160727001</td>
+                        <td>선착순</td>
+                        <td>무료쿠폰</td>
+                        <td>빅딜</td>
+                        <td>생활쿠폰 &gt; 커피</td>
+                        <td>S0123456</td>
+                        <td>아이스 아메리카노</td>
+                        <td>스타벅스코리아</td>
+                        <td>X</td>
+                        <td></td>
+                        <td class="br_style"></td>
+                        <td>600</td>
+                        <td>500</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td class="br_style">46.60%</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>155</td>
+                        <td>100</td>
+                        <td>45</td>
+                        <td>0.23</td>
+                        <td>500</td>
+                        <td>100</td>
+                        <td>400</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td>46.60%</td>
+                      </tr>
+                      <tr>
+                        <td>2016.07.01<br />13:00</td>
+                        <td>2016.07.05 15:00</td>
+                        <td>20160727001</td>
+                        <td>선착순</td>
+                        <td>무료</td>
+                        <td>맞춤형</td>
+                        <td>디지털콘텐츠 &gt; 음악</td>
+                        <td>S0123456</td>
+                        <td>바캉스 추천 뮤직</td>
+                        <td>Musicmate</td>
+                        <td>X</td>
+                        <td>2016.07.20<br />12:01:22</td>
+                        <td class="br_style">hh:mm:ss</td>
+                        <td>600</td>
+                        <td>500</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td class="br_style">46.60%</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>155</td>
+                        <td>100</td>
+                        <td>45</td>
+                        <td>0.23</td>
+                        <td>500</td>
+                        <td>100</td>
+                        <td>400</td>
+                        <td>83.33%</td>
+                        <td>233</td>
+                        <td>46.60%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- paging -->
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+              <!-- //paging -->
+            </div>
+            <!-- //서비스통계 리스트 목록 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

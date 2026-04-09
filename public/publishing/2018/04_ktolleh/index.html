@@ -1,0 +1,928 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <title>올레 tv 모바일 6.0 Publishing List</title>
+    <style type="text/css">
+      body,
+      td {
+        margin: 10px;
+        font: 11px dotum;
+        color: #666666;
+      }
+      a:link {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:active {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:visited {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #d20e0e;
+      }
+
+      /* index  */
+      .list {
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table th {
+        color: #fff;
+        height: 25px;
+        font-size: 11px;
+        background: #000;
+        padding: 2px 0 0 5px;
+        text-align: left;
+      }
+      table td {
+        border-bottom: 1px solid #e3e3e3;
+        color: #333333;
+        font-size: 11px;
+        height: 22px;
+        padding: 2px 0 0 5px;
+        word-wrap: break-word;
+      }
+      table td.one {
+        color: #f50002;
+        font-size: 12px;
+      }
+      table td.two {
+      }
+      span.lt {
+        text-decoration: line-through;
+      }
+      table td.gr {
+        color: #008400;
+      }
+      table td.three {
+      }
+      table td.folder {
+        font-family: verdana;
+      }
+      table td.filename {
+        font-family: verdana;
+        color: #aaa;
+      }
+      table td.type {
+        font-family: verdana;
+        color: #1928a5;
+      }
+      table td.js-link {
+        font-family: verdana;
+        color: #147393;
+      }
+      table td.depth {
+        font-weight: bold;
+      }
+      table td.etc {
+      }
+      table td.etc .edit {
+        color: #999;
+        line-height: 130%;
+        padding-top: 3px;
+      }
+
+      .del * {
+        color: #ccc !important;
+        text-decoration: line-through;
+      }
+
+      .tab {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #6ba5d0;
+        padding: 2px 0 0 5px;
+        text-align: center;
+        border-left: 1px solid #e3e3e3;
+        font-weight: bold;
+      }
+      .tab a:link {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:visited {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:active {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:hover {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .tab_on {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #2a83c5;
+      }
+      .tab2 {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #c0d0ff;
+        padding: 2px 0 0 5px;
+        text-align: center;
+        border-left: 1px solid #e3e3e3;
+        font-weight: bold;
+      }
+      .tab_on2 {
+        color: #ffffff;
+        height: 25px;
+        font-size: 12px;
+        background: #2a83c5;
+      }
+      .total {
+        color: #666666;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 5px 0 10px 0;
+        padding: 0;
+      }
+      ol,
+      li {
+        list-style: none;
+      }
+      .line {
+        height: 3px;
+        background: #e3e3e3;
+      }
+      .line-s {
+        height: 2px;
+        background: #e3e3e3;
+      }
+      .pop {
+        color: #008400;
+      }
+      .menu {
+        color: #000;
+        height: 25px;
+        font-size: 11px;
+        background: #d9d9d9;
+        padding: 2px 0 0 5px;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .mover {
+        background-color: #f7f7f7;
+      }
+      .mout {
+        background-color: #fff;
+      }
+      .red {
+        color: #ff0000;
+      }
+
+      .win {
+        color: #0000ff;
+      }
+      .second {
+        background: #fafafa;
+      }
+      .goLink {
+        color: #1928a5;
+        font-size: 12px;
+      }
+      .goLink a {
+        color: #1928a5;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function chg_class(obj, type) {
+        if (type == 1) {
+          obj.className = "mover";
+        } else {
+          obj.className = "mout";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="total">
+      <strong style="color: #f50002">올레 tv 모바일 6.0 Publishing List</strong>
+      <p class="goLink">- <a href="./pad.html">가로형 (Pad) 바로가기</a></p>
+    </div>
+    <div id="list">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <colgroup>
+          <col width="120px" />
+          <col width="300px" />
+          <col width="250px" />
+          <col width="200px" />
+          <col width="*" />
+          <col width="7%" />
+          <col width="200px" />
+          <col width="120px" />
+          <col width="120px" />
+        </colgroup>
+        <tr>
+          <th>1Depth</th>
+          <th>2Depth</th>
+          <th>3Depth</th>
+          <th>4Depth</th>
+          <th>5Depth</th>
+          <th>Type</th>
+          <th>File-name</th>
+          <th>완료/예정일</th>
+          <th>수정일</th>
+        </tr>
+        <!-- HOME -->
+        <tr>
+          <td colspan="9" class="menu">Home</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one">Home</td>
+          <td class="two">홈화면</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/home.html" target="_blank">home</a></td>
+          <td class="creationDate">2018-11-09</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23<br />2018-11-30<br />2018-12-07<br />2018-12-14</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">홈유닛</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/home_unit.html" target="_blank">home_unit</a></td>
+          <td class="creationDate">2018-11-09</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23<br />2018-12-07<br />2018-12-14</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">홈 유닛 6.0 신규</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/home_unit_new.html" target="_blank">home_unit_new</a></td>
+          <td class="creationDate">2018-11-09</td>
+          <td class="modifiDate">2018-11-20</td>
+        </tr>
+        <!-- List -->
+        <tr>
+          <td colspan="9" class="menu">List (파일명 : list_ + 코드명)</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one">List</td>
+          <td class="two">리스트유닛</td>
+          <td class="three">A타입 카테고리 리스트형</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_A.html" target="_blank">list_A</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">B타입 포스터_기본</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_B.html" target="_blank">list_B</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20<br />2018-12-07</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">B타입 포스터_배너노출형</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_B_1.html" target="_blank">list_B_1</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">C타입 스틸컷_기본</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_L_2_C.html" target="_blank">list_L_2_C</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20<br />2018-12-07</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">C타입 스틸컷_배너노출형</td>
+          <td class="three"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_L_2_D.html" target="_blank">list_L_2_D</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">E타입 올펀존 전용리스트</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_L_E_1.html" target="_blank">list_L_E_1</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23<br />2018-12-14</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">시청순위형_썸네일</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_RL_1_A.html" target="_blank">list_RL_1_A</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-30</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">시청순위형_텍스트</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_RL_1_B.html" target="_blank">list_RL_1_B</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-30<br />2018-12-14</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">리스트 유닛 6.0 신규</td>
+          <td class="three">카드리스트_기본</td>
+          <td class="four">(아이돌live)</td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/list_L_C_1.html" target="_blank">list_L_C_1</a></td>
+          <td class="creationDate">2018-11-16</td>
+          <td class="modifiDate">2018-11-20</td>
+        </tr>
+        <!-- 전체메뉴 -->
+        <!--<tr>
+				<td colspan="9" class="menu">전체메뉴 (공통)</td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two">나의시청/구매목록(로그인 상태)</td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_list.html" target="_blank">my_list</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two">나의시청/구매목록(로그인 상태 - 콘텐츠가 없는 경우)</td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_list_n1.html" target="_blank">my_list_n1</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two">나의시청/구매목록(미로그인 상태)</td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_list_n2.html" target="_blank">my_list_n2</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">최근 시청 목록</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l1.html" target="_blank">my_l01</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l1_n.html" target="_blank">my_l01_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">내가 본 시리즈 최신작</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l2.html" target="_blank">my_l02</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l2_n.html" target="_blank">my_l02_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">구매 목록</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l3.html" target="_blank">my_l03</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l3_n.html" target="_blank">my_l03_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">소장용 VOD</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l4.html" target="_blank">my_l04</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l4_n.html" target="_blank">my_l04_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">찜 목록</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l5.html" target="_blank">my_l05</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l5_n.html" target="_blank">my_l05_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">다운로드 보관함</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l6.html" target="_blank">my_l06</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l6_n.html" target="_blank">my_l06_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">VOD 책갈피</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l7.html" target="_blank">my_l07</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l7_n.html" target="_blank">my_l07_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">성인 19+ VOD</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l8.html" target="_blank">my_l08</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_l8_n.html" target="_blank">my_l08_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two">나의 추천 VOD</td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_vod.html" target="_blank">my_vod</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two">올레 tv 목록</td>
+				<td class="three">시청목록 (tab)</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_tv_l1.html" target="_blank">my_tv_l01</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_tv_l1.html" target="_blank">my_tv_l01_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three">구매목록 (tab)</td>
+				<td class="four"></td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_tv_l2.html" target="_blank">my_tv_l02</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr>
+			<tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+				<td class="one"></td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four">목록 없음</td>
+				<td class="five"></td>
+				<td class="type"></td>
+				<td class="filename"><a href="./phone/my_tv_l2_n.html" target="_blank">my_tv_l02_n</a></td>
+				<td class="creationDate"></td>
+				<td class="modifiDate"></td>
+			</tr-->
+        <!-- 아이돌 Live -->
+        <tr>
+          <td colspan="9" class="menu">아이돌 Live</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one">아이돌 Live</td>
+          <td class="two">메뉴</td>
+          <td class="three">홈</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_l01.html" target="_blank">idol_l01</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-07</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">Live</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_l02.html" target="_blank">idol_l02</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">TV 예능</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_l03.html" target="_blank">idol_l03</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">오리지널</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_l04.html" target="_blank">idol_l04</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">뮤직비디오</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_l05.html" target="_blank">idol_l05</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">상세</td>
+          <td class="three">방송 전</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_d01.html" target="_blank">idol_d01</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">방송 중</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_d02.html" target="_blank">idol_d02</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">채팅영역</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/idol_d03.html" target="_blank">idol_d03</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-07<br />2018-12-14</td>
+        </tr>
+        <!-- 통합검색 -->
+        <tr>
+          <td colspan="9" class="menu">통합검색</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one">통합검색</td>
+          <td class="two">인기 검색어</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_l01.html" target="_blank">search_l01</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">최근 검색어</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_l02.html" target="_blank">search_l02</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">자동완성 화면</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_l03.html" target="_blank">search_l03</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">검색결과</td>
+          <td class="four">없음</td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_result_n.html" target="_blank">search_result_n</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-03</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three"></td>
+          <td class="four">있음 (1depth)</td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_result.html" target="_blank">search_result</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-03<br />2018-12-07</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five">채널</td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_result_l01.html" target="_blank">search_result_l01</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-03</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five">tv다시보기</td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_result_l02.html" target="_blank">search_result_l02</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-03</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five">핫클립관</td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_result_l03.html" target="_blank">search_result_l03</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-03</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five">음악</td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_result_l04.html" target="_blank">search_result_l04</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate">2018-12-03</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">태그 검색결과</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/search_result_l05.html" target="_blank">search_result_l05</a></td>
+          <td class="creationDate">2018-11-30</td>
+          <td class="modifiDate"></td>
+        </tr>
+        <!-- 상세 -->
+        <tr>
+          <td colspan="9" class="menu">상세</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one">상세</td>
+          <td class="two">단편 상세</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/detail01.html" target="_blank">detail01</a></td>
+          <td class="creationDate">2018-11-02</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">마스터 CID 시리즈</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/detail02.html" target="_blank">detail02</a></td>
+          <td class="creationDate">2018-11-02</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">수급 시리즈 (TV다시보기 및 키즈)</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/detail03.html" target="_blank">detail03</a></td>
+          <td class="creationDate">2018-11-02</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">이벤트 시리즈</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/detail04.html" target="_blank">detail04</a></td>
+          <td class="creationDate">2018-11-02</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23<br />2018-12-07<br />2018-12-14</td>
+        </tr>
+        <tr onmouseover="chg_class(this, 1)" onmouseout="chg_class(this, 0)">
+          <td class="one"></td>
+          <td class="two">클립 상세</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./phone/detail05.html" target="_blank">detail05</a></td>
+          <td class="creationDate">2018-11-02</td>
+          <td class="modifiDate">2018-11-20<br />2018-11-23<br />2018-12-07</td>
+        </tr>
+      </table>
+    </div>
+    <div style="height: 50px"></div>
+  </body>
+</html>

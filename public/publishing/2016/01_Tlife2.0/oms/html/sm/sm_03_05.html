@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>회원 유형별 상세 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb9:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb9:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb9:eq(0)>ul>li:eq(2)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb9">
+                <a href="#">통계 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">가입통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">가입통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">서비스 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">서비스 통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">회원 유형별 상세 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">회원 유형별 상세 통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">자동발급 쿠폰 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">자동발급 통계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">사용완료 쿠폰 통계</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">사용완료 쿠폰 조회</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>통계 관리</span>
+              <span>회원 유형별 상세 통계</span>
+              <strong>회원 유형별 상세</strong>
+            </div>
+            <h3 class="tit">회원 유형별 상세</h3>
+
+            <!-- 일자별 회원정보 -->
+            <h4 class="tit">일자별 회원정보</h4>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>일자, 전체 회원수가 있는 일자별 회원정보 리스트</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">일자</th>
+                      <td>2016년 11월 01일</td>
+                    </tr>
+                    <tr>
+                      <th rowspan="2" scope="row">전체 회원수</th>
+                      <td>12,362 명</td>
+                    </tr>
+                    <tr>
+                      <td>알 수 없는 단말 및 OS : 362명 / 알 수 없는 성별 : 52명</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //일자별 회원정보 -->
+
+            <!-- 단말 및 OS 정보 -->
+            <h4 class="tit">단말 및 OS 정보</h4>
+            <h5 class="tit">- Android 사용자</h5>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>회원정보, OS 버전 및 모델 정보가 있는 Android 사용자 단말 및 OS 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">회원정보</th>
+                      <td>8,661 명 (점유율 : 66%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">OS 버전 및<br />모델 정보</th>
+                      <td>
+                        <!-- Android OS 버전 및 모델 정보 -->
+                        <div class="table_list_btm">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong
+                                  >순위, 제조사, 단말 모델명, OS 버전, 사용자 수, 점유율이 있는 OS 버전 및 모델 정보
+                                  리스트</strong
+                                >
+                              </caption>
+                              <colgroup>
+                                <col style="width: 14%" />
+                                <col style="width: 19%" />
+                                <col style="width: 19%" />
+                                <col style="width: 16%" />
+                                <col style="width: 16%" />
+                                <col style="width: 16%" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">순위</th>
+                                  <th scope="col">제조사</th>
+                                  <th scope="col">단말 모델명</th>
+                                  <th scope="col">OS 버전</th>
+                                  <th scope="col">사용자 수</th>
+                                  <th scope="col">점유율</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>LG</td>
+                                  <td>SM-N920S</td>
+                                  <td>5.1.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>Samsung</td>
+                                  <td>SM-N920S</td>
+                                  <td>5.1.1</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>샤오미</td>
+                                  <td>SM-N920S</td>
+                                  <td>4.4.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>화웨이</td>
+                                  <td>SM-N920S</td>
+                                  <td>5.0.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td>스카이</td>
+                                  <td>SM-N920S</td>
+                                  <td>6.0.0</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>6</td>
+                                  <td>LG</td>
+                                  <td>SM-N920S</td>
+                                  <td>5.1.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>7</td>
+                                  <td>Samsung</td>
+                                  <td>SM-N920S</td>
+                                  <td>5.1.1</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>8</td>
+                                  <td>샤오미</td>
+                                  <td>SM-N920S</td>
+                                  <td>4.4.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>9</td>
+                                  <td>화웨이</td>
+                                  <td>SM-N920S</td>
+                                  <td>5.0.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>10</td>
+                                  <td>스카이</td>
+                                  <td>SM-N920S</td>
+                                  <td>6.0.0</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <p class="gap_top2 btn_center">
+                            <a href="#" class="btn_small" title="새창 열림" target="_blank">전체보기</a>
+                          </p>
+                        </div>
+                        <!-- // Android OS 버전 및 모델 정보 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //단말 및 OS 정보 -->
+
+            <!-- IOS 사용자 정보 -->
+            <h5 class="tit">- IOS 사용자</h5>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>회원정보, OS 버전 및 모델정보가 있는 IOS 사용자 단말 및 OS 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">회원정보</th>
+                      <td>3,701 명 (점유율 : 34%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">OS 버전 및<br />모델 정보</th>
+                      <td>
+                        <!-- IOS OS 버전 및 모델 정보 -->
+                        <div class="table_list_btm">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong
+                                  >순위, 단말 모델명, OS 버전, 사용자 수, 점유율이 있는 IOS 사용자 정보 리스트</strong
+                                >
+                              </caption>
+                              <colgroup>
+                                <col style="width: 14%" />
+                                <col style="width: 22%" />
+                                <col style="width: 22%" />
+                                <col style="width: 21%" />
+                                <col style="width: 21%" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">순위</th>
+                                  <th scope="col">단말 모델명</th>
+                                  <th scope="col">OS 버전</th>
+                                  <th scope="col">사용자 수</th>
+                                  <th scope="col">점유율</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>A1633</td>
+                                  <td>5.1.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>A1633</td>
+                                  <td>5.1.1</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>A1633</td>
+                                  <td>4.4.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>A1633</td>
+                                  <td>5.0.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td>A1633</td>
+                                  <td>6.0.0</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>6</td>
+                                  <td>A1633</td>
+                                  <td>5.1.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>7</td>
+                                  <td>A1633</td>
+                                  <td>5.1.1</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>8</td>
+                                  <td>A1633</td>
+                                  <td>4.4.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>9</td>
+                                  <td>A1633</td>
+                                  <td>5.0.2</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                                <tr>
+                                  <td>10</td>
+                                  <td>A1633</td>
+                                  <td>6.0.0</td>
+                                  <td>33,209</td>
+                                  <td>38%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <p class="gap_top2 btn_center">
+                            <a href="#" class="btn_small" title="새창 열림" target="_blank">전체보기</a>
+                          </p>
+                        </div>
+                        <!-- // IOS OS 버전 및 모델 정보 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //IOS 사용자 정보 -->
+
+            <!-- 알 수 없는 단말 및 OS -->
+            <h5 class="tit">- 알 수 없는 단말 및 OS</h5>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>사용자 정보가 있는 알 수 없는 단말 및 OS 사용자 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사용자 정보</th>
+                      <td>362 명 (점유율 : 10%)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //알 수 없는 단말 및 OS -->
+
+            <h4 class="tit">성별 및 연령대</h4>
+            <h5 class="tit">- 남성</h5>
+            <!-- 남성 사용자 정보 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>회원정보, 연령대 정보가 있는 남성 사용자 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">회원정보</th>
+                      <td>6,000 명 (점유율 : 50%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연령대 정보</th>
+                      <td>
+                        <!-- 남성 연령대 정보 -->
+                        <div class="table_list_btm">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>연령대별 남성 회원 정보</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">0 ~ 13</th>
+                                  <th scope="col">14 ~ 18</th>
+                                  <th scope="col">19 ~ 24</th>
+                                  <th scope="col">25 ~ 29</th>
+                                  <th scope="col">30 ~ 39</th>
+                                  <th scope="col">40 ~ 49</th>
+                                  <th scope="col">50 ~ 59</th>
+                                  <th scope="col">60대이상</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>-</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>-</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- // 남성 연령대 정보 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //남성 사용자 정보 -->
+
+            <h5 class="tit">- 여성</h5>
+            <!-- 여성 사용자 정보 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>회원정보, 연령대 정보가 있는 여성 사용자</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">회원정보</th>
+                      <td>6,000 명 (점유율 : 50%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연령대 정보</th>
+                      <td>
+                        <!-- 여성 연령대 정보 -->
+                        <div class="table_list_btm">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>연령대별 여성 회원 정보</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">0 ~ 13</th>
+                                  <th scope="col">14 ~ 18</th>
+                                  <th scope="col">19 ~ 24</th>
+                                  <th scope="col">25 ~ 29</th>
+                                  <th scope="col">30 ~ 39</th>
+                                  <th scope="col">40 ~ 49</th>
+                                  <th scope="col">50 ~ 59</th>
+                                  <th scope="col">60대이상</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>-</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>-</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- // 여성 연령대 정보 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //여성 사용자 정보 -->
+
+            <!-- 알 수 없는 성별 -->
+            <h5 class="tit">- 알 수 없는 성별</h5>
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>알 수 없는 성별 사용자 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사용자 정보</th>
+                      <td>362 명 (점유율 : 10%)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //알 수 없는 성별 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_save">확인</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

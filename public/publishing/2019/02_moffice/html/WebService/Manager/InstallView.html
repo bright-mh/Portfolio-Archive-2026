@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>시스템 &gt; 설치현황 관리</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="user_box">
+          <p>지진희 (제이니스)</p>
+        </div>
+        <div class="logo_box">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 30px / 가로크기는 비율로 자동조정 -->
+          <h1>
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 30px" /></a>
+          </h1>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- LNB : left menu -->
+        <nav class="lnb_area">
+          <h2 class="blind">운영자 메뉴</h2>
+          <ul class="lnb_list">
+            <!-- [D] 1Depth 선택 시, li태그에 class="on" 추가 -->
+            <li class="list_basic1">
+              <a href="#none" class="depth1">사내정보</a>
+              <!-- [D] 2Depth 선택 시, li태그에 class="on" 추가 -->
+              <ul>
+                <li><a href="#none">공지사항 관리</a></li>
+                <li><a href="#none">사원정보 관리</a></li>
+                <li><a href="#none">휴일정보 관리</a></li>
+                <li><a href="#none">운영자 관리</a></li>
+                <li><a href="#none">부서별 운영자 관리</a></li>
+                <li><a href="#none">결재자 관리</a></li>
+                <li><a href="#none">그룹 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic2">
+              <a href="#none" class="depth1">PC 사용자</a>
+              <ul>
+                <li><a href="#none">비대상자 관리</a></li>
+                <li><a href="#none">차단 예외자 관리</a></li>
+                <li><a href="#none">휴가자 관리</a></li>
+                <li><a href="#none">사용자 초기화 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic3">
+              <a href="#none" class="depth1">PC 사용 현황</a>
+              <ul>
+                <li><a href="#none">미승인 신청 현황</a></li>
+                <li><a href="#none">전체 신청 현황</a></li>
+                <li><a href="#none">PC ON/OFF 조회</a></li>
+                <li><a href="#none">PC-LOG 조회</a></li>
+                <li><a href="#none">PC-IDLE 조회</a></li>
+                <li><a href="#none">자리비움 조회</a></li>
+              </ul>
+            </li>
+            <li class="list_basic4">
+              <a href="#none" class="depth1">통계 현황</a>
+              <ul>
+                <li><a href="#none">PC ON/OFF 통계</a></li>
+                <li><a href="#none">PC 연장사용 통계</a></li>
+                <li><a href="#none">설치현황 통계</a></li>
+              </ul>
+            </li>
+            <li class="list_basic5 on">
+              <a href="#none" class="depth1">시스템</a>
+              <ul>
+                <li class="on"><a href="#none">설치현황 관리</a></li>
+                <li><a href="#none">데몬로그 조회</a></li>
+                <li><a href="#none">프로그램 설정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- //LNB : left menu -->
+
+        <!-- contents -->
+        <div class="contents">
+          <!-- tip area -->
+          <div class="tip_area">
+            <!-- <a href="#none" class="btn_tip">TIP</a> -->
+            <p class="blind">TIP</p>
+            <div class="tip_box">
+              <ul class="tip_list">
+                <li>에이전트가 설치된 현황을 조회할 수 있습니다.</li>
+                <li>PC를 포맷하는 등 정상적인 기록이 14일 이상 전송되지 않은 경우 자동으로 삭제 상태로 전환됩니다.</li>
+                <li>목록에서 사번을 선택하면 상세한 설치/삭제/업데이트 기록을 조회할 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- //tip area -->
+
+          <div class="title_area2">
+            <h2 class="title_cont btm_none">설치현황 관리</h2>
+            <a href="#none" class="btn_md bg_deepsky icon_md_search_white btn_md_round realtime"
+              >실시간 모니터링 현황</a
+            >
+          </div>
+
+          <!-- 설치현황 -->
+          <div class="install_status">
+            <dl>
+              <dt>재직자</dt>
+              <dd>
+                <div class="table_cell">40,000명</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>비대상자</dt>
+              <dd>
+                <div class="table_cell">3,000명</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>설치사용자</dt>
+              <dd>
+                <div class="table_cell">756명</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>설치 PC</dt>
+              <dd>
+                <div class="table_cell">10,255대</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>공용 PC</dt>
+              <dd>
+                <div class="table_cell">0대</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>최신버전</dt>
+              <dd>
+                <div class="table_cell">30.00.00.900</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>최신버전 PC</dt>
+              <dd>
+                <div class="table_cell">1대</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>구버전 PC</dt>
+              <dd>
+                <div class="table_cell">10,254대</div>
+              </dd>
+            </dl>
+          </div>
+          <!-- //설치현황 -->
+
+          <!-- search area -->
+          <div class="search_area">
+            <div class="tbl_search">
+              <table>
+                <colgroup>
+                  <col style="width: 128px" />
+                  <col style="width: 334.4px" />
+                  <col style="width: 128px" />
+                  <col style="width: 334px" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">부서</th>
+                    <td colspan="3">
+                      <a href="#none" title="새창 열림" class="btn_md icon_md_choice_blue">선택</a>
+                      <div class="ip_box" style="width: 253px">
+                        <input type="text" value="" readonly="readonly" placeholder="부서를 선택해주세요." />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="checkbox" id="" name="" value="" class="ml12" /><label for="">하위부서 포함</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">이름 / 사번</th>
+                    <td>
+                      <div class="ip_box">
+                        <input type="text" name="" value="" title="이름 / 사번" />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                    </td>
+                    <th scope="row">상태</th>
+                    <td>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="radio" id="" name="" value="" /><label for="">설치</label>
+                      <input type="radio" id="" name="" value="" /><label for="">미설치</label>
+                      <input type="radio" id="" name="" value="" /><label for="">구버전</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IP 주소</th>
+                    <td>
+                      <div class="ip_box">
+                        <input type="text" name="" value="" title="IP 주소" />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                    </td>
+                    <th scope="row">검색 옵션</th>
+                    <td>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="checkbox" id="" name="" value="" /><label for="">공용 PC</label>
+                      <input type="checkbox" id="" name="" value="" /><label for="">복수 PC</label>
+                      <input type="checkbox" id="" name="" value="" />
+                      <input type="text" name="" value="3" disabled="disabled" class="ip_txt_ef" style="width: 28px" />
+                      <label for="">일 이상 미접속</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- btn -->
+            <div class="btn_area">
+              <a href="#none" class="btn_big bg_blue icon_big_search">검색</a>
+            </div>
+            <!-- //btn -->
+          </div>
+          <!-- //search area -->
+
+          <!-- result_area -->
+          <div class="result_area">
+            <!-- result_top -->
+            <div class="result_top clearfix">
+              <div class="fl_left">
+                <p class="totla_num">총 <span>0</span>건</p>
+              </div>
+              <div class="btn_area fl_right">
+                <!-- <a href="#none" class="btn_md icon_md_csv">CSV</a> -->
+                <a href="#none" class="btn_md icon_md_excel">엑셀</a>
+                <a href="#none" title="새창 열림" class="btn_md bg_lightred icon_md_garbage_white ml4">설치기록 삭제</a>
+                <a href="#none" title="새창 열림" class="btn_md bg_lightred icon_md_tool_white">수동 업데이트/삭제</a>
+              </div>
+            </div>
+            <!-- //result_top -->
+
+            <!-- tbl_default -->
+            <div class="tbl_default">
+              <table>
+                <colgroup>
+                  <col style="width: 99px" />
+                  <col style="width: auto" />
+                  <col style="width: 79px" />
+                  <col style="width: 69px" />
+                  <col style="width: 108px" />
+                  <col style="width: 94px" />
+                  <col style="width: 94px" />
+                  <col style="width: 94px" />
+                  <col style="width: 105px" />
+                  <col style="width: 94px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col"><a href="#none">사번</a></th>
+                    <th scope="col"><a href="#none">부서</a></th>
+                    <th scope="col"><a href="#none">이름</a></th>
+                    <th scope="col"><a href="#none">직급</a></th>
+                    <th scope="col"><a href="#none">PC IP</a></th>
+                    <th scope="col"><a href="#none">설치일</a></th>
+                    <th scope="col"><a href="#none">최종접속일</a></th>
+                    <th scope="col"><a href="#none">업데이트일</a></th>
+                    <th scope="col"><a href="#none">버전</a></th>
+                    <th scope="col"><a href="#none">삭제일</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="no_data">
+                    <td colspan="100">검색된 데이터가 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#none" title="새창 열림" class="link_txt">20180401</a></td>
+                    <td>서비스 사업부</td>
+                    <td>박대희</td>
+                    <td>부장</td>
+                    <td>106.241.31.92</td>
+                    <td>2019-07-29<br />PM 05:06</td>
+                    <td>2019-08-06<br />PM 03:54</td>
+                    <td></td>
+                    <td><img src="../../common/img/icon_window.png" alt="Window" class="img_os" />3.0.0.900</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#none" title="새창 열림" class="link_txt">20180401</a></td>
+                    <td>서비스 사업부</td>
+                    <td>박대희</td>
+                    <td>부장</td>
+                    <td>106.241.31.92</td>
+                    <td>2019-07-29<br />PM 05:06</td>
+                    <td>2019-08-06<br />PM 03:54</td>
+                    <td></td>
+                    <td><img src="../../common/img/icon_mac.png" alt="Mac" class="img_os" />3.0.0.900</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#none" title="새창 열림" class="link_txt">20180401</a></td>
+                    <td>서비스 사업부</td>
+                    <td>박대희</td>
+                    <td>부장</td>
+                    <td>106.241.31.92</td>
+                    <td>2019-07-29<br />PM 05:06</td>
+                    <td>2019-08-06<br />PM 03:54</td>
+                    <td></td>
+                    <td><img src="../../common/img/icon_linux.png" alt="Linux" class="img_os" />3.0.0.900</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl_default -->
+
+            <!-- result_paging -->
+            <div class="result_paging">
+              <!-- paging -->
+              <div class="paging">
+                <a href="#none" class="btn_start">처음으로</a>
+                <a href="#none" class="btn_prev">이전</a>
+                <strong>1</strong>
+                <a href="#none">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none">6</a>
+                <a href="#none">7</a>
+                <a href="#none">8</a>
+                <a href="#none">9</a>
+                <a href="#none">10</a>
+                <a href="#none" class="btn_next">다음</a>
+                <a href="#none" class="btn_end">맨끝으로</a>
+              </div>
+              <!-- //paging -->
+              <p class="page_num"><strong>3</strong>/<span>10</span></p>
+            </div>
+            <!-- //result_paging -->
+          </div>
+          <!-- //result_area -->
+
+          <!-- TOP btn -->
+          <a href="#none" class="btn_top">TOP</a>
+          <!-- //TOP btn -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

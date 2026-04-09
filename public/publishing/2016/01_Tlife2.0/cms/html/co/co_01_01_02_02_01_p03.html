@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>신규 브랜드 등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>신규 브랜드 등록</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont">
+          <ul class="guide">
+            <li>신규 브랜드 등록 요청은 CMS 관리자 승인 이후 사용이 가능합니다.</li>
+          </ul>
+
+          <!-- 신규 브랜드 등록 -->
+          <div class="table_list">
+            <div class="comm_right">
+              <em class="ess">필수 입력 항목입니다.</em>
+            </div>
+
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>브랜드 ID, 브랜드 명이 있는 신규 브랜드 등록 입력 서식</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">브랜드 ID</th>
+                    <td>시스템 자동출력</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="brand_name" class="ess">브랜드 명</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        id="brand_name"
+                        class="wid_per80"
+                        placeholder="상품 전시화면에 표시되는 브랜드 명 입니다. 정확한 정보를 입력하세요."
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //신규 브랜드 등록 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_save">신규 브랜드 등록요청</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

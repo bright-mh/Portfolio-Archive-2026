@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>타임오퍼 그룹 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(0)>ul>li:eq(1)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시 관리</span>
+              <span>전시 관리</span>
+              <span>타임오퍼 관리</span>
+              <strong>타임오퍼 그룹 수정/조회</strong>
+            </div>
+            <h3 class="tit">타임오퍼 그룹 수정/조회</h3>
+
+            <!--그룹 기본정보 -->
+            <h4 class="tit">그룹 기본정보</h4>
+            <div class="table_list_top">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>전시 시작일, 전시 종료일, 관리번호, 타이틀이 있는 그룹 기본정보 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="displayStartDate" class="ess">전시 시작일</label>
+                      </th>
+                      <td>
+                        <input type="text" id="displayStartDate" class="wid_calendar pickerArea" value="2016-11-01" />
+                        <select title="전시 시작일 시" style="width: 80px">
+                          <option selected>00시</option>
+                          <option>01시</option>
+                          <option>02시</option>
+                          <option>03시</option>
+                          <option>04시</option>
+                          <option>05시</option>
+                          <option>06시</option>
+                          <option>07시</option>
+                          <option>08시</option>
+                          <option>09시</option>
+                          <option>10시</option>
+                          <option>11시</option>
+                          <option>12시</option>
+                          <option>13시</option>
+                          <option>14시</option>
+                          <option>15시</option>
+                          <option>16시</option>
+                          <option>17시</option>
+                          <option>18시</option>
+                          <option>19시</option>
+                          <option>20시</option>
+                          <option>21시</option>
+                          <option>22시</option>
+                          <option>23시</option>
+                        </select>
+                        <select title="전시 시작일 분" style="width: 80px">
+                          <option>00분</option>
+                          <option>10분</option>
+                          <option>20분</option>
+                          <option selected>30분</option>
+                          <option>40분</option>
+                          <option>50분</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="displayEndDate" class="ess">전시 종료일</label>
+                      </th>
+                      <td>
+                        <input type="text" id="displayEndDate" class="wid_calendar pickerArea" value="2016-11-01" />
+                        <select title="전시 종료일 시" style="width: 80px">
+                          <option selected>00시</option>
+                          <option>01시</option>
+                          <option>02시</option>
+                          <option>03시</option>
+                          <option>04시</option>
+                          <option>05시</option>
+                          <option>06시</option>
+                          <option>07시</option>
+                          <option>08시</option>
+                          <option>09시</option>
+                          <option>10시</option>
+                          <option>11시</option>
+                          <option>12시</option>
+                          <option>13시</option>
+                          <option>14시</option>
+                          <option>15시</option>
+                          <option>16시</option>
+                          <option>17시</option>
+                          <option>18시</option>
+                          <option>19시</option>
+                          <option>20시</option>
+                          <option>21시</option>
+                          <option>22시</option>
+                          <option>23시</option>
+                        </select>
+                        <select title="전시 종료일 분" style="width: 80px">
+                          <option selected>00분</option>
+                          <option>10분</option>
+                          <option>20분</option>
+                          <option>30분</option>
+                          <option>40분</option>
+                          <option>50분</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="mgmtNum" class="ess">관리번호</label>
+                      </th>
+                      <td>
+                        <input type="text" id="mgmtNum" class="wid_per30" value="20163135" />
+                        <a href="#" class="btn_small">중복확인</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="group" class="ess">타이틀</label>
+                      </th>
+                      <td>
+                        <input type="text" id="group" class="wid_per80" value="더운 여름 밤에도 치늬님은 진리" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //그룹 기본정보 -->
+
+            <!-- 그룹 전시여부 -->
+            <h4 class="tit">그룹 전시여부</h4>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>전시여부가 있는 그룹 전시여부 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="displayYes" class="ess">전시여부 </label>
+                      </th>
+                      <td>
+                        <input type="radio" id="displayYes" name="dp" checked="checked" /><label
+                          for="displayYes"
+                          class="radio_range"
+                          >전시</label
+                        >
+                        <input type="radio" id="displayNo" name="dp" /><label for="displayNo" class="radio_range"
+                          >미전시</label
+                        >
+                        <input type="radio" id="displayStop" name="dp" /><label for="displayStop" class="radio_range"
+                          >전시중지</label
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //그룹 전시여부 -->
+
+            <!-- 그룹에 맵핑할 혜택 불러오기 -->
+            <h4 class="tit">그룹에 맵핑할 혜택 불러오기</h4>
+            <div class="table_list_btm">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >번호, 혜택명, Type, 카테고리, 맵핑해제 정보가 있는 그룹에 맵핑할 혜택 불러오기 리스트</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col style="width: *" />
+                    <col style="width: 200px" />
+                    <col style="width: 130px" />
+                    <col style="width: 80px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">혜택명</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">카테고리</th>
+                      <th scope="col">맵핑해제</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 매핑된 혜택 없을 때 노출 -->
+                    <tr>
+                      <td colspan="5">
+                        맵핑할 혜택을 선택하세요.
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">혜택찾기</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td class="left">
+                        <a href="#" class="link" target="_blank" title="새창 열림"
+                          >더운 여름 밤에도 치늬님은 진리(최대 20자까지 노출)</a
+                        >
+                      </td>
+                      <td>Benefit &gt; 선착순 / Time offer</td>
+                      <td>푸드 &gt; 치킨</td>
+                      <td><a href="#" class="btn_small">삭제</a></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td class="left">
+                        <a href="#" class="link" target="_blank" title="새창 열림">5티켓 적립하고 개인정보 강화하고!</a>
+                      </td>
+                      <td>Mission</td>
+                      <td>개인정보 입력형</td>
+                      <td><a href="#" class="btn_small">삭제</a></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td class="left">
+                        <a href="#" class="link" target="_blank" title="새창 열림">대한민국 국민 네비게이션 T Map</a>
+                      </td>
+                      <td>T Service</td>
+                      <td>대중교통</td>
+                      <td><a href="#" class="btn_small">삭제</a></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="left">
+                        <a href="#" class="link" target="_blank" title="새창 열림"
+                          >더운 여름 밤에도 치늬님은 진리(최대 20자까지 노출)</a
+                        >
+                      </td>
+                      <td>Benefit &gt; 선착순 / Time offer</td>
+                      <td>푸드 &gt; 치킨</td>
+                      <td><a href="#" class="btn_small">삭제</a></td>
+                    </tr>
+                    <!-- [D] 맵핑된 혜택 삭제 후 5개 이하가 되었을 경우 [혜택찾기]버튼 재 노출 -->
+                    <tr>
+                      <td colspan="5">
+                        맵핑할 혜택을 선택하세요.
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">혜택찾기</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- /그룹에 맵핑할 혜택 불러오기 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_cancel">취소</a>
+                <a href="#" class="btn_save">저장</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>코드관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb7:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb7:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb7:eq(0)>ul>li:eq(0)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb7">
+                <a href="#">사이트 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">코드 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">코드 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">요금제 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">요금제 관리</a></li>
+                      <li><a href="#">요금제 그룹 관리</a></li>
+                      <li><a href="#">부가서비스 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">닉네임 금칙어 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">닉네임 금칙어 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">전시 키워드 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">전시 키워드 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이용안내</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이용안내</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">App 버전관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">App 버전관리</a></li>
+                      <li><a href="#">X viewer App 버전관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">약관관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">약관관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">서비스 점검 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">서비스 점검 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>사이트 관리</span>
+              <strong>코드관리</strong>
+            </div>
+            <h3 class="tit">코드관리</h3>
+
+            <!-- 코드 관리 -->
+            <div class="code">
+              <div class="category">
+                <ol>
+                  <li>
+                    <h4 class="tit">코드그룹 관리</h4>
+                    <div class="cate_list mCustomScrollbar">
+                      <ul class="cate">
+                        <li><a href="#">A그룹</a></li>
+                        <li><a href="#">B그룹</a></li>
+                        <li><a href="#">C그룹</a></li>
+                        <li><a href="#">D그룹</a></li>
+                        <li><a href="#">E그룹</a></li>
+                        <li><a href="#">F그룹</a></li>
+                        <li><a href="#">G그룹</a></li>
+                        <li><a href="#">H그룹</a></li>
+                        <li><a href="#">I그룹</a></li>
+                        <li><a href="#">J그룹</a></li>
+                        <li><a href="#">K그룹</a></li>
+                        <li><a href="#">L그룹</a></li>
+                        <li><a href="#">M그룹</a></li>
+                        <li><a href="#">N그룹</a></li>
+                        <li class="unused"><a href="#">O그룹 [미사용]</a></li>
+                        <!-- [D] 미사용인 경우 li 클래스명 unused-->
+                        <li><a href="#">A그룹</a></li>
+                        <li><a href="#">B그룹</a></li>
+                        <li><a href="#">C그룹</a></li>
+                        <li><a href="#">D그룹</a></li>
+                        <li><a href="#">E그룹</a></li>
+                        <li><a href="#">F그룹</a></li>
+                        <li><a href="#">G그룹</a></li>
+                        <li><a href="#">H그룹</a></li>
+                        <li><a href="#">I그룹</a></li>
+                        <li><a href="#">J그룹</a></li>
+                        <li><a href="#">K그룹</a></li>
+                        <li><a href="#">L그룹</a></li>
+                        <li><a href="#">M그룹</a></li>
+                        <li><a href="#">N그룹</a></li>
+                      </ul>
+                    </div>
+                    <div class="btngroup">
+                      <div class="btn_left">
+                        <a href="#" class="btn_new" target="_blank" title="새창 열림">신규등록</a>
+                      </div>
+                      <div class="btn_right">
+                        <a href="#" class="btn_modify" target="_blank" title="새창 열림">수정</a>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="table_list_btm">
+                <h4 class="tit">상세 코드 관리</h4>
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>순서, 상세코드, 상세코드명, 이미지, 사용상태, 등록일이 있는 상세코드 관리 리스트</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 60px" />
+                      <col style="width: 120px" />
+                      <col style="width: *" />
+                      <col style="width: 80px" />
+                      <col style="width: 80px" />
+                      <col style="width: 110px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순서</th>
+                        <th scope="col">상세코드</th>
+                        <th scope="col">상세코드명</th>
+                        <th scope="col">이미지</th>
+                        <th scope="col">사용상태</th>
+                        <th scope="col">등록일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>10</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>서비스 이용문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>서비스 이용문의</td>
+                        <td>N</td>
+                        <td>N</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>가입문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>기타문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>T멤버십문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>초콜릿문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>상품문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>상품문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>상품문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">A0101</a></td>
+                        <td>상품문의</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                        <td>2016.11.01</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="btngroup">
+                  <div class="btn_right">
+                    <a href="#" class="btn_new" target="_blank" title="새창 열림">상세코드 등록</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //코드 관리 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

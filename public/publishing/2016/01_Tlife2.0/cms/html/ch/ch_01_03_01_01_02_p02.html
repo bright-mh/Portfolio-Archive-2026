@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>대사결과 수정등록 팝업 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //파일 업로드
+        var fileTarget = $(".filebox .file_hidden");
+
+        fileTarget.on("change", function () {
+          if (window.FileReader) {
+            // modern browser
+            var filename = $(this)[0].files[0].name;
+          } else {
+            // old IE
+            var filename = $(this).val().split("/").pop().split("\\").pop();
+          }
+
+          $(this).siblings(".file_name").val(filename);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>대사결과 등록</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>제휴사에서 전달된 대사결과를 캠페인 ID 별로 등록해주세요.</li>
+            <li>제휴사 집계 지급금액(정산금액)을 입력하면 CMS에서 집계한 금액과의 차액이 이력으로 보존됩니다.</li>
+            <li>
+              대사결과 파일이 없거나 불일치 항목이 없는 경우 ‘직접입력’을 선택 후 불일치 항목 건수를 입력하시기
+              바랍니다.
+            </li>
+          </ul>
+
+          <!-- 대사결과 등록 테이블 -->
+          <div class="table_list_top">
+            <div class="comm_right">
+              <em class="ess">필수 입력 항목입니다.</em>
+            </div>
+
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >대상연월, CMS 캠페인 ID, 지급금액(정산금액) 중 CMS 집계, 지급금액(정산금액) 중 제휴사 집계,
+                      지급금액(정산금액) 중 차액, 대사결과 등록이 있는 대사결과 등록 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 110px" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" colspan="2">대상연월</th>
+                      <td>2016.10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2">CMS 캠페인 ID</th>
+                      <td>CCM_CAMP_0050</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="3">지급금액<br />(정산금액)</th>
+                      <th scope="row">CMS 집계</th>
+                      <td>12,051,909 원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제휴사 집계</th>
+                      <td><input type="text" title="제휴사 집계" value="12,050,000" /> 원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">차액</th>
+                      <td><span class="red">1,909</span> 원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2"><span class="ess">대사결과 등록</span></th>
+                      <td>
+                        <div class="result_regist">
+                          <p class="choice_para">
+                            <input type="radio" id="file_regist" name="result_regist" checked="checked" />&nbsp;<label
+                              for="file_regist"
+                              >파일 등록</label
+                            >
+                          </p>
+                          <div class="file_regist">
+                            <div class="filebox">
+                              <input type="text" class="file_name" title="선택된 파일명" readonly="readonly" />
+
+                              <label for="file_choice">파일선택</label>
+                              <input type="file" id="file_choice" class="file_hidden" />
+                            </div>
+                            <ul class="caution_list">
+                              <li>파일명에 특수문자(!@#$_,등) 및 공백이 포함된 경우 오류가 발생할 수 있습니다.</li>
+                              <li>csv 파일만 등록 가능</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="result_regist gap_top2">
+                          <p class="choice_para">
+                            <input type="radio" id="direct_input" name="result_regist" />&nbsp;<label for="direct_input"
+                              >직접입력</label
+                            >
+                          </p>
+                          불일치 항목 &nbsp;<input type="text" title="주문내역 파일 선택" disabled="disabled" /> 건
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_small">추가</a>
+                  <a href="#" class="btn_small">삭제</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 대사결과 등록 테이블 -->
+
+          <!-- 대사결과 등록 테이블 추가 영역 --
+				<div class="table_list_top">
+					<div class="table_wrap">
+						<table class="tbl_list">
+							<caption>
+								<strong>대상연월, CMS 캠페인 ID, 지급금액(정산금액) 중 CMS 집계, 지급금액(정산금액) 중 제휴사 집계, 지급금액(정산금액) 중 차액, 대사결과 등록이 있는 대사결과 등록 입력 서식</strong>
+							</caption>
+							<colgroup>
+								<col style="width:110px">
+								<col style="width:130px">
+								<col style="width:*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" colspan="2">대상연월</th>
+									<td>2016.10</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">CMS 캠페인 ID</th>
+									<td>CCM_CAMP_0050</td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="3">지급금액<br />(정산금액)</th>
+									<th scope="row">CMS 집계</th>
+									<td>12,051,909 원</td>
+								</tr>
+								<tr>
+									<th scope="row">제휴사 집계</th>
+									<td><input type="text" title="제휴사 집계" value="12,050,000" /> 원</td>
+								</tr>
+								<tr>
+									<th scope="row">차액</th>
+									<td><span class="red">1,909</span> 원</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2"><span class="ess">대사결과 등록</span></th>
+									<td>
+										<div class="result_regist">
+											<p class="choice_para"><input type="radio" id="file_regist2" name="result_regist2" checked="checked" />&nbsp;<label for="file_regist2">파일 등록</label></p>
+											<div class="file_regist">
+												<div class="filebox">
+													<input type="text" class="file_name" title="선택된 파일명" readonly="readonly" />
+
+													<label for="file_choice2">파일선택</label> 
+													<input type="file" id="file_choice2" class="file_hidden" />
+												</div>
+												<ul class="caution_list">
+													<li>파일명에 특수문자(!@#$_,등) 및 공백이 포함된 경우 오류가 발생할 수 있습니다.</li>
+													<li>csv 파일만 등록 가능</li>
+												</ul>
+											</div>
+										</div>
+										<div class="result_regist gap_top2">
+											<p class="choice_para"><input type="radio" id="direct_input2" name="result_regist2" />&nbsp;<label for="direct_input2">직접입력</label></p>
+											불일치 항목 &nbsp;<input type="text" title="주문내역 파일 선택" disabled="disabled" /> 건
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btngroup">
+						<div class="btn_right">
+							<a href="#" class="btn_small">추가</a>
+							<a href="#" class="btn_small">삭제</a>
+						</div>
+					</div>
+				</div>
+				<!-- // 대사결과 등록 테이블 추가 영역 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_new">등록</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

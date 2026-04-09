@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+	<title>T open page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<!-- 131002 수정 -->
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.2.custom.min.css" />
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js"></script>
+	<script type="text/javascript" src="js/common_cal.js"></script>
+	<script type="text/javascript" src="js/content/content_list.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<!-- //131002 수정 -->
+</head>
+
+<body>
+	<p id="skipNavi"><a href="#contents">본문바로가기</a></p>
+
+	<header class="header">
+		<div class="hwrap">
+			<h1><a href="#none"><img src="img/admin_logo.gif" alt="T open page" /></a></h1>
+
+			<!-- 131002_수정 -->
+			<section class="login">
+				<ul>
+					<li class="listStyle01">[ openpage admin님 ]</li>
+					<li class="listStyle02"><span>최종 접속일</span> &#47; 2013-09-25 16:07:08</li>
+					<li class="listStyle03 state"><a href="#none">LOGOUT</a></li>
+				</ul>
+			</section>
+			<!-- //131002_수정 -->
+
+			<nav class="gnb">
+				<ul>
+					<li class="on"><a href="#none">전시 관리</a></li>
+					<li><a href="#none">통계</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<article class="container">
+		<div class="wrap">
+			<div class="wrap_in">
+				<nav class="lnb">
+					<h2>전시 관리</h2>
+					<ul>
+						<li><a href="#none">전체 전시 현황</a></li>
+						<li><a href="#none">전체 패널 관리</a></li>
+						<li class="on"><a href="#none">사이트 바로가기 <br />패널</a></li>
+						<li><a href="#none">오늘의 추천 패널</a></li>
+						<li><a href="#none">하우스 배너 관리</a></li>
+						<li><a href="#none">광고주 관리</a></li>
+					</ul>
+				</nav>
+
+				<!-- contents -->
+				<div id="contents" class="contents">
+					<section class="title">
+						<h3>사이트 바로가기<span class="mark">&gt;</span>Slot1</h3>
+						<!-- 131002_수정 -->
+						<p class="location"><a href="#none">전시 관리</a>&gt;<a href="#none">사이트 바로가기</a>&gt;<a href="#none" class="last">Slot 상세</a></p>
+						<!-- //131002_수정 -->
+					</section>
+
+					<!-- search -->
+					<section class="search_site">
+						<table cellspacing="0" cellpadding="0" class="tb_management" style="width:970px;">
+							<colgroup>
+								<col width="89px">
+								<col width="145px">
+								<col width="438px">
+								<col width="298px">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>기간</th>
+									<td>
+										<!-- select -->
+										<div class="slt select2">
+											<a href="#none" class="title" title="콘텐츠유헝">시작일</a>
+											<ul>
+												<li><a href="#none">시작일</a></li>
+												<li><a href="#none">종료일</a></li>
+												<li><a href="#none">등록일</a></li>
+											</ul>
+										</div>
+									</td>
+									<td>
+										<!-- select // -->
+										<!-- 131002_수정 -->
+										<span class="input_text02 form_w21" style="z-index:10"> 
+											<input id="searchStartDate" name="searchStartDate" type="text" readonly="readonly" value="" />
+										</span>
+										~
+										<span class="input_text02 form_w21" style="z-index:10">
+											<input id="searchEndDate" name="searchEndDate" type="text" readonly="readonly" value=""/>
+										</span>
+										<!-- //131002_수정 -->
+									</td>
+									<td class="txtR">
+										<a class="btn_gray03" href="#none"><span>1주일</span></a>
+										<a class="btn_blue01" href="#none"><span>1개월</span></a>
+										<a class="btn_gray03" href="#none"><span>3개월</span></a>
+									</td>
+								</tr>
+								<tr>
+									<th>전시상태</th>
+									<td colspan="3">
+										<!-- select -->
+										<div class="slt select2">
+											<a href="#none" class="title" title="콘텐츠유헝">전체</a>
+											<ul>
+												<li><a href="#none">전시중</a></li>
+												<li><a href="#none">전시대기</a></li>
+												<li><a href="#none">전시중지</a></li>
+												<li><a href="#none">기간종료</a></li>
+											</ul>
+										</div>								
+									</td>									
+								</tr>
+								<tr>
+									<th>검색조건</th>
+									<td>
+										<!-- select -->
+										<div class="slt select2">
+											<a href="#none" class="title" title="콘텐츠유헝">콘텐츠 명</a>
+											<ul>
+												<li><a href="#none">콘텐츠 명</a></li>
+												<li><a href="#none">콘텐츠 ID</a></li>
+												<li><a href="#none">광고주</a></li>
+											</ul>
+										</div>
+									</td>
+									<td>
+										<!-- select // -->
+										<span class="input_text02 form_w20">
+											<input id="tel" type="text" />
+											<a href="#none" class="calendar"><img src="img/ico_search.png" alt="검색" /></a>
+										</span>
+									</td>
+									<td class="type01">
+										<span class="mr10">서비스 최근 반영일 : 2013-09-02</span><a href="#none" class="btn_blue03"><span>서비스 최종반영</span><a>										
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="type01">
+										<a href="#none" class="btn_gray08"><span>New 하우스 배너 등록</span></a>
+										<a href="#none" class="btn_gray09"><span>New 콘텐츠 등록</span></a>										
+										<a href="#none" class="btn_gray10"><span>엑셀파일 다운로드</span></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<!-- search -->
+					<!--tab-->
+					<section class="tab">
+						<!-- 131002_수정 -->
+						<ul class="clickTab">
+							<li class="tab_on noBR"><a href="#">전시관리 콘텐츠</a></li>
+							<li class="noBR"><a href="#">기간종료 콘텐츠</a></li>
+							<li><a href="#">하우스 배너</a></li>
+						</ul>
+						<!-- //131002_수정 -->
+					</section>
+					<!--tab end-->
+
+					<!-- 131002_수정 -->
+					<section class="tabContainer">
+						<div class="tabBlueListCon">
+							<table cellspacing="0" cellpadding="0" class="tb_reference">
+								<colgroup>
+									<col width="45px;" />
+									<col width="117px" />
+									<col width="*" />
+									<col width="108px" />
+									<col width="118px" />
+									<col width="118px" />
+									<col width="126px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="blueBg">No.</th>
+										<th scope="col" class="blueBg">이미지</th>
+										<th scope="col" class="blueBg">콘텐츠 명</th>
+										<th scope="col" class="blueBg">전시상태</th>
+										<th scope="col" class="blueBg">시작일</th>
+										<th scope="col" class="blueBg">종료일</th>
+										<th scope="col" class="blueBg noBR">등록일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>										
+										<td class="num noMR noBB">15</td>
+										<td class="noBB"><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01 noBB">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td class="noBB">전시중<br><a href="#" class='stBtn'><img src="img/btn_exStop.gif" alt='전시중지' /></a></td>
+										<td class="noBB">2013-08-05 00:00</td>
+										<td class="noBB">-</td>
+										<td class="noBR noBB">-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="tabListCon">
+							<table cellspacing="0" cellpadding="0" class="tb_reference">
+								<colgroup>
+									<col width="45px;" />
+									<col width="117px" />
+									<col width="*" />
+									<col width="108px" />
+									<col width="118px" />
+									<col width="118px" />
+									<col width="108px" class="colStyle" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="noMR">No.</th>
+										<th scope="col">이미지</th>
+										<th scope="col">콘텐츠 명</th>
+										<th scope="col">전시상태</th>
+										<th scope="col">시작일</th>
+										<th scope="col">종료일</th>
+										<th scope="col" class="noBR">등록일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>										
+										<td class="num noMR">14</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">13</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">다음 카페</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">12</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">다음</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">11</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버</a>
+										</td>
+										<td>전시중지<br><a href="#" class='stBtn'><img src="img/btn_exStanby.gif" alt='전시대기' /></a></td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>	
+									<tr>										
+										<td class="num noMR">10</td>										
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 카페</a>
+										</td>
+										<td>전시중지<br><a href="#" class='stBtn'><img src="img/btn_exStanby.gif" alt='전시대기' /></a></td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">9</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">티스토리</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">8</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>	
+									<tr>										
+										<td class="num noMR">7</td>										
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">6</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">5</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>	
+									<tr>										
+										<td class="num noMR">4</td>										
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">3</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+									<tr>										
+										<td class="num noMR">2</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>	
+									<tr>										
+										<td class="num noMR">1</td>
+										<td><img src="img/bg_noImg.gif" alt="" /></td>
+										<td class="type01">
+											<a href="#none">네이버 블로그</a>
+										</td>
+										<td>전시대기</td>
+										<td>2013-08-05 00:00</td>
+										<td>2013-08-20 00:00</td>
+										<td class="noBR">2013-03-23</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+					<!-- //131002_수정 -->
+					
+					
+				</div>
+				<!-- //contents -->
+			</div>
+		</div>
+	</article>
+
+	<footer>
+		<address>
+			<p><img src="img/img_footer.png" alt="" /></p>
+			<ul class="blind">
+				<li><strong>대표이사</strong> 서진우</li>
+				<li><strong>주소</strong> 서울 중구 을지로2가 11</li>
+				<li><strong>사업자등록번호</strong> 104-86-36968</li>
+				<li><strong>통신판매업신고</strong> 제2011-서울중구-1333호</li>
+				<li><strong>Copyright</strong>      2013 SK Planet.</li>
+				<li><strong>고객센터</strong> 1588-7898 (월~금 9:00~18:00, 공휴일 휴무)</li>
+				<li><strong>기술문의</strong> support@t-ad.co.kr</li>
+				<li><strong>SDK 배포/사업문의</strong> svcadmin@t-ad.co.kr</li>
+			</ul>
+		</address>
+	</footer>
+</body>
+</html>

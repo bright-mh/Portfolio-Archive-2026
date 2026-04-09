@@ -1,0 +1,1097 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.dotdotdot.min.js"></script>
+    <style type="text/css">
+      #mainCon {
+        width: 100%;
+        background: #dce1e6;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        height: 1618px;
+        overflow: hidden;
+        padding-top: 111px;
+      }
+      #mainCon .content {
+        width: 1000px;
+        position: relative;
+        left: 0;
+        top: 12px;
+        height: 1436px;
+        overflow: hidden;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      #mainCon .smallBox {
+        width: 480px;
+        height: 347px;
+        border-top: 1px solid #ced2d9;
+        border-left: 1px solid #ced2d9;
+        border-right: 1px solid #ced2d9;
+        border-bottom: 2px solid #ced2d9;
+        background: #fff;
+        position: absolute;
+      }
+      #mainCon .bigBox {
+        width: 974px;
+        height: 347px;
+        border-top: 1px solid #ced2d9;
+        border-left: 1px solid #ced2d9;
+        border-right: 1px solid #ced2d9;
+        border-bottom: 2px solid #ced2d9;
+        background: #fff;
+        position: absolute;
+      }
+
+      /*1000*/
+      #mainCon .todayEn {
+        left: 12px;
+        top: 0px;
+      }
+      #mainCon .elecPeak {
+        left: 506px;
+        top: 0px;
+      }
+      #mainCon .enUse {
+        left: 12px;
+        top: 362px;
+      }
+      #mainCon .usePattern {
+        left: 12px;
+        top: 724px;
+      }
+      #mainCon .charge {
+        left: 12px;
+        top: 1086px;
+      }
+      #mainCon .preparing {
+        left: 506px;
+        top: 1086px;
+      }
+
+      #mainCon section .wrapCon {
+        width: 420px;
+        margin-left: 30px;
+        height: 100%;
+      }
+      #mainCon section .wrapCon .tit {
+        clear: both;
+        width: 100%;
+        height: 52px;
+        background: url(/html/2014/bems/images/common/main_tit_bg.gif) repeat-x left bottom;
+      }
+      #mainCon section .wrapCon h1 {
+        font-size: 12px;
+        color: #0c0d0d;
+        font-weight: bold;
+        float: left;
+        margin-top: 23px;
+      }
+      #mainCon .enUse .wrapCon,
+      #mainCon .usePattern .wrapCon {
+        width: 914px;
+      }
+
+      #mainCon section .wrapCon .con {
+        margin-top: 15px;
+        width: 100%;
+      }
+      #mainCon section.todayEn .topBox {
+        clear: both;
+        width: 100%;
+        height: 42px;
+      }
+      #mainCon section.todayEn .icon {
+        float: left;
+        margin: 4px 0 0 10px;
+      }
+      #mainCon section.todayEn .grap {
+        float: right;
+      }
+      #mainCon section.todayEn .grap {
+        width: 370px;
+      }
+      #mainCon section.todayEn .grap .tGrap,
+      #mainCon section.todayEn .grap .mGrap,
+      #mainCon section.todayEn .grap .bGrap {
+        width: 100%;
+      }
+      #mainCon section.todayEn .grap .tGrap .realData {
+        height: 14px;
+        width: 70%;
+        background: #ed8672;
+      }
+      #mainCon section.todayEn .grap .mGrap .realData {
+        height: 14px;
+        width: 60%;
+        background: #f7beb2;
+      }
+      #mainCon section.todayEn .grap .mGrap .maxData {
+        height: 14px;
+        width: 85%;
+        background: #ececee;
+      }
+      #mainCon section.todayEn .grap .bGrap .realData {
+        height: 14px;
+        width: 80%;
+        background: #b9462f;
+      }
+      #mainCon section.todayEn .grap .bGrap .maxData {
+        height: 14px;
+        width: 100%;
+        background: #d7d8db;
+      }
+
+      #mainCon section.todayEn .table table td {
+        border: 0px;
+        text-align: center;
+      }
+      #mainCon section.todayEn .table {
+        width: 370px;
+        margin: 8px 0 0 51px;
+      }
+      #mainCon section.todayEn .table table tr {
+        height: 16px;
+      }
+      #mainCon section.todayEn .table table tr td {
+        padding: 0px;
+        color: #4b4b4c;
+        position: relative;
+        line-height: 12px;
+      }
+      #mainCon section.todayEn .table table tr td span.point1 {
+        font-weight: bold;
+        color: #ed6d53;
+      }
+      #mainCon section.todayEn .table table tr td img {
+        position: absolute;
+        left: 0;
+        top: 3px;
+      }
+      #mainCon section.todayEn .table table tr.head {
+        font-size: 12px;
+        color: #333;
+        font-weight: bold;
+        height: 19px;
+      }
+      #mainCon section.todayEn .table table tr td.title {
+        width: 14%;
+      }
+      #mainCon section.todayEn .table table tr td.timeAmount {
+        width: 50%;
+      }
+      #mainCon section.todayEn .table table tr td.todayAmount {
+        width: 36%;
+      }
+
+      #mainCon section.todayEn .gasArea {
+        margin-top: 33px;
+      }
+      #mainCon section.todayEn .gasArea .grap .tGrap .realData {
+        height: 14px;
+        width: 50%;
+        background: #77b4d3;
+      }
+      #mainCon section.todayEn .gasArea .grap .mGrap .realData {
+        height: 14px;
+        width: 70%;
+        background: #b4dcf0;
+      }
+      #mainCon section.todayEn .gasArea .grap .mGrap .maxData {
+        height: 14px;
+        width: 100%;
+        background: #ececee;
+      }
+      #mainCon section.todayEn .gasArea .grap .bGrap .realData {
+        height: 14px;
+        width: 85%;
+        background: #5373a6;
+      }
+      #mainCon section.todayEn .gasArea .grap .bGrap .maxData {
+        height: 14px;
+        width: 90%;
+        background: #d7d8db;
+      }
+      #mainCon section.todayEn .table table tr td span.point2 {
+        font-weight: bold;
+        color: #4396bf;
+        margin-top: 15px;
+      }
+
+      /*일반 전력 피크*/
+      #mainCon .elecPeak .peakBox {
+        width: 100%;
+        height: 54px;
+        border-bottom: 1px solid #eaeaea;
+        margin-top: 15px;
+        clear: both;
+      }
+      #mainCon .elecPeak .peakBox .left {
+        float: left;
+        margin-top: -7px;
+      }
+      #mainCon .elecPeak .peakBox .left .data {
+        vertical-align: bottom;
+        font-size: 55px;
+        font-weight: bold;
+        color: #333;
+      }
+      #mainCon .elecPeak .peakBox .left .data .unit {
+        font-size: 21px;
+      }
+      #mainCon .elecPeak .peakBox .left .data .time {
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 15px;
+      }
+      #mainCon .elecPeak .warning {
+        float: right;
+        margin: 6px 15px 0 0;
+      }
+      #mainCon .elecPeak .dataBox {
+        clear: both;
+        width: 100%;
+        height: 173px;
+        margin-top: 23px;
+      }
+      #mainCon .elecPeak .dataBox .cirGrap {
+        width: 181px;
+        height: 173px;
+        float: left;
+        margin-left: 30px;
+      }
+      #mainCon .elecPeak .tableData {
+        float: right;
+        margin: 50px 0 0 0px;
+      }
+      #mainCon .elecPeak .tableData table {
+        font-size: 12px;
+        color: #333;
+      }
+      #mainCon .elecPeak .tableData table tr {
+        font-weight: bold;
+        height: 19px;
+      }
+      #mainCon .elecPeak .tableData table .head {
+        height: 26px;
+      }
+      #mainCon .elecPeak .tableData table td {
+        width: 79px;
+        font-weight: normal;
+      }
+      #mainCon .elecPeak .tableData table td.unit {
+        width: 90px;
+      }
+      #mainCon .elecPeak .tableData table .head td {
+        font-weight: bold;
+      }
+
+      /*에너지 사용량*/
+      #mainCon .tabSelectBox {
+        float: right;
+        margin-right: 10px;
+      }
+      #mainCon .tabSelectBox ul li {
+        float: left;
+      }
+      #mainCon .tabSelectBox ul li div {
+        width: 60px;
+        height: 29px;
+        padding-top: 23px;
+        text-align: center;
+      }
+      #mainCon .tabSelectBox ul li div span {
+        font-size: 12px;
+        color: #4b4b4c;
+      }
+      #mainCon .tabSelectBox ul li.over div {
+        background: url(/html/2014/bems/images/common/main_tab_over.gif) repeat-x left bottom;
+        font-weight: bold;
+      }
+
+      /*에너지 사용패턴*/
+      #mainCon .enUse .grapArea {
+        width: 100%;
+        height: 295px;
+      }
+
+      /*에너지 사용패턴*/
+      #mainCon .usePattern .conBox {
+        position: relative;
+        width: 100%;
+        height: 295px;
+        background: #fff;
+      }
+      #mainCon .usePattern .conBox .cusTomselec {
+        position: absolute;
+        right: 38px;
+        top: 18px;
+        font-size: 12px;
+        color: #4b4b4c;
+        clear: both;
+      }
+      /*#mainCon .usePattern .conBox .cSelec{width:127px; border:1px solid #d8dce1; border-right:none; float:left; height:20px; padding:8px 0 0 10px; background:#fafafa;}
+		#mainCon .usePattern .conBox img{float:left;}*/
+      #mainCon .usePattern .grapArea2 {
+        position: relative;
+        top: 48px;
+        width: 100%;
+        height: 247px;
+      }
+      #mainCon .usePattern .conBox .btnBox {
+        width: 170px;
+        clear: both;
+        height: 30px;
+      }
+      #mainCon .usePattern .compare {
+        float: left;
+        vertical-align: middle;
+        height: 21px;
+        padding-top: 9px;
+        margin-right: 12px;
+      }
+      #mainCon .usePattern .cusArea {
+        float: left;
+      }
+      #mainCon .usePattern .conBox .btnBox .select2-chosen {
+        padding-top: 7px;
+      }
+      #mainCon .usePattern .conBox .btnBox .select2-choice {
+        border-radius: 0px;
+      }
+
+      #mainCon .tit .numBox {
+        float: right;
+        font-size: 30px;
+        color: #0c0d0d;
+        font-weight: bold;
+        margin-top: 10px;
+        letter-spacing: -1px;
+      }
+      #mainCon .tit .numBox .unit {
+        letter-spacing: 0px;
+      }
+      #mainCon .dataBox02 {
+        height: 110px;
+        width: 100%;
+        background: #bbb;
+        margin-top: 15px;
+        clear: both;
+      }
+      #mainCon .dataBox03 {
+        height: 110px;
+        width: 100%;
+        background: #ed6d53;
+        margin-top: 15px;
+        clear: both;
+      }
+
+      #mainCon .icon {
+        float: right;
+      }
+      #mainCon .dataBox02 .icon {
+        margin: 28px 33px 0 0;
+      }
+      #mainCon .dataBox03 .icon {
+        margin: 17px 35px 0 0;
+      }
+      #mainCon .dataBox02 .left,
+      #mainCon .dataBox03 .left {
+        float: left;
+        margin: 23px 0 0 27px;
+        color: #fff;
+      }
+      #mainCon .dataBox02 .left .txt01,
+      #mainCon .dataBox03 .left .txt01 {
+        font-size: 12px;
+        font-weight: bold;
+      }
+      #mainCon .dataBox02 .left .data01,
+      #mainCon .dataBox03 .left .data01 {
+        font-size: 54px;
+        font-weight: bold;
+      }
+      #mainCon .dataBox02 .left .data01 span,
+      #mainCon .dataBox03 .left .data01 span {
+        font-size: 23px;
+        font-weight: bold;
+      }
+
+      #mainCon .dataTable {
+        margin-top: 20px;
+        width: 100%;
+      }
+      #mainCon .dataTable table {
+        width: 100%;
+        color: #b4b4c;
+      }
+      #mainCon .dataTable table tr {
+        height: 32px;
+      }
+      #mainCon .dataTable table tr.color {
+        background: #f6f7fa;
+      }
+      #mainCon .dataTable table .head {
+        font-weight: bold;
+        color: #323233;
+      }
+
+      #mainCon .dataTable table .thr {
+        width: 25%;
+      }
+      #mainCon .dataTable table td {
+        text-align: center;
+      }
+      #mainCon .dataTable table td {
+        text-align: right;
+        padding-right: 15px;
+      }
+      #mainCon .dataTable table td.four {
+        text-align: right;
+        padding-right: 45px;
+      }
+      #mainCon .dataTable table .head td.four {
+        text-align: right;
+        padding-right: 30px;
+      }
+      #mainCon .dataTable table .head td.sec {
+        padding-right: 25px;
+      }
+      #mainCon .dataTable table td img {
+        margin-left: 5px;
+      }
+
+      #mainCon .preparing .dataTable table .thr {
+        width: 30%;
+      }
+      #mainCon .preparing .dataTable table .head .thr {
+        padding-right: 30px;
+      }
+      #mainCon .preparing .dataTable table .four {
+        padding-right: 25px;
+      }
+      #mainCon .preparing .dataTable table .head td.four {
+        padding-right: 30px;
+      }
+
+      .rss {
+        width: 974px;
+        height: 55px;
+        background: #fff;
+        position: relative;
+        left: 12px;
+        top: 5px;
+        border-top: 1px solid #ced2d9;
+        border-left: 1px solid #ced2d9;
+        border-right: 1px solid #ced2d9;
+        border-bottom: 2px solid #ced2d9;
+        overflow: hidden;
+        clear: both;
+      }
+
+      .rss .feedBox {
+        margin-top: 23px;
+        float: left;
+        width: 918px;
+      }
+      .rss .feedBox div {
+        float: left;
+        width: 814px;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        display: block;
+        height: 14px;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+      }
+      .rss .feedBox .date {
+        float: right;
+        color: #898a8c;
+        font-size: 12px;
+        margin-right: 30px;
+      }
+      .rss .tit {
+        color: #19191a;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0 20px 0 30px;
+      }
+      .rss .part {
+        color: #19191a;
+        font-weight: bold;
+        font-size: 12px;
+      }
+      .rss .stit {
+        color: #4b4b4c;
+        font-weight: bold;
+        font-size: 12px;
+        margin-left: 20px;
+      }
+      .rss .place {
+        color: #4b4b4c;
+        font-size: 12px;
+      }
+      .rss .rss_btn {
+        float: right;
+      }
+
+      footer {
+        width: 976px;
+        height: 90px;
+        margin-left: 12px;
+        padding-top: 10px;
+        position: relative;
+      }
+      footer .leftBox {
+        clear: both;
+        color: #8a9099;
+        font-size: 11px;
+      }
+      footer .address span {
+        margin: 0 3px;
+      }
+      footer .leftBox .logo {
+        float: left;
+        width: 117px;
+        height: 66px;
+        margin: 0 54px 0 17px;
+        color: #8a9099;
+        font-size: 11px;
+      }
+      footer .leftBox .copyBox {
+        float: left;
+        margin-top: 15px;
+        color: #8a9099;
+        font-size: 11px;
+      }
+      footer .leftBox .copy {
+        margin-top: 3px;
+      }
+      footer .leftBox p {
+        color: #8a9099;
+        font-size: 11px;
+      }
+      footer .leftBox .brow {
+        margin-top: 5px;
+        color: #8a9099;
+        font-size: 11px;
+      }
+      footer .leftBox .brow .part {
+        margin: 0 2px 0 5px;
+      }
+      footer .leftBox .brow span {
+        color: #8a9099;
+        font-size: 11px;
+        margin-left: 5px;
+      }
+      footer .fBtn {
+        position: absolute;
+        right: 0;
+        top: 15px;
+      }
+    </style>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        $("#e1").select2(); //select 2.0
+        $(".rss .feedBox p").dotdotdot();
+
+        jQuery(window).resize(function () {
+          responOfMain();
+        });
+
+        var smallWid = [];
+        var bigWid = [];
+        var layoutXpos = [];
+        var layoutYpos = [];
+
+        smallWid = [480, 381];
+        bidWid = [974, 784];
+
+        layoutXpos = [
+          [12, 506, 12, 12, 12, 506],
+          [12, 12, 407, 407, 1205, 1205],
+        ];
+        layoutYpos = [
+          [0, 0, 362, 724, 1086, 1086],
+          [0, 362, 0, 362, 0, 362],
+        ];
+        function responOfMain() {
+          var wW = jQuery(window).width();
+          var sBox = jQuery("#mainCon .smallBox");
+          var bBox = jQuery("#mainCon .bigBox");
+          var con = jQuery("#mainCon .content");
+
+          var box1 = jQuery("#mainCon .todayEn");
+          var box2 = jQuery("#mainCon .elecPeak");
+          var box3 = jQuery("#mainCon .enUse");
+          var box4 = jQuery("#mainCon .usePattern");
+          var box5 = jQuery("#mainCon .charge");
+          var box6 = jQuery("#mainCon .preparing");
+
+          var conWrap = jQuery("#mainCon section .wrapCon");
+          var conWrapBig = jQuery("#mainCon section.bigBox .wrapCon");
+
+          var box1_grapBox = jQuery("#mainCon section.todayEn .grap");
+          var box1_table = jQuery("#mainCon section.todayEn .table");
+
+          var peakGrap = jQuery("#mainCon .elecPeak .dataBox .cirGrap");
+          var peakTableFTd = jQuery("#mainCon .elecPeak .tableData table td");
+          var peakTableSTd = jQuery("#mainCon .elecPeak .tableData table td.unit");
+
+          var cusboxData1 = jQuery("#mainCon .dataBox02 .left");
+          var cusboxData2 = jQuery("#mainCon .dataBox03 .left");
+
+          var cusboxIcon1 = jQuery("#mainCon .dataBox02 .icon");
+          var cusboxIcon2 = jQuery("#mainCon .dataBox03 .icon");
+
+          var rss = jQuery(".rss");
+          var rssFeedBox = jQuery(".rss .feedBox");
+          var rssDotDot = jQuery(".rss .feedBox p");
+          /*
+				
+				.rss .feedBox{ margin-top:23px; float:left; width:918px;}
+				.rss .feedBox p{float:left; width:814px; text-overflow:ellipsis !important; overflow:hidden !important;  display:block; height:14px;}
+				
+				*/
+          var main = jQuery("#mainCon");
+          var footer = jQuery("footer");
+
+          if (wW >= 1600) {
+            TweenMax.to(sBox, 0.3, { width: smallWid[1] });
+            TweenMax.to(bBox, 0.3, { width: bidWid[1] });
+            TweenMax.to(box1, 0.3, { left: layoutXpos[1][0], top: layoutYpos[1][0] });
+            TweenMax.to(box2, 0.3, { left: layoutXpos[1][1], top: layoutYpos[1][1] });
+            TweenMax.to(box3, 0.3, { left: layoutXpos[1][2], top: layoutYpos[1][2] });
+            TweenMax.to(box4, 0.3, { left: layoutXpos[1][3], top: layoutYpos[1][3] });
+            TweenMax.to(box5, 0.3, { left: layoutXpos[1][4], top: layoutYpos[1][4] });
+            TweenMax.to(box6, 0.3, { left: layoutXpos[1][5], top: layoutYpos[1][5] });
+
+            con.css({ width: "1600px", height: "712px" });
+            conWrap.css({ "margin-left": "20px", width: "341px" });
+            conWrapBig.css({ width: "744px" });
+            box1_grapBox.css({ width: "290px" });
+            box1_table.css({ width: "290px" });
+            peakTableFTd.css({ width: "69px" });
+            peakTableSTd.css({ width: "57px" });
+            peakGrap.css({ "margin-left": "5px" });
+            cusboxData1.css({ "margin-left": "17px" });
+            cusboxData2.css({ "margin-left": "17px" });
+            cusboxIcon1.css({ "margin-right": "23px" });
+            cusboxIcon2.css({ "margin-right": "25px" });
+            rss.css({ width: "1575px" });
+            rssFeedBox.css({ width: "1518px" });
+            rssDotDot.css({ width: "1412px" });
+            main.css({ height: "895px" });
+            footer.css({ width: "1576px" });
+          } else {
+            TweenMax.to(sBox, 0.3, { width: smallWid[0] });
+            TweenMax.to(bBox, 0.3, { width: bidWid[0] });
+            TweenMax.to(box1, 0.3, { left: layoutXpos[0][0], top: layoutYpos[0][0] });
+            TweenMax.to(box2, 0.3, { left: layoutXpos[0][1], top: layoutYpos[0][1] });
+            TweenMax.to(box3, 0.3, { left: layoutXpos[0][2], top: layoutYpos[0][2] });
+            TweenMax.to(box4, 0.3, { left: layoutXpos[0][3], top: layoutYpos[0][3] });
+            TweenMax.to(box5, 0.3, { left: layoutXpos[0][4], top: layoutYpos[0][4] });
+            TweenMax.to(box6, 0.3, { left: layoutXpos[0][5], top: layoutYpos[0][5] });
+
+            con.css({ width: "1000px", height: "1436px" });
+            conWrap.css({ "margin-left": "30px", width: "420px" });
+            conWrapBig.css({ width: "914px" });
+            box1_grapBox.css({ width: "370px" });
+            box1_table.css({ width: "370px" });
+            peakTableFTd.css({ width: "79px" });
+            peakTableSTd.css({ width: "90px" });
+            peakGrap.css({ "margin-left": "30px" });
+            cusboxData1.css({ "margin-left": "27px" });
+            cusboxData2.css({ "margin-left": "27px" });
+            cusboxIcon1.css({ "margin-right": "33px" });
+            cusboxIcon2.css({ "margin-right": "35px" });
+            rss.css({ width: "974px" });
+            rssFeedBox.css({ width: "918px" });
+            rssDotDot.css({ width: "814px" });
+            main.css({ height: "1618px" });
+            footer.css({ width: "976px" });
+          } //E if
+        } //E fun
+
+        responOfMain();
+      }); //E ready
+    </script>
+  </head>
+
+  <body>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+
+    <!-- container -->
+    <div id="mainCon">
+      <div class="content">
+        <section class="smallBox todayEn">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>오늘의 에너지 사용량</h1>
+            </div>
+
+            <div class="con">
+              <div class="eleckArea">
+                <div class="topBox">
+                  <div class="icon"><img src="/html/2014/bems/images/common/icon_spark.gif" alt="전기 아이콘" /></div>
+                  <div class="grap">
+                    <div class="tGrap">
+                      <div class="maxData">
+                        <div class="realData"></div>
+                      </div>
+                    </div>
+                    <div class="mGrap">
+                      <div class="maxData">
+                        <div class="realData"></div>
+                      </div>
+                    </div>
+                    <div class="bGrap">
+                      <div class="maxData">
+                        <div class="realData"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr class="head">
+                      <td class="title">전기</td>
+                      <td class="timeAmount">16:50까지 사용량</td>
+                      <td class="todayAmount">1일 총 사용량</td>
+                    </tr>
+                    <tr>
+                      <td><img src="/html/2014/bems/images/common/elect_icon1.gif" alt="" />오늘</td>
+                      <td><span class="point1">840 kWh</span></td>
+                      <td><span class="point1">-</span></td>
+                    </tr>
+                    <tr>
+                      <td><img src="/html/2014/bems/images/common/elect_icon2.gif" alt="" />어제</td>
+                      <td>930 kWh</td>
+                      <td>9,300 kWh</td>
+                    </tr>
+                    <tr>
+                      <td><img src="/html/2014/bems/images/common/elect_icon3.gif" alt="" />작년</td>
+                      <td>112 kWh</td>
+                      <td>12,570 kWh</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <div class="gasArea">
+                <div class="topBox">
+                  <div class="icon"><img src="/html/2014/bems/images/common/icon_fire.gif" alt="불 아이콘" /></div>
+                  <div class="grap">
+                    <div class="tGrap">
+                      <div class="maxData">
+                        <div class="realData"></div>
+                      </div>
+                    </div>
+                    <div class="mGrap">
+                      <div class="maxData">
+                        <div class="realData"></div>
+                      </div>
+                    </div>
+                    <div class="bGrap">
+                      <div class="maxData">
+                        <div class="realData"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr class="head">
+                      <td class="title">가스</td>
+                      <td class="timeAmount">16:50까지 사용량</td>
+                      <td class="todayAmount">1일 총 사용량</td>
+                    </tr>
+                    <tr>
+                      <td><img src="/html/2014/bems/images/common/gas_icon1.gif" alt="" />오늘</td>
+                      <td><span class="point2">840 kWh</span></td>
+                      <td><span class="point2">-</span></td>
+                    </tr>
+                    <tr>
+                      <td><img src="/html/2014/bems/images/common/gas_icon2.gif" alt="" />어제</td>
+                      <td>930 kWh</td>
+                      <td>9,300 kWh</td>
+                    </tr>
+                    <tr>
+                      <td><img src="/html/2014/bems/images/common/gas_icon3.gif" alt="" />작년</td>
+                      <td>112 kWh</td>
+                      <td>12,570 kWh</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="smallBox elecPeak">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>일반전력 피크</h1>
+            </div>
+            <div class="peakBox">
+              <div class="left">
+                <div class="data">184<span class="unit">Kw</span><span class="time">오늘 16:50</span></div>
+              </div>
+              <div class="warning">
+                <img src="/html/2014/bems/images/common/icon_warning.gif" alt="경고" />
+              </div>
+            </div>
+            <div class="dataBox">
+              <div class="cirGrap" style="background: #ccc">그래프 영역</div>
+              <div class="tableData">
+                <table border="1" cellpadding="0" cellspacing="0">
+                  <tr class="head">
+                    <td>오늘 최대</td>
+                    <td class="unit01">527 kW</td>
+                  </tr>
+                  <tr>
+                    <td>올해 목표</td>
+                    <td>840kW</td>
+                  </tr>
+                  <tr>
+                    <td>올해 피크</td>
+                    <td>930 kW</td>
+                  </tr>
+                  <tr>
+                    <td>작년 피크</td>
+                    <td>1,112 kW</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bigBox enUse">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>에너지 사용량</h1>
+              <div class="tabSelectBox">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><div><span>일별</span></div></a
+                    >
+                  </li>
+                  <li class="over">
+                    <a href="#"
+                      ><div><span>월별</span></div></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><div><span>연별</span></div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grapArea" style="background: #ccc">그래프 영역</div>
+          </div>
+        </section>
+
+        <section class="bigBox usePattern">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>에너지 사용패턴</h1>
+              <div class="tabSelectBox">
+                <ul>
+                  <li class="over">
+                    <a href="#"
+                      ><div><span>전기</span></div></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><div><span>가스</span></div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="conBox">
+              <div class="cusTomselec">
+                <div class="compare">오늘의 사용량 VS</div>
+                <div class="cusArea">
+                  <select id="e1" class="btnBox">
+                    <option value="week">최근 1주일 평균</option>
+                    <option value="today">오늘</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grapArea2" style="background: #ccc">그래프 영역</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="smallBox charge">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>9월 에너지 납부 요금</h1>
+              <div class="numBox">85,760,000 <span class="unit">원</span></div>
+            </div>
+            <div class="dataBox02">
+              <div class="left">
+                <div class="txt01">작년 동월대비</div>
+                <div class="data01">23.50<span>%</span></div>
+              </div>
+              <div class="icon">
+                <img src="/html/2014/bems/images/common/main_down_icon.gif" alt="" />
+              </div>
+            </div>
+            <div class="dataTable">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr class="head">
+                  <td class="fir"></td>
+                  <td class="sec">9월 요금</td>
+                  <td class="thr">8월 대비</td>
+                  <td class="four">작년 동월대비</td>
+                </tr>
+                <tr class="color">
+                  <td class="fir">전체</td>
+                  <td class="sec">85,760,000원</td>
+                  <td class="thr">3.50%<img src="/html/2014/bems/images/common/table_icon_down.png" alt="" /></td>
+                  <td class="four">23.50%<img src="/html/2014/bems/images/common/table_icon_up.png" alt="" /></td>
+                </tr>
+                <tr>
+                  <td class="fir">전기</td>
+                  <td class="sec">10,760,000원</td>
+                  <td class="thr">13.52%<img src="/html/2014/bems/images/common/table_icon_same.png" alt="" /></td>
+                  <td class="four">3.56%<img src="/html/2014/bems/images/common/table_icon_up.png" alt="" /></td>
+                </tr>
+                <tr class="color">
+                  <td class="fir">가스</td>
+                  <td class="sec">42,000,000원</td>
+                  <td class="thr">3.50%<img src="/html/2014/bems/images/common/table_icon_up.png" alt="" /></td>
+                  <td class="four">5.52%<img src="/html/2014/bems/images/common/table_icon_down.png" alt="" /></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="smallBox preparing">
+          <div class="wrapCon">
+            <div class="tit">
+              <h1>10월 목표대비 사용량</h1>
+              <div class="numBox">0.1234567 <span class="unit">toe</span></div>
+            </div>
+            <div class="dataBox03">
+              <div class="left">
+                <div class="txt01">목표대비 사용율</div>
+                <div class="data01">30.25<span>%</span></div>
+              </div>
+              <div class="icon">
+                <img src="/html/2014/bems/images/common/main_target_icon.gif" alt="" />
+              </div>
+            </div>
+
+            <div class="dataTable">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr class="head">
+                  <td class="fir"></td>
+                  <td class="sec">목표량</td>
+                  <td class="thr">사용량</td>
+                  <td class="four">사용율</td>
+                </tr>
+                <tr class="color">
+                  <td class="fir">전체</td>
+                  <td class="sec">0.8731200 toe</td>
+                  <td class="thr">0.1731200 toe</td>
+                  <td class="four">30.25%</td>
+                </tr>
+                <tr>
+                  <td class="fir">전기</td>
+                  <td class="sec">1,013.76 kWh</td>
+                  <td class="thr">1,013.76 kWh</td>
+                  <td class="four">30.00%</td>
+                </tr>
+                <tr class="color">
+                  <td class="fir">가스</td>
+                  <td class="sec">1,013.76 30.25%</td>
+                  <td class="thr">1,013.76 30.25%</td>
+                  <td class="four">53.40%</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- RSS -->
+      <div class="rss">
+        <div class="feedBox">
+          <div style="white-space: nowrap">
+            <div style="white-space: nowrap">
+              <!--span class="tit" style="float;left;">에너지 뉴스</span> 
+					<span class="part" style="float;left;"><img src="/html/2014/bems/images/common/rss_part.gif" alt=""/></span>
+					<span class="stit" style="float;left;">그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나</span><span class="place" style="float;left;">&nbsp;- 산업교육연구소 전략품목교육센터 전략품목 전략략</span-->
+              그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나그린 건축물 적용 에너지 절감/통합관리
+              신기술 및 사업전략 세미나그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나그린 건축물 적용
+              에너지 절감/통합관리 신기술 및 사업전략 세미나그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략
+              세미나그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나그린 건축물 적용 에너지 절감/통합관리
+              신기술 및 사업전략 세미나그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나
+            </div>
+          </div>
+          <div class="date">[2013.10.30]</div>
+        </div>
+
+        <div class="rss_btn">
+          <a href="#"><img src="/html/2014/bems/images/common/rss_btn.gif" alt="더보기" /></a>
+        </div>
+      </div>
+      <!-- //RSS -->
+
+      <!-- footer -->
+      <footer>
+        <div class="leftBox">
+          <div class="logo">
+            <img src="/html/2014/bems/images/common/footer_logo.gif" alt="SK CLOUD BEMS" />
+          </div>
+          <div class="copyBox">
+            <p class="address">
+              서울특별시 을지로 2가 11번지 SK Telecom <span>|</span> 대표이사: 하성민 <span>|</span> 대표전화: 02)
+              1234-5678 <span>|</span> 사업자등록번호: 104-81-37225
+            </p>
+            <p class="copy">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+            <p class="brow">
+              <img src="/html/2014/bems/images/common/footer_ie.gif" alt="Internet Explorer" /><img
+                src="/html/2014/bems/images/common/footer_part.gif"
+                alt=""
+                class="part"
+              />
+              <img src="/html/2014/bems/images/common/footer_chrome.gif" alt="Chrome" /><img
+                src="/html/2014/bems/images/common/footer_part.gif"
+                alt=""
+                class="part"
+              />
+              <img src="/html/2014/bems/images/common/footer_ff.gif" alt="FireFox" /><img
+                src="/html/2014/bems/images/common/footer_part.gif"
+                alt=""
+                class="part"
+              />
+              <img src="/html/2014/bems/images/common/footer_safari.gif" alt="Safari" />
+              <span
+                >* CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화
+                되어있습니다.</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="fBtn">
+          <a href="#"><img src="/html/2014/bems/images/common/footer_btn.gif" alt="" /></a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //container -->
+  </body>
+</html>

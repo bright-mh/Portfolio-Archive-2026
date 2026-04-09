@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layers");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layers" style="width: 600px">
+      <div class="layers-header2">
+        <h1><img src="../img/popup/h1_certi.gif" alt="성인인증" /></h1>
+        <div class="header-group">
+          <p class="contents2"><span>등급제한이 있는 서비스</span>입니다.</p>
+          <p class="contents">서비스를 이용하기 위해서는 <span>실명인증 절차</span>를 거쳐야 합니다.</p>
+          <p class="footnote">
+            본 정보내용은 청소년 유해매체물로 정보통신망이용촉진 및 정보보호등에 관한 법률 및 청소년보호법의
+            <br />규정에 의하여 19세미만의 청소년이 이용할 수 없습니다.
+          </p>
+        </div>
+      </div>
+      <div class="layers-contents">
+        <p class="layers-desc2">실명인증하기</p>
+        <ul class="ware-list2">
+          <li class="first">
+            <a href="#"><img src="../img/popup/icon_certi01.png" alt="휴대폰으로 인증하기" /></a>
+            <p class="title">휴대폰으로 인증하기 &gt;</p>
+            <p class="description">본인 명의의 휴대폰으로 인증번호를 <br />전송 받아 인증하실 수 있습니다.</p>
+          </li>
+          <li>
+            <a href="#"><img src="../img/popup/icon_certi02.png" alt="I-PIN으로 인증하기" /></a>
+            <p class="title">I-PIN으로 인증하기 &gt;</p>
+            <p class="description">본인 명의의 I-PIN으로<br />인증하실 수 있습니다.</p>
+          </li>
+        </ul>
+        <div class="close">
+          <a href="#"><img src="../img/common/btn/btn_close.gif" alt="닫기" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

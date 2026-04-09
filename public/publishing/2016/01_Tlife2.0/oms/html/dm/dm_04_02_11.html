@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+	<title>미션 생성하기 | T life</title>
+	<link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/common.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/style.css" />
+	<!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script>
+		$(function(){
+			//파일 업로드
+			var fileTarget = $('.filebox .file_hidden');
+
+			fileTarget.on('change', function(){ 
+				if(window.FileReader){  // modern browser
+					var filename = $(this)[0].files[0].name;
+				} else {  // old IE
+					var filename = $(this).val().split('/').pop().split('\\').pop();
+				}
+
+				$(this).siblings('.file_name').val(filename);
+			});
+		});
+    </script>
+</head>
+<body>
+	<!-- skip navi -->
+	<div id="skip_navi">
+		<a href="#gnb"><span>주메뉴로 바로가기</span></a>
+		<a href="#contents"><span>본문으로 바로가기</span></a>
+	</div>
+	<!-- //skip navi -->
+
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="header">
+				<h1><a href="#">T life</a></h1>
+				<div class="top">
+					<h2>T life Operating Management System</h2>
+					<div class="user">
+						<p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+						<div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<div id="container">
+			<!-- GNB -->
+			<nav>
+				<script type="text/javascript">
+					// 현재 메뉴 표시
+					$(function(){
+						$("#gnb>li.gnb2:eq(0)").addClass('on').children('ul').css('display', 'block');
+						$("#gnb>li.gnb2:eq(0)>ul>li:eq(1)").addClass('on');
+						$("#gnb>li.gnb2:eq(0)>ul>li:eq(1)>ul>li:eq(1)").addClass('on');
+					})
+				</script>
+				<div class="gnb_wrap mCustomScrollbar">
+					<ul id="gnb">
+						<li class="depth1 gnb2"><a href="#">전시 관리</a>
+							<ul class="depth_ul1">
+								<li><a href="#">전시관리</a>
+									<ul class="depth_ul2">
+										<li><a href="#">메인 관리</a></li>
+										<li><a href="#">타임오퍼 관리</a></li>
+										<li><a href="#">미션 홈 관리</a></li>
+									</ul>
+								</li>
+								<li><a href="#">상품등록관리</a>
+									<ul class="depth_ul2">
+										<li><a href="#">혜택관리</a></li>
+										<li><a href="#">미션관리</a></li>
+										<li><a href="#">응모관리</a></li>
+										<li><a href="#">외부서비스 관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- //GNB -->
+
+			<!-- contents -->
+			<div id="contents">
+				<!-- section -->
+				<div class="section">
+					<div class="location">
+						<span class="home">홈</span>
+						<span>전시관리</span>
+						<span>상품등록관리</span>
+						<span>미션 관리</span>
+						<strong>미션 생성하기</strong>
+					</div>
+					<h3 class="tit">미션 생성하기</h3>
+
+					<div class="table_list">
+						<div class="comm_right">
+							<em class="ess">필수 입력 항목입니다.</em>
+						</div>
+						<!-- 미션 생성 테이블 -->
+						<div class="table_list_top">
+							<div class="table_wrap">
+								<table class="tbl_list">
+									<caption>
+										<strong>미션 속성, 미션 명, 부가 설명, 마케팅 메시지, 미션 사용자 설정, 상태여부 정보가 있는 미션 생성하기 입력 서식</strong>
+									</caption>
+									<colgroup>
+										<col style="width:130px" />
+										<col style="width:*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><span class="ess">미션 속성</span></th>
+											<td>
+												<!-- 미션타입 : pass 미션 선택 시 옵션 -->
+												<select title="미션 속성 첫번째" style="width:140px">
+													<option>선택해주세요.</option>
+													<option>실적형</option>
+													<option>친구초대 형</option>
+													<option>재방문 형</option>
+													<option>바이럴 형</option>
+													<option>정보입력 형</option>
+													<option selected="selected">광고보기 형</option>
+												</select>
+												<!-- //미션타입 : pass 미션 선택 시 옵션 -->
+
+												<!-- 미션 속성 두번째 : 광고보기 형 선택 시 옵션 -->
+												<select title="미션 속성 두번째" style="width:140px;">
+													<option selected="selected">카탈로그</option>
+													<option>외부링크/동영상</option>
+												</select>
+												<!-- //미션 속성 두번째 : 광고보기 형 선택 시 옵션 -->
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="missionName" class="ess">미션 명</label></th>
+											<td>
+												<input type="text" class="wid_per80" id="missionName" placeholder="미션명을 입력해주세요." />
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="missionDesc" class="ess">부가 설명</label></th>
+											<td>
+												<input type="text" class="wid_per80" id="missionDesc" placeholder="부가 설명을 입력해주세요." />
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="marketingMsg">마케팅 메시지</label></th>
+											<td>
+												<input type="text" class="wid_per80" id="marketingMsg" placeholder="마케팅 메시지를 입력해주세요." />
+											</td>
+										</tr>
+
+										<tr>
+											<th scope="row"><span class="ess">미션 사용자 설정</span></th>
+											<td>
+												<input type="radio" id="user_all" name="user" checked="checked" /><label for="user_all" class="radio_range">All</label>
+												<input type="radio" id="user_skt" name="user" /><label for="user_skt" class="radio_range">SKT only</label>
+											</td>
+										</tr>
+
+										<tr>
+											<th scope="row"><span class="ess">상태여부</span></th>
+											<td>
+												<input type="radio" id="state1" name="state" /><label for="state1" class="radio_range">활성화</label>
+												<input type="radio" id="state2" name="state" checked="checked" /><label for="state2" class="radio_range">비활성화</label>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //미션 생성 테이블 -->
+
+						<!-- 미션 대표 이미지 등록 -->
+						<h4 class="tit">미션 대표 이미지 등록</h4>
+						<div class="table_list_top">
+							<div class="table_wrap">
+								<table class="tbl_list">
+									<caption>
+									<strong>미션 대표 이미지 입력 서식</strong>
+								</caption>
+									<colgroup>
+										<col style="width:130px" />
+										<col style="width:*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">
+												<label for="missionImage" class="ess">미션 이미지</label>
+											</th>
+											<td>
+												<div class="img_area">
+													<img src="../../img/img_noimg.gif" alt="신규 이미지" width="320" height="246" />
+												</div>
+												<div class="file_wrap">
+													<div class="filebox">
+														<input type="text" class="file_name" readonly="readonly" />
+
+														<label for="file_choice">파일선택</label> 
+														<input type="file" id="file_choice" class="file_hidden" />
+													</div>
+													<ul class="caution_list">
+														<li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+														<li>OOO*OOOpx의 PNG 파일업로드</li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //미션 대표 이미지 등록 -->
+
+						<!-- 미션 속성 상세정보 입력 -->
+						<h4 class="tit">미션 속성 상세정보 입력</h4>
+						<p class="gap_btm">※ 카탈로그 이미지는 최소 1개 ~ 최대 12까지 등록이 가능합니다.</p>
+						<div class="table_list_top">
+							<div class="table_wrap">
+								<table class="tbl_list">
+									<caption>
+										<strong>미션 속성 상세정보 입력 서식</strong>
+									</caption>
+									<colgroup>
+										<col style="width:130px" />
+										<col style="width:*" />
+									</colgroup>
+									<tbody>
+										<!-- 이미지 영역1 -->
+										<tr>
+											<th scope="row">
+												<span class="ess">이미지 1</span>
+											</th>
+											<td>
+												<div class="img_area">
+													<img src="../../img/img_noimg.gif" alt="신규 이미지" width="320" height="246" />
+												</div>
+												<div class="file_wrap">
+													<div class="filebox">
+														<input type="text" class="file_name" readonly="readonly" />
+
+														<label for="file_choice2_1">파일선택</label> 
+														<input type="file" id="file_choice2_1" class="file_hidden" />
+														<a href="#" class="btn_small" />삭제</a>
+													</div>
+													<ul class="caution_list">
+														<li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+														<li>OOO*OOOpx의 PNG 파일업로드</li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<!-- //이미지 영역1 -->
+										<!-- 이미지 영역2 -->
+										<tr>
+											<th scope="row">
+												<span class="ess">이미지 2</span>
+											</th>
+											<td>
+												<div class="img_area">
+													<img src="../../img/img_noimg.gif" alt="신규 이미지" width="320" height="246" />
+												</div>
+												<div class="file_wrap">
+													<div class="filebox">
+														<input type="text" class="file_name" readonly="readonly" />
+
+														<label for="file_choice2_2">파일선택</label> 
+														<input type="file" id="file_choice2_2" class="file_hidden" />
+														<a href="#" class="btn_small" />삭제</a>
+													</div>
+													<ul class="caution_list">
+														<li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+														<li>OOO*OOOpx의 PNG 파일업로드</li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<!-- //이미지 영역2 -->
+									</tbody>
+								</table>
+							</div>
+							<div class="btngroup">
+								<div class="btn_right">
+									<a href="#" class="btn_small">추가하기</a>
+								</div>
+							</div>
+						</div>
+						<!-- //미션 속성 상세정보 입력 -->
+
+						<!-- 미션 이용안내 -->
+						<h4 class="tit">미션 이용안내</h4>
+						<div class="table_list">
+							<div class="table_wrap">
+								<table class="tbl_list">
+									<caption>
+										<strong>미션 이용안내 입력 서식</strong>
+									</caption>
+									<colgroup>
+										<col style="width:130px" />
+										<col style="width:*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><label for="useInfo">미션 이용안내</label></th>
+											<td>
+												<textarea class="wid_per80 " id="useInfo"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //미션 이용안내 -->
+
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_cancel">취소</a>
+								<a href="#" class="btn_save">저장</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //section -->
+			</div>
+			<!-- //contents -->
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer>
+			<div id="footer">
+				<h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+				<p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+				<p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+	<!-- //wrap -->
+</body>
+</html>

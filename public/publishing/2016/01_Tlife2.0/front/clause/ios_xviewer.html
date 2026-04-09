@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Xviewer iOS Application OSS</title>
+    <style type="text/css">
+      html,
+      body,
+      form,
+      div,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      dl,
+      dt,
+      dd,
+      ul,
+      ol,
+      li,
+      fieldset,
+      th,
+      td,
+      button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        font-family: "돋움", sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      input,
+      textarea,
+      select,
+      button {
+        font: inherit;
+        vertical-align: middle;
+        padding: 0;
+      }
+      input[type="button"],
+      input[type="text"],
+      input[type="image"],
+      input[type="submit"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="number"],
+      select,
+      textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border-radius: 0;
+      }
+      input[type="checkbox"] {
+        -webkit-appearance: checkbox;
+        -moz-appearance: checkbox;
+      }
+      input[type="radio"] {
+        -webkit-appearance: radio;
+        -moz-appearance: radio;
+      }
+      textarea {
+        resize: none;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      img,
+      fieldset,
+      iframe {
+        border: none;
+      }
+      address,
+      cite,
+      code,
+      dfn,
+      em,
+      var,
+      th,
+      strong {
+        font-style: normal;
+        font-weight: normal;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover,
+      a:visited,
+      a:link {
+        color: #666;
+      }
+      article,
+      aside,
+      dialog,
+      figure,
+      footer,
+      header,
+      hgroup,
+      nav,
+      section {
+        display: block;
+      }
+      img {
+        max-width: 100%;
+        vertical-align: top;
+      }
+      .container-tlife {
+        margin: 18px;
+      }
+      .container-tlife.en {
+        font-family: Tahoma;
+        word-break: break-all;
+      }
+      .container-tlife.ko {
+        font-family: "돋움";
+      }
+      .container-tlife a {
+        color: #0000ff;
+        text-decoration: underline;
+      }
+      .container-tlife .articles {
+        font-size: 13px;
+        color: #333;
+      }
+      .container-tlife .article {
+        margin-bottom: 26px;
+      }
+      .container-tlife .article-title {
+        text-align: left;
+        color: #333;
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      .container-tlife .article-statement {
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+      .container-tlife .article-statement2 {
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+      }
+      .container-tlife .chapter {
+        margin-top: 26px;
+      }
+      .container-tlife .chapter-title {
+        text-align: left;
+        font: bold 15px "돋움";
+        color: #333;
+        margin-bottom: 18px;
+      }
+      .container-tlife .paragraphs {
+        margin-left: 16px;
+        margin-bottom: 10px;
+      }
+      .container-tlife .paragraphs2 {
+        margin-left: 28px;
+        margin-bottom: 10px;
+      }
+      .container-tlife .subparagraphs {
+        padding-left: 16px;
+      }
+      .container-tlife .subparagraphs2 {
+        padding-left: 21px;
+      }
+      .container-tlife .paragraph,
+      .container-tlife .subparagraph {
+        font-size: 13px;
+        line-height: 20px;
+      }
+      .container-tlife .paragraph-number,
+      .container-tlife .subparagraph-number {
+        margin-left: -15px;
+      }
+      .container-tlife .paragraph-number2 {
+        margin-left: -27px;
+      }
+      .container-tlife .subparagraph-number2 {
+        margin-left: -20px;
+      }
+      .container-tlife .term-remark {
+        color: red;
+      }
+      .container-tlife .term-attached-table {
+        border: 1px solid #9a9a9a;
+        border-right: 0;
+        border-bottom: 0;
+      }
+      .container-tlife .term-attached-table th {
+        background: #ececec;
+        border: 1px solid #9a9a9a;
+        border-top: 0;
+        border-left: 0;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 22px;
+        color: #666;
+        padding: 7px;
+      }
+      .container-tlife .term-attached-table td {
+        border: 1px solid #9a9a9a;
+        background-color: #fff;
+        border-top: 0;
+        border-left: 0;
+        text-align: center;
+        font-size: 12px;
+        line-height: 22px;
+        color: #333;
+        padding: 8px 7px;
+      }
+      .container-tlife .term-title {
+        color: #333;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .container-tlife .term-statement {
+        font-size: 13px;
+        padding: 18px 0 0;
+      }
+      .container-tlife .term-attached-table + .container-tlife .article-statement {
+        margin-top: 18px;
+      }
+      .container-tlife .term-external {
+        text-decoration: underline;
+        color: #333;
+      }
+      .container-tlife .term-external:active {
+        color: #0000b2;
+      }
+      .container-tlife .subparagraph-statement > .term-attached-table,
+      .container-tlife .paragraph-statement > .term-attached-table {
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+      .container-tlife .minus-margini-left {
+        margin-left: -18px;
+      }
+      .container-tlife table caption {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- wrap -->
+    <div class="container-tlife en">
+      <ol class="chapters">
+        <!-- content1 -->
+        <li class="chapter">
+          <ol class="articles">
+            <li class="article">
+              <p class="article-statement">
+                THE FOLLOWING SETS FORTH ATTRIBUTION NOTICES FOR THIRD PARTY SOFTWARE THAT MAY BE CONTAINED IN PORTIONS
+                OF THIS PRODUCT.
+              </p>
+              <p class="article-statement">
+                - This product contains BVReorderTableView library, which can be downloaded from
+                <a href="http://github.com/bvogelzang/BVReorderTableView/" target="_blank" title="Open a new window"
+                  >http://github.com/bvogelzang/BVReorderTableView/</a
+                >. This library includes the following license and notice below:
+              </p>
+              <p class="article-statement2">
+                The MIT License (MIT)<br />
+                Copyright &copy; {{{year}}} {{{fullname}}}<br />
+                <a
+                  href="https://github.com/bvogelzang/BVReorderTableView/blob/master/LICENSE"
+                  target="_blank"
+                  title="Open a new window"
+                  >https://github.com/bvogelzang/BVReorderTableView/blob/master/LICENSE</a
+                >
+              </p>
+              <p class="article-statement">
+                Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+                associated documentation files (the "Software"), to deal in the Software without restriction, including
+                without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+                following conditions:
+              </p>
+              <p class="article-statement">
+                The above copyright notice and this permission notice shall be included in all copies or substantial
+                portions of the Software.
+              </p>
+              <p class="article-statement">
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORIMPLIED, INCLUDING BUT NOT
+                LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+                NO EVENT SHALL THEAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS INTHE SOFTWARE.
+              </p>
+              <p class="article-statement">
+                - This product contains reachability-ios library, which can be downloaded from
+                <a href="http://github.com/belkevich/reachability-ios/" target="_blank" title="Open a new window"
+                  >http://github.com/belkevich/reachability-ios/</a
+                >. This library includes the following license and notice below:
+              </p>
+              <p class="article-statement2">
+                Copyright &copy; 2012 Alexey Belkevich (<a
+                  href="https://github.com/belkevich"
+                  target="_blank"
+                  title="Open a new window"
+                  >https://github.com/belkevich</a
+                >)<br />
+                <a
+                  href="https://github.com/belkevich/reachability-ios/blob/master/LICENSE.txt"
+                  target="_blank"
+                  title="Open a new window"
+                  >https://github.com/belkevich/reachability-ios/blob/master/LICENSE.txt</a
+                >
+              </p>
+              <p class="article-statement">
+                Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+                associated documentation files (the "Software"), to deal in the Software without restriction, including
+                without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+                following conditions:
+              </p>
+              <p class="article-statement">
+                The above copyright notice and this permission notice shall be included in all copies or substantial
+                portions of the Software.
+              </p>
+              <p class="article-statement">
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORIMPLIED, INCLUDING BUT NOT
+                LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+                NO EVENT SHALL THEAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS INTHE SOFTWARE.
+              </p>
+              <p class="article-statement">
+                - This product contains Toast library, which can be downloaded from
+                <a href="http://github.com/scalessec/Toast/" target="_blank" title="Open a new window"
+                  >http://github.com/scalessec/Toast/</a
+                >. This library includes the following license and notice below:
+              </p>
+              <p class="article-statement2">
+                Copyright &copy; 2012 2011-2016 Charles Scalesse.<br />
+                <a
+                  href="https://github.com/scalessec/Toast/blob/master/license"
+                  target="_blank"
+                  title="Open a new window"
+                  >https://github.com/scalessec/Toast/blob/master/license</a
+                >
+              </p>
+              <p class="article-statement">
+                Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+                associated documentation files (the "Software"), to deal in the Software without restriction, including
+                without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+                following conditions:
+              </p>
+              <p class="article-statement">
+                The above copyright notice and this permission notice shall be included in all copies or substantial
+                portions of the Software.
+              </p>
+              <p class="article-statement">
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORIMPLIED, INCLUDING BUT NOT
+                LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+                NO EVENT SHALL THEAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS INTHE SOFTWARE.
+              </p>
+              <p class="article-statement">
+                - This product contains KissXML library, which can be downloaded from
+                <a href="http://github.com/robbiehanson/KissXML/" target="_blank" title="Open a new window"
+                  >http://github.com/robbiehanson/KissXML/</a
+                >. This library includes the following license and notice below:
+              </p>
+              <p class="article-statement2">
+                Copyright &copy; 2012, Robbie Hanson<br />
+                All rights reserved.<br />
+                <a
+                  href="https://github.com/robbiehanson/KissXML/blob/master/LICENSE.txt "
+                  target="_blank"
+                  title="Open a new window"
+                  >https://github.com/robbiehanson/KissXML/blob/master/LICENSE.txt
+                </a>
+              </p>
+              <p class="article-statement">
+                Redistribution and use in source and binary forms, with or without modification, are permitted provided
+                that the following conditions are met:
+              </p>
+              <p class="article-statement">
+                - Redistributions of source code must retain the above copyright notice, this list of conditions and the
+                following disclaimer.
+              </p>
+              <p class="article-statement">
+                THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+                WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+                PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+                ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+                LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+                INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+                TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+                ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+              </p>
+              <p class="article-statement">
+                - This product contains NSOperationStack library, which can be downloaded from
+                <a href="http://github.com/nicklockwood/NSOperationStack/" target="_blank" title="Open a new window"
+                  >http://github.com/nicklockwood/NSOperationStack/</a
+                >. This library includes the following license and notice below:
+              </p>
+              <p class="article-statement2">
+                NSOperationStack<br />
+                Version 1.0.2, December 14th, 2012<br />
+                Copyright &copy; 2012 Charcoal Design<br />
+                <a
+                  href="https://github.com/nicklockwood/NSOperationStack/blob/master/LICENCE.md"
+                  target="_blank"
+                  title="Open a new window"
+                  >https://github.com/nicklockwood/NSOperationStack/blob/master/LICENCE.md</a
+                >
+              </p>
+              <p class="article-statement">
+                This software is provided 'as-is', without any express or implied warranty. In no event will the authors
+                be held liable for any damages arising from the use of this software.
+              </p>
+              <p class="article-statement">
+                Permission is granted to anyone to use this software for any purpose, including commercial applications,
+                and to alter it and redistribute it freely, subject to the following restrictions:
+              </p>
+              <p class="article-statement">
+                1.The origin of this software must not be misrepresented; you must not claim that you wrote the original
+                software. If you use this software in a product, an acknowledgment in the product documentation would be
+                appreciated but is not required.<br />
+                2.Altered source versions must be plainly marked as such, and must not be misrepresented as being the
+                original software.<br />
+                3.This notice may not be removed or altered from any source distribution.
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+
+    <!-- 2013.11.29 option_select.js : 현재 화면을 작동하기 위한 Javascript -->
+    <link rel="styleSheet" href="/html/2014/bems/css/custom/option_select.css" />
+    <script src="/html/2014/bems/js/custom/option_select.js"></script>
+    <script type="text/javascript">
+      jQuery("document").ready(function () {
+        // 검색창을 띄울 때 아래 함수를 실행시키면 된다.
+        oSelect.openWindow("#divOptionSelect");
+      });
+
+      // 데이터 설정 부분
+      var data1 = Object.create(bemsSelectList);
+      var data2 = Object.create(bemsSelectList);
+      var data3 = Object.create(bemsSelectList);
+      var data4 = Object.create(bemsSelectList);
+
+      /*
+			항목구분
+		*/
+      jQuery("document").ready(function () {
+        data1.gid = "sGrp01";
+        data1.selector = "sGrp01";
+        data1.type = "03"; // 01 : 한개만 선택, 재선택 불가능.  02: 여러개 선택, 03 : 한개만 선택, 선택 후 재선택 가능.
+        data1.selected = null;
+        data1.data = [
+          { id: 0, gubun: "item", selected: false, title: "냉열원 냉열원..." },
+          { id: 1, gubun: "item", selected: false, title: "온열원" },
+          { id: 2, gubun: "item", selected: false, title: "냉온열원공통" },
+          { id: 3, gubun: "item", selected: false, title: "공조" },
+          { id: 4, gubun: "item", selected: false, title: "환기" },
+          { id: 5, gubun: "item", selected: false, title: "전력계통" },
+          { id: 6, gubun: "item", selected: false, title: "신재생" },
+          { id: 7, gubun: "item", selected: false, title: "냉수 순환펌프" },
+          { id: 8, gubun: "item", selected: false, title: "공조설비" },
+          { id: 9, gubun: "item", selected: false, title: "위생" },
+        ];
+
+        /*
+			장비 구분
+		*/
+        data2.gid = "sGrp02";
+        data2.selector = "sGrp02";
+        data2.type = "03	";
+        data2.selected = null;
+        data2.data = [
+          { id: 0, gubun: "item", selected: false, title: "흡수식냉동기 1" },
+          { id: 1, gubun: "item", selected: false, title: "터보냉동기" },
+          { id: 2, gubun: "item", selected: false, title: "스크류냉동기" },
+          { id: 3, gubun: "item", selected: false, title: "빙축열" },
+          { id: 4, gubun: "item", selected: false, title: "냉각탑" },
+          { id: 5, gubun: "item", selected: false, title: "냉각수처리기" },
+          { id: 6, gubun: "item", selected: false, title: "냉각수순환펌프" },
+          { id: 7, gubun: "item", selected: false, title: "지역냉방" },
+          { id: 8, gubun: "item", selected: false, title: "열교환기(냉방)" },
+          { id: 9, gubun: "item", selected: false, title: "냉수 순환펌프" },
+          { id: 10, gubun: "item", selected: false, title: "냉수 헤더" },
+        ];
+
+        /*
+			장비
+		*/
+        data3.gid = "sGrp03";
+        data3.selector = "sGrp03";
+        data3.type = "03	";
+        data3.selected = null;
+        data3.data = [
+          { id: 0, gubun: "item", selected: false, title: "터보식냉동기 1" },
+          { id: 1, gubun: "item", selected: false, title: "흡수식냉동기 2" },
+          { id: 2, gubun: "item", selected: false, title: "흡수식냉동기 3" },
+          { id: 3, gubun: "item", selected: false, title: "흡수식냉동기 4" },
+          { id: 4, gubun: "item", selected: false, title: "흡수식냉동기 5" },
+        ];
+
+        /*
+			조회값
+		*/
+        data4.gid = "sGrp04";
+        data4.selector = "sGrp04";
+        data4.type = "02";
+        data4.selected = null;
+        data4.handler = "addItem";
+        data4.data = [
+          { id: 0, eq: 0, gubun: "title", selected: false, title: "계측포인트" },
+          { id: 1, eq: 0, gubun: "item", selected: false, title: "CH-1 기동정지 [ON/OFF]" },
+          { id: 2, eq: 0, gubun: "item", selected: false, title: "CH-1 냉각수 공급온도[℃]" },
+          { id: 3, eq: 0, gubun: "item", selected: false, title: "CH-1 냉각수 환수온도[℃]" },
+          { id: 4, eq: 0, gubun: "item", selected: false, title: "CH-1 냉수 공급온도[℃]" },
+          { id: 5, eq: 0, gubun: "item", selected: false, title: "CH-1 냉수 환수온도[℃]" },
+          { id: 6, eq: 0, gubun: "item", selected: false, title: "CH-1 저압반전력량(Kwh)" },
+          { id: 7, eq: 0, gubun: "item", selected: false, title: "CH-1 운전상태[ON/OFF]" },
+          { id: 8, eq: 0, gubun: "item", selected: false, title: "냉/온수펌프 공급압력[S](kgh/cm2)" },
+          { id: 9, eq: 0, gubun: "item", selected: false, title: "냉/온수펌프-운전상태[ON/OFF]" },
+          { id: 10, eq: 0, gubun: "item", selected: false, title: "냉/온수펌프 -전력량 [kwh]" },
+          { id: 11, eq: 0, gubun: "item", selected: false, title: "냉/온수펌프 환수압력[S](kgh/cm2)" },
+          { id: 12, eq: 0, gubun: "item", selected: false, title: "냉각수펌프-운전상태[ON/OFF]" },
+          { id: 13, eq: 0, gubun: "item", selected: false, title: "냉각수펌프 전력량[Kwh]" },
+          { id: 14, eq: 0, gubun: "item", selected: false, title: "냉각수펌프-SP전력량[Kwh]" },
+          { id: 15, eq: 0, gubun: "item", selected: false, title: "냉각탑 전력량[Kwh]" },
+          { id: 16, eq: 0, gubun: "item", selected: false, title: "냉각탑 운전상태[ON/OFF]" },
+          { id: 17, eq: 0, gubun: "item", selected: false, title: "냉각탑 팬 온도설정값[℃]" },
+          { id: 18, eq: 1, gubun: "title", selected: false, title: "가동시간" },
+          { id: 19, eq: 1, gubun: "item", selected: false, title: "가동시간" },
+          { id: 20, eq: 1, gubun: "title", selected: false, title: "지표" },
+          { id: 21, eq: 1, gubun: "item", selected: false, title: "냉수 왕복 온도차 [℃]" },
+          { id: 22, eq: 1, gubun: "item", selected: false, title: "냉각수 왕복 온도차 [℃]" },
+          { id: 23, eq: 1, gubun: "item", selected: false, title: "냉동 능력 [kcal/h]" },
+          { id: 24, eq: 1, gubun: "item", selected: false, title: "냉각 능력 [kcal/h]" },
+          { id: 25, eq: 1, gubun: "item", selected: false, title: "COP" },
+          { id: 26, eq: 1, gubun: "item", selected: false, title: "환산효율 [%]" },
+          { id: 27, eq: 1, gubun: "item", selected: false, title: "부하율 [%]" },
+          { id: 28, eq: 1, gubun: "item", selected: false, title: "Basic Unit [Kw/Ton]" },
+        ];
+
+        data1.retrieve("data1");
+        data2.retrieve("data2");
+        data3.retrieve("data3");
+        data4.retrieve("data4");
+      });
+    </script>
+
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <link href="/html/2014/bems/css/custom/fa.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+        $("#country_01").selectbox();
+        $("#country_02").selectbox();
+      });
+    </script>
+
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title05.gif" alt="설비성능 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02">
+              <a href="#link"><span>주요설비운전현황</span></a>
+            </li>
+            <li class="depth03 on">
+              <a href="#link"><span>계통설비성능분석</span></a>
+              <ul>
+                <li class="on">
+                  <a href="#link"><span>냉열원</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>온열원</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>냉온열원공통</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>공조</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>환기</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전력계통</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>신재생</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>공조설비</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>위생</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>다중설비계통분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>냉열원</h1>
+              <ul class="location">
+                <li class="first"><a href="#link">Dashoboard</a><span>&gt;</span></li>
+                <li>설비성능 분석<span>&gt;</span></li>
+                <li>계통설비성능 분석<span>&gt;</span></li>
+                <li>냉열원<span>&gt;</span></li>
+                <li class="last">시간별</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <section class="tabBox">
+              <div class="boxBg">
+                <div class="tabTitleGroup">
+                  <!-- [D] 선택된 탭의 li에 class="on" 삽입 -->
+                  <ul class="tabTitleList">
+                    <li><a href="#link">실시간별</a></li>
+                    <li class="on"><a href="#link">시간별</a></li>
+                    <li><a href="#link">일별</a></li>
+                    <li><a href="#link">월별</a></li>
+                    <li><a href="#link">연별</a></li>
+                  </ul>
+                  <ul class="tabSideList">
+                    <li class="tabSideStyle01"><a href="#link">도움말</a></li>
+                    <li class="tabSideStyle02"><a href="#link">인쇄</a></li>
+                    <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                    <li class="tabSideStyle03"><a href="#link">북마크</a></li>
+                  </ul>
+                </div>
+
+                <!-- 탭 상세 -->
+                <div class="tabDetailGroup">
+                  <div class="layerGroup clear02">
+                    <!-- 층 그룹 -->
+                    <div class="fl">
+                      <!-- layerOne -->
+                      <div class="layerOne clear02">
+                        <div class="fl clear">
+                          <label for="input_date">날짜선택</label>
+                          <input type="text" name="input_date" id="input_date" class="fl fa_input_date w120" />
+                        </div>
+                        <div class="fl pl31">
+                          <p class="detailTitle">최근</p>
+                          <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                          <ul class="fl btn_timeList">
+                            <li><a href="#link">6시간</a></li>
+                            <li><a href="#link">12시간</a></li>
+                            <li><a href="#link">24시간</a></li>
+                            <li class="today on"><a href="#link">오늘</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- //layerOne -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02">
+                        <div class="fl">
+                          <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                          <p class="search_01">
+                            <label for="search">장비/조회값</label>
+                            <input type="text" id="search" name="search" class="w405" />
+                          </p>
+                        </div>
+                        <p class="find">
+                          <a href="javascript:doModal();">추가/변경</a>
+                        </p>
+                      </div>
+                      <!-- //layerTwo -->
+                    </div>
+                    <!-- //층 그룹 -->
+                    <p class="fl btn_search">
+                      <a href="#link"><span>검색</span></a>
+                    </p>
+                  </div>
+                </div>
+                <!-- //탭 상세 -->
+              </div>
+            </section>
+            <!-- //탭영역 -->
+
+            <!-- 차트 영역 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!--차트 삽입부분 -->
+                <div id="chart01" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //차트 영역 -->
+
+            <!-- 테이블 영역 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!-- 차트 데이터 -->
+                <article class="tableGroup01">
+                  <h2 class="mb0">차트 데이터</h2>
+                  <table class="table table_id_4">
+                    <caption class="blind">
+                      전체사용량 실시간별 차트 데이터
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">시간</th>
+                        <th scope="col">사용량 (TOE)</th>
+                        <th scope="col">외기온도 (℃)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>00:15</td>
+                        <td>0.0263123</td>
+                        <td>12</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+                <!-- //차트 데이터 -->
+              </div>
+            </section>
+            <!-- 테이블 영역 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- 모달팝업 내용 -->
+    <div
+      id="divOptionSelect"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      style="
+        position: absolute;
+        width: 898px;
+        height: 493px;
+        left: 50%;
+        margin-left: -449px;
+        top: 50%;
+        margin-top: -247px;
+      "
+    >
+      <!-- 2013-12-03 aria 관련 속성 제거 (w3c validation) -->
+
+      <!-- [D] 팝업사이즈 : width:898px; -->
+      <section class="popup" style="width: 898px">
+        <div class="title">
+          <h1>사용자 정의 분석 : 장비/조회 값 선택</h1>
+          <p class="pop_close">
+            <a href="javascript:$('#divOptionSelect').modal('hide')"
+              ><img src="/html/2014/bems/images/common/btn_popup_close.png" alt="닫기"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer">
+          <p class="txt">
+            항목별의 장비 구분 &gt; 장비 &gt; 조회값 (계측포인트, 지표, 가동시간) 을 순차적으로 선택하신 후 ‘확인’
+            버튼을 클릭하세요.<br />선택 장비로 여러 조회값(계측포인트, 지표, 가동시간)을 조회 할 수 있습니다.
+          </p>
+          <div class="popBox clear02">
+            <!-- 항목 구분 -->
+            <div class="fl popGroup04">
+              <p class="groupTitle bl">항목 구분</p>
+              <div class="groupArea02">
+                <!-- [D] 선택된 li태그에 class="on" 삽입 /
+											비활성화시, a 태그를 span 태그로 교체(title 부분 꼭 넣어주세요!) -->
+                <ul class="listStyle" id="sGrp01"></ul>
+              </div>
+            </div>
+            <!-- //항목 구분 -->
+
+            <!-- 장비 구분 -->
+            <div class="fl popGroup04">
+              <p class="groupTitle">장비 구분</p>
+              <div class="groupArea02">
+                <!-- [D]로딩 시, 비활성화 부분 -->
+                <!-- [D] 선택된 li태그에 class="on" 삽입 /
+											비활성화시, a 태그를 span 태그로 교체(title 부분 꼭 넣어주세요!) -->
+                <ul class="listStyle" id="sGrp02"></ul>
+                <!-- //로딩 시, 비활성화 부분 -->
+              </div>
+            </div>
+            <!-- //장비 구분 -->
+
+            <!-- 장비 -->
+            <div class="fl popGroup04">
+              <p class="groupTitle">장비</p>
+              <div class="groupArea02">
+                <!-- [D]로딩 시, 비활성화 부분 -->
+                <!-- [D] 선택된 li태그에 class="on" 삽입 /
+											비활성화시, a 태그를 span 태그로 교체(title 부분 꼭 넣어주세요!) -->
+                <ul class="listStyle" id="sGrp03"></ul>
+                <!-- //로딩 시, 비활성화 부분 -->
+              </div>
+            </div>
+            <!-- //장비 -->
+
+            <!-- 조회값 -->
+            <div class="fl popGroup05">
+              <p class="groupTitle">조회값</p>
+              <div class="groupArea02 br clear02">
+                <!-- [D]로딩 시, 비활성화 부분 -->
+                <!-- [D] 선택된 li태그에 class="on" 삽입 /
+											비활성화시, a 태그를 span 태그로 교체 -->
+                <!-- 영역1 -->
+                <div class="fl group mr1">
+                  <!-- 단위1 -->
+                  <div class="divArea mt8">
+                    <ul id="sGrp04" class="listStyle02 sGrp04"></ul>
+                  </div>
+                  <!-- //단위1 -->
+                </div>
+                <!-- //영역1 -->
+
+                <!-- 영역2 -->
+                <div class="fl group">
+                  <!-- 단위1 -->
+                  <div class="divArea mt8">
+                    <ul class="listStyle02 sGrp04">
+                      <!-- 2013-12-03 중복id 삭제 (w3c validation) -->
+                    </ul>
+                  </div>
+                  <!-- //단위2 -->
+                </div>
+                <!-- //영역2 -->
+                <!-- //로딩 시, 비활성화 부분 -->
+              </div>
+            </div>
+            <!-- //조회값 -->
+          </div>
+
+          <div class="choiceBox">
+            <ul class="choiceList clear02"></ul>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 mt15">
+            <div class="fr">
+              <a href="#link" class="on"><span>확인</span></a>
+              <a href="javascript:$('#divOptionSelect').modal('hide')" class="on"><span>취소</span></a>
+            </div>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+  </body>
+</html>

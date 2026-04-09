@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>New Balance Korea</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+  </head>
+  <body>
+    <div class="layer_wrap">
+      <div class="pop_inner bottom">
+        <div class="header">
+          <strong>통합 마일리지 조회하기</strong>
+          <a href="#none" class="pop_close"><span class="blind">닫기</span></a>
+        </div>
+        <div class="contents">
+          <div class="inner">
+            <div class="mileage">
+              <p>
+                <span class="ttl">보유 마일리지</span>
+                <span class="price"><strong>7,300</strong>점</span>
+              </p>
+              <p>
+                <span class="ttl">사용 가능 마일리지</span>
+                <span class="price point_r"><strong>7,300</strong>점</span>
+              </p>
+              <div class="miles_use">
+                <div class="tit_area">
+                  <label for="miles_use" class="ttl">사용할 마일리지</label>
+                  <input type="checkbox" id="all" name="check" class="ip_chekbox black" /><label for="all"
+                    >한도 모두 사용</label
+                  >
+                </div>
+                <input type="number" id="miles_use" class="ip_text" value="" />
+                <p class="ip_info point_r">1,000점 단위로 사용하실 수 있습니다.</p>
+              </div>
+
+              <!-- 사용 가능 한도 미만 시-->
+              <div class="miles_use">
+                <div class="tit_area">
+                  <label for="miles_use2" class="ttl">사용할 마일리지</label>
+                  <input type="checkbox" id="all2" name="check" class="ip_chekbox black" disabled /><label for="all2"
+                    >한도 모두 사용</label
+                  >
+                </div>
+                <input type="number" id="miles_use2" class="ip_text" disabled />
+                <p class="ip_info point_r">5,000점 이상이어야 사용하실 수 있습니다.</p>
+              </div>
+              <!-- // 사용 가능 한도 미만 시-->
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="btn_area">
+            <div class="col1">
+              <a href="#none" class="btn_ty_bface basic">할인 적용하기</a>
+              <!-- <a href="#none" class="btn_ty_bface basic">확인하기</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

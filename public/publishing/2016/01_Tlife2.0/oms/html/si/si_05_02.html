@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>App 버전 신규등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb7:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb7:eq(0)>ul>li:eq(5)").addClass("on");
+              $("#gnb>li.gnb7:eq(0)>ul>li:eq(5)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb7">
+                <a href="#">사이트 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">코드 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">코드 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">요금제 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">요금제 관리</a></li>
+                      <li><a href="#">요금제 그룹 관리</a></li>
+                      <li><a href="#">부가서비스 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">닉네임 금칙어 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">닉네임 금칙어 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">전시 키워드 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">전시 키워드 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이용안내</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이용안내</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">App 버전관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">App 버전관리</a></li>
+                      <li><a href="#">X viewer App 버전관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">약관관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">약관관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">서비스 점검 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">서비스 점검 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>사이트 관리</span>
+              <span>App 버전관리</span>
+              <strong>App 버전 신규등록</strong>
+            </div>
+            <h3 class="tit">App 버전 신규등록</h3>
+
+            <!-- App 버전 신규등록 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>버전, 업데이트 날짜, 강제업데이트 여부, 상세내용이 있는 App 버전 신규등록 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="title" class="ess">버전</label>
+                      </th>
+                      <td>
+                        <input type="text" id="title" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="update" class="ess">업데이트 날짜</label>
+                      </th>
+                      <td>
+                        <input type="text" id="update" value="2016-11-01" class="wid_calendar pickerArea" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">강제 업데이트 여부</th>
+                      <td>
+                        <input type="radio" id="compulsion_update1" name="compulsion_update" checked="checked" /><label
+                          for="compulsion_update1"
+                          class="radio_range"
+                          >Y</label
+                        >
+                        <input type="radio" id="compulsion_update2" name="compulsion_update" /><label
+                          for="compulsion_update2"
+                          class="radio_range"
+                          >N</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="cont" class="ess">상세내용</label>
+                      </th>
+                      <td>
+                        <textarea id="cont" class="one"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_cancel">취소</a>
+                  <a href="#" class="btn_save">저장</a>
+                </div>
+              </div>
+            </div>
+            <!-- //App 버전 신규등록 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

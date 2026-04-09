@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+	<title>혜택 관리 수정 / 조회 | T life</title>
+	<link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/common.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/style.css" />
+	<!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script>
+		$(function(){
+			//달력
+			$( ".pickerArea" ).datepicker({
+				showOn: "button",
+				buttonImage: "../../img/img_calender.gif",
+				buttonImageOnly: true,
+				showButtonPanel: true,
+				dateFormat : "yy-mm-dd",
+				showAnim : "",
+				showOtherMonths: true,
+				selectOtherMonths: true,
+				changeMonth: false,
+				changeYear: false,
+				numberOfMonths: 1,
+				showButtonPanel: false,
+				minDate: -20,
+				maxDate: "+1111M +1000D",
+				showWeek: false,
+				firstDay: 1,
+				beforeShow: function(input) {
+					var i_offset= $(input).offset();
+					setTimeout(function(){
+						$('#ui-datepicker-div').css({'top':i_offset.top+ 35, 'bottom':'', 'left':i_offset.left});
+					})
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- skip navi -->
+	<div id="skip_navi">
+		<a href="#gnb"><span>주메뉴로 바로가기</span></a>
+		<a href="#contents"><span>본문으로 바로가기</span></a>
+	</div>
+	<!-- //skip navi -->
+
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="header">
+				<h1><a href="#">T life</a></h1>
+				<div class="top">
+					<h2>T life Operating Management System</h2>
+					<div class="user">
+						<p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+						<div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<div id="container">
+			<!-- GNB -->
+			<nav>
+				<script type="text/javascript">
+					// 현재 메뉴 표시
+					$(function(){
+						$("#gnb>li.gnb2:eq(0)").addClass('on').children('ul').css('display', 'block');
+						$("#gnb>li.gnb2:eq(0)>ul>li:eq(1)").addClass('on');
+						$("#gnb>li.gnb2:eq(0)>ul>li:eq(1)>ul>li:eq(0)").addClass('on');
+					})
+				</script>
+				<div class="gnb_wrap mCustomScrollbar">
+					<ul id="gnb">
+						<li class="depth1 gnb2"><a href="#">전시 관리</a>
+							<ul class="depth_ul1">
+								<li><a href="#">전시관리</a>
+									<ul class="depth_ul2">
+										<li><a href="#">메인 관리</a></li>
+										<li><a href="#">타임오퍼 관리</a></li>
+										<li><a href="#">미션 홈 관리</a></li>
+									</ul>
+								</li>
+								<li><a href="#">상품등록관리</a>
+									<ul class="depth_ul2">
+										<li><a href="#">혜택관리</a></li>
+										<li><a href="#">미션관리</a></li>
+										<li><a href="#">응모관리</a></li>
+										<li><a href="#">외부서비스 관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- //GNB -->
+
+			<!-- contents -->
+			<div id="contents">
+				<!-- section -->
+				<div class="section">
+					<div class="location">
+						<span class="home">홈</span>
+						<span>전시관리</span>
+						<span>상품등록관리</span>
+						<strong>혜택 관리</strong>
+						<strong>혜택 관리 수정 / 조회</strong>
+					</div>
+					<h3 class="tit">혜택 관리 수정 / 조회</h3>
+
+					<!-- 탭 메뉴 -->
+					<div class="tabmenu">
+						<ul class="tab">
+							<li><a href="#">Step 1. 전시 정보</a></li>
+							<li><a href="#" class="on">Step 2. 쿠폰 정보</a></li>
+							<li><a href="#">Step 3. 혜택 정보</a></li>
+						</ul>
+					</div>
+					<!-- //탭 메뉴 -->
+
+					<!-- 혜택 정보 -->
+					<h4 class="tit">혜택 정보</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>Deal Type, 당첨률 입력, 쿠폰 Type이 있는 헤택 정보 입력 서식</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">Deal Type</th>
+										<td>
+											<!-- step1에서 생활쿠폰(무료&amp;유료) 카테고리 선택 시 -->
+											<select title="Deal Type" style="width:140px">
+												<option>Deal Type 선택</option>
+												<option selected="selected">선착순</option>
+												<option>응모형</option>
+												<option>무제한</option>
+												<option>즉석당첨형</option>
+											</select>
+
+											<!-- step1에서 디지털콘텐츠 - 이북, 코믹, 웹툰, 웹소설 카테고리 선택 시 --
+											<select title="Deal Type" style="width:140px">
+												<option>Deal Type 선택</option>
+												<option>선착순</option>
+												<option>무제한</option>
+											</select>
+											<!-- //step1에서 디지털콘텐츠 - 이북, 코믹, 웹툰, 웹소설 카테고리 선택 시 -->
+
+											<!-- step1에서 디지털콘텐츠 - 이모티콘 카테고리 선택 시 --
+											<select title="Deal Type" style="width:140px">
+												<option>Deal Type 선택</option>
+												<option>선착순</option>
+											</select>
+											<!-- //step1에서 디지털콘텐츠 - 이모티콘 카테고리 선택 시 -->
+
+											<!-- step1에서 디지털콘텐츠 - 영화 VOD, 방송 VOD, 실시간TV 카테고리 선택 시 --
+											<select title="Deal Type" style="width:140px">
+												<option>Deal Type 선택</option>
+												<option>무제한</option>
+											</select>
+											<!-- //step1에서 디지털콘텐츠 - 영화 VOD, 방송 VOD, 실시간TV 카테고리 선택 시 -->
+
+											<!-- Deal Type : 선착순 선택 시 추가 -->
+											<select title="남은 수량 표시 여부" style="width:180px">
+												<option>남은 수량 표시 여부</option>
+												<option>남은 수량 표시 함</option>
+												<option>남은 수량 표시 안함</option>
+											</select>
+											<!-- // Deal Type : 선착순 선택 시 추가 -->
+
+											<!-- Deal Type : 응모형 선택 시 --
+											<span class="caution caution_left">응모형 Deal type 선택 시 사용자 정보 설정은 티켓 소진만 가능합니다. </span>
+											<div>
+												<p class="gap_top">블랙리스트 당첨여부 :
+													<input type="radio" id="black_list_ok" name="black_list"><label for="black_list_ok" class="radio_range">가능</label>
+													<input type="radio" id="black_list_no" name="black_list" checked="checked"><label for="black_list_no" class="radio_range">불가</label>
+												</p>
+
+												<p class="gap_top">중복당첨 설정여부 :
+													<input type="radio" id="plural_yes" name="plural"><label for="black_list_ok" class="radio_range">가능</label>
+													<input type="radio" id="plural_no" name="plural" checked="checked"><label for="black_list_no" class="radio_range">불가</label>
+												</p>
+											</div>
+											<!-- //Deal Type : 응모형 선택 시 -->
+
+											<!-- Deal Type : 즉석당첨형 선택 시 --
+											<select title="남은 수량 표시 여부" style="width:180px">
+												<option>남은 수량 표시 여부</option>
+												<option>남은 수량 표시 함</option>
+												<option>남은 수량 표시 안함</option>
+											</select>
+											<!-- //Deal Type : 즉석당첨형 선택 시 -->
+										</td>
+									</tr>
+									<!-- Deal Type : 즉석당첨형 선택 시 보여지는 영역-->
+									<tr>
+										<th scope="row">당첨률 입력</th>
+										<td>
+											<select title="당첨률 입력" style="width:140px">
+												<option>0</option>
+												<option>5</option>
+												<option>10</option>
+												<option>15</option>
+												<option>20</option>
+												<option>25</option>
+												<option>30</option>
+												<option>35</option>
+												<option>40</option>
+												<option>45</option>
+												<option>50</option>
+												<option>55</option>
+												<option>60</option>
+												<option>65</option>
+												<option>70</option>
+												<option>75</option>
+												<option>80</option>
+												<option>85</option>
+												<option>90</option>
+												<option>95</option>
+												<option>100</option>
+											</select>
+											%
+										</td>
+									</tr>
+									<!-- //Deal Type : 즉석당첨형 선택 시 보여지는 영역-->
+									<tr>
+										<th scope="row"><label for="couponType">쿠폰 Type</label></th>
+										<td>
+											<select id="couponType" style="width:140px">
+												<option>쿠폰  Type 선택</option>
+												<option selected="selected">기본 only</option>
+												<option>추가 only</option>
+												<option>기본 + 추가</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //혜택 정보 -->
+
+					<!-- 쿠폰정보 설정 : 생활쿠폰 Type 선택 - 무료 쿠폰 선택 시 -->
+					<h4 class="tit">쿠폰정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>쿠폰ID, 쿠폰명(전시), 유형, 총수량, 유효기간이 있는 쿠폰정보 설정 정보</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- <tr>
+										<td colspan="2" class="center">쿠폰정보를 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<!-- <tr>
+										<td colspan="2" class="center">기본 쿠폰을 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<!-- <tr>
+										<td colspan="2" class="center">추가 쿠폰을 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<tr>
+										<th scope="row">쿠폰ID</th>
+										<td>coupon100</td>
+									</tr>
+									<tr>
+										<th scope="row">쿠폰명(전시)</th>
+										<td>아메리카노(최대 20자까지 노출)</td>
+									</tr>
+									<tr>
+										<th scope="row">유형</th>
+										<td>20% 할인쿠폰</td>
+									</tr>
+									<tr>
+										<th scope="row">총수량</th>
+										<td>100,000</td>
+									</tr>
+									<tr>
+										<th scope="row">유효기간</th>
+										<td>2016.12.31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small"" target="_blank" title="새창 열림">상품 변경</a>
+							</div>
+						</div>
+					</div>
+					<!-- //쿠폰정보 설정 : 생활쿠폰 Type 선택 - 무료 쿠폰 선택 시 -->
+
+					<!-- 쿠폰정보 설정 : 생활쿠폰 Type 선택 - 유료 쿠폰 선택 시 -->
+					<h4 class="tit">쿠폰정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>쿠폰ID, 쿠폰명(전시), 가격, 총수량, 유효기간이 있는 쿠폰정보 설정 정보</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- <tr>
+										<td colspan="2" class="center">쿠폰정보를 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<!-- <tr>
+										<td colspan="2" class="center">기본 쿠폰을 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<!-- <tr>
+										<td colspan="2" class="center">추가 쿠폰을 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<tr>
+										<th scope="row">쿠폰ID</th>
+										<td>coupon100</td>
+									</tr>
+									<tr>
+										<th scope="row">쿠폰명(전시)</th>
+										<td>아메리카노(최대 20자까지 노출)</td>
+									</tr>
+									<tr>
+										<th scope="row">가격</th>
+										<td>5,000,000원</td>
+									</tr>
+									<tr>
+										<th scope="row">총수량</th>
+										<td>100,000</td>
+									</tr>
+									<tr>
+										<th scope="row">유효기간</th>
+										<td>2016.12.31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small"" target="_blank" title="새창 열림">상품 변경</a>
+							</div>
+						</div>
+					</div>
+					<!-- //쿠폰정보 설정 : 생활쿠폰 Type 선택 - 유료 쿠폰 선택 시 -->
+
+					<!-- 쿠폰정보 설정 : 생활쿠폰 Type 선택 - 음악채널 쿠폰 선택 시 -->
+					<h4 class="tit">쿠폰정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>타이틀ID, 채널명, 카테고리, 유효기간, 쿠폰개수 설정이 있는 쿠폰정보 설정 정보</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- <tr>
+										<td colspan="2" class="center">쿠폰정보를 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<!-- <tr>
+										<td colspan="2" class="center">기본 쿠폰을 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<!-- <tr>
+										<td colspan="2" class="center">추가 쿠폰을 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<tr>
+										<th scope="row">타이틀ID</th>
+										<td>coupon100</td>
+									</tr>
+									<tr>
+										<th scope="row">채널명</th>
+										<td>공부할 때 들으면 잘 수 있는 곡 Best 10 (최대 20자까지 노출됨)</td>
+									</tr>
+									<tr>
+										<th scope="row">카테고리</th>
+										<td>Rock</td>
+									</tr>
+									<tr>
+										<th scope="row">유효기간</th>
+										<td>2016.12.31</td>
+									</tr>
+									<tr>
+										<th scope="row">쿠폰개수 설정</th>
+										<td><input type="text" title="쿠폰개수 설정" /> 개</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small"" target="_blank" title="새창 열림">상품 변경</a>
+							</div>
+						</div>
+					</div>
+					<!-- //쿠폰정보 설정 : 생활쿠폰 Type 선택 - 음악채널 쿠폰 선택 시 -->
+
+					<!-- 콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 이북, 코믹, 웹툰, 웹소설, 이모티콘 일때 : 단행본인 경우) -->
+					<h4 class="tit">콘텐츠 정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>타이틀ID, 콘텐츠명, 콘텐츠 유형, 유효기간이 있는 콘텐츠 정보 설정 내용</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- <tr>
+										<td colspan="2" class="center">콘텐츠 정보를 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<tr>
+										<th scope="row">타이틀ID</th>
+										<td>coupon100</td>
+									</tr>
+									<tr>
+										<th scope="row">콘텐츠명</th>
+										<td>열혈강호(최대 20자까지 노출됨)</td>
+									</tr>
+									<tr>
+										<th scope="row">콘텐츠 유형</th>
+										<td>단행본</td>
+									</tr>
+									<tr>
+										<th scope="row">유효기간</th>
+										<td>2016.12.31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small"" target="_blank" title="새창 열림">상품 변경</a>
+							</div>
+						</div>
+					</div>
+					<!-- //콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 이북, 코믹, 웹툰, 웹소설, 이모티콘 일때 : 단행본인 경우) -->
+
+					<!-- 콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 이북, 코믹, 웹툰, 웹소설, 이모티콘 일때 : 시리즈인 경우) -->
+					<h4 class="tit">콘텐츠 정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>타이틀ID, 콘텐츠명, 콘텐츠 유형, 유효기간이 있는 콘텐츠 정보 설정 내용</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- <tr>
+										<td colspan="2" class="center">콘텐츠 정보를 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<tr>
+										<th scope="row">타이틀ID</th>
+										<td>coupon100</td>
+									</tr>
+									<tr>
+										<th scope="row">콘텐츠명</th>
+										<td>열혈강호(최대 20자까지 노출됨)</td>
+									</tr>
+									<tr>
+										<th scope="row">콘텐츠 유형</th>
+										<td>시리즈</td>
+									</tr>
+									<tr>
+										<th scope="row">유효기간</th>
+										<td>2016.12.31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small"" target="_blank" title="새창 열림">상품 변경</a>
+							</div>
+						</div>
+					</div>
+					<!-- //콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 이북, 코믹, 웹툰, 웹소설, 이모티콘 일때 : 시리즈인 경우) -->
+
+					<!-- 콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 이북, 코믹, 웹툰, 웹소설, 이모티콘 일때 : 이모티콘인 경우) -->
+					<h4 class="tit">콘텐츠 정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>쿠폰ID, 쿠폰명(전시), 총수량, 유효기간이 있는 콘텐츠 정보 설정 내용</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- <tr>
+										<td colspan="2">콘텐츠 정보를 등록해 주세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">상품찾기</a></td>
+									</tr> -->
+									<tr>
+										<th scope="row">쿠폰ID</th>
+										<td>coupon100</td>
+									</tr>
+									<tr>
+										<th scope="row">쿠폰명(전시)</th>
+										<td>엄지척!! 히트다 히트</td>
+									</tr>
+									<tr>
+										<th scope="row">총수량</th>
+										<td>100,000</td>
+									</tr>
+									<tr>
+										<th scope="row">유효기간</th>
+										<td>30일</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small"" target="_blank" title="새창 열림">상품 변경</a>
+							</div>
+						</div>
+					</div>
+					<!-- //콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 이북, 코믹, 웹툰, 웹소설, 이모티콘 일때 : 이모티콘인 경우) -->
+
+					<!-- 콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 뮤직, 영화 VOD, 방송 VOD, 실시간 TV 일 때) -->
+					<h4 class="tit">콘텐츠 정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>콘텐츠 정보 설정 내용</strong>
+								</caption>
+								<colgroup>
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<td class="center">Step 1. 전시 정보의 카테고리가 디지털 콘텐츠 &gt; 뮤직 / 영화 VOD / 방송 VOD / 실시간 TV 선택시 콘텐츠 정보 설정은 자동 skip 됩니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //콘텐츠 정보 설정 : 디지털콘텐츠 Type 선택 (디지털 콘텐츠 - 뮤직, 영화 VOD, 방송 VOD, 실시간 TV 일 때) -->
+
+					<!-- 사용자 정보 설정 -->
+					<h4 class="tit">사용자 정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>각 Type별 사용권한, 티켓 사용여부가 있는 사용자 정보 설정 내용</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- Type 추가 영역1 -->
+									<tr>
+										<th scope="row">
+											<p class="gap_btm">Type 1</p>
+											<a href="#" class="btn_small">Type 삭제</a>
+										</th>
+										<td>
+											<div class="table_list">
+												<div class="table_inner">
+													<table class="tbl_list">
+														<caption>
+															<strong>사용권한,티켓 사용여부가 있는 사용자 정보 설정 입력 서식</strong>
+														</caption>
+														<colgroup>
+															<col style="width:130px" />
+															<col style="width:*" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row">사용권한</th>
+																<td>
+																	<!-- 사용권한 선택 첫번째 : 생활 쿠폰 일 때 -->
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>All</option>
+																	</select>
+																	<!-- //사용권한 선택 첫번째 : 생활 쿠폰 일 때 -->
+
+																	<!-- 사용권한 선택 첫번째 : 디지털 콘텐츠 쿠폰 일 때 --
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>Non SKT</option>
+																	</select>
+																	<!-- //사용권한 선택 첫번째 : 디지털 콘텐츠 쿠폰 일 때 -->
+
+																	<select title="사용권한 선택 두번째" style="width:140px">
+																		<option>선택</option>
+																		<option>요금제1</option>
+																		<option>요금제2</option>
+																		<option>요금제3</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="permissionFree1">티켓 사용여부</label></th>
+																<td>
+																	<input type="radio" id="permissionFree1" name="permission1" checked="checked"><label for="permissionFree1" class="radio_range">Free</label>
+																	<input type="radio" id="permissionYes1" name="permission1"><label for="permissionYes1" class="radio_range2">있음</label> &nbsp;
+																	<input type="text" title="티켓 사용 갯수"> 개
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<!-- //Type 추가 영역1 -->
+									<!-- Type 추가 영역2 -->
+									<tr>
+										<th scope="row">
+											<p class="gap_btm">Type 2</p>
+											<a href="#" class="btn_small">Type 삭제</a>
+										</th>
+										<td>
+											<div class="table_list">
+												<div class="table_inner">
+													<table class="tbl_list">
+														<caption>
+															<strong>사용권한,티켓 사용여부가 있는 사용자 정보 설정 입력 서식</strong>
+														</caption>
+														<colgroup>
+															<col style="width:130px" />
+															<col style="width:*" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row">사용권한</th>
+																<td>
+																	<!-- 사용권한 선택 첫번째 : 생활 쿠폰 일 때 -->
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>All</option>
+																	</select>
+																	<!-- //사용권한 선택 첫번째 : 생활 쿠폰 일 때 -->
+
+																	<!-- 사용권한 선택 첫번째 : 디지털 콘텐츠 쿠폰 일 때 --
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>Non SKT</option>
+																	</select>
+																	<!-- //사용권한 선택 첫번째 : 디지털 콘텐츠 쿠폰 일 때 -->
+
+																	<select title="사용권한 선택 두번째" style="width:140px">
+																		<option>선택</option>
+																		<option>요금제1</option>
+																		<option>요금제2</option>
+																		<option>요금제3</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="permissionFree1">티켓 사용여부</label></th>
+																<td>
+																	<input type="radio" id="permissionFree2" name="permission2" checked="checked"><label for="permissionFree2" class="radio_range">Free</label>
+																	<input type="radio" id="permissionYes2" name="permission2"><label for="permissionYes2" class="radio_range2">있음</label> &nbsp;
+																	<input type="text" title="티켓 사용 갯수"> 개
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<!-- //Type 추가 영역2 -->
+								</tbody>
+							</table>
+						</div>
+
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small">Type 추가</a>
+							</div>
+						</div>
+					</div>
+					<!-- //사용자 정보 설정 -->
+
+					<!-- 사용자 정보 설정 (디지털 콘텐츠_영화 VOD, 방송 VOD, 실시간 TV 일 때) -->
+					<h4 class="tit">사용자 정보 설정</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>사용자 정보 설정 내용</strong>
+								</caption>
+								<colgroup>
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<td class="center">Step 1. 전시 정보의 카테고리가 디지털 콘텐츠 &gt; 영화 VOD / 방송 VOD / 실시간 TV 선택시 사용자 정보 설정은 자동 skip 됩니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //사용자 정보 설정 (디지털 콘텐츠_영화 VOD, 방송 VOD, 실시간 TV 일 때) -->
+
+					<!-- 추가 쿠폰설정_사용자 정보 -->
+					<h4 class="tit">추가 쿠폰설정_사용자 정보</h4>
+					<div class="table_list_top">
+						<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>Type별 추가 쿠폰설정_사용자 정보</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<!-- Type 추가 영역1 -->
+									<tr>
+										<th scope="row">
+											<p class="gap_btm">Type 1</p>
+											<p><a href="#" class="btn_small">Type 삭제</a></p>
+										</th>
+										<td>
+											<div class="table_list">
+												<div class="table_inner">
+													<table class="tbl_list">
+														<caption>
+															<strong>사용권한, 사용설정, 티켓수량이 있는 추가쿠폰설정 _사용자 정보 입력 서식</strong>
+														</caption>
+														<colgroup>
+															<col style="width:130px" />
+															<col style="width:*" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row">사용권한</th>
+																<td>
+																	<!-- 생활쿠폰일 경우 -->
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>All</option>
+																	</select>
+																	<!-- //생활쿠폰일 경우 -->
+
+																	<!-- 디지털 콘텐츠 쿠폰 일 때 --
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>Non SKT</option>
+																	</select>
+																	<!-- //디지털 콘텐츠 쿠폰 일 때 -->
+
+																	<select title="사용권한 선택 두번째" style="width:140px">
+																		<option>선택</option>
+																		<option>52요금제</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">사용설정</th>
+																<td>
+																	<select title="사용설정 선택" style="width:140px">
+																		<option>선택</option>
+																		<option selected="selected">티켓</option>
+																		<option>미션</option>
+																		<option>티켓+미션</option>
+																	</select>
+																</td>
+															</tr>
+															<!-- 사용설정 - 티켓 선택 시  -->
+															<tr>
+																<th scope="row">티켓수량</th>
+																<td>
+																	<input type="text" title="티켓수량" /> 개
+																</td>
+															</tr>
+															<!-- //사용설정 - 티켓 선택 시  -->
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<!-- //Type 추가 영역1 -->
+									<!-- Type 추가 영역2 -->
+									<tr>
+										<th scope="row">
+											<p class="gap_btm">Type 2</p>
+											<p><a href="#" class="btn_small">Type 삭제</a></p>
+										</th>
+										<td>
+											<div class="table_list">
+												<div class="table_inner">
+													<table class="tbl_list">
+														<caption>
+															<strong>사용권한, 사용설정, 티켓수량, 미션 정보가 있는 추가쿠폰설정 _사용자 정보 입력 서식</strong>
+														</caption>
+														<colgroup>
+															<col style="width:130px" />
+															<col style="width:*" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row">사용권한</th>
+																<td>
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>All</option>
+																	</select>
+
+																	<select title="사용권한 선택 두번째" style="width:140px">
+																		<option>선택</option>
+																		<option>52요금제</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">사용설정</th>
+																<td>
+																	<select title="사용설정 선택" style="width:140px">
+																		<option>선택</option>
+																		<option>티켓</option>
+																		<option selected="selected">미션</option>
+																		<option>티켓+미션</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">티켓수량</th>
+																<td>
+																	이미 미션을 성공한 사용자에게는 &nbsp;<input type="text" title="티켓설정" /> 개의 티켓소진으로 쿠폰 설정 가능
+																</td>
+															</tr>
+															<!-- 사용설정 - 미션 선택 시  -->
+															<tr>
+																<th scope="row">미션 정보</th>
+																<td>
+																	<div class="table_list inner_gap">
+																		<p class="gap_btm"><input type="checkbox" id="friendInvite1" checked="checked" /> <label for="friendInvite1">친구 초대</label></p>
+																		<div class="table_inner">
+																			<table class="tbl_list">
+																				<caption>
+																					<strong>참여자, 제한시간이 있는 친구 초대 입력 서식</strong>
+																					</caption>
+																				<colgroup>
+																					<col style="width:130px" />
+																					<col style="width:*" />
+																				</colgroup>
+																				<tbody>
+																					<tr>
+																						<th scope="row">참여자</th>
+																						<td><input type="text" title="참여자" /> 명</td>
+																					</tr>
+																					<tr>
+																						<th scope="row">제한시간</th>
+																						<td><input type="text" title="제한시간" /> 분 후 종료</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+
+																	<div class="table_list gap_btm">
+																		<p class="gap_btm">
+																			<input type="checkbox" id="passMission1" checked="checked" /> <label for="passMission1">그 외 Pass 미션(Max 3개까지 등록가능)</label> &nbsp;
+																			<!--  선택 전 --
+																			<a href="#" class="btn_small btn_save" target="_blank" title="새창 열림">선택</a>
+																			<!--  //선택 전 -->
+																			<!-- 선택 후 -->
+																			<a href="#" class="btn_small" target="_blank" title="새창 열림">변경</a>
+																			<!-- //선택 후 -->
+																		</p>
+																		<div class="table_inner">
+																			<table class="tbl_list">
+																				<caption>
+																					<strong>각각의 미션정보가 있는 그 외 Pass 미션 정보 내용</strong>
+																				</caption>
+																				<colgroup>
+																					<col style="width:130px" />
+																					<col style="width:*" />
+																					<col style="width:80px" />
+																				</colgroup>
+																				<tbody>
+																					<tr>
+																						<th scope="row">미션정보 1</th>
+																						<td><a href="#" class="link">대한민국 국민 방송 SKB 고객 조사</a></td>
+																						<td class="bl_none center"><a href="#" class="btn_small">삭제</a></td>
+																					</tr>
+																					<tr>
+																						<th scope="row">미션정보 2</th>
+																						<td><a href="#" class="link">대한민국 국민 방송 SKB 고객 조사</a></td>
+																						<td class="bl_none center"><a href="#" class="btn_small">삭제</a></td>
+																					</tr>
+																					<tr>
+																						<th scope="row">미션정보 3</th>
+																						<td><a href="#" class="link">대한민국 국민 방송 SKB 고객 조사</a></td>
+																						<td class="bl_none center"><a href="#" class="btn_small">삭제</a></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<!-- //사용설정 - 미션 선택 시  -->
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<!-- //Type 추가 영역2 -->
+									<!-- Type 추가 영역3 -->
+									<tr>
+										<th scope="row">
+											<p class="gap_btm">Type 3</p>
+											<a href="#" class="btn_small">Type 삭제</a>
+										</th>
+										<td>
+											<div class="table_list">
+												<div class="table_inner">
+													<table class="tbl_list">
+														<caption>
+															<strong>사용권한, 사용설정, 티켓수량, 미션 정보가 있는 추가쿠폰설정 _사용자 정보 입력 서식</strong>
+														</caption>
+														<colgroup>
+															<col style="width:130px" />
+															<col style="width:*" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row">사용권한</th>
+																<td>
+																	<select title="사용권한 선택 첫번째" style="width:140px">
+																		<option>선택</option>
+																		<option>SKT</option>
+																		<option>All</option>
+																	</select>
+
+																	<select title="사용권한 선택 두번째" style="width:140px">
+																		<option>선택</option>
+																		<option>52요금제</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">사용설정</th>
+																<td>
+																	<select title="사용설정 선택" style="width:140px">
+																		<option>선택</option>
+																		<option>티켓</option>
+																		<option>미션</option>
+																		<option selected="selected">티켓+미션</option>
+																	</select>
+																</td>
+															</tr>
+															<!-- 사용설정 - 티켓 선택 시  -->
+															<tr>
+																<th scope="row">티켓수량</th>
+																<td><input type="text" title="티켓 수량"> 개</td>
+															</tr>
+															<!-- //사용설정 - 티켓 선택 시  -->
+															<!-- 사용설정 - 미션 선택 시  -->
+															<tr>
+																<th scope="row">미션 정보</th>
+																<td>
+																	<div class="table_list inner_gap">
+																		<p class="gap_btm">
+																			<input type="checkbox" id="friendInvite2" checked="checked" /> <label for="friendInvite2">친구 초대</label>
+																		</p>
+																		<div class="table_inner">
+																			<table class="tbl_list">
+																				<caption>
+																					<strong>참여자, 제한시간이 있는 친구 초대 입력 서식</strong>
+																				</caption>
+																				<colgroup>
+																					<col style="width:130px" />
+																					<col style="width:*" />
+																				</colgroup>
+																				<tbody>
+																					<tr>
+																						<th scope="row">참여자</th>
+																						<td><input type="text" title="참여자" /> 명</td>
+																					</tr>
+																					<tr>
+																						<th scope="row">제한시간</th>
+																						<td><input type="text" title="제한시간" /> 분 후 종료</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+
+																	<div class="table_list gap_btm">
+																		<p class="gap_btm">
+																			<input type="checkbox" id="passMission2" checked="checked" /> <label for="passMission2">그 외 Pass 미션(Max 3개까지 등록가능)</label> &nbsp;
+																			<!--  선택 전 --
+																			<a href="#" class="btn_small btn_save" target="_blank" title="새창 열림">선택</a>
+																			<!--  //선택 전 -->
+																			<!-- 선택 후 -->
+																			<a href="#" class="btn_small" target="_blank" title="새창 열림">변경</a>
+																			<!-- //선택 후 -->
+																		</p>
+																		<div class="table_inner">
+																			<table class="tbl_list">
+																				<caption>
+																					<strong>각각의 미션정보가 있는 그 외 Pass 미션 정보 내용</strong>
+																				</caption>
+																				<colgroup>
+																					<col style="width:130px" />
+																					<col style="width:*" />
+																					<col style="width:80px" />
+																				</colgroup>
+																				<tbody>
+																					<tr>
+																						<th scope="row">미션정보 1</th>
+																						<td><a href="#" class="link">대한민국 국민 방송 SKB 고객 조사</a></td>
+																						<td class="bl_none center"><a href="#" class="btn_small">삭제</a></td>
+																					</tr>
+																					<tr>
+																						<th scope="row">미션정보 2</th>
+																						<td><a href="#" class="link">대한민국 국민 방송 SKB 고객 조사</a></td>
+																						<td class="bl_none center"><a href="#" class="btn_small">삭제</a></td>
+																					</tr>
+																					<tr>
+																						<th scope="row">미션정보 3</th>
+																						<td><a href="#" class="link">대한민국 국민 방송 SKB 고객 조사</a></td>
+																						<td class="bl_none center"><a href="#" class="btn_small">삭제</a></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<!-- //사용설정 - 미션 선택 시  -->
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<!-- //Type 추가 영역3 -->
+								</tbody>
+							</table>
+						</div>
+						<div class="btngroup">
+							<div class="btn_right">
+								<a href="#" class="btn_small">Type 추가</a>
+							</div>
+						</div>
+					</div>
+					<!-- //추가 쿠폰설정_사용자 정보 -->
+
+					<div class="btngroup">
+						<div class="btn_left">
+							<a href="#" class="btn_cancel">취소</a>
+						</div>
+						<div class="btn_right">
+							<a href="#" class="btn_save">다음</a>
+						</div>
+					</div>
+				</div>
+				<!-- //section -->
+			</div>
+			<!-- //contents -->
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer>
+			<div id="footer">
+				<h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+				<p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+				<p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+	<!-- //wrap -->
+</body>
+</html>

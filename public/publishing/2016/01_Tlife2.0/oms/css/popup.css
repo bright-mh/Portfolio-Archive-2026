@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/* popup */
+.layerpop .popup{display:block;position:inherit;top:0;left:0;width:100%;margin:0;}
+.popup{display:none;position: fixed;top:0;left:50%;width:970px;margin-left:-485px;margin-top:30px;transform:inherit;z-index:2000;}
+.popup.height{min-height:312px;}
+
+.popup .top{position:relative;padding:0 0 0 20px;background:#343536;line-height:54px;}
+.popup .top h2{color:#dfdfdf;font-family:'NanumGothicBold';font-size:17px;}
+.popup .top .btn_clo{position:absolute;top:20px;right:20px;}
+.popup .top .btn_clo a{display:block;width:13px;height:14px;}
+
+.popup .cont{position:relative;padding:40px 20px;background:#fff;overflow-y:auto;}
+.popup .cont2{position:relative;background:#fff;overflow-x:hidden;overflow-y:auto;}
+.popup .heig1{height:500px;}
+
+#bg_dim{position: fixed;left:0;top:0;width:100%;height:100%;background:#000;opacity: 0.5;filter:alpha(opacity=50);z-index: 1000;display:none;}
+
+/* contents */
+.cont h3.tit{display:inline-block;margin:0 0 10px 0;padding-left:10px;background:url('../img/bul_5x4.gif') no-repeat left center;color:#2f79df;font-size:18px;}
+
+/* btn style */
+.cont .btngroup{position:relative;height:30px;margin:20px 0 0;}
+.cont .btngroup.effect{margin-top:20px;padding-top:20px;border-top:1px solid #222;}
+.cont .btngroup.effect2{margin-top:0;padding:20px 0;border-top:1px solid #222;}
+.cont .btngroup.effect2 .btn_left,
+.cont .btngroup.effect2 .btn_right{margin-top:20px;}
+.cont .btngroup .page_num{display:block;margin:-4px auto 0 auto;color:#333;font-size:18px;font-weight:bold;text-align:center;}
+
+/* common */
+.cont .confirm{margin-top:25px;font-weight:bold;text-align:center;}
+
+/* oms: 사용자관리 > 운영자 정보 > 신규등록 > OMS 권한 설정 */
+.cont .all{min-width:913px;border-top:solid 3px #b6bac5;border-bottom:solid 1px #b6bac5;}
+.cont .all .chk_all{width:100%;height:34px;background:#f7f7f7;font-family:'NanumGothicBold';line-height:34px;}
+.cont .all input{margin:0 5px 0 10px;}
+.cont .all .menu_list{display:table;width:100%;height:180px;border-top:solid 1px #b6bac5;box-sizing:border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont .all .menu_list li{display:table-cell;width:25%;height:100%;border-left: solid 1px #e8eaee;box-sizing:border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.cont .all .menu_list h3{display:block;font-family:'NanumGothicBold';font-weight:normal;border-bottom:solid 1px #e8eaee;background:#fcfcfc;line-height:34px;}
+.cont .all .menu_list span{display:block;line-height:28px;}
+.cont .all .menu_list > li:first-child{border-left:0;}
+
+/* oms: 사이트 관리 > 닉네임 관리 > 닉네임 금칙어 신규등록 */
+.cont .prohibition .table_wrap{max-height:260px;overflow:auto;overflow-x:hidden;}
+
+/* oms: 사이트 관리 > 서비스 점검 관리 > 약관 미리보기 */
+.container-tlife{margin:18px;}
+.container-tlife.en{font-family: Tahoma;}
+.container-tlife.ko{font-family: '돋움';}
+.container-tlife .articles{font-size:13px;color: #333;}
+.container-tlife .article{margin-bottom:26px;}
+.container-tlife .article-title{text-align:left;color:#333;font-size:15px;font-family: '돋움';margin-bottom:20px;font-weight:600;}
+.container-tlife .article-statement{margin-bottom:10px;color:#333;font-size:13px;line-height:20px;}
+.container-tlife .chapter{margin-top: 26px;}
+.container-tlife .chapter-title{text-align:left;font:bold 15px '돋움';color: #333;margin-bottom:18px;}
+.container-tlife .paragraphs{margin-left:16px;margin-bottom:10px;color: #333;}
+.container-tlife .subparagraphs{padding-left:16px;}
+.container-tlife .paragraph,
+.container-tlife .subparagraph{font-size:13px;line-height:20px;}
+.container-tlife .paragraph-number,
+.container-tlife .subparagraph-number{margin-left:-15px;}
+.container-tlife .term-remark{color:red;}
+.container-tlife .term-attached-table{border:1px solid #9a9a9a;border-right:0;border-bottom:0;}
+.container-tlife .term-attached-table th{background:#ececec;border:1px solid #9a9a9a;border-top:0;border-left:0;text-align:center;font-size:12px;font-weight:bold;line-height:22px;color:#666;padding:7px;}
+.container-tlife .term-attached-table td{border:1px solid #9a9a9a;background-color:#fff;border-top:0;border-left:0;text-align:center;font-size:12px;line-height:22px;color:#333;padding:8px 7px;}
+.container-tlife .term-title{color:#333;font-size:17px;font-weight:600;}
+.container-tlife .term-statement{font-size:13px;padding:18px 0 0;}
+.container-tlife .term-attached-table + .container-tlife .article-statement{margin-top:18px;}
+.container-tlife .term-external{text-decoration:underline;color:#333;}
+.container-tlife .term-external:active{color:#0000B2}
+.container-tlife .subparagraph-statement > .term-attached-table,
+.container-tlife .paragraph-statement > .term-attached-table{margin-top:18px;margin-bottom:18px;}
+.container-tlife .minus-margini-left{margin-left:-18px;}
+.container-tlife table caption{display:none;}
+
+/* oms: 사이트 관리 > 서비스 점검 관리 > 신규등록 > 서비스 점검 미리보기 */
+.wrap_error{min-height:100%;margin-bottom:-68px;font-family:'SKPGo_M', 'droid sans fallback', sans-serif;font-size:12px;color:#7d7d7d;}
+.error{padding-bottom:68px;}
+.error header{height:50px;background:#444a5a;}
+.error header h1{padding:0 17px;color:#fff;font-family:'SKPGo_B';font-size:17px;line-height:54px;}
+.error .error_box{margin:0 28px;}
+.error .txt_msg{padding:42px 0;text-align:center;}
+.error .txt_msg p.txt_para01{padding:115px 0 25px 0;background:url('../img/icon_caution2.png') no-repeat 50% 0;background-size:90px auto;color:#000;font-size:20px;line-height:27px;letter-spacing:-.6px;}
+.error .txt_msg p.txt_para02{color:#999;font-size:13px;line-height:17px;}
+.error .check_info{padding-top:30px;border-top:1px solid #e1e1e1;}
+.error .check_info .title{margin-bottom:17px;color:#eb4c38;font-family:'SKPGo_B'font-size:10px;}
+.error .check_info ul li{position:relative;color:#1b1b1b;line-height:20px;}
+.error .check_info ul li span.info_title{display:inline-block;position:absolute;top:0;left:0;width:41px;}
+.error .check_info ul li span.info_txt{display:inline-block;padding-left:41px;}
+.error .check_info .txt01{padding:30px 0 23px 0;line-height:17px;}
+.error .check_info .txt02{line-height:17px;}
+
+.foot_error{height:30px;padding-top:38px;margin:0 28px;font-family:'SKPGo_M', 'droid sans fallback', sans-serif;font-size:12px;color:#7d7d7d;}
+
+/* cms: 제휴사 회원 > 기초상품 관리 > 무료상품 > 쿠폰 번호 등록 */
+.cont .step{height:40px;margin-bottom:40px;border:1px solid #b6bac5;background:#f2f2f2;overflow:hidden;}
+.cont .step li{float:left;width:50%;text-align:center;line-height:40px;}
+.cont .step li span{float:right;text-align:right;font-size:20px;font-weight:normal;}
+.cont .step li.on{color:#444;font-size:15px;font-weight:bold;}
+.cont .step li.on span{font-size:20px;font-weight:normal;}
+.cont .scroll_wrap{max-height:330px;overflow:auto;overflow-x:hidden;}
+.cont .scroll_wrap2{max-height:440px;overflow:auto;overflow-x:hidden;}
+
+/* cms: 제휴사 회원 > 기초상품 관리 > 기초상품등록 > 유료 상품 > 브랜드 조회 */
+.cont .filtering{display:table;width:100%;margin:30px 0 44px 0;border:1px solid #b6bac5;overflow:hidden;}
+.cont .filtering li{display:table-cell;border-left:1px solid #b6bac5;text-align:center;}
+.cont .filtering li:first-child{border-left:none;}
+.cont .filtering li a{display:block;padding:4px 0;}
+.cont .filtering li:hover,
+.cont .filtering li a.on{background:#d9d9d9;font-weight:bold;}
+
+/* cms: 제휴사 회원 > 기초상품 관리 > 기초상품등록 > 유료 상품 > 유료 기초상품 등록 확인 : 수정불가, 수정, 전시중 아이콘 */
+.cont .tbl_list th span.warning{display:block;margin-top:8px;padding-left:15px;font-size:11px;color:#ff0000;background:url(../img/icon_caution.png) no-repeat 35% 50%;vertical-align:middle;}
+.cont .tbl_list td.warning{position:relative;padding-right:80px;background-color:transparent;overflow:visible;}
+.cont .tbl_list td.warning:before{content:"수정불가";display:inline-block;position:absolute;top:50%;right:0;padding-left:15px;margin-top:-10px;background:url(../img/icon_caution.png) no-repeat left center;color:#ff0000;font-size:11px;vertical-align:middle;}
+.cont .tbl_list td.modify:before{content:"수정";}
+
+/* cms: 채널회원 > 유료상품관리 > 정산관리 > 대사내역 > 주문내역 등록현황 */
+.cont .tbl_list.bg_effect{background:#fff7f3;}
+.cont .tbl_list tr.strong_table{display:none;}
+.cont .tbl_list tr.strong_table td{background:#fff;}
+.cont .tbl_list tr.strong_table > td{padding:0;}
+
+/* cms: 채널회원 > 유료상품관리 > 정산관리 > 대사내역 > CMS-제휴사 Tab > 등록 전 > 대사결과 등록 팝업 */
+.cont .result_regist{overflow:hidden;}
+.cont .result_regist .choice_para{float:left;width:100px;margin-top:3px;}
+.cont .result_regist .file_regist{float:left;}

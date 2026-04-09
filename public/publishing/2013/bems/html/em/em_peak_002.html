@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>입력내역 l 전기 피크 목표 관리 l 에너지관리 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+<script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+<link href="/html/2014/bems/css/custom/em.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+<script src="/html/2014/bems/js/custom/chart_common.js"> </script>
+<script src="chartScripts/EM_PEAK_002.js"></script>
+<!-- 2014-01-07 게이지 챠트 데이터 없는 유형 추가 -->
+<script>
+	$(document).ready(function(){
+		
+		 $('.chartBox_no').highcharts({
+			chart: {
+				type: 'gauge',
+				plotBackgroundColor: '#FFFFFF',
+				plotBackgroundImage: null,
+				plotBorderWidth: 0,
+				plotBorderColor: '#FFFFFF',
+				plotShadow: false,
+				backgroundColor: '#FFFFFF',
+				backgroundImage: null,
+				alignTicks: false,
+				borderColor: '#FFFFFF',
+				spacing: [20,10,0,5]
+			},
+			credits: {enabled: false},
+			exporting: {enabled: false},
+			legend: {enabled: false},
+			title: {
+				text: ''
+			}, 
+			pane: {
+				startAngle: -150,
+				endAngle: 150, 
+				background: [],
+				borderColor:'#FFFFFF'
+			},
+			// the value axis
+			yAxis: {
+				min: 0,
+				max: 200,
+				// 2013-12-23 ie8 에서 선을 없애기 위해 tickWidth 값을 0 으로 수정, lineWidth:0 을 추가.
+				tickWidth: 0,
+				lineWidth: 0,
+				minorTickInterval: 'auto',
+				minorTickWidth: 0,
+				minorTickLength: 40,
+				minorTickPosition: 'inside',
+				minorTickColor: '#666',
+				tickPixelInterval: 30, // 중간 구분선
+				labels: {
+					rotation: 'auto',
+					style:{
+						'font-size':'10px', 
+						'color':'#999999'
+					}
+				},
+				title: {
+					text: ''
+				},
+				plotBands: [{
+					from: 0,
+					to: 200,
+					color: '#dcdfe3',  // 첫번째 영역
+					innerRadius: '90%',
+					outerRadius: '130%'
+				}]        
+			},
+		
+			series: [{
+				key: 'key',
+				name: '12:45', // 여기에 툴팁에 초기에 표시되는 타이틀이 들어갑니다. 
+				data: [{y:0,dataLabels:false}],
+				tooltip: {
+					shared: true,
+					useHTML: true,
+					headerFormat: '<div class="chart_tooltip">',
+					pointFormat: '{series.name} <br />{point.y}',
+					footerFormat: '</div>',
+					valueDecimals: 0, // 소수점 몇자리까지 표시 할 것인지
+					valueSuffix: ' kWh'
+				}
+			}]
+		}, 
+		// Add some life
+		function (chart) {
+			if (!chart.renderer.forExport) {
+
+				setInterval(function () { // 주기적으로 아래 함수를 실행시켜 주면서 데이터를 반영합니다. ajax로 데이터를 불러올 것 이라면 이 부분에 코딩을 하시면 됩니다. 
+					var data = chart.series[0];
+					var point = chart.series[0].points[0];
+					var newName = "13:00";
+					var newPoint = 0;
+					data.name = newName;
+					point.update(newPoint);
+					
+				}, 3000); // 1000 : 1초
+
+			}
+		});
+	});
+	
+</script>
+<!-- //2014-01-07 게이지 챠트 데이터 없는 유형 추가 -->
+
+
+<body class="sub">
+	<div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+		<!-- //header -->
+
+		<!-- container -->
+		<div id="container">
+			<!-- lnb -->
+			<div class="lnb">
+				<h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title07.gif" alt="에너지 관리" /></h2>
+				<!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+				<ul>
+					<li class="depth02"><a href="#link"><span>목표량 관리</span></a></li>
+					<li class="depth02"><a href="#link"><span>사용량/금액 관리</span></a></li>
+					<li class="depth02 on"><a href="#link"><span>전기 피크 목표 관리</span></a></li>
+				</ul>
+			</div>
+			<!-- //lnb -->
+
+			<!-- contents -->
+			<div id="contents">
+				<div class="boxContents">
+					<div class="titleArea">
+						<h1>전기 피크 목표 관리</h1>
+						<ul class="location">
+							<!-- 2014-01-06 navigation(breadcrumb) dashboard 철자, 에너지 관리 띄어쓰기_수정 -->
+							<li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+							<li>에너지 관리<span>&gt;</span></li>
+							<!-- //2014-01-06 navigation(breadcrumb) dashboard 철자, 에너지 관리 띄어쓰기_수정 -->
+							<li>전기 피크 목표 관리<span>&gt;</span></li>
+							<li class="last">입력내역</li>
+						</ul>
+					</div>
+
+					<!-- 탭영역 -->
+					<div class="tabBg mb5">
+						<!-- [D] 선택 시, li태그에 class="on" 추가 -->
+						<ul class="btn_list">
+							<li class="on"><a href="#link">입력내역</a></li>
+							<li><a href="#link">History</a></li>
+						</ul>
+						<!-- 도움말, 인쇄, 북마크 -->
+						<ul class="sideList clear02 mt15">
+							<li class="sideStyle01"><a href="#link">도움말</a></li>
+							<li class="sideStyle02"><a href="#link">인쇄</a></li>
+							<!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+							<li class="sideStyle03"><a href="#link">북마크</a></li>
+						</ul>
+						<!-- //도움말, 인쇄, 북마크 -->
+					</div>
+					<!-- 탭영역 -->
+
+					<!-- 2013-12-16 내용변경_수정3 -->
+					<!-- 에너지 사용금액 설정 -->
+					<div class="emWarning">
+						<p class="text02">2013년 목표 피크전력량이 설정되지 않았습니다.</p>
+						<p class="btn_input"><a href="#link">목표 피크 전력량 입력하기</a></p>
+						<p class="btn_close"><a href="#" onclick="javascript:$(this).parent().parent().remove()"><img src="/html/2014/bems/images/common/btn_close_em.gif" alt="닫기" /></a></p>
+					</div>
+					<!-- 에너지 사용금액 설정 -->
+					<!-- //2013-12-16 내용변경_수정3 -->
+
+					<!-- 2013년 전력 사용량 -->
+					<section class="BoxArea mt0">
+						<div class="boxBg">
+							<h2>2013년 전력 사용량</h2>
+
+							<!--차트 삽입부분 -->
+							<div id="chart01" style="min-width: 310px; height: 380px; margin: 0 auto;"></div>
+							<!--//차트 삽입부분 -->
+						</div>
+					</section>
+					<!-- //2013년 에너지 목표 사용량 -->
+
+					<!-- 주요정보 -->
+					<section class="BoxArea">
+						<div class="boxBg">
+							<article class="tableGroup01">
+								<h2>주요정보</h2>
+								<table class="table_style01">
+									<caption class="blind">주요정보</caption>
+									<colgroup>
+										<col style="width:10%" />
+										<col style="width:7%" />
+										<col style="width:12%" />
+										<col style="width:7%" />
+										<col style="width:12%" />
+										<col style="width:12%" />
+										<col style="width:12%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">&nbsp;</th>
+											<th colspan="2" scope="col">최대</th>
+											<th colspan="2" scope="col">최소</th>
+											<th scope="col">월평균</th>
+											<th scope="col">연간 사용량</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- [D] 사용량이 오버 되었을 경우, td태그에 class="colorUp" 삽입 -->
+										<tr>
+											<th class="thStyle">2013년</th>
+											<td>8월</td>
+											<td class="colorUp">724,583 kWh</td>
+											<td>1월</td>
+											<td class='blueText'>451,793 kWh</td>
+											<td>557,678 kWh</td>
+											<td>5,649 kWh</td>
+										</tr>
+										<tr>
+											<th class="thStyle">2013년</th>
+											<td>8월</td>
+											<td class="colorUp">724,583 kWh</td>
+											<td>1월</td>
+											<td class='blueText'>451,793 kWh</td>
+											<td>557,678 kWh</td>
+											<td>5,649 kWh</td>
+										</tr>
+									</tbody>
+								</table>								
+							</article>							
+						</div>
+					</section>
+					<!-- //주요정보 -->
+
+					<!-- 목표 피크 관리 -->
+					<section class="BoxArea">
+						<div class="boxBg">
+							<article class="tableGroup01">
+								<!-- 2013-12-16 내용변경_수정2 -->
+								<h2>목표 피크 관리<span class="titleInfo">최근 등록일 : -</span></h2>
+								<!-- //2013-12-16 내용변경_수정2 -->
+								<div class="energe_mesure">
+									<!-- 2013-12-16 내용변경_수정4 -->
+									<div class="energy_use">
+										<div class="prev_use">
+											<div class="chartBox_no">
+												<img src='/html/2014/bems/images/common/peak_noE.gif' alt='' />
+											</div>
+											<div id='description'>
+												<ul>
+													<li class='ave'>오늘의 피크 11:00<br><span class='average'>557,678</span> <span class='unit'>kW</span></li>
+													<li>실시간 전력<br /><span class="listTxt">오늘17:15 <span class="listTxt02">527 kW</span></span></li>
+													<!-- 2013-12-24 텍스트 내용 수정 -->
+													<li>올해 목표 : - kW</li>
+													<!-- //2013-12-24 텍스트 내용 수정 -->
+													<li>올해 피크 : 930 kW</li>
+													<li>작년 피크 : 1,100 kW</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- //2013-12-16 내용변경_수정4 -->
+									<div class="energy_use ">
+										<div class="target_energy">
+											<h3>목표 Peak 전력량을 입력해주세요</h3>
+											<!-- 2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한 수정 -->
+											<div class='targetEn_input targetEn_input2'><input type='text' value='목표 피크 전력량을 입력하세요.' /><span>kW</span></div>
+											<!-- //2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한 수정 -->
+											<!-- 2013-12-16 내용변경_수정 -->
+											<div class='peakMBtn'><a href="#link">입력</a></div>
+											<div class='text'>
+												<p class='title'>전력 피크 경고 레벨</p>
+												<p>경고: 올해 목표피크 이상</p>
+												<p>주의: 양호 ~ 올해 목표 피크</p>
+												<p>양호: 0 ~ (목표피크  X 80%)</p>
+											</div>
+											<!-- //2013-12-16 내용변경_수정 -->
+										</div>										
+									</div>
+								</div>
+							</article>
+						</div>
+					</section>
+					<!-- //목표 피크 관리 -->
+				</div>
+			</div>
+			<!-- //contents -->
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer>
+			<p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+			<p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+			<div class="f_group">
+				<div class="clear">
+					<address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+					<ul class="f_list01">
+						<li>대표이사: 하성민</li>
+						<li>대표전화: 02) 1234-5678</li>
+						<li>사업자등록번호: 104-81-37225</li>
+					</ul>
+				</div>
+				<p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+				<div class="clear">
+					<p class="textStyle02">* CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.</p>
+					<ul class="f_list01 f_list02">
+						<li class="listStyle01"><a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer" /></a></li>
+						<li class="listStyle01"><a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome" /></a></li>
+						<li class="listStyle01"><a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox" /></a></li>
+						<li class="listStyle01"><a href="http://www.apple.com/kr/safari/" target="_blank"><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari" /></a></li>
+					</ul>
+				</div>
+			</div>
+			<p class="btn_top"><a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a></p>
+		</footer>
+		<!-- //footer -->
+	</div>
+	<!-- //wrap -->
+</body>
+</html>

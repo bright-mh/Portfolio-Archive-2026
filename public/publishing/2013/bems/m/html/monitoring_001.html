@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SKT BEMS</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="/html/2014/bems/m/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/html/2014/bems/m/images/touch-icon-iphone-retina.png" />
+
+    <link rel="stylesheet" href="/html/2014/bems/m/css/jquery.mobile-1.3.2.css" />
+    <link rel="stylesheet" href="/html/2014/bems/m/css/default.css" type="text/css" media="screen, print" />
+    <link rel="stylesheet" href="/html/2014/bems/m/css/common.css" type="text/css" media="screen, print" />
+    <script type="text/javascript" src="/html/2014/bems/m/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/html/2014/bems/m/js/jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/html/2014/bems/m/js/jquery.event.drag-1.5.min.js"></script>
+    <script type="text/javascript" src="/html/2014/bems/m/js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="/html/2014/bems/m/js/common.js"></script>
+
+    <script>
+      jQuery("document").ready(function () {
+        var wWidth = jQuery(window).width() - 40;
+        jQuery(".chartArea").css("width", wWidth + "px");
+        jQuery(".highchart").css({ width: wWidth + "px", height: "230px" });
+        jQuery(".highchartW").css({ width: wWidth + "px" });
+      });
+
+      jQuery(window).resize(function () {
+        var wWidth = jQuery(window).width() - 40;
+        jQuery(".chartArea").css("width", wWidth + "px");
+        jQuery(".highchart").css({ width: wWidth + "px", height: "230px" });
+        jQuery(".highchartW").css({ width: wWidth + "px" });
+      });
+    </script>
+    <script type="text/javascript" src="/html/2014/bems/m/js/highcharts.js"></script>
+    <script type="text/javascript" src="/html/2014/bems/m/js/highcharts-more.js"></script>
+    <script type="text/javascript" src="chartScripts/monitoring_001.js"></script>
+    <script type="text/javascript" src="chartScripts/monitoring_002.js"></script>
+    <!--
+	<script type="text/javascript" src="chartScripts/monitoring_003.js"></script>
+-->
+    <script type="text/javascript" src="chartScripts/monitoring_004.js"></script>
+    <script type="text/javascript" src="chartScripts/monitoring_004_1.js"></script>
+    <script type="text/javascript" src="chartScripts/monitoring_005.js"></script>
+    <script type="text/javascript" src="chartScripts/monitoring_006.js"></script>
+    <script type="text/javascript" src="chartScripts/monitoring_007.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        function GetQueryStringParams(sParam) {
+          var sPageURL = window.location.search.substring(1);
+          var sURLVariables = sPageURL.split("&");
+          for (i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split("=");
+            if (sParameterName[0] == sParam) {
+              return sParameterName[1];
+            } //E if
+          }
+        }
+
+        var pageNum = GetQueryStringParams("pageNum");
+        if (pageNum == undefined) {
+          pageNum = 0;
+        }
+
+        var isStart = false;
+
+        /*********
+		
+		lnb%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+	************/
+        var wrpHei = jQuery("#wrap").height();
+
+        var touchArr = [];
+        //2014-01-15 slider height값 삭제
+        /*
+		jQuery($("#touchSlider6>.slides>li")).each(function(){
+			touchArr.push(jQuery(this).height());
+			
+		});	*/
+
+        touchArr[pageNum] = $("#touchSlider6>.slides>li").eq(pageNum).find(">.boxLayout").outerHeight(); //2014-01-15 slider height값 수정
+
+        /* lnb click */
+        $(".lnbList>li>p.lnb_depth01>a").bind("click", function () {
+          isStart = true;
+          $(".lnbList>li>p.lnb_depth01>a").removeClass("on");
+          $(this).addClass("on");
+          var idx = $(this).parent().parent().index(".lnbList li");
+          if (idx == 0) {
+            try {
+              $(".lnbList>li")
+                .eq(1)
+                .find(".lnb_depth02>li")
+                .each(function () {
+                  $(this).find("a").removeClass("on");
+                });
+            } catch (e) {}
+          }
+        });
+
+        $(".lnb_depth02>li>a").bind("mousedown", function () {
+          isStart = true;
+          var idx = $(this).parent().parent().parent().find(".lnb_depth02>li").index($(this).parent());
+          $(this).parent().parent().prev().children().addClass("on");
+          $("#defaultpanel").panel("close"); //panel Close
+          try {
+            viewPage(idx);
+          } catch (e) {
+            alert(e);
+          }
+        });
+        function touchSetting(index) {
+          //2014-01-15 slider height값 삭제
+          //wrpHei = wrpHei - touchArr[index];
+
+          $("#touchSlider6").touchSlider({
+            flexible: true,
+            page: ++index,
+
+            initComplete: function (e) {
+              $("#touchSlider6_paging").html("");
+              var num = 1;
+              $("#touchSlider6 ul.slides li.page").each(function (i, el) {
+                if ((i + 1) % e._view == 0) {
+                  $("#touchSlider6_paging").append('<button type="button" class="btn_page">page' + num++ + "</button>");
+                }
+              });
+              $("#touchSlider6_paging .btn_page")
+                .eq(index - 1)
+                .addClass("on");
+
+              $(document).on("click", "#touchSlider6_paging .btn_page", function (e) {
+                isStart = true;
+                var i = $(this).index();
+                $("#touchSlider6").get(0).go_page(i);
+              });
+            },
+            counter: function (e) {
+              num = e.current - 1;
+
+              //2014-01-15 slider height값 수정 삭제 start
+
+              //if(isTouch) alert(num);
+
+              //alert(num);
+              //alert(touchArr);
+              //2014-01-15 slider height값 수정 삭제 End
+              $("#touchSlider6_paging .btn_page").removeClass("on").eq(num).addClass("on");
+
+              $(".lnb_depth02>li>a").removeClass("on");
+              $(".lnb_depth02>li>a").eq(num).addClass("on");
+              //2014-01-23 height값을 function으로 정의
+              flexibleHei(num);
+            },
+          });
+        }
+
+        touchSetting(pageNum);
+        //2014-01-23 height값을 function으로 정의
+        function flexibleHei(num) {
+          var cnt = 0;
+          $("#touchSlider6>.slides>li").each(function () {
+            touchArr[cnt] = jQuery(this).find(">.boxLayout").outerHeight();
+            cnt++;
+          });
+
+          $("#touchSlider6").css({ height: touchArr[num] + "px" });
+          jQuery("#wrap").css({ height: touchArr[num] + 113 + "px" }); //2014-01-15 slider height값 수정
+          /*2014-02-14 플리킹 시 푸터 버튼 안보이게 하기*/
+          jQuery(".top").fadeOut(0);
+          /*//End 2014-02-14 플리킹 시 푸터 버튼 안보이게 하기*/
+        }
+        //End 2014-01-23 height값을 function으로 정의
+
+        function viewPage(index) {
+          $("#touchSlider6").get(0).go_page(index);
+        }
+
+        /*********
+		
+		//lnb%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+	************/
+      });
+    </script>
+    <style>
+      footer {
+        margin-top: 4px;
+      } /*2014-01-15 footer 모니터링 위치값 수정*/
+    </style>
+  </head>
+  <body>
+    <div data-role="page" id="wrap">
+      <header data-role="header">
+        <div class="sMenu">
+          <div data-role="content">
+            <a href="#defaultpanel" data-role="button" data-inline="true" data-icon="bars"
+              ><img
+                src="/html/2014/bems/m/images/common/icon_menu.png"
+                style="width: 14px; height: auto"
+                alt="Default panel"
+            /></a>
+          </div>
+        </div>
+        <h1 class="logo">
+          <a href="#"
+            ><img
+              src="/html/2014/bems/m/images/common/h1_cloudbems.png"
+              style="width: 121px; height: auto"
+              alt="CLOUD BEMS" /></a
+          ><span>남산빌딩</span>
+        </h1>
+        <div class="rMenu">
+          <div class="selectG01" style="position: relative">
+            <a href="#link"
+              ><img
+                src="/html/2014/bems/m/images/common/icon_build.png"
+                style="width: 14px; height: auto"
+                alt="right panel"
+            /></a>
+            <select>
+              <option value="1">T Tower</option>
+              <option value="2">U Tower</option>
+              <option value="3">V Tower</option>
+              <option value="4">W Tower</option>
+              <option value="5">X Tower</option>
+              <option value="6">Y Tower</option>
+              <option value="7">Z Tower</option>
+            </select>
+          </div>
+        </div>
+      </header>
+      <!-- //#header -->
+
+      <section id="contents" data-role="content">
+        <ul class="tab">
+          <li>
+            <a href="/html/2014/bems/m/html/dashboard_001.html" target="_self"
+              ><img
+                src="/html/2014/bems/m/images/common/tab_dashboard_off.png"
+                style="width: auto; height: 14px"
+                alt="Dashboard"
+            /></a>
+          </li>
+          <li class="on">
+            <a href="/html/2014/bems/m/html/monitoring_001.html"
+              ><img
+                src="/html/2014/bems/m/images/common/tab_energy_on.png"
+                style="width: auto; height: 14px"
+                alt="Energy Analysis"
+            /></a>
+          </li>
+        </ul>
+
+        <article class="today">
+          <!-- 2014-02-13 텍스트_수정 -->
+          <div class="temper">
+            <img src="/html/2014/bems/m/images/temp/icon_sun.png" style="width: auto; height: 17px" alt="" />기상청 예보
+            : <span class="low">22.00℃</span> / <span class="high">30.00%</span>
+          </div>
+          <!-- //2014-02-13 텍스트_수정 -->
+        </article>
+
+        <div id="touchSlider6_paging" class="btn_area"></div>
+        <div id="touchSlider6" class="monitoring">
+          <ul class="slides">
+            <!-- monitoring_001 -->
+            <li class="page">
+              <!-- boxLayout -->
+              <div class="boxLayout">
+                <!-- contBox contBox02 -->
+                <div class="contBox contBox02">
+                  <h3>에너지원 별 사용량</h3>
+                  <p class="txtDate">2013-10-20(목) 00:00 ~ 23:00 까지</p>
+                </div>
+                <!-- //contBox contBox02 -->
+
+                <!-- contBox -->
+                <div class="contBox">
+                  <!-- 차트 데이터 삽입 부분 -->
+                  <div class="groupBox01">
+                    <div id="chart01" class="highchart">차트 데이터 삽입 부분</div>
+                  </div>
+                  <!-- //차트 데이터 삽입 부분 -->
+
+                  <!-- 누적 사용량 -->
+                  <div class="groupBox02">
+                    <h4>누적 사용량</h4>
+                    <ul class="accrueList pg1">
+                      <li>
+                        <div>
+                          <!-- [D] span태그에 title을 동일하게 넣어 주세요. -->
+                          <p class="listTitle"><span title="일반전력">일반전력</span></p>
+                          <!-- [D] 전기, 가스를 제외한 부분은 다음의 클래스명을 순차적으로 p 태그 안에 넣어 주세요.
+													- chart_color01 ~ chart_color10
+													- 전기 일 때 : effect
+													- 가스 일 때 : gas
+											-->
+                          <!-- 2014-01-08 색상 교체에 의한 클래스명_수정01 -->
+                          <p class="chart_color01"><span class="num">288</span> <span class="unit">kWh</span></p>
+                          <!-- //2014-01-08 색상 교체에 의한 클래스명_수정01 -->
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle"><span title="심야전력">심야전력</span></p>
+                          <!-- 2014-01-08 색상 교체에 의한 클래스명_수정02 -->
+                          <p class="chart_color02"><span class="num">199</span> <span class="unit">kWh</span></p>
+                          <!-- //2014-01-08 색상 교체에 의한 클래스명_수정02 -->
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle"><span title="가스">가스</span></p>
+                          <p class="gas"><span class="num">38</span> <span class="unit">N㎥</span></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //누적 사용량 -->
+
+                  <!-- 주요정보 -->
+                  <div class="groupBox03">
+                    <h4>주요정보</h4>
+                    <table class="table_style01">
+                      <colgroup>
+                        <col style="width: 17.6%" />
+                        <col style="width: 12.8%" />
+                        <col style="width: 17%" />
+                        <col style="width: 12.8%" />
+                        <col style="width: 17%" />
+                        <col style="width: 22.8%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th colspan="2">최대</th>
+                          <th colspan="2">최소</th>
+                          <th>평균</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>일반전력</th>
+                          <td>13:15</td>
+                          <td>288 kWh</td>
+                          <td>23:00</td>
+                          <td>99 kWh</td>
+                          <td>191.89 kWh</td>
+                        </tr>
+                        <tr>
+                          <th>심야전력</th>
+                          <td>12:00</td>
+                          <td>199 kWh</td>
+                          <td>02:15</td>
+                          <td>0 kWh</td>
+                          <td>71.28 kWh</td>
+                        </tr>
+                        <tr>
+                          <th>가스</th>
+                          <td>09:00</td>
+                          <td>38 N㎥</td>
+                          <td>03:15</td>
+                          <td>0 N㎥</td>
+                          <td>4.89 N㎥</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //주요정보 -->
+                </div>
+                <!-- //contBox -->
+              </div>
+              <!-- //boxLayout -->
+            </li>
+            <!-- //monitoring_001 -->
+
+            <!-- monitoring_002-->
+            <li class="page">
+              <!-- boxLayout -->
+              <div class="boxLayout">
+                <!-- contBox contBox02 -->
+                <div class="contBox contBox02">
+                  <h3>목표대비 사용량</h3>
+                  <p class="txtDate">~ 오늘 23:00 까지</p>
+                </div>
+                <!-- //contBox contBox02 -->
+
+                <div class="contBox">
+                  <!-- 오늘의 사용량 -->
+                  <div class="groupBox01">
+                    <h4>오늘의 사용량</h4>
+                    <div class="graphArea">
+                      <div class="areaBox">
+                        <div class="yDay">
+                          <p class="txtDate">어제 10.31(<span>금</span>)</p>
+                          <p class="graphY">
+                            <span style="width: 50%"><span class="blind">50%</span></span>
+                          </p>
+                          <!-- 툴팁 -->
+                          <div class="tooltipBox">
+                            <p>어제 00:00~ 13:15</p>
+                            <ul>
+                              <li>전체: <span>0.0394567 toe</span></li>
+                              <li>전기: 191.89 kWh</li>
+                              <li>가스: 191.89 N㎥</li>
+                            </ul>
+                          </div>
+                          <!-- //툴팁 -->
+                        </div>
+                        <div class="tDay">
+                          <p class="txtDate">오늘 11.01(<span class="colorH">토</span>)</p>
+                          <p class="graphY">
+                            <span style="width: 80.31%"><span class="blind">80.31%</span></span>
+                          </p>
+                          <!-- 툴팁 -->
+                          <div class="tooltipBox">
+                            <p>오늘 00:00~ 13:15</p>
+                            <ul>
+                              <li>전체: <span>0.0394567 toe</span></li>
+                              <li>전기: 191.89 kWh</li>
+                              <li>가스: 191.89 N㎥</li>
+                            </ul>
+                          </div>
+                          <!-- //툴팁 -->
+                        </div>
+                      </div>
+                      <div class="totalCon">
+                        <span class="txtContrast">어제 대비</span>
+                        <!-- [D] 증가일 때 span태그에 class="dataUp" / 감소일 때 class="dataDown" -->
+                        <span class="dataDown">130.31<span class="unit">%</span></span
+                        ><span class="blind">감소</span>
+                      </div>
+                    </div>
+
+                    <table class="table_style01">
+                      <colgroup>
+                        <col style="width: 14.9%" />
+                        <col style="width: 25.6%" />
+                        <col style="width: 23.9%" />
+                        <col style="width: 35.6%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th>전기</th>
+                          <th>가스</th>
+                          <th>전체</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>어제</th>
+                          <td>191.89 kWh</td>
+                          <td>191.89 N㎥</td>
+                          <td>0.0394567 toe</td>
+                        </tr>
+                        <tr>
+                          <th>오늘</th>
+                          <td>191.89 kWh</td>
+                          <td>191.89 N㎥</td>
+                          <td>0.0394567 toe</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //오늘의 사용량 -->
+
+                  <!-- 2014-02-13 목표대비 사용량_ 삭제 및 수정 -->
+                  <!-- 목표대비 사용량 -->
+                  <div class="groupBox05">
+                    <h4>목표대비 사용량</h4>
+                    <!-- [D] 목표량이 입력된 경우 -->
+                    <div class="graphArea">
+                      <div class="areaBox areaBox02">
+                        <div class="yDay yDay02">
+                          <p class="txtDate02">목표량<span>오늘까지의 목표량</span></p>
+                          <p class="graphY02">
+                            <span style="width: 50%"><span class="blind">50%</span></span>
+                          </p>
+                          <!-- 툴팁 -->
+                          <div class="tooltipBox">
+                            <p>11월 목표량</p>
+                            <ul>
+                              <li>전체: <span>0.0394567 toe</span></li>
+                              <li>전기: 191.89 kWh</li>
+                              <li>가스: 191.89 N㎥</li>
+                            </ul>
+                          </div>
+                          <!-- //툴팁 -->
+                        </div>
+                        <div class="tDay tDay02">
+                          <p class="txtDate02">사용량<span>현재까지의 사용량</span></p>
+                          <p class="graphY02">
+                            <span style="width: 80.31%"><span class="blind">80.31%</span></span>
+                          </p>
+                          <!-- 툴팁 -->
+                          <div class="tooltipBox">
+                            <p>11월 사용량</p>
+                            <ul>
+                              <li>전체: <span>0.0394567 toe</span> (69.23 %)</li>
+                              <li>전기: 191.89 kWh (69.23 %)</li>
+                              <li>가스: 191.89 N㎥ (69.23 %)</li>
+                            </ul>
+                          </div>
+                          <!-- //툴팁 -->
+                        </div>
+                      </div>
+                      <div class="totalCon totalCon02">
+                        <span class="txtContrast">목표량 대비</span>
+                        <span class="unitNum">170.53<span class="unit">%</span></span>
+                        <span class="txtContrast02">사용중</span>
+                      </div>
+                    </div>
+
+                    <table class="table_style01">
+                      <colgroup>
+                        <col style="width: 29%" />
+                        <col style="width: 21.5%" />
+                        <col style="width: 21.5%" />
+                        <col style="width: 28%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th>전기</th>
+                          <th>가스</th>
+                          <th>전체</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>올해의 목표량</th>
+                          <td>191.89 kWh</td>
+                          <td>191.89 N㎥</td>
+                          <td>0.0394567 toe</td>
+                        </tr>
+                        <tr>
+                          <th>오늘까지의 목표량</th>
+                          <td>191.89 kWh</td>
+                          <td>191.89 N㎥</td>
+                          <td>0.0394567 toe</td>
+                        </tr>
+                        <tr>
+                          <th>현재까지의 목표량</th>
+                          <td>69.23 %</td>
+                          <td>69.23 %</td>
+                          <td>69.23 %</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- //목표량이 입력된 경우 -->
+
+                    <!-- [D] 목표량이 입력되지 않은 경우 : 주석처리 해 놓음 -->
+                    <!--
+								<div class="noGoalBox">
+									<p>2014년의 에너지 목표량이 설정되지 않아 <br />정보를 표시할 수 없습니다.</p>
+								</div>
+								-->
+                    <!-- //목표량이 입력되지 않은 경우 -->
+                  </div>
+                  <!-- //목표대비 사용량 -->
+                  <!-- //2014-02-13 목표대비 사용량_ 삭제 및 수정 -->
+                </div>
+              </div>
+              <!-- //boxLayout -->
+            </li>
+            <!-- //monitoring_002-->
+
+            <!-- monitoring_003-->
+            <li class="page">
+              <!-- boxLayout -->
+              <div class="boxLayout">
+                <!-- contBox contBox02 -->
+                <div class="contBox contBox02">
+                  <h3>계통 별 전기사용량</h3>
+                  <p class="txtDate">2013-10-20(목) 00:00 ~ 23:00 까지</p>
+                </div>
+                <!-- //contBox contBox02 -->
+
+                <!-- contBox -->
+                <div class="contBox">
+                  <!-- 차트 데이터 삽입 부분 -->
+                  <div class="groupBox01">
+                    <div id="chart02" class="highchart">차트 데이터 삽입 부분</div>
+                  </div>
+                  <!-- //차트 데이터 삽입 부분 -->
+
+                  <!-- 누적 사용량 -->
+                  <div class="groupBox02">
+                    <h4>누적 사용량</h4>
+                    <ul class="accrueList">
+                      <li>
+                        <div>
+                          <!-- [D] span태그에 title을 동일하게 넣어 주세요. -->
+                          <p class="listTitle"><span title="HV-1">HV-1</span></p>
+                          <!-- [D] 전기, 가스를 제외한 부분은 다음의 클래스명을 순차적으로 p 태그 안에 넣어 주세요.
+													- chart_color01 ~ chart_color10
+													- 전기 일 때 : effect
+													- 가스 일 때 : gas
+											-->
+                          <p class="chart_color01"><span class="num">6,843</span> <span class="unit">kWh</span></p>
+                          <!-- 2014-02-13 비중 정보_추가01 -->
+                          <p class="gravity chart_color01">
+                            <span class="num02">32</span><span class="unit02">%</span>
+                          </p>
+                          <!-- //2014-02-13 비중 정보_추가01 -->
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <!-- 2014-01-08 텍스트_수정 -->
+                          <p class="listTitle"><span title="일반동력">일반동력</span></p>
+                          <!-- //2014-01-08 텍스트_수정 -->
+                          <p class="chart_color02"><span class="num">3,740</span> <span class="unit">kWh</span></p>
+                          <!-- 2014-02-13 비중 정보_추가02 -->
+                          <p class="gravity chart_color02">
+                            <span class="num02">13</span><span class="unit02">%</span>
+                          </p>
+                          <!-- //2014-02-13 비중 정보_추가02 -->
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle"><span title="냉동동력">냉동동력</span></p>
+                          <p class="chart_color03"><span class="num">480</span> <span class="unit">kWh</span></p>
+                          <!-- 2014-02-13 비중 정보_추가03 -->
+                          <p class="gravity chart_color03">
+                            <span class="num02">19</span><span class="unit02">%</span>
+                          </p>
+                          <!-- //2014-02-13 비중 정보_추가04 -->
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle"><span title="비상동력">비상동력</span></p>
+                          <p class="chart_color04"><span class="num">3,744</span> <span class="unit">kWh</span></p>
+                          <!-- 2014-02-13 비중 정보_추가04 -->
+                          <p class="gravity chart_color04">
+                            <span class="num02">11</span><span class="unit02">%</span>
+                          </p>
+                          <!-- //2014-02-13 비중 정보_추가04 -->
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle"><span title="통신동력">통신동력</span></p>
+                          <p class="chart_color05"><span class="num">768</span> <span class="unit">kWh</span></p>
+                          <!-- 2014-02-13 비중 정보_추가05 -->
+                          <p class="gravity chart_color05">
+                            <span class="num02">15</span><span class="unit02">%</span>
+                          </p>
+                          <!-- //2014-02-13 비중 정보_추가05 -->
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //누적 사용량 -->
+
+                  <!-- 주요정보 -->
+                  <div class="groupBox03">
+                    <h4>주요정보</h4>
+                    <table class="table_style01">
+                      <colgroup>
+                        <col style="width: 17.6%" />
+                        <col style="width: 12.8%" />
+                        <col style="width: 17%" />
+                        <col style="width: 12.8%" />
+                        <col style="width: 17%" />
+                        <col style="width: 22.8%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th colspan="2">최대</th>
+                          <th colspan="2">최소</th>
+                          <th>평균</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>HV-1</th>
+                          <td>13:15</td>
+                          <td>288 kWh</td>
+                          <td>23:00</td>
+                          <td>99 kWh</td>
+                          <td>191.89 kWh</td>
+                        </tr>
+                        <tr>
+                          <th>일반동력</th>
+                          <td>12:00</td>
+                          <td>199 kWh</td>
+                          <td>02:15</td>
+                          <td>0 kWh</td>
+                          <td>71.28 kWh</td>
+                        </tr>
+                        <tr>
+                          <th>냉동동력</th>
+                          <td>12:00</td>
+                          <td>199 kWh</td>
+                          <td>02:15</td>
+                          <td>0 kWh</td>
+                          <td>71.28 kWh</td>
+                        </tr>
+                        <tr>
+                          <th>비상동력</th>
+                          <td>12:00</td>
+                          <td>199 kWh</td>
+                          <td>02:15</td>
+                          <td>0 kWh</td>
+                          <td>71.28 kWh</td>
+                        </tr>
+                        <tr>
+                          <th>통신동력</th>
+                          <td>12:00</td>
+                          <td>199 kWh</td>
+                          <td>02:15</td>
+                          <td>0 kWh</td>
+                          <td>71.28 kWh</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //주요정보 -->
+                </div>
+                <!-- //contBox -->
+              </div>
+              <!-- //boxLayout -->
+            </li>
+            <!-- //monitoring_003-->
+
+            <!-- monitoring_004-->
+            <li class="page">
+              <!-- boxLayout -->
+              <div class="boxLayout">
+                <!-- contBox contBox02 -->
+                <div class="contBox contBox02">
+                  <h3>전기 사용패턴</h3>
+                  <p class="txtDate">2013-10-20(목) 00:00 ~ 23:00 까지</p>
+                </div>
+                <!-- //contBox contBox02 -->
+
+                <!-- contBox -->
+                <div class="contBox">
+                  <!-- 전기 피크 -->
+                  <div class="groupBox04">
+                    <h4>전기 피크</h4>
+                    <!-- 차트 데이터 삽입 부분 -->
+                    <div id="chart03" class="highchart">차트 데이터 삽입 부분</div>
+                    <!-- //차트 데이터 삽입 부분 -->
+                    <!-- 범례 영역 -->
+                    <ul class="loadList">
+                      <!-- [D] 빈 span 태그는 효과를 주기 위한 태그입니다. 지우지 마세요! -->
+                      <li class="list01"><span></span>경부하</li>
+                      <li class="list02"><span></span>중부하</li>
+                      <li class="list03"><span></span>최대부하</li>
+                    </ul>
+                    <!-- //범례 영역 -->
+                  </div>
+                  <!-- //전기 피크 -->
+
+                  <!-- 시간대별 전기사용량 -->
+                  <div class="groupBox04">
+                    <h4>시간대별 전기사용량</h4>
+                    <!-- 차트 데이터 삽입 부분 -->
+                    <div id="chart04" class="highchart">차트 데이터 삽입 부분</div>
+                    <!-- //차트 데이터 삽입 부분 -->
+                  </div>
+                  <!-- //시간대별 전기사용량 -->
+
+                  <!-- 주요정보 -->
+                  <div class="groupBox03">
+                    <table class="table_style01">
+                      <colgroup>
+                        <col style="width: 16%" />
+                        <col style="width: 24%" />
+                        <col style="width: 19%" />
+                        <col style="width: 20.5%" />
+                        <col style="width: 20.5%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th>시간대</th>
+                          <th>요금</th>
+                          <th>누적 사용량</th>
+                          <th>비중</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>경부하</th>
+                          <td>23:00~09:00</td>
+                          <td>20원/kWh</td>
+                          <td>600 kWh</td>
+                          <td>31.24 %</td>
+                        </tr>
+                        <tr>
+                          <th>중부하</th>
+                          <td>09:00~10:00<br />12:00~17:00<br />20:00~22:00</td>
+                          <td>40원/kWh</td>
+                          <td>700 kWh</td>
+                          <td>40.12 %</td>
+                        </tr>
+                        <tr>
+                          <th>최대부하</th>
+                          <td>09:00~10:00<br />12:00~17:00<br />20:00~22:00</td>
+                          <td>80원/kWh</td>
+                          <td>590 kWh</td>
+                          <td>28.64 %</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="txtInfo">시간대 및 요금은 겨울철(11~2월)의 기준 정보가 적용되어 표시됩니다.</p>
+                  </div>
+                  <!-- //주요정보 -->
+                </div>
+                <!-- //contBox -->
+              </div>
+              <!-- //boxLayout -->
+            </li>
+            <!-- //monitoring_004-->
+
+            <!-- monitoring_005-->
+            <li class="page">
+              <!-- boxLayout -->
+              <div class="boxLayout">
+                <!-- contBox contBox02 -->
+                <div class="contBox contBox02">
+                  <h3>층별 전기 사용량</h3>
+                  <p class="txtDate">2013-10-20(목) 00:00 ~ 23:00 까지</p>
+                </div>
+                <!-- //contBox contBox02 -->
+
+                <!-- contBox -->
+                <div class="contBox">
+                  <!-- 차트 데이터 삽입 부분 -->
+                  <div class="groupBox01">
+                    <div id="chart05" class="highchartW">차트 데이터 삽입 부분</div>
+                  </div>
+                  <!-- //차트 데이터 삽입 부분 -->
+
+                  <!-- 전층 누적 사용량 -->
+                  <div class="groupBox03">
+                    <h4>전층 누적 사용량</h4>
+                    <ul class="wholeList">
+                      <li>
+                        <div>
+                          <p class="listTitle">어제</p>
+                          <p><span class="num">2,088</span> <span class="unit">kWh</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle">오늘</p>
+                          <p><span class="num">1,888</span> <span class="unit">kWh</span></p>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <!-- [D] 증가일 때는 span="dataUp" / 감소일 때는 span="dataDown" -->
+                    <p class="txtInfo">
+                      13:15까지의 오늘의 총 사용량이 어제 대비 <span class="dataDown">19.98%</span> 감소되어 사용되고
+                      있습니다.
+                    </p>
+                  </div>
+                  <!-- //전층 누적 사용량 -->
+                </div>
+                <!-- //contBox -->
+              </div>
+              <!-- //boxLayout -->
+            </li>
+            <!-- //monitoring_005-->
+
+            <!-- monitoring_006-->
+            <li class="page">
+              <!-- boxLayout -->
+              <div class="boxLayout">
+                <!-- contBox contBox02 -->
+                <div class="contBox contBox02">
+                  <h3>가스 사용량</h3>
+                  <p class="txtDate">2013-10-20(목) 00:00 ~ 23:00 까지</p>
+                </div>
+                <!-- //contBox contBox02 -->
+
+                <!-- contBox -->
+                <div class="contBox">
+                  <!-- 차트 데이터 삽입 부분 -->
+                  <div class="groupBox01">
+                    <div id="chart06" class="highchart">차트 데이터 삽입 부분</div>
+                  </div>
+                  <!-- //차트 데이터 삽입 부분 -->
+
+                  <!-- 누적 사용량 -->
+                  <div class="groupBox02">
+                    <h4>누적 사용량</h4>
+                    <ul class="accrueList">
+                      <li>
+                        <div>
+                          <!-- [D] span태그에 title을 동일하게 넣어 주세요. -->
+                          <p class="listTitle"><span title="냉난방">냉난방</span></p>
+                          <!-- [D] 전기, 가스를 제외한 부분은 다음의 클래스명을 순차적으로 p 태그 안에 넣어 주세요.
+													- chart_color01 ~ chart_color10
+													- 전기 일 때 : effect
+													- 가스 일 때 : gas
+											-->
+                          <p class="chart_color01"><span class="num">288</span> <span class="unit">N㎥</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle"><span title="급탕">급탕</span></p>
+                          <p class="chart_color02"><span class="num">9</span> <span class="unit">N㎥</span></p>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <p class="listTitle"><span title="취사">취사</span></p>
+                          <p class="chart_color03"><span class="num">0</span> <span class="unit">N㎥</span></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //누적 사용량 -->
+
+                  <!-- 주요정보 -->
+                  <div class="groupBox03">
+                    <h4>주요정보</h4>
+                    <table class="table_style01">
+                      <colgroup>
+                        <col style="width: 17.6%" />
+                        <col style="width: 12.8%" />
+                        <col style="width: 17%" />
+                        <col style="width: 12.8%" />
+                        <col style="width: 17%" />
+                        <col style="width: 22.8%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th colspan="2">최대</th>
+                          <th colspan="2">최소</th>
+                          <th>평균</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>냉난방</th>
+                          <td>13:15</td>
+                          <td>288 N㎥</td>
+                          <td>23:00</td>
+                          <td>99 N㎥</td>
+                          <td>288 N㎥</td>
+                        </tr>
+                        <tr>
+                          <th>급탕</th>
+                          <td>12:00</td>
+                          <td>199 N㎥</td>
+                          <td>02:15</td>
+                          <td>0 N㎥</td>
+                          <td>288 N㎥</td>
+                        </tr>
+                        <tr>
+                          <th>취사</th>
+                          <td>09:00</td>
+                          <td>38 N㎥</td>
+                          <td>03:15</td>
+                          <td>0 N㎥</td>
+                          <td>288 N㎥</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //주요정보 -->
+                </div>
+                <!-- //contBox -->
+              </div>
+              <!-- //boxLayout -->
+            </li>
+            <!-- //monitoring_006-->
+
+            <!-- monitoring_007-->
+            <li class="page">
+              <!-- boxLayout -->
+              <div class="boxLayout">
+                <!-- contBox contBox02 -->
+                <div class="contBox contBox02">
+                  <h3>실내외 온도/습도</h3>
+                  <p class="txtDate">2013-10-20(목) 00:00 ~ 23:00 까지</p>
+                </div>
+                <!-- //contBox contBox02 -->
+
+                <!-- contBox -->
+                <div class="contBox">
+                  <!-- 차트 데이터 삽입 부분 -->
+                  <div class="groupBox01">
+                    <div id="chart07" class="highchart">차트 데이터 삽입 부분</div>
+                  </div>
+                  <!-- //차트 데이터 삽입 부분 -->
+
+                  <!-- 주요정보 -->
+                  <div class="groupBox03">
+                    <h4>주요정보</h4>
+                    <table class="table_style01">
+                      <colgroup>
+                        <col style="width: 17.6%" />
+                        <col style="width: 13%" />
+                        <col style="width: 13.6%" />
+                        <col style="width: 13.6%" />
+                        <col style="width: 13.6%" />
+                        <col style="width: 13.6%" />
+                        <col style="width: 15%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th colspan="2">&nbsp;</th>
+                          <th colspan="2">최대</th>
+                          <th colspan="2">최소</th>
+                          <th>평균</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th rowspan="2" class="bgColor">온도(℃)</th>
+                          <th>실내</th>
+                          <td>23:00</td>
+                          <td>12℃</td>
+                          <td>23:00</td>
+                          <td>12℃</td>
+                          <td>12℃</td>
+                        </tr>
+                        <tr>
+                          <th>실외</th>
+                          <td>23:00</td>
+                          <td>12℃</td>
+                          <td>23:00</td>
+                          <td>12℃</td>
+                          <td>12℃</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="2" class="bgColor">습도(%)</th>
+                          <th>실내</th>
+                          <td>23:00</td>
+                          <td>30%</td>
+                          <td>23:00</td>
+                          <td>30%</td>
+                          <td>30%</td>
+                        </tr>
+                        <tr>
+                          <th>실외</th>
+                          <td>23:00</td>
+                          <td>30%</td>
+                          <td>23:00</td>
+                          <td>30%</td>
+                          <td>30%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //주요정보 -->
+                </div>
+                <!-- //contBox -->
+              </div>
+              <!-- //boxLayout -->
+            </li>
+            <!-- //monitoring_007-->
+          </ul>
+        </div>
+        <div class="push"></div>
+      </section>
+      <!-- //#contents Area -->
+
+      <footer data-role="footer">
+        <!-- 2013-12-23 PC버전 버튼 삭제 -->
+        <div class="dirBtn">
+          <div class="footBtn"><a href="">로그아웃</a></div>
+        </div>
+        <!-- //2013-12-23 PC버전 버튼 삭제 -->
+        <div class="copy">
+          COPYRIGHT&copy;CLOUD Building Energy Management System<br />
+          ALL RIGHTS RESERVED.
+        </div>
+      </footer>
+      <!-- //footer -->
+      <!-- 2014-02-14 topBtn 분리 -->
+      <div class="top">
+        <a href=""
+          ><img src="/html/2014/bems/m/images/common/icon_gotop.png" style="width: auto; height: 11px" alt="go top"
+        /></a>
+      </div>
+      <!-- 2014-02-14 topBtn 분리 -->
+      <!-- defaultpanel lnb패널 -->
+      <div data-role="panel" id="defaultpanel" data-theme="b">
+        <div class="panel-content lnbArea">
+          <p class="logo_lnb"><img src="/html/2014/bems/m/images/common/logo_sk.png" alt="SK" /></p>
+          <!-- [D] 메뉴 선택 시, a태그에 class="on" 추가 -->
+          <ul class="lnbList">
+            <li>
+              <p class="lnb_depth01">
+                <a href="/html/2014/bems/m/html/dashboard_001.html" target="_self" class="ck01">Dashboard</a>
+              </p>
+            </li>
+            <li>
+              <p class="lnb_depth01"><a href="#link" class="ck02 on" data-rel="close">에너지 모니터링</a></p>
+              <ul class="lnb_depth02">
+                <li class="first"><a href="#link" data-rel="close">에너지원 별 사용량</a></li>
+                <li><a href="#link" data-rel="close">목표대비 사용량</a></li>
+                <li><a href="#link" data-rel="close">계통 별 전기 사용량</a></li>
+                <li><a href="#link" data-rel="close">전기 사용패턴</a></li>
+                <li><a href="#link" data-rel="close">층별 전기 사용량</a></li>
+                <li><a href="#link" data-rel="close">가스 사용량</a></li>
+                <li><a href="#link" data-rel="close">실내외 온도/습도</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- //content wrapper for padding -->
+      </div>
+      <!-- //defaultpanel lnb패널 -->
+    </div>
+    <!-- //#wrap -->
+  </body>
+</html>

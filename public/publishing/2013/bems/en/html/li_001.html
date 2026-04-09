@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login | A Smart Energy World, brought about by SK Telecom ::: Cloud BEMS</title>
+    <link href="/html/2014/bems/en/css/custom/etc.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/en/js/jquery-1.7.2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".login .input_style04").bind("focus", function () {
+          $(this).css("background", "none").css("background", "#fff");
+        });
+        $(".login .input_style04").bind("blur", function () {
+          if ($(this).val() == "") {
+            if ($(this).hasClass("input_style04_01")) {
+              $(this).css(
+                "background",
+                "#fff url(/html/2014/bems/en/images/common/bg_login_input01.gif) no-repeat 10px 6px",
+              );
+            } else {
+              $(this).css(
+                "background",
+                "#fff url(/html/2014/bems/en/images/common/bg_login_input02.gif) no-repeat 10px 6px",
+              );
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body class="login">
+    <!-- wrap -->
+    <div id="wrap_login">
+      <div id="container_login">
+        <div class="contents_login">
+          <h1><img src="/html/2014/bems/en/images/common/logo_login.gif" alt="CLOUD BEMS" /></h1>
+          <input type="text" class="input_style04 input_style04_01" />
+          <input type="password" class="input_style04 input_style04_02" />
+          <!-- [D] 오류 메시지 : 주석처리해 놓음 -->
+          <!--
+				<p class="txt_msg">Please enter an ID.</p>
+				-->
+          <!--
+				<p class="txt_msg">Please enter a password.</p>
+				-->
+          <!--
+				<p class="txt_msg">The ID and password do not match.</p>
+				-->
+          <p class="btn_login">
+            <a href="#link"><span>Login</span></a>
+          </p>
+          <ul class="loginList">
+            <li>If you lost your ID or password, please contact Cloud BEMS Management Team</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

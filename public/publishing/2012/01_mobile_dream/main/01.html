@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+      name="viewport"
+    />
+
+    <link href="../common/css/contents.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/basic.js"></script>
+
+    <title>꿈날개</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1 class="logo"><img src="../common/img/logo.png" alt="꿈날개" /></h1>
+        <p class="top_login">
+          <a href="#"><img src="../common/img/btn_top_login.png" alt="로그인" /></a>
+        </p>
+        <p class="all_view">
+          <a href="javascript:all_view('01')"><img src="../common/img/btn_all_view.png" alt="메뉴보기" /></a>
+        </p>
+      </div>
+
+      <div id="container">
+        <div class="main_contents">
+          <div class="main_contents1">
+            <p class="mobile">
+              <a href="#"><img src="../common/img/btn_mobile.png" alt="모바일 학습" /></a>
+            </p>
+            <p class="btn1">
+              <a href="#"><img src="../common/img/btn_contents1_01.png" alt="직업선호도 검사" /></a>
+            </p>
+            <p class="btn2">
+              <a href="#"><img src="../common/img/btn_contents1_02.png" alt="창업적성 검사" /></a>
+            </p>
+          </div>
+          <!-- 꿈날개 추천과정 -->
+          <div class="main_contents2">
+            <dl>
+              <dt class="hidden">꿈날개 추천과정</dt>
+              <dd>
+                <a href="#">
+                  <span class="new"><img src="../common/img/ico_new2.png" alt="NEW" /></span>
+                  <span class="img"><img src="../common/img/img.jpg" alt="" /></span>
+                  <!-- [D] 글씨가 세줄이상 넘어가지 않게 해주세요 -->
+                  <span class="title">디지털카메라 100% 디지털카메라</span>
+                </a>
+              </dd>
+              <dd>
+                <a href="#">
+                  <span class="new"><img src="../common/img/ico_new2.png" alt="NEW" /></span>
+                  <span class="img"><img src="../common/img/img.jpg" alt="" /></span>
+                  <span class="title">쉽게 배우는 IT이야기 함께 배워봅시다</span>
+                </a>
+              </dd>
+              <dd>
+                <a href="#">
+                  <span class="new"><img src="../common/img/ico_new2.png" alt="NEW" /></span>
+                  <span class="img"><img src="../common/img/img.jpg" alt="" /></span>
+                  <span class="title">꼼꼼하게 가계부 쓰는 방법은?</span>
+                </a>
+              </dd>
+            </dl>
+          </div>
+          <!-- //꿈날개 추천과정 -->
+          <div class="main_contents3">
+            <ul>
+              <li>
+                <a href="#"><img src="../common/img/btn_contents3_01.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../common/img/btn_contents3_02.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../common/img/btn_contents3_03.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../common/img/btn_contents3_04.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="floater">
+        <div class="floater_inner">
+          <p class="center_call">
+            <a href="tel:0318999119"><img src="../common/img/btn_call.png" alt="학습지원 센터 031-8999-119" /></a>
+          </p>
+          <ul class="floater_btn1">
+            <li class="btn1">
+              <a href="#"><img src="../common/img/floater_btn1_01.png" alt="꿈날개 소개" /></a>
+            </li>
+            <li class="btn2">
+              <a href="#"><img src="../common/img/floater_btn1_02.png" alt="개인정보처리방침" /></a>
+            </li>
+            <li class="btn3">
+              <a href="#"><img src="../common/img/floater_btn1_03.png" alt="이용약관" /></a>
+            </li>
+            <li class="btn4">
+              <a href="http://www.dream.go.kr/" target="_blank"
+                ><img src="../common/img/floater_btn1_04.png" alt="PC버전"
+              /></a>
+            </li>
+          </ul>
+          <ul class="floater_btn2">
+            <li>
+              <a href="#"><img src="../common/img/btn_login.png" alt="로그인" /></a>
+            </li>
+            <li class="btn_top" onClick="btn_top()"><img src="../common/img/btn_top.png" alt="맨위로" /></li>
+          </ul>
+          <p class="floater_copy">
+            <img src="../common/img/floater_copy.png" alt="Gyeoggi Women’s Development Center" />
+          </p>
+        </div>
+      </div>
+
+      <!-- 전체메뉴 -->
+      <div class="all_menu" style="display: none">
+        <h2><img src="../common/img/title_all_menu.png" alt="메뉴보기" /></h2>
+        <ul>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_01.png" alt="모바일학습" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_02.png" alt="홈으로" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_03.png" alt="이용안내" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_04.png" alt="직업선호도검사" /></a>
+          </li>
+          <li></li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_05.png" alt="창업적성검사" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_06.png" alt="QA" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_07.png" alt="공지사항" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_08.png" alt="교육후기" /></a>
+          </li>
+        </ul>
+        <p class="close">
+          <a href="javascript:all_view('02')"><img src="../common/img/btn_close.png" alt="닫기" /></a>
+        </p>
+      </div>
+      <!-- //전체메뉴 -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>서비스 점검 신규등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb7:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb7:eq(0)>ul>li:eq(7)").addClass("on");
+              $("#gnb>li.gnb7:eq(0)>ul>li:eq(7)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb7">
+                <a href="#">사이트 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">코드 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">코드 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">요금제 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">요금제 관리</a></li>
+                      <li><a href="#">요금제 그룹 관리</a></li>
+                      <li><a href="#">부가서비스 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">닉네임 금칙어 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">닉네임 금칙어 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">전시 키워드 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">전시 키워드 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이용안내</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이용안내</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">App 버전관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">App 버전관리</a></li>
+                      <li><a href="#">X viewer App 버전관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">약관관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">약관관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">서비스 점검 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">서비스 점검 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>사이트 관리</span>
+              <span>서비스 점검 관리</span>
+              <strong>서비스 점검 신규등록</strong>
+            </div>
+            <h3 class="tit">서비스 점검 신규등록</h3>
+
+            <!-- 서비스 점검 신규등록 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>제목, 장애 유형, 상태, 공지내용이 있는 서비스 점검 신규등록 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="title" class="ess">제목</label>
+                      </th>
+                      <td>
+                        <input type="text" id="title" class="wid_per80" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">장애유형</th>
+                      <td>
+                        <input type="radio" id="obstacle_01" name="obstacle" checked="checked" /><label
+                          for="obstacle_01"
+                          class="radio_range"
+                          >서비스 점검</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">상태</th>
+                      <td>
+                        <input type="radio" id="status_01" name="status" checked="checked" /><label
+                          for="status_01"
+                          class="radio_range"
+                          >노출</label
+                        >
+                        <input type="radio" id="status_02" name="status" /><label for="status_02" class="radio_range"
+                          >종료</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">공지 내용</span>
+                      </th>
+                      <td>
+                        <div class="edit">
+                          <img src="../../img/img_edit.gif" alt="텍스트편집영역 임시이미지" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <ul class="btm_guide">
+                <li>※ 등록 시 앱 화면에 즉시 노출됩니다.</li>
+              </ul>
+
+              <div class="btngroup">
+                <div class="btn_left">
+                  <a href="#" class="btn_default" target="_blank" title="새창 열림">미리보기</a>
+                </div>
+                <div class="btn_right">
+                  <a href="#" class="btn_cancel">취소</a>
+                  <a href="#" class="btn_save">저장</a>
+                </div>
+              </div>
+            </div>
+            <!-- //서비스 점검 신규등록 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

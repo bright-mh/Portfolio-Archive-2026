@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>혜택 관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시관리</span>
+              <span>상품등록관리</span>
+              <strong>혜택 관리</strong>
+            </div>
+            <h3 class="tit">혜택 관리</h3>
+
+            <!-- 탭 메뉴 -->
+            <div class="tabmenu">
+              <ul class="tab">
+                <li><a href="#" class="on">Step 1. 전시 정보</a></li>
+                <li><a href="#">Step 2. 쿠폰 정보</a></li>
+                <li><a href="#">Step 3. 혜택 정보</a></li>
+              </ul>
+            </div>
+            <!-- //탭 메뉴 -->
+
+            <!-- 기본정보 -->
+            <h4 class="tit">기본정보</h4>
+            <div class="table_list_top">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>혜택명, 전시기간, 카테고리가 있는 기본 정보 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><label for="benefitName" class="ess">혜택명</label></th>
+                      <td>
+                        <input type="text" id="benefitName" class="wid_per80" placeholder="혜택명을 입력하세요." />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="period" class="ess">전시기간</label></th>
+                      <td>
+                        <input
+                          type="text"
+                          id="period"
+                          title="전시 시작일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        <select title="전시 시작일 시" style="width: 80px">
+                          <option>00시</option>
+                          <option>01시</option>
+                          <option>02시</option>
+                          <option>03시</option>
+                          <option>04시</option>
+                          <option>05시</option>
+                          <option>06시</option>
+                          <option>07시</option>
+                          <option>08시</option>
+                          <option>09시</option>
+                          <option>10시</option>
+                          <option>11시</option>
+                          <option>12시</option>
+                          <option>13시</option>
+                          <option>14시</option>
+                          <option>15시</option>
+                          <option>16시</option>
+                          <option>17시</option>
+                          <option>18시</option>
+                          <option>19시</option>
+                          <option>20시</option>
+                          <option>21시</option>
+                          <option>22시</option>
+                          <option>23시</option>
+                        </select>
+                        <select title="전시 시작일 분" style="width: 80px">
+                          <option>00분</option>
+                          <option>10분</option>
+                          <option>20분</option>
+                          <option>30분</option>
+                          <option>40분</option>
+                          <option>50분</option>
+                        </select>
+                        &nbsp;~&nbsp;
+                        <input type="text" title="전시 종료일" value="2016-11-01" class="wid_calendar pickerArea" />
+                        <select title="전시 종료일 시" style="width: 80px">
+                          <option>00시</option>
+                          <option>01시</option>
+                          <option>02시</option>
+                          <option>03시</option>
+                          <option>04시</option>
+                          <option>05시</option>
+                          <option>06시</option>
+                          <option>07시</option>
+                          <option>08시</option>
+                          <option>09시</option>
+                          <option>10시</option>
+                          <option>11시</option>
+                          <option>12시</option>
+                          <option>13시</option>
+                          <option>14시</option>
+                          <option>15시</option>
+                          <option>16시</option>
+                          <option>17시</option>
+                          <option>18시</option>
+                          <option>19시</option>
+                          <option>20시</option>
+                          <option>21시</option>
+                          <option>22시</option>
+                          <option>23시</option>
+                        </select>
+                        <select title="전시 종료일 분" style="width: 80px">
+                          <option>00분</option>
+                          <option>10분</option>
+                          <option>20분</option>
+                          <option>30분</option>
+                          <option>40분</option>
+                          <option>50분</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="category" class="ess">카테고리</label></th>
+                      <td>
+                        <select id="category" title="카테고리 첫번째">
+                          <option>생활 쿠폰</option>
+                          <option>디지털 콘텐츠</option>
+                        </select>
+
+                        <!-- 카테고리 첫번째 : 생활쿠폰 선택 시  -->
+                        <select title="카테고리 두번째">
+                          <option>--</option>
+                          <option>커피/음료</option>
+                          <option>푸드/외식</option>
+                          <option>뷰티/쇼핑</option>
+                          <option>문화/기타</option>
+                        </select>
+                        <!-- //카테고리 첫번째 : 생활쿠폰 선택 시  -->
+
+                        <!-- 카테고리 두번째 : 디지털 콘텐츠 주석처리 --
+											<select title="카테고리 두번째">
+												<option>--</option>
+												<option>웹툰</option>
+												<option>코믹</option>
+												<option>웹소설</option>
+												<option>이북</option>
+												<option>뮤직</option>
+												<option>이모티콘</option>
+												<option>영화 VOD</option>
+												<option>방송 VOD</option>
+												<option>실시간 TV</option>
+											</select>
+											<!-- //카테고리 두번째 : 디지털 콘텐츠 주석처리 -->
+
+                        <!-- 1depth의 생활 쿠폰 선택시에만 보여짐 -->
+                        <select title="카테고리 두번째">
+                          <option>무료</option>
+                          <option>유료</option>
+                        </select>
+                        <!-- //1depth의 생활 쿠폰 선택시에만 보여짐 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //기본정보 -->
+
+            <!-- 기본정보 카테고리1 선택 시 노출 -->
+            <h4 class="tit">노출 정보</h4>
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>Display Type, 부가 정보, Tag 정보가 있는 노출 정보 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Display Type</th>
+                      <td>
+                        <!-- 카테고리의 1depth : 생활 쿠폰 선택 시 -->
+                        <select title="Display Type" style="width: 180px">
+                          <option>Display Type 선택</option>
+                          <option>일반형</option>
+                          <option>빅딜형</option>
+                          <option>핫딜 For 신규고객</option>
+                        </select>
+                        <!-- //카테고리의 1depth : 생활 쿠폰 선택 시 -->
+
+                        <!-- 카테고리의 1depth : 디지털 콘텐츠 선택 시 --
+											<select title="Display Type" style="width:180px" />
+												<option>Display Type 선택</option>
+												<option>일반형</option>
+												<option>핫딜 For 신규고객</option>
+											</select>
+											<!-- //카테고리의 1depth : 디지털 콘텐츠 선택 시 -->
+
+                        <!-- [D] 빅딜형 선택 시 보이는 문구 : 주석 처리 --
+											<span class="comment ml10">빅딜형 선택 시 전시 시작 시간은 12시 이후로 설정 하셔야 합니다.</span>
+											<!-- //빅딜형 선택 시 보이는 문구 : 주석 처리 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부가 정보</th>
+                      <td><p>Display Type을 선택해주세요.</p></td>
+                    </tr>
+                    <!-- Display Type : 일반형 선택 시 노출 -->
+                    <tr>
+                      <th scope="row">부가 정보</th>
+                      <td>
+                        <p class="gap_btm">일반형의 부가정보를 설정해 주시기 바랍니다.</p>
+                        <p class="gap_btm">
+                          <select title="성별">
+                            <option>성별</option>
+                            <option>남자</option>
+                            <option>여자</option>
+                          </select>
+                          <select title="연령" style="width: 140px">
+                            <option>연령</option>
+                            <option>10대</option>
+                            <option>20대</option>
+                            <option>30대</option>
+                            <option>40대</option>
+                            <option>50대</option>
+                            <option>60대이상</option>
+                          </select>
+                        </p>
+                        <p>
+                          <select title="관심사">
+                            <option>관심사</option>
+                            <option>육아</option>
+                            <option>건강/피트니스</option>
+                            <option>스포츠</option>
+                            <option>여행/레저</option>
+                            <option>요리</option>
+                            <option>스타일/패션</option>
+                            <option>공연/문화</option>
+                            <option>홈/인테리어</option>
+                            <option>게임</option>
+                            <option>교육</option>
+                            <option>키즈</option>
+                            <option>독서</option>
+                            <option>음악</option>
+                            <option>영화</option>
+                          </select>
+
+                          <!-- 선호 카테고리 : 생활쿠폰 -->
+                          <select title="생활 쿠폰 선호 카테고리" style="width: 140px">
+                            <option>선호 카테고리</option>
+                            <option>커피/음료</option>
+                            <option>편의점</option>
+                            <option>베이커리</option>
+                            <option>피자/치킨</option>
+                            <option>외식</option>
+                            <option>뷰티</option>
+                            <option>영화/공연</option>
+                            <option>모바일 상품권</option>
+                            <option>잡화/기타</option>
+                          </select>
+                          <!-- //선호 카테고리 : 생활쿠폰 -->
+
+                          <!-- 선호 카테고리 : 디지털콘텐츠 --
+												<select title="디지털콘텐츠 선호 카테고리" style="width:140px">
+													<option>선호 카테고리</option>
+													<option>웹툰</option>
+													<option>코믹</option>
+													<option>웹소설</option>
+													<option>이북</option>
+													<option>뮤직</option>
+													<option>이모티콘</option>
+												</select>
+												<!-- //선호 카테고리 : 디지털콘텐츠 -->
+
+                          <!-- 선호 카테고리 : 디지털콘텐츠 - 뮤직 --
+												<select title="디지털 콘텐츠 뮤직 선호 카테고리" style="width:140px">
+													<option>선호 카테고리</option>
+													<option>뮤직</option>
+												</select>
+												<!-- //선호 카테고리 : 디지털콘텐츠 - 뮤직 -->
+
+                          <!-- 선호 카테고리 : 디지털콘텐츠 - 영화 VOD --
+												<select title="디지털 콘텐츠 영화 VOD 선호 카테고리" style="width:140px">
+													<option>선호 카테고리</option>
+													<option>영화 VOD</option>
+												</select>
+												<!-- //선호 카테고리 : 디지털콘텐츠 - 영화 VOD -->
+
+                          <!-- 선호 카테고리 : 디지털콘텐츠 - 방송 VOD --
+												<select title="디지털 콘텐츠 방송 VOD 선호 카테고리" style="width:140px">
+													<option>선호 카테고리</option>
+													<option>방송 VOD</option>
+												</select>
+												<!-- //선호 카테고리 : 디지털콘텐츠 - 방송 VOD -->
+
+                          <!-- 선호 카테고리 : 디지털콘텐츠 - 실시간 TV --
+												<select title="디지털 콘텐츠 실시간 TV 선호 카테고리" style="width:140px">
+													<option>선호 카테고리</option>
+													<option>실시간 TV</option>
+												</select>
+												<!-- //선호 카테고리 : 디지털콘텐츠 - 실시간 TV -->
+                        </p>
+                      </td>
+                    </tr>
+                    <!-- //Display Type : 일반형 선택 시 노출 -->
+
+                    <!-- Display Type : 빅딜형 선택 시 노출 -->
+                    <tr>
+                      <th scope="row">부가 정보</th>
+                      <td>
+                        <p>
+                          빅딜형은 별도로 입력하실 부가 정보가 없습니다.<br />
+                          쿠폰에 등록되어 있는 할인율에 대한 표시만 제공 됩니다.
+                        </p>
+                      </td>
+                    </tr>
+                    <!-- //Display Type : 빅딜형 선택 시 노출 -->
+
+                    <!-- Display Type : 핫딜 For 신규고객 선택 시 노출 -->
+                    <tr>
+                      <th scope="row">부가 정보</th>
+                      <td>
+                        <p>
+                          핫딜 For 신규고객 부가 정보가 없습니다.<br />
+                          단 핫딜 For 신규고객 설정 시 step2 쿠폰정보 설정 시 티켓 설정만 가능합니다.
+                        </p>
+                      </td>
+                    </tr>
+                    <!-- //Display Type : 핫딜 For 신규고객 선택 시 노출 -->
+                    <tr>
+                      <th scope="row"><label for="tagInfo">Tag 정보</label></th>
+                      <td>
+                        <select id="tagInfo">
+                          <option>Tag 선택</option>
+                          <option>HOT</option>
+                          <option>맞춤</option>
+                          <option>선착순</option>
+                          <option>BEST</option>
+                          <option>NEW</option>
+                          <option>추천</option>
+                          <option>특가</option>
+                          <option>단독</option>
+                          <option>앵콜</option>
+                          <option>단 하루</option>
+                          <option>SKT only</option>
+                          <option>SKT 52 only</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //기본정보 카테고리1 선택 시 노출 -->
+
+            <div class="btngroup">
+              <div class="btn_left">
+                <a href="#" class="btn_delete">삭제</a>
+              </div>
+              <div class="btn_right">
+                <a href="#" class="btn_temp">임시저장</a>
+                <a href="#" class="btn_save">다음</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>운영자 회원가입 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <h3 class="tit">운영자 회원가입</h3>
+            <ul class="guide">
+              <li>회원가입을 위하여 아래의 정보를 입력해주세요.</li>
+              <li>회원가입 후, 관리자의 승인이 완료되어야 로그인이 가능합니다.</li>
+            </ul>
+
+            <!-- 운영자 회원가입 입력 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >운영자 그룹, 운영자, 비밀번호, 운영자 명, 소속 회사, 휴대폰 번호, 이메일 주소 정보가 있는 운영자
+                      회원가입 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="group" class="ess">운영자 그룹</label>
+                      </th>
+                      <td>콘텐츠 운영자</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="special_id" class="ess">운영자</label>
+                      </th>
+                      <td>
+                        <input type="text" id="special_id" class="wid_per30" />
+                        <a href="#" class="btn_small">중복 확인</a>
+                        <span class="caution caution_left">영문 또는 영문/숫자 조합하여 6~16자리까지 가능합니다.</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="pw" class="ess">비밀번호</label>
+                      </th>
+                      <td>
+                        <input type="password" id="pw" class="wid_per30" />
+                        <span class="caution caution_left"
+                          >영문/숫자/특수문자 조합하여 9~16자리까지 사용 가능합니다.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="special_name" class="ess">운영자 명</label>
+                      </th>
+                      <td>
+                        <input type="text" id="special_name" class="wid_per30" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="company" class="ess">소속 회사</label>
+                      </th>
+                      <td>
+                        <input type="text" id="company" class="wid_per30" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="phone" class="ess">휴대폰 번호</label>
+                      </th>
+                      <td>
+                        <select id="phone" style="width: 70px">
+                          <option>010</option>
+                          <option>011</option>
+                          <option>016</option>
+                          <option>017</option>
+                          <option>018</option>
+                          <option>019</option>
+                        </select>
+                        - <input type="text" class="wid_phone" title="휴대폰 번호 가운데 네자리" /> -
+                        <input type="text" class="wid_phone" title="휴대폰 번호 마지막 네자리" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="email" class="ess">이메일 주소</label>
+                      </th>
+                      <td>
+                        <input type="text" id="email" class="wid_per30" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_center">
+                  <a href="#" class="btn_new">회원가입</a>
+                  <a href="#" class="btn_cancel">취소</a>
+                </div>
+              </div>
+            </div>
+            <!-- 운영자 회원가입 입력 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

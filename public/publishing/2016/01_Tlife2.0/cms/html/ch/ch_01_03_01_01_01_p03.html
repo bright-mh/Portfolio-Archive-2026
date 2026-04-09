@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>주문내역 등록현황 팝업 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btn_arrow").click(function () {
+          if ($(this).hasClass("open")) {
+            $(this).text("▲").removeClass("open").attr("title", "상세이력보기 닫기");
+          } else {
+            $(this).text("▼").addClass("open").attr("title", "상세이력보기 열기");
+          }
+          $(this).parents().next(".strong_table").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>주문내역 등록현황</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>캠페인ID 별 주문내역 등록현황을 확인하실 수 있습니다.</li>
+          </ul>
+
+          <!-- 대상일자, 대사완료 현황 테이블 -->
+          <div class="table_list_top">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>대상일자,대사완료 현황 정보</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">대상일자</th>
+                    <td>2016.07.09</td>
+                    <th scope="row">대사완료 현황</th>
+                    <td>대사완료 <strong>1</strong> 건 / 미완료 <strong class="red">2</strong> 건</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //대상일자, 대사완료 현황 테이블 -->
+
+          <!-- 등록현황 목록 -->
+          <div class="table_list_btm">
+            <div class="table_wrap">
+              <table class="tbl_list bg_effect">
+                <caption>
+                  <strong>CMS캠페인ID, 주문내역 등록일시, 주문내역 등록자, 대사결과 등록일시, 상태, 비고 정보</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: 130px" />
+                  <col style="width: 130px" />
+                  <col style="width: 130px" />
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                  <col style="width: 50px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">CMS캠페인ID</th>
+                    <th scope="col">주문내역 등록일시</th>
+                    <th scope="col">주문내역 등록자</th>
+                    <th scope="col">대사결과 등록일시</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">비고</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CCM_CAMP_0100</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>등록 전</td>
+                    <td class="left"></td>
+                    <td><a href="#" class="btn_arrow open" title="상세이력보기 열기">▼</a></td>
+                  </tr>
+                  <!-- 상세이력 테이블 영역 -->
+                  <tr class="strong_table">
+                    <td colspan="7">
+                      <table class="tbl_list">
+                        <colgroup>
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: *" />
+                          <col style="width: 50px" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td>CCM_CAMP_0100</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>등록 전</td>
+                            <td class="left"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- //상세이력 테이블 영역 -->
+                  <tr>
+                    <td>CCM_CAMP_0100</td>
+                    <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                    <td>김민석(jiisso99)</td>
+                    <td>2016.07.12&nbsp;&nbsp;13:30</td>
+                    <td>대사완료</td>
+                    <td class="left"></td>
+                    <td><a href="#" class="btn_arrow open" title="상세이력보기 열기">▼</a></td>
+                  </tr>
+                  <!-- 상세이력 테이블 영역 -->
+                  <tr class="strong_table">
+                    <td colspan="7">
+                      <table class="tbl_list">
+                        <colgroup>
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: *" />
+                          <col style="width: 50px" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td>CCM_CAMP_0100</td>
+                            <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                            <td>김민석(jiisso99)</td>
+                            <td>2016.07.12&nbsp;&nbsp;13:30</td>
+                            <td>대사완료</td>
+                            <td class="left"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>CCM_CAMP_0100</td>
+                            <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                            <td>김민석(jiisso99)</td>
+                            <td>-</td>
+                            <td>대사처리 오류</td>
+                            <td class="left">대사처리 중 문제가 발생하였습니다.<br />CMS관리자에게 문의하세요.</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>CCM_CAMP_0100</td>
+                            <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                            <td>탈퇴회원(-)</td>
+                            <td>-</td>
+                            <td>대사처리 중</td>
+                            <td class="left"></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>CCM_CAMP_0100</td>
+                            <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                            <td>탈퇴회원(-)</td>
+                            <td>-</td>
+                            <td>파일등록 오류</td>
+                            <td class="left">주문내역 헤더 불일치<br />주문내역 파일 확인 후 다시 등록해주세요.</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>CCM_CAMP_0100</td>
+                            <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                            <td>탈퇴회원(-)</td>
+                            <td>-</td>
+                            <td>파일등록 오류</td>
+                            <td class="left">주문내역 등록에 실패하였습니다.<br />다시 등록해주세요.</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- //상세이력 테이블 영역 -->
+                  <tr>
+                    <td>CCM_CAMP_0100</td>
+                    <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                    <td>김민석(jiisso99)</td>
+                    <td>-</td>
+                    <td>대사처리 오류</td>
+                    <td class="left">대사처리 중 문제가 발생하였습니다.<br />CMS관리자에게 문의하세요.</td>
+                    <td><a href="#" class="btn_arrow open" title="상세이력보기 열기">▼</a></td>
+                  </tr>
+                  <!-- 상세이력 테이블 영역 -->
+                  <tr class="strong_table">
+                    <td colspan="7">
+                      <table class="tbl_list">
+                        <colgroup>
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: 130px" />
+                          <col style="width: *" />
+                          <col style="width: 50px" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td>CCM_CAMP_0100</td>
+                            <td>2016.07.12&nbsp;&nbsp;11:30</td>
+                            <td>김민석(jiisso99)</td>
+                            <td>-</td>
+                            <td>대사처리 오류</td>
+                            <td class="left">대사처리 중 문제가 발생하였습니다.<br />CMS관리자에게 문의하세요.</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- //상세이력 테이블 영역 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //등록현황 목록 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_close">닫기</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

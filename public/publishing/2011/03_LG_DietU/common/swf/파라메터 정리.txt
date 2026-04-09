@@ -1,0 +1,13 @@
+menuUrl : menu.swf 경로.
+
+xmlUrl : dietU.xml 경로
+
+charSet : xml인코딩 타입. 기본값 utf-8
+
+isLogin : 로그인 유무 Y일 경우 로그인 되어 있는 상태.
+
+mainFocusNum : 메뉴 포커스. 1부터 시작하며 기본값 0
+
+subFocusNum : 메뉴 포커스. 1부터 시작하며 기본값 0
+
+utilFocusNum : 우측상단 포커스 값. 1부터 시작하며 기본값 0

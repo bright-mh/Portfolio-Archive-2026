@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <!-- 2014-01-06 title 띄어쓰기_수정 -->
+    <title>주요설비 운전현황 l 설비성능 분석 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <!-- //2014-01-06 title 띄어쓰기_수정 -->
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/fa.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title05.gif" alt="설비성능 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02 on">
+              <a href="#link"><span>주요설비 운전현황</span></a>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>계통설비 성능 분석</span></a>
+              <ul>
+                <li class="on">
+                  <a href="#link"><span>냉열원</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>온열원</span></a>
+                </li>
+                <!-- 2014-01-06 LNB "냉온열원공통" 띄어쓰기_수정 -->
+                <li>
+                  <a href="#link"><span>냉온열원 공통</span></a>
+                </li>
+                <!-- //2014-01-06 LNB "냉온열원공통" 띄어쓰기_수정 -->
+                <li>
+                  <a href="#link"><span>공조</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>환기</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전력계통</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>신재생</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>공조설비</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>위생</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>다중 설비계통 분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>주요설비 운전현황</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>설비성능 분석<span>&gt;</span></li>
+                <li class="last">주요설비 운전현황</li>
+              </ul>
+            </div>
+
+            <!-- 도움말, 인쇄, 북마크 -->
+            <div class="clear">
+              <ul class="sideList">
+                <li class="sideStyle01"><a href="#link">도움말</a></li>
+                <li class="sideStyle02"><a href="#link">인쇄</a></li>
+                <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                <li class="sideStyle03"><a href="#link">북마크</a></li>
+              </ul>
+            </div>
+            <!-- //도움말, 인쇄, 북마크 -->
+
+            <!-- 테이블 영역 -->
+            <section class="BoxArea mt10">
+              <div class="boxBg">
+                <!-- 주요정보 -->
+                <!-- 2014-02-13 가로스크롤 드래그 문제_수정 -->
+                <article class="tableGroup01 xScroll_bar">
+                  <div class="fixed_layout">
+                    <h2>설비 운전 현황<span class="titleInfo">오늘 00:00 ~ 13:15까지의 설비 운전 현황</span></h2>
+                    <div class="overflowArea">
+                      <div class="fixed_box sub_fixed">
+                        <table class="table_style01_01">
+                          <caption class="blind">
+                            설비 운전 현황
+                          </caption>
+                          <colgroup>
+                            <col style="width: 86px" />
+                            <col style="width: 245px" />
+                            <col style="width: 86px" />
+                            <col style="width: 86px" />
+                            <col style="width: 86px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                            <col style="width: 76px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th rowspan="3" colspan="2" scope="col">설비명</th>
+                              <th colspan="3" scope="col">에너지 사용량</th>
+                              <th colspan="3" scope="col">가동시간</th>
+                              <th colspan="3" scope="col">성능</th>
+                              <th colspan="3" scope="col">부하율</th>
+                            </tr>
+                            <tr>
+                              <th rowspan="2" scope="col">오늘</th>
+                              <th colspan="2" scope="col">어제</th>
+                              <th rowspan="2" scope="col">오늘</th>
+                              <th colspan="2" scope="col">어제</th>
+                              <th rowspan="2" scope="col">오늘</th>
+                              <th colspan="2" scope="col">어제</th>
+                              <th rowspan="2" scope="col">오늘</th>
+                              <th colspan="2" scope="col">어제</th>
+                            </tr>
+                            <tr>
+                              <th scope="col">동시간</th>
+                              <th scope="col">총 사용량</th>
+                              <th scope="col">동시간</th>
+                              <th scope="col">총가동시간</th>
+                              <th scope="col">동시간</th>
+                              <th scope="col">평균</th>
+                              <th scope="col">동시간</th>
+                              <th scope="col">평균</th>
+                            </tr>
+                          </thead>
+                          <!-- [D] P태그 안에 title을 반드시 텍스트 내용과 동일하게 넣어주세요.. -->
+                          <tbody>
+                            <tr>
+                              <th rowspan="10" class="thStyle">냉열원</th>
+                              <th class="thStyle">
+                                <p
+                                  class="w225 merchine_nm02 ellipsis"
+                                  title="냉동기 1호냉동기 1호 냉동기 1호 냉동기 1호 냉동기 1호 냉동기 1호"
+                                >
+                                  냉동기 1호냉동기 1호 냉동기 1호 냉동기 1호 냉동기 1호 냉동기 1호
+                                </p>
+                              </th>
+                              <td>446,456 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="냉동기 2호">냉동기 2호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="냉동기 3호">냉동기 3호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="펌프기 1호">펌프기 1호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="펌프기 2호">펌프기 2호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="냉각탑 1호">냉각탑 1호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="냉각탑 2호">냉각탑 2호</p>
+                              </th>
+                              <td>- kWh</td>
+                              <td>- kWh</td>
+                              <td>- kWh</td>
+                              <td>-시간</td>
+                              <td>-시간</td>
+                              <td>-시간</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>- %</td>
+                              <td>- %</td>
+                              <td>- %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="냉각탑 공통">냉각탑 공통</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="에어컨(PAC)">에어컨(PAC)</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle"><p class="w225 merchine_nm02 ellipsis" title="헤다">헤다</p></th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th rowspan="6" class="thStyle">온열원</th>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="보일러 1호">보일러 1호</p>
+                              </th>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="보일러 2호">보일러 2호</p>
+                              </th>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="보일러 3호">보일러 3호</p>
+                              </th>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="열교환기 1호">열교환기 1호</p>
+                              </th>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="열교횐기 2호">열교환기 2호</p>
+                              </th>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="히든펌프 3호">열교환기 3호</p>
+                              </th>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>1,446 N㎥</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th rowspan="5" class="thStyle">
+                                냉온열원<br />
+                                공통
+                              </th>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="히든펌프 1호">히트펌프 1호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="히든펌프 2호">히트펌프 2호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="히든펌프 3호">히트펌프 3호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="순환폄프 1호">순환펌프 1호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                            <tr>
+                              <th class="thStyle">
+                                <p class="w225 merchine_nm02 ellipsis" title="순환폄프 2호">순환펌프 2호</p>
+                              </th>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>1,446 kWh</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>12시간</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                              <td>16.84 %</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!-- //2014-02-13 가로스크롤 드래그 문제_수정 -->
+                <!-- //주요정보 -->
+              </div>
+            </section>
+            <!-- 테이블 영역 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

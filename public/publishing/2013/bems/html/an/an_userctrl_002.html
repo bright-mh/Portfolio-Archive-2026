@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>사용자 정의 분석 | 에너지 분석 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/an.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+        $("#country_01").selectbox();
+        $("#country_02").selectbox();
+        $("#country_03").selectbox();
+        $("#country_04").selectbox();
+        $("#country_05").selectbox();
+        $("#country_06").selectbox();
+        $("#country_07").selectbox();
+        /* 2013-12-16 내용 추가 */
+        $("#country_08").selectbox();
+        $("#country_09").selectbox();
+        $("#country_10").selectbox();
+        /* //2013-12-16 내용 추가 */
+        $("#country_11").selectbox();
+        $("#country_12").selectbox();
+      });
+    </script>
+    <script src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <script src="chartScripts/AN_USERCTRL_002.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title02.gif" alt="에너지 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth03">
+              <a href="#link"><span>트랜드 분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>전체 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>가스 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>층별 전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기피크</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>목표대비 사용량 분석</span></a>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>에너지 사용량 패턴분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>전기 사용패턴</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>가스 사용패턴</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>층별 누적 사용량 분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>원단위 비교 분석</span></a>
+            </li>
+            <li class="depth02 on">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>사용자 정의 분석</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>에너지 분석<span>&gt;</span></li>
+                <li class="last">사용자 정의 분석</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <section class="tabBox">
+              <div class="boxBg">
+                <div class="tabTitleGroup">
+                  <ul class="tabSideList">
+                    <li class="tabSideStyle01"><a href="#link">도움말</a></li>
+                    <li class="tabSideStyle02"><a href="#link">인쇄</a></li>
+                    <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                    <li class="tabSideStyle03"><a href="#link">북마크</a></li>
+                  </ul>
+                </div>
+
+                <!-- 탭 상세 -->
+                <div class="tabDetailGroup">
+                  <div class="layerGroup clear02">
+                    <!-- 2013-12-16 내용 수정 -->
+                    <!-- 층 그룹 -->
+                    <div>
+                      <!-- layerOne -->
+                      <div class="layerOne clear02">
+                        <div class="fl clear">
+                          <label for="input_date">기간선택</label>
+                          <input type="text" name="input_date" id="input_date" class="fl input_date w86" />
+                          <span class="fl rangeStyle">~</span>
+                          <input type="text" name="input_date" class="fl input_date w86" />
+                        </div>
+                        <div class="fl pl31">
+                          <label for="country_01">시간단위</label>
+                          <div class="s4 pl89">
+                            <select id="country_01">
+                              <option value="v1">15분</option>
+                              <option value="v2">1시간</option>
+                              <option value="v3">일별</option>
+                              <option value="v4">월별</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerOne -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pb0">
+                        <div class="fl">
+                          <label for="country_02" class="pl26">X축</label>
+                          <div class="s6 pl89">
+                            <select id="country_02">
+                              <option value="v1">외기온도</option>
+                              <option value="v2">외기습도</option>
+                              <option value="v3">실내온도</option>
+                              <option value="v4">설정온도</option>
+                              <option value="v5">냉수공급온도</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                      <!-- layerTwo : Y축 항목 -->
+                      <div class="layerTwo clear02 pb0">
+                        <label for="country_03" class="fl ml23">Y축 항목</label>
+                        <div class="fl positionBox">
+                          <div class="clear02">
+                            <!-- 2014-01-20 셀렉크 박스 수정 및 추가 -->
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_03">
+                                <option value="v1">선택하세요</option>
+                                <option value="v2">에너지 총량</option>
+                                <option value="v3">전기사용량</option>
+                                <option value="v4">가스사용량</option>
+                                <option value="v5">전기피크</option>
+                              </select>
+                            </div>
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_04">
+                                <option value="v1">-</option>
+                                <option value="v2">용도</option>
+                                <option value="v3">에너지</option>
+                                <option value="v4">층</option>
+                                <option value="v5">설비</option>
+                              </select>
+                            </div>
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_05">
+                                <option value="v1">종합</option>
+                                <option value="v2">항목_1</option>
+                                <option value="v3">항목_2</option>
+                                <option value="v4">항목_3</option>
+                                <option value="v5">...</option>
+                                <option value="v6">항목_99</option>
+                              </select>
+                            </div>
+                            <!-- //2014-01-20 셀렉크 박스 수정 및 추가 -->
+                          </div>
+                          <div class="an_effectBtn">
+                            <p class="btn_area">
+                              <a href="#link" class="plus"><span>추가</span></a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerTwo : Y축 항목 -->
+                      <!-- layerTwo : Y축 항목 -->
+                      <div class="layerTwo clear02 pt8 pb0">
+                        <label for="country_06" class="fl ml23">Y축 항목</label>
+                        <div class="fl positionBox">
+                          <div class="clear02">
+                            <!-- 2014-01-20 셀렉크 박스 수정 및 추가 -->
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_06">
+                                <option value="v1">선택하세요</option>
+                                <option value="v2">에너지 총량</option>
+                                <option value="v3">전기사용량</option>
+                                <option value="v4">가스사용량</option>
+                                <option value="v5">전기피크</option>
+                              </select>
+                            </div>
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_07">
+                                <option value="v1">-</option>
+                                <option value="v2">용도</option>
+                                <option value="v3">에너지</option>
+                                <option value="v4">층</option>
+                                <option value="v5">설비</option>
+                              </select>
+                            </div>
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_08">
+                                <option value="v1">종합</option>
+                                <option value="v2">항목_1</option>
+                                <option value="v3">항목_2</option>
+                                <option value="v4">항목_3</option>
+                                <option value="v5">...</option>
+                                <option value="v6">항목_99</option>
+                              </select>
+                            </div>
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_09">
+                                <option value="v1">종합</option>
+                                <option value="v2">항목_1-1</option>
+                                <option value="v3">항목_1-2</option>
+                                <option value="v4">항목_1-3</option>
+                                <option value="v5">...</option>
+                                <option value="v4">항목_1-99</option>
+                              </select>
+                            </div>
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_11">
+                                <option value="v0">종합</option>
+                                <option value="v1">항목_1-1-1</option>
+                                <option value="v2">항목_1-1-2</option>
+                                <option value="v3">항목_1-1-3</option>
+                                <option value="v4">항목_1-1-4</option>
+                                <option value="v5">...</option>
+                                <option value="v4">항목_1-1-99</option>
+                              </select>
+                            </div>
+                            <div class="fl s11 mr5 mb7">
+                              <select id="country_12">
+                                <option value="v0">종합</option>
+                                <option value="v1">항목_1-1-1-1</option>
+                                <option value="v2">항목_1-1-1-2</option>
+                                <option value="v3">항목_1-1-1-3</option>
+                                <option value="v4">항목_1-1-1-4</option>
+                                <option value="v5">...</option>
+                                <option value="v2">항목_1-1-1-99</option>
+                              </select>
+                            </div>
+                            <!-- 2014-01-20 셀렉크 박스 수정 및 추가 -->
+                          </div>
+                          <div class="an_effectBtn">
+                            <p class="btn_area">
+                              <a href="#link" class="minus"><span>삭제</span></a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerTwo : Y축 항목 -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pt8 pb15">
+                        <div class="fl">
+                          <label for="country_10">Y축 단위</label>
+                          <div class="s6 pl89">
+                            <select id="country_10">
+                              <option value="v1">석유환산 톤 (toe)</option>
+                              <option value="v2">열량 (MJ)</option>
+                              <option value="v3">이산화탄소 배출량 (tCO2)</option>
+                              <option value="v4">탄소배출량 (tC)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                    </div>
+                    <!-- //층 그룹 -->
+                    <!-- //2013-12-16 내용 수정 -->
+                    <p class="fl btn_search">
+                      <a href="#link"><span>검색</span></a>
+                    </p>
+                  </div>
+                </div>
+                <!-- //탭 상세 -->
+              </div>
+            </section>
+            <!-- //탭영역 -->
+
+            <!-- 차트 영역 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!--차트 삽입부분 -->
+                <div id="chart01" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //차트 영역 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

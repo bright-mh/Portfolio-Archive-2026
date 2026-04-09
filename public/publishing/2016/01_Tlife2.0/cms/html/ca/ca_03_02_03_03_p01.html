@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>캠페인 수정 확인 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>캠페인 수정 확인</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>수정내용 및 사유를 입력하시기 바랍니다.</li>
+            <li>입력하신 내용 확인 후 수정 내용을 저장할 수 있습니다.</li>
+            <li>일부 항목은 등록 후 수정이 불가하니 잘 확인하고 등록하시기 바랍니다.</li>
+          </ul>
+
+          <!-- 캠페인 수정 확인 -->
+          <div class="table_list">
+            <div class="comm_right">
+              <em class="ess">필수 입력 항목입니다.</em>
+            </div>
+
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong
+                    >판매채널 (채널 ID), 제휴사 명, 제휴코드, 상품구분, 캠페인 명, 캠페인 ID, 전시기간, 담당자, 연락처,
+                    수정내용 및 사유가 있는 캠페인 수정 확인</strong
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 150px" />
+                  <col style="width: *" />
+                  <col style="width: 150px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">판매채널 (채널 ID)</th>
+                    <td colspan="3">T라이프 (CH_0001)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">제휴사 명</th>
+                    <td>기프티콘 (엠앤서비스)</td>
+                    <th scope="row">제휴코드</th>
+                    <td>MNS0001</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">상품구분</th>
+                    <td colspan="3">유료</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">캠페인 명</th>
+                    <!-- [D] 수정 icon : td 클래스에 class="warning modify" 추가 -->
+                    <td colspan="3" class="warning modify">티라이프 유료쿠폰</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">캠페인ID</th>
+                    <td colspan="3">CAMPID_202015</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">전시기간</th>
+                    <td colspan="3" class="warning modify">2016.02.28 ~ 2099.12.31</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">담당자</th>
+                    <td>김석민</td>
+                    <th scope="row">연락처</th>
+                    <td class="warning modify">010-3131-1313</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="ess">수정내용 및 사유</span>
+                    </th>
+                    <td colspan="3">
+                      <textarea class="wid_per80" rows="2" title="수정내용 및 사유">정산율 오기로 인한 수정</textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //캠페인 수정 확인 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_save">캠페인 저장</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

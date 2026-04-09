@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>외부서비스 카드 관리 상세 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)>ul>li:eq(3)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시 관리</span>
+              <span>상품등록관리</span>
+              <span>외부서비스 관리</span>
+              <strong>외부서비스 카드 관리</strong>
+            </div>
+            <h3 class="tit">외부서비스 카드 관리</h3>
+            <ul class="guide">
+              <li>
+                뮤직/방송 VOD/영화 VOD/실시간TV 등 Front에 전시되는 외부서비스의 대표이미지와 부가정보를 관리할 수
+                있습니다.
+              </li>
+              <li>수정 후 [저장] 버튼을 클릭해야 정상적으로 Front에 반영됩니다.</li>
+            </ul>
+
+            <!-- 외부서비스 카드 관리 등록 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>카테고리, 최종 수정일, 타이틀이 있는 외부서비스 카드 관리 내용</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">카테고리</th>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <th scope="row">최종 수정일</th>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.12.12</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">타이틀</th>
+                      <td colspan="3">뮤직메이트 안내문구와 월별 이미지</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_list">목록</a>
+                </div>
+              </div>
+            </div>
+            <!-- //외부서비스 카드 관리 등록 테이블 -->
+
+            <!-- 부가 정보 테이블 -->
+            <h4 class="tit">
+              부가 정보
+              <span class="add_info"
+                >혜택 카드 하단에 노출되는 안내문구 입니다. 내용 수정 후 [저장] 버튼 클릭 시 바로 Front에
+                반영됩니다.</span
+              >
+            </h4>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>안내문구가 부가 정보 내용</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="word_guide" class="ess">안내문구</label>
+                      </th>
+                      <td>
+                        <textarea rows="8" id="word_guide" class="wid_per80">
+500여 개의 다양한 음악 채널들을 선곡 고민없이 감상할 수 있는 뮤직 메이트를 자유롭게 이용하세요!!
+
+* 해당 혜택을 획득하시면 매달 1일~말일까지 서비스를 이용할 수 있는 혜택을 획득할 수 있습니다.</textarea
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //table_wrap -->
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_small">저장</a>
+                </div>
+              </div>
+            </div>
+            <!-- //부가 정보 테이블 -->
+
+            <!-- 대표 이미지 테이블 -->
+            <h4 class="tit">
+              대표 이미지
+              <span class="add_info"
+                >매월 1일 해당 월에 등록된 이미지로 자동 교체됩니다. 파일 변경 후 [저장] 버튼을 클릭해주세요.</span
+              >
+            </h4>
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>월별 대표 이미지</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="1월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice1">파일선택</label>
+                            <input type="file" id="file_choice1" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="2월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice2">파일선택</label>
+                            <input type="file" id="file_choice2" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="3월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice3">파일선택</label>
+                            <input type="file" id="file_choice3" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="4월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice4">파일선택</label>
+                            <input type="file" id="file_choice4" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="5월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice5">파일선택</label>
+                            <input type="file" id="file_choice5" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="6월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice6">파일선택</label>
+                            <input type="file" id="file_choice6" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="7월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice7">파일선택</label>
+                            <input type="file" id="file_choice7" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="8월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice8">파일선택</label>
+                            <input type="file" id="file_choice8" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">9월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="9월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice9">파일선택</label>
+                            <input type="file" id="file_choice9" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">10월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="10월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice10">파일선택</label>
+                            <input type="file" id="file_choice10" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">11월</th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="11월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice11">파일선택</label>
+                            <input type="file" id="file_choice11" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">12월<span class="warning">전시중</span></th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="12월 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice12">파일선택</label>
+                            <input type="file" id="file_choice12" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>300kb 이하, 672x336px의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                        <div class="btn_month">
+                          <a href="#" class="btn_small">저장</a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //table_wrap -->
+            </div>
+            <!-- //대표 이미지 테이블 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_list">목록</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>사용자 정보 초기화 신청</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 780*595 -->
+  <body class="user_popup" style="width: 780px">
+    <!-- user_pop_wrap -->
+    <div class="user_pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>사용자 정보 초기화 신청</h1>
+        <a href="#none" class="btn_close">닫기</a>
+      </header>
+      <!-- //header -->
+
+      <!-- user_pop_contents -->
+      <div class="user_pop_contents">
+        <!-- tip area -->
+        <div class="tip_area">
+          <p class="blind">TIP</p>
+          <div class="tip_box">
+            <ul class="tip_list">
+              <li>현재 설치된 사용자 정보가 본인의 정보와 다른 경우 전환 신청을 해주시기 바랍니다.</li>
+              <li>요청 후 승인이 되면 설치정보가 초기화 되어 사용자 정보 입력 창이 재 팝업됩니다.</li>
+              <li>사용자 정보 입력란에 본인의 사번/이름을 입력하신 후 사용 바랍니다.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- //tip area -->
+
+        <!-- user_tbl_row_default -->
+        <div class="user_tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 127px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">신청자 정보</th>
+                <td>
+                  <div class="ip_box" style="width: 212px">
+                    <input type="text" value="" />
+                    <a href="#none" class="icon_delete_full_blue">삭제</a>
+                  </div>
+                  <a href="#none" title="새창 열림" class="btn_md icon_md_search_blue">검색</a>
+                  <span class="txt_info">* 검색하여 신청자를 입력할 수 있습니다.</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">요청사유</th>
+                <td>
+                  <textarea
+                    name=""
+                    cols=""
+                    rows=""
+                    placeholder="요청사유를 입력해 주세요."
+                    style="width: 100%; height: 259px"
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //user_tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue">신청하기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //user_pop_contents -->
+    </div>
+    <!-- //user_pop_wrap -->
+  </body>
+</html>

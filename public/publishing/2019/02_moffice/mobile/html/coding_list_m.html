@@ -1,0 +1,347 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <title>M.Office 3.0 Mobile List</title>
+    <link rel="apple-touch-icon" href="../img/common/Favicon.png" />
+    <link rel="shortcut icon" href="../img/common/Favicon.png" />
+    <style type="text/css">
+      body,
+      td {
+        margin: 10px;
+        font: 11px dotum;
+        color: #666666;
+      }
+      a:link {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:active {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:visited {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #d20e0e;
+      }
+      ol,
+      li {
+        list-style: none;
+      }
+      .colorRed {
+        color: red;
+      }
+
+      /* index  */
+      .list {
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table tr:hover {
+        background-color: #dbeaf4;
+      }
+      table th {
+        color: #fff;
+        height: 25px;
+        font-size: 11px;
+        background: #000;
+        padding: 2px 0 0 5px;
+        text-align: left;
+      }
+      table td {
+        border-bottom: 1px solid #e3e3e3;
+        color: #333333;
+        font-size: 11px;
+        height: 22px;
+        padding: 2px 0 0 5px;
+        word-wrap: break-word;
+      }
+      table td.one {
+        color: #f50002;
+        font-size: 12px;
+      }
+      span.lt {
+        text-decoration: line-through;
+      }
+      table td.gr {
+        color: #008400;
+      }
+      table td.folder {
+        font-family: verdana;
+      }
+      table td.filename {
+        font-family: verdana;
+        color: #aaa;
+      }
+      table td.type {
+        font-family: verdana;
+        color: #1928a5;
+      }
+      table td.depth {
+        font-weight: bold;
+      }
+      .delete * {
+        color: #ccc !important;
+        text-decoration: line-through;
+      }
+      .delete a {
+        cursor: text;
+      }
+      .tab {
+        color: #ffffff;
+        font-size: 12px;
+        background: #6ba5d0;
+        padding: 2px 5px 1px;
+        text-align: center;
+        border-left: 1px solid #e3e3e3;
+        font-weight: bold;
+        line-height: 1;
+      }
+      .tab a:link {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:visited {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:active {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:hover {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .total {
+        color: #666666;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 5px 0 10px 0;
+        padding: 0;
+      }
+      .menu {
+        color: #000;
+        height: 25px;
+        font-size: 11px;
+        background: #d9d9d9;
+        padding: 2px 0 0 5px;
+        text-align: left;
+        font-weight: bold;
+      }
+      .goLink {
+        color: #1928a5;
+        font-size: 12px;
+      }
+      .goLink a {
+        color: #1928a5;
+      }
+      .line {
+        border-top: 3px solid #e3e3e3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="total">
+      <strong style="color: #f50002">M.Office 3.0 모바일 리스트</strong>
+      <p class="goLink">- <a href="../../html/coding_list.html">PC 버전 바로가기</a></p>
+    </div>
+    <div id="list">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <colgroup>
+          <col width="190px" />
+          <col width="*" />
+          <col width="*" />
+          <col width="*" />
+          <col width="*" />
+          <col width="7%" />
+          <col width="7%" />
+          <col width="7%" />
+          <col width="7%" />
+          <col width="7%" />
+          <col width="7%" />
+        </colgroup>
+        <tr>
+          <th>1Depth</th>
+          <th>2Depth</th>
+          <th>3Depth</th>
+          <th>4Depth</th>
+          <th>5Depth</th>
+          <th>6Depth</th>
+          <th>Type</th>
+          <th>File-name</th>
+          <th>완료일</th>
+          <th>수정일</th>
+          <th>비고</th>
+        </tr>
+        <!-- mobile -->
+        <tr>
+          <td class="one">공통</td>
+          <td class="two"><strong>[popup]</strong> layout</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type">layer popup</td>
+          <td class="filename"><a href="MobileService/layerpopup.html" target="_blank">layerpopup</a></td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one">로그인</td>
+          <td class="two">SNS 계정</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="MobileService/login_sns.html" target="_blank">login_sns</a></td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">ID &amp; PW</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="MobileService/login.html" target="_blank">login</a></td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">로그인 성공 시</td>
+          <td class="three">인증값 입력</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename">
+            <a href="MobileService/login_success_input.html" target="_blank">login_success_input</a>
+          </td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">인증완료</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename">
+            <a href="MobileService/login_success_complete.html" target="_blank">login_success_complete</a>
+          </td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one">결재함</td>
+          <td class="two">목록</td>
+          <td class="three">default</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="MobileService/approval_01.html" target="_blank">approval_01</a></td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">페이징</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="MobileService/approval_02.html" target="_blank">approval_02</a></td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">더보기</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="MobileService/approval_03.html" target="_blank">approval_03</a></td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">상세</td>
+          <td class="three">승인</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename">
+            <a href="MobileService/approval_details_01.html" target="_blank">approval_details_01</a>
+          </td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">후결</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename">
+            <a href="MobileService/approval_details_02.html" target="_blank">approval_details_02</a>
+          </td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+        <tr>
+          <td class="one">보관함</td>
+          <td class="two">목록</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="MobileService/storage.html" target="_blank">storage</a></td>
+          <td class="creationDate">2019-11-06</td>
+          <td class="modifiDate"></td>
+          <td class="etc"></td>
+        </tr>
+      </table>
+    </div>
+    <div style="height: 50px"></div>
+  </body>
+</html>

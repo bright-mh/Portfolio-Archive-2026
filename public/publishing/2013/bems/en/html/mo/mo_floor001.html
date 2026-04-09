@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      By Floor Area | Electricity | Monitoring | A Smart Energy World, brought about by SK Telecom ::: Cloud BEMS
+    </title>
+    <script type="text/javascript" src="/html/2014/bems/en/js/custom/head.js"></script>
+    <link href="/html/2014/bems/en/css/custom/mo.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+      function modalOpen(num) {
+        switch (num) {
+          case 0:
+            jQuery("#modelHelp").modal({ keyboard: false });
+            break;
+
+          case 1:
+            jQuery("#modelBookmark").modal({ keyboard: false });
+            break;
+        }
+      }
+    </script>
+
+    <script>
+      jQuery(function () {
+        jQuery("#chart01").highcharts({
+          credits: { enabled: false },
+          chart: {
+            type: "column",
+            spacing: [40, 0, 0, 0],
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          xAxis: [
+            {
+              tickWidth: 0,
+              categories: [
+                "B2",
+                "B1",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+              ],
+              labels: {
+                style: {
+                  color: "#898a8c",
+                  "font-size": "10px",
+                },
+              },
+            },
+          ],
+          yAxis: [
+            {
+              lineWidth: 1,
+              title: {
+                text: "kWh",
+                style: {
+                  color: "#777777",
+                  "font-size": "12px",
+                  "font-weight": "bold",
+                  "font-family": '"돋움",Dotum, Helvetica, AppleGothic, Sans-serif',
+                },
+              },
+              min: 0,
+              minorGridLineWidth: 0,
+              gridLineWidth: 1,
+              alternateGridColor: null,
+              tickColor: "#cccccc",
+            },
+          ],
+          plotOptions: {
+            column: {
+              pointPadding: -0.1,
+              borderWidth: 2,
+            },
+          },
+          tooltip: {
+            valueSuffix: " kWh",
+            dateTimeLabelFormats: {
+              hour: "%H:%M",
+            },
+            shared: false,
+            useHTML: true,
+            headerFormat: "{point.key}<br />",
+            pointFormat:
+              "<p>" +
+              '<span style="color: {series.color}">{series.name}: </span>' +
+              '<span style="text-align: right"> {point.y} </span> ' +
+              "</p> ",
+            footerFormat: "",
+            valueDecimals: 2,
+          },
+          series: [
+            {
+              name: "Yesterday",
+              color: "#f7beb2",
+              borderColor: "#f7beb2",
+              data: [
+                114, 161, 258, 185, 200, 304, 9, 216, 301, 111, 422, 291, 524, 393, 347, 157, 356, 298, 230, 272, 272,
+                62,
+              ],
+            },
+            {
+              name: "Today",
+              color: "#ed8672",
+              borderColor: "#ed8672",
+              data: [
+                119, 156, 261, 187, 200, 292, 8, 220, 308, 114, 430, 300, 515, 406, 359, 155, 328, 294, 251, 306, 264,
+                66,
+              ],
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            borderColor: "#FFFFFF",
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#777777",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#777777",
+              fontWeight: "normal",
+            },
+          },
+          navigation: {
+            menuItemStyle: {
+              fontSize: "11px",
+            },
+          },
+          exporting: {
+            buttons: {
+              contextButton: {
+                align: "right",
+                y: -40,
+                x: -22,
+              },
+            },
+          },
+        });
+      });
+    </script>
+    <script src="/html/2014/bems/en/js/custom/bems.datatable.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/en/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle">
+            <img src="/html/2014/bems/en/images/common/sub_title01.gif" alt="Energy Monitoring" />
+          </h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02">
+              <a href="/html/2014/bems/en/html/mo/mo_source001.html"><span>Consumption by Energy Source</span></a>
+            </li>
+            <li class="depth02">
+              <a href="/html/2014/bems/en/html/mo/mo_goal001.html"><span>Consumption vs. Limits</span></a>
+            </li>
+            <li class="depth03 on">
+              <a href="/html/2014/bems/en/html/mo/mo_system001.html"><span>Electricity</span></a>
+              <ul>
+                <li>
+                  <a href="/html/2014/bems/en/html/mo/mo_system001.html"><span>By Object Type</span></a>
+                </li>
+                <li>
+                  <a href="/html/2014/bems/en/html/mo/mo_pattern001.html"><span>Peak Load by Time Slot</span></a>
+                </li>
+                <li class="on">
+                  <a href="/html/2014/bems/en/html/mo/mo_floor001.html"><span>By Floor Area</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="/html/2014/bems/en/html/mo/mo_gas001.html"><span>Gas</span></a>
+            </li>
+            <li class="depth02">
+              <a href="/html/2014/bems/en/html/mo/mo_temp001.html"><span>Temperature/Humidity</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>Electricity Consumption by Floor Area</h1>
+              <ul class="location">
+                <!-- 2014-01-07 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-07 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>Monitoring<span>&gt;</span></li>
+                <li>Electricity<span>&gt;</span></li>
+                <li class="last">By Floor Area</li>
+              </ul>
+            </div>
+
+            <!-- 도움말, 인쇄, 북마크 -->
+            <div class="clear">
+              <ul class="sideList">
+                <li class="sideStyle01"><a href="#link" onclick="modalOpen(0)">Help</a></li>
+                <li class="sideStyle02"><a href="#link">Print</a></li>
+                <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                <li class="sideStyle03 on"><a href="#link" onclick="modalOpen(1)">Bookmark</a></li>
+              </ul>
+            </div>
+            <!-- //도움말, 인쇄, 북마크 -->
+
+            <!-- 차트 영역 -->
+            <section class="BoxArea mt10">
+              <div class="boxBg">
+                <!--차트 삽입부분 : 높이 380px / visibility:hidden -->
+                <div id="chart01" style="min-width: 310px; height: 380px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //차트 영역 -->
+
+            <!-- 주요정보&전층 누적사용량 -->
+            <section class="BoxArea">
+              <div class="boxBg clear minH297">
+                <!-- 주요정보 -->
+                <article class="boxLeft">
+                  <div>
+                    <div class="moFloorBox clear02">
+                      <h2>Key Information</h2>
+                      <span class="titleInfo"
+                        >This shows electricity consumption by floor area from 00:00 to 19:30 today</span
+                      >
+                    </div>
+                    <table class="table table_id_1">
+                      <thead>
+                        <tr>
+                          <th scope="col">Floor Area</th>
+                          <th scope="col">Today</th>
+                          <th scope="col">Yesterday</th>
+                          <th scope="col">Rates of Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>B2</td>
+                          <td>119 kWh</td>
+                          <td>114 kWh</td>
+                          <td>4.43 %</td>
+                        </tr>
+                        <tr>
+                          <td>B1</td>
+                          <td>456 kWh</td>
+                          <td>161 kWh</td>
+                          <td>-3.22 %</td>
+                        </tr>
+                        <tr>
+                          <td>01</td>
+                          <td>261 kWh</td>
+                          <td>258 kWh</td>
+                          <td>0.90 %</td>
+                        </tr>
+                        <tr>
+                          <td>02</td>
+                          <td>187 kWh</td>
+                          <td>185 kWh</td>
+                          <td>1.10 %</td>
+                        </tr>
+                        <tr>
+                          <td>03</td>
+                          <td>200 kWh</td>
+                          <td>200 kWh</td>
+                          <td>-0.20 %</td>
+                        </tr>
+                        <tr>
+                          <td>04</td>
+                          <td>292 kWh</td>
+                          <td>304 kWh</td>
+                          <td>-3.94 %</td>
+                        </tr>
+                        <tr>
+                          <td>05</td>
+                          <td>8 kWh</td>
+                          <td>9 kWh</td>
+                          <td>-16.26 %</td>
+                        </tr>
+                        <tr>
+                          <td>06</td>
+                          <td>220 kWh</td>
+                          <td>216 kWh</td>
+                          <td>1.52 %</td>
+                        </tr>
+                        <tr>
+                          <td>07</td>
+                          <td>308 kWh</td>
+                          <td>301 kWh</td>
+                          <td>2.36 %</td>
+                        </tr>
+                        <tr>
+                          <td>08</td>
+                          <td>114 kWh</td>
+                          <td>111 kWh</td>
+                          <td>3.16 %</td>
+                        </tr>
+                        <tr>
+                          <td>09</td>
+                          <td>430 kWh</td>
+                          <td>422 kWh</td>
+                          <td>1.85 %</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>300 kWh</td>
+                          <td>291 kWh</td>
+                          <td>2.95 %</td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>515 kWh</td>
+                          <td>524 kWh</td>
+                          <td>-1.74 %</td>
+                        </tr>
+                        <tr>
+                          <td>12</td>
+                          <td>406 kWh</td>
+                          <td>393 kWh</td>
+                          <td>3.33 %</td>
+                        </tr>
+                        <tr>
+                          <td>13</td>
+                          <td>359 kWh</td>
+                          <td>347 kWh</td>
+                          <td>3.57 %</td>
+                        </tr>
+                        <tr>
+                          <td>14</td>
+                          <td>155 kWh</td>
+                          <td>157 kWh</td>
+                          <td>-1.03 %</td>
+                        </tr>
+                        <tr>
+                          <td>15</td>
+                          <td>328 kWh</td>
+                          <td>356 kWh</td>
+                          <td>-8.08 %</td>
+                        </tr>
+                        <tr>
+                          <td>16</td>
+                          <td>294 kWh</td>
+                          <td>298 kWh</td>
+                          <td>-1.50 %</td>
+                        </tr>
+                        <tr>
+                          <td>17</td>
+                          <td>251 kWh</td>
+                          <td>230 kWh</td>
+                          <td>9.36 %</td>
+                        </tr>
+                        <tr>
+                          <td>18</td>
+                          <td>306 kWh</td>
+                          <td>272 kWh</td>
+                          <td>12.57 %</td>
+                        </tr>
+                        <tr>
+                          <td>19</td>
+                          <td>264 kWh</td>
+                          <td>272 kWh</td>
+                          <td>-3.04 %</td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td>66 kWh</td>
+                          <td>62 kWh</td>
+                          <td>6.26 %</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </article>
+                <!-- //주요정보 -->
+
+                <!-- 전층 누적사용량 -->
+                <article class="boxRight">
+                  <h2>Cumulative Consumption of All Floors</h2>
+                  <ul class="accumulate02">
+                    <li class="bg_f7beb2">
+                      <span class="acc_Style01">Yesterday</span>
+                      <span class="acc_Style02">5,486</span> <span class="acc_Style03">Kwh</span>
+                    </li>
+                    <li class="bg_ed8672">
+                      <span class="acc_Style01">Today</span>
+                      <span class="acc_Style02">5,539</span> <span class="acc_Style03">Kwh</span>
+                    </li>
+                  </ul>
+                  <!-- [D] 증가일 때는 class="increase" -->
+                  <p class="textStyle">
+                    Compared to 12/11(<span>Wed</span>), <br />today’s total consumption until 19:30 is increased by
+                    <span class="increase">0.97%</span>
+                  </p>
+                </article>
+                <!-- //전층 누적사용량 -->
+              </div>
+            </section>
+            <!-- //주요정보&전층 누적사용량 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/en/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/en/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>SK Telecom, 11 Euljiro 2-Ga, Seoul, Korea</address>
+            <ul class="f_list01">
+              <li>President: Ha Sung-min</li>
+              <li>Business Registration Number: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS Web Site is optimized for Internet Explorer 9, Chrome 4, Firefox 5, Safari 5, Opera 10.5
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/en/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/en/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/en/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/en/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/en/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- 모달팝업 내용 : help -->
+    <style>
+      model {
+        margin: 0 !important;
+      }
+    </style>
+    <div
+      id="modelHelp"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 898px; left: 50%; margin-left: -450px; top: 15%; margin-top: -50px"
+    >
+      <!-- [D] 팝업사이즈 : width:900px; -->
+      <section class="popup" style="width: 898px">
+        <div class="title">
+          <h1>Help</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modelHelp').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer03 bgColor">
+          <div class="bookMak">
+            <p class="text">
+              You can view helpful information, including page overview and check points you need to check.
+            </p>
+            <div class="box03">
+              <div class="textBox">
+                Energy Manager includes meter and sensor data collection, cleaning, and storage capabilities. Once basic
+                configuration information is set up in Energy Builder, Energy Manager automatically collects, cleans,
+                and stores data from your existing meters.<br /><br />
+
+                Energy Manager can also retrieve historical and forecast weather data from the internet. Alternatively,
+                it can record weather data using on-site sensors.<br />
+              </div>
+              <img src="/html/2014/bems/en/images/common/Sample.jpg" alt="" class="mt15" />
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15 pb10 mb10">
+            <a href="#link" onclick="$('#modelHelp').modal('hide')" class="on"><span>Close</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 : help -->
+
+    <!-- 모달팝업 내용: bookmark -->
+    <style>
+      model {
+        margin: 0 !important;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function () {
+        $("#country_02").selectbox();
+      });
+    </script>
+    <div
+      id="modelBookmark"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -147px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Add Bookmark</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modelBookmark').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">Please select the folder you want to bookmark and click ‘Confirm’ button.</p>
+            <div class="box">
+              <p class="group01 clear02">
+                <span class="fl titleMark">Page Title :</span>
+                <span class="fr textMark">Input Details | Enter Energy Bill | Configuration</span>
+              </p>
+              <div class="group02 clear02">
+                <span class="fl titleMark">Bookmark Folder :</span>
+                <div class="s9 fl pl10">
+                  <select id="country_02">
+                    <option value="v1">Please select.</option>
+                    <option value="v2">Folder1</option>
+                    <option value="v3">Folder2</option>
+                    <option value="v4">Folder3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a href="#link" class="on"><span>Confirm</span></a>
+            <a href="#link" onclick="$('#modelBookmark').modal('hide')" class="on"><span>Cancel</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용: bookmark -->
+
+    <!-- 모달팝업 내용 -->
+    <style>
+      model {
+        margin: 0 !important;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function () {
+        $("#country_01").selectbox();
+      });
+    </script>
+    <div
+      id="modalEmail_1"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -147px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Email Address</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modalEmail_1').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the email address of the account you use.</p>
+            <div class="box02">
+              <p class="group01 clear02">
+                <span class="fl titleMark titleMark02">Current Email Address :</span>
+                <span class="fl pl9">CloudBEMS@sk.com</span>
+              </p>
+              <!-- [D] 변경할 이메일 주소 : default -->
+
+              <div class="group02 clear02">
+                <span class="fl titleMark mr10 pl21">New Email Address :</span>
+                <input type="text" class="fl input_style02 input01" />
+                <span class="fl dot">&#64;</span>
+                <div class="s10 fl ml10">
+                  <select id="country_01">
+                    <option value="v1">Please select.</option>
+                    <option value="v2">naver.com</option>
+                    <option value="v3">gmail.com</option>
+                    <option value="v4">hanmail.net</option>
+                    <option value="v5">hotmail.com</option>
+                    <option value="v6">nate.com</option>
+                    <option value="v7">yahoo.com</option>
+                    <option value="v8">Direct Input</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- [D] 변경할 이메일 주소 : 직접 입력 시 (주석 처리)-->
+              <!--
+						<div class="group02 clear02">
+							<span class="fl titleMark mr10 pl21">New Email Address :</span>
+							<input type="text" class="fl input_style02 input01" />
+							<span class="fl dot">&#64;</span>
+							<span class="spanStyle"><input type="text" class="fl input_style02 input01" /></span>
+							<div class="s10 fl ml10">
+								<select id="country_01">
+									<option value="v1">Please select.</option>
+									<option value="v2">naver.com</option>
+									<option value="v3">gmail.com</option>
+									<option value="v4">hanmail.net</option>
+									<option value="v5">hotmail.com</option>
+									<option value="v6">nate.com</option>
+									<option value="v7">yahoo.com</option>
+									<option value="v8">Direct Input</option>
+								</select>
+							</div>
+						</div>
+						-->
+
+              <!-- [D] 변경할 이메일 주소 : 오류 메시지 (주석 처리) -->
+              <!--
+						<div class="group02 clear02">
+							<span class="fl titleMark mr10 pl21">New Email Address :</span>
+							<input type="text" class="fl input_style02 input01" />
+							<span class="fl dot">&#64;</span>
+							<span class="spanStyle"><input type="text" class="fl input_style02 input01" /></span>
+							<div class="s10 fl ml10">
+								<select id="country_01">
+									<option value="v1">Please select.</option>
+									<option value="v2">naver.com</option>
+									<option value="v3">gmail.com</option>
+									<option value="v4">hanmail.net</option>
+									<option value="v5">hotmail.com</option>
+									<option value="v6">nate.com</option>
+									<option value="v7">yahoo.com</option>
+									<option value="v8">Direct Input</option>
+								</select>
+							</div>
+							<p class="text02">The format of the email address is incorrect. Please check and try again.</p>
+						</div>
+						-->
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a
+              href="#link"
+              onclick="
+                $('#modalEmail_1').modal('hide');
+                $('#modalEmail_2').modal({ keyboard: false });
+              "
+              class="on"
+              ><span>Confirm</span></a
+            >
+            <a href="#link" onclick="$('#modalEmail_1').modal('hide')" class="on"><span>Cancel</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+
+    <div
+      id="modalEmail_2"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -147px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Email Address</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modalEmail_2').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the email address of the account you use.</p>
+            <div class="box">
+              <div class="okMsg">
+                <p class="okTitle">Email address is changed.</p>
+                <p class="mt8">Your e-mail address is successfully changed.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a href="#link" onclick="$('#modalEmail_2').modal('hide')" class="on"><span>Close</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+
+    <div
+      id="modalPW_1"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -250px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Password</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#modalPW_1').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the password of the account you use</p>
+            <!-- [D] default -->
+            <div class="box04">
+              <div class="group03 clear02 mt10">
+                <span class="fl titleMark03_01">Current Password :</span>
+                <input type="password" class="fl input_style02 input02" />
+              </div>
+              <div class="group03 clear02 mt10">
+                <span class="fl titleMark03_01">New Password :</span>
+                <input type="password" class="fl input_style02 input02" />
+              </div>
+              <div class="group03 clear02 mt10">
+                <span class="fl titleMark03">Confirm New Password :</span>
+                <input type="password" class="fl input_style02 input02" />
+              </div>
+            </div>
+
+            <!-- [D] 오류메시지 (주석처리) -->
+            <!--
+					<div class="box04">
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">Current Password :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">The password is incorrect.</p>
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">New Password :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">Please enter a password.</p>
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03">Confirm New Password :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">Please enter the password.</p>
+						</div>
+					</div>
+					-->
+          </div>
+
+          <ul class="pwList">
+            <li>
+              * The password must be up to 10 characters in English (upper and lowercase letters) and contain more than
+              2 numbers. <span>It must not include the ID.</span>
+            </li>
+            <li>
+              * To protect your personal information, please change your password regularly to a new one that you do not
+              use <span>for other web sites.</span>
+            </li>
+          </ul>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a
+              href="#link"
+              class="on"
+              onclick="
+                $('#modalPW_1').modal('hide');
+                $('#modalPW_2').modal({ keyboard: false });
+              "
+              ><span>Confirm</span></a
+            >
+            <a href="#link" onclick="$('#modalPW_1').modal('hide')" class="on"><span>Cancel</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+
+    <!-- 모달팝업 내용 -->
+    <style>
+      model {
+        margin: 0 !important;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function () {
+        $("#modal_01").selectbox();
+      });
+    </script>
+    <div
+      id="madalPW_2"
+      class="modal hide fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="position: absolute; width: 656px; left: 50%; margin-left: -328px; top: 50%; margin-top: -147px"
+    >
+      <!-- [D] 팝업사이즈 : width:656px; -->
+      <section class="popup" style="width: 654px">
+        <div class="title">
+          <h1>Change Password</h1>
+          <p class="pop_close">
+            <a href="#link" onclick="$('#madalPW_2').modal('hide')"
+              ><img src="/html/2014/bems/en/images/common/btn_popup_close.png" alt="close"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer04">
+          <div class="bookMak">
+            <p class="text">You can change the password of the account you use.</p>
+            <div class="box">
+              <div class="okMsg okMsg02">
+                <p class="okTitle">Password is changed.</p>
+                <p class="mt8">Your password is successfully changed.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="btn_area02 center mt15">
+            <a href="#link" onclick="$('#madalPW_2').modal('hide')" class="on"><span>Close</span></a>
+          </div>
+          <!-- //버튼 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+  </body>
+</html>

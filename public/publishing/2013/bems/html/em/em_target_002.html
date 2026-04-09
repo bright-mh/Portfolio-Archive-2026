@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>설정내역 l 목표량관리 l 에너지관리 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/em.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      function doModal() {
+        var modalOpt = {
+          keyboard: false,
+        };
+        $("#modelContent").modal(modalOpt);
+      }
+
+      // 입력폼 안에 마우스 포커스가 이동시 placeholder 내용을 보여주지 않게 하기 위한 처리
+      jQuery("document").ready(function () {
+        jQuery(".input_style03").bind("focus", function () {
+          jQuery(this).attr("placeholder", "");
+        });
+        jQuery(".input_style03").bind("blur", function () {
+          jQuery(this).attr("placeholder", "입력");
+        });
+      });
+    </script>
+
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+    <script src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <script src="chartScripts/EM_TARGET_002.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title07.gif" alt="에너지 관리" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02 on">
+              <a href="#link"><span>목표량 관리</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>사용량/금액 관리</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>전기 피크 목표 관리</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>목표량 관리</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자, 에너지 관리 띄어쓰기_수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <li>에너지 관리<span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자, 에너지 관리 띄어쓰기_수정 -->
+                <li>목표량 관리<span>&gt;</span></li>
+                <li class="last">설정내역</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <div class="tabBg mb5">
+              <!-- [D] 선택 시, li태그에 class="on" 추가 -->
+              <ul class="btn_list">
+                <li class="on"><a href="#link">설정내역</a></li>
+                <li><a href="#link">History</a></li>
+              </ul>
+              <!-- 도움말, 인쇄, 북마크 -->
+              <ul class="sideList clear02 mt15">
+                <li class="sideStyle01"><a href="#link">도움말</a></li>
+                <li class="sideStyle02"><a href="#link">인쇄</a></li>
+                <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                <li class="sideStyle03"><a href="#link">북마크</a></li>
+              </ul>
+              <!-- //도움말, 인쇄, 북마크 -->
+            </div>
+            <!-- 탭영역 -->
+
+            <!-- 2013-12-16 내용 삭제 -->
+            <!-- 에너지 사용금액 설정 -->
+            <!--
+					<div class="emWarning">
+						<p class="text">2013년의 에너지 사용금액이 설정되지 않았습니다.<br />현재 전년도 에너지 사용량이 출력됩니다.</p>
+						<p class="btn_input"><a href="#link">목표량 설정하기</a></p>
+						<p class="btn_close"><a href="#" onclick="jQuery(this).parent().parent().css('display','none');"><img src="/html/2014/bems/images/common/btn_close_em.gif" alt="닫기" /></a></p>
+					</div>
+					-->
+            <!-- 에너지 사용금액 설정 -->
+            <!-- 2013-12-16 내용 삭제 -->
+
+            <!-- 2012년 에너지 사용량 -->
+            <section class="BoxArea mt0">
+              <div class="boxBg">
+                <div class="pb15 clear02">
+                  <h2 class="fl">2012년 에너지 사용량</h2>
+                  <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                </div>
+
+                <!--차트 삽입부분 -->
+                <div id="chart01" style="min-width: 310px; height: 380px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //2012년 에너지 사용량 -->
+
+            <!-- 목표량 데이터 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <article class="tableGroup01">
+                  <div class="clear02">
+                    <h2 class="fl">목표량 테이터<span class="titleInfo">최초 등록일 : </span></h2>
+                    <div class="lastYear">
+                      <span class="" style="display: inline-block">전년 데이터 :</span>
+                      <input type="checkbox" id="check01" name="check01" class="first" /><label for="check01"
+                        >전체</label
+                      >
+                      <input type="checkbox" id="check02" name="check02" /><label for="check02">전기</label>
+                      <input type="checkbox" id="check03" name="check03" /><label for="check03">가스</label>
+                    </div>
+                  </div>
+                  <script>
+                    jQuery(".lastYear>input.first").bind("click", function () {
+                      if (jQuery(this).attr("checked")) {
+                        jQuery(this).parent().find("#check02").attr("disabled", true);
+                        jQuery(this).parent().find("#check03").attr("disabled", true);
+                      } else {
+                        jQuery(this).parent().find("#check02").attr("disabled", false);
+                        jQuery(this).parent().find("#check03").attr("disabled", false);
+                      }
+                    });
+                  </script>
+                  <table class="table_style01_02 inputCell">
+                    <caption class="blind">
+                      목표량 테이터 입력
+                    </caption>
+                    <colgroup>
+                      <col style="width: 7%" />
+                      <col style="width: 10.8%" />
+                      <col style="width: 10.8%" />
+                      <col style="width: 10.8%" />
+                      <col style="width: 10.8%" />
+                      <col style="width: 10.8%" />
+                      <col style="width: 10.8%" />
+                      <col style="width: 14.1%" />
+                      <col style="width: 14.1%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">&nbsp;</th>
+                        <!-- 2013-12-16 내용변경_수정 -->
+                        <th colspan="3" scope="col">전기(kWh)</th>
+                        <!-- //2013-12-16 내용변경_수정 -->
+                        <th colspan="3" scope="col">가스(N㎥)</th>
+                        <th colspan="2" scope="col">toe</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">월</th>
+                        <th scope="col">목표량</th>
+                        <th scope="col">사용량</th>
+                        <th scope="col">사용률</th>
+                        <th scope="col">목표량</th>
+                        <th scope="col">사용량</th>
+                        <th scope="col">사용률</th>
+                        <th scope="col">목표량</th>
+                        <th scope="col">사용량</th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <th>합계</th>
+                        <td>123</td>
+                        <td>114</td>
+                        <td>90.01%</td>
+                        <td>123</td>
+                        <td>114</td>
+                        <td>90.01%</td>
+                        <td>121.1111112</td>
+                        <td>114.2323555</td>
+                      </tr>
+                    </tfoot>
+
+                    <tbody>
+                      <!-- [D] 사용량이 오버 되었을 경우, td태그에 class="colorUp" 삽입 -->
+                      <tr>
+                        <td>1</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td><input type="text" class="input_style03" placeholder="입력" /></td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>121.1111112</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- 버튼 -->
+                  <div class="btn_area02 mt15">
+                    <div class="fl">
+                      <a href="javascript:doModal();" class="on"><span>과거 에너지 사용량</span></a>
+                    </div>
+                    <div class="fr">
+                      <a href="#link" class="on"><span>등록</span></a>
+                    </div>
+                  </div>
+                  <!-- //버튼 -->
+                </article>
+                <!-- //목표량 테이터 -->
+              </div>
+            </section>
+            <!-- //주요정보, 목표량 데이터 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- 모달팝업 내용 -->
+    <div id="modelContent" class="modal hide fade" tabindex="-1" role="dialog" style="left: 50%; margin-left: -449px">
+      <!-- 2013-12-03 aria-labelledby 속성 제거 -->
+      <!-- [D] 팝업사이즈 : width:898px; -->
+      <section class="popup" style="width: 898px">
+        <div class="title">
+          <h1>과거 에너지 사용량 정보</h1>
+          <p class="pop_close">
+            <a href="javascript:$('#modelContent').modal('hide')"
+              ><img src="/html/2014/bems/images/common/btn_popup_close.png" alt="닫기"
+            /></a>
+          </p>
+        </div>
+        <div class="popContainer02">
+          <table class="table_style01_02">
+            <caption class="blind">
+              과거 에너지 사용량 정보
+            </caption>
+            <colgroup>
+              <col style="width: 7.6%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+              <col style="width: 7.7%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" rowspan="2">구분</th>
+                <th scope="col" colspan="4">2012년</th>
+                <th scope="col" colspan="4">2011년</th>
+                <th scope="col" colspan="4">2010년</th>
+              </tr>
+              <tr>
+                <th scope="col" colspan="2">전기(Kwh)</th>
+                <th scope="col" colspan="2">가스(N㎥)</th>
+                <th scope="col" colspan="2">전기(Kwh)</th>
+                <th scope="col" colspan="2">가스(N㎥)</th>
+                <th scope="col" colspan="2">전기(Kwh)</th>
+                <th scope="col" colspan="2">가스(N㎥)</th>
+              </tr>
+              <tr>
+                <th scope="col">월</th>
+                <th scope="col">목표량</th>
+                <th scope="col">사용량</th>
+                <th scope="col">목표량</th>
+                <th scope="col">사용량</th>
+                <th scope="col">목표량</th>
+                <th scope="col">사용량</th>
+                <th scope="col">목표량</th>
+                <th scope="col">사용량</th>
+                <th scope="col">목표량</th>
+                <th scope="col">사용량</th>
+                <th scope="col">목표량</th>
+                <th scope="col">사용량</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>합계</th>
+                <td>1,537</td>
+                <td>1,537</td>
+                <td>123</td>
+                <td>114</td>
+                <td>1,537</td>
+                <td>1,537</td>
+                <td>123</td>
+                <td>114</td>
+                <td></td>
+                <td>1,537</td>
+                <td></td>
+                <td>114</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+                <td>15,188</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 페이징 -->
+          <div class="clear02 mt15">
+            <div class="fl">
+              <p class="txtC0C0C0">총 96개의 데이터 중 10개</p>
+            </div>
+            <div class="fr btn_page">
+              <!-- [D] 위치된 페이지 a태그에 on 삽입 -->
+              <a href="#link" class="fixBtn">이전</a>
+              <a href="#link" class="on">1</a>
+              <a href="#link">2</a>
+              <a href="#link">3</a>
+              <a href="#link">4</a>
+              <a href="#link">5</a>
+              <a href="#link" class="fixBtn">다음</a>
+            </div>
+          </div>
+          <!-- //페이징 -->
+        </div>
+      </section>
+    </div>
+    <!-- //모달팝업 내용 -->
+  </body>
+</html>

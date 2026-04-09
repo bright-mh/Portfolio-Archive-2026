@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>New Balance Korea</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+  </head>
+  <body>
+    <div class="layer_wrap">
+      <div class="filter_inner2">
+        <div class="header">
+          <strong>상세검색</strong>
+          <a href="#none" class="pop_close"><span class="blind">닫기</span></a>
+        </div>
+        <div class="contents">
+          <script>
+            $(function () {
+              /*토글*/
+              $(".sort_select")
+                .find(".tit")
+                .on("click", function () {
+                  event.preventDefault();
+                  $(this).parent(".sort_select").toggleClass("on");
+                  $(this).next(".sort_by").slideToggle(300);
+                });
+            });
+          </script>
+          <div class="sort_wrap store">
+            <div class="sort_select on">
+              <div class="tit">
+                <strong>지역</strong>
+                <span>전체</span>
+              </div>
+              <div class="sort_by" style="display: block">
+                <div class="id_cont">
+                  <div class="items2 all">
+                    <input type="checkbox" id="zone_all" name="zone_check" class="all_check" /><label for="zone_all"
+                      >전체</label
+                    >
+                  </div>
+                  <ul class="items2 each_check">
+                    <li><input type="checkbox" id="zone01" name="zone_check" /><label for="zone01">서울</label></li>
+                    <li><input type="checkbox" id="zone02" name="zone_check" /><label for="zone02">인천</label></li>
+                    <li><input type="checkbox" id="zone03" name="zone_check" /><label for="zone03">경기</label></li>
+                    <li><input type="checkbox" id="zone04" name="zone_check" /><label for="zone04">강원</label></li>
+                    <li><input type="checkbox" id="zone05" name="zone_check" /><label for="zone05">충북</label></li>
+                    <li><input type="checkbox" id="zone06" name="zone_check" /><label for="zone06">충남</label></li>
+                    <li><input type="checkbox" id="zone07" name="zone_check" /><label for="zone07">대전</label></li>
+                    <li><input type="checkbox" id="zone08" name="zone_check" /><label for="zone08">경북</label></li>
+                    <li><input type="checkbox" id="zone09" name="zone_check" /><label for="zone09">경남</label></li>
+                    <li><input type="checkbox" id="zone10" name="zone_check" /><label for="zone10">부산</label></li>
+                    <li><input type="checkbox" id="zone11" name="zone_check" /><label for="zone11">울산</label></li>
+                    <li><input type="checkbox" id="zone12" name="zone_check" /><label for="zone12">대구</label></li>
+                    <li><input type="checkbox" id="zone13" name="zone_check" /><label for="zone13">전북</label></li>
+                    <li><input type="checkbox" id="zone14" name="zone_check" /><label for="zone14">전남</label></li>
+                    <li><input type="checkbox" id="zone15" name="zone_check" /><label for="zone15">광주</label></li>
+                    <li><input type="checkbox" id="zone16" name="zone_check" /><label for="zone16">제주</label></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="sort_select">
+              <div class="tit">
+                <strong>매장 유형</strong>
+                <span>전체</span>
+              </div>
+              <div class="sort_by">
+                <div class="id_cont">
+                  <ul class="items2 all">
+                    <li>
+                      <input type="checkbox" id="store_all" name="store_check" /><label for="store_all">전체</label>
+                    </li>
+                  </ul>
+                  <ul class="items2 each_check">
+                    <li>
+                      <input type="checkbox" id="store_type01" name="store_check" /><label for="store_type01"
+                        >전문매장</label
+                      >
+                    </li>
+                    <li>
+                      <input type="checkbox" id="store_type02" name="store_check" /><label for="store_type02"
+                        >백화점</label
+                      >
+                    </li>
+                    <li>
+                      <input type="checkbox" id="store_type03" name="store_check" /><label for="store_type03"
+                        >상설매장</label
+                      >
+                    </li>
+                    <li>
+                      <input type="checkbox" id="store_type04" name="store_check" /><label for="store_type04"
+                        >키즈매장</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="btn_area">
+            <div class="col1">
+              <a href="#none" class="btn_ty_bface btm">적용하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

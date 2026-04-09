@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>component</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      .tooltip .tooltip_cont {
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        width: 200px;
+        padding: 10px 13px;
+        border-radius: 5px;
+        background: #666;
+        color: #fff;
+        font-size: 13px;
+        text-align: left;
+        line-height: 18px;
+        box-sizing: border-box;
+        -webkit-boxsizing: border-box;
+        z-index: 10;
+      }
+      .tooltip:hover > .tooltip_cont {
+        display: block;
+      }
+
+      input[type="text"]:disabled,
+      input[type="text"].readonly {
+        background-color: #f0f0f0;
+      }
+      select:disabled {
+        background-color: #f0f0f0;
+      }
+
+      .ip_box.disabled,
+      .ip_box.readonly {
+        background-color: #f0f0f0;
+      }
+      .ip_calendar.disabled {
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+
+  <body class="sub">
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="user_box">
+          <p>지진희 (제이니스)</p>
+        </div>
+        <div class="logo_box">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 30px / 가로크기는 비율로 자동조정 -->
+          <h1>
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 30px" /></a>
+          </h1>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- LNB : left menu -->
+        <nav class="lnb_area">
+          <h2 class="blind">운영자 메뉴</h2>
+          <ul class="lnb_list">
+            <li class="list_basic1">
+              <a href="#none" class="depth1">사내정보</a>
+              <!-- [D] 2Depth 선택 시, li태그에 class="on" 추가 -->
+              <ul>
+                <li><a href="#none">공지사항 관리</a></li>
+                <li><a href="#none">사원정보 관리</a></li>
+                <li><a href="#none">휴일정보 관리</a></li>
+                <li><a href="#none">운영자 관리</a></li>
+                <li><a href="#none">결재자 관리</a></li>
+                <li><a href="#none">그룹 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic2">
+              <a href="#none" class="depth1">PC사용 적용 관리</a>
+              <ul>
+                <li class="on"><a href="#none">근무표 관리/적용</a></li>
+                <li><a href="#none">유연근무자 관리</a></li>
+                <li><a href="#none">차단일 설정 관리</a></li>
+                <li><a href="#none">비대상자 관리</a></li>
+                <li><a href="#none">차단 예외자 관리</a></li>
+                <li><a href="#none">PC사용 제한자 관리</a></li>
+                <li><a href="#none">휴가자 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic3">
+              <a href="#none" class="depth1">PC사용 기록 조회</a>
+              <ul>
+                <li><a href="#none">미승인 신청현황</a></li>
+                <li><a href="#none">PC사용 신청현황</a></li>
+                <li><a href="#none">자리비움 사용현황</a></li>
+                <li><a href="#none">PC ON/OFF 조회</a></li>
+                <li><a href="#none">PC-LOG 조회</a></li>
+                <li><a href="#none">PC-IDLE 조회</a></li>
+                <li><a href="#none">설치현황 조회</a></li>
+                <li><a href="#none">데몬로그 조회</a></li>
+              </ul>
+            </li>
+            <li class="list_basic4">
+              <a href="#none" class="depth1">통계 현황</a>
+              <ul>
+                <li><a href="#none">PC ON/OFF 통계</a></li>
+                <li><a href="#none">PC 연장사용 통계</a></li>
+                <li><a href="#none">설치현황 통계</a></li>
+              </ul>
+            </li>
+            <li class="list_basic5">
+              <a href="#none" class="depth1">시스템 설정</a>
+              <ul>
+                <li><a href="#none">메시지 설정</a></li>
+                <li><a href="#none">프로그램 설정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- //LNB : left menu -->
+
+        <!-- contents -->
+        <div class="contents">
+          <h2 class="title_cont btm_none">Component</h2>
+
+          <!-- search area -->
+          <div class="search_area">
+            <div class="tbl_search">
+              <table>
+                <colgroup>
+                  <col style="width: 128px" />
+                  <col style="width: 334.4px" />
+                  <col style="width: 128px" />
+                  <col style="width: 334px" />
+                </colgroup>
+                <tbody>
+                  <!-- 기간 #A -->
+                  <tr>
+                    <th scope="row">기간</th>
+                    <td colspan="3">
+                      <div class="ip_calendar">
+                        <input type="text" name="" value="2019-07-05" title="시작일" />
+                        <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                      </div>
+                      ~
+                      <!-- [D] input 태그에 disabled 시, class="ip_calendar"가 있는 div 태그에 class="disabled" 추가 -->
+                      <div class="ip_calendar disabled">
+                        <input type="text" name="" value="2019-07-05" title="종료일" disabled="disabled" />
+                        <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- 기간 #B -->
+                  <tr>
+                    <th scope="row">기간</th>
+                    <td colspan="3">
+                      <div class="select_box">
+                        <select name="" title="기간" style="width: 155px">
+                          <option value="">전체</option>
+                          <option value="">옵션1</option>
+                          <option value="">옵션2</option>
+                          <option value="">옵션3</option>
+                          <option value="">옵션4</option>
+                        </select>
+                        <select name="" title="기간" style="width: 155px" disabled="disabled">
+                          <option value="">전체</option>
+                          <option value="">옵션1</option>
+                          <option value="">옵션2</option>
+                          <option value="">옵션3</option>
+                          <option value="">옵션4</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- 부서 #A -->
+                  <tr>
+                    <th scope="row">부서</th>
+                    <td colspan="3">
+                      <a href="#none" title="새창 열림" class="btn_md icon_md_choice_blue">선택</a>
+                      <!-- [D] input 태그에 readonly 시,
+												1) input 태그에 class="readonly" 추가
+												2) class="ip_box"가 있는 div 태그에 class="readonly" 추가
+										 -->
+                      <div class="ip_box readonly" style="width: 253px">
+                        <input type="text" value="" readonly="readonly" class="readonly" />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="checkbox" id="" name="" value="" class="ml12" /><label for="">하위부서 포함</label>
+                    </td>
+                  </tr>
+
+                  <!-- 이름/사번 #A -->
+                  <tr>
+                    <th scope="row">이름 / 사번</th>
+                    <td>
+                      <!-- [D] input 태그에 disabled 시, class="ip_box"가 있는 div 태그에 class="disabled" 추가 -->
+                      <div class="ip_box disabled">
+                        <input type="text" name="" value="" title="이름 / 사번" disabled="disabled" />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                    </td>
+                    <th scope="row">상태</th>
+                    <td>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="radio" id="" name="" value="" /><label for="">전체</label>
+                      <input type="radio" id="" name="" value="" /><label for="">재직</label>
+                      <input type="radio" id="" name="" value="" /><label for="">퇴직</label>
+                      <input type="radio" id="" name="" value="" /><label for="">휴직</label>
+                      <input type="radio" id="" name="" value="" /><label for="">공용</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //search area -->
+
+          <!-- tooltip -->
+          <div class="tooltip" style="margin-top: 30px">
+            툴팁 테스트 영역
+            <div class="tooltip_cont">해당 영역에 마우스를 올리면, 현재와 같이 툴팁이 보여집니다.</div>
+          </div>
+          <!-- //tooltip -->
+
+          <!-- result_area -->
+          <div class="result_area">
+            <!-- result_top -->
+            <div class="result_top clearfix">
+              <div class="fl_left">
+                <select style="width: 96px">
+                  <option value="">20페이지</option>
+                  <option value="">30페이지</option>
+                  <option value="">50페이지</option>
+                </select>
+                <p class="totla_num">총 <span>0</span>건</p>
+              </div>
+              <div class="btn_area fl_right">
+                <a href="#none" class="btn_md icon_md_csv">CSV</a>
+                <a href="#none" class="btn_md icon_md_excel">엑셀</a>
+                <a href="#none" class="btn_md bg_gray icon_md_regist_white1">그룹 등록</a>
+                <a href="#none" class="btn_md bg_gray icon_md_regist_white2">부서 등록</a>
+                <a href="#none" class="btn_md bg_gray icon_md_regist_white3">개인 등록</a>
+              </div>
+            </div>
+            <!-- //result_top -->
+
+            <!-- tbl_default -->
+            <div class="tbl_default">
+              <table>
+                <colgroup>
+                  <col style="width: 40px" />
+                  <col style="width: 100px" />
+                  <col style="width: 152px" />
+                  <col style="width: auto" />
+                  <col style="width: 97px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col"><input type="checkbox" name="" value="" title="전체 선택" /></th>
+                    <th scope="col"><a href="#none">구분</a></th>
+                    <th scope="col"><a href="#none">근무표</a></th>
+                    <th scope="col"><a href="#none">대상정보</a></th>
+                    <th scope="col"><a href="#none">상태</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="no_data">
+                    <td colspan="100">검색된 데이터가 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" value="" title="행 선택" /></td>
+                    <td>두 줄 테스트 두 줄 테스트</td>
+                    <td>기본 근무표</td>
+                    <td>제이니스 이재준 대표 (20050301)</td>
+                    <td>정상</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl_default -->
+
+            <!-- result_paging -->
+            <div class="result_paging">
+              <!-- paging -->
+              <div class="paging">
+                <a href="#none" class="btn_start">처음으로</a>
+                <a href="#none" class="btn_prev">이전</a>
+                <strong>1</strong>
+                <a href="#none">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none">6</a>
+                <a href="#none">7</a>
+                <a href="#none">8</a>
+                <a href="#none">9</a>
+                <a href="#none">10</a>
+                <a href="#none" class="btn_next">다음</a>
+                <a href="#none" class="btn_end">맨끝으로</a>
+              </div>
+              <!-- //paging -->
+              <p class="page_num"><strong>3</strong>/<span>10</span></p>
+            </div>
+            <!-- //result_paging -->
+
+            <!-- result_btm -->
+            <div class="result_btm">
+              <!-- btn -->
+              <div class="btn_box btn_area">
+                <div class="fl_left">
+                  <a href="#none" class="btn_md bg_red icon_md_delete_white">선택 삭제</a>
+                </div>
+                <div class="fl_right">
+                  <a href="#none" class="btn_md icon_md_delete_red">조회 데이터 전체 삭제</a>
+                </div>
+              </div>
+              <!-- //btn -->
+            </div>
+            <!-- //result_btm -->
+          </div>
+          <!-- //result_area -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>대사내역 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p><em>[T라이프]</em> 채널 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(2)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">유료상품관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">상품관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">판매상품 관리</a></li>
+                      <li><a href="#">캠페인 정보 조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">쿠폰 발급현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">쿠폰 별 현황</a></li>
+                      <li><a href="#">주문 별 현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">정산관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">대사내역</a></li>
+                      <li><a href="#">정산현황</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>유료상품관리</span>
+              <span>정산관리</span>
+              <strong>대사내역</strong>
+            </div>
+
+            <h3 class="tit">대사내역</h3>
+            <ul class="guide">
+              <li>판매채널-CMS 또는 CMS-제휴사 간 주문/취소 내역의 불일치 항목을 조회할 수 있습니다.</li>
+              <li>판매채널-CMS 간 대사는 채널 Admin에서 다운로드 한 주문내역을 등록하셔야 대사처리가 가능합니다.</li>
+              <li>
+                CMS-제휴사 간 대사는 CMS 주문내역 전달 후 제휴사에서 처리한 대사결과 파일을 등록하셔야 내역이
+                표시됩니다.
+              </li>
+            </ul>
+
+            <div class="tabmenu">
+              <ul class="tab">
+                <li><a href="#">판매채널-CMS</a></li>
+                <li><a href="#" class="on">CMS-제휴사1</a></li>
+              </ul>
+            </div>
+
+            <!-- 대사내역 검색 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>대상 연월, CMS 캠페인 ID가 있는 검색 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">대상 연월</th>
+                      <td>
+                        <select title="연도 선택">
+                          <option>2016년</option>
+                          <option>2015년</option>
+                          <option>2014년</option>
+                          <option>2013년</option>
+                          <option>2012년</option>
+                          <option>2011년</option>
+                        </select>
+                        <select title="월 선택">
+                          <option>1월</option>
+                          <option>2월</option>
+                          <option>3월</option>
+                          <option>4월</option>
+                          <option>5월</option>
+                          <option>6월</option>
+                          <option>7월</option>
+                          <option>8월</option>
+                          <option>9월</option>
+                          <option>10월</option>
+                          <option>11월</option>
+                          <option>12월</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">CMS 캠페인 ID</th>
+                      <td>
+                        <select title="CMS 캠페인 ID 선택" style="width: 260px">
+                          <option>전체</option>
+                          <option>CCM_CAMP_0050</option>
+                          <option>CCM_CAMP_0049</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_delete">초기화</a>
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+            <!-- //대사내역 검색 테이블 -->
+
+            <!-- 대사 결과 Summary -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >지급금액 중 cms 집계, 지급금액 중 제휴사 집계, 제휴사 대사결과 등록일, 제휴사 대사결과 등록일이
+                      있는 대사 결과 Summary</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="2">지급금액</th>
+                      <th scope="row">CMS 집계</th>
+                      <td>12,051,909 원 &nbsp;<a href="#" class="btn_long btn_excel">주문내역 다운로드</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제휴사 집계</th>
+                      <td>0 원 (차액 <span class="red">0</span> 원 / 불일치 <span class="red">0</span> 건)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제휴사 대사결과</th>
+                      <th scope="row">등록일</th>
+                      <td><a href="#" class="link_right" target="_blank" title="새창 열림">대사결과 등록현황</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //대사 결과 Summary -->
+
+            <!-- 대사내역 리스트 목록 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <p class="total_num">불일치 항목 총 <strong>0</strong> 건</p>
+                <div class="sel_box">
+                  <select>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >번호, CMS 캠페인 ID, 주문번호 (TRID), 주문일자, 취소일자, 제휴사 상품ID, 기초상품 관리쿠폰명,
+                      수량, 원가, 지급금액이 있는 대사결과 검색 결과 리스트</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 55px" />
+                    <col style="width: 120px" />
+                    <col style="width: 90px" />
+                    <col style="width: 90px" />
+                    <col style="width: 90px" />
+                    <col style="width: 90px" />
+                    <col style="width: *" />
+                    <col style="width: 70px" />
+                    <col style="width: 80px" />
+                    <col style="width: 80px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">CMS 캠페인 ID</th>
+                      <th scope="col">주문번호<br />(TRID)</th>
+                      <th scope="col">주문일자</th>
+                      <th scope="col">취소일자</th>
+                      <th scope="col">제휴사<br />상품ID</th>
+                      <th scope="col">기초상품<br />관리쿠폰명</th>
+                      <th scope="col">수량</th>
+                      <th scope="col">원가</th>
+                      <th scope="col">지급금액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 대사결과를 등록하지 않은 경우 -->
+                    <tr>
+                      <td colspan="10">
+                        대사결과가 등록되지 않았습니다.<br />
+                        대상 연월의 제휴사 주문대사 결과를 등록하시기 바랍니다.<br />
+                        <a href="#" class="btn_long btn_new gap_top2" target="_blank" title="새창 열림"
+                          >대사결과 등록</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //대사내역 리스트 목록 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>
