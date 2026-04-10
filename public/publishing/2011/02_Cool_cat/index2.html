@@ -1,510 +1,232 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-    <title>�ż��� �������� :: �Ұ� �ϳ��Ǿ� �¸��� �׳�����</title>
-    <link href="common/css/import.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="common/js/coolcat.js"></script>
-    <script type="text/javascript" src="common/js/jquery-1.6.1.min.js"></script>
-    <script type="text/javascript" src="common/js/jquery.marquee.js"></script>
-    <script type="text/javascript" src="common/js/stepcarousel.js"></script>
-    <script type="text/javascript">
-      stepcarousel.setup({
-        galleryid: "mygallery", //id of carousel DIV
-        beltclass: "belt", //class of inner "belt" DIV containing all the panel DIVs
-        panelclass: "panel", //class of panel DIVs each holding content
-        statusvars: ["statusA", "statusB", "statusC"], //register 3 variables that contain current panel (start), current panel (last), and total panels
-        contenttype: ["inline"], //content setting ['inline'] or ['external', 'path_to_external_file']
-      });
-    </script>
-  </head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>신세계 구단정보 :: 팬과 하나되어 승리의 그날까지</title>
+<link href="common/css/import.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="common/js/coolcat.js"></script>
+<script type="text/javascript" src="common/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.marquee.js"></script>
+<script type="text/javascript" src="common/js/stepcarousel.js"></script>
+<script type="text/javascript">
+	stepcarousel.setup({
+		galleryid: 'mygallery', //id of carousel DIV
+		beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+		panelclass: 'panel', //class of panel DIVs each holding content
+		statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+		contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
+	})
+</script>
+</head>
 
-  <body class="main">
-    <div class="hidden">
-      <a href="#content" class="hidden">���� �ٷΰ���</a>
-    </div>
+<body class="main">
 
-    <!-- header -->
-    <div id="header">
-      <!-- ����ڽ� -->
-      <div class="header_inner">
-        <h1 class="logo">
-          <a href="#"
-            ><img src="common/img/logo.gif" width="86px" height="68px" alt="�ż��� ��Ĺ ���ڳ󱸴�" title="�ż��� ��Ĺ ���ڳ󱸴�"
-          /></a>
-        </h1>
+<div class="hidden">
+	<a href="#content" class="hidden">본문 바로가기</a>
+</div>
 
-        <!-- ���޴� -->
-        <ul class="quick_menu">
-          <li>
-            <a href="#"><img src="common/img/btn_login.gif" width="47px" height="17px" alt="�α���" title="�α���" /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="common/img/btn_join.gif" width="36px" height="17px" alt="ȸ������" title="ȸ������"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="common/img/btn_sitemap.gif" width="36px" height="17px" alt="����Ʈ��" title="����Ʈ��"
-            /></a>
-          </li>
-        </ul>
-        <!-- //���޴� -->
+<!-- header -->
+<div id="header">
 
-        <!-- GNB -->
-        <dl class="gnb">
-          <dt class="hidden">�޴�</dt>
-          <dd>
-            <a href="coolcatteam/player.html" id="gnb1" onmouseover="gnb('01')"
-              ><img src="common/img/gnb_coolcatteam.gif" width="173px" height="65px" alt="������" title="������"
-            /></a>
-            <ul class="lnb1">
-              <li class="lnb1_1">
-                <a href="coolcatteam/player.html"
-                  ><img src="common/img/lnb1_1.gif" width="43px" height="17px" alt="�����Ұ�" title="�����Ұ�"
-                /></a>
-              </li>
-              <li class="lnb1_2">
-                <a href="coolcatteam/coaching_staff.html"
-                  ><img src="common/img/lnb1_2.gif" width="43px" height="17px" alt="��Ī����" title="��Ī����"
-                /></a>
-              </li>
-              <li class="lnb1_3">
-                <a href="coolcatteam/support_staff.html"
-                  ><img src="common/img/lnb1_3.gif" width="42px" height="17px" alt="��������" title="��������"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-          <dd>
-            <a href="introduction/greeting.html" id="gnb2" onmouseover="gnb('02')"
-              ><img src="common/img/gnb_introduction.gif" width="173px" height="65px" alt="���ܼҰ�" title="���ܼҰ�"
-            /></a>
-            <ul class="lnb2">
-              <li class="lnb2_1">
-                <a href="introduction/greeting.html"
-                  ><img src="common/img/lnb2_1.gif" width="35px" height="17px" alt="�λ縻" title="�λ縻"
-                /></a>
-              </li>
-              <li class="lnb2_2">
-                <a href="introduction/history.html"
-                  ><img src="common/img/lnb2_2.gif" width="27px" height="17px" alt="����" title="����"
-                /></a>
-              </li>
-              <li class="lnb2_3">
-                <a href="introduction/front.html"
-                  ><img src="common/img/lnb2_3.gif" width="53px" height="17px" alt="����Ʈ�Ұ�" title="����Ʈ�Ұ�"
-                /></a>
-              </li>
-              <li class="lnb2_4">
-                <a href="introduction/info_stadium.html"
-                  ><img src="common/img/lnb2_4.gif" width="54px" height="17px" alt="��Ĺ�Ͽ콺" title="��Ĺ�Ͽ콺"
-                /></a>
-              </li>
-              <li class="lnb2_5">
-                <a href="introduction/emblem.html"
-                  ><img src="common/img/lnb2_5.gif" width="37px" height="17px" alt="������" title="������"
-                /></a>
-              </li>
-              <li class="lnb2_6">
-                <a href="introduction/sponsor.html"
-                  ><img src="common/img/lnb2_6.gif" width="37px" height="17px" alt="������" title="������"
-                /></a>
-              </li>
-              <li class="lnb2_7">
-                <a href="introduction/honorary_ambassador.html"
-                  ><img src="common/img/lnb2_7.gif" width="46px" height="17px" alt="ȫ�����" title="ȫ�����"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-          <dd>
-            <a href="gamedate/schedule_result.html" id="gnb3" onmouseover="gnb('03')"
-              ><img src="common/img/gnb_gamedate.gif" width="161px" height="65px" alt="�������" title="�������"
-            /></a>
-            <ul class="lnb3">
-              <li class="lnb3_1">
-                <a href="gamedate/schedule_result.html"
-                  ><img src="common/img/lnb3_1.gif" width="54px" height="17px" alt="�����װ��" title="�����װ��"
-                /></a>
-              </li>
-              <li class="lnb3_2">
-                <a href="gamedate/team_ranking.html"
-                  ><img src="common/img/lnb3_2.gif" width="53px" height="17px" alt="�����ռ���" title="�����ռ���"
-                /></a>
-              </li>
-              <li class="lnb3_3">
-                <a href="gamedate/scriptorium.html"
-                  ><img src="common/img/lnb3_3.gif" width="33px" height="17px" alt="��Ͻ�" title="��Ͻ�"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-          <dd>
-            <a href="fanzone/news.html" id="gnb4" onmouseover="gnb('04')"
-              ><img src="common/img/gnb_fanzone.gif" width="147px" height="65px" alt="����" title="����"
-            /></a>
-            <ul class="lnb4">
-              <li class="lnb4_1">
-                <a href="fanzone/news.html"
-                  ><img src="common/img/lnb4_1.gif" width="44px" height="17px" alt="��Ĺ����" title="��Ĺ����"
-                /></a>
-              </li>
-              <li class="lnb4_2">
-                <a href="fanzone/oneline_cheer.html"
-                  ><img src="common/img/lnb4_2.gif" width="44px" height="17px" alt="��������" title="��������"
-                /></a>
-              </li>
-              <li class="lnb4_3">
-                <a href="fanzone/gallery.html"
-                  ><img src="common/img/lnb4_3.gif" width="33px" height="17px" alt="������" title="������"
-                /></a>
-              </li>
-              <li class="lnb4_4">
-                <a href="fanzone/research.html"
-                  ><img src="common/img/lnb4_4.gif" width="53px" height="17px" alt="��Ĺ����ġ" title="��Ĺ����ġ"
-                /></a>
-              </li>
-              <li class="lnb4_5">
-                <a href="fanzone/supporters.html"
-                  ><img src="common/img/lnb4_5.gif" width="44px" height="17px" alt="��������" title="��������"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-        <!-- //GNB -->
+	<!-- 헤더박스 -->
+	<div class="header_inner">
+		<h1 class="logo"><a href="#"><img src="common/img/logo.gif" width="86px" height="68px" alt="신세계 쿨캣 여자농구단" title="신세계 쿨캣 여자농구단" /></a></h1>
 
-        <p class="cheer_regist">
-          <a href="#"
-            ><img
-              src="common/img/cheer_regist.gif"
-              width="164px"
-              height="55px"
-              alt="������������ - �����޼����� �����ּ���"
-              title="������������ - �����޼����� �����ּ���"
-          /></a>
-        </p>
-      </div>
-      <div class="header_bar"><p></p></div>
-      <!-- //����ڽ� -->
-    </div>
-    <!-- //header -->
+		<!-- 퀵메뉴 -->
+		<ul class="quick_menu">
+			<li><a href="#"><img src="common/img/btn_login.gif" width="47px" height="17px" alt="로그인" title="로그인" /></a></li>
+			<li><a href="#"><img src="common/img/btn_join.gif" width="36px" height="17px" alt="회원가입" title="회원가입" /></a></li>
+			<li><a href="#"><img src="common/img/btn_sitemap.gif" width="36px" height="17px" alt="사이트맵" title="사이트맵" /></a></li>
+		</ul>
+		<!-- //퀵메뉴 -->
 
-    <!-- container -->
-    <div id="container" class="main_container" onmouseover="header_off('01')">
-      <!-- ���ο� ���̴� ����, ���� BG -->
-      <div class="main_bg_left"></div>
-      <div class="main_bg_right"></div>
-      <!-- //���ο� ���̴� ����, ���� BG -->
+		<!-- GNB -->
+		<dl class="gnb">
+			<dt class="hidden">메뉴</dt>
+			<dd><a href="coolcatteam/player.html" id="gnb1" onmouseover="gnb('01')"><img src="common/img/gnb_coolcatteam.gif" width="173px" height="65px" alt="선수단" title="선수단" /></a>
+				<ul class="lnb1">
+					<li class="lnb1_1"><a href="coolcatteam/player.html"><img src="common/img/lnb1_1.gif" width="43px" height="17px" alt="선수소개" title="선수소개" /></a></li>
+					<li class="lnb1_2"><a href="coolcatteam/coaching_staff.html"><img src="common/img/lnb1_2.gif" width="43px" height="17px" alt="코칭스탭" title="코칭스탭" /></a></li>
+					<li class="lnb1_3"><a href="coolcatteam/support_staff.html"><img src="common/img/lnb1_3.gif" width="42px" height="17px" alt="지원스탭" title="지원스탭" /></a></li>
+				</ul>
+			</dd>
+			<dd><a href="introduction/greeting.html" id="gnb2" onmouseover="gnb('02')"><img src="common/img/gnb_introduction.gif" width="173px" height="65px" alt="구단소개" title="구단소개" /></a>
+				<ul class="lnb2">
+					<li class="lnb2_1"><a href="introduction/greeting.html"><img src="common/img/lnb2_1.gif" width="35px" height="17px" alt="인사말" title="인사말" /></a></li>
+					<li class="lnb2_2"><a href="introduction/history.html"><img src="common/img/lnb2_2.gif" width="27px" height="17px" alt="연혁" title="연혁" /></a></li>
+					<li class="lnb2_3"><a href="introduction/front.html"><img src="common/img/lnb2_3.gif" width="53px" height="17px" alt="프런트소개" title="프런트소개" /></a></li>
+					<li class="lnb2_4"><a href="introduction/info_stadium.html"><img src="common/img/lnb2_4.gif" width="54px" height="17px" alt="쿨캣하우스" title="쿨캣하우스" /></a></li>
+					<li class="lnb2_5"><a href="introduction/emblem.html"><img src="common/img/lnb2_5.gif" width="37px" height="17px" alt="엠블럼" title="엠블럼" /></a></li>
+					<li class="lnb2_6"><a href="introduction/sponsor.html"><img src="common/img/lnb2_6.gif" width="37px" height="17px" alt="스폰서" title="스폰서" /></a></li>
+					<li class="lnb2_7"><a href="introduction/honorary_ambassador.html"><img src="common/img/lnb2_7.gif" width="46px" height="17px" alt="홍보대사" title="홍보대사" /></a></li>
+				</ul>
+			</dd>
+			<dd><a href="gamedate/schedule_result.html" id="gnb3" onmouseover="gnb('03')"><img src="common/img/gnb_gamedate.gif" width="161px" height="65px" alt="경기정보" title="경기정보" /></a>
+				<ul class="lnb3">
+					<li class="lnb3_1"><a href="gamedate/schedule_result.html"><img src="common/img/lnb3_1.gif" width="54px" height="17px" alt="일정및결과" title="일정및결과" /></a></li>
+					<li class="lnb3_2"><a href="gamedate/team_ranking.html"><img src="common/img/lnb3_2.gif" width="53px" height="17px" alt="팀종합순위" title="팀종합순위" /></a></li>
+					<li class="lnb3_3"><a href="gamedate/scriptorium.html"><img src="common/img/lnb3_3.gif" width="33px" height="17px" alt="기록실" title="기록실" /></a></li>
+				</ul>
+			</dd>
+			<dd><a href="fanzone/news.html" id="gnb4" onmouseover="gnb('04')"><img src="common/img/gnb_fanzone.gif" width="147px" height="65px" alt="팬존" title="팬존" /></a>
+				<ul class="lnb4">
+					<li class="lnb4_1"><a href="fanzone/news.html"><img src="common/img/lnb4_1.gif" width="44px" height="17px" alt="쿨캣뉴스" title="쿨캣뉴스" /></a></li>
+					<li class="lnb4_2"><a href="fanzone/oneline_cheer.html"><img src="common/img/lnb4_2.gif" width="44px" height="17px" alt="한줄응원" title="한줄응원" /></a></li>
+					<li class="lnb4_3"><a href="fanzone/gallery.html"><img src="common/img/lnb4_3.gif" width="33px" height="17px" alt="갤러리" title="갤러리" /></a></li>
+					<li class="lnb4_4"><a href="fanzone/research.html"><img src="common/img/lnb4_4.gif" width="53px" height="17px" alt="쿨캣리서치" title="쿨캣리서치" /></a></li>
+					<li class="lnb4_5"><a href="fanzone/supporters.html"><img src="common/img/lnb4_5.gif" width="44px" height="17px" alt="서포터즈" title="서포터즈" /></a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- //GNB -->
 
-      <!-- content -->
-      <div id="content" class="main_content">
-        <!-- ���κ���� -->
-        <div>
-          <img
-            src="common/img/main.jpg"
-            width="996px"
-            height="476px"
-            alt="UPGRADE�� ������. �Ұ� �ϳ��Ǿ� �¸��� �׳�����!"
-            title="UPGRADE�� ������. �Ұ� �ϳ��Ǿ� �¸��� �׳�����!"
-          />
-        </div>
-        <!-- //���κ���� -->
+		<p class="cheer_regist"><a href="#"><img src="common/img/cheer_regist.gif" width="164px" height="55px" alt="한줄응원쓰기 - 응원메세지를 남겨주세요" title="한줄응원쓰기 - 응원메세지를 남겨주세요" /></a></p>
+	</div>
+	<div class="header_bar"><p></p></div>
+	<!-- //헤더박스 -->
+</div>
+<!-- //header -->
 
-        <!-- �������� -->
-        <div class="cheer_message">
-          <h2>
-            <img
-              src="common/img/title_cheer_message.png"
-              width="101px"
-              height="42px"
-              alt="��������"
-              title="��������"
-              class="png24"
-            />
-          </h2>
-          <ul id="marquee5" class="marquee">
-            <li>
-              <span><strong>[ȫ�浿] </strong>������ ��Ĺ�� ��� ���� �λ���� ���ҽ��ϴ�. ����ؼ� �����ϴ� ��Ĺ�� ����մϴ٢�</span>
-              <span><strong>[������] </strong>�̹��� ������ ��ġ���� �ƾ��µ� �ʹ� �ݰ������ϴ�~!!</span>
-              <span><strong>[������] </strong>������ ��Ĺ�� ��� ���� �λ���� ���ҽ��ϴ�</span>
-              <span><strong>[���۸�] </strong>�̹��� ������ ��ġ���� �ƾ��µ� �ʹ� �ݰ������ϴ�~!!</span>
-              <span
-                ><strong>[��ͱ�] </strong>����ؼ� �����ϴ� ��Ĺ�� ����մϴ٢� �̹��� ������ ��ġ���� �ƾ��µ� �ʹ�
-                �ݰ������ϴ�~!!</span
-              >
-              <span><strong>[ȫ�浿] </strong>������ ��Ĺ�� ��� ���� �λ���� ���ҽ��ϴ�. ����ؼ� �����ϴ� ��Ĺ�� ����մϴ٢�</span>
-              <span><strong>[������] </strong>�̹��� ������ ��ġ���� �ƾ��µ� �ʹ� �ݰ������ϴ�~!!</span>
-              <span><strong>[������] </strong>������ ��Ĺ�� ��� ���� �λ���� ���ҽ��ϴ�</span>
-              <span><strong>[���۸�] </strong>�̹��� ������ ��ġ���� �ƾ��µ� �ʹ� �ݰ������ϴ�~!!</span>
-              <span
-                ><strong>[��ͱ�] </strong>����ؼ� �����ϴ� ��Ĺ�� ����մϴ٢� �̹��� ������ ��ġ���� �ƾ��µ� �ʹ�
-                �ݰ������ϴ�~!!</span
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- //�������� -->
+<!-- container -->
+<div id="container" class="main_container" onmouseover="header_off('01')">
+	<!-- 메인에 쓰이는 좌측, 우측 BG -->
+	<div class="main_bg_left"></div>
+	<div class="main_bg_right"></div>
+	<!-- //메인에 쓰이는 좌측, 우측 BG -->
 
-        <!-- ���������� ��� -->
-        <div class="main_list2">
-          <!-- ��Ĺ���� -->
-          <div class="main_news2">
-            <h2><img src="common/img/title_news.gif" width="52px" height="14px" alt="��Ĺ ����" title="��Ĺ ����" /></h2>
-            <p>
-              <a href="#"
-                ><img
-                  src="common/img/main_news.gif"
-                  width="121px"
-                  height="42px"
-                  alt="���� ��Ĺ���� ��� �ϵ��� �Ͼ�� ������? �ֽ� �ҽ��� Ȯ�� �ϼ���!"
-                  title="���� ��Ĺ���� ��� �ϵ��� �Ͼ�� ������? �ֽ� �ҽ��� Ȯ�� �ϼ���!"
-              /></a>
-            </p>
-            <a href="#" class="more"
-              ><img src="common/img/btn_more.gif" width="34px" height="11px" alt="������" title="������"
-            /></a>
-          </div>
-          <!-- //��Ĺ���� -->
+	<!-- content -->
+	<div id="content" class="main_content">
 
-          <!-- ��Ĺ�÷��̾� -->
-          <div class="main_player2">
-            <h2>
-              <img src="common/img/title_player.gif" width="64px" height="15px" alt="��Ĺ ������" title="��Ĺ ������" />
-            </h2>
-            <p>
-              <a href="#"
-                ><img
-                  src="common/img/main_player2.gif"
-                  width="120px"
-                  height="42px"
-                  alt="���׷��̵�� ������! ��Ĺ�� �¸��� �̲�� ��Ĺ �÷��̾ ����������."
-                  title="���׷��̵�� ������! ��Ĺ�� �¸��� �̲�� ��Ĺ �÷��̾ ����������."
-              /></a>
-            </p>
-            <a href="#" class="more"
-              ><img src="common/img/btn_more.gif" width="34px" height="11px" alt="������" title="������"
-            /></a>
-          </div>
-          <!-- //��Ĺ�÷��̾� -->
+		<!-- 메인비쥬얼 -->
+		<div><img src="common/img/main.jpg" width="996px" height="476px" alt="UPGRADE는 끝났다. 팬과 하나되어 승리의 그날까지!" title="UPGRADE는 끝났다. 팬과 하나되어 승리의 그날까지!" /></div>
+		<!-- //메인비쥬얼 -->
 
-          <!-- ��Ĺ���� -->
-          <div class="main_think2">
-            <h2>
-              <img src="common/img/title_think.gif" width="63px" height="15px" alt="��Ĺ ����ġ" title="��Ĺ ����ġ" />
-            </h2>
-            <p>
-              <a href="#"
-                ><img
-                  src="common/img/main_think2.gif"
-                  width="143px"
-                  height="42px"
-                  alt="Yes ? or No ? ��Ĺ �󱸴ܿ� ���� ����� ������ �ǰ��� ���� �� �ּ���!"
-                  title="Yes ? or No ? ��Ĺ �󱸴ܿ� ���� ����� ������ �ǰ��� ���� �� �ּ���!"
-              /></a>
-            </p>
-            <a href="#" class="more"
-              ><img src="common/img/btn_more.gif" width="34px" height="11px" alt="������" title="������"
-            /></a>
-          </div>
-          <!-- //��Ĺ���� -->
+		<!-- 한줄응원 -->
+		<div class="cheer_message">
+			<h2><img src="common/img/title_cheer_message.png" width="101px" height="42px" alt="한줄응원" title="한줄응원" class="png24" /></h2>
+			<ul id="marquee5" class="marquee">
+				<li>
+					<span><strong>[홍길동] </strong>지난주 쿨캣의 경기 아주 인상깊게 보았습니다. 계속해서 발전하는 쿨캣을 사랑합니다♡</span>
+					<span><strong>[갑순이] </strong>이번에 조동기 코치님을 뵈었는데 너무 반가웠습니다~!!</span>
+					<span><strong>[갑돌이] </strong>지난주 쿨캣의 경기 아주 인상깊게 보았습니다</span>
+					<span><strong>[슈퍼맨] </strong>이번에 조동기 코치님을 뵈었는데 너무 반가웠습니다~!!</span>
+					<span><strong>[김맹구] </strong>계속해서 발전하는 쿨캣을 사랑합니다♡ 이번에 조동기 코치님을 뵈었는데 너무 반가웠습니다~!!</span>
+					<span><strong>[홍길동] </strong>지난주 쿨캣의 경기 아주 인상깊게 보았습니다. 계속해서 발전하는 쿨캣을 사랑합니다♡</span>
+					<span><strong>[갑순이] </strong>이번에 조동기 코치님을 뵈었는데 너무 반가웠습니다~!!</span>
+					<span><strong>[갑돌이] </strong>지난주 쿨캣의 경기 아주 인상깊게 보았습니다</span>
+					<span><strong>[슈퍼맨] </strong>이번에 조동기 코치님을 뵈었는데 너무 반가웠습니다~!!</span>
+					<span><strong>[김맹구] </strong>계속해서 발전하는 쿨캣을 사랑합니다♡ 이번에 조동기 코치님을 뵈었는데 너무 반가웠습니다~!!</span>
+				</li>
+			</ul>
+		</div>
+		<!-- //한줄응원 -->
 
-          <!-- �����ռ��� -->
-          <div class="main_rank2">
-            <h2>
-              <img src="common/img/title_rank.gif" width="75px" height="15px" alt="��Ĺ �������" title="��Ĺ �������" />
-            </h2>
-            <p>
-              <a href="#"
-                ><img
-                  src="common/img/main_rank.gif"
-                  width="143px"
-                  height="42px"
-                  alt="��Ĺ �󱸴��� ��� ������ ����� �ڼ��� �˷��帳�ϴ�. ���� Ȯ���ϼ���!"
-                  title="��Ĺ �󱸴��� ��� ������ ����� �ڼ��� �˷��帳�ϴ�. ���� Ȯ���ϼ���!"
-              /></a>
-            </p>
-            <a href="#" class="more"
-              ><img src="common/img/btn_more.gif" width="34px" height="11px" alt="������" title="������"
-            /></a>
-          </div>
-          <!-- //�����ռ��� -->
-        </div>
-        <!-- //���������� ��� -->
-      </div>
-      <!-- //content -->
-    </div>
-    <!-- //container -->
+		<!-- 메인컨텐츠 목록 -->
+		<div class="main_list2">
+			<!-- 쿨캣뉴스 -->
+			<div class="main_news2">
+				<h2><img src="common/img/title_news.gif" width="52px" height="14px" alt="쿨캣 뉴스" title="쿨캣 뉴스" /></h2>
+				<p><a href="#"><img src="common/img/main_news.gif" width="121px" height="42px" alt="요즘 쿨캣에는 어떠한 일들이 일어나고 있을까? 최신 소식을 확인 하세요!" title="요즘 쿨캣에는 어떠한 일들이 일어나고 있을까? 최신 소식을 확인 하세요!" /></a></p>
+				<a href="#" class="more"><img src="common/img/btn_more.gif" width="34px" height="11px" alt="더보기" title="더보기" /></a>
+			</div>
+			<!-- //쿨캣뉴스 -->
 
-    <!-- footer -->
-    <div id="footer">
-      <!-- footer_inner -->
-      <div class="footer_inner">
-        <!-- ��å��� -->
-        <ul class="footer_menu">
-          <li>
-            <a href="#"
-              ><img
-                src="common/img/footer_menu1.gif"
-                width="99px"
-                height="13px"
-                alt="����,����,����������"
-                title="����,����,����������"
-            /></a>
-          </li>
-          <li>
-            <a href="#"><img src="common/img/footer_menu2.gif" width="39px" height="13px" alt="�̿���" title="�̿���" /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="common/img/footer_menu3.gif"
-                width="75px"
-                height="13px"
-                alt="����������ȣ��å"
-                title="����������ȣ��å"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="common/img/footer_menu4.gif"
-                width="87px"
-                height="13px"
-                alt="å���Ѱ�� ��������"
-                title="å���Ѱ�� ��������"
-            /></a>
-          </li>
-          <li class="no_bg">
-            <a href="#"
-              ><img
-                src="common/img/footer_menu5.gif"
-                width="103px"
-                height="13px"
-                alt="�̸����ּҹ��ܼ����ź�"
-                title="�̸����ּҹ��ܼ����ź�"
-            /></a>
-          </li>
-        </ul>
-        <!-- //��å��� -->
+			<!-- 쿨캣플레이어 -->
+			<div class="main_player2">
+				<h2><img src="common/img/title_player.gif" width="64px" height="15px" alt="쿨캣 선수단" title="쿨캣 선수단" /></h2>
+				<p><a href="#"><img src="common/img/main_player2.gif" width="120px" height="42px" alt="업그레이드는 끝났다! 쿨캣을 승리로 이끌어갈 쿨캣 플레이어를 만나보세요." title="업그레이드는 끝났다! 쿨캣을 승리로 이끌어갈 쿨캣 플레이어를 만나보세요." /></a></p>
+				<a href="#" class="more"><img src="common/img/btn_more.gif" width="34px" height="11px" alt="더보기" title="더보기" /></a>
+			</div>
+			<!-- //쿨캣플레이어 -->
 
-        <!-- ���޾�ü -->
-        <div class="affiliate_list">
-          <p class="affiliate_prev">
-            <a onfocus="this.blur()" href="javascript:stepcarousel.stepBy('mygallery', -1)">����</a>
-          </p>
-          <p class="affiliate_next">
-            <a onfocus="this.blur()" href="javascript:stepcarousel.stepBy('mygallery', 1)">����</a>
-          </p>
-          <div id="mygallery" class="stepcarousel">
-            <div class="belt">
-              <div class="panel">
-                <a href="http://www.bucheon.go.kr/km/km_mainhtm.jsp" target="_blank"
-                  ><img src="common/img/affiliate1.gif" width="71px" height="30px" alt="��õ��" title="��õ��"
-                /></a>
-                <a href="http://www.istarbucks.co.kr" target="_blank"
-                  ><img
-                    src="common/img/affiliate2.gif"
-                    width="46px"
-                    height="30px"
-                    alt="��Ÿ����Ŀ���ڸ���"
-                    title="��Ÿ����Ŀ���ڸ���"
-                /></a>
-                <a href="http://www.echosunhotel.com" target="_blank"
-                  ><img src="common/img/affiliate3.gif" width="121px" height="30px" alt="����ȣ��" title="����ȣ��"
-                /></a>
-                <a href="http://www.chosunhotelbakery.com" target="_blank"
-                  ><img
-                    src="common/img/affiliate4.gif"
-                    width="117px"
-                    height="30px"
-                    alt="����ȣ�ں���Ŀ��"
-                    title="����ȣ�ں���Ŀ��"
-                /></a>
-                <a href="http://www.bono-bono.com" target="_blank"
-                  ><img src="common/img/affiliate5.gif" width="45px" height="30px" alt="���뺸��" title="���뺸��"
-                /></a>
-              </div>
-              <div class="panel">
-                <a href="http://www.sikorea.co.kr" target="_blank"
-                  ><img
-                    src="common/img/affiliate6.gif"
-                    width="120px"
-                    height="30px"
-                    alt="�ż������ͳ׼ų�"
-                    title="�ż������ͳ׼ų�"
-                /></a>
-                <a href="http://www.ticketlink.co.kr" target="_blank"
-                  ><img src="common/img/affiliate7.gif" width="94px" height="30px" alt="Ƽ�ϸ�ũ" title="Ƽ�ϸ�ũ"
-                /></a>
-                <a href="http://www.oakvalley.co.kr" target="_blank"
-                  ><img src="common/img/affiliate8.gif" width="55px" height="30px" alt="��ũ����" title="��ũ����"
-                /></a>
-                <a href="http://club.cyworld.com/theholeholic" target="_blank"
-                  ><img src="common/img/affiliate9.gif" width="78px" height="30px" alt="��Ȧ" title="��Ȧ"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- //���޾�ü -->
+			<!-- 쿨캣생각 -->
+			<div class="main_think2">
+				<h2><img src="common/img/title_think.gif" width="63px" height="15px" alt="쿨캣 리서치" title="쿨캣 리서치" /></h2>
+				<p><a href="#"><img src="common/img/main_think2.gif" width="143px" height="42px" alt="Yes ? or No ? 쿨캣 농구단에 대한 당신의 생각과 의견을 선택 해 주세요!" title="Yes ? or No ? 쿨캣 농구단에 대한 당신의 생각과 의견을 선택 해 주세요!" /></a></p>
+				<a href="#" class="more"><img src="common/img/btn_more.gif" width="34px" height="11px" alt="더보기" title="더보기" /></a>
+			</div>
+			<!-- //쿨캣생각 -->
 
-        <address class="address">
-          <img
-            src="common/img/address.gif"
-            width="227px"
-            height="12px"
-            alt="COPYRIGHT &copy; SHINSEGAE Co. Ltd All Right Reserved."
-            title="COPYRIGHT &copy; SHINSEGAE Co. Ltd All Right Reserved."
-          />
-        </address>
-        <p class="clear"></p>
+			<!-- 팀종합순위 -->
+			<div class="main_rank2">
+				<h2><img src="common/img/title_rank.gif" width="75px" height="15px" alt="쿨캣 경기정보" title="쿨캣 경기정보" /></h2>
+				<p><a href="#"><img src="common/img/main_rank.gif" width="143px" height="42px" alt="쿨캣 농구단의 경기 일정과 기록을 자세히 알려드립니다. 지금 확인하세요!" title="쿨캣 농구단의 경기 일정과 기록을 자세히 알려드립니다. 지금 확인하세요!" /></a></p>
+				<a href="#" class="more"><img src="common/img/btn_more.gif" width="34px" height="11px" alt="더보기" title="더보기" /></a>
+			</div>
+			<!-- //팀종합순위 -->
+		</div>
+		<!-- //메인컨텐츠 목록 -->
+	</div>
+	<!-- //content -->
+</div>
+<!-- //container -->
 
-        <!-- �й̸�����Ʈ -->
-        <div class="family_site">
-          <p class="site_box">
-            <a href="#site_open" onclick="family_site('01')"
-              ><img
-                src="common/img/btn_site_open.gif"
-                width="100px"
-                height="18px"
-                alt="�й̸�����Ʈ ����"
-                title="�й̸�����Ʈ ����"
-            /></a>
-          </p>
-          <div id="site_open" class="site_list">
-            <ul>
-              <li><a href="#" target="_blank" class="family_site01">�ż����ȭ��</a></li>
-              <li><a href="#" target="_blank" class="family_site02">�ż���׷�</a></li>
-              <li><a href="#" target="_blank" class="family_site03">���ֽż���</a></li>
-              <li><a href="#" target="_blank" class="family_site04">�̸�Ʈ</a></li>
-              <li><a href="#" target="_blank" class="family_site05">�ż���Ǫ��</a></li>
-              <li><a href="#" target="_blank" class="family_site06">�ż������ͳ��ų�</a></li>
-              <li><a href="#" target="_blank" class="family_site07">�ż���Ǽ�</a></li>
-              <li><a href="#" target="_blank" class="family_site08">�ż�����̾ؾ�</a></li>
-              <li><a href="#" target="_blank" class="family_site09">��Ÿ����Ŀ���ڸ���</a></li>
-              <li><a href="#" target="_blank" class="family_site10">����ȣ��</a></li>
-              <li><a href="#" target="_blank" class="family_site11">����ȣ�ں���Ŀ��</a></li>
-              <li><a href="#" target="_blank" class="family_site12">�ż���ÿ��</a></li>
-              <li class="site_close">
-                <a href="#footer" onclick="family_site('02')"
-                  ><img
-                    src="common/img/btn_site_close.gif"
-                    width="98px"
-                    height="16px"
-                    alt="�й̸�����Ʈ �ݱ�"
-                    title="�й̸�����Ʈ �ݱ�"
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- //�й̸�����Ʈ -->
-      </div>
-      <!-- //footer_inner -->
-    </div>
-    <!-- //footer -->
-  </body>
+<!-- footer -->
+<div id="footer">
+	<!-- footer_inner -->
+	<div class="footer_inner">
+		<!-- 정책등등 -->
+		<ul class="footer_menu">
+			<li><a href="#"><img src="common/img/footer_menu1.gif" width="99px" height="13px" alt="제휴,광고,스폰서문의" title="제휴,광고,스폰서문의" /></a></li>
+			<li><a href="#"><img src="common/img/footer_menu2.gif" width="39px" height="13px" alt="이용약관" title="이용약관" /></a></li>
+			<li><a href="#"><img src="common/img/footer_menu3.gif" width="75px" height="13px" alt="개인정보보호정책" title="개인정보보호정책" /></a></li>
+			<li><a href="#"><img src="common/img/footer_menu4.gif" width="87px" height="13px" alt="책임한계와 법적고지" title="책임한계와 법적고지" /></a></li>
+			<li class="no_bg"><a href="#"><img src="common/img/footer_menu5.gif" width="103px" height="13px" alt="이메일주소무단수집거부" title="이메일주소무단수집거부" /></a></li>
+		</ul>
+		<!-- //정책등등 -->
+
+		<!-- 제휴업체 -->
+		<div class="affiliate_list">
+			<p class="affiliate_prev"><a onfocus="this.blur();" href="javascript:stepcarousel.stepBy('mygallery', -1)">이전</a></p>
+			<p class="affiliate_next"><a onfocus="this.blur();" href="javascript:stepcarousel.stepBy('mygallery', 1)">다음</a></p>
+			<div id="mygallery" class="stepcarousel">
+				<div class="belt">
+					<div class="panel">
+						<a href="http://www.bucheon.go.kr/km/km_mainhtm.jsp" target="_blank"><img src="common/img/affiliate1.gif" width="71px" height="30px" alt="부천시" title="부천시" /></a>
+						<a href="http://www.istarbucks.co.kr" target="_blank"><img src="common/img/affiliate2.gif" width="46px" height="30px" alt="스타벅스커피코리아" title="스타벅스커피코리아" /></a>
+						<a href="http://www.echosunhotel.com" target="_blank"><img src="common/img/affiliate3.gif" width="121px" height="30px" alt="조선호텔" title="조선호텔" /></a>
+						<a href="http://www.chosunhotelbakery.com" target="_blank"><img src="common/img/affiliate4.gif" width="117px" height="30px" alt="조선호텔베이커리" title="조선호텔베이커리" /></a>
+						<a href="http://www.bono-bono.com" target="_blank"><img src="common/img/affiliate5.gif" width="45px" height="30px" alt="보노보노" title="보노보노" /></a>
+					</div>
+					<div class="panel">
+						<a href="http://www.sikorea.co.kr" target="_blank"><img src="common/img/affiliate6.gif" width="120px" height="30px" alt="신세계인터네셔날" title="신세계인터네셔날" /></a>
+						<a href="http://www.ticketlink.co.kr" target="_blank"><img src="common/img/affiliate7.gif" width="94px" height="30px" alt="티켓링크" title="티켓링크" /></a>
+						<a href="http://www.oakvalley.co.kr" target="_blank"><img src="common/img/affiliate8.gif" width="55px" height="30px" alt="오크벨리" title="오크벨리" /></a>
+						<a href="http://club.cyworld.com/theholeholic" target="_blank"><img src="common/img/affiliate9.gif" width="78px" height="30px" alt="더홀" title="더홀" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //제휴업체 -->
+
+		<address class="address"><img src="common/img/address.gif" width="227px" height="12px" alt="COPYRIGHT &copy; SHINSEGAE Co. Ltd All Right Reserved." title="COPYRIGHT &copy; SHINSEGAE Co. Ltd All Right Reserved." /></address>
+		<p class="clear"></p>
+
+		<!-- 패미리사이트 -->
+		<div class="family_site">
+			<p class="site_box"><a href="#site_open" onclick="family_site('01')"><img src="common/img/btn_site_open.gif" width="100px" height="18px" alt="패미리사이트 열기" title="패미리사이트 열기" /></a></p>
+			<div id="site_open" class="site_list">
+				<ul>
+					<li><a href="#" target="_blank" class="family_site01">신세계백화점</a></li>
+					<li><a href="#" target="_blank" class="family_site02">신세계그룹</a></li>
+					<li><a href="#" target="_blank" class="family_site03">광주신세계</a></li>
+					<li><a href="#" target="_blank" class="family_site04">이마트</a></li>
+					<li><a href="#" target="_blank" class="family_site05">신세계푸드</a></li>
+					<li><a href="#" target="_blank" class="family_site06">신세계인터내셔날</a></li>
+					<li><a href="#" target="_blank" class="family_site07">신세계건설</a></li>
+					<li><a href="#" target="_blank" class="family_site08">신세계아이앤씨</a></li>
+					<li><a href="#" target="_blank" class="family_site09">스타벅스커피코리아</a></li>
+					<li><a href="#" target="_blank" class="family_site10">조선호텔</a></li>
+					<li><a href="#" target="_blank" class="family_site11">조선호텔베이커리</a></li>
+					<li><a href="#" target="_blank" class="family_site12">신세계첼시</a></li>
+					<li class="site_close"><a href="#footer" onclick="family_site('02')"><img src="common/img/btn_site_close.gif" width="98px" height="16px" alt="패미리사이트 닫기" title="패미리사이트 닫기" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //패미리사이트 -->
+	</div>
+	<!-- //footer_inner -->
+</div>
+<!-- //footer -->
+</body>
 </html>

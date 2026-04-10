@@ -1,434 +1,253 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-    <title>�ż��� �������� :: �Ұ� �ϳ��Ǿ� �¸��� �׳�����</title>
-    <link href="../common/css/import.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="../common/js/coolcat.js"></script>
-    <script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
-    <script type="text/javascript" src="../common/js/jquery.marquee.js"></script>
-    <script type="text/javascript" src="../common/js/stepcarousel.js"></script>
-    <script type="text/javascript">
-      stepcarousel.setup({
-        galleryid: "mygallery", //id of carousel DIV
-        beltclass: "belt", //class of inner "belt" DIV containing all the panel DIVs
-        panelclass: "panel", //class of panel DIVs each holding content
-        statusvars: ["statusA", "statusB", "statusC"], //register 3 variables that contain current panel (start), current panel (last), and total panels
-        contenttype: ["inline"], //content setting ['inline'] or ['external', 'path_to_external_file']
-      });
-    </script>
-  </head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+<title>신세계 구단정보 :: 팬과 하나되어 승리의 그날까지</title>
+<link href="../common/css/import.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../common/js/coolcat.js"></script>
+<script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.marquee.js"></script>
+<script type="text/javascript" src="../common/js/stepcarousel.js"></script>
+<script type="text/javascript">
+	stepcarousel.setup({
+		galleryid: 'mygallery', //id of carousel DIV
+		beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+		panelclass: 'panel', //class of panel DIVs each holding content
+		statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+		contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
+	})
+</script>
+</head>
 
-  <body>
-    <div class="hidden">
-      <a href="#content" class="hidden">���� �ٷΰ���</a>
-    </div>
+<body>
 
-    <!-- header -->
-    <div id="header">
-      <!-- ����ڽ� -->
-      <div class="header_inner">
-        <h1 class="logo">
-          <a href="../index.html"
-            ><img
-              src="../common/img/logo.gif"
-              width="86px"
-              height="68px"
-              alt="�ż��� ��Ĺ ���ڳ󱸴�"
-              title="�ż��� ��Ĺ ���ڳ󱸴�"
-          /></a>
-        </h1>
+<div class="hidden">
+	<a href="#content" class="hidden">본문 바로가기</a>
+</div>
 
-        <!-- ���޴� -->
-        <ul class="quick_menu">
-          <li>
-            <a href="#"
-              ><img src="../common/img/btn_login.gif" width="47px" height="17px" alt="�α���" title="�α���"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="../common/img/btn_join.gif" width="36px" height="17px" alt="ȸ������" title="ȸ������"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="../common/img/btn_sitemap.gif" width="36px" height="17px" alt="����Ʈ��" title="����Ʈ��"
-            /></a>
-          </li>
-        </ul>
-        <!-- //���޴� -->
+<!-- header -->
+<div id="header">
+	<!-- 헤더박스 -->
+	<div class="header_inner">
+		<h1 class="logo"><a href="../index.html"><img src="../common/img/logo.gif" width="86px" height="68px" alt="신세계 쿨캣 여자농구단" title="신세계 쿨캣 여자농구단" /></a></h1>
 
-        <!-- GNB -->
-        <dl class="gnb">
-          <dt class="hidden">�޴�</dt>
-          <dd>
-            <a href="../coolcatteam/player.html" id="gnb1" onmouseover="gnb_a('01')"
-              ><img src="../common/img/gnb_coolcatteam.gif" width="173px" height="65px" alt="������" title="������"
-            /></a>
-            <ul class="lnb1">
-              <li class="lnb1_1">
-                <a href="../coolcatteam/player.html"
-                  ><img src="../common/img/lnb1_1.gif" width="43px" height="17px" alt="�����Ұ�" title="�����Ұ�"
-                /></a>
-              </li>
-              <li class="lnb1_2">
-                <a href="../coolcatteam/coaching_staff.html"
-                  ><img src="../common/img/lnb1_2.gif" width="43px" height="17px" alt="��Ī����" title="��Ī����"
-                /></a>
-              </li>
-              <li class="lnb1_3">
-                <a href="../coolcatteam/support_staff.html"
-                  ><img src="../common/img/lnb1_3.gif" width="42px" height="17px" alt="��������" title="��������"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-          <dd>
-            <a href="../introduction/greeting.html" id="gnb2" onmouseover="gnb_a('02')"
-              ><img src="../common/img/gnb_introduction.gif" width="173px" height="65px" alt="���ܼҰ�" title="���ܼҰ�"
-            /></a>
-            <ul class="lnb2">
-              <li class="lnb2_1">
-                <a href="../introduction/greeting.html"
-                  ><img src="../common/img/lnb2_1.gif" width="35px" height="17px" alt="�λ縻" title="�λ縻"
-                /></a>
-              </li>
-              <li class="lnb2_2">
-                <a href="../introduction/history.html"
-                  ><img src="../common/img/lnb2_2.gif" width="27px" height="17px" alt="����" title="����"
-                /></a>
-              </li>
-              <li class="lnb2_3">
-                <a href="../introduction/front.html"
-                  ><img src="../common/img/lnb2_3.gif" width="53px" height="17px" alt="����Ʈ�Ұ�" title="����Ʈ�Ұ�"
-                /></a>
-              </li>
-              <li class="lnb2_4">
-                <a href="../introduction/info_stadium.html"
-                  ><img src="../common/img/lnb2_4.gif" width="54px" height="17px" alt="��Ĺ�Ͽ콺" title="��Ĺ�Ͽ콺"
-                /></a>
-              </li>
-              <li class="lnb2_5">
-                <a href="../introduction/emblem.html"
-                  ><img src="../common/img/lnb2_5.gif" width="37px" height="17px" alt="������" title="������"
-                /></a>
-              </li>
-              <li class="lnb2_6">
-                <a href="../introduction/sponsor.html"
-                  ><img src="../common/img/lnb2_6.gif" width="37px" height="17px" alt="������" title="������"
-                /></a>
-              </li>
-              <li class="lnb2_7">
-                <a href="../introduction/honorary_ambassador.html"
-                  ><img src="../common/img/lnb2_7.gif" width="46px" height="17px" alt="ȫ�����" title="ȫ�����"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-          <dd>
-            <a href="../gamedate/schedule_result.html" id="gnb3" onmouseover="gnb_a('03')"
-              ><img src="../common/img/gnb_gamedate.gif" width="161px" height="65px" alt="�������" title="�������"
-            /></a>
-            <ul class="lnb3">
-              <li class="lnb3_1">
-                <a href="../gamedate/schedule_result.html"
-                  ><img src="../common/img/lnb3_1.gif" width="54px" height="17px" alt="�����װ��" title="�����װ��"
-                /></a>
-              </li>
-              <li class="lnb3_2">
-                <a href="../gamedate/team_ranking.html"
-                  ><img src="../common/img/lnb3_2.gif" width="53px" height="17px" alt="�����ռ���" title="�����ռ���"
-                /></a>
-              </li>
-              <li class="lnb3_3">
-                <a href="../gamedate/scriptorium.html"
-                  ><img src="../common/img/lnb3_3.gif" width="33px" height="17px" alt="��Ͻ�" title="��Ͻ�"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-          <dd>
-            <a href="../fanzone/news.html" id="gnb4" onmouseover="gnb_a('04')"
-              ><img src="../common/img/gnb_fanzone.gif" width="147px" height="65px" alt="����" title="����"
-            /></a>
-            <ul class="lnb4">
-              <li class="lnb4_1">
-                <a href="../fanzone/news.html"
-                  ><img src="../common/img/lnb4_1.gif" width="44px" height="17px" alt="��Ĺ����" title="��Ĺ����"
-                /></a>
-              </li>
-              <li class="lnb4_2">
-                <a href="../fanzone/oneline_cheer.html"
-                  ><img src="../common/img/lnb4_2.gif" width="44px" height="17px" alt="��������" title="��������"
-                /></a>
-              </li>
-              <li class="lnb4_3">
-                <a href="../fanzone/gallery.html"
-                  ><img src="../common/img/lnb4_3.gif" width="33px" height="17px" alt="������" title="������"
-                /></a>
-              </li>
-              <li class="lnb4_4">
-                <a href="../fanzone/research.html"
-                  ><img src="../common/img/lnb4_4.gif" width="53px" height="17px" alt="��Ĺ����ġ" title="��Ĺ����ġ"
-                /></a>
-              </li>
-              <li class="lnb4_5">
-                <a href="../fanzone/supporters.html"
-                  ><img src="../common/img/lnb4_5.gif" width="44px" height="17px" alt="��������" title="��������"
-                /></a>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-        <!-- //GNB -->
+		<!-- 퀵메뉴 -->
+		<ul class="quick_menu">
+			<li><a href="#"><img src="../common/img/btn_login.gif" width="47px" height="17px" alt="로그인" title="로그인" /></a></li>
+			<li><a href="#"><img src="../common/img/btn_join.gif" width="36px" height="17px" alt="회원가입" title="회원가입" /></a></li>
+			<li><a href="#"><img src="../common/img/btn_sitemap.gif" width="36px" height="17px" alt="사이트맵" title="사이트맵" /></a></li>
+		</ul>
+		<!-- //퀵메뉴 -->
 
-        <p class="cheer_regist">
-          <a href="../fanzone/oneline_cheer.html"
-            ><img
-              src="../common/img/cheer_regist.gif"
-              width="164px"
-              height="55px"
-              alt="������������ - �����޼����� �����ּ���"
-              title="������������ - �����޼����� �����ּ���"
-          /></a>
-        </p>
-      </div>
-      <div class="header_bar"></div>
-      <!-- //����ڽ� -->
-    </div>
-    <!-- //header -->
+		<!-- GNB -->
+		<dl class="gnb">
+			<dt class="hidden">메뉴</dt>
+			<dd><a href="../coolcatteam/player.html" id="gnb1" onmouseover="gnb_a('01')"><img src="../common/img/gnb_coolcatteam.gif" width="173px" height="65px" alt="선수단" title="선수단" /></a>
+				<ul class="lnb1">
+					<li class="lnb1_1"><a href="../coolcatteam/player.html"><img src="../common/img/lnb1_1.gif" width="43px" height="17px" alt="선수소개" title="선수소개" /></a></li>
+					<li class="lnb1_2"><a href="../coolcatteam/coaching_staff.html"><img src="../common/img/lnb1_2.gif" width="43px" height="17px" alt="코칭스탭" title="코칭스탭" /></a></li>
+					<li class="lnb1_3"><a href="../coolcatteam/support_staff.html"><img src="../common/img/lnb1_3.gif" width="42px" height="17px" alt="지원스탭" title="지원스탭" /></a></li>
+				</ul>
+			</dd>
+			<dd><a href="../introduction/greeting.html" id="gnb2" onmouseover="gnb_a('02')"><img src="../common/img/gnb_introduction.gif" width="173px" height="65px" alt="구단소개" title="구단소개" /></a>
+				<ul class="lnb2">
+					<li class="lnb2_1"><a href="../introduction/greeting.html"><img src="../common/img/lnb2_1.gif" width="35px" height="17px" alt="인사말" title="인사말" /></a></li>
+					<li class="lnb2_2"><a href="../introduction/history.html"><img src="../common/img/lnb2_2.gif" width="27px" height="17px" alt="연혁" title="연혁" /></a></li>
+					<li class="lnb2_3"><a href="../introduction/front.html"><img src="../common/img/lnb2_3.gif" width="53px" height="17px" alt="프런트소개" title="프런트소개" /></a></li>
+					<li class="lnb2_4"><a href="../introduction/info_stadium.html"><img src="../common/img/lnb2_4.gif" width="54px" height="17px" alt="쿨캣하우스" title="쿨캣하우스" /></a></li>
+					<li class="lnb2_5"><a href="../introduction/emblem.html"><img src="../common/img/lnb2_5.gif" width="37px" height="17px" alt="엠블럼" title="엠블럼" /></a></li>
+					<li class="lnb2_6"><a href="../introduction/sponsor.html"><img src="../common/img/lnb2_6.gif" width="37px" height="17px" alt="스폰서" title="스폰서" /></a></li>
+					<li class="lnb2_7"><a href="../introduction/honorary_ambassador.html"><img src="../common/img/lnb2_7.gif" width="46px" height="17px" alt="홍보대사" title="홍보대사" /></a></li>
+				</ul>
+			</dd>
+			<dd><a href="../gamedate/schedule_result.html" id="gnb3" onmouseover="gnb_a('03')"><img src="../common/img/gnb_gamedate.gif" width="161px" height="65px" alt="경기정보" title="경기정보" /></a>
+				<ul class="lnb3">
+					<li class="lnb3_1"><a href="../gamedate/schedule_result.html"><img src="../common/img/lnb3_1.gif" width="54px" height="17px" alt="일정및결과" title="일정및결과" /></a></li>
+					<li class="lnb3_2"><a href="../gamedate/team_ranking.html"><img src="../common/img/lnb3_2.gif" width="53px" height="17px" alt="팀종합순위" title="팀종합순위" /></a></li>
+					<li class="lnb3_3"><a href="../gamedate/scriptorium.html"><img src="../common/img/lnb3_3.gif" width="33px" height="17px" alt="기록실" title="기록실" /></a></li>
+				</ul>
+			</dd>
+			<dd><a href="../fanzone/news.html" id="gnb4" onmouseover="gnb_a('04')"><img src="../common/img/gnb_fanzone.gif" width="147px" height="65px" alt="팬존" title="팬존" /></a>
+				<ul class="lnb4">
+					<li class="lnb4_1"><a href="../fanzone/news.html"><img src="../common/img/lnb4_1.gif" width="44px" height="17px" alt="쿨캣뉴스" title="쿨캣뉴스" /></a></li>
+					<li class="lnb4_2"><a href="../fanzone/oneline_cheer.html"><img src="../common/img/lnb4_2.gif" width="44px" height="17px" alt="한줄응원" title="한줄응원" /></a></li>
+					<li class="lnb4_3"><a href="../fanzone/gallery.html"><img src="../common/img/lnb4_3.gif" width="33px" height="17px" alt="갤러리" title="갤러리" /></a></li>
+					<li class="lnb4_4"><a href="../fanzone/research.html"><img src="../common/img/lnb4_4.gif" width="53px" height="17px" alt="쿨캣리서치" title="쿨캣리서치" /></a></li>
+					<li class="lnb4_5"><a href="../fanzone/supporters.html"><img src="../common/img/lnb4_5.gif" width="44px" height="17px" alt="서포터즈" title="서포터즈" /></a></li>
+				</ul>
+			</dd>
+		</dl>
+		<!-- //GNB -->
 
-    <!-- container -->
-    <div id="container" class="sub_container" onmouseover="header_off('02')">
-      <!-- SNB -->
-      <div class="snb">
-        <dl class="snb1">
-          <dt><img src="../common/img/title_snb1.gif" width="76px" height="27px" alt="������" title="������" /></dt>
-          <!-- [D] �������������� a�±׸� span�±׷� ���� -->
-          <dd class="snb1_1"><a href="../coolcatteam/player.html">�����Ұ�</a></dd>
-          <dd class="snb1_2">
-            <span
-              ><img src="../common/img/snb1_2.gif" width="145px" height="27px" alt="��Ī����" title="��Ī����"
-            /></span>
-          </dd>
-          <dd class="snb1_3"><a href="../coolcatteam/support_staff.html">��������</a></dd>
-        </dl>
-      </div>
-      <!-- //SNB -->
+		<p class="cheer_regist"><a href="../fanzone/oneline_cheer.html"><img src="../common/img/cheer_regist.gif" width="164px" height="55px" alt="한줄응원쓰기 - 응원메세지를 남겨주세요" title="한줄응원쓰기 - 응원메세지를 남겨주세요" /></a></p>
+	</div>
+	<div class="header_bar"></div>
+	<!-- //헤더박스 -->
+</div>
+<!-- //header -->
 
-      <!-- content -->
-      <div id="content" class="sub_content">
-        <ul class="navi">
-          <li><img src="../common/img/ico_home.gif" width="12px" height="11px" alt="HOME" title="HOME" /></li>
-          <li>������</li>
-          <li class="on">��Ī����</li>
-        </ul>
+<!-- container -->
+<div id="container" class="sub_container" onmouseover="header_off('02')">
 
-        <p class="visual_img">
-          <img
-            src="../common/img/visual_coolcatteam.jpg"
-            width="766px"
-            height="127px"
-            alt="���׷��̵�� ������! �ż��� ��Ĺ���ڳ󱸴��� �������� �Ұ��մϴ�"
-            title="���׷��̵�� ������! �ż��� ��Ĺ���ڳ󱸴��� �������� �Ұ��մϴ�"
-          />
-        </p>
+	<!-- SNB -->
+	<div class="snb">
+		<dl class="snb1">
+			<dt><img src="../common/img/title_snb1.gif" width="76px" height="27px" alt="선수단" title="선수단" /></dt>
+			<!-- [D] 현재페이지에서 a태그를 span태그로 변경 -->
+			<dd class="snb1_1"><a href="../coolcatteam/player.html">선수소개</a></dd>
+			<dd class="snb1_2"><span><img src="../common/img/snb1_2.gif" width="145px" height="27px" alt="코칭스탭" title="코칭스탭" /></span></dd>
+			<dd class="snb1_3"><a href="../coolcatteam/support_staff.html">지원스탭</a></dd>
+		</dl>
+	</div>
+	<!-- //SNB -->
 
-        <div class="sub_title">
-          <h1>
-            <img src="../common/img/title_coaching_staff.gif" width="83" height="25" alt="��Ī����" title="��Ī����" />
-          </h1>
-          <p>
-            <img
-              src="../common/img/message_coaching_staff.gif"
-              width="225"
-              height="13"
-              alt="�ż��� ��Ĺ�� �ڶ������� ��Ī������ �Ұ��մϴ�."
-              title="�ż��� ��Ĺ�� �ڶ������� ��Ī������ �Ұ��մϴ�."
-            />
-          </p>
-        </div>
+	<!-- content -->
+	<div id="content" class="sub_content">
+		<ul class="navi">
+			<li><img src="../common/img/ico_home.gif" width="12px" height="11px" alt="HOME" title="HOME" /></li>
+			<li>선수단</li>
+			<li class="on">코칭스탭</li>
+		</ul>
 
-        <!-- �Ұ��ڽ� -->
-        <div class="content_box1">
-          <p class="left_message_01">
-            <img
-              src="../common/img/coaching_staff_left.gif"
-              width="270"
-              height="370"
-              alt="�������� ������ ������ �ϴ� �ż��� ��Ĺ�� ��Ī����"
-              title="�������� ������ ������ �ϴ� �ż��� ��Ĺ�� ��Ī����"
-            />
-          </p>
-          <!-- ��Ī ���� ����Ʈ -->
-          <div class="player_list">
-            <!-- ��Ī ���� �ڽ� -->
-            <div>
-              <p class="coaching_staff_photo">
-                <img
-                  src="../common/img/coaching_staff_photo_01.jpg"
-                  width="209"
-                  height="130"
-                  alt="����-���α�"
-                  title="����-���α�"
-                />
-              </p>
-              <dl class="coaching_staff_details_01">
-                <dt class="hidden">�������</dt>
-                <dd class="hidden">1969�� 11�� 28��</dd>
-                <dt class="hidden">����з�</dt>
-                <dd class="hidden">ȸ�������б� , �������б�</dd>
-                <dt class="hidden">�ֿ���</dt>
-                <dd class="hidden">
-                  <ul>
-                    <li>1993 ~ 1996 ������� �󱸴� ����</li>
-                    <li>1997 ~ 1998 ���� ������� �󱸴� ����</li>
-                    <li>1997 ~ 1998 (�ְ��� ����� 3�� ����)</li>
-                    <li>1999 ~ 2000 ��� ������������ �󱸴� ����</li>
-                    <li>2000 ~ 2002 �ڸ����ٴ� �󱸴� ����</li>
-                    <li>2003 ~ 2004 ���� ��� �󱸴� ����</li>
-                    <li>2005 ~ 2004 �Ｚ ����� �󱸴� ����</li>
-                    <li>2005 ~ 2004 MBC ESPN �� �ؼ�����</li>
-                    <li>2005 ~ 2004 6�� �ż��� ��Ĺ ��ġ</li>
-                    <li>2007 ~ �ż��� ��Ĺ���ڳ󱸴� ����</li>
-                  </ul>
-                </dd>
-              </dl>
-              <p class="clear"></p>
-            </div>
-            <!-- //��Ī ���� �ڽ� -->
-            <!-- ��Ī ���� �ڽ� -->
-            <div>
-              <p class="coaching_staff_photo">
-                <img
-                  src="../common/img/coaching_staff_photo_02.jpg"
-                  width="209"
-                  height="130"
-                  alt="��ġ-������"
-                  title="��ġ-������"
-                />
-              </p>
-              <dl class="coaching_staff_details_02">
-                <dt class="hidden">�������</dt>
-                <dd class="hidden">1971�� 05�� 21��</dd>
-                <dt class="hidden">����з�</dt>
-                <dd class="hidden">���� ������� �μӰ����б� , �߾Ӵ��б�</dd>
-                <dt class="hidden">�ֿ���</dt>
-                <dd class="hidden">
-                  <ul>
-                    <li>1994 ~ 1995 ��� ������������ �󱸴� ����</li>
-                    <li>1997 ~ 1998 ������ǥ</li>
-                    <li>1996 ~ 1997 ��(���� ü���δ�)</li>
-                    <li>1998 ~ 1999 ��� ������������ �󱸴� ����</li>
-                    <li>2001 ~ 2002 ���� ��� �󱸴� ����</li>
-                    <li>2004 ~ 2005 Hofstra University �󱸴� ��ġ</li>
-                    <li>2006 ~ �ż��� ��Ĺ���ڳ󱸴� ��ġ</li>
-                  </ul>
-                </dd>
-              </dl>
-              <p class="clear"></p>
-            </div>
-            <!-- //��Ī ���� �ڽ� -->
-            <!-- ��Ī ���� �ڽ� -->
-            <div>
-              <p class="coaching_staff_photo">
-                <img
-                  src="../common/img/coaching_staff_photo_03.jpg"
-                  width="209"
-                  height="130"
-                  alt="ü�� Ʈ���̳�-����ȣ"
-                  title="ü�� Ʈ���̳�-����ȣ"
-                />
-              </p>
-              <dl class="coaching_staff_details_03">
-                <dt class="hidden">�������</dt>
-                <dd class="hidden">1969�� 11�� 04��</dd>
-                <dt class="hidden">����з�</dt>
-                <dd class="hidden">���� ü�������б� , �ѱ� ü�����б�</dd>
-                <dt class="hidden">�ֿ���</dt>
-                <dd class="hidden">
-                  <ul>
-                    <li>2000 ~ 2001 ���� ����ũ ü�� Ʈ���̳�</li>
-                    <li>2001 ~ 2003 ���� �ڸ����ٴ� ü�� Ʈ���̳�</li>
-                    <li>2003 ~ 2005 �λ� KTF �󱸴� ü�� Ʈ���̳�</li>
-                    <li>2006 ~ �ż��� ��Ĺ���ڳ󱸴�</li>
-                    <li>2006 ~ ü�� Ʈ���̳�</li>
-                  </ul>
-                </dd>
-              </dl>
-              <p class="clear"></p>
-            </div>
-            <!-- //��Ī ���� �ڽ� -->
-            <!-- ��Ī ���� �ڽ� -->
-            <div>
-              <p class="coaching_staff_photo">
-                <img
-                  src="../common/img/coaching_staff_photo_04.jpg"
-                  width="209"
-                  height="130"
-                  alt="�ǹ� Ʈ���̳�-������"
-                  title="�ǹ� Ʈ���̳�-������"
-                />
-              </p>
-              <dl class="coaching_staff_details_04">
-                <dt class="hidden">�������</dt>
-                <dd class="hidden">1986�� 03�� 12��</dd>
-                <dt class="hidden">����з�</dt>
-                <dd class="hidden">���ſ��ڴ��б�</dd>
-                <dt class="hidden">�ֿ���</dt>
-                <dd class="hidden">
-                  <ul>
-                    <li>������Ƽ�� ��������</li>
-                    <li>�ż��� ��Ĺ ���ڳ󱸴� �ǹ� Ʈ���̳�</li>
-                  </ul>
-                </dd>
-              </dl>
-              <p class="clear"></p>
-            </div>
-            <!-- //��Ī ���� �ڽ� -->
-            <!-- ��Ī ���� �ڽ� -->
-            <div>
-              <p class="coaching_staff_photo">
-                <img
-                  src="../common/img/coaching_staff_photo_05.jpg"
-                  width="209"
-                  height="130"
-                  alt="�Ŵ���-������"
-                  title="�Ŵ���-������"
-                />
-              </p>
-              <dl class="coaching_staff_details_05">
-                <dt class="hidden">�������</dt>
-                <dd class="hidden">1987�� 06�� 11��</dd>
-                <dt class="hidden">����з�</dt>
-                <dd class="hidden">��õ�� �����б�</dd>
-                <dt class="hidden">�ֿ���</dt>
-                <dd class="hidden">
-                  <ul>
-                    <li>�ż��� ��Ĺ ���ڳ󱸴� ����</li>
-                    <li>�ż��� ��Ĺ ���ڳ󱸴� �Ŵ���</li>
-                  </ul>
-                </dd>
-              </dl>
-              <p class="clear"></p>
-            </div>
-            <!-- //��Ī ���� �ڽ� -->
-          </div>
-          <!-- //��Ī ���� ����Ʈ -->
-        </div>
-        <!-- //�Ұ��ڽ� -->
-      </div>
-      <!-- //content -->
-    </div>
-    <!-- //container -->
+		<p class="visual_img"><img src="../common/img/visual_coolcatteam.jpg" width="766px" height="127px" alt="업그레이드는 끝났다! 신세계 쿨캣여자농구단의 선수단을 소개합니다" title="업그레이드는 끝났다! 신세계 쿨캣여자농구단의 선수단을 소개합니다" /></p>
 
-    <!-- footer -->
-    <div id="footer">
-      <!-- footer_inner -->
-      <div class="footer_inner"></div>
-      <!-- //footer_inner -->
-    </div>
-    <!-- //footer -->
-  </body>
+		<div class="sub_title">
+			<h1><img src="../common/img/title_coaching_staff.gif" width="83" height="25" alt="코칭스탭" title="코칭스탭" /></h1>
+			<p><img src="../common/img/message_coaching_staff.gif" width="225" height="13" alt="신세계 쿨캣의 자랑스러운 코칭스탭을 소개합니다." title="신세계 쿨캣의 자랑스러운 코칭스탭을 소개합니다." /></p>
+		</div>
+
+		<!-- 소개박스 -->
+		<div class="content_box1">
+			<p class="left_message_01"><img src="../common/img/coaching_staff_left.gif" width="270" height="370" alt="선수들을 더욱더 빛나게 하는 신세계 쿨캣의 코칭스탭" title="선수들을 더욱더 빛나게 하는 신세계 쿨캣의 코칭스탭" /></p>
+			<!-- 코칭 스탭 리스트 -->
+			<div class="player_list">
+				<!-- 코칭 스탭 박스 -->
+				<div>
+					<p class="coaching_staff_photo"><img src="../common/img/coaching_staff_photo_01.jpg" width="209" height="130" alt="감독-정인교" title="감독-정인교" /></p>
+					<dl class="coaching_staff_details_01">
+						<dt class="hidden">생년월일</dt>
+						<dd class="hidden">1969년 11월 28일</dd>
+						<dt class="hidden">출신학력</dt>
+						<dd class="hidden">회문고등학교 , 고려대학교</dd>
+						<dt class="hidden">주요경력</dt>
+						<dd class="hidden">
+							<ul>
+								<li>1993 ~ 1996  산업은행 농구단 선수</li>
+								<li>1997 ~ 1998  나래 블루버드 농구단 선수</li>
+								<li>1997 ~ 1998  (최고의 사랑의 3점 슈터)</li>
+								<li>1999 ~ 2000  기아 엔터프라이즈 농구단 선수</li>
+								<li>2000 ~ 2002  코리아텐더 농구단 선수</li>
+								<li>2003 ~ 2004  현대 모비스 농구단 선수</li>
+								<li>2005 ~ 2004  삼성 썬더스 농구단 선수</li>
+								<li>2005 ~ 2004  MBC ESPN 농구 해설위원</li>
+								<li>2005 ~ 2004  6월 신세계 쿨캣 코치</li>
+								<li>2007 ~  신세계 쿨캣여자농구단 감독</li>
+							</ul>
+						</dd>
+					</dl>
+					<p class="clear"></p>
+				</div>
+				<!-- //코칭 스탭 박스 -->
+				<!-- 코칭 스탭 박스 -->
+				<div>
+					<p class="coaching_staff_photo"><img src="../common/img/coaching_staff_photo_02.jpg" width="209" height="130" alt="코치-조동기" title="코치-조동기" /></p>
+					<dl class="coaching_staff_details_02">
+						<dt class="hidden">생년월일</dt>
+						<dd class="hidden">1971년 05월 21일</dd>
+						<dt class="hidden">출신학력</dt>
+						<dd class="hidden">강원 사범대학 부속고등학교 , 중앙대학교</dd>
+						<dt class="hidden">주요경력</dt>
+						<dd class="hidden">
+							<ul>
+								<li>1994 ~ 1995  기아 엔터프라이즈 농구단 선수</li>
+								<li>1997 ~ 1998  국가대표</li>
+								<li>1996 ~ 1997  상무(국군 체육부대)</li>
+								<li>1998 ~ 1999  기아 엔터프라이즈 농구단 선수</li>
+								<li>2001 ~ 2002  현대 모비스 농구단 선수</li>
+								<li>2004 ~ 2005  Hofstra University 농구단 코치</li>
+								<li>2006 ~  신세계 쿨캣여자농구단 코치</li>
+							</ul>
+						</dd>
+					</dl>
+					<p class="clear"></p>
+				</div>
+				<!-- //코칭 스탭 박스 -->
+				<!-- 코칭 스탭 박스 -->
+				<div>
+					<p class="coaching_staff_photo"><img src="../common/img/coaching_staff_photo_03.jpg" width="209" height="130" alt="체력 트레이너-김준호" title="체력 트레이너-김준호" /></p>
+					<dl class="coaching_staff_details_03">
+						<dt class="hidden">생년월일</dt>
+						<dd class="hidden">1969년 11월 04일</dd>
+						<dt class="hidden">출신학력</dt>
+						<dd class="hidden">전남 체육고등학교 , 한국 체육대학교</dd>
+						<dt class="hidden">주요경력</dt>
+						<dd class="hidden">
+							<ul>
+								<li>2000 ~ 2001  시즌 골드뱅크 체력 트레이너</li>
+								<li>2001 ~ 2003  시즌 코리아텐더 체력 트레이너</li>
+								<li>2003 ~ 2005  부산 KTF 농구단 체력 트레이너</li>
+								<li>2006 ~  신세계 쿨캣여자농구단</li>
+								<li>2006 ~  체력 트레이너</li>
+								</ul>
+						</dd>
+					</dl>
+					<p class="clear"></p>
+				</div>
+				<!-- //코칭 스탭 박스 -->
+				<!-- 코칭 스탭 박스 -->
+				<div>
+					<p class="coaching_staff_photo"><img src="../common/img/coaching_staff_photo_04.jpg" width="209" height="130" alt="의무 트레이너-김희희" title="의무 트레이너-김희희" /></p>
+					<dl class="coaching_staff_details_04">
+						<dt class="hidden">생년월일</dt>
+						<dd class="hidden">1986년 03월 12일</dd>
+						<dt class="hidden">출신학력</dt>
+						<dd class="hidden">성신여자대학교</dd>
+						<dt class="hidden">주요경력</dt>
+						<dd class="hidden">
+							<ul>
+								<li>유나이티드 병원전속</li>
+								<li>신세계 쿨캣 여자농구단 의무 트레이너</li>
+							</ul>
+						</dd>
+					</dl>
+					<p class="clear"></p>
+				</div>
+				<!-- //코칭 스탭 박스 -->
+				<!-- 코칭 스탭 박스 -->
+				<div>
+					<p class="coaching_staff_photo"><img src="../common/img/coaching_staff_photo_05.jpg" width="209" height="130" alt="매니저-박진희" title="매니저-박진희" /></p>
+					<dl class="coaching_staff_details_05">
+						<dt class="hidden">생년월일</dt>
+						<dd class="hidden">1987년 06월 11일</dd>
+						<dt class="hidden">출신학력</dt>
+						<dd class="hidden">삼천포 고등학교</dd>
+						<dt class="hidden">주요경력</dt>
+						<dd class="hidden">
+							<ul>
+								<li>신세계 쿨캣 여자농구단 선수</li>
+								<li>신세계 쿨캣 여자농구단 매니저</li>
+							</ul>
+						</dd>
+					</dl>
+					<p class="clear"></p>
+				</div>
+				<!-- //코칭 스탭 박스 -->
+			</div>
+			<!-- //코칭 스탭 리스트 -->
+		</div>
+		<!-- //소개박스 -->
+	</div>
+	<!-- //content -->
+</div>
+<!-- //container -->
+
+<!-- footer -->
+<div id="footer">
+	<!-- footer_inner -->
+	<div class="footer_inner">
+	</div>
+	<!-- //footer_inner -->
+</div>
+<!-- //footer -->
+</body>
 </html>
