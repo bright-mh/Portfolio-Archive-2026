@@ -11,9 +11,11 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.0",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

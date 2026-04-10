@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import styles from "./Timeline.module.css";
 
 function ProjectCard({ project }) {
   return (
-    <div style={{ marginBottom: "1.5rem" }}>
-      <h5 style={{ margin: "0 0 0.4rem" }}>{project.title}</h5>
-      <ul style={{ margin: 0, paddingLeft: "1.2rem", lineHeight: 1.7 }}>
+    <div className="mb-6">
+      <h5 className="mt-0 mb-1.5 text-base font-semibold">{project.title}</h5>
+      <ul className="m-0 pl-5 leading-7 text-sm">
         {project.subtitle && <li>Summary: {project.subtitle}</li>}
         {project.context && <li>Context: {project.context}</li>}
         {project.action && <li>Action: {project.action}</li>}
@@ -13,7 +12,7 @@ function ProjectCard({ project }) {
         {project.news && (
           <li>
             관련 소식:{" "}
-            <a href={project.news} target="_blank" rel="noreferrer">
+            <a href={project.news} target="_blank" rel="noreferrer" className="underline">
               링크
             </a>
           </li>
@@ -24,7 +23,7 @@ function ProjectCard({ project }) {
           href={project.codingListHref}
           target="_blank"
           rel="noreferrer"
-          style={{ display: "inline-block", marginTop: "0.5rem", fontSize: "0.85rem" }}
+          className="inline-block mt-2 text-xs underline"
         >
           {project.codingListHref.startsWith("http") ? "관련 사이트 보기" : "퍼블리싱 파일 보기"}
         </a>
@@ -50,58 +49,26 @@ function PopupModal({ entry, onClose }) {
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0, 0, 0, 0.55)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 1000,
-      }}
+      className="fixed inset-0 bg-black/55 flex items-center justify-center z-[1000]"
     >
-      <div
-        style={{
-          background: "#fff",
-          borderRadius: "12px",
-          padding: "2rem 2.5rem",
-          maxWidth: "680px",
-          width: "90%",
-          maxHeight: "80vh",
-          overflowY: "auto",
-          position: "relative",
-          boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
-        }}
-      >
+      <div className="bg-white rounded-xl px-10 py-8 w-[90%] max-w-2xl max-h-[80vh] overflow-y-auto relative shadow-2xl">
         <button
           onClick={onClose}
           aria-label="닫기"
-          style={{
-            position: "absolute",
-            top: "1rem",
-            right: "1.2rem",
-            background: "none",
-            border: "none",
-            fontSize: "1.6rem",
-            lineHeight: 1,
-            cursor: "pointer",
-            color: "#666",
-          }}
+          className="absolute top-4 right-5 bg-transparent border-none text-2xl leading-none cursor-pointer text-gray-400 hover:text-gray-700"
         >
           ×
         </button>
-        <h3 style={{ marginTop: 0, marginBottom: "0.3rem" }}>
+        <h3 className="mt-0 mb-1 text-xl font-bold">
           {entry.period} | {entry.company}
         </h3>
-        <p style={{ margin: "0 0 0.6rem", color: "#666", fontSize: "0.9rem" }}>
-          {entry.role}
-        </p>
+        <p className="mt-0 mb-2 text-sm text-gray-500">{entry.role}</p>
         {entry.codingListHref && (
           <a
             href={entry.codingListHref}
             target="_blank"
             rel="noreferrer"
-            style={{ display: "inline-block", marginBottom: "1.5rem", fontSize: "0.85rem" }}
+            className="inline-block mb-6 text-xs underline"
           >
             {entry.codingListHref.startsWith("http") ? "관련 사이트 보기" : "퍼블리싱 파일 보기"}
           </a>
@@ -109,14 +76,8 @@ function PopupModal({ entry, onClose }) {
 
         {entry.groups
           ? entry.groups.map((group) => (
-              <section key={group.yearLabel} style={{ marginBottom: "1.8rem" }}>
-                <h4
-                  style={{
-                    margin: "0 0 0.8rem",
-                    paddingBottom: "0.4rem",
-                    borderBottom: "1px solid #eee",
-                  }}
-                >
+              <section key={group.yearLabel} className="mb-7">
+                <h4 className="mt-0 mb-3 pb-1.5 border-b border-gray-200 text-base font-semibold">
                   {group.yearLabel}
                 </h4>
                 {group.projects.map((project) => (
@@ -137,55 +98,27 @@ export default function Timeline({ items }) {
 
   return (
     <>
-      <div className={styles.grid}>
+      <div className="grid grid-cols-4 auto-rows-[minmax(120px,auto)] gap-4 max-[1024px]:grid-cols-3 max-[640px]:grid-cols-2 max-[640px]:gap-3">
         {items.map((entry) => {
           const isMusinsa = entry.company === "MUSINSA";
           return (
             <button
               key={`${entry.period}-${entry.company}`}
               onClick={() => setActiveEntry(entry)}
-              className={isMusinsa ? styles.cardMusinsa : undefined}
-              style={{
-                padding: isMusinsa ? "2rem 2.5rem" : "1.2rem",
-                border: isMusinsa ? "2px solid #222" : "1px solid #ddd",
-                borderRadius: "10px",
-                background: isMusinsa ? "#111" : "#fafafa",
-                color: isMusinsa ? "#fff" : "inherit",
-                cursor: "pointer",
-                textAlign: "left",
-                transition: "box-shadow 0.2s, border-color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = isMusinsa
-                  ? "0 6px 24px rgba(0,0,0,0.25)"
-                  : "0 4px 16px rgba(0,0,0,0.1)";
-                e.currentTarget.style.borderColor = isMusinsa ? "#555" : "#aaa";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "none";
-                e.currentTarget.style.borderColor = isMusinsa ? "#222" : "#ddd";
-              }}
+              className={[
+                "rounded-xl text-left cursor-pointer transition-shadow duration-200",
+                isMusinsa
+                  ? "col-span-2 row-span-2 px-10 py-8 bg-[#111] text-white border-2 border-[#222] hover:shadow-2xl hover:border-[#555] max-[640px]:col-span-full max-[640px]:row-span-1"
+                  : "px-5 py-5 bg-[#fafafa] text-inherit border border-[#ddd] hover:shadow-lg hover:border-[#aaa]",
+              ].join(" ")}
             >
-              <strong style={{ display: "block", fontSize: isMusinsa ? "1.4rem" : "1.1rem" }}>
+              <strong className={`block font-bold ${isMusinsa ? "text-2xl" : "text-lg"}`}>
                 {entry.period}
               </strong>
-              <span
-                style={{
-                  display: "block",
-                  marginTop: "0.3rem",
-                  fontWeight: 600,
-                  fontSize: isMusinsa ? "1.1rem" : "inherit",
-                }}
-              >
+              <span className={`block mt-1 font-semibold ${isMusinsa ? "text-base" : "text-sm"}`}>
                 {entry.company}
               </span>
-              <small
-                style={{
-                  display: "block",
-                  marginTop: "0.3rem",
-                  color: isMusinsa ? "#aaa" : "#888",
-                }}
-              >
+              <small className={`block mt-1 text-xs ${isMusinsa ? "text-gray-400" : "text-gray-500"}`}>
                 {entry.role}
               </small>
             </button>
