@@ -3,6 +3,7 @@ export const WORK_TIMELINE = [
     period: "2021 - 2025",
     company: "MUSINSA",
     role: "프론트엔드 개발",
+    codingListHref: "https://www.musinsa.com/main/musinsa/recommend?gf=F",
     groups: [
       {
         yearLabel: "2025: 아키텍처 최신화 및 비즈니스 방어",
