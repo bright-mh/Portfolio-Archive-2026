@@ -4,6 +4,7 @@ export const WORK_TIMELINE = [
     company: "MUSINSA",
     role: "프론트엔드 개발",
     codingListHref: "https://www.musinsa.com/main/musinsa/recommend?gf=F",
+    detailHref: "/about-musinsa-work",
     groups: [
       {
         yearLabel: "2025: 아키텍처 최신화 및 비즈니스 방어",
@@ -285,7 +286,7 @@ export const WORK_TIMELINE = [
   },
   {
     period: "2012",
-    company: "에스리즘",
+    company: "에스프리즘",
     role: "엔터프라이즈 및 모바일 UI 구축",
     projects: [
       {
