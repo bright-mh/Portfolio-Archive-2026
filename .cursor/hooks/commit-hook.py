@@ -6,8 +6,8 @@ import subprocess
 data = json.load(sys.stdin)
 prompt = data.get("prompt", "").strip()
 
-# /commit 명령어가 아니면 그냥 통과
-if not prompt.startswith("/commit"):
+# !!commit 명령어가 아니면 그냥 통과
+if not prompt.startswith("-commit"):
     print(json.dumps({"permission": "allow"}))
     sys.exit(0)
 
@@ -47,7 +47,7 @@ if not git_status:
     }))
     sys.exit(0)
 
-agent_message = f"""사용자가 /commit 명령어를 입력했습니다. 아래 순서대로 진행해 주세요:
+agent_message = f"""사용자가 -commit 명령어를 입력했습니다. 아래 순서대로 진행해 주세요:
 
 1. 아래 변경사항을 분석해서 Conventional Commits 형식으로 커밋 메시지를 작성
 2. `git add -A` 실행
