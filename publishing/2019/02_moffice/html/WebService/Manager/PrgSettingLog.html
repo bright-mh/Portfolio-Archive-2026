@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>변경기록 조회</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 1024*745 -->
+  <body class="popup">
+    <!-- pop_wrap -->
+    <div class="pop_wrap" style="width: 2500px">
+      <!-- header -->
+      <header>
+        <h1>변경기록 조회</h1>
+        <h2>프로그램 설정</h2>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- result_area -->
+        <div class="result_area">
+          <!-- result_top -->
+          <div class="result_top clearfix">
+            <div class="fl_left">
+              <p class="totla_num">총 <span>0</span>건</p>
+            </div>
+            <div class="btn_area fl_right">
+              <!-- <a href="#none" class="btn_md icon_md_csv">CSV</a> -->
+              <a href="#none" class="btn_md icon_md_excel">엑셀</a>
+            </div>
+          </div>
+          <!-- //result_top -->
+
+          <!-- tbl_default -->
+          <div class="tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: 70px" />
+                <col style="width: 120px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: auto" />
+                <col style="width: 100px" />
+                <col style="width: 200px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 110px" />
+                <col style="width: 110px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+                <col style="width: 100px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"><a href="#none">변경자</a></th>
+                  <th scope="col"><a href="#none">변경일시</a></th>
+                  <th scope="col">
+                    <a href="#none">에이전트<br />시간 변경</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">에이전트<br />통신 주기</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">긴급<br />해제 설정</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">상시ON<br />서버</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">하루<br />기준시</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">일시사용<br />시간 설정</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">PC 종료<br />설정</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">IDLE TIM<br />적용</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">PC사용신청<br />제한</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">PC사용신청<br />버튼</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">PC<br />긴급사용</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">예외 기간<br />시작일</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">예외 시간<br />종료일</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">결재 기능<br />사용 여부</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">차단 전<br />남은시간</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">휴직자<br />차단 여부</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">퇴직자<br />차단 여부</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">PC 사용<br />한도 설정(주)</a>
+                  </th>
+                  <th scope="col">
+                    <a href="#none">PC 사용<br />한도 설정(월)</a>
+                  </th>
+                  <th scope="col"><a href="#none">휴일차단</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">검색된 데이터가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td>박경희</td>
+                  <td>2019-08-22<br />AM 10:14:04</td>
+                  <td>동기화 안함</td>
+                  <td>60초</td>
+                  <td>사용안함</td>
+                  <td></td>
+                  <td>01:00</td>
+                  <td>
+                    휴일: 10분 (20회)<br />
+                    평일 오전: 10분 (20회)<br />
+                    평일 오후: 10분 (20회)<br />
+                    휴가자: 10분 (20회)
+                  </td>
+                  <td>Screen Off</td>
+                  <td>10분</td>
+                  <td>-</td>
+                  <td>보임</td>
+                  <td>보임</td>
+                  <td>2019-06-11</td>
+                  <td>2019-06-11</td>
+                  <td>사용함</td>
+                  <td>20분</td>
+                  <td>차단안함</td>
+                  <td>차단안함</td>
+                  <td>00:00</td>
+                  <td>00:00</td>
+                  <td>차단<br />(09:00 차단)</td>
+                </tr>
+                <tr>
+                  <td>박경희</td>
+                  <td>2019-08-22<br />AM 10:14:04</td>
+                  <td>동기화 안함</td>
+                  <td>60초</td>
+                  <td>사용안함</td>
+                  <td></td>
+                  <td>01:00</td>
+                  <td>
+                    휴일: 10분 (20회)<br />
+                    평일 오전: 10분 (20회)<br />
+                    평일 오후: 10분 (20회)<br />
+                    휴가자: 10분 (20회)
+                  </td>
+                  <td>PC 강제종료<br />(30분)</td>
+                  <td>10분</td>
+                  <td>-</td>
+                  <td>보임</td>
+                  <td>보임</td>
+                  <td>2019-06-11</td>
+                  <td>2019-06-11</td>
+                  <td>사용함</td>
+                  <td>20분</td>
+                  <td>차단안함</td>
+                  <td>차단안함</td>
+                  <td>00:00</td>
+                  <td>00:00</td>
+                  <td>차단<br />(09:00 차단)</td>
+                </tr>
+                <tr>
+                  <td>박경희</td>
+                  <td>2019-08-22<br />AM 10:14:04</td>
+                  <td>동기화 안함</td>
+                  <td>60초</td>
+                  <td>사용안함</td>
+                  <td></td>
+                  <td>01:00</td>
+                  <td>
+                    휴일: 10분 (20회)<br />
+                    평일 오전: 10분 (20회)<br />
+                    평일 오후: 10분 (20회)<br />
+                    휴가자: 10분 (20회)
+                  </td>
+                  <td>PC 강제종료<br />(30분)</td>
+                  <td>10분</td>
+                  <td>-</td>
+                  <td>보임</td>
+                  <td>보임</td>
+                  <td>2019-06-11</td>
+                  <td>2019-06-11</td>
+                  <td>사용함</td>
+                  <td>20분</td>
+                  <td>차단안함</td>
+                  <td>차단안함</td>
+                  <td>00:00</td>
+                  <td>00:00</td>
+                  <td>차단<br />(09:00 차단)</td>
+                </tr>
+                <tr>
+                  <td>박경희</td>
+                  <td>2019-08-22<br />AM 10:14:04</td>
+                  <td>동기화 안함</td>
+                  <td>60초</td>
+                  <td>사용안함</td>
+                  <td></td>
+                  <td>01:00</td>
+                  <td>
+                    휴일: 10분 (20회)<br />
+                    평일 오전: 10분 (20회)<br />
+                    평일 오후: 10분 (20회)<br />
+                    휴가자: 10분 (20회)
+                  </td>
+                  <td>PC 강제종료<br />(30분)</td>
+                  <td>10분</td>
+                  <td>-</td>
+                  <td>보임</td>
+                  <td>보임</td>
+                  <td>2019-06-11</td>
+                  <td>2019-06-11</td>
+                  <td>사용함</td>
+                  <td>20분</td>
+                  <td>차단안함</td>
+                  <td>차단안함</td>
+                  <td>00:00</td>
+                  <td>00:00</td>
+                  <td>차단<br />(09:00 차단)</td>
+                </tr>
+                <tr>
+                  <td>박경희</td>
+                  <td>2019-08-22<br />AM 10:14:04</td>
+                  <td>동기화 안함</td>
+                  <td>60초</td>
+                  <td>사용안함</td>
+                  <td></td>
+                  <td>01:00</td>
+                  <td>
+                    휴일: 10분 (20회)<br />
+                    평일 오전: 10분 (20회)<br />
+                    평일 오후: 10분 (20회)<br />
+                    휴가자: 10분 (20회)
+                  </td>
+                  <td>PC 강제종료<br />(30분)</td>
+                  <td>10분</td>
+                  <td>-</td>
+                  <td>보임</td>
+                  <td>보임</td>
+                  <td>2019-06-11</td>
+                  <td>2019-06-11</td>
+                  <td>사용함</td>
+                  <td>20분</td>
+                  <td>차단안함</td>
+                  <td>차단안함</td>
+                  <td>00:00</td>
+                  <td>00:00</td>
+                  <td>차단<br />(09:00 차단)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_default -->
+
+          <!-- result_paging -->
+          <div class="result_paging">
+            <!-- paging -->
+            <div class="paging">
+              <a href="#none" class="btn_start">처음으로</a>
+              <a href="#none" class="btn_prev">이전</a>
+              <strong>1</strong>
+              <a href="#none">2</a>
+              <a href="#none">3</a>
+              <a href="#none">4</a>
+              <a href="#none">5</a>
+              <a href="#none">6</a>
+              <a href="#none">7</a>
+              <a href="#none">8</a>
+              <a href="#none">9</a>
+              <a href="#none">10</a>
+              <a href="#none" class="btn_next">다음</a>
+              <a href="#none" class="btn_end">맨끝으로</a>
+            </div>
+            <!-- //paging -->
+            <p class="page_num"><strong>3</strong>/<span>10</span></p>
+          </div>
+          <!-- //result_paging -->
+        </div>
+        <!-- //result_area -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

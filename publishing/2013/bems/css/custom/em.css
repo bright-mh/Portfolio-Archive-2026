@@ -1,0 +1,440 @@
+@charset "utf-8";
+
+.tabBg {
+  margin: 20px 0 0 30px;
+  overflow: hidden;
+}
+.btn_list {
+  float: left;
+  border-bottom: 1px solid #d5dade;
+}
+.btn_list li {
+  float: left;
+  border: 1px solid #c4c8cd;
+  border-left: 0;
+  text-align: center;
+}
+.btn_list li:first-child {
+  border-left: 1px solid #c4c8cd;
+}
+.btn_list li a {
+  display: block;
+  width: 99px;
+  height: 40px;
+  border-left: 1px solid #ebecee;
+  background: url("/html/2014/bems/images/common/bg_btn02.gif") repeat-x 0 0;
+  color: #4c4c4c;
+  line-height: 40px;
+}
+.btn_list li.on a {
+  border-left: 1px solid #f6f7fb;
+  background: url("/html/2014/bems/images/common/bg_btn02_on.gif") repeat-x 0 0;
+  color: #e56b53;
+  font-weight: bold;
+}
+
+/* 2013-12-16 버튼 관련 수정 및 추가2 */
+.emWarning {
+  position: relative;
+  min-height: 43px;
+  margin: 0 30px;
+  padding: 15px 0 0 25px;
+  border: 1px solid #c35147;
+  background: #d9584d url("/html/2014/bems/images/common/bg_emwarning.gif") repeat-x 0 0;
+  color: #fff;
+  font-size: 11px;
+  overflow: hidden;
+}
+.emWarning .text {
+  float: left;
+  max-width: 826px;
+  min-height: 30px;
+  padding: 0 0 0 39px;
+  background: url("/html/2014/bems/images/common/ico_warning.gif") no-repeat 0 0;
+}
+.emWarning .text02 {
+  float: left;
+  max-width: 826px;
+  min-height: 30px;
+  padding: 0 0 0 39px;
+  background: url("/html/2014/bems/images/common/ico_warning.gif") no-repeat 0 0;
+  line-height: 30px;
+}
+.emWarning .btn_input {
+  float: left;
+  margin: 2px 0 0 20px;
+  border-bottom: 1px solid #ab453d;
+}
+.emWarning .btn_input a {
+  display: block;
+  height: 23px;
+  padding: 0 10px;
+  border: 1px solid #8c3a33;
+  background: url("/html/2014/bems/images/common/bg_btn03.gif") repeat-x 0 0;
+  color: #fcdedb;
+  line-height: 23px;
+}
+.emWarning .btn_input a:hover,
+.emWarning .btn_input a:focus {
+  border: 1px solid #742f27;
+  background: url("/html/2014/bems/images/common/bg_btn03_over.gif") repeat-x 0 0;
+}
+.emWarning .btn_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* //2013-12-16 버튼 관련 수정 및 추가2 */
+
+.lastYear {
+  float: right;
+  color: #4b4b4c;
+}
+.lastYear input {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0 0 0 15px;
+  padding: 0;
+  vertical-align: top;
+}
+.lastYear input.first {
+  margin-left: 5px;
+}
+.lastYear label {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  vertical-align: top;
+}
+
+.fixed_box {
+  position: relative;
+  min-width: 1288px;
+}
+
+.alert_BoxArea {
+  margin: 18px 30px -20px 30px;
+  border: 2px solid #b94b42;
+}
+.alert_BoxArea .alert_boxBg {
+  height: 58px;
+  border: 1px solid #b94b42;
+  background: #d9584d;
+}
+.alert_BoxArea .alert_boxBg img {
+  margin: 15px 0px 15px 25px;
+}
+.alert_BoxArea .alert_boxBg p {
+  margin: 0 0 0 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.table_style01_04 {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate !important;
+}
+.table_style01_04 th {
+  height: 36px;
+  padding: 0 5px;
+  border: 1px solid #d0d4d9;
+  border-left: none;
+  background: #f3f5f8;
+  color: #323233;
+  font-weight: bold;
+  line-height: 18px;
+}
+.table_style01_04 th.thStyle {
+  border-top: none;
+  background: #fafafa;
+  font-weight: normal;
+  line-height: 17px;
+}
+.table_style01_04 th.thStyle02 {
+  border-left: 1px solid #d0d4d9;
+}
+.table_style01_04 td {
+  padding: 10px 5px 8px 5px;
+  border: 1px solid #d0d4d9;
+  border-top: none;
+  border-left: none;
+  color: #4b4b4c;
+  line-height: 18px;
+}
+.table_style01_04 td span.up {
+  display: inline-block;
+  padding: 0 0 0 14px;
+  background: url("/html/2014/bems/images/common/icon_increase.png") no-repeat 0 4px;
+}
+.table_style01_04 td span.down {
+  display: inline-block;
+  padding: 0 0 0 14px;
+  background: url("/html/2014/bems/images/common/icon_decrease.png") no-repeat 0 4px;
+}
+
+p.x {
+  width: 50px;
+  background: #ce5045;
+  margin-top: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 13px;
+}
+p.x a {
+  width: 50px;
+  height: 59px;
+  font-weight: bold;
+  line-height: 59px;
+  color: #fff;
+}
+
+div.energe_mesure {
+  margin-top: 22px;
+  width: 100%;
+  overflow: auto;
+}
+div.energy_use {
+  float: left;
+}
+div.energy_use div h3 {
+  font-size: 12px;
+  color: #777;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* 2013-12-16 내용변경 수정 및 추가 */
+/* 2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정01 */
+div.energy_use div.prev_use {
+  overflow: auto;
+  width: 382px;
+}
+/*div.energy_use div.prev_use {overflow:auto;width:357px;border:1px solid red}*/
+/* //2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정01 */
+div.energy_use div.prev_use div#description {
+  float: left;
+}
+div.energy_use div.prev_use div#description ul li {
+  padding: 3px 0;
+  color: #4b4b4c;
+}
+div.energy_use div.prev_use div#description ul li.ave {
+  padding: 0 0 22px 0;
+}
+div.energy_use div.prev_use div#description ul li.noE {
+  margin: 33px 0 3px 0;
+  padding-left: 244px;
+}
+div.energy_use div.prev_use div#description ul li span.average {
+  color: #19191a;
+  font-family: "tahoma";
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: -2px;
+}
+div.energy_use div.prev_use div#description ul li span.unit {
+  padding-left: 3px;
+  color: #19191a;
+  font-family: "tahoma";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 28px;
+}
+div.energy_use div.prev_use div#description ul li span.listTxt {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+div.energy_use div.prev_use div#description ul li span.listTxt02 {
+  margin-left: 4px;
+}
+/* //2013-12-16 내용변경 수정 및 추가 */
+div.energy_use div.target_energy {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+div.energy_use div.target_energy div {
+  display: block;
+}
+div.energy_use div.target_energy div.targetEn_input {
+  width: 217px;
+  height: 45px;
+  padding-right: 11px;
+  border: 1px solid #b7cce1;
+  overflow: hidden;
+  font-family: "tahoma";
+  font-size: 14px;
+  font-weight: bold;
+  color: #19191a;
+  float: left;
+  position: relative;
+}
+div.energy_use div.target_energy div.targetEn_input2 {
+  width: 217px;
+  height: 45px;
+  padding-right: 11px;
+  border: 1px solid #b7cce1;
+  overflow: hidden;
+  font-family: "tahoma";
+  font-size: 14px;
+  font-weight: bold;
+  color: #19191a;
+  float: left;
+}
+div.energy_use div.target_energy div.targetEn_input input[type="text"] {
+  box-shadow: none;
+  border: none;
+  padding: 0 0 0 11px;
+  width: 181px;
+  height: 40px;
+  height: 33px\9;
+  margin-top: 7px\9;
+  font-family: "tahoma";
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: #ed6d53;
+  line-height: 27px;
+}
+/* 2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정02 */
+div.energy_use div.target_energy div.targetEn_input2 input[type="text"] {
+  box-shadow: none;
+  border: none;
+  padding: 0 0 0 11px;
+  width: 181px;
+  height: 40px;
+  height: 33px\9;
+  margin-top: 7px\9;
+  font-family: "tahoma";
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #646566;
+  line-height: 29px;
+}
+/* //2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정02 */
+/* 2013-12-16 버튼 관련 수정 및 추가1 */
+div.energy_use div.target_energy div.peakMBtn {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 11px;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* 2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정03 */
+div.energy_use div.target_energy div.peakMBtn a {
+  display: block;
+  width: 61px;
+  height: 43px;
+  border: 1px solid #b3b3b3;
+  background: url("/html/2014/bems/images/common/bg_btn04.gif") repeat-x 0 0;
+  color: #4b4b4d;
+  font-weight: bold;
+  text-align: center;
+  line-height: 43px;
+}
+/* //2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정03 */
+div.energy_use div.target_energy div.peakMBtn a:hover,
+div.energy_use div.target_energy div.peakMBtn a:focus {
+  color: #ed6d53;
+}
+/* //2013-12-16 버튼 관련 수정 및 추가1 */
+div.energy_use div.target_energy div.text {
+  clear: both;
+  height: 90px;
+  background: url("/html/2014/bems/images/common/bg_peak.gif") top right no-repeat;
+  padding: 14px 9px;
+  color: #fff;
+  font-size: 12px;
+}
+div.energy_use div.target_energy div.text p.title {
+  font-weight: bold;
+}
+div.energy_use div.target_energy div.targetEn_input span {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+.chartBox_no {
+  width: 162px;
+  height: 162px;
+  margin: 0 18px 0 0;
+  float: left;
+}
+
+/* 1600 이상 */
+@media only screen and (min-width: 1600px) {
+  .fixed_box {
+    width: 100%;
+  }
+
+  div.energy_use div.target_energy div.targetEn_input {
+    width: 311px;
+    height: 45px;
+    padding-right: 11px;
+    border: 1px solid #b7cce1;
+    overflow: hidden;
+    font-family: "tahoma";
+    font-size: 14px;
+    font-weight: bold;
+    color: #19191a;
+    float: left;
+  }
+  /* 2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정04 */
+  div.energy_use div.target_energy div.targetEn_input2 {
+    width: 285px;
+    height: 45px;
+    padding-right: 11px;
+    border: 1px solid #b7cce1;
+    overflow: hidden;
+    font-family: "tahoma";
+    font-size: 14px;
+    font-weight: bold;
+    color: #19191a;
+    float: left;
+  }
+  /* //2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정04 */
+  div.energy_use div.target_energy div.targetEn_input input[type="text"] {
+    box-shadow: none;
+    border: none;
+    padding: 0 0 0 11px;
+    width: 278px;
+    height: 40px;
+    height: 33px\9;
+    margin-top: 7px\9;
+    font-family: "tahoma";
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #ed6d53;
+    line-height: 27px;
+  }
+  /* 2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정05 */
+  div.energy_use div.target_energy div.targetEn_input2 input[type="text"] {
+    box-shadow: none;
+    border: none;
+    padding: 0 0 0 11px;
+    width: 278px;
+    height: 40px;
+    height: 33px\9;
+    margin-top: 7px\9;
+    font-family: "tahoma";
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #646566;
+    line-height: 29px;
+    background: #fff;
+  }
+  /* //2014-01-06 목표 피크 관리:데이터 수치 7자리 영역 확보를 위한_수정05 */
+  div.energy_use div.target_energy div.text {
+    clear: both;
+    height: 90px;
+    background: url("/html/2014/bems/images/common/bg_peak.gif") top left no-repeat;
+    padding: 14px 9px 14px 106px;
+    color: #fff;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Getting Started: Configuration · ICON Developers Portal</title>
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="ICON Developers Portal, ICON, DApp, Blockchain, SCORE, T-Bears" />
+    <meta property="og:title" content="Getting Started: Configuration · ICON Developers Portal" />
+    <meta property="og:description" content="" />
+    <link rel="apple-touch-icon" sizes="192x192" href="../img/favicon_192x192.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon_192x192.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/library.js"></script>
+    <script src="../js/ui.js"></script>
+  </head>
+  <body class="ko layer_on">
+    <!-- 임시  -> 팝업 열고닫힐 떄 생길 class="layer_on", 개발시에는 지워주시면 됩니다 -->
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+        <!-- head_bar -->
+        <div class="head_bar">
+          <h1 class="logo">
+            <a href="#none"><strong class="f_bold2">ICON</strong> Developers Portal</a>
+          </h1>
+          <a href="#none" class="btn_nav"><span class="blind">open menu</span></a>
+        </div>
+        <!-- // head_bar -->
+        <!-- nav_wrap -->
+        <div class="nav_wrap on">
+          <div class="top_area">
+            <a href="#none" class="home"><strong class="f_bold2">ICON</strong> Developers Portal</a>
+            <button type="button" class="close"><span class="blind">close</span></button>
+            <div class="login_info">
+              <div class="img"><img src="../" alt="" /></div>
+              <div class="user">wwwmywon wwwmywon wwwmywon</div>
+            </div>
+            <!-- <a href="#none" class="btn_login">Log in</a> -->
+            <a href="#none" class="btn_logout">Log out</a>
+          </div>
+          <ul class="category">
+            <li class="nav">
+              <p class="depth1">Introduction</p>
+              <ul class="depth2">
+                <li><a href="#none">Introduction</a></li>
+              </ul>
+            </li>
+            <li class="nav">
+              <p class="depth1">Getting Started</p>
+              <ul class="depth2">
+                <li><a href="#none">Development Environment</a></li>
+                <li><a href="#none">Configuration</a></li>
+                <li><a href="#none">How to use T-Bears</a></li>
+                <li><a href="#none">Sample Project</a></li>
+                <li><a href="#none">Resources</a></li>
+                <li>
+                  <a href="#none">API References</a>
+                  <div class="category_box on">
+                    <div class="inner">
+                      <a href="#none" class="back"><span class="blind">Back</span></a>
+                      <p class="depth2">API References</p>
+                      <ul class="depth3">
+                        <li>
+                          <a href="https://github.com/icon-project/icon-sdk-java" target="_blank" title="새창 열림"
+                            >Java</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://github.com/icon-project/icon-sdk-python" target="_blank" title="새창 열림"
+                            >Python</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="nav">
+              <p class="depth1">SCORE</p>
+              <ul class="depth2">
+                <li><a href="#none">Overview</a></li>
+                <li><a href="#none">Token &amp; Crowdsale</a></li>
+                <li>
+                  <a href="#none">Game</a>
+                  <div class="category_box">
+                    <div class="inner">
+                      <a href="#none" class="back"><span class="blind">Back</span></a>
+                      <p class="depth2">Game</p>
+                      <ul class="depth3">
+                        <li><a href="#none">Non-Fungible Tokens</a></li>
+                        <li><a href="#none">Crypto Heroes</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="nav">
+              <p class="depth1">Community</p>
+              <ul class="depth2">
+                <li><a href="#none">ICON News</a></li>
+                <li><a href="#none">Forum</a></li>
+                <li><a href="#none">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="dimm_gnb"></div>
+          <!-- 임시 : 개발시 지웢세요-->
+        </div>
+        <!-- // nav_wrap -->
+      </div>
+      <!-- // header -->
+      <!-- container -->
+      <div id="container">
+        <h2 class="page_tit">Configuration</h2>
+        <div class="path_area">
+          <ul class="box">
+            <li class="home"><a href="#none">HOME</a></li>
+            <li><a href="#link">Getting Started</a></li>
+            <li><a href="#link">Configuration</a></li>
+          </ul>
+        </div>
+        <div class="inner">
+          <div class="academy">
+            <script>
+              hljs.initHighlightingOnLoad();
+            </script>
+            <!-- markdown -->
+            <div class="mkd_box">
+              <!-- markdown templete 삽입 -->
+              <div class="markdown">
+                <!-- [D] 여기부터 내용을 넣어주세요. -->
+                <h1>Configuration</h1>
+
+                <h2>Prerequistites</h2>
+                <ul>
+                  <li>Linux (CentOS, Ubuntu), macOS 10.12, Windows 10</li>
+                  <li>Python: 3.6 and above</li>
+                  <li>Virtualenv: 15.1.0 and above</li>
+                  <li>docker: 17.x and above</li>
+                </ul>
+
+                <h3>Installation</h3>
+                <div>
+                  First, clone this project. Then go to the project folder and create a user environment. This is how to
+                  create a user environment:
+                </div>
+                <pre><code>$ virtualenv -p python3 .  # Create a virtual environment
+$ source bin/activate	# Enter the virtual envi
+ary packages in the virtual environment
+$ ./generate_code.sh #  gRPC generates codes necessary for
+communication</code></pre>
+                <div>Or you can do this easily as follows</div>
+                <pre><code>$ virtualenv -p python3 .  # Create a virtual environment
+$ source bin/activate	# Enter the virtual envi
+ary packages in the virtual environment
+$ ./generate_code.sh #  gRPC generates codes necessary for
+communication</code></pre>
+              </div>
+              <!-- //markdown templete 삽입 -->
+              <!-- btn -->
+              <div class="btn_area">
+                <a href="#none" class="left"
+                  ><span class="shot">Previous</span><span class="detail">Development Environment</span></a
+                >
+                <a href="#none" class="right"
+                  ><span class="shot">Next</span><span class="detail">Sample Project</span></a
+                >
+              </div>
+              <!-- //btn -->
+            </div>
+            <!-- //markdown -->
+          </div>
+        </div>
+        <a href="#none" class="btn_top"><span class="blind">TOP</span></a>
+      </div>
+      <!-- // container -->
+      <!-- footer -->
+      <div id="footer">
+        <div id="contact_us" class="contact_us">
+          <div class="info">
+            <h2 class="tit">Contact Us</h2>
+          </div>
+          <div class="form">
+            <fieldset>
+              <legend>Contact Us</legend>
+              <p class="input">
+                <label for="contact_name">Name</label>
+                <span class="noti">(Sorry, Retry)</span>
+                <input type="text" id="contact_name" class="ip_box" placeholder="Name (Required)" />
+              </p>
+              <p class="input error">
+                <label for="contact_mail">E-mail</label>
+                <span class="noti">(Sorry, Retry)</span>
+                <input type="email" id="contact_mail" class="ip_box" placeholder="E-mail (Required)" value="dfdfdf" />
+              </p>
+              <p class="input error">
+                <label for="contact_message">Message</label>
+                <span class="noti">(Sorry, Retry)</span>
+                <textarea id="contact_message" class="ip_box" cols="30" rows="10" placeholder="Message (Required)">
+dfdfdfdf</textarea
+                >
+              </p>
+              <span class="ip_check">
+                <input type="checkbox" id="check" name="check" class="ip_chk" /><label for="check"
+                  ><a href="#none" class="point_g">개인정보처리방침</a>에 동의합니다.</label
+                >
+              </span>
+              <input type="submit" value="Send Message" class="btn_ty_bface" />
+            </fieldset>
+          </div>
+        </div>
+        <div class="footer_btm">
+          <div class="inner">
+            <ul class="sns">
+              <li>
+                <a href="https://icon.foundation" target="_blank" class="ic" title="icon"
+                  ><span class="blind">icon</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.reddit.com/r/helloicon/" target="_blank" class="rd" title="reddit"
+                  ><span class="blind">reddit</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/icon-project" target="_blank" class="gh" title="github"
+                  ><span class="blind">github</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/helloicon" target="_blank" class="fb" title="facebook"
+                  ><span class="blind">facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="https://medium.com/helloiconworld" target="_blank" class="md" title="medium"
+                  ><span class="blind">medium</span></a
+                >
+              </li>
+              <li>
+                <a href="https://twitter.com/@helloiconworld" target="_blank" class="tt" title="twitter"
+                  ><span class="blind">twitter</span></a
+                >
+              </li>
+              <li>
+                <a href="https://brunch.co.kr/@helloiconworld" target="_blank" class="br" title="brunch"
+                  ><span class="blind">brunch</span></a
+                >
+              </li>
+            </ul>
+
+            <div class="link_area">
+              <a href="#none">이용약관</a>
+              <a href="#none">개인정보처리방침</a>
+              <a href="#none">PC Version</a>
+            </div>
+            <div class="lang">
+              <a href="#none" class="select ko"><span class="blind">language selection</span></a>
+              <ul>
+                <li class="selected">
+                  <a href="#none" class="ko"><span class="blind">KOREAN</span></a>
+                </li>
+                <li>
+                  <a href="#none" class="en"><span class="blind">ENGLISH</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom">
+            <p class="logo"><strong class="f_bold2">ICON</strong> Developers Portal</p>
+            <p class="copy">
+              Copyright 2018 <a href="https://de-nexo.com" target="_blank" title="De:Nexo">De:Nexo</a>, all rights
+              reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- // footer -->
+    </div>
+
+    <!-- [D] 팝업열기 : 버튼이나 링크 영역에 onclick="popupOpen('#팝업아이디')" 삽입! -->
+    <!-- <input type="button" onclick="popupOpen('apiPop')" value="팝업열기" style="width:100px;height:30px'" />  --><!-- 예시버튼 -->
+    <div class="dimm_pop over"></div>
+    <!-- 임시  -> 팝업 열고닫힐 떄 생길 마크업 영역, 개발시에는 지워주시면 됩니다 -->
+    <!-- layer_pop -->
+    <div id="apiPop" class="layer_pop link_type" style="display: block">
+      <div class="pop_inner">
+        <div class="header"><strong>API References</strong></div>
+        <div class="content">
+          <div class="api_type">
+            <p class="info_txt">API Reference를 확인할수 있는<br />외부 페이지로 이동합니다.</p>
+            <div class="btn_area">
+              <a href="https://github.com/icon-project/icon-sdk-java" target="_blank" title="새창 열림" class="btn_page"
+                ><span>ICON SDK for Java</span></a
+              >
+              <a
+                href="https://github.com/icon-project/icon-sdk-python"
+                target="_blank"
+                title="새창 열림"
+                class="btn_page"
+                ><span>ICON SDK for Python</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <button type="reset" class="btn_close close"><img src="../img/btn_pop_close.png" alt="팝업 닫기" /></button>
+        <!-- 닫기 버튼에는 class="close" 추가 -->
+      </div>
+    </div>
+    <!-- // layer_pop -->
+  </body>
+</html>

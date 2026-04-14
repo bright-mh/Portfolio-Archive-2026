@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>자리비움 사전신청</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 780*413 -->
+  <body class="user_popup" style="width: 780px">
+    <!-- user_pop_wrap -->
+    <div class="user_pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>자리비움 사전신청</h1>
+        <a href="#none" class="btn_close">닫기</a>
+      </header>
+      <!-- //header -->
+
+      <!-- user_pop_contents -->
+      <div class="user_pop_contents">
+        <!-- user_tbl_row_default -->
+        <div class="user_tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 127px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">등록일</th>
+                <td>
+                  <input
+                    type="text"
+                    name=""
+                    value="2019-07-05"
+                    title="등록일"
+                    class="center"
+                    style="width: 144px"
+                    disabled="disabled"
+                  />
+                  <span class="day_week">수요일</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">등록시간</th>
+                <td class="txt_range">2019-10-18 17:18 ~ 2019-10-18 17:22</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //user_tbl_row_default -->
+
+        <!-- 사유입력 -->
+        <div class="user_reason_input">
+          <p class="title">사유 입력</p>
+          <!-- user_tbl_row_default -->
+          <div class="user_tbl_row_default">
+            <table>
+              <colgroup>
+                <col style="width: 127px" />
+                <col style="width: auto" />
+                <col style="width: 127px" />
+                <col style="width: auto" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">시작일시</th>
+                  <td>
+                    <select name="" title="시작일" style="width: 136px" disabled="disabled">
+                      <option value="">2019-10-18</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션4</option>
+                    </select>
+                    <input
+                      type="text"
+                      name=""
+                      value="17:18"
+                      title="시작시"
+                      class="center"
+                      style="width: 80px"
+                      disabled="disabled"
+                    />
+                  </td>
+                  <th scope="row">종료일시</th>
+                  <td>
+                    <select name="" title="종료일" style="width: 136px">
+                      <option value="">2019-10-18</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션4</option>
+                    </select>
+                    <input type="text" name="" value="17:22" title="종료시" class="center" style="width: 80px" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">사유 선택</th>
+                  <td colspan="3">
+                    <select name="" title="사유 선택 대분류" style="width: 90px">
+                      <option value="">선택</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션4</option>
+                    </select>
+                    <select name="" title="사유 선택 소분류" style="width: 265px">
+                      <option value="">선택</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션4</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">상세 사유</th>
+                  <td colspan="3">
+                    <input type="text" name="" value="" title="상세 사유" placeholder="신청사유를 입력해주세요." />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //user_tbl_row_default -->
+        </div>
+        <!-- //사유입력 -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <!-- [D] 레이어 팝업열기 : 버튼이나 링크 영역에 onclick="popupOpen('#팝업아이디')" 삽입! -->
+          <a href="#none" class="btn_big bg_deepblue">저장하기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //user_pop_contents -->
+    </div>
+    <!-- //user_pop_wrap -->
+
+    <!-- layer_popup -->
+    <div class="layer_bg full"></div>
+    <!-- [D] div 태그에 id 값으로 onclick에 사용된 팝업아이디를 넣어주세요. -->
+    <div class="layer_popup" id="팝업아이디">
+      <!-- header -->
+      <header>
+        <h1>긴급 PC사용 신청</h1>
+        <a href="#none" class="btn_layer_close close">닫기</a>
+      </header>
+      <!-- //header -->
+      <!-- layer_contents -->
+      <div class="layer_contents full_eft">
+        <!-- cont_area -->
+        <!-- [D] 이미지에 따라 div 태그에 class="bg1 ~ bg3" 까지 클래스명 추가 -->
+        <div class="cont_area bg1">
+          <div class="txt_area">
+            <p class="title">PC사용 신청이 완료되었습니다.</p>
+            <p class="detail_bg">신청시간 : 2020년 2월 16일 19시 00분 ~ 21시 00분</p>
+            <p class="detail">* 신청 건이 승인되면 PC사용이 가능합니다.</p>
+          </div>
+
+          <!-- <div class="txt_area">
+					PC사용 신청이 완료되었습니다.
+				</div> -->
+
+          <div class="btn_area btm">
+            <a href="#none" class="btn_big bg_blue">확인</a>
+            <a href="#none" class="btn_big bg_sky_line close">취소</a>
+          </div>
+        </div>
+        <!-- //cont_area -->
+      </div>
+      <!-- //layer_contents -->
+    </div>
+    <!-- //layer_popup -->
+  </body>
+</html>

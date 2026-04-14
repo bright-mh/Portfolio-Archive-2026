@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>기초상품 일괄등록 팝업 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>기초상품 일괄등록 팝업</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ol class="step">
+            <li>Step1. 파일 등록 <span>&gt;</span></li>
+            <li class="on">Step2. 데이터 검사</li>
+          </ol>
+
+          <ul class="guide">
+            <li>
+              업로드 한 데이터는 임시저장 상태로 등록되며, 쿠폰 상세화면에서 대표/상세 이미지와 쿠폰번호 등록을 완료한
+              이후 등록대기 상태로 전환됩니다.
+            </li>
+            <li>
+              일부 내용이 누락되거나 잘못된 데이터가 있는 경우 ‘<span class="red">임시저장(오류)</span>’ 상태로
+              등록됩니다. 쿠폰 상세화면에서 오류 내용 확인 및 수정 후 등록을 진행해주시기 바랍니다.
+            </li>
+          </ul>
+
+          <div class="table_list">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong> 업로드 데이터, 임시저장, 임시저장(오류)이 있는 기초상품 일괄등록 데이터 검사</strong>
+                  <strong> </strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">총 업로드 데이터</th>
+                    <td>100 건</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">임시저장</th>
+                    <td>98 건</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">임시저장(오류)</th>
+                    <td><span class="red">2</span> 건</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //table_wrap -->
+          </div>
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <strong>※ 데이터 100 건을 업로드 하시겠습니까?</strong>&nbsp;&nbsp;
+              <a href="#" class="btn_cancel">이전</a>
+              <a href="#" class="btn_save">업로드</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

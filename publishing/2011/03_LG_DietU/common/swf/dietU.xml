@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dietU>
+	<appList>
+		<app name="필라테스" imgUrl="common/swf/imgs/app0.png" url="0" target="_self" />
+		<app name="순환운동" imgUrl="common/swf/imgs/app1.png" url="1" target="_self" />
+		<app name="틈새운동" imgUrl="common/swf/imgs/app2.png" url="2" target="_self" />
+		<app name="다이어트요가" imgUrl="common/swf/imgs/app3.png" url="3" target="_self" />
+		<app name="비키니운동" imgUrl="common/swf/imgs/app4.png" url="4" target="_self" />
+	</appList>
+
+	<leftContents>
+		<findStore name="매장검색" url="" target="_self"/>
+		<soulFood name="아름다운 채식이야기" url="" target="_self"/>
+	</leftContents>
+	<rightContents>
+		<download name="헬C노트" url="" target="_self"/>
+	</rightContents>
+	<utils>
+		<login name="LOGIN" url="" target="_self"/>
+		<logout name="LOGOUT" url="" target="javascript"/>
+		<myDietU name="MY Diet U" url="" target="_self"/>
+		<join name="JOIN" url="" target="_self"/>
+		<siteMap name="SITEMAP" url="" target="_self"/>
+	</utils>
+	<gnb>
+		<home name="HOME" url="/" target="_self" />	
+		<main name="DietU?" url="dietu/dietu.html" target="_self" />
+		<main name="U SERVICE" url="service/health_note.html" target="_self" />
+		<main name="SUPPORT" url="support/notice.html" target="_self">
+			<sub name="NOTICE" url="support/notice.html" target="_self"/>
+			<sub name="EVENT" url="support/event.html" target="_self"/>
+			<sub name="FAQ" url="support/faq.html" target="_self"/>
+			<sub name="Q&A" url="support/qa.html" target="_self"/>
+		</main>
+	</gnb>
+	<footer>
+		<item name="이용약관" url="util/guide_clause.html" target="_self"/>
+		<item name="개인정보취급방침" url="util/guide_information.html" target="_self"/>
+		<item name="이메일무단수집거부" url="util/guide_email_refusal.html" target="_self"/>
+	</footer>
+	
+	<subBgs>
+		<subBg name="퍼즐" swfUrl="../common/swf/bg/bg0.swf" />
+		<subBg name="열쇠" swfUrl="../common/swf/bg/bg1.swf" />
+		<subBg name="큐브" swfUrl="../common/swf/bg/bg2.swf" />
+		<subBg name="유플러스" swfUrl="../common/swf/bg/bg3.swf" />
+	</subBgs>
+</dietU>

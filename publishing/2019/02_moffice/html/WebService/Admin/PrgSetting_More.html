@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>시스템 환경 설정</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 1024*422 -->
+  <body class="popup" style="width: 1024px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>시스템 환경 설정</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents">
+        <!-- program_setting -->
+        <div class="program_setting">
+          <!-- tbl_row_program -->
+          <div class="tbl_row_prorgam">
+            <table>
+              <colgroup>
+                <col style="width: 158px" />
+                <col style="width: auto" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">에이전트 시간 변경</th>
+                  <td>
+                    <div class="box">
+                      <input type="radio" id="" name="" value="" /><label for="">동기화함</label>
+                      <input type="radio" id="" name="" value="" /><label for="">동기화안함</label>
+                      <p class="txt_tip">
+                        * 시간 동기화를 하는 경우 에이전트가 설치된 PC의 시간이 서버의 시간대로 재설정됩니다.
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">에이전트 통신 주기</th>
+                  <td>
+                    <div class="box_input pl0">
+                      <input type="text" name="" value="60" title="초 입력" class="center mr4" style="width: 60px" />
+                      초 (최소 60초(1분) ~ 최대 3600초(1시간))
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">긴급 해제 설정</th>
+                  <td>
+                    <div class="inner_box">
+                      <input type="radio" id="" name="" value="" /><label for="">사용안함</label>
+                      <input type="radio" id="" name="" value="" /><label for="">사용함</label>
+                    </div>
+                    <div class="inner_box box_input">
+                      상시ON 서버 주소
+                      <input
+                        type="text"
+                        name=""
+                        value=""
+                        disabled="disabled"
+                        title="상시ON 서버 주소 입력"
+                        class="ml4"
+                        style="width: 591px"
+                      />
+                    </div>
+                    <div class="inner_box box_input pl0">
+                      <input
+                        type="text"
+                        name=""
+                        value="5"
+                        disabled="disabled"
+                        title="분 입력"
+                        class="center mr4"
+                        style="width: 60px"
+                      />
+                      분 이상 상시ON 서버는 정상이나 PC-OFF서버가 정상이 아닌 경우 차단창 자동해제
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_row_program -->
+        </div>
+        <!-- //program_setting -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">설정 적용</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

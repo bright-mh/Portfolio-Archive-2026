@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>위젯 신규등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+
+        //파일 업로드
+        var fileTarget = $(".filebox .file_hidden");
+
+        fileTarget.on("change", function () {
+          if (window.FileReader) {
+            // modern browser
+            var filename = $(this)[0].files[0].name;
+          } else {
+            // old IE
+            var filename = $(this).val().split("/").pop().split("\\").pop();
+          }
+
+          $(this).siblings(".file_name").val(filename);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb5:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(4)").addClass("on");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(4)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb5">
+                <a href="#">프로모션 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">팝업관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">팝업관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Push 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">Push 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이벤트 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이벤트 배너관리</a></li>
+                      <li><a href="#">이달의 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 티켓관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">추천앱 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">추천앱 배너관리</a></li>
+                      <li><a href="#">추천앱 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">위젯관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">위젯관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>프로모션 관리</span>
+              <span>위젯관리</span>
+              <span>위젯관리</span>
+              <strong>위젯 신규등록</strong>
+            </div>
+            <h3 class="tit">위젯 신규등록</h3>
+
+            <!-- 위젯 신규등록 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >타이틀 명, 카테고리, 부가설명, 노출기간, 이미지, 이동경로, 노출순서, 노출 설정이 있는 위젯
+                      신규등록 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="title" class="ess">타이틀 명</label>
+                      </th>
+                      <td>
+                        <input type="text" id="title" class="wid_per80" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="category" class="ess">카테고리</label>
+                      </th>
+                      <td>
+                        <select id="category" style="width: 120px">
+                          <option>웰컴킷</option>
+                          <option>이벤트</option>
+                          <option>오늘의 추천</option>
+                        </select>
+                        <span class="caution caution_left"
+                          >카테고리 설정에 따라 하단 이동경로의 설정이 변경 됩니다.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="description" class="ess">부가설명</label>
+                      </th>
+                      <td>
+                        <input type="text" id="description" class="wid_per80" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">노출기간</span>
+                      </th>
+                      <td>
+                        <input
+                          type="text"
+                          title="기간 검색 시작일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        <select style="width: 88px">
+                          <option>00시</option>
+                          <option>01시</option>
+                          <option>02시</option>
+                          <option>03시</option>
+                          <option>04시</option>
+                          <option>05시</option>
+                          <option>06시</option>
+                          <option>07시</option>
+                          <option>08시</option>
+                          <option>09시</option>
+                          <option>10시</option>
+                          <option>11시</option>
+                          <option>12시</option>
+                          <option>13시</option>
+                          <option>14시</option>
+                          <option>15시</option>
+                          <option>16시</option>
+                          <option>17시</option>
+                          <option>18시</option>
+                          <option>19시</option>
+                          <option>20시</option>
+                          <option>21시</option>
+                          <option>22시</option>
+                          <option>23시</option>
+                        </select>
+                        <select style="width: 88px">
+                          <option>00분</option>
+                          <option>10분</option>
+                          <option>20분</option>
+                          <option>30분</option>
+                          <option>40분</option>
+                          <option>50분</option>
+                        </select>
+                        &nbsp;~&nbsp;
+                        <input
+                          type="text"
+                          title="기간 검색 종료일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        <select style="width: 88px">
+                          <option>00시</option>
+                          <option>01시</option>
+                          <option>02시</option>
+                          <option>03시</option>
+                          <option>04시</option>
+                          <option>05시</option>
+                          <option>06시</option>
+                          <option>07시</option>
+                          <option>08시</option>
+                          <option>09시</option>
+                          <option>10시</option>
+                          <option>11시</option>
+                          <option>12시</option>
+                          <option>13시</option>
+                          <option>14시</option>
+                          <option>15시</option>
+                          <option>16시</option>
+                          <option>17시</option>
+                          <option>18시</option>
+                          <option>19시</option>
+                          <option>20시</option>
+                          <option>21시</option>
+                          <option>22시</option>
+                          <option>23시</option>
+                        </select>
+                        <select style="width: 88px">
+                          <option>00분</option>
+                          <option>10분</option>
+                          <option>20분</option>
+                          <option>30분</option>
+                          <option>40분</option>
+                          <option>50분</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="image" class="ess">이미지</label>
+                      </th>
+                      <td>
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="push 이미지" width="320" height="246" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice">파일선택</label>
+                            <input type="file" id="file_choice" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>OOO*OOOpx의 PNG 파일업로드</li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이동경로</span>
+                      </th>
+                      <td>
+                        <select title="이동경로" style="width: 140px">
+                          <option selected="selected">추천 App 관리</option>
+                          <option>외부링크</option>
+                        </select>
+                        &nbsp;&nbsp;
+                        <span>
+                          <a href="#" class="link" target="_blank" title="새창 열림">할인과 결제를 한 번에, T페이</a
+                          >&nbsp;
+                          <a href="#" class="btn_small">삭제</a>
+                        </span>
+                        &nbsp;&nbsp;<a href="#" class="btn_small" target="_blank" title="새창 열림">추천 App 조회</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이동경로</span>
+                      </th>
+                      <td>
+                        <select title="이동경로" style="width: 140px">
+                          <option>추천 App 관리</option>
+                          <option selected="selected">외부링크</option>
+                        </select>
+                        &nbsp;&nbsp;
+                        <input type="text" class="wid_per50" title="외부링크" value="http://" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이동경로</span>
+                      </th>
+                      <td>
+                        <span class="selected">
+                          <a href="#" class="link" target="_blank" title="새창 열림">T life 오픈 이벤트 안내</a>&nbsp;
+                          <a href="#" class="btn_small">삭제</a>
+                        </span>
+                        &nbsp;&nbsp;<a href="#" class="btn_small" target="_blank" title="새창 열림">이벤트 선택</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이동경로</span>
+                      </th>
+                      <td>
+                        <span class="selected">
+                          <a href="#" class="link" target="_blank" title="새창 열림">더운 여름 밤에도 치늬님은 진리</a
+                          >&nbsp;
+                          <a href="#" class="btn_small">삭제</a>
+                        </span>
+                        &nbsp;&nbsp;<a href="#" class="btn_small" target="_blank" title="새창 열림">혜택선택</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="index_num">노출순서</label></th>
+                      <td>등록하는 콘텐츠는 &nbsp;<input type="text" id="index_num" /> 번째로 노출</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">노출 설정</span>
+                      </th>
+                      <td>
+                        <input type="radio" id="exposure1" name="exposure" checked="checked" /><label
+                          for="exposure1"
+                          class="radio_range"
+                          >Y</label
+                        >
+                        <input type="radio" id="exposure2" name="exposure" /><label for="exposure2" class="radio_range"
+                          >N</label
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_cancel">취소</a>
+                  <a href="#" class="btn_save">저장</a>
+                </div>
+              </div>
+            </div>
+            <!-- //위젯 신규등록 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

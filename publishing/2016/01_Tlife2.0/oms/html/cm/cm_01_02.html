@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>유료 쿠폰 발급현황 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb3:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(0)>ul>li:eq(1)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb3">
+                <a href="#">쿠폰 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">쿠폰 발급현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">무료 쿠폰 발급현황</a></li>
+                      <li><a href="#">유료 쿠폰 발급현황</a></li>
+                      <li><a href="#">디지털 콘텐츠 발급 현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">쿠폰 획득현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">쿠폰 획득현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">정산관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">대사내역</a></li>
+                      <li><a href="#">정산현황</a></li>
+                      <li><a href="#">수수료 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>쿠폰 관리</span>
+              <span>쿠폰 발급현황</span>
+              <strong>유료 쿠폰 발급현황</strong>
+            </div>
+            <h3 class="tit">유료 쿠폰 발급현황</h3>
+
+            <!-- 유료 쿠폰 발급현황 검색 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >카테고리, 획득일자, 결제완료일자, 결제수단, 쿠폰상태, 상세검색이 있는 유료 쿠폰 발급현황 검색
+                      입력 서식</strong
+                    >
+                    <details>
+                      <summary></summary>
+                    </details>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">카테고리</th>
+                      <td>
+                        <select title="카테고리 첫번째" style="width: 150px" disabled="disabled">
+                          <option>생활쿠폰</option>
+                        </select>
+                        &nbsp;&gt;&nbsp;
+                        <select title="카테고리 두번째 선택" style="width: 150px">
+                          <option>전체</option>
+                          <option>커피/음료</option>
+                          <option>푸드/외식</option>
+                          <option>뷰티/쇼핑</option>
+                          <option>문화/기타</option>
+                        </select>
+                        &nbsp;&gt;&nbsp;
+                        <select title="카테고리 세번째" style="width: 150px" disabled="disabled">
+                          <option>유료</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">획득일자</th>
+                      <td>
+                        <input type="text" title="획득일자 시작일" value="2016-11-01" class="wid_calendar pickerArea" />
+                        &nbsp;~&nbsp;
+                        <input type="text" title="획득일자 종료일" value="2016-11-01" class="wid_calendar pickerArea" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">결제완료일자</th>
+                      <td>
+                        <input
+                          type="text"
+                          title="결제완료일자 시작일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        &nbsp;~&nbsp;
+                        <input
+                          type="text"
+                          title="결제완료일자 종료일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">결제수단</th>
+                      <td>
+                        <input type="checkbox" id="credit_card" checked="checked" /><label
+                          for="credit_card"
+                          class="radio_range"
+                          >신용카드</label
+                        >
+                        <input type="checkbox" id="cellphone" checked="checked" /><label
+                          for="cellphone"
+                          class="radio_range"
+                          >휴대폰</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">쿠폰상태</th>
+                      <td>
+                        <select title="쿠폰상태 선택" style="width: 150px">
+                          <option>전체</option>
+                          <option>획득완료</option>
+                          <option>결제불가</option>
+                          <option>결제완료</option>
+                          <option>주문취소</option>
+                          <option>주문취소(환불)</option>
+                          <option>결제취소</option>
+                          <option>결제취소(환불)</option>
+                          <option>주문완료</option>
+                          <option>환불접수</option>
+                          <option>환불반려</option>
+                          <option>환불진행</option>
+                          <option>환불완료</option>
+                          <option>실패</option>
+                          <option>사용완료</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="details_search">상세검색</label></th>
+                      <td>
+                        <select id="details_search" style="width: 150px">
+                          <option selected="selected">전체</option>
+                          <option>쿠폰ID</option>
+                          <option>관리쿠폰명</option>
+                          <option>T아이디</option>
+                          <option>닉네임</option>
+                          <option>쿠폰주문번호(TRID)</option>
+                          <option>결제 주문번호</option>
+                        </select>
+                        <input type="text" title="상세 검색어 입력" class="wid_per50" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_delete">초기화</a>
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+            <!-- //유료 쿠폰 발급현황 검색 테이블 -->
+
+            <!-- 유료 쿠폰 발급현황 리스트 목록 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <p class="total_num">총 건수 : <strong>00</strong> 건</p>
+                <div class="sel_box">
+                  <a href="#" class="btn_long btn_excel">엑셀 다운로드</a>
+                  <select>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <div>
+                  <table class="tbl_list">
+                    <caption>
+                      <strong
+                        >번호, 쿠폰ID, 카테고리, 관리쿠폰명, T아이디, 닉네임, 획득일시, 획득방법, 결제일시,
+                        결제주문번호, 결제수단, 결제금액, 쿠폰주문번호(TRID), 쿠폰상태, 처리일시 정보가 있는 유료 쿠폰
+                        발급현황 리스트</strong
+                      >
+                    </caption>
+                    <colgroup>
+                      <col style="width: 50px" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: 120px" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: 115px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">쿠폰ID</th>
+                        <th scope="col">카테고리</th>
+                        <th scope="col">관리쿠폰명</th>
+                        <th scope="col">T아이디</th>
+                        <th scope="col">닉네임</th>
+                        <th scope="col">획득일시</th>
+                        <th scope="col">획득방법</th>
+                        <th scope="col">결제일시</th>
+                        <th scope="col">결제주문번호</th>
+                        <th scope="col">결제수단</th>
+                        <th scope="col">결제금액</th>
+                        <th scope="col">쿠폰주문번호<br />(TRID)</th>
+                        <th scope="col">쿠폰상태</th>
+                        <th scope="col">처리일시</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- [D] 내용이 없을 시, -->
+                      <tr>
+                        <td colspan="16">검색 결과가 없습니다.</td>
+                      </tr>
+                      <tr>
+                        <td class="num">20</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>결제대기</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">19</td>
+                        <td>TL_789456</td>
+                        <td>푸드/외식</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>testid***@nate.com</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>미션도전</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>획득실패</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">18</td>
+                        <td>TL_789456</td>
+                        <td>뷰티/쇼핑</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>신용카드</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>-</td>
+                        <td>결제완료</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">17</td>
+                        <td>TL_789456</td>
+                        <td>뷰티/쇼핑</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>실패</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">16</td>
+                        <td>TL_789456</td>
+                        <td>뷰티/쇼핑</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764065405</td>
+                        <td>실패</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td>
+                          <a href="#" class="btn_small" target="_blank" title="새창 열림">PG결제취소</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="num">15</td>
+                        <td>TL_789456</td>
+                        <td>문화/기타</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>미션도전</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>주문취소(환불)</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td>
+                          <a href="#" class="link">연락처 정보</a>
+                          <a href="#" class="btn_small gap_top" target="_blank" title="새창 열림">환불완료</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="num">14</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>미션도전</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>신용카드</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>결제취소</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td>2016.08.08<br />(jhiuf98)</td>
+                      </tr>
+                      <tr>
+                        <td class="num">13</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>미션도전</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>신용카드</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>-</td>
+                        <td>결제취소</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">12</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>탈퇴회원</td>
+                        <td>-</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>결제취소(환불)</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td>2016.08.08<br />(탈퇴회원)</td>
+                      </tr>
+                      <tr>
+                        <td class="num">11</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>주문취소</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">10</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>신용카드</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>주문완료</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td>
+                          <a href="#" class="btn_small" target="_blank" title="새창 열림">기간연장</a>
+                          <a href="#" class="btn_small gap_top" target="_blank" title="새창 열림">결제취소</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="num">9</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>미션도전</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>환불접수</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td>
+                          <a href="#" class="link block">연락처 정보</a>
+                          <a href="#" class="btn_small gap_top" target="_blank" title="새창 열림">반려</a>
+                          <a href="#" class="btn_small gap_top" target="_blank" title="새창 열림">환불진행</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="num">8</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>미션도전</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>환불반려</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td>2016.08.08<br />(jhiuf98)</td>
+                      </tr>
+                      <tr>
+                        <td class="num">7</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>신용카드</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>환불진행</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td><a href="#" class="link block">연락처 정보</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">6</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>신용카드</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>환불완료</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">5</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>-</td>
+                        <td>실패</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">4</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>휴대폰</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">10,000원</a></td>
+                        <td>764066641</td>
+                        <td>사용완료</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">3</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>결제대기</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">2</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>결제대기</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">1</td>
+                        <td>TL_789456</td>
+                        <td>커피/음료</td>
+                        <td class="left">
+                          <a href="#" class="link" target="_blank" title="새창 열림">스타벅스 아이스 아메리카노</a>
+                        </td>
+                        <td>opiduqkjh***</td>
+                        <td>송승헌</td>
+                        <td>2016.06.30<br />20:00</td>
+                        <td>티켓소진</td>
+                        <td>2016.07.30<br />20:00</td>
+                        <td>tlife_isp_6465983</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>결제대기</td>
+                        <td>
+                          <a href="#" class="link" target="_blank" title="새창 열림">2016.06.30<br />20:00</a>
+                        </td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- paging -->
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+              <!-- //paging -->
+            </div>
+            <!-- //유료 쿠폰 발급현황 리스트 목록 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

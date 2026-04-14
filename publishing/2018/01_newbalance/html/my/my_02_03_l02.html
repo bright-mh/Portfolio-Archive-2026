@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>New Balance Korea</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../../js/html5.js"></script>
+      <script type="text/javascript" src="../../js/ui_ie9.js"></script>
+    <![endif]-->
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+  </head>
+  <body>
+    <!-- dimmed -->
+    <div class="dimm_pop"></div>
+    <!-- // dimmed -->
+    <!-- layer_pop -->
+    <div class="layer_pop w700">
+      <div class="pop_inner mileage_integration">
+        <div class="header">
+          <strong>마일리지 통합</strong>
+        </div>
+        <div class="contents">
+          <!-- FormArea -->
+          <div class="form_area">
+            <fieldset>
+              <legend>상품 문의 입력 양식</legend>
+              <div class="row">
+                <label for="card_num" class="ftit">카드번호</label>
+                <div class="fdata">
+                  <div>
+                    <input id="card_num" type="text" value="" title="파일명" class="ip_text" />
+                    <a href="#none" class="btn_ty_form">추가하기</a>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <!-- // FormArea -->
+
+          <ul class="sub_info">
+            <li>* 사용하실 카드를 하나만 선택해주세요. 선택하신 카드로 마일리지 및 회원정보가 통합됩니다.</li>
+            <li>* 반드시 소지하신 카드와 카드번호가 일치하는지 확인해주세요.</li>
+            <li>* 통합 후 선택하지 않은 카드번호는 사용하실 수 없습니다.</li>
+            <li>* 단, 통합 후에도 과거 6개월 구매내역은 확인 가능합니다.</li>
+          </ul>
+
+          <div class="scroll">
+            <div class="tbl">
+              <table>
+                <caption>
+                  카드 리스트
+                </caption>
+                <colgroup>
+                  <col style="width: 62px" />
+                  <col style="width: *" />
+                  <col style="width: 97px" />
+                  <col style="width: 142px" />
+                  <col style="width: 122px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">선택</th>
+                    <th scope="col">카드번호</th>
+                    <th scope="col">발급일</th>
+                    <th scope="col">발급매장</th>
+                    <th scope="col">보유마일리지</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="5" class="no_data">
+                      <p class="txt01">소지하신 카드번호가 보이지 않으면<br />카드번호를 직접 입력해주세요.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="close"><img src="../../img/common/btn_pop_close.png" alt="팝업 닫기" /></button>
+      </div>
+    </div>
+    <!-- // layer_pop -->
+  </body>
+</html>

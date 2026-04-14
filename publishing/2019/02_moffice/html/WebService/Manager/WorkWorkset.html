@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>근무정책 &gt; 근무정책 관리</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="user_box">
+          <p>지진희 (제이니스)</p>
+        </div>
+        <div class="logo_box">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 30px / 가로크기는 비율로 자동조정 -->
+          <h1>
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 30px" /></a>
+          </h1>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- LNB : left menu -->
+        <nav class="lnb_area">
+          <h2 class="blind">운영자 메뉴</h2>
+          <ul class="lnb_list">
+            <!-- [D] 1Depth 선택 시, li태그에 class="on" 추가 -->
+            <li class="list_basic1">
+              <a href="#none" class="depth1">사내정보</a>
+              <!-- [D] 2Depth 선택 시, li태그에 class="on" 추가 -->
+              <ul>
+                <li><a href="#none">공지사항 관리</a></li>
+                <li><a href="#none">사원정보 관리</a></li>
+                <li><a href="#none">휴일정보 관리</a></li>
+                <li><a href="#none">운영자 관리</a></li>
+                <li><a href="#none">부서별 운영자 관리</a></li>
+                <li><a href="#none">결재자 관리</a></li>
+                <li><a href="#none">그룹 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic2 on">
+              <a href="#none" class="depth1">근무정책</a>
+              <ul>
+                <li class="on"><a href="#none">근무정책 관리</a></li>
+                <li><a href="#none">근무정책 적용</a></li>
+              </ul>
+            </li>
+            <li class="list_basic3">
+              <a href="#none" class="depth1">차단정책</a>
+              <ul>
+                <li><a href="#none">차단정책 관리</a></li>
+                <li><a href="#none">차단정책 적용</a></li>
+                <li><a href="#none">알림창 관리</a></li>
+                <li><a href="#none">차단창 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic4">
+              <a href="#none" class="depth1">제한정책</a>
+              <ul>
+                <li><a href="#none">제한정책 관리</a></li>
+                <li><a href="#none">제한정책 적용</a></li>
+              </ul>
+            </li>
+            <li class="list_basic5">
+              <a href="#none" class="depth1">PC 사용자</a>
+              <ul>
+                <li><a href="#none">비대상자 관리</a></li>
+                <li><a href="#none">차단 예외자 관리</a></li>
+                <li><a href="#none">휴가자 관리</a></li>
+                <li><a href="#none">사용자 초기화 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic6">
+              <a href="#none" class="depth1">PC 사용 현황</a>
+              <ul>
+                <li><a href="#none">미승인 신청 현황</a></li>
+                <li><a href="#none">전체 신청 현황</a></li>
+                <li><a href="#none">PC ON/OFF 조회</a></li>
+                <li><a href="#none">PC-LOG 조회</a></li>
+                <li><a href="#none">PC-IDLE 조회</a></li>
+                <li><a href="#none">자리비움 조회</a></li>
+              </ul>
+            </li>
+            <li class="list_basic7">
+              <a href="#none" class="depth1">통계 현황</a>
+              <ul>
+                <li><a href="#none">PC ON/OFF 통계</a></li>
+                <li><a href="#none">PC 연장사용 통계</a></li>
+                <li><a href="#none">설치현황 통계</a></li>
+              </ul>
+            </li>
+            <li class="list_basic8">
+              <a href="#none" class="depth1">시스템</a>
+              <ul>
+                <li><a href="#none">설치현황 관리</a></li>
+                <li><a href="#none">데몬로그 조회</a></li>
+                <li><a href="#none">프로그램 설정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- //LNB : left menu -->
+
+        <!-- contents -->
+        <div class="contents">
+          <!-- tip area -->
+          <div class="tip_area">
+            <!-- <a href="#none" class="btn_tip">TIP</a> -->
+            <p class="blind">TIP</p>
+            <div class="tip_box">
+              <ul class="tip_list">
+                <li>내용 내용</li>
+              </ul>
+            </div>
+          </div>
+          <!-- //tip area -->
+
+          <h2 class="title_cont">근무정책 관리</h2>
+
+          <!-- top btn area -->
+          <div class="btn_box2 btn_area">
+            <a href="#none" title="새창 열림" class="btn_md icon_md_search_blue">변경기록 조회</a>
+            <a href="#none" title="새창 열림" class="btn_md bg_deepblue icon_md_regist_white4">근무표 추가</a>
+          </div>
+          <!-- //top btn area -->
+
+          <!-- 근무표 영역 -->
+          <div class="work_schedule">
+            <!-- 근무표 -->
+            <div class="grouping_ty1">
+              <div class="title_area clearfix">
+                <h3 class="title_cont2 fl_left"><span class="basic">기본근무표 : 2000명 적용</span></h3>
+                <div class="fl_right">
+                  <a href="#none" title="새창 열림" class="btn_md bg_blue icon_md_copy_white">복제</a>
+                  <a href="#none" title="새창 열림" class="btn_md bg_blue icon_md_update_white">수정</a>
+                </div>
+              </div>
+
+              <!-- tbl_default -->
+              <div class="tbl_default">
+                <table>
+                  <colgroup>
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: auto" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col">토</th>
+                      <th scope="col">일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- [D] 근무 시간이 아닐 경우 td태그에 class="not" / 이전 요일과 이어지는 근무일 경우 td 태그에 class="working" 추가 -->
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="working">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="working">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                    </tr>
+                    <tr>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td>18:00 ~ 00:00</td>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td>18:00 ~ 00:00</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_default -->
+            </div>
+            <!-- //근무표 -->
+            <!-- 근무표 -->
+            <div class="grouping_ty1">
+              <div class="title_area clearfix">
+                <h3 class="title_cont2 fl_left"><span class="use">테스트근무표 : 1명 적용</span></h3>
+                <div class="fl_right">
+                  <a href="#none" class="btn_md icon_md_delete_red">삭제</a>
+                  <a href="#none" title="새창 열림" class="btn_md bg_blue icon_md_copy_white">복제</a>
+                  <a href="#none" title="새창 열림" class="btn_md bg_blue icon_md_update_white">수정</a>
+                </div>
+              </div>
+
+              <!-- tbl_default -->
+              <div class="tbl_default">
+                <table>
+                  <colgroup>
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: auto" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col">토</th>
+                      <th scope="col">일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- [D] 근무 시간이 아닐 경우 td태그에 class="not" / 이전 요일과 이어지는 근무일 경우 td 태그에 class="working" 추가 -->
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="working">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="working">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                    </tr>
+                    <tr>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td>18:00 ~ 00:00</td>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td>18:00 ~ 00:00</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_default -->
+            </div>
+            <!-- //근무표 -->
+            <!-- 근무표 -->
+            <div class="grouping_ty1">
+              <div class="title_area clearfix">
+                <h3 class="title_cont2 fl_left">테스트근무표 : 1명 적용</h3>
+                <div class="fl_right">
+                  <a href="#none" class="btn_md icon_md_delete_red">삭제</a>
+                  <a href="#none" title="새창 열림" class="btn_md bg_blue icon_md_copy_white">복제</a>
+                  <a href="#none" title="새창 열림" class="btn_md bg_blue icon_md_update_white">수정</a>
+                </div>
+              </div>
+
+              <!-- tbl_default -->
+              <div class="tbl_default">
+                <table>
+                  <colgroup>
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: auto" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col">토</th>
+                      <th scope="col">일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- [D] 근무 시간이 아닐 경우 td태그에 class="not" / 이전 요일과 이어지는 근무일 경우 td 태그에 class="working" 추가 -->
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="working">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                      <td class="working">00:00 ~ 09:00</td>
+                      <td class="not">00:00 ~ 09:00</td>
+                    </tr>
+                    <tr>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td>09:00 ~ 18:00</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td>18:00 ~ 00:00</td>
+                      <td class="not">18:00 ~ 00:00</td>
+                      <td>18:00 ~ 00:00</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_default -->
+            </div>
+            <!-- //근무표 -->
+          </div>
+          <!-- //근무표 영역 -->
+
+          <!-- TOP btn -->
+          <a href="#none" class="btn_top">TOP</a>
+          <!-- //TOP btn -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>T open page Mobile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      body {
+        font-size: 12pt;
+        font-family: Dotum, Helvetica, AppleGothic, Sans-serif;
+      }
+      .b {
+        font-weight: bold;
+      }
+      .bb {
+        font-weight: bold;
+        font-size: 11pt;
+      }
+      ul.ing {
+        height: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul.ing li {
+        float: left;
+        margin-right: 5px;
+      }
+      ul.ing li div.link {
+        width: 160px;
+        font-size: 0.7em;
+        padding: 5px 0 3px 0;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      ul.notice {
+        margin-top: 0;
+        padding-left: 0;
+      }
+      ul.notice li {
+        font-size: 12px;
+        color: #777;
+        padding-left: 20px;
+        list-style: none;
+        text-indent: -10px;
+        line-height: 1.5;
+      }
+      ul.notice li.title {
+        color: #333;
+        font-size: 13px;
+        padding-bottom: 8px;
+        font-weight: bold;
+      }
+      ul.notice li.doing {
+        color: blue;
+      }
+
+      div.button {
+        text-align: right;
+        padding-bottom: 3px;
+      }
+      div.button div {
+        width: 130px;
+        font-size: 0.7em;
+        padding: 5px 0 3px 0;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      div.button span {
+        color: #0033ff;
+        text-decoration: none;
+      }
+      table.list {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: 1px;
+        background-color: #999;
+        font-size: 0.7em;
+      }
+      table.list thead th {
+        color: #fff;
+        font-size: 110%;
+        padding: 8px 0 6px 0;
+        background-color: #333;
+      }
+      table.list tbody th {
+        color: #555;
+        font-size: 110%;
+        padding: 8px 5px;
+        background-color: #fddfca;
+        vertical-align: top;
+        text-align: left;
+      }
+      table.list tbody th.bgc01 {
+        color: #fff;
+        font-size: 110%;
+        padding: 8px 5px;
+        background-color: #fe6601;
+        vertical-align: top;
+        text-align: left;
+      }
+      table.list tbody th.bgc02 {
+        color: #555;
+        font-size: 110%;
+        padding: 8px 5px;
+        background-color: #f5ece5;
+        vertical-align: top;
+        text-align: left;
+      }
+      table.list tbody td {
+        color: #555;
+        font-weight: normal;
+        padding: 8px 5px;
+        background-color: #ffffff;
+        vertical-align: top;
+        text-align: left;
+      }
+      table.list tbody td.doing a {
+        color: blue !important;
+        font-weight: normal;
+        background-color: #ffffff;
+        vertical-align: top;
+      }
+      table.list tbody td.add {
+        color: blue;
+        text-indent: -9px;
+        padding-left: 14px;
+      }
+      table.list tbody td.add2 {
+        color: red;
+        text-indent: -9px;
+        padding-left: 14px;
+      }
+      table.list tbody td .scr01 {
+        color: skyblue;
+      }
+      table.list tbody td .scr02 {
+        color: hotpink;
+      }
+      table.list tbody td .scr03 {
+        color: orange;
+      }
+      table.list tbody td span.others {
+        color: blue;
+        display: block;
+        text-indent: -11px;
+        padding-left: 11px;
+      }
+      a:link,
+      a:active,
+      a:visited {
+        color: #ec2121;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #ec2121;
+        text-decoration: underline;
+      }
+      span.blue {
+        color: #1d4e9b;
+        font-weight: bold;
+      }
+      a.blue:link,
+      a.blue:active,
+      a.blue:visited {
+        color: #0033ff;
+        text-decoration: none;
+      }
+      a.blue:hover {
+        color: #0033ff;
+        text-decoration: underline;
+      }
+      .link01 a,
+      link01 a:active,
+      link01 a:visited {
+        color: #164fb6;
+        text-decoration: none;
+      }
+      .link01 a:hover {
+        color: #164fb6;
+        text-decoration: underline;
+      }
+      .link02 a,
+      link02 a:active,
+      link02 a:visited {
+        color: #009933;
+        text-decoration: none;
+      }
+      .link02 a:hover {
+        color: #009933;
+        text-decoration: underline;
+      }
+      .goLink {
+        color: #1928a5;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .goLink a {
+        color: #1928a5;
+        text-decoration: underline;
+      }
+
+      .qrwrap {
+        background: #fff;
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        left: 40px;
+        top: 50px;
+        border: 1px solid #ccc;
+      }
+      .color01 {
+        color: purple;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table width="90%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 3px">
+      <tr>
+        <td class="b">T open page</td>
+      </tr>
+    </table>
+
+    <p class="goLink">- Link : <a href="../admin/web_list.html">PC 버전 바로가기</a></p>
+
+    <ul class="notice">
+      <li>- 최초 작성일 : 2013-09-05</li>
+      <li>- 최종 업데이트 : 2013-09-30</li>
+    </ul>
+
+    <table class="list" width="100%" cellpadding="0" cellspacing="1" border="0">
+      <colgroup>
+        <col width="12%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="12%" />
+        <col width="13%" />
+        <col width="13%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>1Depth</th>
+          <th>2Depth</th>
+          <th>3Depth</th>
+          <th>4Depth</th>
+          <th>5Depth</th>
+          <th>Story Board</th>
+          <th>Screen ID</th>
+          <th>HTML</th>
+          <th>Type &amp; 비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="2">main</th>
+          <td rowspan="2"><strong>main</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>front_main</td>
+          <td><a href="front_main.html" target="_blank">2013-09-05</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>검색</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>front_search</td>
+          <td><a href="front_search.html" target="_blank">2013-09-10</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="9">&nbsp;</td>
+        </tr>
+
+        <!-- sub -->
+        <tr>
+          <th rowspan="7">sub</th>
+          <td rowspan="2"><strong>사이트 바로가기</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sub_01</td>
+          <td><a href="sub_01.html" target="_blank">2013-09-05</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>사이트 추가</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sub_01_02</td>
+          <td><a href="sub_01_02.html" target="_blank">2013-09-10</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>날씨</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sub_02</td>
+          <td><a href="sub_02.html" target="_blank">2013-09-12</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>오늘 뭘 듣지?</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sub_03</td>
+          <td><a href="sub_03.html" target="_blank">2013-09-16</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>오늘 하루 특가</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sub_04</td>
+          <td><a href="sub_04.html" target="_blank">2013-09-19</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>화제의 영상</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sub_05</td>
+          <td><a href="sub_05.html" target="_blank">2013-09-23</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>주요 뉴스</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sub_06</td>
+          <td><a href="sub_06.html" target="_blank">2013-09-26</a></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

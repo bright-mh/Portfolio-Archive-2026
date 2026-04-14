@@ -1,0 +1,631 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+    <title>유연근무 Publishing List</title>
+    <style type="text/css">
+      body {
+        overflow-y: scroll;
+      }
+      body,
+      td {
+        margin: 10px;
+        font: 11px dotum;
+        color: #666666;
+      }
+      a:link {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:active {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:visited {
+        text-decoration: underline;
+        color: #464646;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #d20e0e;
+      }
+      ol,
+      li {
+        list-style: none;
+      }
+
+      .colorRed {
+        color: red;
+      }
+      .colorBlue {
+        color: blue;
+      }
+
+      /* index  */
+      .list {
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table tr:hover {
+        background-color: #dbeaf4;
+      }
+      table th {
+        color: #fff;
+        height: 25px;
+        font-size: 11px;
+        background: #000;
+        padding: 2px 0 0 5px;
+        text-align: left;
+      }
+      table td {
+        border-bottom: 1px solid #e3e3e3;
+        color: #333333;
+        font-size: 11px;
+        height: 22px;
+        padding: 2px 0 0 5px;
+        word-wrap: break-word;
+      }
+      table td.one {
+        color: #f50002;
+        font-size: 12px;
+      }
+      table td.modifiDate div {
+        margin-top: 5px;
+      }
+      table td.modifiDate div:first-child {
+        margin-top: 0;
+      }
+      span.lt {
+        text-decoration: line-through;
+      }
+      table td.gr {
+        color: #008400;
+      }
+      table td.folder {
+        font-family: verdana;
+      }
+      table td.filename {
+        font-family: verdana;
+        color: #aaa;
+      }
+      table td.type {
+        font-family: verdana;
+        color: #1928a5;
+      }
+      table td.depth {
+        font-weight: bold;
+      }
+      .delete * {
+        color: #ccc !important;
+        text-decoration: line-through;
+      }
+      .tab {
+        color: #ffffff;
+        font-size: 12px;
+        background: #6ba5d0;
+        padding: 2px 5px 1px;
+        text-align: center;
+        border-left: 1px solid #e3e3e3;
+        font-weight: bold;
+        line-height: 1;
+      }
+      .tab a:link {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:visited {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:active {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .tab a:hover {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .total {
+        color: #666666;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 5px 0 10px 0;
+        padding: 0;
+      }
+      .menu {
+        color: #000;
+        height: 25px;
+        font-size: 11px;
+        background: #d9d9d9;
+        padding: 2px 0 0 5px;
+        text-align: left;
+        font-weight: bold;
+      }
+      .goLink {
+        color: #1928a5;
+        font-size: 12px;
+      }
+      .goLink a {
+        color: #1928a5;
+      }
+      .line {
+        border-top: 3px solid #e3e3e3;
+      }
+      .modi_date {
+        display: block;
+        color: blue;
+      }
+
+      .btn_toggle {
+        display: block;
+        height: 17px;
+        padding-top: 5px;
+        color: #145383 !important;
+      }
+      .toggle {
+        display: none;
+        margin-top: 10px;
+      }
+      .toggle.on {
+        display: block;
+      }
+      a.btn_all:link,
+      a.btn_all:active,
+      a.btn_all:visited,
+      a.btn_all:hover {
+        color: #fff !important;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        toggleClick();
+      });
+
+      // func toggleClick()
+      function toggleClick() {
+        var $btnToggle = $(".btn_toggle");
+        var $btnAll = $(".btn_all");
+
+        if (!($btnToggle.length || $btnAll.length)) {
+          return;
+        }
+
+        // 함수 호출
+        basic();
+
+        // func 초기화
+        function basic() {
+          $btnToggle.each(function () {
+            if ($(this).text() == "내용 닫기") {
+              $(this).next(".toggle").show().addClass("on");
+            } else {
+              $(this).next(".toggle").hide().removeClass("on");
+            }
+          });
+        }
+
+        //세부 열기
+        $btnToggle.on("click", function () {
+          if ($(this).next(".toggle").hasClass("on")) {
+            $(this).text("내용 보기");
+            $(this).next(".toggle").slideUp(400).removeClass("on");
+          } else {
+            $(this).text("내용 닫기");
+            $(this).next(".toggle").slideDown(400).addClass("on");
+          }
+        });
+
+        //전체 열기
+        $(".btn_all").on("click", function () {
+          $(this).toggleClass("on");
+
+          if ($(this).hasClass("on")) {
+            $(this).text("전체 닫기");
+            $btnToggle.text("내용 닫기");
+          } else {
+            $(this).text("전체 열기");
+            $btnToggle.text("내용 보기");
+          }
+          basic();
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="total">
+      <strong style="color: #f50002">유연근무 Publishing List</strong>
+      <!-- <p class="goLink">- <a href="WebService/m/index.html">mobile 버전 바로가기</a></p> -->
+    </div>
+    <div id="list">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <colgroup>
+          <col width="120px" />
+          <col width="*" />
+          <col width="*" />
+          <col width="*" />
+          <col width="*" />
+          <col width="7%" />
+          <col width="7%" />
+          <col width="7%" />
+          <col width="7%" />
+          <col width="13%" />
+        </colgroup>
+        <tr>
+          <th>1Depth</th>
+          <th>2Depth</th>
+          <th>3Depth</th>
+          <th>4Depth</th>
+          <th>5Depth</th>
+          <th>6Depth</th>
+          <th>Type</th>
+          <th>File-name</th>
+          <th>완료일</th>
+          <th>수정 및 비고 (<a href="#none" class="btn_all">전체 열기</a>)</th>
+        </tr>
+        <!-- 유연근무 -->
+        <!-- <tr>
+				<td colspan="11" class="menu">유연근무</td>
+			</tr> -->
+        <tr>
+          <td class="one">유연근무</td>
+          <td class="two">근무일정확인</td>
+          <td class="three"></td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./html/flexible_status.html" target="_blank">flexible_status</a></td>
+          <td class="creationDate">2019-09-23</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2019-09-25</span>
+                -달력 > '토요일' td태그에 class="last" 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-02</span>
+                -header 영역 수정
+              </div>
+              <div>
+                <span class="modi_date">2019-12-02</span>
+                -하단 연장시간 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-12-04</span>
+                -달력 내, 시간표기 2개 이상일 경우 추가
+              </div>
+              <div>
+                <span class="modi_date">2020-01-06</span>
+                -휴가&출장 추가 및 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">유연근무신청</td>
+          <td class="three">목록</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type">레이어 팝업 포함</td>
+          <td class="filename">
+            <a href="./html/flexible_application_01.html" target="_blank">flexible_application_01</a>
+          </td>
+          <td class="creationDate">2019-09-23</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2019-09-25</span>
+                -도움말 레이어 팝업 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-02</span>
+                -header 영역 수정<br />
+                -tab & 타이틀 영역 추가<br />
+                -근무에 따른 적용조건 case 정리 및 추가<br />
+                -근무시간 총량 텍스트 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-07</span>
+                -tab 타이틀명 수정
+              </div>
+              <div>
+                <span class="modi_date">2019-10-15</span>
+                -조건부 라디오버튼 영역 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-22</span>
+                -도움말 레이어팝업 : 버전별 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-11-08</span>
+                -[유연근무 만들기] 버튼 disabled 버전 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-12-04</span>
+                -[간편등록/사용자지정등록] 버튼 추가
+              </div>
+              <div>
+                <span class="modi_date">2020-01-06</span>
+                -휴가&출장 추가 및 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">신청</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename">
+            <a href="./html/flexible_application_02.html" target="_blank">flexible_application_02</a>
+          </td>
+          <td class="creationDate">2019-09-23</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2019-09-25</span>
+                -달력 > '토요일' td태그에 class="last" 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-02</span>
+                -header 영역 수정<br />
+                -달력 영역 내 근무제+날짜 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-23</span>
+                -달력 테이블 체크박스 bg가 있는 span 태그 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-12-02</span>
+                -연장시간 추가
+              </div>
+              <div>
+                <span class="modi_date">2020-01-06</span>
+                -휴가&출장 추가 및 수정
+              </div>
+              <div>
+                <span class="modi_date">2020-01-16</span>
+                -텍스트 삽입 영역 추가
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">대기</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename">
+            <a href="./html/flexible_application_03.html" target="_blank">flexible_application_03</a>
+          </td>
+          <td class="creationDate">2019-09-23</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2019-09-25</span>
+                -달력 > '토요일' td태그에 class="last" 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-02</span>
+                -header 영역 수정<br />
+                -달력 영역 내 근무제+날짜 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-23</span>
+                -달력 테이블 체크박스 bg가 있는 span 태그 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-12-02</span>
+                -하단 연장시간 추가
+              </div>
+              <div>
+                <span class="modi_date">2020-01-06</span>
+                -휴가&출장 추가 및 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">변경</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename">
+            <a href="./html/flexible_application_04.html" target="_blank">flexible_application_04</a>
+          </td>
+          <td class="creationDate">2019-09-23</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2019-09-25</span>
+                -달력 > '토요일' td태그에 class="last" 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-10-02</span>
+                -header 영역 수정<br />
+                -달력 영역 내 근무제+날짜 추가<br />
+                -근무시간 변경 후, 달력 내 변경 부분 표시
+              </div>
+              <div>
+                <span class="modi_date">2019-10-23</span>
+                -달력 테이블 체크박스 bg가 있는 span 태그 추가
+              </div>
+              <div>
+                <span class="modi_date">2019-12-02</span>
+                -연장시간 추가
+              </div>
+              <div>
+                <span class="modi_date">2020-01-06</span>
+                -휴가&출장 추가 및 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">휴가신청</td>
+          <td class="three">신청</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./html/VacationView_01.html" target="_blank">VacationView_01</a></td>
+          <td class="creationDate">2020-01-06</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 닫기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2020-01-30</span>
+                -휴가시간 추가
+              </div>
+              <div>
+                <span class="modi_date">2020-02-06</span>
+                -ver.1.7 적용
+              </div>
+              <div>
+                <span class="modi_date">2020-02-19</span>
+                -휴가시간 셀렉트 박스 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">내역</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./html/VacationView_02.html" target="_blank">VacationView_02</a></td>
+          <td class="creationDate">2020-01-06</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2020-01-30</span>
+                -기간 : 달력에서 날짜 선택으로 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">조회</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./html/VacationView_03.html" target="_blank">VacationView_03</a></td>
+          <td class="creationDate">2020-01-06</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 닫기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2020-01-30</span>
+                -휴가시간 추가
+              </div>
+              <div>
+                <span class="modi_date">2020-02-06</span>
+                -ver.1.7 적용
+              </div>
+              <div>
+                <span class="modi_date">2020-02-19</span>
+                -휴가시간 셀렉트 박스 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two">출장신청</td>
+          <td class="three">신청</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./html/BizException_01.html" target="_blank">BizException_01</a></td>
+          <td class="creationDate">2020-01-06</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2020-02-06</span>
+                -ver.1.7 적용
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">내역</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./html/BizException_02.html" target="_blank">BizException_02</a></td>
+          <td class="creationDate">2020-01-06</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2020-02-11</span>
+                -기간 : 달력에서 날짜 선택으로 수정
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one"></td>
+          <td class="two"></td>
+          <td class="three">조회</td>
+          <td class="four"></td>
+          <td class="five"></td>
+          <td class="six"></td>
+          <td class="type"></td>
+          <td class="filename"><a href="./html/BizException_03.html" target="_blank">BizException_03</a></td>
+          <td class="creationDate">2020-01-06</td>
+          <td class="modifiDate">
+            <a href="#none" class="btn_toggle">내용 보기</a>
+            <div class="toggle">
+              <div>
+                <span class="modi_date">2020-02-06</span>
+                -ver.1.7 적용
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="height: 50px"></div>
+  </body>
+</html>

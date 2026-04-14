@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>New Balance Korea</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+    <!-- <link rel="stylesheet" href="../../css/rangeslider.css" /> -->
+  </head>
+  <body>
+    <div class="layer_wrap">
+      <div class="pop_inner">
+        <div class="header">
+          <strong>리뷰작성</strong>
+          <a href="#none" class="pop_close"><span class="blind">닫기</span></a>
+        </div>
+        <div class="contents">
+          <div class="inner">
+            <div class="form_area review">
+              <fieldset>
+                <legend>상품리뷰 작성 양식</legend>
+                <div class="row star_rating">
+                  <strong class="ftit">평가 <em class="compulsory">필수</em></strong>
+                  <div class="star">
+                    <input type="range" min="0" max="5" step="0.5" value="3" class="ip_range" data-rangeslider />
+                  </div>
+                </div>
+                <div class="row round_rating">
+                  <strong class="ftit">사이즈 <em class="compulsory">필수</em></strong>
+                  <div class="round">
+                    <div class="chk">
+                      <span><input type="radio" id="size1" name="pr_size" checked /><label for="size1"></label></span>
+                      <span><input type="radio" id="size2" name="pr_size" /><label for="size2"></label></span>
+                      <span><input type="radio" id="size3" name="pr_size" /><label for="size3"></label></span>
+                      <span><input type="radio" id="size4" name="pr_size" /><label for="size4"></label></span>
+                      <span><input type="radio" id="size5" name="pr_size" /><label for="size5"></label></span>
+                    </div>
+                    <div class="txt"><span class="fl">작음</span><span class="fr">큼</span></div>
+                  </div>
+                </div>
+                <div class="row round_rating">
+                  <strong class="ftit">발볼 <em class="compulsory">필수</em></strong>
+                  <div class="round">
+                    <div class="chk">
+                      <span><input type="radio" id="wide1" name="pr_wide" /><label for="wide1"></label></span>
+                      <span><input type="radio" id="wide2" name="pr_wide" /><label for="wide2"></label></span>
+                      <span><input type="radio" id="wide3" name="pr_wide" /><label for="wide3"></label></span>
+                      <span><input type="radio" id="wide4" name="pr_wide" /><label for="wide4"></label></span>
+                      <span><input type="radio" id="wide5" name="pr_wide" checked /><label for="wide5"></label></span>
+                    </div>
+                    <div class="txt"><span class="fl">좁음</span><span class="fr">넓음</span></div>
+                  </div>
+                </div>
+                <div class="row round_rating">
+                  <strong class="ftit">색상 <em class="compulsory">필수</em></strong>
+                  <div class="round">
+                    <div class="chk">
+                      <span><input type="radio" id="color1" name="pr_color" /><label for="color1"></label></span>
+                      <span><input type="radio" id="color2" name="pr_color" /><label for="color2"></label></span>
+                      <span
+                        ><input type="radio" id="color3" name="pr_color" checked /><label for="color3"></label
+                      ></span>
+                      <span><input type="radio" id="color4" name="pr_color" /><label for="color4"></label></span>
+                      <span><input type="radio" id="color5" name="pr_color" /><label for="color5"></label></span>
+                    </div>
+                    <div class="txt"><span class="fl">화면보다 어두움</span><span class="fr">화면보다 밝음</span></div>
+                  </div>
+                </div>
+                <div class="row round_rating">
+                  <strong class="ftit">배송 <em class="compulsory">필수</em></strong>
+                  <div class="round">
+                    <div class="chk">
+                      <span
+                        ><input type="radio" id="delivery1" name="pr_delivery" /><label for="delivery1"></label
+                      ></span>
+                      <span
+                        ><input type="radio" id="delivery2" name="pr_delivery" checked /><label for="delivery2"></label
+                      ></span>
+                      <span
+                        ><input type="radio" id="delivery3" name="pr_delivery" /><label for="delivery3"></label
+                      ></span>
+                      <span
+                        ><input type="radio" id="delivery4" name="pr_delivery" /><label for="delivery4"></label
+                      ></span>
+                      <span
+                        ><input type="radio" id="delivery5" name="pr_delivery" /><label for="delivery5"></label
+                      ></span>
+                    </div>
+                    <div class="txt"><span class="fl">느림</span><span class="fr">빠름</span></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label for="review_title" class="ftit">제목 <em class="compulsory">필수</em></label>
+                  <div class="fdata">
+                    <input
+                      type="text"
+                      id="review_title"
+                      class="ip_text"
+                      placeholder="제목을 입력해주세요."
+                      value="따뜻하고 좋아요"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="review_rate" class="ftit">상품평 <em class="compulsory">필수</em></label>
+                  <div class="fdata">
+                    <textarea
+                      id="review_rate"
+                      class="ip_textarea"
+                      cols="30"
+                      rows="5"
+                      placeholder="상품평을 입력해주세요.  자세한 상품평은 다른 고객들의 구매에 도움이 됩니다."
+                    >
+가볍고 따뜻해요 무난하고 잘입을게요. 색상을 밝은편 입니다. </textarea
+                    >
+                  </div>
+                </div>
+                <div class="row">
+                  <strong class="ftit">고객정보</strong>
+                  <div class="fdata select_col2">
+                    <div class="col">
+                      <span class="select_box">
+                        <select title="고객 키">
+                          <option value="키">키</option>
+                          <option value="160">160</option>
+                          <option value="170">170</option>
+                          <option value="180">180</option>
+                        </select>
+                      </span>
+                    </div>
+                    <div class="col">
+                      <span class="select_box">
+                        <select title="고객 몸무게">
+                          <option value="몸무게">몸무게</option>
+                          <option value="40">40</option>
+                          <option value="50">50</option>
+                          <option value="60">60</option>
+                        </select>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row add_file">
+                  <strong class="ftit">사진첨부</strong>
+                  <div class="fdata">
+                    <em class="btn_add_file" style="display: none"
+                      ><span class="blind">파일찾기</span><input type="file"
+                    /></em>
+
+                    <div class="add_img">
+                      <!-- [D] 추가한 이미지 영역-->
+                      <p class="img">
+                        <img src="../../img/dummy/img_main_collection03.png" alt="" style="margin-left: -43px" />
+                      </p>
+                      <!-- [D] 이미지 사이즈에 50%를 margin-left:-px" -->
+                      <span class="file_n">Image1.jpg</span>
+                      <a href="#none" class="delete"><span class="blind">삭제</span></a>
+                    </div>
+
+                    <p class="mbyte">파일첨부 용량 19MB/20MB</p>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="btn_area">
+              <div class="col2">
+                <a href="#none" class="btn_ty_bline basic">취소하기</a>
+                <a href="#none" class="btn_ty_bface basic">등록하기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(function () {
+            var selector = "[data-rangeslider]";
+            var $element = $(selector);
+            $element.rangeslider({ polyfill: false });
+
+            /*
+
+				var range = $('.ip_range');
+
+				range.change(function(){
+					var bar = $('.rangeslider').outerWidth();
+					var fill = $('.rangeslider__fill').outerWidth();
+					//console.log('bar'+ bar + ', fill:'+fill);
+					//$('.star_rating').append('<p> bar:'+ bar + ', fill:'+fill+'</p>');
+				});*/
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

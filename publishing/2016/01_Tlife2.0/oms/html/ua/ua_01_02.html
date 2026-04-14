@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UA 관리 상세 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb3:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(0)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb3">
+                <a href="#">UA 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">UA 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">UA 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>UA 관리</span>
+              <span>UA 관리</span>
+              <strong>UA 관리 상세</strong>
+            </div>
+            <h3 class="tit">UA 관리 상세</h3>
+
+            <!-- UA 관리 리스트 목록 -->
+            <div class="table_list">
+              <h4 class="tit2">기본정보</h4>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>기본정보</strong>
+                    <details>
+                      <summary>메시지ID, 메시지 구분, 메시지 타입, 발송일자 정보를 제공합니다.</summary>
+                    </details>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">메시지ID</th>
+                      <td class="form">MID800</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">메시지 구분</th>
+                      <td class="form">선호 기반</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">메시지 타입</th>
+                      <td class="form">Push Message</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">발송일자</th>
+                      <td class="form">2016.06.29 11:00:13</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="table_list mt50">
+              <h4 class="tit2">메시지정보</h4>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>메시지정보</strong>
+                    <details>
+                      <summary>제목, 내용, 랜딩 화면 정의 정보를 제공합니다.</summary>
+                    </details>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">제목</th>
+                      <td colspan="2" class="form">신규 편의점 쿠폰</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">내용</th>
+                      <td colspan="2" class="form">신규 편의점쿠폰이 등록되었습니다.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">랜딩 화면 정의</th>
+                      <th scope="row" class="bg_blue">카테고리</th>
+                      <td class="form">생활쿠폰 &gt; 편의점</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="bg_blue bl_line">랜딩화면</th>
+                      <td class="form">개별상품 | CU 백종원 도시락 5,000원 할인 쿠폰</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="table_list mt50">
+              <h4 class="tit2">사용자정보</h4>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>사용자정보</strong>
+                    <details>
+                      <summary>대상수, 전체 누적 클릭 수, 일일 평균 클릭 수 정보를 제공합니다.</summary>
+                    </details>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">대상수</th>
+                      <td class="form">
+                        10,000명
+                        <a href="#" class="btn btn_small_default ml5">자세히 보기</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전체 누적 클릭 수</th>
+                      <td class="form">1,123</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">일일 평균 클릭 수</th>
+                      <td class="form">23</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn btn_large_list">목록</a>
+                </div>
+              </div>
+              <!-- //btngroup-->
+            </div>
+            <!-- //UA 관리 리스트 목록 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

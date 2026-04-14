@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>GS건설 LCCO2평가 시스템</title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/import.css" />
+    <script type="text/javascript" src="../../common/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="../../common/js/gsconst.js"></script>
+  </head>
+
+  <body>
+    <div class="hidden">
+      <a href="#content" class="hidden">본문 바로가기</a>
+    </div>
+
+    <!-- 서브에 쓰이는 좌측, 우측 BG -->
+    <div class="sub_bg_left"></div>
+    <div class="sub_bg_right"></div>
+    <!-- //서브에 쓰이는 좌측, 우측 BG -->
+
+    <!-- header -->
+    <div id="header">
+      <div class="header_inner">
+        <h1>
+          <img
+            src="../../common/img/logo.png"
+            width="227"
+            height="39"
+            alt="GS건설 LCCO2평가 시스템"
+            title="GS건설 LCCO2평가 시스템"
+            class="png24"
+          />
+        </h1>
+
+        <h2 class="hidden">메뉴</h2>
+        <!-- [D] 활성화 된 메뉴에 _on 추가 -->
+        <ul>
+          <li>
+            <a href="#"><img src="../../common/img/gnb01.gif" width="170" height="44" alt="HOME" title="HOME" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../../common/img/gnb02_on.gif" width="170" height="44" alt="평가시스템" title="평가시스템"
+            /></a>
+          </li>
+          <!-- <li><a href="#"><img src="../../common/img/gnb03_on.gif" width="170" height="44" alt="관리자 모드" title="관리자 모드" /></a></li> -->
+          <li>
+            <a href="#"
+              ><img src="../../common/img/gnb04.gif" width="170" height="44" alt="정보수정" title="정보수정"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../../common/img/gnb05.gif" width="170" height="44" alt="로그아웃" title="로그아웃"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- //header -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- container -->
+      <div id="container">
+        <!-- side navigation -->
+        <div class="snb">
+          <h2>
+            <img
+              src="../../common/img/title_snb01.png"
+              width="115"
+              height="43"
+              alt="평가시스템-Evaluation System"
+              title="평가시스템-Evaluation System"
+              class="png24"
+            />
+          </h2>
+          <ul class="snb_1">
+            <!-- [D] 활성화 된 메뉴에 _on 추가 -->
+            <li>
+              <img src="../../common/img/snb02_01_on.gif" width="151" alt="프로젝트" title="프로젝트" />
+              <ul class="snb_2">
+                <li><img src="../../common/img/snb02_01_01.gif" width="151" height="20" alt="개요" title="개요" /></li>
+                <li>
+                  <img
+                    src="../../common/img/snb02_01_02_on.gif"
+                    width="151"
+                    height="20"
+                    alt="상세프로젝트"
+                    title="상세프로젝트"
+                  />
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="../../common/img/snb02_01_02_01.gif"
+                          width="151"
+                          height="19"
+                          alt="기본정보"
+                          title="기본정보"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="../../common/img/snb02_01_02_02.gif"
+                          width="151"
+                          height="20"
+                          alt="건설단계"
+                          title="건설단계"
+                      /></a>
+                    </li>
+                    <li>
+                      <img
+                        src="../../common/img/snb02_01_02_03_on.gif"
+                        width="151"
+                        height="20"
+                        alt="운용단계"
+                        title="운용단계"
+                      />
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="../../common/img/snb02_01_02_04.gif"
+                          width="151"
+                          height="20"
+                          alt="철거단계"
+                          title="철거단계"
+                      /></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="../../common/img/snb02_02.gif" width="151" alt="대안템플릿" title="대안템플릿"
+              /></a>
+              <ul class="snb_2" style="display: none">
+                <li>
+                  <img src="../../common/img/snb02_02_01.gif" width="151" height="20" alt="기본정보" title="기본정보" />
+                </li>
+                <li>
+                  <img src="../../common/img/snb02_02_02.gif" width="151" height="20" alt="대안입력" title="대안입력" />
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="../../common/img/snb02_03.gif" width="151" alt="LCCO2 평가" title="LCCO2 평가"
+              /></a>
+              <ul class="snb_2" style="display: none">
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../common/img/snb02_03_01.gif"
+                      width="151"
+                      height="20"
+                      alt="개별평가"
+                      title="개별평가"
+                  /></a>
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="../../common/img/snb02_03_01_01.gif"
+                          width="151"
+                          height="19"
+                          alt="요약결과"
+                          title="요약결과"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="../../common/img/snb02_03_01_02.gif"
+                          width="151"
+                          height="20"
+                          alt="상세결과"
+                          title="상세결과"
+                      /></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../common/img/snb02_03_02.gif"
+                      width="151"
+                      height="20"
+                      alt="비교평가"
+                      title="비교평가"
+                  /></a>
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="../../common/img/snb02_03_01_01.gif"
+                          width="151"
+                          height="19"
+                          alt="요약결과"
+                          title="요약결과"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="../../common/img/snb02_03_01_02.gif"
+                          width="151"
+                          height="20"
+                          alt="상세결과"
+                          title="상세결과"
+                      /></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- //side navigation -->
+
+        <!-- content -->
+        <div id="content">
+          <div class="location">
+            <p>
+              <span class="location_bg4">평가시스템</span> <span class="location_bg2">프로젝트</span>
+              <span class="location_bg3">상세프로젝트</span>
+            </p>
+          </div>
+
+          <h1>
+            <img
+              src="../../common/img/title_sub01_1.png"
+              width="102"
+              height="25"
+              alt="프로젝트"
+              title="프로젝트"
+              class="png24"
+            />
+          </h1>
+
+          <!-- 본문내용 -->
+          <div class="substance">
+            <!-- 그룹 -->
+            <div style="margin-bottom: 18px">
+              <h2>
+                <img
+                  src="../../common/img/title_h3_07.png"
+                  width="80"
+                  height="15"
+                  alt="운영단계"
+                  title="운영단계"
+                  class="png24"
+                />
+              </h2>
+
+              <p class="radio_box">
+                <span><input type="radio" id="abc" name="radio" /><label for="abc">입력방식</label></span>
+                <span
+                  ><input type="radio" id="bcd" name="radio" checked="checked" /><label for="bcd"
+                    >추계모델식</label
+                  ></span
+                >
+                <span><input type="radio" id="cde" name="radio" /><label for="cde">에너지 효율등급 방식</label></span>
+              </p>
+            </div>
+            <!-- //그룹 -->
+
+            <!-- 그룹 -->
+            <div style="margin-bottom: 25px">
+              <!-- 헤딩박스 -->
+              <div class="h_box">
+                <p>
+                  <select id="xyz" name="xyz" title="추계모델을 선택하세요." style="width: 183px">
+                    <option value="">추계모델 선택</option>
+                    <option value="">--</option>
+                  </select>
+                </p>
+
+                <!-- clear를 위한 div -->
+                <div class="clear"></div>
+              </div>
+              <!-- //헤딩박스 -->
+
+              <table
+                border="0"
+                cellspacing="0"
+                cellpadding="0"
+                summary="에너지원, 사용량, 사용감소량, CO₂원단위(물량), CO₂원단위(비용)을 나타낸 표입니다."
+                class="table1"
+              >
+                <caption class="hidden">
+                  입력방식 표
+                </caption>
+                <colgroup>
+                  <col width="33px" />
+                  <col width="193px" />
+                  <col width="193px" />
+                  <col width="193px" />
+                  <col width="193px" />
+                  <col width="193px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" class="td_style4">
+                      <input type="checkbox" checked="checked" title="선택할 영역을 체크하세요." class="check1" />
+                    </th>
+                    <th scope="col">에너지원</th>
+                    <th scope="col">사용량</th>
+                    <th scope="col">사용감소량</th>
+                    <th scope="col">CO₂원단위(물량)</th>
+                    <th scope="col" class="no_right">CO₂원단위(비용)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="last">
+                    <td class="td_style4">
+                      <input type="checkbox" id="aaa" name="aaa" title="선택하세요." class="check1" />
+                    </td>
+                    <td class="td_style3">
+                      <select id="lmn" name="lmn" title="에너지원을 선택하세요." class="">
+                        <option value="">에너지원 이름</option>
+                        <option value="">--</option>
+                      </select>
+                    </td>
+                    <td>사용량 입력</td>
+                    <td>사용감소량 입력</td>
+                    <td>CO₂원단위</td>
+                    <td class="no_right">CO₂원단위</td>
+                  </tr>
+                  <tr>
+                    <td class="td_style4">
+                      <input type="checkbox" id="aaa" name="aaa" title="선택하세요." class="check1" />
+                    </td>
+                    <td class="td_style3">
+                      <select id="lmn" name="lmn" title="에너지원을 선택하세요." class="">
+                        <option value="">에너지원 이름</option>
+                        <option value="">--</option>
+                      </select>
+                    </td>
+                    <td>사용량 입력</td>
+                    <td>사용감소량 입력</td>
+                    <td>CO₂원단위</td>
+                    <td class="no_right">CO₂원단위</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- 버튼 -->
+              <p class="btn_bg">
+                <a href="#"><span>추가</span></a>
+                <a href="#"><span>삭제</span></a>
+              </p>
+
+              <!-- clear를 위한 div -->
+              <div class="clear"></div>
+            </div>
+            <!-- //그룹 -->
+
+            <!-- 그룹 -->
+            <div>
+              <h2>
+                <img
+                  src="../../common/img/title_h3_08.png"
+                  width="80"
+                  height="15"
+                  alt="유지관리"
+                  title="유지관리"
+                  class="png24"
+                />
+              </h2>
+
+              <table
+                border="0"
+                cellspacing="0"
+                cellpadding="0"
+                summary="적용방안과와 기본 사용량을 입력하는 표입니다."
+                class="table1"
+              >
+                <caption class="hidden">
+                  유지관리 표
+                </caption>
+                <colgroup>
+                  <col width="33px" />
+                  <col width="484px" />
+                  <col width="484px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" class="td_style4">
+                      <input type="checkbox" checked="checked" title="선택할 영역을 체크하세요." class="check1" />
+                    </th>
+                    <th scope="col">적용방안</th>
+                    <th scope="col" style="border-right: 0">기본 사용량(단위&#47;m²)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="last">
+                    <!-- [D] id와 name 값 동일하게 설정할 것 -->
+                    <td rowspan="2" class="td_style5">
+                      <input type="checkbox" id="aaa" name="aaa" title="선택하세요." class="check1" />
+                    </td>
+                    <td class="td_style6">
+                      <input type="text" id="efg" name="efg" title="단위사용량" value="단위사용량" />
+                    </td>
+                    <td class="td_style2">
+                      <input
+                        type="text"
+                        id="fgh"
+                        name="fgh"
+                        title="사용자 입력(default)"
+                        value="사용자 입력(default)"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="td_style2">
+                      <input
+                        type="text"
+                        id="ghi"
+                        name="ghi"
+                        title="평가근거문구(default)"
+                        value="평가근거문구(default)"
+                        style="width: 98%"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- [D] id와 name 값 동일하게 설정할 것 -->
+                    <td rowspan="2" class="td_style5">
+                      <input type="checkbox" id="aaa" name="aaa" title="선택하세요." class="check1" />
+                    </td>
+                    <td class="td_style6">
+                      <input type="text" id="efg" name="efg" title="단위사용량" value="단위사용량" />
+                    </td>
+                    <td class="td_style2">
+                      <input
+                        type="text"
+                        id="fgh"
+                        name="fgh"
+                        title="사용자 입력(default)"
+                        value="사용자 입력(default)"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="td_style2">
+                      <input
+                        type="text"
+                        id="ghi"
+                        name="ghi"
+                        title="평가근거문구(default)"
+                        value="평가근거문구(default)"
+                        style="width: 98%"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //그룹 -->
+
+            <p class="btn_area2">
+              <a href="#"
+                ><img src="../../common/img/btn_pre.gif" width="118" height="36" alt="이전단계" title="이전단계"
+              /></a>
+              <a href="#"
+                ><img src="../../common/img/btn_next2.gif" width="118" height="36" alt="다음단계" title="다음단계"
+              /></a>
+            </p>
+          </div>
+          <!-- //본문내용 -->
+        </div>
+        <!-- //content -->
+        <!-- clear를 위한 div -->
+        <div class="clear"></div>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- wrap -->
+
+    <!-- footer -->
+    <div id="footer">
+      <div class="footer_inner">
+        <p class="db_manager">
+          <span class="department">GS건설 신도시연구팀</span> <span class="manager">이현국 전임연구원</span>
+        </p>
+        <p class="db_ver">DB Version : 2011-07-01</p>
+      </div>
+    </div>
+    <!-- //footer -->
+  </body>
+</html>

@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; background: transparent;font-size:12px; line-height:120%;}
+body, input, textarea, select, table, button, form{font-size:12px; line-height:120%; margin:0;padding:0;}
+/*html{-webkit-text-size-adjust:none}*/
+body{height:100%; margin:0; padding:0; color:#666; word-wrap:break-word; word-break:break-all; 
+font-family:"맑은 고딕","Malgun Gothic";}
+input,select,textarea{color:#666;font-family:"맑은 고딕","Malgun Gothic";}
+
+table{border-collapse:collapse;border-spacing: 0; font-family:}
+ul, ol, li{list-style:none;}
+a,img, fieldset{border:0 none;}
+legend{display:none;}
+caption{font-weight:normal;}
+a{color:#666; text-decoration:none;}
+a:visited, a:active{color:#666; text-decoration:none;}
+a:hover{text-decoration:none;}
+
+/* if lt IE9 Under Version Type */
+article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,section,summary {display:block;}
+
+/* common */
+.blind{width:0;height:0;margin:0;padding:0;font-size:0;text-indent:-999999px;line-height:0;overflow:hidden;visibility:hidden;}
+.fl{float:left !important;}
+.fr{float:right !important;}
+.clear{overflow:hidden !important;}
+.clear02{*zoom:1;}
+.clear02:after {content:"";clear:both;display:block;}
+
+/* 사이즈 지정 */
+.mb0{margin-bottom:0 !important;}
+.ml0{margin-left:0 !important;}
+.mt10{margin-top:10px !important;}
+.mt15{margin-top:15px !important;}
+.mt26{margin-top:26px !important;}
+.mt40{margin-top:40px !important;}
+.pl7{padding-left:7px !important;}
+.pl31{padding-left:31px !important;}
+.pl65{padding-left:65px !important;}
+.pl91{padding-left:91px !important;}
+.pt11{padding-top:11px !important;}
+.pt26{padding-top:26px !important;}
+
+/* 색상 */
+.bg_f7beb2{background:#f7beb2;}
+.bg_ed8672{background:#ed8672;}
+.txt4b4b4c{color:#4b4b4c;}
+
+/* btn */
+.btn_timeList{overflow:hidden;}
+.btn_timeList li{float:left;border-bottom:1px solid #e6e6e6;}
+.btn_timeList li.today{margin:0 0 0 5px;}
+.btn_timeList li.today a{border-left:1px solid #b3b3b3;}
+.btn_timeList li a{display:block;height:28px;padding:0 10px;border:1px solid #b3b3b3;border-left:none;background:url('/html/2014/bems/images/common/bg_default_btn.gif') repeat-x 0 0;color:#4b4b4c;line-height:28px;}
+.btn_timeList li:first-child a{border-left:1px solid #b3b3b3;}
+.btn_timeList li.on a{padding:0 8px;background:url('/html/2014/bems/images/common/bg_default_btn_on.gif') repeat-x 0 0;color:#2e384c;font-weight:bold;}
+
+.btn_search{margin:15px 0 0 20px;border-bottom:1px solid #e5e5e5;}
+.btn_search a{display:block;border:1px solid #5b616a;}
+.btn_search a span{display:block;width:71px;height:73px;border-top:1px solid #9f9f9f;background:#868889;color:#fff;font-weight:bold;text-align:center;line-height:73px;}
+
+/* datepicker(달력) 관련 */
+.input_date{margin:0 !important;}
+.w86{width:86px !important;}
+.w120{width:120px !important;}
+
+/* select박스 : default*/
+.s1, .s2{position:relative;z-index:10;}
+.s1 .sbHolder{background:url('/html/2014/bems/images/common/bg_default_btn.gif') repeat-x 0 0;background-color: #f7f7f7;border: solid 1px #b3b3b3;font-family: Arial, sans-serif;font-size: 12px;color:#4b4b4c;font-weight: normal;height: 28px;position: relative;
+width: 296px;}
+.s2 .sbHolder{background-color: #f7f7f7;border: solid 1px #b3b3b3;font-family: Arial, sans-serif;font-size: 12px;color:#4b4b4c;font-weight: normal;height: 28px;position: relative;
+width: 132px;}
+/*.sbHolder:focus .sbSelector{}*/
+.sbSelector{display: block;height: 30px;left: 0;line-height: 30px;outline: none;overflow: hidden;position: absolute;text-indent: 10px;top: 0;width: 296px;}
+.s2 .sbSelector{display: block;height: 30px;left: 0;line-height: 30px;outline: none;overflow: hidden;position: absolute;text-indent: 10px;top: 0;width: 132px;}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{color:#4b4b4c;outline: none;text-decoration: none;}
+.sbToggle{background: url(/html/2014/bems/images/common/select_out.png) 7px 12px no-repeat;display: block;height: 30px;outline: none;position: absolute;right: 0;top: 0;width: 30px;}
+/*.sbToggle:hover{}*/
+.sbToggleOpen{background: url(/html/2014/bems/images/common/select_over.png) 7px 12px no-repeat;}
+.sbToggleOpen:hover{background: url(/html/2014/bems/images/common/select_out.png) 7px 12px no-repeat;}
+.sbHolderDisabled{background-color: #000;border: solid 1px #515151;}
+/*.sbHolderDisabled .sbHolder{}
+.sbHolderDisabled .sbToggle{}*/
+
+/*option bgColor & bgWidth*/
+.sbOptions{background-color: #f8f8f8;border: solid 1px #b3b3b3;list-style: none;left: -1px;margin: 0;padding: 0;position: absolute;top: 30px;width: 296px;z-index: 1;overflow-y: auto;}
+
+/*option bgColor & bgWidth*/
+.s2 .sbOptions{background-color: #f8f8f8;border: solid 1px #b3b3b3;list-style: none;left: -1px;margin: 0;padding: 0;position: absolute;top: 30px;width: 132px;z-index: 1;overflow-y: auto;}
+.sbOptions li{padding: 0 7px;}
+.sbOptions a{/*border-bottom: solid 1px #515151;*/display: block;outline: none;padding: 7px 0 7px 3px;}
+.sbOptions a:link, .sbOptions a:visited{color: #4b4b4c;text-decoration: none;}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{color: #fff;background:#9e9e9e;}
+.sbOptions li.last a{border-bottom: none;}
+.sbOptions .sbDisabled{border-bottom: dotted 1px #515151;color: #999;display: block;padding: 7px 0 7px 3px;}
+.sbOptions .sbGroup{border-bottom: dotted 1px #515151;color: #EBB52D;display: block;font-weight: bold;padding: 7px 0 7px 3px;}
+.sbOptions .sbSub{padding-left: 17px;}
+
+/* 텍스트 스타일 */
+.weekend{color:#c82d2d;}
+.decrease{padding:0 0 0 14px;background:url('/html/2014/bems/images/common/icon_decrease.png') no-repeat 0 3px;color:#3366cc;}
+.increase{padding:0 0 0 14px;background:url('/html/2014/bems/images/common/icon_increase.png') no-repeat 0 3px;color:#c82d2d;}
+
+/* 서브_테이블 영역 */
+.table_style01{width:100%;text-align:center;}
+.table_style01 th{height:36px;border:1px solid #d0d4d9;background:#f3f5f8;color:#323233;font-weight:bold;line-height:36px;}
+.table_style01 th.thStyle{background:#fafafa;font-weight:normal;line-height:18px;}
+.table_style01 td{padding:10px 0 8px 0;border:1px solid #d0d4d9;color:#4b4b4c;line-height:36px;line-height:18px;}
+
+.tableGroup02{/*position:relative;*/}
+.tableGroup02 h2{/*position:absolute;top:0;left:0;*/color:#19191a;font-size:14px;font-weight:bold;}
+
+/* 도움말, 인쇄, 북마크 - 리스트 */
+.sideList{float:right;margin:20px 30px 0 0;overflow:hidden;}
+.sideList li{float:left;padding:0 10px; 0 10px;background:url('/html/2014/bems/images/common/bg_tab_line.gif') no-repeat 0 14px;}
+.sideList li.sideStyle01{background:none;}
+.sideList li a{display:block;margin:14px 0 0 0;padding:2px 0 0 20px;color:#4b4b4d;}
+.sideList li.sideStyle01 a{background:url('/html/2014/bems/images/common/icon_help.png') no-repeat 0 0;}
+.sideList li.sideStyle02 a{background:url('/html/2014/bems/images/common/icon_print.png') no-repeat 0 0;}
+.sideList li.sideStyle03 a{background:url('/html/2014/bems/images/common/icon_bookmark.png') no-repeat 0 0;}
+.sideList li.sideStyle03.on a{background:url('/html/2014/bems/images/common/icon_bookmark_on.png') no-repeat 0 0;}
+
+/* 누적 사용량 박스 */
+.accumulate{width:689px;overflow:hidden;}
+.accumulate li{float:left;width:220px;height:90px;margin:0 0 14px 14px;border-bottom:1px solid #ededed;background:#f7f7f7;}
+.accumulate li:first-child{margin-left:0;}
+.accumulate li.listStyle01{margin-left:0;}
+.accumulate li.listStyle02{margin-left:14px;}
+.accumulate .acc_Style01{display:block;padding:20px 0 2px 30px;color:#323233;font-weight:bold;}
+.accumulate .acc_Style02{padding:0 0 0 30px;color:#2f7ed8;font-family:"Tahoma";font-size:38px;font-weight:bold;line-height:38px;}
+.accumulate .acc_Style03{color:#2f7ed8;font-family:"Tahoma";font-size:14px;font-weight:bold;}
+.accumulate .accColor_gas .acc_Style02, .accumulate .accColor_gas .acc_Style03{color:#77b4d3;}
+.accumulate .accColor_ele .acc_Style02, .accumulate .accColor_ele .acc_Style03{color:#ed8672;}
+.accumulate .accColor01 .acc_Style02, .accumulate .accColor01 .acc_Style03{color:#2f7ed8;}
+.accumulate .accColor02 .acc_Style02, .accumulate .accColor02 .acc_Style03{color:#0d233a;}
+.accumulate .accColor03 .acc_Style02, .accumulate .accColor03 .acc_Style03{color:#8bbc21;}
+.accumulate .accColor04 .acc_Style02, .accumulate .accColor04 .acc_Style03{color:#910000;}
+.accumulate .accColor05 .acc_Style02, .accumulate .accColor05 .acc_Style03{color:#1aadce;}
+.accumulate .accColor06 .acc_Style02, .accumulate .accColor06 .acc_Style03{color:#492970;}
+.accumulate .accColor07 .acc_Style02, .accumulate .accColor07 .acc_Style03{color:#f28f43;}
+.accumulate .accColor08 .acc_Style02, .accumulate .accColor08 .acc_Style03{color:#77a1e5;}
+.accumulate .accColor09 .acc_Style02, .accumulate .accColor09 .acc_Style03{color:#c42525;}
+.accumulate .accColor10 .acc_Style02, .accumulate .accColor10 .acc_Style03{color:#a6c96a;}
+
+.accumulate02{overflow:hidden;}
+.accumulate02 li{width:220px;height:94px;margin:0 0 12px 0;}
+.accumulate02 .acc_Style01{display:block;padding:20px 0 2px 30px;color:#fff;font-weight:bold;}
+.accumulate02 .acc_Style02{padding:0 0 0 30px;color:#fff;font-family:"Tahoma";font-size:38px;font-weight:bold;line-height:38px;}
+.accumulate02 .acc_Style03{color:#fff;font-family:"Tahoma";font-size:14px;font-weight:bold;}
+
+/* 기타 */
+.rangeStyle{display:inline-block;padding:10px 5px 0 5px;}
+
+/* 1600 이상 */
+@media only screen and (min-width : 1600px) {
+	/* 누적 사용량 박스 */
+	.accumulate{width:100%;overflow:hidden;}
+	.accumulate li{float:left;width:245px;height:90px;margin:0 0 13px 14px;border-bottom:1px solid #ededed;background:#f7f7f7;}
+	.accumulate li.listStyle01{margin-left:14px;}
+	.accumulate li.listStyle02{margin-left:0;}
+}

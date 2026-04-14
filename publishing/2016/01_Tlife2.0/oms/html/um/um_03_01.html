@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>회원 정보 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb1:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb1:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb1:eq(0)>ul>li:eq(2)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb1">
+                <a href="#">사용자 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">나의 정보</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">나의 정보</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">운영자 정보</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">운영자 정보</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">T life 회원 정보</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">회원 정보</a></li>
+                      <li><a href="#">탈퇴 회원 정보</a></li>
+                      <li><a href="#">휴면 회원 정보</a></li>
+                      <li><a href="#">블랙리스트 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>사용자 관리</span>
+              <span>T life 회원 정보</span>
+              <strong>회원 정보</strong>
+            </div>
+            <h3 class="tit">회원 정보</h3>
+
+            <ul class="guide">
+              <li>회원ID 검색을 통해 회원의 상세 정보를 확인할 수 있습니다.</li>
+              <li>검색 결과는 1개의 데이터만 제공되니 회원ID를 정확하게 입력해 주시기 바랍니다.</li>
+              <li>
+                회원 검색 결과는 가입 중인 상태만 제공되며 휴면 회원 및 탈퇴 회원에 대한 정보는 검색되지 않습니다.
+              </li>
+            </ul>
+
+            <h4 class="tit">회원정보 조회</h4>
+            <!-- 회원정보 검색 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>회원 ID가 있는 회원 정보 검색 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="member_id">회원 ID</label>
+                      </th>
+                      <td>
+                        <input type="text" id="member_id" class="wid_per80" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_delete">초기화</a>
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+            <!-- //회원정보 검색 테이블 -->
+
+            <!-- 회원정보 검색 리스트 테이블 -->
+            <div class="table_list_btm space_btm">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >번호, 회원구분, ID, 닉네임, 내부 회원 키, 통신사, 요금제, 최종 접속 MDN, 가입일 정보가 있는 회원
+                      정보 검색 리스트</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col style="width: 80px" />
+                    <col style="width: *" />
+                    <col style="width: 100px" />
+                    <col style="width: 120px" />
+                    <col style="width: 100px" />
+                    <col style="width: 120px" />
+                    <col style="width: 120px" />
+                    <col style="width: 90px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">회원구분</th>
+                      <th scope="col">ID</th>
+                      <th scope="col">닉네임</th>
+                      <th scope="col">내부 회원 키</th>
+                      <th scope="col">통신사</th>
+                      <th scope="col">요금제</th>
+                      <th scope="col">최종 접속 MDN</th>
+                      <th scope="col">가입일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 리스트가 없을 경우 -->
+                    <tr>
+                      <td colspan="9">검색된 결과가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td class="num">1</td>
+                      <td>MDN</td>
+                      <td class="left"><a href="#" class="link">010****5678</a></td>
+                      <td>-</td>
+                      <td>23151252</td>
+                      <td>SKT</td>
+                      <td>5.1요금제</td>
+                      <td>010****5678</td>
+                      <td>2016.07.12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- 회원정보 검색 리스트 테이블 -->
+
+            <h4 class="tit">선택약관 동의 현황</h4>
+            <!-- 선택약관 동의 현황 조회 테이블 -->
+            <div class="table_date">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>개인정보 수집/이용동의, 광고성 정보 수신동의 회원 수 조회</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 150px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">개인정보 수집/이용동의</th>
+                      <td>3,154,221 명&nbsp;&nbsp;(2017.01.13 17:23 기준)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">광고성 정보 수신동의</th>
+                      <td>3,154,221 명&nbsp;&nbsp;(2017.01.13 17:23 기준)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_search">조회</a>
+                </div>
+              </div>
+            </div>
+            <!-- //선택약관 동의 현황 조회 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

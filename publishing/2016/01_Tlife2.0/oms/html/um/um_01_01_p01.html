@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+	<title>비밀번호 변경 | T life</title>
+	<link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/common.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+	<!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<!-- 전체 감싸기 -->
+	<div id="wrap" class="layerpop">
+		<div class="popup height">
+			<div class="top">
+				<h2>비밀번호 변경</h2>
+				<div class="btn_clo">
+					<a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+				</div>
+			</div> 
+			<div class="cont">
+				<ul class="guide">
+					<li>영문/숫자/특수문자 조합하여 9~16자리까지 사용 가능합니다.</li>
+				</ul>
+
+				<div class="table_list">
+					<div class="comm_right">
+						<em class="ess">필수 입력 항목입니다.</em>
+					</div>
+
+					<div class="table_wrap">
+							<table class="tbl_list">
+								<caption>
+									<strong>현재 비밀번호, 새 비밀번호, 새 비밀번호 확인이 있는 비밀번호 변경 입력 서식</strong>
+								</caption>
+								<colgroup>
+									<col style="width:130px" />
+									<col style="width:*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<label for="present_pw" class="ess">현재 비밀번호</label>
+										</th>
+										<td class="form">
+											<input type="password" id="present_pw" class="wid_per80" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="new_pw" class="ess">새 비밀번호</label>
+										</th>
+										<td class="form">
+											<input type="password" id="new_pw" class="wid_per80" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="new_ok" class="ess">새 비밀번호 확인</label>
+										</th>
+										<td class="form">
+											<input type="password" id="new_ok" class="wid_per80" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="btngroup">
+					<div class="btn_center">
+						<a href="#" class="btn_save">확인</a>
+						<a href="#" class="btn_cancel">취소</a>
+					</div>
+				</div>
+				<!-- //btngroup-->
+			</div>
+			<!-- //cont -->
+		</div>
+		<!-- // popup -->
+	</div>
+	<!-- //전체 감싸기 -->
+</body>
+</html>

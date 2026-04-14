@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>New Balance Korea</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../../js/html5.js"></script>
+      <script type="text/javascript" src="../../js/ui_ie9.js"></script>
+    <![endif]-->
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        /*tab*/
+        var insideTab = $(".inside .tab a");
+        insideTab.each(function (n) {
+          $(this).on("click", function () {
+            event.preventDefault();
+            var insideTabCont = $(".inside_wrap .tab_cont");
+            $(this).addClass("on").siblings().removeClass("on");
+            insideTabCont.eq(n).addClass("on").siblings().removeClass("on");
+            $(".craft1 .video iframe")[0].contentWindow.postMessage(
+              '{"event":"command","func":"' + "pauseVideo" + '","args":""}',
+              "*",
+            );
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <div class="header">
+        <!-- top_menu -->
+        <div class="top_menu">
+          <div class="inner">
+            <a href="#none" class="mynb"><img src="../../img/common/btn_mynb.png" alt="MYNB Loyalty Program" /></a>
+            <ul class="clearfix">
+              <li><a href="#none">관심상품(0)</a></li>
+              <li><a href="#none">오늘 본 상품(0)</a></li>
+              <li><a href="#none">매장찾기</a></li>
+              <li><a href="#none">공지사항</a></li>
+              <li><a href="#none">FAQs</a></li>
+              <li><a href="#none">SITE MAP</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- // top_menu -->
+        <!-- gnb -->
+        <div class="gnb">
+          <div class="inner">
+            <h1 class="logo"><a href="#none">New Balance</a></h1>
+            <!-- global_menu -->
+            <div class="menu">
+              <ul class="clearfix">
+                <!-- MEN -->
+                <li class="nav">
+                  <a href="#none" class="menu_tit">MEN</a>
+                  <div class="category_box">
+                    <div class="inner">
+                      <div class="depth">
+                        <strong class="tit">FEATURED</strong>
+                        <ul>
+                          <li><a href="#none">신상품</a></li>
+                          <li><a href="#none">베스트 상품</a></li>
+                          <li><a href="#none">할인상품</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">신발</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">MADE</a></li>
+                          <li><a href="#none">라이프스타일</a></li>
+                          <li><a href="#none">러닝</a></li>
+                          <li><a href="#none">축구</a></li>
+                          <li><a href="#none">야구/테니스</a></li>
+                          <li><a href="#none">스케이트보딩</a></li>
+                          <li><a href="#none">샌들/슬라이드</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">의류</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">다운/베스트</a></li>
+                          <li><a href="#none">아우터</a></li>
+                          <li><a href="#none">후디/맨투맨</a></li>
+                          <li><a href="#none">티셔츠</a></li>
+                          <li><a href="#none">롱팬츠</a></li>
+                          <li><a href="#none">숏팬츠</a></li>
+                          <li><a href="#none">타이즈</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">용품</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">가방</a></li>
+                          <li><a href="#none">모자</a></li>
+                          <li><a href="#none">양말</a></li>
+                          <li><a href="#none">기타</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth sports">
+                        <strong class="tit">스포츠</strong>
+                        <ul>
+                          <li>
+                            <a href="#none">러닝</a>
+                            <ul class="sub">
+                              <li><a href="#none">신발</a></li>
+                              <li><a href="#none">의류</a></li>
+                              <li><a href="#none">용품</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#none">축구</a>
+                            <ul class="sub">
+                              <li><a href="#none">신발</a></li>
+                              <li><a href="#none">의류</a></li>
+                              <li><a href="#none">용품</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#none">트레이닝</a>
+                            <ul class="sub">
+                              <li><a href="#none">신발</a></li>
+                              <li><a href="#none">의류</a></li>
+                              <li><a href="#none">용품</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#none">야구/테니스</a>
+                            <ul class="sub">
+                              <li><a href="#none">신발</a></li>
+                              <li><a href="#none">의류</a></li>
+                              <li><a href="#none">용품</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="depth brand">
+                        <strong class="tit">브랜드</strong>
+                        <div class="list">
+                          <a href="#none" class="thumb"><img src="../../img/dummy/img_gnb01.png" alt="MADE" /></a>
+                          <a href="#none" class="thumb"><img src="../../img/dummy/img_gnb02.png" alt="CLASSIC" /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- // MEN -->
+                <!-- WOMEN -->
+                <li class="nav">
+                  <a href="#none" class="menu_tit">WOMEN</a>
+                  <div class="category_box">
+                    <div class="inner">
+                      <div class="depth">
+                        <strong class="tit">FEATURED</strong>
+                        <ul>
+                          <li><a href="#none">신상품</a></li>
+                          <li><a href="#none">베스트 상품</a></li>
+                          <li><a href="#none">할인상품</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">신발</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">MADE</a></li>
+                          <li><a href="#none">라이프스타일</a></li>
+                          <li><a href="#none">러닝</a></li>
+                          <li><a href="#none">스튜디오/테니스</a></li>
+                          <li><a href="#none">스케이트보딩</a></li>
+                          <li><a href="#none">샌들/슬라이드</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">의류</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">다운/베스트</a></li>
+                          <li><a href="#none">아우터</a></li>
+                          <li><a href="#none">후디/맨투맨</a></li>
+                          <li><a href="#none">탑/티셔츠</a></li>
+                          <li><a href="#none">롱팬츠</a></li>
+                          <li><a href="#none">숏팬츠</a></li>
+                          <li><a href="#none">레깅스</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">용품</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">가방</a></li>
+                          <li><a href="#none">모자</a></li>
+                          <li><a href="#none">양말</a></li>
+                          <li><a href="#none">기타</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth sports">
+                        <strong class="tit">스포츠</strong>
+                        <ul>
+                          <li>
+                            <a href="#none">러닝</a>
+                            <ul class="sub">
+                              <li><a href="#none">신발</a></li>
+                              <li><a href="#none">의류</a></li>
+                              <li><a href="#none">용품</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#none">스튜디오/테니스</a>
+                            <ul class="sub">
+                              <li><a href="#none">신발</a></li>
+                              <li><a href="#none">의류</a></li>
+                              <li><a href="#none">용품</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#none">트레이닝</a>
+                            <ul class="sub">
+                              <li><a href="#none">신발</a></li>
+                              <li><a href="#none">의류</a></li>
+                              <li><a href="#none">용품</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="depth brand">
+                        <strong class="tit">브랜드</strong>
+                        <div class="list">
+                          <a href="#none" class="thumb"><img src="../../img/dummy/img_gnb01.png" alt="MADE" /></a>
+                          <a href="#none" class="thumb"><img src="../../img/dummy/img_gnb02.png" alt="CLASSIC" /></a>
+                          <a href="#none" class="thumb"><img src="../../img/dummy/img_gnb03.png" alt="WOMENS" /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- // WOMEN -->
+                <!-- KIDS -->
+                <li class="nav">
+                  <a href="#none" class="menu_tit">KIDS</a>
+                  <div class="category_box">
+                    <div class="inner">
+                      <div class="depth narrow">
+                        <strong class="tit">FEATURED</strong>
+                        <ul>
+                          <li><a href="#none">IMC(월별 교체 메뉴)</a></li>
+                          <li><a href="#none">Online Only</a></li>
+                          <li><a href="#none">Baby (0~2세)</a></li>
+                          <li><a href="#none">Kids (8~10세)</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">신발</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">Infant</a></li>
+                          <li><a href="#none">Pre-School</a></li>
+                          <li><a href="#none">Grade-School</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">의류</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">다운/패딩점퍼</a></li>
+                          <li><a href="#none">베스트/자켓</a></li>
+                          <li><a href="#none">맨투맨/후드티</a></li>
+                          <li><a href="#none">티셔츠</a></li>
+                          <li><a href="#none">롱팬츠</a></li>
+                          <li><a href="#none">숏팬츠</a></li>
+                          <li><a href="#none">레깅스</a></li>
+                          <li><a href="#none">원피스/스커트</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth">
+                        <strong class="tit">용품</strong>
+                        <ul>
+                          <li><a href="#none">전체보기</a></li>
+                          <li><a href="#none">초등학생 책가방</a></li>
+                          <li><a href="#none">소풍&amp;미니미가방</a></li>
+                          <li><a href="#none">사이드백</a></li>
+                          <li><a href="#none">모자</a></li>
+                          <li><a href="#none">양말</a></li>
+                          <li><a href="#none">기타</a></li>
+                        </ul>
+                      </div>
+                      <div class="depth collection">
+                        <strong class="tit">Collection</strong>
+                        <div class="list clearfix">
+                          <a href="#none" class="thumb"
+                            ><img src="../../img/dummy/img_gnb01.png" alt="Kids BACK PACK"
+                          /></a>
+                          <a href="#none" class="thumb"
+                            ><img src="../../img/dummy/img_gnb02.png" alt="BENCHJACKET"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- // KIDS -->
+                <!-- NB&amp;YOU -->
+                <li class="nav">
+                  <a href="#none" class="menu_tit">NB&amp;YOU</a>
+                  <div class="category_box">
+                    <div class="inner">
+                      <div class="nb_you">
+                        <ul>
+                          <li>
+                            <a href="#none">
+                              <img src="../../img/common/img_gnb_collection01.png" alt="" />
+                              <span>
+                                <strong>NB #1 CUSTOMIZE</strong>
+                                나만의 뉴발란스 상품을 만들어보세요.
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#none">
+                              <img src="../../img/common/img_gnb_collection02.png" alt="" />
+                              <span>
+                                <strong>LOOK SHOP</strong>
+                                실제 모델이 착용한 핏을 통해 합리적인 쇼핑을 즐기세요.
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#none">
+                              <img src="../../img/common/img_gnb_collection03.png" alt="" />
+                              <span>
+                                <strong>NB TAG</strong>
+                                TAG별 주요 상품을 만나보세요.
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="#none">
+                              <img src="../../img/common/img_gnb_collection04.png" alt="" />
+                              <span>
+                                <strong>NB PEOPLE</strong>
+                                SNS에서 만날 수 있는 다양한 뉴발란스 상품을 확인하세요.
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#none">
+                              <img src="../../img/common/img_gnb_collection05.png" alt="" />
+                              <span>
+                                <strong>NB GUIDE</strong>
+                                전문가가 추천하는 뉴발란스 상품을 만나보세요.
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#none">
+                              <img src="../../img/common/img_gnb_collection06.png" alt="" />
+                              <span>
+                                <strong>EVENT</strong>
+                                뉴발란스의 다양한 이벤트를 만나보세요.
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- //NB&amp;YOU -->
+              </ul>
+            </div>
+            <!-- // global_menu -->
+            <!-- customer -->
+            <div class="customer">
+              <div class="top_search nav">
+                <a href="#none" class="btn_srch">검색</a>
+                <div class="category_box">
+                  <div class="srch_area">
+                    <input type="text" name="search" class="ip_text" title="검색어 입력" placeholder="Search" />
+                    <button type="submit" class="btn_ty_bface sm">검색</button>
+                  </div>
+                  <div class="keyword">
+                    <span><a href="#none">키워드 01</a></span>
+                    <span><a href="#none">키워드 02</a></span>
+                    <span><a href="#none">키워드 03</a></span>
+                  </div>
+                  <div class="collection">
+                    <ul>
+                      <li>
+                        <a href="#none"><img src="../../img/dummy/img_gnb01.png" alt="" /><span>HOTEL990</span></a>
+                      </li>
+                      <li>
+                        <a href="#none"
+                          ><img src="../../img/dummy/img_gnb02.png" alt="" /><span>REBIRTH OF 574</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="#none"><img src="../../img/dummy/img_gnb04.png" alt="" /><span>PUFFER DOWN</span></a>
+                      </li>
+                      <li>
+                        <a href="#none"><img src="../../img/dummy/img_gnb05.png" alt="" /><span>CLASSIC ICON</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mymenu">
+                <!-- <a href="#none">로그인</a>
+						<a href="#none">회원가입</a> -->
+                <a href="#none">마이페이지</a>
+              </div>
+              <div class="cart">
+                <a href="#none"><span class="blind">장바구니</span><span class="count">3</span></a>
+              </div>
+            </div>
+            <!-- // customer -->
+          </div>
+        </div>
+        <!-- // gnb -->
+      </div>
+      <div class="dimm_gnb"></div>
+      <!-- // header -->
+      <!-- container -->
+      <div class="container pd0">
+        <div class="inside">
+          <h2 class="page_tit">INSIDE NB</h2>
+          <div class="tab">
+            <a href="#none" class="on">Our Heritage</a>
+            <a href="#none">Value</a>
+            <a href="#none">Craftsmanship</a>
+          </div>
+          <div class="inside_wrap">
+            <div class="tab_cont on">
+              <h3>THE BACKDROP OF<br />BRAND STORY</h3>
+              <div class="heritage1">
+                <div class="inner">
+                  <div class="tit_box">
+                    <h4 class="year">1906</h4>
+                    <span class="year_info">BORN FROM INNOVATION</span>
+                  </div>
+                  <div class="exp">
+                    <img src="../../img/support/heritage_1_1.png" alt="" />
+                    미국 메사추세츠주 보스톤에서 영국인 발명가인 윌리엄 라일리(WILLIAM J.RILEY)가 <br />발에 장애가
+                    있거나, 경찰, 소방관, 우체부등처럼 하루 종일 서서 일하는 발에 무리가 <br />가는 사람들을 위해 아치
+                    서포트(ARCH SUPPORT: 지지대가 있는 신발 깔창)을 만드는 데서부터 시작됩니다. 자신의 뜰에서 노는
+                    닭에게서 완벽한 BALANCE를 관찰하여 그의 첫 번째 플렉서블 아치 서포트를 개발하게 됩니다.<br />닭의 세
+                    개의 발톱을 본 따서 삼각형 모양으로 3개의 중요한 지점들을 지지하여 편안함과 균형을 이루었으며,
+                    이러한 발명을 토대로 NEW BALANCE ARCH라는 회사가 탄생하였습니다.<br /><br /><span class="f_bold"
+                      >NEW BALANCE</span
+                    >라는 회사명과 브랜드명은 “불균형한 발에 새로운 균형을 창조한다” 라는 의미에서 유래되었습니다.
+                  </div>
+                </div>
+              </div>
+              <div class="heritage2">
+                <div class="inner">
+                  <div class="tit_box">
+                    <h4 class="year">1938</h4>
+                    <span class="year_info">뉴발란스 최초의 러닝화</span>
+                  </div>
+                  <div class="exp">
+                    가벼운 가죽소재인 캥거루 가죽으로 만들어진 뉴발란스 최초의 러닝화.<br />
+                    육상선수였던 단 맥브라이드(DAN MCBRIDE)가 최초의 러닝 스파이크화를 신고<br />메사추세츠 레디쉬
+                    로드대회(REDDISH ROAD RACE)에 출전하였습니다.
+                  </div>
+                </div>
+              </div>
+              <div class="heritage3">
+                <div class="inner">
+                  <div class="tit_box">
+                    <h4 class="year">1976</h4>
+                    <span class="year_info">최초로 N로고를 사용한 러닝화, 320</span>
+                  </div>
+                  <div class="exp">
+                    320은 뉴발란스에서 처음으로 N을 적용한 제품이자, 다양한 발너비와 쿠셔닝을 갖춘 러닝화였습니다.
+                    러너스 월드(1967 <br />년 10월호)에서 NO.1 러닝화로 등극 하였는데, 최상의 HEEL과 FOREFOOT 쿠션
+                    그리고 멀티 위드스 가진 러닝화로 평가 되었으며, 1975년 뉴욕마라톤에서 톰플레밍(TOM FLEMING)은 320을
+                    신고 우승을 하였습니다.
+                  </div>
+                </div>
+              </div>
+              <div class="heritage4">
+                <div class="inner">
+                  <div class="tit_box">
+                    <h4 class="year">1982</h4>
+                    <span class="year_info">990</span>
+                  </div>
+                  <div class="exp">
+                    뉴발란스 연구 개발팀은 시간과 비용에 구애 받지 않고 가능한 모든 기술력을 동원한 최고의 신발을 만드는
+                    데 주력하여 990을 완성하였습니다.<br />최초의 모션컨트롤 러닝화였던 990은 유연성과 안정성을 동시에
+                    제공하는 혁신적인 기술력으로 1000점 만점에 990점이라는 의미합니다.<br />990은 당시 100달러로
+                    출시되어 높은 가격에도 불구하고, 많은 러너들과 스니커즈 애호가들에게 사랑을 받으며, 뉴발란스의
+                    기술력을 상징하는 신발로 자리잡게 됩니다.
+                  </div>
+                </div>
+              </div>
+              <div class="heritage5">
+                <div class="inner">
+                  <div class="tit_box">
+                    <h4 class="year">1988</h4>
+                  </div>
+                  <div class="exp">
+                    576의 역사는 지금으로부터 20년 전인 1988년,<br />독일으로 거슬러 올라갑니다.<br />독일의 한 영업
+                    매니저는 당시 유럽에서 대량 출시되었으나,<br />큰 인기를 끌지 못하고 있던 675라는 모델에서
+                    아이디어를 얻어, 675의 갑피 소재와 컬러를 바꾸어 재출시하자는 번뜩이는 아이디어를 생각해냅니다.
+                    675과 정반대인 576이란 이름으로 새롭게 태어난 이 모델은 출시하자마자 곧 전 유럽과 미국, 아시아에
+                    이르기까지 선풍적인 인기를 끌며 소위 “히트” 모델로 완벽한 변신을 하게 되었던 것입니다. 1990년대에는
+                    다양한 컬러와 소재의 변화를 통해 버전업 된 576이 밀라노, 파리,<br />런던 등에서 출시되었고, 전
+                    세계적으로 큰 파란을 일으키며 현재까지 뉴발란스의 대표적인 히트상품으로 성장하였습니다.
+                  </div>
+                </div>
+              </div>
+              <div class="heritage6">
+                <div class="inner">
+                  <div class="tit_box">
+                    <h4 class="year">2000s</h4>
+                    <span class="year_info">The 99X series</span>
+                  </div>
+                  <div class="exp">
+                    미국 대통령들이 가장 즐겨 신는 신발로 대통령의 신발이라는 별칭으로 더 유명한 99X시리즈는 뉴발란스
+                    클래식의 헤리티지로서 심플하고 세련된 디자인에 뉴발란스의 쿠셔닝 기술력과 최고급 소재가 사용되는
+                    프리미엄 클래식 라인입니다.
+                  </div>
+                  <div class="exp">
+                    1982년 990을 시작으로 20년이 넘도록 전세계 스니커 애호가들에게 꾸준히 사랑 받아오고 있는 99X시리즈는
+                    1986년의 995, 1988년의 996, 1990년 997 등으로 꾸준히 업그레이드 되어 출시되어왔으며, 2000년대에
+                    들어서는 991, 992, 993 등의 재 출시를 통해 뉴발란스의 오리지널리티를 담은 역사적인 클래식
+                    라인으로<br />
+                    그 명성을 이어오고 있습니다.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab_cont">
+              <h3>PERFORMANCE<br />INNOVATION</h3>
+              <div class="value1">
+                <div class="inner">
+                  <h4>뉴발란스 퍼포먼스의 핵심 가치 - FIT</h4>
+                  <p class="exp">
+                    1906년 33세였던 뉴발란스 창업자 윌리엄 라일리는 발에 장애가 있거나 하루 종일 서서 일하는 경찰,
+                    소방관, 우체부 등을 위해 발에 무리가 가지 않는 신발을 연구하기 시작했습니다. <br />그러던 어느날
+                    마당에서 놀고 있는 닭이 발가락 3개맊으로도 완벽한 균형을 이루고 있는 것을 발견했는데, 여기서 영감을
+                    얻은 라일리는 발을 안정적으로 지지해주는 “아치 서포트(ARCH SUPPORT)”를 개발하였으며, 이를 통해
+                    운동화 사업에 뛰어들었습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="value2">
+                <div class="inner">
+                  <h4>MULTI WIDTH - FIT PERFECTLY</h4>
+                  <p class="exp">
+                    뉴발란스는 최초로 발 너비에 따라 사이즈를 구분하였는데, 이는 건강한 <br />삶을 위해 최고의 편안함을
+                    제공하려는 뉴발란스의 철학이 반영된 것입니다. <br />뉴발란스 러닝화는 다양한 사람들의 다양한 발
+                    모양에 적합한 신발을 위해 <br />좁은 볼 사이즈인 2A 시리즈부터 넓은 발 볼의 6E 사이즈까지 다양한
+                    너비<br />(MULTI WIDTH)의 발 볼 사이즈로 제작되었습니다.
+                  </p>
+                  <table>
+                    <caption>
+                      발볼 사이즈
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th class="empty"></th>
+                        <th class="empty"></th>
+                        <th scope="col">NARROW</th>
+                        <th scope="col">MEDIUM</th>
+                        <th scope="col">WIDE</th>
+                        <th scope="col">X-WIDE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">MEN</th>
+                        <td></td>
+                        <td>D</td>
+                        <td>2E</td>
+                        <td>4E</td>
+                        <td>6E</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">WOMEN</th>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>D</td>
+                        <td>2E</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab_cont">
+              <h3>NEWBALANCE DNA</h3>
+              <p class="hd_txt">
+                뉴발란스는 1938년 첫 러닝화를 만든 이후로,<br />미국내 운동화 생산을 지금까지 유지하고 있는 유일한
+                스포츠회사입니다.
+              </p>
+              <div class="craft1">
+                <div class="inner">
+                  <div class="video">
+                    <iframe
+                      width="980"
+                      height="550"
+                      src="https://www.youtube.com/embed/8eiHRCcSkEs?controls=0&autohide=1&rel=0&fs=0&showinfo=0&enablejsapi=1&version=3&playerapiid=ytplayer"
+                      frameborder="0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="clearfix">
+                    <h4><strong>MADE IN UK</strong> 라인</h4>
+                    <div class="exp">
+                      <p>
+                        영국 플림비 팩토리는 1985년에는 찰스 왕세자가, 2004년에는 영국 여왕이 직접 수여하는 퀸즈
+                        어워드를 수상하였으며, 2011년에는 에드워드 왕자가 방문할 정도로 최고 품질의 제품을 양산할 수
+                        있도록 고집하고 있는 기념비적인 공장입니다.
+                      </p>
+                      <p>
+                        뉴발란스 영국 플림비 팩토리는 1982년 8월 23일에 40명의 근로자들로 시작해 현재는 210명이 넘는
+                        근로자들이 한 주에 2만8천 족의 신발을 생산하는 HOME OF NEW BALANCE의 역할을 하고 있습니다.
+                        뉴발란스 플림비 팩토리가 있는 컴브리아 지역은 영국 최고의 등산로로 뽑힐 정도로 빼어난 자연미로
+                        <br />오랜 시간 동안 많은 이들에게 예술적 영감을 준 곳이기도 합니다. 이를 통해 뉴발란스 플림비
+                        팩토리에서 생산되는<strong class="f_bold"> MADE IN U.K 상품</strong>은 영국 특유의 감성을
+                        녹여내고 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="craft2">
+                <div class="exp2">
+                  <p>
+                    영국 플림비 팩토리에서는 <strong class="f_bold">MADE IN UK</strong>의 대표적인 프리미엄 라인인<br /><strong
+                      class="f_bold"
+                      >577, 576, 1500, 1300, 991</strong
+                    >을 주력으로 생산하고 있습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="craft3">
+                <div class="inner">
+                  <div class="clearfix">
+                    <h4><strong>MADE IN USA</strong> 라인</h4>
+                    <div class="exp">
+                      뉴발란스 MADE IN USA 라인은 뉴발란스의 기원과 장인정신을 알리는 역할을 하고 있으며, <br />“MADE IN
+                      USA” 라벨은 미국내 최소 70%이상의 노동력 및 제조력을 기여했을 때에만 붙여질 수 있습니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="craft4">
+                <div class="exp2">
+                  <p>
+                    뉴발란스 미국 생산 공장은 총 5개이며, <strong class="f_bold">메사추세스주</strong>에 BOSTON,
+                    LAWRENCE,<br /><strong class="f_bold">MAINE주</strong>에 NORRIDGEWOCK, SKOWHEGAN, NORWAY에 위치하고
+                    있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // container -->
+      <!-- footer -->
+      <div class="footer">
+        <div class="foot_link">
+          <ul>
+            <li>
+              <a href="#none">
+                <strong>FIND A STORE</strong>
+                <span>매장안내</span>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <strong>TEAM WEAR</strong>
+                <span>팀 / 단체복 구매</span>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <strong>MEMBER JOIN</strong>
+                <span>회원가입</span>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <strong>DOWNLOAD APP</strong>
+                <span>App 다운로드</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="foot_inner">
+          <div class="foot_menu">
+            <div class="list">
+              <strong>NEED HELP</strong>
+              <ul>
+                <li><a href="#none">고객센터</a></li>
+                <li><a href="#none">FAQs</a></li>
+                <li><a href="#none">공지사항</a></li>
+                <li><a href="#none">1:1 문의</a></li>
+                <li><a href="#none">매장 찾기</a></li>
+                <li><a href="#none">App 다운로드</a></li>
+              </ul>
+            </div>
+            <div class="list">
+              <strong>INFORMATION</strong>
+              <ul>
+                <li><a href="#none">통합 마일리지 안내</a></li>
+                <li><a href="#none">팀/단체복 주문안내</a></li>
+                <li><a href="#none">배송 및 교환 반품 안내</a></li>
+                <li><a href="#none">세탁 및 손질 방법 안내</a></li>
+                <li><a href="#none">이용약관</a></li>
+              </ul>
+            </div>
+            <div class="list">
+              <strong>INSIDE NB</strong>
+              <ul>
+                <li><a href="#none">INSIDE NB</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="foot_info">
+            <div class="sns">
+              <a href="https://www.facebook.com/nbkorea.LS" target="_blank" class="fb"
+                ><span class="blind">FACEBOOK</span></a
+              >
+              <a href="https://www.youtube.com/user/nbkorea" target="_blank" class="yt"
+                ><span class="blind">YOUTUBE</span></a
+              >
+              <a href="https://www.instagram.com/nblifestyle_kr/" target="_blank" class="in"
+                ><span class="blind">INSTAGRAM</span></a
+              >
+              <a href="https://blog.naver.com/nb_performance" target="_blank" class="nb_p">NB PERFORMANCE</a>
+              <a href="https://blog.naver.com/nb_lifestyle" target="_blank" class="nb_l">NB LIFE STYLE</a>
+            </div>
+            <div class="copyright">
+              <p>
+                <a href="#none;" class="c_link">개인정보 처리방침</a> / <a href="#none" class="c_link">이용약관</a> /
+                ㈜이랜드월드패션사업부 / 서울특별시 금천구 가산디지털1로 159 이랜드월드
+                <br />
+                고객상담실 (Online) 02-338-9085, (Kids Online) 02-863-0884, (AS) 080-999-0456
+                <br />
+                대표 이메일 : <a href="mailto:webmaster@nbkorea.com" target="_blank">webmaster@nbkorea.com</a>
+              </p>
+              <p>
+                <span>대표이사 : 정수정</span> <span>사업자등록번호 : 113-85-19030</span>
+                <span>통신판매업신고 : 금천구청 제 2005-01053 </span> <br />개인정보보호책임자 : 조동주
+              </p>
+              <p class="copy">Copyright 2018. New Balance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // footer -->
+    </div>
+    <!-- // wrap -->
+  </body>
+</html>

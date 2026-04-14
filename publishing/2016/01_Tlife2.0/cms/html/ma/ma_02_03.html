@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>나의 정보 관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p>CMS 관리자 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my mr5">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb0:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb0:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb0:eq(0)>ul>li:eq(0)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb0"><a href="#">나의 정보 관리</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <strong>나의 정보 관리</strong>
+            </div>
+            <h3 class="tit">나의 정보 관리</h3>
+
+            <!-- 나의 정보 관리 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >회원구분, 운영자 ID, 비밀번호, 이름, 소속사, 휴대폰 번호, 이메일 주소, 메뉴 권한 정보가 있는 나의
+                      정보 관리 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">회원구분</th>
+                      <td>CMS 관리자</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">운영자 ID</span>
+                      </th>
+                      <td>koudo0011</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">비밀번호</span>
+                      </th>
+                      <td>
+                        <a href="#" class="btn_small" title="새창 열림" target="_blank">비밀번호 변경</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이름</span>
+                      </th>
+                      <td>김민석</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">소속사</span>
+                      </th>
+                      <td>SKTeckX</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">휴대폰 번호</span>
+                      </th>
+                      <td>
+                        <select style="width: 70px" title="휴대폰 번호 국번 선택" disabled="disabled">
+                          <option>010</option>
+                          <option>011</option>
+                          <option>016</option>
+                          <option>017</option>
+                          <option>018</option>
+                          <option>019</option>
+                        </select>
+                        -
+                        <input
+                          type="text"
+                          class="wid_phone"
+                          maxlength="4"
+                          placeholder="1234"
+                          title="휴대폰 번호 가운데 네자리"
+                          disabled="disabled"
+                        />
+                        -
+                        <input
+                          type="text"
+                          class="wid_phone"
+                          maxlength="4"
+                          placeholder="5678"
+                          title="휴대폰 번호 마지막 네자리"
+                          disabled="disabled"
+                        />
+                        &nbsp;<span>휴대폰 번호인증이 완료 되었습니다.</span>
+                        <a href="#" class="btn_small">재인증</a>
+
+                        <!-- 재인증 버튼 클릭 시 -->
+                        <div>
+                          <select style="width: 70px" title="휴대폰 번호 국번 선택">
+                            <option>010</option>
+                            <option>011</option>
+                            <option>016</option>
+                            <option>017</option>
+                            <option>018</option>
+                            <option>019</option>
+                          </select>
+                          -
+                          <input
+                            type="text"
+                            class="wid_phone"
+                            maxlength="4"
+                            placeholder="1234"
+                            title="휴대폰 번호 가운데 네자리"
+                          />
+                          -
+                          <input
+                            type="text"
+                            class="wid_phone"
+                            maxlength="4"
+                            placeholder="5678"
+                            title="휴대폰 번호 마지막 네자리"
+                          />
+                          <a href="#" class="btn_small">인증번호 받기</a>
+                          <!-- 인증번호 받기 버튼 클릭 후 버튼 명 변경 -->
+                          <a href="#" class="btn_small">인증번호 재발송</a>
+
+                          <div class="gap_top2">
+                            인증번호 입력 &nbsp;<input
+                              type="text"
+                              maxlength="6"
+                              placeholder="6자리 숫자입력"
+                              title="인증번호 입력"
+                            />
+                            <a href="#" class="btn_small">확인</a> <span>(남은시간 <em class="red">MM:SS</em>)</span>
+                          </div>
+                        </div>
+                        <!-- //재인증 버튼 클릭 시 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이메일 주소</span>
+                      </th>
+                      <td>
+                        <input type="text" class="wid_per30" value="mjih@gmail.com" title="이메일 주소 입력" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">메뉴 권한</th>
+                      <td><a href="#" class="btn_small" title="새창 열림" target="_blank">권한확인</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //나의 정보 관리 테이블 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_cancel">취소</a>
+                <a href="#" class="btn_save">저장</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

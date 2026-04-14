@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>웰컴 쿠폰 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb5:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(2)>ul>li:eq(2)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb5">
+                <a href="#">프로모션 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">팝업관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">팝업관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Push 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">Push 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이벤트 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이벤트 배너관리</a></li>
+                      <li><a href="#">이달의 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 티켓관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">추천앱 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">추천앱 배너관리</a></li>
+                      <li><a href="#">추천앱 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">위젯관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">위젯관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>프로모션 관리</span>
+              <span>이벤트 관리</span>
+              <span>웰컴 쿠폰 관리</span>
+              <strong>웰컴 쿠폰 수정/조회</strong>
+            </div>
+            <h3 class="tit">웰컴 쿠폰 수정/조회</h3>
+
+            <!--웰컴 쿠폰 수정/조회 -->
+            <div class="table_list_top">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >자동발급, 쿠폰사용 가능기간, 세트명, 쿠폰정보가 있는 이달의 쿠폰 수정/조회 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">자동발급</th>
+                      <td>시작일자 : 2016-11-01 ~ 종료일자 : 2016-11-30</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">세트명</th>
+                      <td>8월의 쿠폰_03</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span class="ess">쿠폰정보</span></th>
+                      <td>
+                        <!-- 쿠폰정보 테이블 -->
+                        <div class="table_list_btm">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong
+                                  >쿠폰ID, 쿠폰명 (콘텐츠&amp;채널명), 유형 및 가격정보, 수량, 유효기간, 삭제선택이 있는
+                                  쿠폰정보 입력 서식</strong
+                                >
+                              </caption>
+                              <colgroup>
+                                <col style="width: 110px" />
+                                <col style="width: *" />
+                                <col style="width: 150px" />
+                                <col style="width: 100px" />
+                                <col style="width: 100px" />
+                                <col style="width: 80px" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">쿠폰ID</th>
+                                  <th scope="col">쿠폰명 (콘텐츠&amp;채널명)</th>
+                                  <th scope="col">유형 및 가격정보</th>
+                                  <th scope="col">수량</th>
+                                  <th scope="col">유효기간</th>
+                                  <th scope="col">삭제선택</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>coupon100</td>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >아메리카노(최대 20자까지 노출)</a
+                                    >
+                                  </td>
+                                  <td>20% 할인쿠폰</td>
+                                  <td>100,000</td>
+                                  <td>2016.06.21</td>
+                                  <td>-</td>
+                                </tr>
+                                <tr>
+                                  <td>coupon100</td>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >아메리카노(최대 20자까지 노출)</a
+                                    >
+                                  </td>
+                                  <td>1000원 정액쿠폰</td>
+                                  <td>100,000</td>
+                                  <td>2016.06.21</td>
+                                  <td>-</td>
+                                </tr>
+                                <tr>
+                                  <td>coupon100</td>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >아메리카노(최대 20자까지 노출)</a
+                                    >
+                                  </td>
+                                  <td>50,000원</td>
+                                  <td>100,000</td>
+                                  <td>2016.06.21</td>
+                                  <td>-</td>
+                                </tr>
+                                <tr>
+                                  <td>coupon100</td>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >아메리카노(최대 20자까지 노출)</a
+                                    >
+                                  </td>
+                                  <td>단행본</td>
+                                  <td>-</td>
+                                  <td>60일</td>
+                                  <td>-</td>
+                                </tr>
+                                <tr>
+                                  <td>coupon100</td>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >아메리카노(최대 20자까지 노출)</a
+                                    >
+                                  </td>
+                                  <td>재즈</td>
+                                  <td>-</td>
+                                  <td>60일</td>
+                                  <td>-</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //쿠폰정보 테이블 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //웰컴 쿠폰 수정/조회 -->
+
+            <!-- 등록&수정 일자 -->
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>등록자 ID, 등록일자, 최종 수정자 ID, 최종 수정일자가 있는 등록, 수정 정보</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">등록자 ID</th>
+                      <td>이승진 (dsh2222)</td>
+                      <th scope="row">등록일자</th>
+                      <td>2016.05.05&nbsp;&nbsp;14:00:12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">최종 수정자 ID</th>
+                      <td>송승헌 (dds2214)</td>
+                      <th scope="row">최종 수정일자</th>
+                      <td>2016.05.05&nbsp;&nbsp;14:00:12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //등록&수정 일자 -->
+
+            <div class="btngroup">
+              <div class="btn_left">
+                <a href="#" class="btn_delete">삭제</a>
+              </div>
+              <div class="btn_right">
+                <a href="#" class="btn_save">확인</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>매니저툴</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="mgt">
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <h1>
+          <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" /></a>
+        </h1>
+        <a href="#none" class="btn_md icon_md_logout_red">로그아웃</a>
+      </header>
+      <!-- //header -->
+
+      <!-- contents -->
+      <div class="contents">
+        <!-- 시스템 환경 설정 -->
+        <div class="grouping_ty1">
+          <div class="title_area clearfix">
+            <h2 class="title_cont2 fl_left">시스템 환경 설정</h2>
+            <p class="fl_right">
+              <a href="#none" title="새창 열림" class="btn_md bg_gray icon_md_update_white">설정 변경</a>
+            </p>
+          </div>
+
+          <!-- 환경 설정 -->
+          <div class="install_status">
+            <dl>
+              <dt>에이전트 시간 변경</dt>
+              <dd>
+                <div class="table_cell">사용안함</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>에이전트 통신 주기</dt>
+              <dd>
+                <div class="table_cell">60초</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>긴급해제 설정</dt>
+              <dd>
+                <div class="table_cell">사용안함</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>하루 기준시</dt>
+              <dd>
+                <div class="table_cell">06:00</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>휴일 차단</dt>
+              <dd>
+                <div class="table_cell">차단함<br />(09:00 차단)</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>일시사용</dt>
+              <dd class="font_ef">
+                <div class="table_cell">
+                  휴일: 5분 (99회)<br />
+                  평일 오전: 25분 (98회)<br />
+                  평일 오후: 35분 (97회)<br />
+                  휴가자: 45분 (96회)
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>PC 종료설정</dt>
+              <dd>
+                <div class="table_cell">Screen Off</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>PC 긴급사용</dt>
+              <dd>
+                <div class="table_cell">사용함</div>
+              </dd>
+            </dl>
+          </div>
+          <!-- //환경 설정 -->
+        </div>
+        <!-- //시스템 환경 설정 -->
+
+        <!-- 데몬 실패 로그 조회 (오늘) -->
+        <div class="grouping_ty1">
+          <div class="title_area clearfix">
+            <h2 class="title_cont2 fl_left">
+              데몬 실패 로그 조회 (오늘)
+              <span>- 실패로그가 있는 경우 시스템 관리자에게 문의 바랍니다.</span>
+            </h2>
+            <p class="fl_right">
+              <a href="#none" title="새창 열림" class="btn_md bg_gray icon_md_search_white">상세 보기</a>
+            </p>
+          </div>
+
+          <!-- tbl_default -->
+          <div class="tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: 140px" />
+                <col style="width: 190px" />
+                <col style="width: 190px" />
+                <col style="width: 90px" />
+                <col style="width: 80px" />
+                <col style="width: auto" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">데몬명</th>
+                  <th scope="col">시작일시</th>
+                  <th scope="col">종료일시</th>
+                  <th scope="col">실행시간</th>
+                  <th scope="col">상태</th>
+                  <th scope="col">비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">검색된 데이터가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_default -->
+        </div>
+        <!-- //데몬 실패 로그 조회 (오늘) -->
+
+        <!-- PC 설치 현황 -->
+        <div class="grouping_ty1">
+          <div class="title_area clearfix">
+            <h2 class="title_cont2 fl_left">
+              PC 설치 현황
+              <span class="list"
+                >- 다운로드 주소
+                <a href="http://dev.moffice.kr/Download/DEV_Install.exe" class="link_url"
+                  >http://dev.moffice.kr/Download/DEV_Install.exe</a
+                ></span
+              >
+              <span class="list"
+                >- 다운로드 주소
+                <a href="http://dev.moffice.kr/Download/DEV_Install.exe" class="link_url"
+                  >http://dev.moffice.kr/Download/DEV_Install.exe</a
+                ></span
+              >
+            </h2>
+          </div>
+
+          <!-- 설치현황 -->
+          <div class="install_status">
+            <dl>
+              <dt>재직자</dt>
+              <dd>
+                <div class="table_cell">40,000명</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>비대상자</dt>
+              <dd>
+                <div class="table_cell">3,000명</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>설치사용자 수</dt>
+              <dd>
+                <div class="table_cell">756명</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>설치 PC 대수</dt>
+              <dd>
+                <div class="table_cell">10,255대</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>공용 PC 대수</dt>
+              <dd>
+                <div class="table_cell">0대</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>최신버전</dt>
+              <dd>
+                <div class="table_cell">30.00.00.900</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>최신버전 PC 대수</dt>
+              <dd>
+                <div class="table_cell">1대</div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>구버전 PC 대수</dt>
+              <dd>
+                <div class="table_cell">10,254대</div>
+              </dd>
+            </dl>
+          </div>
+          <!-- //설치현황 -->
+        </div>
+        <!-- //PC 설치 현황 -->
+
+        <!-- search area -->
+        <div class="search_area">
+          <div class="title_area clearfix">
+            <h2 class="title_cont2 fl_left">사원정보 조회</h2>
+          </div>
+          <div class="tbl_search">
+            <table>
+              <colgroup>
+                <col style="width: 128px" />
+                <col style="width: 334.4px" />
+                <col style="width: 128px" />
+                <col style="width: 334px" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">이름 / 사번</th>
+                  <td>
+                    <div class="ip_box">
+                      <input type="text" name="" value="" title="이름 / 사번" />
+                      <a href="#none" class="icon_delete_full_blue">삭제</a>
+                    </div>
+                  </td>
+                  <th scope="row">상태</th>
+                  <td>
+                    <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                    <input type="radio" id="" name="" value="" /><label for="">전체</label>
+                    <input type="radio" id="" name="" value="" /><label for="">재직</label>
+                    <input type="radio" id="" name="" value="" /><label for="">퇴직</label>
+                    <input type="radio" id="" name="" value="" /><label for="">휴직</label>
+                    <input type="radio" id="" name="" value="" /><label for="">공용</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">권한</th>
+                  <td colspan="3">
+                    <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                    <input type="radio" id="" name="" value="" /><label for="">전체</label>
+                    <input type="radio" id="" name="" value="" /><label for="">일반</label>
+                    <input type="radio" id="" name="" value="" /><label for="">운영자</label>
+                    <input type="radio" id="" name="" value="" /><label for="">부서별 운영자</label>
+                    <input type="radio" id="" name="" value="" /><label for="">결재자</label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- btn -->
+          <div class="btn_area">
+            <a href="#none" class="btn_big bg_blue icon_big_search">검색</a>
+          </div>
+          <!-- //btn -->
+        </div>
+        <!-- //search area -->
+
+        <!-- result_area -->
+        <div class="result_area">
+          <!-- result_top -->
+          <div class="result_top clearfix">
+            <div class="fl_left">
+              <p class="totla_num">총 <span>0</span>건</p>
+            </div>
+          </div>
+          <!-- //result_top -->
+
+          <!-- tbl_default -->
+          <div class="tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: 140px" />
+                <col style="width: auto" />
+                <col style="width: 110px" />
+                <col style="width: 110px" />
+                <col style="width: 110px" />
+                <col style="width: 110px" />
+                <col style="width: 120px" />
+                <col style="width: 210px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"><a href="#none">사번</a></th>
+                  <th scope="col"><a href="#none">부서</a></th>
+                  <th scope="col"><a href="#none">이름</a></th>
+                  <th scope="col"><a href="#none">직급</a></th>
+                  <th scope="col"><a href="#none">상태</a></th>
+                  <th scope="col"><a href="#none">운영자</a></th>
+                  <th scope="col"><a href="#none">결재자</a></th>
+                  <th scope="col">바로가기</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">검색된 데이터가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td>20131101</td>
+                  <td>서비스개발팀</td>
+                  <td>이승우</td>
+                  <td>부장</td>
+                  <td>재직</td>
+                  <td>SA</td>
+                  <td>N</td>
+                  <td>
+                    <a href="#none" title="새창 열림" class="btn_sm bg_sky">사용자</a>
+                    <a href="#none" title="새창 열림" class="btn_sm bg_pink">운영자</a>
+                    <a href="#none" title="새창 열림" class="btn_sm bg_sky">결재자</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>20131101</td>
+                  <td>서비스개발팀</td>
+                  <td>이승우</td>
+                  <td>부장</td>
+                  <td>재직</td>
+                  <td>SA</td>
+                  <td>관리/결재</td>
+                  <td>
+                    <a href="#none" title="새창 열림" class="btn_sm bg_sky">사용자</a>
+                    <a href="#none" title="새창 열림" class="btn_sm bg_pink">운영자</a>
+                    <a href="#none" title="새창 열림" class="btn_sm bg_sky">결재자</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_default -->
+
+          <!-- result_paging -->
+          <div class="result_paging">
+            <!-- paging -->
+            <div class="paging">
+              <a href="#none" class="btn_start">처음으로</a>
+              <a href="#none" class="btn_prev">이전</a>
+              <strong>1</strong>
+              <a href="#none">2</a>
+              <a href="#none">3</a>
+              <a href="#none">4</a>
+              <a href="#none">5</a>
+              <a href="#none">6</a>
+              <a href="#none">7</a>
+              <a href="#none">8</a>
+              <a href="#none">9</a>
+              <a href="#none">10</a>
+              <a href="#none" class="btn_next">다음</a>
+              <a href="#none" class="btn_end">맨끝으로</a>
+            </div>
+            <!-- //paging -->
+            <p class="page_num"><strong>3</strong>/<span>10</span></p>
+          </div>
+          <!-- //result_paging -->
+        </div>
+        <!-- //result_area -->
+
+        <!-- TOP btn -->
+        <a href="#none" class="btn_top">TOP</a>
+        <!-- //TOP btn -->
+      </div>
+      <!-- //contents -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

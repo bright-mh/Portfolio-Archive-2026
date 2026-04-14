@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>기초상품 등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        //파일 업로드
+        var fileTarget = $(".filebox .file_hidden");
+
+        fileTarget.on("change", function () {
+          if (window.FileReader) {
+            // modern browser
+            var filename = $(this)[0].files[0].name;
+          } else {
+            // old IE
+            var filename = $(this).val().split("/").pop().split("\\").pop();
+          }
+
+          $(this).siblings(".file_name").val(filename);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p>제휴사 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb1:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb1:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb1:eq(0)>ul>li:eq(0)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb1">
+                <a href="#">기초상품 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">기초상품 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">기초상품 관리</a></li>
+                      <li><a href="#">캠페인 정보조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">무료쿠폰 사용관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">미발급 쿠폰조회</a></li>
+                      <li><a href="#">사용완료 쿠폰조회</a></li>
+                      <li><a href="#">사용완료 PIN 조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">정산 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">유료쿠폰 정산현황</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>기초상품 관리</span>
+              <span>기초상품 관리</span>
+              <strong>기초상품 등록</strong>
+            </div>
+            <h3 class="tit">기초상품 등록</h3>
+            <ul class="guide">
+              <li>유료상품 등록 시 상품등록 요청서 내용을 기준으로 기초상품을 등록합니다.</li>
+            </ul>
+
+            <!-- 기초상품 등록 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >기초상품 ID, 캠페인, 쿠폰 유효기간, 기간연장 가능 여부, 기프티콘 상품 ID, 브랜드 명, T멤버십
+                      가맹여부, 관리 쿠폰명(상품명), 정상가(소비자가), 원가(제휴사제공가), 입점수수료, 수량, 대표
+                      이미지, 상품설명, 유의사항, 특이사항, 담당자, 연락처가 있는 기초상품 등록 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">기초상품 ID</th>
+                      <td colspan="3">시스템 자동출력</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">캠페인</span>
+                      </th>
+                      <td colspan="3">
+                        <select title="캠페인-판매체널 선택" style="width: 240px">
+                          <option>판매채널</option>
+                          <option selected="selected">T라이프 (CH_0001)</option>
+                          <option>쿠키즈 (CH_0002)</option>
+                        </select>
+                        <select title="캠페인-캠페인명 선택" style="width: 300px">
+                          <option>캠페인 명 (캠페인ID)</option>
+                          <option selected="selected">티라이프 유료쿠폰 (CAMPID_202015)</option>
+                          <option>쿠키즈 유료쿠폰 (CAMPID_202016)</option>
+                        </select>
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">캠페인 선택</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">쿠폰 유효기간</span>
+                      </th>
+                      <td colspan="3">
+                        발행일로부터 &nbsp;<input type="text" title="쿠폰 유효기간 입력" value="90" /> &nbsp;일
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">기간연장 가능 여부</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="extension1" name="extension" checked="checked" /><label
+                          for="extension1"
+                          class="radio_range"
+                          >가능</label
+                        >
+                        <input type="radio" id="extension2" name="extension" /><label
+                          for="extension2"
+                          class="radio_range"
+                          >불가</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">기프티콘 상품 ID</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="wid_per30" title="기프티콘 상품 ID" value="S0028522" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">브랜드 명</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="wid_per30" title="브랜드 명" disabled="disabled" value="미니스톱" />
+                        <a href="#" class="btn_small" target="_blank" title="새창 열림">브랜드 선택</a>
+                        <span class="caution caution_left">상품등록 요청서 상 ‘제휴사’ 정보를 등록합니다.</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">T멤버십 가맹여부</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="memeber1" name="tmember" checked="checked" /><label
+                          for="memeber1"
+                          class="radio_range"
+                          >가맹</label
+                        >
+                        <input type="radio" id="memeber2" name="tmember" /><label for="memeber2" class="radio_range"
+                          >비가맹</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">관리 쿠폰명(상품명)</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="wid_per50" title="관리 쿠폰명(상품명)" value="점보요구르트" />
+                        <span class="caution caution_left">상품등록 요청서 상 ‘상품명’ 정보를 등록합니다.</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">정상가 (소비자가)</span>
+                      </th>
+                      <td colspan="3"><input type="text" title="정상가 (소비자가)" value="1,200" /> 원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">원가 (제휴사제공가)</span>
+                      </th>
+                      <td colspan="3"><input type="text" title="원가 (제휴사제공가)" value="1,200" /> 원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">입점수수료</span>
+                      </th>
+                      <td colspan="3"><input type="text" title="입점수수료" value="5" /> %</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">수량</span>
+                      </th>
+                      <td colspan="3"><input type="text" title="수량" value="1,000" /> 개</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">대표 이미지</span>
+                      </th>
+                      <td colspan="3">
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="기초상품 등록 신규 이미지" width="336" height="168" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" />
+
+                            <label for="file_choice">파일선택</label>
+                            <input type="file" id="file_choice" class="file_hidden" />
+                          </div>
+                          <ul class="caution">
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>PNG 파일업로드 <strong>(T life: 672x336 px)</strong></li>
+                          </ul>
+                        </div>
+                        <p class="attention">
+                          ※ 프론트에 노출되는 대표 이미지이므로, 이미지 사이즈와 용량에 유의하시기 바랍니다.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">상품설명</span>
+                      </th>
+                      <td colspan="3">
+                        <textarea class="wid_per80" rows="4" title="상품설명">
+[상품명]
+점보요구르트
+[상품소개]
+-건국유업의 빅사이즈 점보요구르트
+</textarea
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">유의사항</span>
+                      </th>
+                      <td colspan="3">
+                        <textarea class="wid_per80" rows="10" title="유의사항">
+-교환 유효기간은 발행일로부터 90일입니다.
+(시즌성 상품, 기업경품(B2B), 할인상품의 경우 유효기간이 상이 할 수 있습니다.)
+-신용카드 결제는 1,000원 이상부터 결제가능합니다.
+-기타 적립 및 할인 불가합니다.
+-매장내 행사상품은 기프티콘 교환 제외됩니다.
+
+[매장안내]
+-무등경기장 및 을지병원 내 매장에서는 교환이 불가합니다.
+</textarea
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">특이사항</th>
+                      <td colspan="3">
+                        <textarea class="wid_per80" rows="2" title="특이사항"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">담당자</th>
+                      <td>시스템 자동출력</td>
+                      <th scope="row">연락처</th>
+                      <td>시스템 자동출력</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <ul class="btm_guide">
+                <li>※ 일부 특수문자의 경우 치환된 문자로 보일 수 있습니다.</li>
+              </ul>
+            </div>
+            <!-- //기초상품 등록 테이블 -->
+
+            <div class="btngroup">
+              <div class="btn_left">
+                <a href="#" class="btn_cancel">취소</a>
+              </div>
+              <div class="btn_right">
+                <a href="#" class="btn_new">등록</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

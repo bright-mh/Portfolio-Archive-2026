@@ -1,0 +1,968 @@
+@charset "utf-8";
+
+.clear {
+  zoom: 1;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#mainCon {
+  min-width: 1000px;
+  background: #dce1e6;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: 1618px;
+}
+#mainCon .content {
+  min-width: 1000px;
+  max-width: 1600px;
+  position: relative;
+  left: 0;
+  top: 12px;
+  height: 1436px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#mainCon .smallBox {
+  width: 480px;
+  height: 347px;
+  border-top: 1px solid #ced2d9;
+  border-left: 1px solid #ced2d9;
+  border-right: 1px solid #ced2d9;
+  border-bottom: 2px solid #ced2d9;
+  background: #fff;
+  position: absolute;
+}
+#mainCon .bigBox {
+  width: 974px;
+  height: 347px;
+  border-top: 1px solid #ced2d9;
+  border-left: 1px solid #ced2d9;
+  border-right: 1px solid #ced2d9;
+  border-bottom: 2px solid #ced2d9;
+  background: #fff;
+  position: absolute;
+}
+table {
+  border-collapse: separate !important;
+  cellpadding: 0;
+  cellspacing: 0;
+  border: 0;
+  width: 100%;
+}
+/*1000*/
+#mainCon .todayEn {
+  left: 12px;
+  top: 0px;
+}
+#mainCon .elecPeak {
+  left: 506px;
+  top: 0px;
+}
+#mainCon .enUse {
+  left: 12px;
+  top: 362px;
+}
+#mainCon .usePattern {
+  left: 12px;
+  top: 724px;
+}
+#mainCon .charge {
+  left: 12px;
+  top: 1086px;
+}
+#mainCon .preparing {
+  left: 506px;
+  top: 1086px;
+}
+
+#mainCon section .wrapCon {
+  width: 420px;
+  margin-left: 30px;
+  height: 100%;
+}
+#mainCon section .wrapCon .tit {
+  clear: both;
+  width: 100%;
+  height: 52px;
+  background: url(/html/2014/bems/images/common/main_tit_bg.gif) repeat-x left bottom;
+}
+#mainCon section .wrapCon h1 {
+  font-size: 12px;
+  color: #0c0d0d;
+  font-weight: bold;
+  float: left;
+  margin-top: 23px;
+}
+#mainCon .enUse .wrapCon,
+#mainCon .usePattern .wrapCon {
+  width: 914px;
+}
+
+#mainCon section .wrapCon .con {
+  margin-top: 15px;
+  width: 100%;
+  position: relative;
+}
+#mainCon section.todayEn .topBox {
+  width: 100%;
+  height: 42px;
+}
+#mainCon section.todayEn .icon {
+  float: left;
+  margin: 4px 0 0 10px;
+}
+/*2014-02-13 dashboard > 오늘의 에너지 사용량 그래프 위치 변경*/
+#mainCon section.todayEn .grap {
+  float: right;
+  margin-top: -3px;
+}
+/*//2014-02-13 dashboard > 오늘의 에너지 사용량 그래프 위치 변경*/
+
+#mainCon section.todayEn .grap {
+  width: 370px;
+}
+#mainCon section.todayEn .grap .tGrap,
+#mainCon section.todayEn .grap .mGrap,
+#mainCon section.todayEn .grap .bGrap {
+  width: 100%;
+}
+/*2014-02-13 dashboard > 오늘의 에너지 사용량 그래프 사이즈 수정*/
+#mainCon section.todayEn .grap .tGrap .realData {
+  height: 20px;
+  width: 70%;
+  background: url(/html/2014/bems/images/common/ele_bg01.gif) repeat-x 0 0;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .grap .mGrap .realData {
+  height: 12px;
+  width: 60%;
+  background: url(/html/2014/bems/images/common/ele_bg02.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .grap .mGrap .maxData {
+  height: 12px;
+  width: 85%;
+  background: url(/html/2014/bems/images/common/max_bg01.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .grap .bGrap .realData {
+  height: 12px;
+  width: 80%;
+  background: url(/html/2014/bems/images/common/ele_bg03.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .grap .bGrap .maxData {
+  height: 12px;
+  width: 100%;
+  background: url(/html/2014/bems/images/common/max_bg02.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+/*//2014-02-13 dashboard > 오늘의 에너지 사용량 그래프 사이즈 수정*/
+#mainCon section.todayEn .table table td {
+  border: 0px;
+  text-align: center;
+}
+#mainCon section.todayEn .table {
+  width: 370px;
+  margin: 8px 0 0 51px;
+}
+#mainCon section.todayEn .table table tr {
+  height: 16px;
+}
+#mainCon section.todayEn .table table tr td {
+  padding: 0px;
+  color: #4b4b4c;
+  position: relative;
+  line-height: 12px;
+}
+#mainCon section.todayEn .table table tr td span.point1 {
+  font-weight: bold;
+  color: #ed6d53;
+}
+#mainCon section.todayEn .table table tr td img {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+#mainCon section.todayEn .table table tr.head {
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  height: 19px;
+}
+#mainCon section.todayEn .table table tr td.title {
+  width: 14%;
+}
+#mainCon section.todayEn .table table tr td.timeAmount {
+  width: 50%;
+}
+#mainCon section.todayEn .table table tr td.todayAmount {
+  width: 36%;
+}
+
+#mainCon section.todayEn .electArea {
+  position: absolute;
+}
+#mainCon section.todayEn .gasArea {
+  position: absolute;
+  top: 150px;
+}
+/*2014-02-13 dashboard > 오늘의 에너지 사용량 그래프 사이즈 수정*/
+#mainCon section.todayEn .gasArea .grap .tGrap .realData {
+  height: 20px;
+  width: 50%;
+  background: url(/html/2014/bems/images/common/gas_bg01.gif) repeat-x 0 0;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .gasArea .grap .mGrap .realData {
+  height: 12px;
+  width: 70%;
+  background: url(/html/2014/bems/images/common/gas_bg02.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .gasArea .grap .mGrap .maxData {
+  height: 12px;
+  width: 100%;
+  background: url(/html/2014/bems/images/common/max_bg01.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .gasArea .grap .bGrap .realData {
+  height: 12px;
+  width: 85%;
+  background: url(/html/2014/bems/images/common/gas_bg03.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .gasArea .grap .bGrap .maxData {
+  height: 12px;
+  width: 90%;
+  background: url(/html/2014/bems/images/common/max_bg02.gif) repeat-x 0 0;
+  overflow-y: hidden;
+} /*2014-01-06  dashboard오늘의 에너지  막대 그래프 이너쉐도우 추가 */
+#mainCon section.todayEn .table table tr td span.point2 {
+  font-weight: bold;
+  color: #4396bf;
+  margin-top: 15px;
+}
+/*//2014-02-13 그래프 사이즈 수정*/
+
+/*일반 전력 피크*/
+#mainCon .elecPeak .peakBox {
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px solid #eaeaea;
+  margin-top: 16px;
+}
+#mainCon .elecPeak .peakBox .left {
+  float: left;
+  margin-top: 5px;
+} /*2014-01-06 일반전력 피크 폰트 사이즈 줄이면서 위치 수정*/
+#mainCon .elecPeak .peakBox .left .data {
+  vertical-align: bottom;
+  font-size: 33px;
+  font-weight: bold;
+  color: #333;
+  font-family: tahoma;
+} /*2014-01-06 일반전력피크 폰트사이즈 수정 48 -> 33*/
+#mainCon .elecPeak .peakBox .left .data .unit {
+  font-size: 12px;
+} /*2014-01-06 일반전력 피크 -> 단위 수정 22-12*/
+#mainCon .elecPeak .peakBox .left .data .time {
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 5px;
+  position: relative;
+} /*2014-01-28 일반전력 피크 -> 오늘의 피크 시간쪽 레이아웃 수정*/
+
+/*2014-01-06일반전력 피크 -> 오늘의 피크 시간쪽 레이아웃 수정 추가  */
+#mainCon .elecPeak .peakBox .left .data .time .time01 {
+  position: absolute;
+  width: 70px;
+  top: -15px;
+}
+#mainCon .elecPeak .peakBox .left .data .time .time02 {
+  position: absolute;
+  width: 70px;
+  top: 0px;
+}
+/*End //2014-01-06일반전력 피크 -> 오늘의 피크 시간쪽 레이아웃 수정 추가  */
+
+#mainCon .elecPeak .warning {
+  float: right;
+  margin-top: -16px;
+}
+/*2014-02-13  일반전력 피크 그래프 위치 수정*/
+#mainCon .elecPeak .dataBox {
+  clear: both;
+  width: 100%;
+  height: 130px;
+  margin-top: 10px;
+}
+/*2014-02-13 일반 전력 피크 그래프 크기 변경*/
+#mainCon .elecPeak .dataBox .cirGrap {
+  width: 200px;
+  height: 173px;
+  float: left;
+}
+/*//2014-02-13 일반 전력 피크 그래프 크기 변경*/
+/*//2014-02-13  일반전력 피크 그래프 위치 수정*/
+/*140102 일반전력 피크 수정*/
+#mainCon .elecPeak .tableData {
+  float: right;
+  margin: 20px 0 0 0px;
+}
+/*//140102 일반전력 피크 수정*/
+#mainCon .elecPeak .tableData table {
+  font-size: 12px;
+  color: #4b4b4c;
+}
+#mainCon .elecPeak .tableData table tr {
+  font-weight: bold;
+  height: 19px;
+}
+/*140102 일반전력 피크 수정*/
+/*2014-02-13 일반전력 피크 테이블 데쉬 라인 사이 간격 수정*/
+#mainCon .elecPeak .tableData table .head {
+  height: 33px;
+  vertical-align: top;
+}
+/*//2014-02-13 일반전력 피크 테이블 데쉬 라인 사이 간격 수정*/
+#mainCon .elecPeak .tableData table .head td {
+  background: url(/html/2014/bems/images/common/t_line.gif) repeat-x 0 49%;
+}
+/*//140102 일반전력 피크 수정*/
+#mainCon .elecPeak .tableData table td {
+  width: 79px;
+  font-weight: normal;
+}
+#mainCon .elecPeak .tableData table td.unit {
+  width: 90px;
+}
+#mainCon .elecPeak .tableData table .head td {
+  font-weight: bold;
+}
+
+/*에너지 사용량*/
+#mainCon .tabSelectBox {
+  float: right;
+  margin-right: 10px;
+}
+#mainCon .tabSelectBox ul li {
+  float: left;
+}
+#mainCon .tabSelectBox ul li div {
+  width: 60px;
+  height: 29px;
+  padding-top: 23px;
+  text-align: center;
+}
+#mainCon .tabSelectBox ul li div span {
+  font-size: 12px;
+  color: #4b4b4c;
+}
+#mainCon .tabSelectBox ul li.over div {
+  background: url(/html/2014/bems/images/common/main_tab_over.gif) repeat-x left bottom;
+  font-weight: bold;
+}
+
+/*에너지 사용패턴*/
+#mainCon .enUse .grapArea {
+  width: 100%;
+  height: 295px;
+}
+
+/*에너지 사용패턴*/
+#mainCon .usePattern .conBox {
+  position: relative;
+  width: 100%;
+  height: 295px;
+  background: #fff;
+}
+#mainCon .usePattern .conBox .cusTomselec {
+  position: absolute;
+  right: 38px;
+  top: 18px;
+  font-size: 12px;
+  color: #4b4b4c;
+  clear: both;
+}
+/*#mainCon .usePattern .conBox .cSelec{width:127px; border:1px solid #d8dce1; border-right:none; float:left; height:20px; padding:8px 0 0 10px; background:#fafafa;}
+	#mainCon .usePattern .conBox img{float:left;}*/
+#mainCon .usePattern .grapArea2 {
+  position: relative;
+  top: 48px;
+  width: 100%;
+  height: 247px;
+}
+#mainCon .usePattern .conBox .btnBox {
+  width: 170px;
+  clear: both;
+  height: 30px;
+}
+#mainCon .usePattern .compare {
+  float: left;
+  vertical-align: middle;
+  height: 21px;
+  padding-top: 9px;
+  margin-right: 12px;
+}
+#mainCon .usePattern .cusArea {
+  float: left;
+}
+#mainCon .usePattern .conBox .btnBox .select2-chosen {
+  padding-top: 7px;
+}
+#mainCon .usePattern .conBox .btnBox .select2-choice {
+  border-radius: 0px;
+}
+
+#mainCon .tit .numBox {
+  float: right;
+  font-size: 30px;
+  color: #0c0d0d;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: -1px;
+  font-family: tahoma;
+}
+#mainCon .tit .numBox .unit {
+  letter-spacing: 0px;
+}
+#mainCon .dataBox02 {
+  height: 110px;
+  width: 100%;
+  background: #bbb;
+  margin-top: 15px;
+  clear: both;
+}
+#mainCon .dataBox03 {
+  height: 110px;
+  width: 100%;
+  background: #ed6d53;
+  margin-top: 15px;
+  clear: both;
+}
+
+#mainCon .icon {
+  float: right;
+}
+#mainCon .dataBox02 .icon {
+  margin: 28px 33px 0 0;
+}
+#mainCon .dataBox03 .icon {
+  margin: 17px 35px 0 0;
+  position: relative;
+  width: 40px;
+  height: 71px;
+  overflow: hidden;
+}
+#mainCon .dataBox03 .icon .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffac9b;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+#mainCon .dataBox03 .icon .percenBox {
+  position: absolute;
+  width: 40px;
+  height: 71px;
+  z-index: 4;
+}
+#mainCon .dataBox03 .icon .percenBox .percen {
+  position: absolute;
+  width: 100%;
+  height: 30.25%;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+}
+#mainCon .dataBox03 .icon .hIcon {
+  position: absolute;
+  z-index: 5;
+}
+#mainCon .dataBox02 .left,
+#mainCon .dataBox03 .left {
+  float: left;
+  margin: 23px 0 0 27px;
+  color: #fff;
+}
+#mainCon .dataBox02 .left .txt01,
+#mainCon .dataBox03 .left .txt01 {
+  font-size: 12px;
+  font-weight: bold;
+}
+#mainCon .dataBox02 .left .data01,
+#mainCon .dataBox03 .left .data01 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: tahoma;
+}
+#mainCon .dataBox02 .left .data01 span,
+#mainCon .dataBox03 .left .data01 span {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+#mainCon .dataTable {
+  margin-top: 20px;
+  width: 100%;
+}
+#mainCon .dataTable table {
+  width: 100%;
+  color: #4b4b4c;
+}
+#mainCon .dataTable table tr {
+  height: 32px;
+}
+#mainCon .dataTable table tr.color {
+  background: #f6f7fa;
+}
+#mainCon .dataTable table .head {
+  font-weight: bold;
+  color: #323233;
+}
+
+#mainCon .dataTable table .thr {
+  width: 25%;
+}
+#mainCon .dataTable table td {
+  text-align: center;
+}
+#mainCon .dataTable table td {
+  text-align: right;
+  padding-right: 15px;
+}
+#mainCon .dataTable table td.four {
+  text-align: right;
+  padding-right: 45px;
+}
+#mainCon .dataTable table .head td.four {
+  text-align: right;
+  padding-right: 30px;
+}
+#mainCon .dataTable table .head td.sec {
+  padding-right: 25px;
+}
+#mainCon .dataTable table td img {
+  margin-left: 5px;
+}
+/*jhy 1216 테이블 padding값 9월네에너지 납부 요금 및 10월 목표대비 사용량 수정*/
+#mainCon .dataTable table td.fir {
+  padding-left: 10px;
+}
+/*// End jhy*/
+
+#mainCon .preparing .dataTable table .thr {
+  width: 30%;
+}
+#mainCon .preparing .dataTable table .head .thr {
+  padding-right: 30px;
+}
+#mainCon .preparing .dataTable table .four {
+  padding-right: 25px;
+}
+#mainCon .preparing .dataTable table .head td.four {
+  padding-right: 30px;
+}
+
+.rss {
+  width: 974px;
+  height: 55px;
+  background: #fff;
+  position: relative;
+  left: 12px;
+  top: 5px;
+  border-top: 1px solid #ced2d9;
+  border-left: 1px solid #ced2d9;
+  border-right: 1px solid #ced2d9;
+  border-bottom: 2px solid #ced2d9;
+  overflow: hidden;
+  clear: both;
+}
+
+.rss .feedBox {
+  margin-top: 22px;
+  float: left;
+  width: 918px;
+}
+.rss .feedBox .display {
+  height: 14px;
+  width: 784px;
+  overflow: hidden;
+}
+.rss .feedBox ul {
+  width: 784px;
+}
+.rss .feedBox p {
+  float: left;
+  width: 790px;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  display: block;
+  height: 14px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  padding-left: 29px;
+}
+.rss .feedBox .date {
+  float: right;
+  color: #898a8c;
+  font-size: 12px;
+  margin-right: 30px;
+}
+.rss .tit {
+  color: #19191a;
+  font-weight: bold;
+  font-size: 12px;
+}
+.rss .part {
+  color: #19191a;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0 15px 0 18px;
+}
+.rss .stit {
+  color: #4b4b4c;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.rss .place {
+  color: #4b4b4c;
+  font-size: 12px;
+}
+.rss .rss_btn {
+  float: right;
+}
+
+footer {
+  width: 976px;
+  height: 90px;
+  margin-left: 12px;
+  padding-top: 13px;
+  position: relative;
+}
+footer .leftBox {
+  clear: both;
+  color: #8a9099;
+  font-size: 11px;
+}
+footer .address span {
+  margin: 0 3px;
+}
+footer .leftBox .logo {
+  float: left;
+  width: 117px;
+  height: 66px;
+  margin: 0 54px 0 17px;
+  color: #8a9099;
+  font-size: 11px;
+}
+footer .leftBox .copyBox {
+  float: left;
+  margin-top: 15px;
+  color: #8a9099;
+  font-size: 11px;
+}
+footer .leftBox .copy {
+  margin-top: 3px;
+}
+footer .leftBox p {
+  color: #8a9099;
+  font-size: 11px;
+}
+footer .leftBox .brow {
+  margin-top: 5px;
+  color: #8a9099;
+  font-size: 11px;
+}
+footer .leftBox .brow .part {
+  margin: 0 2px 0 5px;
+}
+footer .leftBox .brow span {
+  color: #8a9099;
+  font-size: 11px;
+  margin-left: 5px;
+}
+footer .fBtn {
+  position: fixed;
+  left: 1532px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+/*selectBox*/
+.cusArea .sbHolder {
+  background-color: #fafafa;
+  border: solid 1px #d8dce1;
+  font-size: 12px;
+  color: #4b4b4c;
+  font-weight: normal;
+  height: 28px;
+  position: relative;
+  width: 168px;
+}
+.cusArea .sbHolder:focus .sbSelector {
+}
+.cusArea .sbSelector {
+  display: block;
+  height: 30px;
+  left: 0;
+  line-height: 30px;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 10px;
+  top: 0;
+  width: 168px;
+}
+.cusArea .sbSelector:link,
+.sbSelector:visited,
+.sbSelector:hover {
+  color: #4b4b4c;
+  outline: none;
+  text-decoration: none;
+}
+.cusArea .sbToggle {
+  background: url(/html/2014/bems/images/common/main_select.gif) 0 0 no-repeat;
+  display: block;
+  height: 28px;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 31px;
+}
+.cusArea .sbToggle:hover {
+}
+.cusArea .sbToggleOpen {
+  background: url(/html/2014/bems/images/common/main_select.gif) 0 0 no-repeat;
+}
+.cusArea .sbToggleOpen:hover {
+  background: url(/html/2014/bems/images/common/main_select.gif) 0 0 no-repeat;
+}
+.cusArea .sbHolderDisabled {
+  background-color: #000;
+  border: solid 1px #515151;
+}
+.cusArea .sbHolderDisabled .sbHolder {
+}
+.cusArea .sbHolderDisabled .sbToggle {
+}
+
+/*option bgColor & bgWidth*/
+/*2014-01-28 커스텀 셀렉트 박스 크기 수정*/
+.cusArea .sbOptions {
+  background-color: #f8f8f8;
+  border: solid 1px #b3b3b3;
+  list-style: none;
+  left: -1px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  min-width: 168px;
+  z-index: 1;
+  overflow-y: auto;
+}
+/*End 2014-01-28 커스텀 셀렉트 박스 크기 수정*/
+.cusArea .sbOptions li {
+  padding: 0 7px;
+}
+.cusArea .sbOptions a {
+  /*border-bottom: solid 1px #515151;*/
+  display: block;
+  outline: none;
+  padding: 7px 0 7px 3px;
+}
+.cusArea .sbOptions a:link,
+.cusArea .sbOptions a:visited {
+  color: #4b4b4c;
+  text-decoration: none;
+}
+.cusArea .sbOptions a:hover,
+.cusArea .sbOptions a:focus,
+.cusArea .sbOptions a.sbFocus {
+  color: #fff;
+  background: #9e9e9e;
+}
+.cusArea .sbOptions li.last a {
+  border-bottom: none;
+}
+.cusArea .sbOptions .sbDisabled {
+  border-bottom: dotted 1px #515151;
+  color: #999;
+  display: block;
+  padding: 7px 0 7px 3px;
+}
+.cusArea .sbOptions .sbGroup {
+  border-bottom: dotted 1px #515151;
+  color: #ebb52d;
+  display: block;
+  font-weight: bold;
+  padding: 7px 0 7px 3px;
+}
+.cusArea .sbOptions .sbSub {
+  padding-left: 17px;
+}
+
+/*tooltip*/
+#mainCon .graphTooltip {
+  display: none;
+  position: fixed;
+  height: 58px;
+  padding: 15px 13px 9px 10px;
+  background: url("/html/2014/bems/images/common/bg_tooltip.png") repeat-x 0 0;
+  color: #4b4b4c;
+  line-height: 25px;
+  z-index: 100000;
+}
+#mainCon .graphTooltip p {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+#mainCon .graphTooltip p .holi {
+  color: #ed6d53;
+}
+#mainCon .graphTooltip ul li {
+  font-size: 11px;
+  line-height: 16px;
+}
+#mainCon .graphTooltip ul li span {
+  font-weight: bold;
+}
+#mainCon .graphTooltip .bg_tooltipLeft {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 5px;
+  height: 81px;
+  background: url("/html/2014/bems/images/common/bg_tooltip_left.png") no-repeat 0 0;
+  z-index: 20;
+}
+#mainCon .graphTooltip .bg_tooltipRight {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 8px;
+  height: 81px;
+  background: url("/html/2014/bems/images/common/bg_tooltip_right.png") no-repeat 2px 0;
+  z-index: 20;
+}
+
+/*case*/
+p.nonData {
+  float: left;
+  color: #4b4b4d;
+  line-height: 20px;
+  margin-left: 14px;
+}
+p.nonData2 {
+  float: left;
+  color: #4b4b4d;
+  line-height: 20px;
+  margin: 2px 0 0 14px;
+}
+p.nonData3 {
+  color: #4b4b4d;
+  text-align: center;
+}
+.nonBox {
+  text-align: center;
+  margin: 70px auto 0 auto;
+  width: 193px;
+}
+.nonBox p {
+  color: #4b4b4d;
+  line-height: 20px;
+  margin: 11px 0 20px 0;
+}
+
+/*case Add 2013-12-03 jhy 에너지 납부 요금에 작년 에너지 납부 요금이 없을 경우 case*/
+.charge .dataBox02 .non {
+  font-size: 12px;
+  color: #fff;
+  vertical-align: bottom;
+  width: 270px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.charge .dataBox02 .non img,
+.charge .dataBox02 .non span {
+  vertical-align: bottom;
+  text-align: center;
+}
+.charge .dataBox02 .non span {
+  padding-left: 10px;
+}
+
+/*140102 수정 일반전력 피크*/
+#mainCon .elecPeak .tableData table td.time {
+  font-weight: bold;
+}
+#mainCon .elecPeak .tableData table td.data {
+  font-family: tahoma;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*2014-01-27 일반 전력 피크 데이터 없을 시 문구 추가*/
+p.nonData {
+  margin-top: 5px;
+  margin-left: -4px;
+  font-size: 11px;
+  color: #898a8c;
+}
+p.nonData span {
+  position: relative;
+  margin-right: 5px;
+  top: -2px;
+}
+
+/*2014-02-13 일반 전력 피크 실시간 전력 레이어 변경 추가*/
+#mainCon .elecPeak .dataBox .rp {
+  position: relative;
+  left: 30px;
+  top: -60px;
+}
+#mainCon .elecPeak .dataBox .rp .realPeak .tit15 {
+  font-size: 12px;
+  color: #333;
+  margin-right: 10px;
+}
+#mainCon .elecPeak .dataBox .rp .realPeak .time {
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+}
+#mainCon .elecPeak .dataBox .rp .data {
+  font-family: tahoma;
+  color: #333;
+  font-size: 22px;
+  font-weight: bold;
+}
+#mainCon .elecPeak .dataBox .rp .data span {
+  font-size: 12px;
+}
+
+#mainCon .elecPeak .dataBox p.info {
+  padding-right: 30px;
+  position: relative;
+  color: #898a8c;
+  font-size: 11px;
+  top: -35px;
+  line-height: 16px;
+  background: url(/html/2014/bems/images/common/b_star.gif) no-repeat -0 4px;
+  padding-left: 8px;
+}
+#mainCon .elecPeak .dataBox p.info a {
+  text-decoration: underline;
+  color: #898a8c;
+  font-size: 11px;
+}

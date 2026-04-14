@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>New Balance Korea</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+  </head>
+  <body class="layer_on">
+    <!-- [D] 레이어 팝업 띄울 시에 lyaer_on 클래스 body에 추가! -->
+    <div class="layer_wrap">
+      <div class="pop_inner">
+        <div class="header">
+          <strong>배송정보 수정</strong>
+          <a href="#none" class="pop_close"><span class="blind">닫기</span></a>
+        </div>
+        <div class="contents">
+          <div class="inner">
+            <div class="info_delivery">
+              <!-- form_area -->
+              <div class="form_area">
+                <fieldset>
+                  <legend>배송정보 수정 양식</legend>
+                  <!-- 배송정보 -->
+                  <div class="row">
+                    <div class="fdata">
+                      <a href="#none" class="btn_ty_gface1">배송지 주소록</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="deli_name" class="ftit">받으실 분 이름 <em class="compulsory">필수</em></label>
+                    <div class="fdata">
+                      <input type="text" id="deli_name" class="ip_text" title="받으실 분 이름" value="홍길동" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="phone_num" class="ftit">휴대폰번호 <em class="compulsory">필수</em></label>
+                    <div class="fdata">
+                      <input
+                        type="number"
+                        id="phone_num"
+                        class="ip_text"
+                        value="01093214545"
+                        placeholder="‘-’없이 입력해 주세요."
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="phone_num2" class="ftit">다른 전화번호</label>
+                    <div class="fdata">
+                      <input
+                        type="number"
+                        id="phone_num2"
+                        class="ip_text"
+                        value="07045457848"
+                        placeholder="‘-’없이 입력해 주세요."
+                      />
+                    </div>
+                  </div>
+                  <div class="row effect">
+                    <strong class="ftit">배송지 주소 <em class="compulsory">필수</em></strong>
+                    <div class="fdata addr">
+                      <div class="block">
+                        <input type="text" class="ip_text" readonly title="배송지 우편번호" value="06201" />
+                        <a href="#none" class="btn_ty_gface1">우편번호 찾기</a>
+                      </div>
+                      <input
+                        type="text"
+                        class="ip_text"
+                        readonly
+                        title="기본 주소"
+                        value="서울특별시 강남구 도산대로 301(신사동 630-7)"
+                      />
+                      <input
+                        type="text"
+                        class="ip_text"
+                        title="상세 주소"
+                        placeholder="상세 주소를 입력해 주세요."
+                        value="5F"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <strong class="ftit">배송 시 요청사항</strong>
+                    <div class="fdata">
+                      <textarea
+                        class="ip_textarea"
+                        cols="10"
+                        rows="10"
+                        title="배송시 요청사항"
+                        placeholder="택배 기사님께 전달하는 내용입니다."
+                      >
+부재중 집 앞에 놓아주세요.</textarea
+                      >
+                    </div>
+                  </div>
+                  <!-- //배송정보 -->
+                </fieldset>
+              </div>
+              <!-- //form_area -->
+
+              <!-- btn -->
+              <div class="btn_area">
+                <div class="col2">
+                  <a href="#none" class="btn_ty_bline basic">취소</a>
+                  <a href="#none" class="btn_ty_bface basic">변경사항 저장</a>
+                </div>
+              </div>
+              <!-- //btn -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

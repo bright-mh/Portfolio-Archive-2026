@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>차단정책 &gt; 차단정책 관리</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="user_box">
+          <p>지진희 (제이니스)</p>
+        </div>
+        <div class="logo_box">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 30px / 가로크기는 비율로 자동조정 -->
+          <h1>
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 30px" /></a>
+          </h1>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- LNB : left menu -->
+        <nav class="lnb_area">
+          <h2 class="blind">운영자 메뉴</h2>
+          <ul class="lnb_list">
+            <!-- [D] 1Depth 선택 시, li태그에 class="on" 추가 -->
+            <li class="list_basic1">
+              <a href="#none" class="depth1">사내정보</a>
+              <!-- [D] 2Depth 선택 시, li태그에 class="on" 추가 -->
+              <ul>
+                <li><a href="#none">공지사항 관리</a></li>
+                <li><a href="#none">사원정보 관리</a></li>
+                <li><a href="#none">휴일정보 관리</a></li>
+                <li><a href="#none">운영자 관리</a></li>
+                <li><a href="#none">부서별 운영자 관리</a></li>
+                <li><a href="#none">결재자 관리</a></li>
+                <li><a href="#none">그룹 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic2">
+              <a href="#none" class="depth1">근무정책</a>
+              <ul>
+                <li><a href="#none">근무정책 관리</a></li>
+                <li><a href="#none">근무정책 적용</a></li>
+              </ul>
+            </li>
+            <li class="list_basic3 on">
+              <a href="#none" class="depth1">차단정책</a>
+              <ul>
+                <li class="on"><a href="#none">차단정책 관리</a></li>
+                <li><a href="#none">차단정책 적용</a></li>
+                <li><a href="#none">알림창 관리</a></li>
+                <li><a href="#none">차단창 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic4">
+              <a href="#none" class="depth1">제한정책</a>
+              <ul>
+                <li><a href="#none">제한정책 관리</a></li>
+                <li><a href="#none">제한정책 적용</a></li>
+              </ul>
+            </li>
+            <li class="list_basic5">
+              <a href="#none" class="depth1">PC 사용자</a>
+              <ul>
+                <li><a href="#none">비대상자 관리</a></li>
+                <li><a href="#none">차단 예외자 관리</a></li>
+                <li><a href="#none">휴가자 관리</a></li>
+                <li><a href="#none">사용자 초기화 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic6">
+              <a href="#none" class="depth1">PC 사용 현황</a>
+              <ul>
+                <li><a href="#none">미승인 신청 현황</a></li>
+                <li><a href="#none">전체 신청 현황</a></li>
+                <li><a href="#none">PC ON/OFF 조회</a></li>
+                <li><a href="#none">PC-LOG 조회</a></li>
+                <li><a href="#none">PC-IDLE 조회</a></li>
+                <li><a href="#none">자리비움 조회</a></li>
+              </ul>
+            </li>
+            <li class="list_basic7">
+              <a href="#none" class="depth1">통계 현황</a>
+              <ul>
+                <li><a href="#none">PC ON/OFF 통계</a></li>
+                <li><a href="#none">PC 연장사용 통계</a></li>
+                <li><a href="#none">설치현황 통계</a></li>
+              </ul>
+            </li>
+            <li class="list_basic8">
+              <a href="#none" class="depth1">시스템</a>
+              <ul>
+                <li><a href="#none">설치현황 관리</a></li>
+                <li><a href="#none">데몬로그 조회</a></li>
+                <li><a href="#none">프로그램 설정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- //LNB : left menu -->
+
+        <!-- contents -->
+        <div class="contents">
+          <!-- tip area -->
+          <div class="tip_area">
+            <!-- <a href="#none" class="btn_tip">TIP</a> -->
+            <p class="blind">TIP</p>
+            <div class="tip_box">
+              <ul class="tip_list">
+                <li>내용 내용</li>
+              </ul>
+            </div>
+          </div>
+          <!-- //tip area -->
+
+          <h2 class="title_cont btm_none">차단정책 관리</h2>
+
+          <!-- search area -->
+          <div class="search_area">
+            <div class="tbl_search">
+              <table>
+                <colgroup>
+                  <col style="width: 128px" />
+                  <col style="width: 334.4px" />
+                  <col style="width: 128px" />
+                  <col style="width: 334px" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">정책명</th>
+                    <td>
+                      <div class="ip_box">
+                        <input type="text" name="" value="" title="대상정보" />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                    </td>
+                    <th scope="row">상태</th>
+                    <td>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="radio" id="" name="" value="" /><label for="">전체</label>
+                      <input type="radio" id="" name="" value="" /><label for="">정상</label>
+                      <input type="radio" id="" name="" value="" /><label for="">취소</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- btn -->
+            <div class="btn_area">
+              <a href="#none" class="btn_big bg_blue icon_big_search">검색</a>
+            </div>
+            <!-- //btn -->
+          </div>
+          <!-- //search area -->
+
+          <!-- result_area -->
+          <div class="result_area">
+            <!-- result_top -->
+            <div class="result_top clearfix">
+              <div class="fl_left">
+                <p class="totla_num">총 <span>0</span>건</p>
+              </div>
+              <div class="btn_area fl_right">
+                <!-- <a href="#none" class="btn_md icon_md_csv">CSV</a> -->
+                <a href="#none" class="btn_md icon_md_excel">엑셀</a>
+                <a href="#none" title="새창 열림" class="btn_md bg_gray icon_md_regist_white3">등록</a>
+              </div>
+            </div>
+            <!-- //result_top -->
+
+            <!-- tbl_default -->
+            <div class="tbl_default line_emphasis">
+              <table>
+                <colgroup>
+                  <col style="width: 40px" />
+                  <col style="width: auto" />
+                  <col style="width: 120px" />
+                  <col style="width: 130px" />
+                  <col style="width: 120px" />
+                  <col style="width: 120px" />
+                  <col style="width: 150px" />
+                  <col style="width: 100px" />
+                  <col style="width: 70px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" rowspan="2" class="line_color">
+                      <input type="checkbox" name="" value="" title="전체 선택" />
+                    </th>
+                    <th scope="col" rowspan="2" class="line_color"><a href="#none">정책명</a></th>
+                    <th scope="col"><a href="#none">평일</a></th>
+                    <th scope="col"><a href="#none">요일</a></th>
+                    <th scope="col"><a href="#none">근무시작전</a></th>
+                    <th scope="col"><a href="#none">휴직자</a></th>
+                    <th scope="col" rowspan="2" class="line_color"><a href="#none">알림창</a></th>
+                    <th scope="col" rowspan="2" class="line_color"><a href="#none">최종수정정보</a></th>
+                    <th scope="col"><a href="#none">상태</a></th>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="left_line line_color"><a href="#none">휴일</a></th>
+                    <th scope="col" class="line_color"><a href="#none">특정일</a></th>
+                    <th scope="col" class="line_color"><a href="#none">휴가자</a></th>
+                    <th scope="col" class="line_color"><a href="#none">퇴직자</a></th>
+                    <th scope="col" class="line_color">관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 데이터 없을 시 -->
+                  <tr class="no_data">
+                    <td colspan="100" class="line_color">검색된 데이터가 없습니다.</td>
+                  </tr>
+                  <!-- group -->
+                  <tr class="line_group">
+                    <td rowspan="2" class="line_color"><p class="tbl_icon_basic">기본</p></td>
+                    <td rowspan="2" class="line_color">기본차단정책</td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">월화수목금토일 23:00</p>
+                    </td>
+                    <td>
+                      <p class="not_blocking">차단안함</p>
+                    </td>
+                    <td>
+                      <p class="not_blocking">차단안함</p>
+                    </td>
+                    <td rowspan="2" class="line_color space_box">
+                      <div class="txt_name">
+                        <p>
+                          60분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          30분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          서영숙 알리창 등록테스트
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          10분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td rowspan="2" class="line_color">최준구<br />(2019-12-02)</td>
+                    <td>정상</td>
+                  </tr>
+                  <tr>
+                    <td class="left_line line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">2019-11-30 17:00</p>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <a href="#none" class="btn_sm bg_sky">수정</a>
+                      <a href="#none" class="btn_sm bg_sky mt5">복제</a>
+                    </td>
+                  </tr>
+                  <!-- //group -->
+                  <!-- group -->
+                  <tr class="line_group">
+                    <td rowspan="2" class="line_color"><p class="tbl_icon_use">사용중</p></td>
+                    <td rowspan="2" class="line_color">기본차단정책</td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">월화수목금토일 23:00</p>
+                    </td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">08:30 전</p>
+                    </td>
+                    <td>
+                      <p class="not_blocking">차단안함</p>
+                    </td>
+                    <td rowspan="2" class="line_color space_box">
+                      <div class="txt_name">
+                        <p>
+                          60분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          30분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          서영숙 알리창 등록테스트
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          10분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td rowspan="2" class="line_color">최준구<br />(2019-12-02)</td>
+                    <td>정상</td>
+                  </tr>
+                  <tr>
+                    <td class="left_line line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">2019-11-30 17:00</p>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <a href="#none" class="btn_sm bg_sky">수정</a>
+                      <a href="#none" class="btn_sm bg_sky mt5">복제</a>
+                    </td>
+                  </tr>
+                  <!-- //group -->
+                  <!-- group -->
+                  <tr class="line_group">
+                    <td rowspan="2" class="line_color"><input type="checkbox" name="" value="" title="행 선택" /></td>
+                    <td rowspan="2" class="line_color">기본차단정책</td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">월화수목금토일 23:00</p>
+                    </td>
+                    <td>
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">08:30 전</p>
+                    </td>
+                    <td>
+                      <p class="not_blocking">차단안함</p>
+                    </td>
+                    <td rowspan="2" class="line_color space_box">
+                      <div class="txt_name">
+                        <p>
+                          60분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          30분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          서영숙 알리창 등록테스트
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <div class="txt_name">
+                        <p>
+                          10분전 알림창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td rowspan="2" class="line_color">최준구<br />(2019-12-02)</td>
+                    <td>정상</td>
+                  </tr>
+                  <tr>
+                    <td class="left_line line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                      <p class="txt_detail">2019-11-30 17:00</p>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <p class="blocking">차단함</p>
+                      <div class="txt_name">
+                        <p>
+                          기본차단창
+                          <a href="#none" title="새창 열림" class="preview"
+                            ><img src="../../common/img/icon_preview.png" alt="미리보기"
+                          /></a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="line_color">
+                      <a href="#none" class="btn_sm bg_sky">수정</a>
+                      <a href="#none" class="btn_sm bg_sky mt5">복제</a>
+                    </td>
+                  </tr>
+                  <!-- //group -->
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl_default -->
+
+            <!-- result_paging -->
+            <div class="result_paging">
+              <!-- paging -->
+              <div class="paging">
+                <a href="#none" class="btn_start">처음으로</a>
+                <a href="#none" class="btn_prev">이전</a>
+                <strong>1</strong>
+                <a href="#none">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none">6</a>
+                <a href="#none">7</a>
+                <a href="#none">8</a>
+                <a href="#none">9</a>
+                <a href="#none">10</a>
+                <a href="#none" class="btn_next">다음</a>
+                <a href="#none" class="btn_end">맨끝으로</a>
+              </div>
+              <!-- //paging -->
+              <p class="page_num"><strong>3</strong>/<span>10</span></p>
+            </div>
+            <!-- //result_paging -->
+
+            <!-- result_btm -->
+            <div class="result_btm">
+              <!-- btn -->
+              <div class="btn_box btn_area">
+                <div class="fl_left">
+                  <a href="#none" class="btn_md bg_red icon_md_delete_white">선택 취소</a>
+                </div>
+              </div>
+              <!-- //btn -->
+            </div>
+            <!-- //result_btm -->
+          </div>
+          <!-- //result_area -->
+
+          <!-- TOP btn -->
+          <a href="#none" class="btn_top">TOP</a>
+          <!-- //TOP btn -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>휴가신청 &gt; 휴가신청내역</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../resources/js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../resources/css/user.css" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- header -->
+    <header>
+      <div class="inner_header">
+        <div class="header_top">
+          <!-- [D] img태그 alt값에 회사명 입력해 주세요. -->
+          <h1 class="logo">
+            <a href="#none"><img src="../resources/img/logo/img_logo.png" alt="회사명 입력" style="height: 36px" /></a>
+          </h1>
+          <p class="user_info">개발팀 이승우 부장 (20131101)</p>
+          <div class="right_area">
+            <p class="company_info">JNESS</p>
+            <p class="today">2019-09-23 (월)</p>
+          </div>
+        </div>
+
+        <!-- GNB : menu -->
+        <nav class="gnb_area">
+          <h2 class="blind">메뉴</h2>
+          <ul>
+            <!-- [D] 선택 시, li태그에 class="on" 추가 -->
+            <li><a href="#none">근무일정확인</a></li>
+            <li><a href="#none">유연근무신청</a></li>
+            <li class="on"><a href="#none">휴가신청</a></li>
+            <li><a href="#none">출장신청</a></li>
+          </ul>
+        </nav>
+        <!-- //GNB : menu -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- contents -->
+    <div class="contents">
+      <h2 class="title_cont pb0">휴가신청내역</h2>
+
+      <!-- btn_tip_box -->
+      <div class="btn_tip_box">
+        <a href="#none" class="btn_tip02">Tip</a>
+      </div>
+      <!-- //btn_tip_box -->
+
+      <!-- btn_top_area -->
+      <div class="btn_top_area">
+        <a href="#none" class="btn_md bg_gray">신청하기</a>
+      </div>
+      <!-- //btn_top_area -->
+
+      <!-- search_area -->
+      <div class="bg_box search_area">
+        <!-- tbl_search -->
+        <div class="tbl_search">
+          <table>
+            <colgroup>
+              <col style="width: 128px" />
+              <col style="width: 424px" />
+              <col style="width: 128px" />
+              <col style="width: 424px" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">기간</th>
+                <td>
+                  <!-- [D] input 태그에 disabled 시, 바로 위 div 태그에도 class="disabled" 추가 -->
+                  <div class="input_calendar startDate" style="width: 192px">
+                    <input type="text" name="" value="2019-07-05" title="시작일" style="width: 152px" />
+                    <img src="../resources/img/icon_calendar.png" alt="달력" />
+                  </div>
+                  ~
+                  <div class="input_calendar endDate" style="width: 192px">
+                    <input type="text" name="" value="2019-07-05" title="종료일" style="width: 152px" />
+                    <img src="../resources/img/icon_calendar.png" alt="달력" />
+                  </div>
+                </td>
+                <th scope="row">상태</th>
+                <td>
+                  <select name="" title="상태" style="width: 100%">
+                    <option value="">전체</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                </td>
+              </tr>
+
+              <!-- <tr>
+							<th scope="row">기간</th>
+							<td colspna="3">
+								<div class="input_calendar startDate" style="width:192px;">
+									<input type="text" name="" value="2019-07-05" title="시작일" style="width:152px;" />
+									<img src="../resources/img/icon_calendar.png" alt="달력" />
+								</div>
+								~
+								<div class="input_calendar endDate" style="width:192px;">
+									<input type="text" name="" value="2019-07-05" title="종료일" style="width:152px;" />
+									<img src="../resources/img/icon_calendar.png" alt="달력" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">유형</th>
+							<td>
+								<select name="" title="유형" style="width:100%;" style="display:none;">
+									<option value="">전체</option>
+									<option value="">옵션1</option>
+									<option value="">옵션2</option>
+									<option value="">옵션3</option>
+									<option value="">옵션4</option>
+								</select>
+
+								<input type="radio" name="" id="" value="" /><label for="">종일</label>
+								<input type="radio" name="" id="" value="" /><label for="">오전반차</label>
+								<input type="radio" name="" id="" value="" /><label for="">오후반차</label>
+								<input type="radio" name="" id="" value="" /><label for="">시간단위</label>
+							</td>
+							<th scope="row">상태</th>
+							<td>
+								<select name="" title="상태" style="width:100%;">
+									<option value="">전체</option>
+									<option value="">옵션1</option>
+									<option value="">옵션2</option>
+									<option value="">옵션3</option>
+									<option value="">옵션4</option>
+								</select>
+							</td>
+						</tr> -->
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_search -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_blue icon_big_search">검색하기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //search_area -->
+
+      <!-- result_area -->
+      <div class="result_area">
+        <!-- result_top -->
+        <div class="result_top">
+          <p class="totla_num">총 <span>0</span>건</p>
+        </div>
+        <!-- //result_top -->
+
+        <!-- bg_box -->
+        <div class="bg_box">
+          <!-- tbl_default -->
+          <div class="tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: 103px" />
+                <col style="width: 210px" />
+                <col style="width: 120px" />
+                <col style="width: auto" />
+                <col style="width: 120px" />
+                <col style="width: 120px" />
+                <col style="width: 120px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">휴가명</th>
+                  <th scope="col">신청기간</th>
+                  <th scope="col">사용일수</th>
+                  <th scope="col">신청사유</th>
+                  <th scope="col">신청일</th>
+                  <th scope="col">상태</th>
+                  <th scope="col">관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">검색된 데이터가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td>연차</td>
+                  <td>2019-09-23 ~ 2019-09-24</td>
+                  <td>1</td>
+                  <td>신청 사유 작성 테스트</td>
+                  <td>2019-09-22</td>
+                  <td>취소완료</td>
+                  <td><a href="#none" class="btn_sm bg_lightgray">조회하기</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_default -->
+
+          <!-- result_paging -->
+          <div class="result_paging">
+            <!-- paging -->
+            <div class="paging">
+              <a href="#none" class="btn_start">처음으로</a>
+              <a href="#none" class="btn_prev">이전</a>
+              <a href="#none">1</a>
+              <a href="#none">2</a>
+              <strong>3</strong>
+              <a href="#none">4</a>
+              <a href="#none">5</a>
+              <a href="#none">6</a>
+              <a href="#none">7</a>
+              <a href="#none">8</a>
+              <a href="#none">9</a>
+              <a href="#none">10</a>
+              <a href="#none" class="btn_next">다음</a>
+              <a href="#none" class="btn_end">맨끝으로</a>
+            </div>
+            <!-- //paging -->
+            <p class="page_num"><strong>3</strong>/<span>10</span></p>
+          </div>
+          <!-- //result_paging -->
+        </div>
+        <!-- //bg_box -->
+      </div>
+      <!-- //result_area -->
+
+      <!-- tip_btm_area -->
+      <div class="tip_btm_area tip_box2">
+        <div class="pd_box">
+          <ul class="tip_list">
+            <li>휴가 신청은 당해년도 12월까지 잔여휴가 한도내에서 신청 가능합니다.</li>
+            <li>휴가 신청후 결재완료 이전에는 결재자 승인없이 취소 할 수 있습니다.</li>
+            <li>
+              휴가 신청후 결재완료(승인)된 휴가는 신청일 이전에만 취소 상신가능하며, 결재자 승인완료시 취소 처리됩니다.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //tip_btm_area -->
+    </div>
+    <!-- //contents -->
+  </body>
+</html>

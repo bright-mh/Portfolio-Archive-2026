@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+@import "mobile_reset.css";
+
+/* layout */
+.wrap {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.header_m {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px 30px;
+  background: #145383;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* common */
+.left {
+  text-align: left !important;
+}
+.right {
+  text-align: right !important;
+}
+.center {
+  text-align: center !important;
+}
+.fl_left {
+  float: left;
+}
+.fl_right {
+  float: right;
+}
+
+/* login */
+.login .logo {
+  margin-top: 80px;
+  text-align: center;
+}
+.login .logo img {
+  display: inline-block;
+  width: 201px;
+  height: auto;
+}
+.login .login_title {
+  margin-top: 4px;
+  color: #145383;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+}
+.login .form_box {
+  position: relative;
+  margin: 13px 55px 0;
+}
+.login .form_box input[type="text"],
+.login .form_box input[type="password"] {
+  font-size: 14px;
+  border-radius: 2px;
+  background: #fff;
+}
+.login .form_box input[type="text"] + input {
+  margin-top: 4px;
+}
+.login .license {
+  position: absolute;
+  bottom: -34px;
+  line-height: 1;
+}
+.login .btn_login {
+  margin-top: 8px;
+}
+
+/* header */
+.header_m .title {
+  width: 82%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+}
+.header_m .logout {
+  width: 18%;
+  text-align: right;
+  vertical-align: top;
+}
+.header_m .logout a {
+  display: inline-block;
+  padding: 3px 0;
+  border-bottom: 1px solid #7ebddd;
+  color: #7ebddd;
+  font-size: 12px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* keyview */
+.group {
+  margin-top: 40px;
+}
+.group .title_h2 {
+  padding: 0 15px 17px;
+  border-bottom: 1px solid #999;
+  color: #162a18;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+}
+.group .title_h2 + .bg_gray_box {
+  margin-top: 0;
+}
+.group .box {
+  padding: 0 15px;
+}
+.group .box .ip_title {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 7px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.column_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.column_box .column {
+  flex: 1;
+  margin-left: 12px;
+}
+.column_box .column:first-child {
+  margin-left: 0;
+}
+
+.input_btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.input_btn .ip_type {
+  flex: 4;
+  border: 0;
+}
+.input_btn .btn_default {
+  flex: 1;
+  margin-left: 6px;
+}
+
+.calendar_box .ip_type {
+  flex: 8;
+}
+.calendar_box .btn_default {
+  background: #2497cf url("../img/icon_calendar.png") no-repeat 50% 50%;
+  background-size: 20px auto;
+  font-size: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.bg_gray_box {
+  margin-top: 20px;
+  padding: 17px 15px 18px;
+  background: #f3f3f3;
+  font-size: 12px;
+}
+.bg_gray_box .txt_info {
+  color: #333;
+  line-height: 15px;
+}
+.bg_gray_box .txt_info + .txt_list li:first-child {
+  margin-top: 8px;
+}
+.bg_gray_box .txt_list li {
+  margin-top: 8px;
+}
+.bg_gray_box .txt_list li:first-child {
+  margin-top: 0;
+}
+.bg_gray_box .title {
+  color: #145383;
+  font-weight: bold;
+}
+.bg_gray_box .txt {
+  margin-top: 2px;
+  padding-left: 14px;
+  line-height: 15px;
+}
+
+/* keyview all */
+.sub_all .contents {
+  margin: 15px;
+}
+
+.tip {
+  background: #f3f3f3;
+  padding: 6px 20px 18px 140px;
+  background: #f3f3f3 url("../img/icon_tip.png") no-repeat 45px 50%;
+}
+.tip .title {
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+.tip .txt_explain {
+  margin-top: 9px;
+  font-size: 13px;
+}
+.tip .txt_explain ul {
+  margin-left: 8px;
+}
+.tip .txt_explain ul li {
+  position: relative;
+  margin-top: 3px;
+  padding-left: 9px;
+}
+.tip .txt_explain ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #7ebddd;
+}
+
+.sub_all .calendar_box {
+  margin-top: 20px;
+}
+.sub_all .calendar_box input {
+  display: inline-block;
+  width: 160px;
+  border: 0;
+}
+.sub_all .calendar_box .btn_calendar {
+  display: inline-block;
+  width: 40px;
+  background: #2497cf url("../img/icon_calendar.png") no-repeat 50% 50%;
+  background-size: 22px auto;
+  font-size: 0;
+  text-indent: 9999px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.result_area {
+  margin-top: 40px;
+}
+.result_area .result_top {
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 1;
+}
+.tbl_result {
+  border-top: 1px solid #145383;
+}
+.tbl_result thead th {
+  padding: 10px 5px 8px;
+  border-bottom: 1px solid #dbdbdb;
+  background: #eef6fb;
+  color: #145383;
+  font-size: 14px;
+}
+.tbl_result tbody td {
+  padding: 8px 5px 8px;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 14px;
+  text-align: center;
+}
+.tbl_result tbody td:first-child {
+  border-left: 0;
+}
+.tbl_result tbody td a {
+  text-decoration: underline;
+}
+
+/* form */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 36px;
+  padding: 0 9px;
+  background: #f3f3f3;
+  border: 1px solid #dbdbdb;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+input.ip_chekbox {
+  display: none;
+}
+input.ip_chekbox + label {
+  display: inline-block;
+  height: 20px;
+  padding: 3px 0 0 28px;
+  background: url("../img/bg_chk.png") no-repeat 0 0;
+  background-size: 20px 20px;
+  line-height: 1;
+  vertical-align: top;
+}
+input.ip_chekbox:checked + label {
+  background-image: url("../img/bg_chk_on.png");
+}
+input.ip_chekbox:disabled + label {
+  background-image: url("../img/bg_chk_off.png");
+}
+input.ip_chekbox:checked:disabled + label {
+  background-image: url("../img/bg_chk_offChk.png");
+}
+
+/* btn */
+a[class*="btn_"] {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 2px;
+  background: #2497cf;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 36px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.btn_default {
+  background: #2497cf;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* 700px 이하 */
+@media (max-width: 700px) {
+  .tbl_result {
+    overflow-x: auto;
+  }
+  /* .tbl_result table {width:800px;} */
+}
+
+/* 700px 이상 */
+@media (min-width: 700px) {
+  .login .contents {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

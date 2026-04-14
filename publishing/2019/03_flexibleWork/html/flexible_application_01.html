@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>유연근무신청</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../resources/js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../resources/css/user.css" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- header -->
+    <header>
+      <div class="inner_header">
+        <div class="header_top">
+          <!-- [D] img태그 alt값에 회사명 입력해 주세요. -->
+          <h1 class="logo">
+            <a href="#none"><img src="../resources/img/logo/img_logo.png" alt="회사명 입력" style="height: 36px" /></a>
+          </h1>
+          <p class="user_info">개발팀 이승우 부장 (20131101)</p>
+          <div class="right_area">
+            <p class="company_info">JNESS</p>
+            <p class="today">2019-09-23 (월)</p>
+          </div>
+        </div>
+
+        <!-- GNB : menu -->
+        <nav class="gnb_area">
+          <h2 class="blind">메뉴</h2>
+          <ul>
+            <!-- [D] 선택 시, li태그에 class="on" 추가 -->
+            <li><a href="#none">근무일정확인</a></li>
+            <li class="on"><a href="#none">유연근무신청</a></li>
+            <li><a href="#none">휴가신청</a></li>
+            <li><a href="#none">출장신청</a></li>
+          </ul>
+        </nav>
+        <!-- //GNB : menu -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- contents -->
+    <div class="contents">
+      <h2 class="title_cont">유연근무신청</h2>
+
+      <!-- bg_box -->
+      <div class="bg_box">
+        <!-- top_area -->
+        <div class="top_area">
+          <!-- case1 : tab 3개일 때 -->
+          <ul class="tab_list tab3">
+            <!-- [D] 선택 시, li 태그에 class="on" 추가 -->
+            <li class="time on">
+              <a href="#none"><span>시차 근로시간제</span></a>
+            </li>
+            <li class="flex">
+              <a href="#none"><span>탄력적 근로시간제</span></a>
+            </li>
+            <li class="choice">
+              <a href="#none"><span>선택적 근로시간제</span></a>
+            </li>
+          </ul>
+          <!-- case1 : tab 3개일 때 -->
+          <!-- case2 : tab 2개일 때 -->
+          <ul class="tab_list tab2">
+            <!-- [D] 선택 시, li 태그에 class="on" 추가 -->
+            <li class="time on">
+              <a href="#none"><span>시차 근로시간제</span></a>
+            </li>
+            <li class="flex">
+              <a href="#none"><span>탄력적 근로시간제</span></a>
+            </li>
+            <!-- <li class="choice"><a href="#none"><span>선택적 근로시간제</span></a></li> -->
+          </ul>
+          <!-- case2 : tab 2개일 때 -->
+          <!-- case3 : 1개일 때 -->
+          <div class="title_one on">
+            <p class="time"><span>시차 근로시간제</span></p>
+          </div>
+          <div class="title_one">
+            <p class="flex"><span>탄력적 근로시간제</span></p>
+          </div>
+          <div class="title_one">
+            <p class="choice"><span>선택적 근로시간제</span></p>
+          </div>
+          <!-- //case3 : 1개일 때 -->
+        </div>
+        <!-- //top_area -->
+
+        <!-- 등록 유형 선택 탭 -->
+        <div class="regist_type_tab">
+          <!-- [D] 탭 선택시label과 id의 값을 동일하게 넣어 주세요. / p태그 선택 시, class="on" 추가 -->
+          <p class="tab on">
+            <input type="radio" name="" id="" value="" checked="checked" /><label for="">간편 등록</label>
+          </p>
+          <p class="tab"><input type="radio" name="" id="" value="" /><label for="">사용자 지정 등록</label></p>
+
+          <!-- [D] class="btn_layer_pop" : 클릭 시, 레이어 팝업이 뜨는 효과 -->
+          <a href="#none" class="btn_tip btn_layer_pop">도움말</a>
+        </div>
+        <!-- 등록 유형 선택 탭 -->
+
+        <!-- calendar_area -->
+        <div class="calendar_area">
+          <!-- tbl_week -->
+          <!-- [D] div 태그에 class="on" 추가 시, 비활성화 될 수 있는 레이어 효과 -->
+          <div class="tbl_week on">
+            <div class="bg"></div>
+            <table>
+              <colgroup>
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">일요일</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">월요일</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">화요일</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">수요일</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">목요일</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">금요일</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">토요일</strong>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_week -->
+        </div>
+        <!-- //calendar_area -->
+
+        <div class="txt_info_box">
+          <p class="txt_info">* 신청하실 근무요일을 누르세요.</p>
+          <p class="time_info"><span class="point">18h</span> / 40h</p>
+        </div>
+
+        <!-- 간편등록 시, 유연근무 적용 조건 -->
+        <div class="working_condition_area">
+          <!-- 시차 근로시간제 -->
+          <div>
+            <!-- box -->
+            <div class="box four_column">
+              <div class="input_calendar" style="width: 292px">
+                <input type="text" name="" value="2019-07-05" title="시작일" style="width: 252px" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+              ~
+              <div class="input_calendar" style="width: 292px">
+                <input type="text" name="" value="2019-07-05" title="종료일" style="width: 252px" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //시차 근로시간제 -->
+          <!-- 탄력적 근로시간제 -->
+          <div>
+            <!-- box -->
+            <div class="box four_column">
+              <div class="input_calendar" style="width: 292px">
+                <input type="text" name="" value="2019-07-05" title="시작일" style="width: 252px" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+              ~
+              <select name="" title="횟수 선택" class="v_align_top" style="width: 294px">
+                <option value="">4회</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //탄력적 근로시간제 -->
+          <!-- 선택적 근로시간제 -->
+          <div>
+            <!-- box -->
+            <div class="box four_column">
+              <select name="" title="연도 선택" style="width: 132px">
+                <option value="">2019년</option>
+              </select>
+              <select name="" title="월 선택" style="width: 132px">
+                <option value="">9월</option>
+              </select>
+              <select name="" title="범위 단위" style="width: 334px">
+                <option value="">범위 단위</option>
+                <option value="">옵션1</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //선택적 근로시간제 -->
+        </div>
+        <!-- //간편등록 시, 유연근무 적용 조건 -->
+
+        <!-- 사용자 지정 등록 시, 유연근무 적용 조건 -->
+        <div class="working_condition_area">
+          <!-- 조건1 -->
+          <div>
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 156px">
+                <option value="">08:00~11:30</option>
+              </select>
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <a href="#none" class="btn_sm bg_lightgray">취소</a>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column">
+              <select name="" title="연도 선택" style="width: 120px">
+                <option value="">2019년</option>
+              </select>
+              <select name="" title="월 선택" style="width: 120px">
+                <option value="">9월</option>
+              </select>
+              <select name="" title="범위 단위" style="width: 193px">
+                <option value="">범위 단위</option>
+                <option value="">옵션1</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box two_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" style="width: 277px" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건1 -->
+
+          <!-- 조건2 -->
+          <div>
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+              ~
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column">
+              <select name="" title="연도 선택" style="width: 120px">
+                <option value="">2019년</option>
+              </select>
+              <select name="" title="월 선택" style="width: 120px">
+                <option value="">9월</option>
+              </select>
+              <select name="" title="범위 단위" style="width: 193px">
+                <option value="">범위 단위</option>
+                <option value="">옵션1</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box two_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" style="width: 277px" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건2 -->
+
+          <!-- 조건3 -->
+          <div>
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 156px">
+                <option value="">08:00~11:30</option>
+              </select>
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <a href="#none" class="btn_sm bg_lightgray">취소</a>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+              ~
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column">
+              <select name="" title="연도 선택" style="width: 120px">
+                <option value="">2019년</option>
+              </select>
+              <select name="" title="월 선택" style="width: 120px">
+                <option value="">9월</option>
+              </select>
+              <select name="" title="범위 단위" style="width: 193px">
+                <option value="">범위 단위</option>
+                <option value="">옵션1</option>
+              </select>
+            </div>
+            <!-- //box -->
+          </div>
+          <div>
+            <!-- box -->
+            <div class="box full pos_eft mt2">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" style="width: 100%" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건3 -->
+
+          <!-- 조건4 -->
+          <div>
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 156px">
+                <option value="">08:00~11:30</option>
+              </select>
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <a href="#none" class="btn_sm bg_lightgray">취소</a>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column">
+              <div class="input_calendar">
+                <input type="text" name="" value="2019-07-05" title="시작일" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+              ~
+              <div class="input_calendar">
+                <input type="text" name="" value="2019-07-05" title="종료일" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box two_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" style="width: 277px" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건4 -->
+
+          <!-- 조건4-2 -->
+          <div>
+            <!-- box -->
+            <div class="box two_column">
+              <div class="radio_box">
+                <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                <input type="radio" id="" name="" value="" /><label for="">고정 근무표</label>
+                <input type="radio" id="" name="" value="" /><label for="">자율 시간선택 </label>
+              </div>
+              <select name="" title="시간 선택" style="width: 156px">
+                <option value="">08:00~11:30</option>
+              </select>
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <a href="#none" class="btn_sm bg_lightgray">취소</a>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column">
+              <div class="radio_box">
+                <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                <input type="radio" id="" name="" value="" /><label for="">고정 기간선택 </label>
+                <input type="radio" id="" name="" value="" /><label for="">자율 기간선택 </label>
+              </div>
+              <div class="input_calendar" style="width: 439px">
+                <input type="text" name="" value="2019-07-05" title="시작일" style="width: 399px" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box two_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" style="width: 277px" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건4-2 -->
+
+          <!-- 조건5 -->
+          <div>
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+              ~
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column">
+              <div class="input_calendar">
+                <input type="text" name="" value="2019-07-05" title="시작일" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+              ~
+              <select name="" title="횟수 선택" class="v_align_top" style="width: 212px">
+                <option value="">4회</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box two_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" style="width: 277px" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건5 -->
+
+          <!-- 조건6 -->
+          <div>
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 156px">
+                <option value="">08:00~11:30</option>
+              </select>
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <a href="#none" class="btn_sm bg_lightgray">취소</a>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box two_column">
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+              ~
+              <select name="" title="시간 선택" style="width: 59px">
+                <option value="">09</option>
+              </select>
+              :
+              <select name="" title="분 선택" style="width: 59px">
+                <option value="">00</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column">
+              <div class="input_calendar">
+                <input type="text" name="" value="2019-07-05" title="시작일" />
+                <img src="../resources/img/icon_calendar.png" alt="달력" />
+              </div>
+              ~
+              <select name="" title="횟수 선택" class="v_align_top" style="width: 212px">
+                <option value="">4회</option>
+              </select>
+            </div>
+            <!-- //box -->
+          </div>
+          <div>
+            <!-- box -->
+            <div class="box full pos_eft mt2">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" style="width: 100%" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건6 -->
+
+          <!-- 조건7 -->
+          <div>
+            <!-- box -->
+            <div class="box four_column">
+              <select name="" title="연도 선택" style="width: 132px">
+                <option value="">2019년</option>
+              </select>
+              <select name="" title="월 선택" style="width: 132px">
+                <option value="">9월</option>
+              </select>
+              <select name="" title="범위 단위" style="width: 334px">
+                <option value="">범위 단위</option>
+                <option value="">옵션1</option>
+              </select>
+            </div>
+            <!-- //box -->
+            <!-- box -->
+            <div class="box three_column pos_eft">
+              <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+              <label for="">* 근로시간 제목을 입력해주세요.</label>
+              <input type="text" name="" value="" placeholder="20자 미만" />
+            </div>
+            <!-- //box -->
+          </div>
+          <!-- //조건7 -->
+        </div>
+        <!-- //사용자 지정 등록 시, 유연근무 적용 조건 -->
+
+        <!-- btn -->
+        <div class="btn_area btm">
+          <!-- [D] 버튼 disabled 효과를 주고 싶을 땐, class="disabled" 추가 -->
+          <a href="#none" class="btn_big bg_deepblue disabled">유연근무 만들기</a>
+        </div>
+      </div>
+      <!-- //bg_box -->
+
+      <!-- result_area -->
+      <div class="result_area">
+        <!-- result_top -->
+        <div class="result_top">
+          <p class="totla_num">총 <span>0</span>건</p>
+        </div>
+        <!-- //result_top -->
+
+        <!-- bg_box -->
+        <div class="bg_box">
+          <!-- tbl_default -->
+          <div class="tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: 70px" />
+                <col style="width: 140px" />
+                <col style="width: auto" />
+                <col style="width: 140px" />
+                <col style="width: 140px" />
+                <col style="width: 140px" />
+                <col style="width: 190px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">근로시간</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">시작일자</th>
+                  <th scope="col">종료일자</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">신청 내역이 없습니다.</td>
+                </tr>
+                <!-- [D] 유연근무 생성 시, tr태그에 class="on" -->
+                <tr class="on">
+                  <td>20</td>
+                  <td>18:00~19:00</td>
+                  <td>상반기 유연근무03</td>
+                  <td>2019-08-30</td>
+                  <td>2019-08-30</td>
+                  <td>2019-08-30</td>
+                  <td class="last">
+                    <span class="txt">생성</span>
+                    <a href="#none" class="btn_sm bg_gray">신청하기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>18:00~19:00</td>
+                  <td>상반기 유연근무02</td>
+                  <td>2019-08-30</td>
+                  <td>2019-08-30</td>
+                  <td>2019-08-30</td>
+                  <td class="last">
+                    <span class="txt">대기</span>
+                    <a href="#none" class="btn_sm bg_lightgray">내용보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>18:00~19:00</td>
+                  <td>상반기 유연근무01</td>
+                  <td>2019-08-30</td>
+                  <td>2019-08-30</td>
+                  <td>2019-08-30</td>
+                  <td class="last">
+                    <span class="txt">승인</span>
+                    <a href="#none" class="btn_sm bg_pink_line">변경하기</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl_default -->
+
+          <!-- result_paging -->
+          <div class="result_paging">
+            <!-- paging -->
+            <div class="paging">
+              <a href="#none" class="btn_start">처음으로</a>
+              <a href="#none" class="btn_prev">이전</a>
+              <a href="#none">1</a>
+              <a href="#none">2</a>
+              <strong>3</strong>
+              <a href="#none">4</a>
+              <a href="#none">5</a>
+              <a href="#none">6</a>
+              <a href="#none">7</a>
+              <a href="#none">8</a>
+              <a href="#none">9</a>
+              <a href="#none">10</a>
+              <a href="#none" class="btn_next">다음</a>
+              <a href="#none" class="btn_end">맨끝으로</a>
+            </div>
+            <!-- //paging -->
+            <p class="page_num"><strong>3</strong>/<span>10</span></p>
+          </div>
+          <!-- //result_paging -->
+        </div>
+        <!-- //bg_box -->
+      </div>
+      <!-- //result_area -->
+    </div>
+    <!-- //contents -->
+
+    <!-- layer_popup -->
+    <div class="layer_bg"></div>
+    <div class="layer_popup">
+      <!-- header -->
+      <header>
+        <h1>근무표 신청 도움말</h1>
+        <a href="#none" class="btn_layer_close">닫기</a>
+      </header>
+      <!-- //header -->
+      <!-- layer_contents -->
+      <div class="layer_contents">
+        <!-- tip_box : 시차근로시간제 verA -->
+        <div class="tip_box">
+          <ul>
+            <li class="step1">
+              <img src="../resources/img/img_tip_parallaxA_step01.png" alt="1 step 설명 이미지" />
+              <p>
+                <span class="blind">1 step</span>근무 <strong>요일</strong>을 선택하시고<br />근무표 시간 선택 후
+                <strong>적용</strong> 버튼을 눌러주세요.
+              </p>
+            </li>
+            <li class="step2">
+              <img src="../resources/img/img_tip_parallaxA_step02.png" alt="2 step 설명 이미지" />
+              <p>
+                <span class="blind">2 step</span>근무표 시간 적용 후 유연근무<br /><strong
+                  >시작 날짜와 끝나는 날짜</strong
+                >를 선택해 주세요.
+              </p>
+            </li>
+            <li class="step3">
+              <img src="../resources/img/img_tip_parallaxA_step03.png" alt="3 step 설명 이미지" />
+              <p class="line_one"><span class="blind">3 step</span><strong>근무표 제목</strong>을 입력하세요.</p>
+            </li>
+            <li class="step4">
+              <img src="../resources/img/img_tip_parallaxA_step04.png" alt="4 step 설명 이미지" />
+              <p class="line_one">
+                <span class="blind">4 step</span><strong>유연근무 만들기</strong> 버튼을 눌러주세요.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- //tip_box : 시차근로시간제 verA -->
+
+        <!-- tip_box : 탄력적근로시간제 verA -->
+        <div class="tip_box" style="display: none">
+          <ul>
+            <li class="step1">
+              <img src="../resources/img/img_tip_flexA_step01.png" alt="1 step 설명 이미지" />
+              <p>
+                <span class="blind">1 step</span>근무 <strong>요일</strong>을 선택하시고<br />근무표 시간 선택 후
+                <strong>적용</strong> 버튼을 눌러주세요.
+              </p>
+            </li>
+            <li class="step2">
+              <img src="../resources/img/img_tip_flexA_step02.png" alt="2 step 설명 이미지" />
+              <p>
+                <span class="blind">2 step</span>근무표 시간 적용 후 유연근무<br /><strong
+                  >시작 날짜와 반복 적용되는 주간</strong
+                >을 선택해 주세요.
+              </p>
+            </li>
+            <li class="step3">
+              <img src="../resources/img/img_tip_flexA_step03.png" alt="3 step 설명 이미지" />
+              <p class="line_one"><span class="blind">3 step</span><strong>근무표 제목</strong>을 입력하세요.</p>
+            </li>
+            <li class="step4">
+              <img src="../resources/img/img_tip_flexA_step04.png" alt="4 step 설명 이미지" />
+              <p class="line_one">
+                <span class="blind">4 step</span><strong>유연근무 만들기</strong> 버튼을 눌러주세요.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- //tip_box : 탄력적근로시간제 verA -->
+
+        <!-- tip_box : 선택적근로시간제 verA -->
+        <div class="tip_box" style="display: none">
+          <ul>
+            <li class="step1">
+              <img src="../resources/img/img_tip_choiceA_step01.png" alt="1 step 설명 이미지" />
+              <p>
+                <span class="blind">1 step</span>근무 <strong>요일</strong>을 선택하시고<br />근무표 시간 선택 후
+                <strong>적용</strong> 버튼을 눌러주세요.
+              </p>
+            </li>
+            <li class="step2">
+              <img src="../resources/img/img_tip_choiceA_step02.png" alt="2 step 설명 이미지" />
+              <p>
+                <span class="blind">2 step</span>근무표 시간 적용 후 유연근무<br /><strong
+                  >시작 년월 및 생성 범위</strong
+                >를 선택해 주세요.
+              </p>
+            </li>
+            <li class="step3">
+              <img src="../resources/img/img_tip_choiceA_step03.png" alt="3 step 설명 이미지" />
+              <p class="line_one"><span class="blind">3 step</span><strong>근무표 제목</strong>을 입력하세요.</p>
+            </li>
+            <li class="step4">
+              <img src="../resources/img/img_tip_choiceA_step04.png" alt="4 step 설명 이미지" />
+              <p class="line_one">
+                <span class="blind">4 step</span><strong>유연근무 만들기</strong> 버튼을 눌러주세요.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- //tip_box : 선택적근로시간제 verA -->
+      </div>
+      <!-- //layer_contents -->
+    </div>
+    <!-- //layer_popup -->
+  </body>
+</html>

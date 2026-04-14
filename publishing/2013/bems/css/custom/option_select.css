@@ -1,0 +1,54 @@
+/** 
+	2013-11-29 처음 작성 
+	bems 검색조건 선택 UI 를 위한 css 
+*/
+
+.divArea ul.listStyle02 > li.listTitle:first-child {
+  margin: 0;
+  padding: 0 0 0 10px !important;
+  border: 0;
+}
+.divArea ul.listStyle02 > li.listTitle {
+  border-top: #eee 1px solid;
+  font-weight: bold;
+  color: #000 !important;
+  margin: 10px 0 0 0;
+  padding: 13px 0 0 7px !important;
+  /* 2014-01-14 선택,비선택 시 미세한 움직임을 제거하기 위해 line-height 삭제*/
+}
+
+.divArea ul.listStyle02 > li.title02:first-child {
+  margin: 0;
+  padding: 0 0 0 10px !important;
+  border: 0;
+  /* 2014-01-14 선택,비선택 시 미세한 움직임을 제거하기 위해 line-height 삭제*/
+}
+.divArea ul.listStyle02 > li.title02 {
+  border-top: #eee 1px solid;
+  font-weight: bold;
+  color: #000 !important;
+  margin: 10px 0 0 0;
+  padding: 13px 0 0 7px !important;
+  /* 2014-01-14 선택,비선택 시 미세한 움직임을 제거하기 위해 line-height 삭제*/
+}
+
+/* 엘립시스 처리 */
+#divOptionSelect .popup .popContainer .popBox .fl .groupArea ul.listStyle > li a {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#divOptionSelect .popup .popContainer .popBox .fl .groupArea ul.listStyle > li span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 2013-12-03 페이지내 삽입되어있던것을 css 로 기록 */
+.fl.itemDel {
+  cursor: pointer;
+}
+
+/* 2014-01-14 선택,비선택 시 미세한 움직임을 제거하기 위해 .listStyle li span 스타일 삭제*/

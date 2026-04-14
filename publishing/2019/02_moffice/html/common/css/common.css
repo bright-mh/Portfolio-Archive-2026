@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+@import "reset.css";
+@import "font.css";
+
+/* Common */
+#loading {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  z-index: 9999;
+}
+#loading img {
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  width: 42px;
+  height: 42px;
+  z-index: 10000;
+}
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.fake-focus {
+  position: absolute;
+  top: 0;
+  right: 9999px;
+}
+.line-through span {
+  text-decoration: line-through !important;
+}
+.word-highlight th,
+.word-highlight td {
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+}
+.sort-asc {
+  background-image: url(/jworks/common/img/ico_sort_asc.gif);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.sort-desc {
+  background-image: url(/jworks/common/img/ico_sort_desc.gif);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+input[type="text"]::-ms-clear {
+  display: none;
+}
+
+/* jQuery UI Datepicker */
+.ui-datepicker-trigger {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+body[class*="user_"] .ui-datepicker-trigger {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 11px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#ui-datepicker-div {
+  z-index: 9999 !important;
+}
+
+/* jQuery UI Monthpicker */
+.mtz-monthpicker-trigger {
+  cursor: pointer;
+  vertical-align: middle;
+}
+.mtz-monthpicker-month {
+  cursor: pointer !important;
+}
+
+/* jQuery FileStyle */
+.file_box div.jfilestyle {
+  margin-bottom: 4px;
+}
+.file_box div.jfilestyle label,
+.file_box div.jfilestyle input {
+  font-family:
+    "NanumGothic", "나눔고딕", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif;
+}
+.file_box div.jfilestyle label {
+  height: 26px;
+  padding: 0 12px;
+  border-color: #2497cf;
+  border-radius: 4px;
+  background: #2497cf;
+  font-size: 12px;
+  line-height: 26px;
+}
+.file_box div.jfilestyle label:hover {
+  border-color: #145383;
+  background-color: #145383;
+  opacity: 1;
+}
+.file_box div.jfilestyle input {
+  margin-left: 75px;
+  padding: 0 12px;
+  border-radius: 2px;
+}
+.file_box .focus-jfilestyle {
+  position: absolute;
+  top: 0;
+  left: 1px;
+}
+
+/* iframe Auto Height */
+.autoHeight-padding {
+  padding: 0 !important;
+}
+.autoHeight-margin {
+  margin: 0 !important;
+}
+.autoHeight-background {
+  background: none !important;
+  background-color: #fff !important;
+}

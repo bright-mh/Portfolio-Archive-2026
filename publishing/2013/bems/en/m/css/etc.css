@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+/* layout */
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #dce1e6;
+}
+
+/* 로그인 */
+#wrap_login {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -51px auto;
+  background: url("/html/2014/bems/en/m/images/common/bg_login_wrap.gif") repeat-x 0 0;
+}
+
+header.header_login {
+  width: 100%;
+  height: 144px;
+  padding: 0;
+  background: url("/html/2014/bems/en/m/images/common/bg_login_header.png") 50% 0 no-repeat;
+  background-size: contain;
+}
+header.header_login h1 {
+  height: 13px;
+  padding: 13px 0 0 0;
+  text-align: center;
+}
+header.header_login h1 img {
+  height: 100%;
+}
+
+#contents_login {
+  padding: 0 0 51px 0;
+}
+#contents_login .inputArea {
+  position: relative;
+  width: 240px;
+  height: 163px;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+}
+#contents_login .input_style {
+  display: inline-block;
+  margin: 0 0 5px 0;
+}
+#contents_login .input_style input {
+  width: 218px;
+  height: 28px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #2d2d2d;
+}
+#contents_login .input_style input.input_id {
+  background: #fff url("/html/2014/bems/en/m/images/common/bg_login_input01.gif") no-repeat 10px 0;
+  background-size: contain;
+}
+#contents_login .input_style input.input_pw {
+  background: #fff url("/html/2014/bems/en/m/images/common/bg_login_input02.gif") no-repeat 10px 0;
+  background-size: contain;
+}
+
+#contents_login .input_check {
+  position: relative;
+  height: 37px;
+}
+#contents_login .input_check input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+}
+#contents_login .input_check label {
+  display: block;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 0 0 26px;
+  background: url("/html/2014/bems/en/m/images/common/btn_logincheck.gif") no-repeat 0 0;
+  background-size: contain;
+  color: #bababa;
+  font-size: 11px;
+  vertical-align: top;
+}
+#contents_login .input_check.on label {
+  background: url("/html/2014/bems/en/m/images/common/btn_logincheck_on.gif") no-repeat 0 0;
+  background-size: contain;
+  color: #fff;
+}
+
+#contents_login .btn_login {
+  border-bottom: 1px solid #5b5a5a;
+}
+#contents_login .btn_login a {
+  display: inline-block;
+  width: 238px;
+  height: 26px;
+  border: 1px solid #333333;
+  background: url("/html/2014/bems/en/m/images/common/bg_btn_login.gif") repeat-x 0 0;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 26px;
+}
+#contents_login .errorMsg {
+  position: absolute;
+  top: 161px;
+  left: 0;
+  font-size: 11px;
+  color: #ed6d53;
+}
+#contents_login .loginList {
+  margin: 10px auto 0 auto;
+  padding: 0 12.5% 0 12.5%;
+}
+#contents_login .loginList li {
+  padding: 0 0 5px 5px;
+  background: url("/html/2014/bems/en/m/images/common/bullet_login_list.gif") no-repeat 0 6px;
+}
+#contents_login .push_btm {
+  height: 51px !important;
+}
+
+footer.footer_login {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  background: #dce1e6;
+}
+footer.footer_login .copy {
+  height: 39px;
+  margin: 0 auto;
+  padding: 11px 0 0 0;
+  border-top: 1px solid #bdc1c6;
+  background: #d2d7dc url("/html/2014/bems/en/m/images/common/dot_footer.png") 0 0 repeat-x;
+  font-size: 10px;
+}
+
+/* error */
+#wrap_error {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -51px auto;
+}
+
+header.header_error {
+  width: 100%;
+  padding: 50px 0 35px 0;
+  text-align: center;
+}
+header.header_error h1 {
+  height: 97px;
+}
+header.header_error h1 img {
+  height: 100%;
+}
+
+#contents_error {
+  padding: 0 0 51px 0;
+}
+#contents_error .txt01 {
+  padding: 0 0 13px 0;
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+}
+#contents_error .txt02 {
+  /*padding:0 0 35px 0;*/
+  padding: 0 0 165px 0;
+  color: #777;
+  font-size: 10px;
+  text-align: center;
+  line-height: 12px;
+}
+#contents_error .txt02_02 {
+  padding: 0 0 20px 0;
+}
+#contents_error .txt03 {
+  padding: 0 0 135px 0;
+  color: #e06345;
+  font-size: 10px;
+  text-align: center;
+}
+#contents_error .push_btm {
+  height: 51px !important;
+}
+
+footer.footer_error {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  background: #dce1e6;
+}
+footer.footer_error .copy {
+  height: 39px;
+  margin: 0 auto;
+  padding: 11px 0 0 0;
+  border-top: 1px solid #bdc1c6;
+  background: #d2d7dc url("/html/2014/bems/en/m/images/common/dot_footer.png") 0 0 repeat-x;
+  font-size: 10px;
+}

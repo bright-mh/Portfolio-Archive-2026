@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>외부서비스 카드 관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)>ul>li:eq(3)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시 관리</span>
+              <span>상품등록관리</span>
+              <span>외부서비스 관리</span>
+              <strong>외부서비스 카드 관리</strong>
+            </div>
+            <h3 class="tit">외부서비스 카드 관리</h3>
+            <ul class="guide">
+              <li>
+                뮤직/방송 VOD/영화 VOD/실시간TV 등 Front에 전시되는 외부서비스의 대표이미지와 부가정보를 관리할 수
+                있습니다.
+              </li>
+              <li>카테고리 별 한 건의 카드 정보만 등록/관리가 가능합니다.</li>
+            </ul>
+
+            <!-- 외부서비스 카드 관리 목록 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <p class="total_num">총 <strong>3</strong>건</p>
+                <div class="sel_box">
+                  <a href="#" class="btn_long btn_new">신규등록</a>
+                  <!-- [D] 신규등록버튼 비활성화 시, class="dimmed" 추가 -->
+                  <!-- <a href="#" class="btn_long btn_new dimmed">신규등록</a> -->
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>번호, 카테고리, 타이틀, 등록일, 수정일이 있는 리스트</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col style="width: 230px" />
+                    <col style="width: *" />
+                    <col style="width: 120px" />
+                    <col style="width: 120px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">카테고리</th>
+                      <th scope="col">타이틀</th>
+                      <th scope="col">등록일</th>
+                      <th scope="col">수정일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 내용이 없을 시, -->
+                    <tr>
+                      <td colspan="5">검색 결과가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td class="num">20</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">19</td>
+                      <td>디지털콘텐츠 &gt; 방송 VOD</td>
+                      <td class="left"><a href="#" class="link">방송 VOD 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">18</td>
+                      <td>디지털콘텐츠 &gt; 영화 VOD</td>
+                      <td class="left"><a href="#" class="link">영화 VOD 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">17</td>
+                      <td>디지털콘텐츠 &gt; 실시간TV</td>
+                      <td class="left"><a href="#" class="link">실시간TV 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">16</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">15</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">14</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">13</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">12</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">11</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">10</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">9</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">8</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">7</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">6</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">5</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">4</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">3</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">2</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                    <tr>
+                      <td class="num">1</td>
+                      <td>디지털콘텐츠 &gt; 뮤직</td>
+                      <td class="left"><a href="#" class="link">뮤직메이트 안내문구와 월별 이미지</a></td>
+                      <td>2016.09.01</td>
+                      <td><a href="#" class="link" target="_blank" title="새창 열림">2016.09.02</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //외부서비스 카드 관리 목록 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

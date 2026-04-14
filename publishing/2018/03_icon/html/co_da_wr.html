@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>Register : Forum · ICON Developers Portal</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="ICON Developers Portal, ICON, DApp, Blockchain, SCORE, T-Bears" />
+    <meta property="og:title" content="Register : Forum · ICON Developers Portal" />
+    <meta property="og:description" content="" />
+    <link rel="apple-touch-icon" sizes="192x192" href="../img/favicon_192x192.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon_192x192.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/library.js"></script>
+    <script type="text/javascript" src="../js/ui.js"></script>
+  </head>
+  <body class="ko">
+    <div class="wrap sub">
+      <!-- header -->
+      <header class="header">
+        <div class="inner">
+          <h1>
+            <a href="#none"><img src="../img/logo.png" alt="ICON developers portal" /></a>
+          </h1>
+          <aside class="utility">
+            <span class="login"
+              ><span class="img"><img src="../img/temp_user1.png" alt="" /></span><span class="user">useruser</span
+              ><a href="#none">Log out</a></span
+            >
+            <!-- <span class="login"><a href="#none">Log in</a></span> -->
+            <div class="lang">
+              <a href="#none" class="select">KOREAN</a>
+              <ul>
+                <li class="selected"><a href="#none" class="ko">KOREAN</a></li>
+                <li><a href="#none" class="en">ENGLISH</a></li>
+              </ul>
+            </div>
+            <a href="#contact_us" class="contact">Contact Us</a>
+          </aside>
+          <div class="gnb">
+            <ul class="clearfix">
+              <li><a href="#none" class="menu">Introduction</a></li>
+              <li>
+                <a href="#none" class="menu">Getting Started</a>
+                <div class="depth">
+                  <ul class="clearfix">
+                    <li><a href="#none">Development Environment</a></li>
+                    <li><a href="#none">Configuration</a></li>
+                    <li><a href="#none">How to use T-Bears</a></li>
+                    <li><a href="#none">Sample Project</a></li>
+                    <li><a href="#none">Resources</a></li>
+                    <li><a href="#none">API References</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#none" class="menu">SCORE</a>
+                <div class="depth">
+                  <ul class="clearfix">
+                    <li><a href="#none">Overview</a></li>
+                    <li><a href="#none">Token &amp; Crowdsale</a></li>
+                    <li><a href="#none">Game</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="on">
+                <!-- [D] 해당 메뉴 시 class="on" 추가 -->
+                <a href="#none" class="menu">Community</a>
+                <div class="depth">
+                  <ul class="clearfix">
+                    <li><a href="#none">ICON News</a></li>
+                    <li class="on"><a href="#none">Forum</a></li>
+                    <!-- [D] 해당 메뉴 시 class="on" 추가 -->
+                    <li><a href="#none">FAQ</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- // header -->
+      <!-- container -->
+      <div class="container">
+        <!-- up_news -->
+        <div class="up_news">
+          <div class="news">
+            <strong class="tit">UPCOMING NEWS</strong>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide"><a href="#none">교보생명과 차세대 보험 플랫폼 개발을 위한 MOU 체결</a></li>
+              <li class="swiper-slide"><a href="#none">교보생명과 차세대 보험 플랫폼 개발을 위한 MOU 체결</a></li>
+              <li class="swiper-slide"><a href="#none">교보생명과 차세대 보험 플랫폼 개발을 위한 MOU 체결</a></li>
+              <li class="swiper-slide"><a href="#none">교보생명과 차세대 보험 플랫폼 개발을 위한 MOU 체결</a></li>
+            </ul>
+          </div>
+          <script>
+            var swiper = new Swiper(".up_news .news", {
+              direction: "vertical",
+              loop: true,
+              autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+              },
+            });
+          </script>
+        </div>
+        <!-- // up_news -->
+        <!-- sub_contetns -->
+        <div class="contents">
+          <div class="inner">
+            <div class="title_box">
+              <h2 class="tit">Topic 등록</h2>
+              <p class="sub">
+                포럼에서 논의하고 싶은 주제와 내용을 등록해주세요.<br /><span class="point_g"
+                  >(*)는 필수입력 항목입니다.</span
+                >
+              </p>
+            </div>
+            <!-- topic_writing -->
+            <div class="writing">
+              <div class="cont_box">
+                <div class="form">
+                  <fieldset>
+                    <legend>Topic registration</legend>
+                    <div class="category_area">카테고리<span class="lang">KOREAN</span></div>
+                    <p class="input_write">
+                      <label for="tit_write" class="txt_ip_label">* 제목</label>
+                      <input type="text" id="tit_write" class="txt_ip" placeholder="제목을 입력해주세요." />
+                    </p>
+                    <div class="editor">
+                      <!-- [D] 에디터 삽입 영역 -->
+                      <img src="../img/temp_editor.png" alt="" />
+                    </div>
+                    <!-- 첨부파일 -->
+                    <div class="attach">
+                      <p class="choice">
+                        <span class="choice_txt">첨부파일</span><a href="#none" class="regist">등록</a>
+                      </p>
+                      <div class="file_list"></div>
+                    </div>
+
+                    <script>
+                      $(document).ready(function () {
+                        // 첨부파일 영역 복사
+                        function file_copy() {
+                          var cp_cont = $(
+                            '<div class="file_box off"><span class="file_txt"><span>첨부파일</span> :</span><label for="btn_upload" class="btn_file"></label><input type="text" class="file_name" readonly="readonly"><input type="file" id="btn_upload" class="btn_upload" onchange="fileUpload(this)"><p class="btn_area"><a href="#none" class="btn_gface">삭제</a></p></div>',
+                          );
+                          cp_cont.clone().appendTo(".file_list");
+                        }
+
+                        var num = 0;
+                        // 첨부파일 추가
+                        $(".attach .regist").on("click", function () {
+                          var thisFile = $(".file_list .file_box:last-child");
+                          if (thisFile.find(".btn_upload").val()) {
+                            num++;
+                            fileAdd();
+                          } else {
+                            thisFile.remove();
+                            fileAdd();
+                          }
+
+                          function fileAdd() {
+                            file_copy();
+                            var last = $(".file_list .file_box:last-child").find(".btn_file");
+                            last.attr({ for: "btn_upload" + num });
+                            last.siblings(".btn_upload").attr({ id: "btn_upload" + num });
+
+                            // 디자인 input type="file"
+                            file_design();
+
+                            // 클릭 효과
+                            last.trigger("click");
+
+                            // 삭제 버튼
+                            $(".file_box .btn_area a").on("click", function () {
+                              $(this).closest(".file_box").remove();
+                            });
+                          }
+                        });
+                      });
+                      // file onchage
+                      function fileUpload(files) {
+                        if ($(files).val()) {
+                          $(".file_list .file_box:last-child").removeClass("off");
+                        }
+                      }
+                    </script>
+                    <!-- //첨부파일 -->
+                  </fieldset>
+                </div>
+              </div>
+              <!-- btn -->
+              <div class="btm_area">
+                <a href="#none" class="btn_bface">취소하기</a>
+                <div class="right">
+                  <a href="#none" class="btn_bline">미리보기</a>
+                  <a href="#none" class="btn_bface">등록하기</a>
+                </div>
+              </div>
+              <!-- //btn -->
+            </div>
+            <!-- //topic_writing -->
+          </div>
+        </div>
+        <!-- // sub_contetns -->
+        <button type="button" class="btn_top">Top</button>
+      </div>
+      <!-- // container -->
+      <!-- footer -->
+      <div class="footer">
+        <div class="foot_menu">
+          <div class="inner">
+            <div class="menu">
+              <ul>
+                <li class="box">
+                  <strong>Introduction</strong>
+                  <ul class="list">
+                    <li><a href="#none">Introduction</a></li>
+                  </ul>
+                </li>
+                <li class="box">
+                  <strong>Getting Started</strong>
+                  <ul class="list">
+                    <li><a href="#none">Development Environment</a></li>
+                    <li><a href="#none">Configuration</a></li>
+                    <li><a href="#none">How to use T-Bears</a></li>
+                    <li><a href="#none">Sample Project</a></li>
+                    <li><a href="#none">Resources</a></li>
+                    <li><a href="#none">API References</a></li>
+                  </ul>
+                </li>
+                <li class="box">
+                  <strong>SCORE</strong>
+                  <ul class="list">
+                    <li><a href="#none">Overview</a></li>
+                    <li><a href="#none">Token &amp; Crowdsale</a></li>
+                    <li><a href="#none">Game</a></li>
+                  </ul>
+                </li>
+                <li class="box">
+                  <strong>Community</strong>
+                  <ul class="list">
+                    <li><a href="#none">ICON News</a></li>
+                    <li><a href="#none">Forum</a></li>
+                    <li><a href="#none">FAQ</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div id="contact_us" class="contact_us">
+              <div class="info">
+                <strong class="tit"
+                  ><span class="f_bold2">DApp 개발을 위한 문의사항</span> 또는 <br />Developers Portal에 대한
+                  <strong class="f_bold">요청사항</strong>을 <br />보내주세요.</strong
+                >
+                <div class="btn_area left">
+                  <a href="#none" class="btn_ty_link">이용약관</a>
+                  <a href="#none" class="btn_ty_link">개인정보처리방침</a>
+                </div>
+              </div>
+              <div class="form">
+                <fieldset>
+                  <legend>Contact Us</legend>
+                  <p class="input">
+                    <input type="text" id="contact_name" class="ip_box" placeholder="Name (Required)" />
+                    <label for="contact_name">Name</label>
+                    <span class="noti">Sorry, Retry</span>
+                  </p>
+                  <p class="input error">
+                    <input
+                      type="text"
+                      id="contact_mail"
+                      class="ip_box"
+                      placeholder="E-mail (Required)"
+                      value="dfdfdf"
+                    />
+                    <label for="contact_mail">E-mail</label>
+                    <span class="noti">Sorry, Retry</span>
+                  </p>
+                  <p class="input error">
+                    <textarea id="contact_message" class="ip_box" cols="30" rows="10" placeholder="Message (Required)">
+dfdfdfdf</textarea
+                    >
+                    <label for="contact_message">Message</label>
+                    <span class="noti">Sorry, Retry</span>
+                  </p>
+                  <span class="ip_check">
+                    <input type="checkbox" id="check" name="check" class="ip_chk" /><label for="check"
+                      ><a href="#none" class="point_g">개인정보처리방침</a>에 동의합니다.</label
+                    >
+                  </span>
+                  <input type="submit" value="Send Message" class="btn_ty_arrow" />
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_btm">
+          <div class="inner">
+            <img src="../img/logo_footer.png" alt="ICON Developers Center" />
+            <p class="copy">
+              Copyright 2018 <a href="https://de-nexo.com" target="_blank" title="De:Nexo">De:Nexo</a>, all rights
+              reserved.
+            </p>
+            <div class="sns">
+              <a href="https://icon.foundation" target="_blank" class="ic" title="icon"
+                ><span class="blind">icon</span></a
+              >
+              <a href="https://www.reddit.com/r/helloicon/" target="_blank" class="rd" title="reddit"
+                ><span class="blind">reddit</span></a
+              >
+              <a href="https://github.com/icon-project" target="_blank" class="gh" title="github"
+                ><span class="blind">github</span></a
+              >
+              <a href="https://www.facebook.com/helloicon" target="_blank" class="fb" title="facebook"
+                ><span class="blind">facebook</span></a
+              >
+              <a href="https://medium.com/helloiconworld" target="_blank" class="md" title="medium"
+                ><span class="blind">medium</span></a
+              >
+              <a href="https://twitter.com/@helloiconworld" target="_blank" class="tt" title="twitter"
+                ><span class="blind">twitter</span></a
+              >
+              <a href="https://brunch.co.kr/@helloiconworld" target="_blank" class="br" title="brunch"
+                ><span class="blind">brunch</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // footer -->
+    </div>
+    <!-- // wrap -->
+  </body>
+</html>

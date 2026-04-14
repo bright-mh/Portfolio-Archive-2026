@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* Lato */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Lato-Light.eot");
+  src:
+    url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-Light.woff2") format("woff2"),
+    url("../fonts/Lato-Light.woff") format("woff"),
+    url("../fonts/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato-Regular.eot");
+  src:
+    url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-Regular.woff2") format("woff2"),
+    url("../fonts/Lato-Regular.woff") format("woff"),
+    url("../fonts/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Lato-Bold.eot");
+  src:
+    url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-Bold.woff2") format("woff2"),
+    url("../fonts/Lato-Bold.woff") format("woff"),
+    url("../fonts/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Lato-Black.eot");
+  src:
+    url("../fonts/Lato-Black.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-Black.woff2") format("woff2"),
+    url("../fonts/Lato-Black.woff") format("woff"),
+    url("../fonts/Lato-Black.ttf") format("truetype");
+}
+
+/* Noto Sans KR */
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/NanumBarunGothicLight.eot");
+  src:
+    url("../fonts/NanumBarunGothicLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NanumBarunGothicLight.woff2") format("woff2"),
+    url("../fonts/NanumBarunGothicLight.woff") format("woff"),
+    url("../fonts/NanumBarunGothicLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NanumBarunGothic.eot");
+  src:
+    url("../fonts/NanumBarunGothic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NanumBarunGothic.woff2") format("woff2"),
+    url("../fonts/NanumBarunGothic.woff") format("woff"),
+    url("../fonts/NanumBarunGothic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NanumBarunGothicBold.eot");
+  src:
+    url("../fonts/NanumBarunGothicBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NanumBarunGothicBold.woff2") format("woff2"),
+    url("../fonts/NanumBarunGothicBold.woff") format("woff"),
+    url("../fonts/NanumBarunGothicBold.ttf") format("truetype");
+}

@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>미션 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(1)>ul>li:eq(1)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시관리</span>
+              <span>상품등록관리</span>
+              <span>미션 관리</span>
+              <strong>미션 수정/조회</strong>
+            </div>
+            <h3 class="tit">미션 수정/조회</h3>
+
+            <div class="table_list">
+              <!-- 미션 수정/조회 테이블 -->
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong
+                        >미션 속성, 미션명, 부가 설명, 마케팅 메시지, 미션 사용자 설정, 상태여부 정보가 있는 미션
+                        수정/조회 입력 서식</strong
+                      >
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">미션 속성</th>
+                        <td>실적형 &gt; App설치하기</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">미션명</th>
+                        <td>런쳐플래닛 설치하고 혜택도 받자</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">부가 설명</th>
+                        <td>런쳐플래닛 설치하면 혜택이 우루루루 떨어진다</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">마케팅 메시지</th>
+                        <td>낚시인 것 알지?</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">미션 사용자 설정</th>
+                        <td>All</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">상태여부</th>
+                        <td>활성화</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 수정/조회 테이블 -->
+
+              <!-- 미션 대표 이미지 등록 -->
+              <h4 class="tit">미션 대표 이미지</h4>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 대표 이미지 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">미션 이미지</th>
+                        <td>
+                          <div class="img_area">
+                            <img src="../../img/img_noimg.gif" alt="신규 이미지" width="320" height="246" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 대표 이미지 등록 -->
+
+              <!-- 미션 속성 상세정보 입력 : 실적형 - App 설치하기& App 실행하기 -->
+              <h4 class="tit">미션 속성 상세정보</h4>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong
+                        >OS 선택, App. ID(Package name & 실행 URL 스킴), App 이름, App. 다운로드 URL이 있는 미션 속성
+                        상세정보 입력 서식</strong
+                      >
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">OS</th>
+                        <td>Android + IOS</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">App. ID<br />(Package name &amp;<br />실행 URL 스킴)</th>
+                        <td>
+                          <p>Android : com.skp.launcher</p>
+                          <p>IOS : com.skp.launcher</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">App 이름</th>
+                        <td>런처 플래닛</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">App. 다운로드 URL</th>
+                        <td>
+                          <!-- [D] 해당 항목은 각 부분별 값이 있을 경우에만 제공되며 값이 없을 경우 노출되지 않음. -->
+                          <p>Android_Google play : https://play.google.com/store/apps/details?id=com.skp.launcher</p>
+                          <p>Android_One store : https://play.google.com/store/apps/details?id=com.skp.launcher</p>
+                          <p>IOS : https://play.google.com/store/apps/details?id=com.skp.launcher</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 속성 상세정보 입력 : 실적형 - App 설치하기& App 실행하기 -->
+
+              <!-- 미션 속성 상세정보 입력 (객관식) -->
+              <h4 class="tit">미션 속성 상세정보</h4>
+              &nbsp; <a href="#" class="btn_small">답변 결과 다운로드</a>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 속성 상세정보 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">질문1</th>
+                        <th class="left">한여름 더위를 피하는 나만의 방법은??</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">보기 1</th>
+                        <td>저 바다에 누워!!! 바다로 고고싱~</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">보기 2</th>
+                        <td>사람 없는 산속 계곡은 여름에 왓따!</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">보기 3</th>
+                        <td>가까운 은행에 가서 새로운 통장을 만든다!!</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="table_wrap gap_top2">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 속성 상세정보 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">질문2</th>
+                        <th class="left">oksusu 이용하는 이유?</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">보기 1</th>
+                        <td>그냥</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">보기 2</th>
+                        <td>유승옥 이뻐서</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">보기 3</th>
+                        <td>옥택연 멋있어서</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 속성 상세정보 입력 (객관식) -->
+
+              <!-- 미션 속성 상세정보 입력 (주관식) -->
+              <h4 class="tit">미션 속성 상세정보</h4>
+              &nbsp;<a href="#" class="btn_small">답변 결과 다운로드</a>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 속성 상세정보 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">주관식 질문1</th>
+                        <td colspan="3" class="left">한여름 더위를 피하는 나만의 방법은??</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">답변 글자수 설정</th>
+                        <td>15자</td>
+                        <th scope="row">금칙어 입력 제어</th>
+                        <td>Y</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="table_wrap gap_top2">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 속성 상세정보 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">주관식 질문2</th>
+                        <td colspan="3" class="left">한여름 더위를 피하는 나만의 방법은??</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">답변 글자수 설정</th>
+                        <td>15자</td>
+                        <th scope="row">금칙어 입력 제어</th>
+                        <td>Y</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 속성 상세정보 입력 (주관식) -->
+
+              <!-- 미션 속성 상세정보 입력 (카탈로그) -->
+              <h4 class="tit">미션 속성 상세정보</h4>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 속성 상세정보 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">이미지1</th>
+                        <td>
+                          <div class="img_area">
+                            <img src="../../img/img_noimg.gif" alt="미션 이미지" width="320" height="246" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">이미지2</th>
+                        <td>
+                          <div class="img_area">
+                            <img src="../../img/img_noimg.gif" alt="미션 이미지" width="320" height="246" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 속성 상세정보 입력 (카탈로그) -->
+
+              <!-- 미션 속성 상세정보 입력 (외부링크/동영상) -->
+              <h4 class="tit">미션 속성 상세정보</h4>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>광고URL입력, 영상 이미지가 있는 미션 속성 상세정보 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">광고URL 확인</th>
+                        <td>
+                          <a href="https://www.youtube.com/watch?v=aFCfa1Cgy1U&t=5084s" class="link" title="새창 열림"
+                            >https://www.youtube.com/watch?v=aFCfa1Cgy1U&t=5084s</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">영상 이미지</th>
+                        <td>
+                          <div class="img_area">
+                            <img src="../../img/img_noimg.gif" alt="영상 이미지" width="320" height="246" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 속성 상세정보 입력 (외부링크/동영상) -->
+
+              <!-- 미션 이용안내 -->
+              <h4 class="tit">미션 이용안내</h4>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 이용안내 입력 서식</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">미션 이용안내</th>
+                        <td>
+                          런쳐플래닛 설치하고 혜택도 받자<br />
+                          런쳐플래닛 설치하면 혜택이 우루루루 떨어진다<br />
+                          낚시인 것 알지?
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 이용안내 -->
+
+              <!-- 미션 유의사항(친구초대형 - 출석체크 미션일 경우 추가) -->
+              <h4 class="tit">미션 유의사항</h4>
+              <div class="table_list_top">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>미션 유의사항</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <label for="mission_note">미션 유의사항</label>
+                        </th>
+                        <td>
+                          <textarea cols="3" rows="3" id="mission_note" class="wid_per80">
+※ 꼭 확인하세요. 
+방문 체크는 1일 1회 자동 참여 됩니다.
+회원 인증한 회원에 한 해 1인  1회 풀석 참여만 가능합니다.
+</textarea
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //미션 유의사항(친구초대형 - 출석체크 미션일 경우 추가) -->
+
+              <!-- 미션 참여내역 보기 -->
+              <div class="table_list_top">
+                <h4 class="tit">미션 참여내역 보기</h4>
+                &nbsp;<a href="#" class="btn_small" target="_blank" title="새창 열림">참여내역 보기</a>
+              </div>
+              <!-- //미션 참여내역 보기 -->
+
+              <!-- 작성 정보 -->
+              <div class="table_list">
+                <div class="table_wrap">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong>작성자 (ID), 작성일시, 수정자 (ID), 수정일시 내용이 있는 작성 정보</strong>
+                    </caption>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                      <col style="width: 130px" />
+                      <col style="width: *" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">작성자 (ID)</th>
+                        <td>관리자(admin)</td>
+                        <th scope="row">작성일시</th>
+                        <td>2016.11.12 15:33</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">수정자 (ID)</th>
+                        <td>송승헌(admin_sub)</td>
+                        <th scope="row">수정일시</th>
+                        <td>2016.11.12 19:00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //작성 정보 -->
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_save">확인</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

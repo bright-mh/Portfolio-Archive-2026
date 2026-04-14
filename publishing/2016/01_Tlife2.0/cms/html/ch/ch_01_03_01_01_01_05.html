@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>대사내역 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p><em>[T라이프]</em> 채널 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(2)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">유료상품관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">상품관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">판매상품 관리</a></li>
+                      <li><a href="#">캠페인 정보 조회</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">쿠폰 발급현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">쿠폰 별 현황</a></li>
+                      <li><a href="#">주문 별 현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">정산관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">대사내역</a></li>
+                      <li><a href="#">정산현황</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>유료상품관리</span>
+              <span>정산관리</span>
+              <strong>대사내역</strong>
+            </div>
+            <h3 class="tit">대사내역</h3>
+            <ul class="guide">
+              <li>판매채널-CMS 또는 CMS-제휴사 간 주문/취소 내역의 불일치 항목을 조회할 수 있습니다.</li>
+              <li>판매채널-CMS 간 대사는 채널 Admin에서 다운로드 한 주문내역을 등록하셔야 대사처리가 가능합니다.</li>
+              <li>
+                CMS-제휴사 간 대사는 CMS 주문내역 전달 후 제휴사에서 처리한 대사결과 파일을 등록하셔야 내역이
+                표시됩니다.
+              </li>
+            </ul>
+
+            <div class="tabmenu">
+              <ul class="tab">
+                <li><a href="#" class="on">판매채널-CMS</a></li>
+                <li><a href="#">CMS-제휴사1</a></li>
+              </ul>
+            </div>
+
+            <div class="gap_btm2">
+              ▶ 대상일자 별 주문내역 등록 여부와 불일치 건수 현황을 확인하실 수 있습니다. (최종 대사결과) &nbsp;<a
+                href="#"
+                class="btn_small btn_list"
+                >목록으로 이동</a
+              >
+            </div>
+
+            <!-- 달력 영역 -->
+            <div class="calendar">
+              <div class="c_header">
+                <a href="#" class="btn_c_prev"><img src="../../img/btn_c_prev.png" alt="이전 달 보기" /></a>
+                <span class="c_title">2016.10</span>
+                <a href="#" class="btn_c_next"><img src="../../img/btn_c_next.png" alt="다음 달 보기" /></a>
+              </div>
+
+              <!-- 달력 테이블 -->
+              <div class="table_wrap3">
+                <table class="table_calendar">
+                  <caption>
+                    <strong>대상일자 별 주문내역 등록 여부와 불일치 건수 현황 확인</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 14.2%" />
+                    <col style="width: *" />
+                    <col style="width: 14.2%" />
+                    <col style="width: 14.2%" />
+                    <col style="width: 14.2%" />
+                    <col style="width: 14.2%" />
+                    <col style="width: 14.2%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">일</th>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col">토</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- 1주 -->
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <!-- [D] 토요일일 경우 p 클래스명 sun -->
+                        <p class="sat">1</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 0</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">2</strong> 건</a>
+                        </p>
+                      </td>
+                    </tr>
+                    <!-- //1주 -->
+                    <!-- 2주 -->
+                    <tr>
+                      <td>
+                        <!-- [D] 일요일 및 공휴일일 경우 p 클래스명 sun -->
+                        <p class="sun">2</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 25</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>3</p>
+                        <p class="center">
+                          <a href="#" class="btn_long btn_new" target="_blank" title="새창 열림">주문내역 등록</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>4</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 5</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>5</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 25</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>6</p>
+                        <p class="center">대사처리 중</p>
+                      </td>
+                      <td>
+                        <p>7</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 85</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <!-- [D] 토요일일 경우 p 클래스명 sun -->
+                        <p class="sat">8</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 0</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">1</strong> 건</a>
+                        </p>
+                      </td>
+                    </tr>
+                    <!-- //2주 -->
+                    <!-- 3주 -->
+                    <tr>
+                      <td>
+                        <p class="sun">9</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 0</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>10</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 88</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">3</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>11</p>
+                        <p class="center">
+                          <a href="#" class="btn_long btn_new" target="_blank" title="새창 열림">주문내역 등록</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>12</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 180</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">1</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>13</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 2,180</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>14</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 27</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p class="sat">15</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 20</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                    </tr>
+                    <!-- //3주 -->
+                    <!-- 4주 -->
+                    <tr>
+                      <td>
+                        <p class="sun">16</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 25</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>17</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 58</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>18</p>
+                        <ul class="compact">
+                          <li>등록일 : <a href="#">2016.10.03</a></li>
+                          <li><span class="red">불일치 : 2</span></li>
+                        </ul>
+                        <p class="txt_type">
+                          미완료 <a href="#" target="_blank" title="새창 열림"><strong class="red">0</strong> 건</a>
+                        </p>
+                      </td>
+                      <td>
+                        <p>19</p>
+                      </td>
+                      <td>
+                        <p>20</p>
+                      </td>
+                      <td>
+                        <p>21</p>
+                      </td>
+                      <td>
+                        <p class="sat">22</p>
+                      </td>
+                    </tr>
+                    <!-- //4주 -->
+                    <!-- 5주 -->
+                    <tr>
+                      <td>
+                        <p class="sun">23</p>
+                      </td>
+                      <td>
+                        <p>24</p>
+                      </td>
+                      <td>
+                        <p>25</p>
+                      </td>
+                      <td>
+                        <p>26</p>
+                      </td>
+                      <td>
+                        <p>27</p>
+                      </td>
+                      <td>
+                        <p>28</p>
+                      </td>
+                      <td>
+                        <p class="sat">29</p>
+                      </td>
+                    </tr>
+                    <!-- //5주 -->
+                    <!-- 6주 -->
+                    <tr>
+                      <td>
+                        <p class="sun">30</p>
+                      </td>
+                      <td>
+                        <p>31</p>
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <!-- //6주 -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- //달력 테이블 -->
+            </div>
+            <!-- //달력 영역 -->
+
+            <div class="btngroup">
+              <div class="btn_center">
+                <a href="#" class="btn_list">목록으로 이동</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

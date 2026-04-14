@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>수수료 등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy.mm.dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>수수료 등록</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>신규 수수료 정보를 등록/수정할 수 있습니다.</li>
+            <li>등록된 수수료는 선택하신 적용 시작일 00:00 이후 결제 건에 자동으로 적용됩니다.</li>
+          </ul>
+
+          <!-- 수수료 등록 -->
+          <div class="comm_right">
+            <em class="ess">필수 입력 항목입니다.</em>
+          </div>
+
+          <div class="table_list">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>등록일시, 등록자, 결제수단, 수수료, 적용 시작일이 있는 수수료 등록 입력 서식</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">등록일시</th>
+                    <td>2016.08&nbsp;&nbsp;19:12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">등록자</th>
+                    <td>김미선 (ooiudll98)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="payment" class="ess">결제수단</label>
+                    </th>
+                    <td>
+                      <select id="payment">
+                        <option>&nbsp;</option>
+                        <option>신용카드</option>
+                        <option>휴대폰</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="commission" class="ess">수수료</label>
+                    </th>
+                    <td><input type="text" id="commission" /> %</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="start_date" class="ess">적용 시작일</label>
+                    </th>
+                    <td>
+                      <input type="text" id="start_date" value="2016.12.15" class="wid_calendar pickerArea" />
+                      <span class="caution caution_left">선택한 일자의 00:00부터 적용됩니다.</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //수수료 등록 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_new">등록</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>연별 | 군 전체 | SK텔레콤이 열어가는 스마트 에너지 세상 ::: Cloud BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head02.js"></script>
+    <link href="/html/2014/bems/css/custom/gp.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+
+    <script type="text/javascript" src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <script type="text/javascript" src="chartScripts/GP_YEAT002.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker({ viewMode: 2 });
+        $("#country_01").selectbox();
+      });
+    </script>
+  </head>
+
+  <!-- [D] 팝업 사이즈 : 973* -->
+  <body class="sub_gpPop">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- contents -->
+      <div id="contents">
+        <div class="boxContents">
+          <!-- 탭영역 -->
+          <section class="tabBox">
+            <div class="boxBg">
+              <div class="tabTitleGroup">
+                <!-- [D] 선택된 탭의 li에 class="on" 삽입 -->
+                <ul class="tabTitleList">
+                  <li><a href="#link">실시간별</a></li>
+                  <li><a href="#link">시간별</a></li>
+                  <li><a href="#link">일별</a></li>
+                  <li><a href="#link">월별</a></li>
+                  <li class="on"><a href="#link">연별</a></li>
+                </ul>
+              </div>
+
+              <!-- 탭 상세 -->
+              <div class="tabDetailGroup">
+                <div class="layerGroup clear02">
+                  <!-- 층 그룹 -->
+                  <div class="fl">
+                    <!-- layerOne -->
+                    <div class="layerOne clear02">
+                      <div class="fl clear">
+                        <label for="input_date">기간선택</label>
+                        <input type="text" name="input_date" id="input_date" value="2011" class="fl input_date w86" />
+                        <span class="fl rangeStyle">~</span>
+                        <input type="text" name="input_date" value="2013" class="fl input_date w86" />
+                      </div>
+                      <div class="fl pl31">
+                        <p class="detailTitle">최근</p>
+                        <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                        <ul class="fl btn_timeList">
+                          <li class="on"><a href="#link">3년</a></li>
+                          <li><a href="#link">6년</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //layerOne -->
+                    <!-- layerTwo -->
+                    <div class="layerTwo clear02">
+                      <div class="fl">
+                        <p class="detailTitle">빌딩 군</p>
+                        <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                        <ul class="fl btn_timeList ml8">
+                          <li class="on"><a href="#link">종합</a></li>
+                          <li><a href="#link">개별</a></li>
+                        </ul>
+                      </div>
+                      <div class="fl pl31">
+                        <p class="detailTitle">에너지원</p>
+                        <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                        <ul class="fl btn_timeList">
+                          <li><a href="#link">전체</a></li>
+                          <li class="on"><a href="#link">전기</a></li>
+                          <li><a href="#link">가스</a></li>
+                        </ul>
+                      </div>
+                      <div class="fl pl31">
+                        <label for="country_01">단위</label>
+                        <div class="s1 pl63">
+                          <select id="country_01">
+                            <option value="v1">전력량 (kWh)</option>
+                            <option value="v2">석유환산 톤 (toe)</option>
+                            <option value="v3">열량(MJ)</option>
+                            <option value="v4">이산화탄소배출량 (tCO2)</option>
+                            <option value="v5">탄소배출량 (tC)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //layerTwo -->
+                  </div>
+                  <!-- //층 그룹 -->
+                  <p class="fl btn_search">
+                    <a href="#link"><span>검색</span></a>
+                  </p>
+                </div>
+              </div>
+              <!-- //탭 상세 -->
+            </div>
+          </section>
+          <!-- //탭영역 -->
+
+          <!-- 차트 영역 -->
+          <section class="BoxArea">
+            <div class="boxBg">
+              <!--차트 삽입부분 -->
+              <div id="chart01" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+              <!--//차트 삽입부분 -->
+            </div>
+          </section>
+          <!-- //차트 영역 -->
+
+          <!-- 테이블 영역 -->
+          <section class="BoxArea">
+            <div class="boxBg">
+              <!-- 주요정보 -->
+              <article class="tableGroup01">
+                <h1>주요정보</h1>
+                <table class="table_style01">
+                  <caption class="blind">
+                    연별 주요정보
+                  </caption>
+                  <colgroup>
+                    <col style="width: 18%" />
+                    <col style="width: 15%" />
+                    <col style="width: 17%" />
+                    <col style="width: 15%" />
+                    <col style="width: 17%" />
+                    <col style="width: 18%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">&nbsp;</th>
+                      <th scope="col" colspan="2">최대</th>
+                      <th scope="col" colspan="2">최소</th>
+                      <th scope="col">평균</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>사용량</td>
+                      <td>2012</td>
+                      <td>71 kWh</td>
+                      <td>2011</td>
+                      <td>40 kWh</td>
+                      <td>50 kWh</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <!-- //주요정보 -->
+
+              <!-- 차트 데이터 -->
+              <article class="tableGroup02 mt40">
+                <h1 class="mb0">차트 데이터</h1>
+                <table class="table table_id_4">
+                  <caption class="blind">
+                    연별 차트 데이터
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">년</th>
+                      <th scope="col">사용량</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2011</td>
+                      <td>5,405,262</td>
+                    </tr>
+                    <tr>
+                      <td>2012</td>
+                      <td>5,405,262</td>
+                    </tr>
+                    <tr>
+                      <td>2013</td>
+                      <td>5,405,262</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <!-- //차트 데이터 -->
+            </div>
+          </section>
+          <!-- 테이블 영역 -->
+        </div>
+        <!-- 버튼 -->
+        <div class="btn_area02">
+          <a href="#link" class="on"><span>닫기</span></a>
+        </div>
+        <!-- //버튼 -->
+      </div>
+      <!-- //contents -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+      name="viewport"
+    />
+
+    <link href="../common/css/contents.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/basic.js"></script>
+
+    <title>꿈날개</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1 class="sub_title" style="width: 142px">
+          <img src="../common/img/title_study_01.png" alt="꿈날개 모바일 학습 과정" />
+        </h1>
+        <p class="prev_page">
+          <a href="#"><img src="../common/img/btn_prev_page.png" alt="이전" /></a>
+        </p>
+        <p class="all_view">
+          <a href="javascript:all_view('01')"><img src="../common/img/btn_all_view.png" alt="메뉴보기" /></a>
+        </p>
+      </div>
+
+      <div id="container">
+        <!-- 상세 -->
+        <div class="study_detail">
+          <p class="title">웹 마케팅 살펴보기-1</p>
+          <p class="img"><img src="../common/img/img_study_list.jpg" alt="" /></p>
+          <p class="text1">분류 : 여성창업분야 &gt; 재무&frasl;법</p>
+          <p class="text2">난이도 : <span class="level_1">초급</span></p>
+          <a href="#study_review" onMouseDown="study_detail('02')" class="text3">
+            <!-- [D]별점은 span태그의 style="width:100%" 으로 조정 -->
+            <span class="star"><span style="width: 80%">별점</span></span>
+            <span>(수강평 4개)</span>
+          </a>
+          <p class="preview">
+            <a href="#"><img src="../common/img/btn_preview.png" alt="맛보기" /></a>
+          </p>
+          <p class="bg"></p>
+        </div>
+        <!-- //상세 -->
+
+        <ul class="study_detail_tab">
+          <li id="tab1" class="tab1_on" onMouseDown="study_detail('01')"><span>학습하기</span></li>
+          <li id="tab2" class="tab2" onMouseDown="study_detail('02')"><span>과정정보</span></li>
+        </ul>
+
+        <!-- 학습하기 -->
+        <div class="study_detail_list">
+          <ul>
+            <!-- 리스트 한줄 -->
+            <li>
+              <p class="title"><a href="#">01.법적 해결능력의 기초 쌓기</a></p>
+              <a href="#" class="more"><img src="../common/img/btn_more2.png" alt="자세히 보기" /></a>
+            </li>
+            <!-- //리스트 한줄 -->
+            <li>
+              <p class="title"><a href="#">02.법적 해결능력의 기초 쌓기</a></p>
+              <a href="#" class="more"><img src="../common/img/btn_more2.png" alt="자세히 보기" /></a>
+            </li>
+            <li>
+              <p class="title"><a href="#">03.법적 해결능력의 기초 쌓기</a></p>
+              <a href="#" class="more"><img src="../common/img/btn_more2.png" alt="자세히 보기" /></a>
+            </li>
+            <li>
+              <p class="title"><a href="#">04.법적 해결능력의 기초 쌓기</a></p>
+              <a href="#" class="more"><img src="../common/img/btn_more2.png" alt="자세히 보기" /></a>
+            </li>
+            <li>
+              <p class="title"><a href="#">05.법적 해결능력의 기초 쌓기</a></p>
+              <a href="#" class="more"><img src="../common/img/btn_more2.png" alt="자세히 보기" /></a>
+            </li>
+            <li>
+              <p class="title"><a href="#">06.법적 해결능력의 기초 쌓기</a></p>
+              <a href="#" class="more"><img src="../common/img/btn_more2.png" alt="자세히 보기" /></a>
+            </li>
+            <li>
+              <p class="title"><a href="#">07.법적 해결능력의 기초 쌓기</a></p>
+              <a href="#" class="more"><img src="../common/img/btn_more2.png" alt="자세히 보기" /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //학습하기 -->
+
+        <!-- 과정정보 -->
+        <div class="study_detail_info" style="display: none">
+          <div class="study_detail_text">
+            교육목표<br />
+            - 3D MAX를 이용한 2D Shape 만들기와 2D Shape를 3D 오브젝트로 만드는 방법을 학습한다.<br />
+            - 3D 덩어리가 아닌 3D 조각품을 만들기 위한 모델링의 세계에 대해 학습한다.<br /><br />
+            교육대상<br />
+            - 창업 및 취업을 준비중인 전업주부 및 소사업자<br />
+            - 업종의 이직 및 전직을 위하여 자기능력을 개발하고자 하는 여성<br /><br />
+            교육내용<br />
+            본 과정은 게임, 영화, 애니메이션, 건축 등 3차원 이미지를 만드는 방법을 학습합니다.<br />
+            - 3DS MAX 8.0 의 사용법 이해<br />
+            - 창업과 취업시, 실무에 적용할 수 있도록 구성
+          </div>
+
+          <div class="study_review" id="study_review">
+            <p class="title"><img src="../common/img/title_study_review.png" alt="수강평" title="수강평" /></p>
+            <p class="name">박순신(mother5002)</p>
+            <p class="selectbox">
+              <select name="">
+                <option>적극추천</option>
+                <option>적극추천</option>
+                <option>적극추천</option>
+                <option>적극추천</option>
+              </select>
+            </p>
+            <p class="text"><input name="" type="text" /></p>
+            <p class="btn">
+              <a href="#"><img src="../common/img/btn_ok2.png" alt="확인" /></a>
+            </p>
+          </div>
+
+          <div class="study_review_list">
+            <ul>
+              <!-- 리뷰한줄 시작 -->
+              <li>
+                <div>
+                  <p>김선애(tjsdo815)</p>
+                  <p class="day">2011.11.11</p>
+                  <p class="text">정말 꼭알아야 하는 책에서는 잘 알려주지 않는 생생한 강의!</p>
+                  <!-- [D]별점은 span태그의 style="width:100%" 으로 조정 -->
+                  <p class="score">
+                    <span class="star"><span style="width: 80%">별점</span></span>
+                  </p>
+                </div>
+              </li>
+              <!-- //리뷰한줄 끝 -->
+
+              <li>
+                <div>
+                  <p class="name">김선애(tjsdo815)</p>
+                  <p class="day">2011.11.11</p>
+                  <p class="text">정말 꼭알아야 하는 책에서는 잘 알려주지 않는 생생한 강의!</p>
+                  <!-- [D]별점은 span태그의 style="width:100%" 으로 조정 -->
+                  <p class="score">
+                    <span class="star"><span style="width: 80%">별점</span></span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="name">김선애(tjsdo815)</p>
+                  <p class="day">2011.11.11</p>
+                  <p class="text">정말 꼭알아야 하는 책에서는 잘 알려주지 않는 생생한 강의!</p>
+                  <!-- [D]별점은 span태그의 style="width:100%" 으로 조정 -->
+                  <p class="score">
+                    <span class="star"><span style="width: 80%">별점</span></span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //과정정보 -->
+      </div>
+
+      <div id="floater">
+        <div class="floater_inner">
+          <p class="center_call">
+            <a href="tel:0318999119"><img src="../common/img/btn_call.png" alt="학습지원 센터 031-8999-119" /></a>
+          </p>
+          <ul class="floater_btn1">
+            <li class="btn1">
+              <a href="#"><img src="../common/img/floater_btn1_01.png" alt="꿈날개 소개" /></a>
+            </li>
+            <li class="btn2">
+              <a href="#"><img src="../common/img/floater_btn1_02.png" alt="개인정보처리방침" /></a>
+            </li>
+            <li class="btn3">
+              <a href="#"><img src="../common/img/floater_btn1_03.png" alt="이용약관" /></a>
+            </li>
+            <li class="btn4">
+              <a href="http://www.dream.go.kr/" target="_blank"
+                ><img src="../common/img/floater_btn1_04.png" alt="PC버전"
+              /></a>
+            </li>
+          </ul>
+          <ul class="floater_btn2">
+            <li>
+              <a href="#"><img src="../common/img/btn_login.png" alt="로그인" /></a>
+            </li>
+            <li class="btn_top" onClick="btn_top()"><img src="../common/img/btn_top.png" alt="맨위로" /></li>
+          </ul>
+          <p class="floater_copy">
+            <img src="../common/img/floater_copy.png" alt="Gyeoggi Women’s Development Center" />
+          </p>
+        </div>
+      </div>
+
+      <!-- 전체메뉴 -->
+      <div class="all_menu" style="display: none">
+        <h2><img src="../common/img/title_all_menu.png" alt="메뉴보기" /></h2>
+        <ul>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_01.png" alt="모바일학습" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_02.png" alt="홈으로" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_03.png" alt="이용안내" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_04.png" alt="직업선호도검사" /></a>
+          </li>
+          <li></li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_05.png" alt="창업적성검사" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_06.png" alt="QA" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_07.png" alt="공지사항" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_08.png" alt="교육후기" /></a>
+          </li>
+        </ul>
+        <p class="close">
+          <a href="javascript:all_view('02')"><img src="../common/img/btn_close.png" alt="닫기" /></a>
+        </p>
+      </div>
+      <!-- //전체메뉴 -->
+    </div>
+  </body>
+</html>

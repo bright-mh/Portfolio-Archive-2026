@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>New Balance Korea</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+  </head>
+  <body class="layer_on">
+    <!-- [D] 레이어 팝업 띄울 시에 lyaer_on 클래스 body에 추가! -->
+    <div class="layer_wrap expand">
+      <a href="#none" class="pop_close"><span class="blind">닫기</span></a>
+      <div class="contents">
+        <div class="viewer">
+          <ul>
+            <li><img src="../../img/dummy/img_dummy_pr01.png" alt="" /></li>
+            <li><img src="../../img/dummy/img_dummy_pr02.png" alt="" /></li>
+            <li><img src="../../img/dummy/img_dummy_pr03.png" alt="" /></li>
+            <li><img src="../../img/dummy/img_dummy_pr04.png" alt="" /></li>
+          </ul>
+        </div>
+        <div class="thumb">
+          <p class="item_tit">COLOR : <span>Dark Blue</span></p>
+          <div class="scroll">
+            <ul class="items color">
+              <li>
+                <input type="radio" id="black" name="pr_color" checked="" /><label for="black"
+                  ><img src="../../img/dummy/img_dummy_pr01.png" alt=""
+                /></label>
+              </li>
+              <li>
+                <input type="radio" id="gray" name="pr_color" /><label for="gray"
+                  ><img src="../../img/dummy/img_dummy_pr01.png" alt=""
+                /></label>
+              </li>
+              <li>
+                <input type="radio" id="beige" name="pr_color" /><label for="beige"
+                  ><img src="../../img/dummy/img_dummy_pr01.png" alt=""
+                /></label>
+              </li>
+              <li>
+                <input type="radio" id="beige2" name="pr_color" disabled="" /><label for="beige2"
+                  ><img src="../../img/dummy/img_dummy_pr01.png" alt=""
+                /></label>
+              </li>
+              <li>
+                <input type="radio" id="pink" name="pr_color" /><label for="pink"
+                  ><img src="../../img/dummy/img_dummy_pr01.png" alt=""
+                /></label>
+              </li>
+              <li>
+                <input type="radio" id="orange" name="pr_color" /><label for="orange"
+                  ><img src="../../img/dummy/img_dummy_pr01.png" alt=""
+                /></label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <script type="text/javascript">
+          $(function () {
+            var mSum = 0;
+            $(".scroll ul li").each(function () {
+              mSum += $(this).outerWidth(true);
+            });
+            $(".scroll ul").css("width", mSum);
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

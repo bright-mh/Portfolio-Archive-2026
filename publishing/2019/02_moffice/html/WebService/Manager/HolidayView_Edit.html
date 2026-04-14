@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>휴일정보</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*338 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>휴일정보</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- tip area -->
+        <div class="tip_area">
+          <p class="blind">TIP</p>
+          <div class="tip_box">
+            <ul class="tip_list">
+              <li>오늘 이전의 날짜 정보는 등록할 수 없습니다.</li>
+              <li>정보 수정시에는 날짜를 수정할 수 없습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- //tip area -->
+
+        <!-- tbl_row_default -->
+        <div class="tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 143px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">날짜</th>
+                <td>
+                  <div class="ip_calendar">
+                    <input type="text" name="" value="2019-07-05" title="날짜 선택" />
+                    <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">비고</th>
+                <td>
+                  <input type="text" name="" value="" title="비고" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <span class="left_position"><a href="#none" class="btn_md icon_md_delete_red">삭제</a></span>
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">저장</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

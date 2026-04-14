@@ -1,0 +1,15 @@
+.highcharts-title,
+.highcharts-subtitle {
+  visibility: hidden;
+}
+.highcharts-button {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+.highcharts-legend {
+  border: 0;
+}
+#chart01 .highcharts-axis {
+  display: none;
+}

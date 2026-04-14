@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Push 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+
+        //파일 업로드
+        var fileTarget = $(".filebox .file_hidden");
+
+        fileTarget.on("change", function () {
+          if (window.FileReader) {
+            // modern browser
+            var filename = $(this)[0].files[0].name;
+          } else {
+            // old IE
+            var filename = $(this).val().split("/").pop().split("\\").pop();
+          }
+
+          $(this).siblings(".file_name").val(filename);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb5:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(1)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb5">
+                <a href="#">프로모션 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">팝업관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">팝업관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Push 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">Push 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이벤트 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이벤트 배너관리</a></li>
+                      <li><a href="#">이달의 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 티켓관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">추천앱 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">추천앱 배너관리</a></li>
+                      <li><a href="#">추천앱 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">위젯관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">위젯관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>프로모션 관리</span>
+              <span>Push 관리</span>
+              <strong>Push 수정/조회</strong>
+            </div>
+            <h3 class="tit">Push 수정/조회</h3>
+
+            <!-- Push 수정/조회 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >Push 제목, 수신 회원, 발송대상, 발송일시, 발송내용, 발송이미지, 이동경로 등록, 작성자 (ID),
+                      작성일시, 수정자 (ID), 수정일시가 있는 Push 수정/조회 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="title" class="ess">Push 제목</label>
+                      </th>
+                      <td colspan="3">
+                        <input type="text" id="title" class="wid_per80" value="(광고)지만 기대했슈?" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">수신 회원</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="receive_all" name="receive_member" /><label
+                          for="receive_all"
+                          class="radio_range"
+                          >All</label
+                        >
+                        <input type="radio" id="receive_tid" name="receive_member" /><label
+                          for="receive_tid"
+                          class="radio_range"
+                          >T 아이디</label
+                        >
+                        <input type="radio" id="receive_mdn" name="receive_member" checked="checked" /><label
+                          for="receive_mdn"
+                          class="radio_range"
+                          >MDN</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">발송대상</span>
+                      </th>
+                      <td colspan="3">
+                        <select style="width: 200px">
+                          <option>MDN 회원 전체</option>
+                          <option>개별선택</option>
+                          <option>엑셀 등록</option>
+                        </select>
+                        &nbsp;<a href="#" class="link">[엑셀파일 샘플 다운로드]</a>
+
+                        <!-- MDN 회원 전체 선택 시, 보여지는 테이블 -->
+                        <div class="send_option gap_top">
+                          - OS 선택 : &nbsp;<input type="checkbox" id="os_android" checked="checked" /><label
+                            for="os_android"
+                            class="radio_range"
+                            >Android</label
+                          >
+                          <input type="checkbox" id="os_ios" checked="checked" /><label for="os_ios" class="radio_range"
+                            >IOS</label
+                          >
+                        </div>
+                        <div class="send_option">
+                          - 사용자 설정 조건 : &nbsp;
+                          <input type="checkbox" id="off_benefit" /><label for="off_benefit" class="radio_range"
+                            >혜택 알림받기 Off 사용자 포함</label
+                          >
+                        </div>
+                        <!-- //MDN 회원 전체 선택 시, 보여지는 테이블 -->
+
+                        <!-- 개별선택 선택 시, 보여지는 영역 -->
+                        <div class="gap_top">
+                          MDN 검색 : &nbsp;
+                          <input type="text" class="wid_per30" title="MDN 입력" />
+                          <a href="#" class="btn_small btn_search" target="_blank" title="새창 열림">검색</a>
+                          <a href="#" class="btn_small">삭제</a>
+                        </div>
+                        <!-- //개별선택 선택 시, 보여지는 영역 -->
+
+                        <!-- [D] 엑셀등록 선택 시, 보여지는 영역 -->
+                        <div class="gap_top">
+                          엑셀 CVS 등록 &nbsp;
+                          <a href="#" class="btn_small" target="_blank" title="새창 열림">파일선택</a>
+                          <input type="text" class="wid_per30" title="엑셀 CVS 등록" />
+                          <a href="#" class="btn_small">삭제</a>
+                          &nbsp; ※ 총 0,000 명이 등록되었습니다.
+                        </div>
+                        <!-- //엑셀등록 선택 시, 보여지는 영역 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">발송일시</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="send_date1" name="send_date" checked="checked" /><label
+                          for="send_date1"
+                          class="radio_range"
+                          >즉시 발송</label
+                        >
+                        <input type="radio" id="send_date2" name="send_date" /><label
+                          for="send_date2"
+                          class="radio_range"
+                          >예약발송</label
+                        >
+                        <!-- [D] 예약발송 시, 활성화 영역 -->
+                        <div class="gap_top">
+                          <input
+                            type="text"
+                            title="기간 검색 시작일"
+                            value="2016-11-01"
+                            class="wid_calendar pickerArea"
+                          />
+                          <select style="width: 88px">
+                            <option>00시</option>
+                            <option>01시</option>
+                            <option>02시</option>
+                            <option>03시</option>
+                            <option>04시</option>
+                            <option>05시</option>
+                            <option>06시</option>
+                            <option>07시</option>
+                            <option>08시</option>
+                            <option>09시</option>
+                            <option>10시</option>
+                            <option>11시</option>
+                            <option>12시</option>
+                            <option>13시</option>
+                            <option>14시</option>
+                            <option>15시</option>
+                            <option>16시</option>
+                            <option>17시</option>
+                            <option>18시</option>
+                            <option>19시</option>
+                            <option>20시</option>
+                            <option>21시</option>
+                            <option>22시</option>
+                            <option>23시</option>
+                          </select>
+                          <select style="width: 88px">
+                            <option>00분</option>
+                            <option>10분</option>
+                            <option>20분</option>
+                            <option>30분</option>
+                            <option>40분</option>
+                            <option>50분</option>
+                          </select>
+                        </div>
+                        <!-- //예약발송 시, 활성화 영역 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="send_cont" class="ess">발송내용</label>
+                      </th>
+                      <td colspan="3">
+                        <textarea id="send_cont" class="one">
+나른한 오후에 단비같은 쿠폰! 친구 5명만 모으면 아웃백 베이비립이 단돈 만원에!</textarea
+                        >
+                        <div class="textarea_byte"><span>88 / 180 Byte</span></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">발송이미지</th>
+                      <td colspan="3">
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="push 신규 이미지" width="310" height="160" />
+                        </div>
+                        <div class="file_wrap">
+                          <div class="filebox">
+                            <input type="text" class="file_name" readonly="readonly" value="292513.png" />
+
+                            <label for="file_choice">파일선택</label>
+                            <input type="file" id="file_choice" class="file_hidden" />
+                            <a href="#" class="btn_small">삭제</a>
+                          </div>
+                          <ul class="caution_list">
+                            <li>620*320px 의 PNG 파일업로드</li>
+                            <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                            <li>이미지는 Android OS회원에게만 발송됩니다.</li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이동경로 등록</span>
+                      </th>
+                      <td colspan="3">
+                        <input type="radio" id="moving_route1" name="moving_route" checked="checked" /><label
+                          for="moving_route1"
+                          class="radio_range"
+                          >메인이동</label
+                        >
+                        <input type="radio" id="moving_route2" name="moving_route" /><label
+                          for="moving_route2"
+                          class="radio_range"
+                          >링크 URL 지정</label
+                        >
+                        <input type="radio" id="moving_route3" name="moving_route" /><label
+                          for="moving_route3"
+                          class="radio_range"
+                          >혜택 지정</label
+                        >
+                        <input type="radio" id="moving_route4" name="moving_route" /><label
+                          for="moving_route4"
+                          class="radio_range"
+                          >공지사항 지정</label
+                        >
+
+                        <!-- [D] 링크 URL 지정 선택 시, 보여지는 테이블 -->
+                        <div class="table_list gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>링크 URL 지정 선택 시 입력 서식</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">
+                                    <label for="link_url" class="ess">링크URL</label>
+                                  </th>
+                                  <td>
+                                    <input
+                                      type="text"
+                                      id="link_url"
+                                      class="wid_per80"
+                                      value="http://www.sktmembership.co.kr/web/html/coupon/tMania.jsp"
+                                    />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //링크 URL 지정 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 혜택 지정 선택 시, 보여지는 테이블 -->
+                        <div class="table_list_btm gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>혜택조회 입력 서식</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">
+                                    <span class="ess">혜택조회</span>
+                                  </th>
+                                  <td>
+                                    <div class="table_inner">
+                                      <table class="tbl_list">
+                                        <caption>
+                                          <strong>혜택명, Type, 카테고리, 상품변경이 있는 혜택조회 내용</strong>
+                                        </caption>
+                                        <colgroup>
+                                          <col style="width: *" />
+                                          <col style="width: 130px" />
+                                          <col style="width: 120px" />
+                                          <col style="width: 90px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">혜택명</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">카테고리</th>
+                                            <th scope="col">상품변경</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="left">
+                                              <a href="#" class="link"
+                                                >더운 여름 밤에도 치늬님은 진리(최대 20자까지 노출)</a
+                                              >
+                                            </td>
+                                            <td>선착순 / 일반형</td>
+                                            <td>푸드 &gt; 치킨</td>
+                                            <td><a href="#" class="btn_small">변경</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //혜택 지정 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 공지사항 지정 선택 시, 보여지는 테이블 -->
+                        <div class="table_list gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>공지사항 지정 선택 시 입력 서식</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">
+                                    <span class="ess">공지사항 지정</span>
+                                  </th>
+                                  <td>
+                                    <a href="#" class="btn_small" target="_blank" title="새창 열림">공지사항 찾기</a>
+                                    <input
+                                      type="text"
+                                      class="wid_per50"
+                                      title="공지사항 지정"
+                                      value="425 매일매일 새로운 혜택 T life!!"
+                                    />
+                                    <a href="#" class="btn_small">삭제</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //공지사항 지정 선택 시, 보여지는 테이블 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">작성자 (ID)</th>
+                      <td>관리자 (admin)</td>
+                      <th scope="row">작성일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수정자 (ID)</th>
+                      <td>송승헌 (admin_sub)</td>
+                      <th scope="row">수정일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_cancel">취소</a>
+                  <a href="#" class="btn_save">저장</a>
+                </div>
+              </div>
+            </div>
+            <!-- //Push 수정/조회 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>메인 관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+
+        //전시여부, 우선순위 해제 - 버튼 토글
+        $(".btn_effect a").on("click", function () {
+          if ($(this).hasClass("on")) {
+            $(this).siblings().addClass("on");
+            $(this).removeClass("on");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(0)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시 관리</span>
+              <span>전시 관리</span>
+              <strong>메인 관리</strong>
+            </div>
+            <h3 class="tit">메인 관리</h3>
+            <ul class="guide">
+              <li>메인에 등록할 생활쿠폰 / 미션 / 이벤트 / 추천앱을 관리 하실 수 있습니다.</li>
+              <li>
+                일반 순위 그룹에서 우선순위 그룹으로 10개의 항목을 등록할 수 있으며, Front 화면에서 우선순위 그룹의
+                항목이 제공된 후 일반 그룹 항목이 제공됩니다.
+              </li>
+              <li>1순위 : OMS에서 등록하는 카드 노출 우선순위 기준(최대 10개)</li>
+              <li>2순위 : 전시 시작시간 역순(최신순)</li>
+              <li>3순위 : 전시 마감시간 빠른 순 / 전시 임박 순</li>
+              <li>4순위 : 기호 &gt; 숫자 &gt; 영문(대문자 &gt; 소문자) &gt; 한글</li>
+              <li class="no_bg">
+                ※ 추천앱의 경우 후순위로 위치하도록 함(우선순위로 설정했을 때를 제외하고는 5순위로 설정)
+              </li>
+            </ul>
+
+            <!-- 날짜별 보기 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>날짜별 보기가 있는 메인 관리 선택 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">날짜별 보기</th>
+                      <td>
+                        <input
+                          type="text"
+                          id="period"
+                          title="날짜 선택"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        &nbsp;<a href="#" class="btn_small">◀ 이전 날짜</a> &nbsp;<a href="#" class="btn_small"
+                          >다음 날짜 ▶</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_search">이동</a>
+                </div>
+              </div>
+            </div>
+            <!-- //날짜별 보기 -->
+
+            <!-- 우선순위 그룹 -->
+            <h4 class="tit">우선순위 그룹</h4>
+            <div class="table_list_btm space_btm">
+              <div class="total_area">
+                <p class="total_num">
+                  혜택 <strong>0</strong> / 미션 <strong>0</strong> / 이벤트 <strong>0</strong> / 추천앱
+                  <strong>0</strong> &nbsp;&nbsp;(2016.11.01 기준)
+                </p>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >노출우선순위 현재순서, 노출우선순위 순서변경, 타이틀, 노출형태, 카테고리, 참여인원 기본, 참여인원
+                      추가, 전시기간, 전시여부, 우선순위 해제 정보가 있는 우선순위 그룹 리스트</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 55px" />
+                    <col style="width: 65px" />
+                    <col style="width: *" />
+                    <col style="width: 120px" />
+                    <col style="width: 120px" />
+                    <col style="width: 60px" />
+                    <col style="width: 60px" />
+                    <col style="width: 150px" />
+                    <col style="width: 100px" />
+                    <col style="width: 130px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">노출우선순위</th>
+                      <th scope="col" rowspan="2">타이틀</th>
+                      <th scope="col" rowspan="2">노출형태</th>
+                      <th scope="col" rowspan="2">카테고리</th>
+                      <th scope="col" colspan="2">참여인원</th>
+                      <th scope="col" rowspan="2">전시기간</th>
+                      <th scope="col" rowspan="2">전시여부</th>
+                      <th scope="col" rowspan="2">우선순위 해제</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">현재<br />순서</th>
+                      <th scope="col">순서<br />변경</th>
+                      <th scope="col">기본</th>
+                      <th scope="col">추가</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 내용이 없을 시, -->
+                    <tr>
+                      <td colspan="10">현재 날짜의 메인 우선순위 10개를 등록해 주시기 바랍니다.</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option selected="selected">1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">전시중지</a>
+                        <a href="#link" class="btn_small">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option selected="selected">2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>선착순 Benefit</td>
+                      <td>푸드/외식</td>
+                      <td>5</td>
+                      <td>200</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">전시중지</a>
+                        <a href="#link" class="btn_small">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option selected="selected">3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">5티켓 적립하고 개인정보 강화하고!</a></td>
+                      <td>선착순 Benefit</td>
+                      <td>푸드/외식</td>
+                      <td>5</td>
+                      <td>200</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">전시중지</a>
+                        <a href="#link" class="btn_small">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option selected="selected">4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>선착순 Benefit</td>
+                      <td>푸드/외식</td>
+                      <td>5</td>
+                      <td>200</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>
+                        <select title="노출우선순위 순서변경" style="width: 55px">
+                          <option>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">우선순위 등록</a>
+                        <a href="#link" class="btn_small on">우선순위 해제</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- paging -->
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+              <!-- //paging -->
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_save">우선순위적용</a>
+                </div>
+              </div>
+            </div>
+            <!-- //우선순위 그룹 -->
+
+            <!-- 일반순위 그룹 -->
+            <h4 class="tit">일반순위 그룹</h4>
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>카테고리, 타이틀명이 있는 일반순위 그룹 검색 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><label for="category">카테고리</label></th>
+                      <td>
+                        <select id="category" style="width: 140px">
+                          <option>전체</option>
+                          <option>생활쿠폰</option>
+                          <option>디지털콘텐츠</option>
+                          <option>이벤트</option>
+                          <option>미션</option>
+                          <option>추천앱</option>
+                        </select>
+
+                        <!-- 생활쿠폰 선택 시 -->
+                        <select title="카테고리2" style="width: 140px">
+                          <option>전체</option>
+                          <option>커피/음료</option>
+                          <option>푸드/외식</option>
+                          <option>뷰티/쇼핑</option>
+                          <option>문화/기타</option>
+                        </select>
+                        <!-- //생활쿠폰 선택 시 -->
+
+                        <!-- 디지털콘텐츠 선택 시 --
+											<select title="카테고리2" style="width:140px">
+												<option>전체</option>
+												<option>이북</option>
+												<option>코믹</option>
+												<option>웹툰</option>
+												<option>웹소설</option>
+												<option>영화 VOD</option>
+												<option>방송 VOD</option>
+												<option>실시간 TV</option>
+												<option>뮤직</option>
+												<option>이모티콘</option>
+												<option>추천앱</option>
+											</select>
+											<!-- //디지털콘텐츠 선택 시 -->
+
+                        <!-- 이벤트 선택 시 --
+											<select title="카테고리2" style="width:140px">
+												<option>전체</option>
+											</select>
+											<!-- //이벤트 선택 시 -->
+
+                        <!-- 미션 선택 시 --
+											<select title="카테고리2" style="width:140px">
+												<option>전체</option>
+												<option>실적형</option>
+												<option>바이럴형</option>
+												<option>재방문형</option>
+												<option>광고보기형</option>
+												<option>정보입력형</option>
+											</select>
+											<!-- //미션 선택 시 -->
+
+                        <!-- 추천앱 선택 시 --
+											<select title="카테고리2" style="width:140px">
+												<option>전체</option>
+												<option>T만의 폼나는 앱</option>
+												<option>커뮤니케이션</option>
+												<option>영상음악</option>
+												<option>펀</option>
+												<option>쇼핑쿠폰</option>
+												<option>세이프티</option>
+												<option>지도</option>
+												<option>고객Care</option>
+												<option>키즈청소년</option>
+												<option>제휴</option>
+												<option>기타</option>
+											</select>
+											<!-- //추천앱 선택 시 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="title">타이틀명</label></th>
+                      <td>
+                        <input type="text" id="title" class="wid_per80" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 일반순위 그룹 검색 리스트 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <div class="sel_box">
+                  <select>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >순위, 타이틀, 노출형태, 카테고리, 참여인원 기본, 참여인원 추가, 전시기간, 전시여부, 우선순위 여부
+                      정보가 있는 일반순위 그룹 리스트</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col style="width: *" />
+                    <col style="width: 120px" />
+                    <col style="width: 120px" />
+                    <col style="width: 60px" />
+                    <col style="width: 60px" />
+                    <col style="width: 150px" />
+                    <col style="width: 100px" />
+                    <col style="width: 130px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" rowspan="2">순위</th>
+                      <th scope="col" rowspan="2">타이틀</th>
+                      <th scope="col" rowspan="2">노출형태</th>
+                      <th scope="col" rowspan="2">카테고리</th>
+                      <th scope="col" colspan="2">참여인원</th>
+                      <th scope="col" rowspan="2">전시기간</th>
+                      <th scope="col" rowspan="2">전시여부</th>
+                      <th scope="col" rowspan="2">우선순위 여부</th>
+                    </tr>
+                    <tr>
+                      <th class="bl_line" scope="col">기본</th>
+                      <th scope="col">추가</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 내용이 없을 시, -->
+                    <tr>
+                      <td colspan="9">현재 날짜로 등록되어 있는 혜택 / 미션 / 이벤트 / 추천앱이 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">전시중지</a>
+                        <a href="#link" class="btn_small">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>선착순 Benefit</td>
+                      <td>푸드/외식</td>
+                      <td>5</td>
+                      <td>200</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">전시중지</a>
+                        <a href="#link" class="btn_small">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td class="left"><a href="#" class="link">5티켓 적립하고 개인정보 강화하고!</a></td>
+                      <td>선착순 Benefit</td>
+                      <td>푸드/외식</td>
+                      <td>5</td>
+                      <td>200</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">전시중지</a>
+                        <a href="#link" class="btn_small">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>17</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>18</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>19</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td class="left"><a href="#" class="link">더운 여름 밤에도 치늬님은 진리</a></td>
+                      <td>이벤트</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>2016.05.30&nbsp;&nbsp;23:00<br />~ 2016.06.30&nbsp;&nbsp;23:00</td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small">전시중지</a>
+                        <a href="#link" class="btn_small on">전시</a>
+                      </td>
+                      <td class="btn_effect">
+                        <a href="#link" class="btn_small on">우선순위 등록</a>
+                        <a href="#link" class="btn_small">우선순위 해제</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- paging -->
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+              <!-- //paging -->
+            </div>
+            <!-- //일반순위 그룹 검색 리스트 -->
+            <!-- //일반순위 그룹 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

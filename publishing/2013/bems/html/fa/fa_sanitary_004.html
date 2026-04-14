@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <!-- 2014-01-06 title 띄어쓰기 및 텍스트_수정 -->
+    <title>연별 l 위생 l 설비성능 분석 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <!-- //2014-01-06 title 띄어쓰기 및 텍스트_수정 -->
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/fa.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+      });
+    </script>
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+    <script src="/html/2014/bems/js/custom/chart_common.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title05.gif" alt="설비성능 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02">
+              <a href="#link"><span>주요설비 운전현황</span></a>
+            </li>
+            <li class="depth03 on">
+              <a href="#link"><span>계통설비 성능 분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>냉열원</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>온열원</span></a>
+                </li>
+                <!-- 2014-01-06 LNB "냉온열원공통" 띄어쓰기_수정 -->
+                <li>
+                  <a href="#link"><span>냉온열원 공통</span></a>
+                </li>
+                <!-- //2014-01-06 LNB "냉온열원공통" 띄어쓰기_수정 -->
+                <li>
+                  <a href="#link"><span>공조</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>환기</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전력계통</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>신재생</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>공조설비</span></a>
+                </li>
+                <li class="on">
+                  <a href="#link"><span>위생</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>다중 설비계통 분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>위생</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 및 전체 띄어쓰기_수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <li>설비성능 분석<span>&gt;</span></li>
+                <li>계통설비 성능 분석<span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 및 전체 띄어쓰기_수정 -->
+                <li>위생<span>&gt;</span></li>
+                <li class="last">연별</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <section class="tabBox">
+              <div class="boxBg">
+                <div class="tabTitleGroup">
+                  <!-- [D] 선택된 탭의 li에 class="on" 삽입 -->
+                  <ul class="tabTitleList">
+                    <li><a href="#link">실시간별</a></li>
+                    <li><a href="#link">시간별</a></li>
+                    <li><a href="#link">일별</a></li>
+                    <li><a href="#link">월별</a></li>
+                    <li class="on"><a href="#link">연별</a></li>
+                  </ul>
+                  <ul class="tabSideList">
+                    <li class="tabSideStyle01"><a href="#link">도움말</a></li>
+                    <li class="tabSideStyle02"><a href="#link">인쇄</a></li>
+                    <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                    <li class="tabSideStyle03"><a href="#link">북마크</a></li>
+                  </ul>
+                </div>
+
+                <!-- 탭 상세 -->
+                <div class="tabDetailGroup">
+                  <div class="layerGroup clear02">
+                    <!-- 층 그룹 -->
+                    <div class="fl">
+                      <!-- layerOne -->
+                      <div class="layerOne clear02">
+                        <div class="fl clear">
+                          <label for="input_date" class="pr20">기간선택</label>
+                          <input type="text" name="input_date" id="input_date" value="2012" class="fl input_date w86" />
+                          <span class="fl rangeStyle">~</span>
+                          <input type="text" name="input_date" value="2013" class="fl input_date w86" />
+                        </div>
+                        <div class="fl pl31">
+                          <p class="detailTitle">최근</p>
+                          <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                          <ul class="fl btn_timeList">
+                            <li class="on"><a href="#link">3년</a></li>
+                            <li><a href="#link">6년</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- //layerOne -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pb15">
+                        <div class="fl">
+                          <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                          <p class="fl detailTitle">장비/조회값</p>
+                          <div class="fl inquiry clear02">
+                            <!--
+													<p class="fl title">터보냉동기 1호</p>
+													<ul class="fl">
+														<li><a href="#link" class="fl"><img src="/html/2014/bems/images/common/btn_popup_close02.gif" alt="닫기" /></a><span class="fl txtStyle">냉수공급온도</span></li>
+														<li><a href="#link" class="fl"><img src="/html/2014/bems/images/common/btn_popup_close02.gif" alt="닫기" /></a><span class="fl txtStyle">냉수환수온도</span></li>
+														<li><a href="#link" class="fl"><img src="/html/2014/bems/images/common/btn_popup_close02.gif" alt="닫기" /></a><span class="fl txtStyle">냉각능력</span></li>
+														<li><a href="#link" class="fl"><img src="/html/2014/bems/images/common/btn_popup_close02.gif" alt="닫기" /></a><span class="fl txtStyle">부하율(%)</span></li>
+													</ul>
+													-->
+                          </div>
+                        </div>
+                        <div class="fl pl10">
+                          <p class="btn_area">
+                            <a href="#link"><span>추가/변경</span></a>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                    </div>
+                    <!-- //층 그룹 -->
+                    <p class="fl btn_search">
+                      <a href="#link"><span>검색</span></a>
+                    </p>
+                  </div>
+                </div>
+                <!-- //탭 상세 -->
+              </div>
+            </section>
+            <!-- //탭영역 -->
+
+            <!-- 데이터 조회 알림 -->
+            <section class="data_search">
+              <p>데이터를 조회해 주시기 바랍니다.</p>
+            </section>
+            <!-- //데이터 조회 알림 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

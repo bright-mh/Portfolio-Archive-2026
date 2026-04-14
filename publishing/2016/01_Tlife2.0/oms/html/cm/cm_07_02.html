@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>정산현황 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb3:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb3:eq(0)>ul>li:eq(2)>ul>li:eq(1)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb3">
+                <a href="#">쿠폰 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">쿠폰 발급현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">무료 쿠폰 발급현황</a></li>
+                      <li><a href="#">유료 쿠폰 발급현황</a></li>
+                      <li><a href="#">디지털 콘텐츠 발급 현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">쿠폰 획득현황</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">쿠폰 획득현황</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">정산관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">대사내역</a></li>
+                      <li><a href="#">정산현황</a></li>
+                      <li><a href="#">수수료 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>쿠폰 관리</span>
+              <span>정산관리</span>
+              <strong>정산현황</strong>
+            </div>
+            <h3 class="tit">정산현황</h3>
+            <ul class="guide">
+              <li>
+                PG사 결제 정산현황을 조회할 수 있습니다. 수수료, 부가세 및 거래금액은 각 거래건 별 금액의 합이
+                표시됩니다.
+              </li>
+              <li>쿠폰 별 정산 상세 내역을 확인하시려면, 내역란의 엑셀 파일을 다운로드 해주세요.</li>
+            </ul>
+
+            <!-- 정산현황 검색 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>정산월, 결제수단이 있는 정산현황 검색 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">정산월</th>
+                      <td>
+                        <select title="년도 선택" style="width: 100px">
+                          <option>2016년</option>
+                          <option>2015년</option>
+                          <option>2014년</option>
+                          <option>2013년</option>
+                          <option>2012년</option>
+                          <option>2011년</option>
+                        </select>
+                        <select title="월 선택" style="width: 100px">
+                          <option>1월</option>
+                          <option>2월</option>
+                          <option>3월</option>
+                          <option>4월</option>
+                          <option>5월</option>
+                          <option>6월</option>
+                          <option>7월</option>
+                          <option>8월</option>
+                          <option>9월</option>
+                          <option>10월</option>
+                          <option>11월</option>
+                          <option>12월</option>
+                        </select>
+                        ~
+                        <select title="년도 선택" style="width: 100px">
+                          <option>2016년</option>
+                          <option>2015년</option>
+                          <option>2014년</option>
+                          <option>2013년</option>
+                          <option>2012년</option>
+                          <option>2011년</option>
+                        </select>
+                        <select title="월 선택" style="width: 100px">
+                          <option>1월</option>
+                          <option>2월</option>
+                          <option>3월</option>
+                          <option>4월</option>
+                          <option>5월</option>
+                          <option>6월</option>
+                          <option>7월</option>
+                          <option>8월</option>
+                          <option>9월</option>
+                          <option>10월</option>
+                          <option>11월</option>
+                          <option>12월</option>
+                        </select>
+
+                        <ul class="term_list">
+                          <li><a href="#" class="btn_small">3개월</a></li>
+                          <li><a href="#" class="btn_small">6개월</a></li>
+                          <li><a href="#" class="btn_small">1년</a></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">결제수단</th>
+                      <td>
+                        <input type="checkbox" id="credit_card" checked="checked" /><label
+                          for="credit_card"
+                          class="radio_range"
+                          >신용카드</label
+                        >
+                        <input type="checkbox" id="cellphone" checked="checked" /><label
+                          for="cellphone"
+                          class="radio_range"
+                          >휴대폰</label
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+            <!-- //정산현황 검색 테이블 -->
+
+            <!-- 정산현황 검색 리스트 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <p class="total_num">총 <strong>00</strong> 건</p>
+                <div class="sel_box">
+                  <select>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <div class="table_box1300">
+                  <table class="tbl_list">
+                    <caption>
+                      <strong
+                        >번호, 정산월, 건수, 금액(a), 수수료율(b), 수수료(c=a*b), 부가세(d=c*10%), 거래금액(e=a-c-d),
+                        조정액(f), 정산금액(g=e+f), 내역이 있는 정산현황 검색 리스트</strong
+                      >
+                    </caption>
+                    <colgroup>
+                      <col style="width: 60px" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: *" />
+                      <col style="width: 120px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">정산월</th>
+                        <th scope="col">결제수단</th>
+                        <th scope="col">건수</th>
+                        <th scope="col">금액<br />(a)</th>
+                        <th scope="col">수수료율<br />(b)</th>
+                        <th scope="col">수수료<br />(c=a*b)</th>
+                        <th scope="col">부가세<br />(d=c*10%)</th>
+                        <th scope="col">거래금액<br />(e=a-c-d)</th>
+                        <th scope="col">조정액<br />(f)</th>
+                        <th scope="col">정산금액<br />(g=e+f)</th>
+                        <th scope="col">내역</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- 내용이 없을 시 -->
+                      <tr class="bg_blue">
+                        <td></td>
+                        <td><strong>총합</strong></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td colspan="12">등록된 내역이 없습니다.</td>
+                      </tr>
+                      <!-- //내용이 없을 시 -->
+                      <tr class="bg_blue">
+                        <td></td>
+                        <td><strong>총합</strong></td>
+                        <td></td>
+                        <td>2,050</td>
+                        <td>6,560,000</td>
+                        <td></td>
+                        <td>241,648</td>
+                        <td>24,165</td>
+                        <td>6,294,187</td>
+                        <td>508,416</td>
+                        <td>50,841</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="num">20</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">19</td>
+                        <td>2016.08</td>
+                        <td>휴대폰</td>
+                        <td>1,000</td>
+                        <td>3,200,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">5.21 %</a></td>
+                        <td>160,000</td>
+                        <td>16,000</td>
+                        <td>3,024,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">-100,980</a></td>
+                        <td>2,923,020</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">18</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">17</td>
+                        <td>2016.08</td>
+                        <td>휴대폰</td>
+                        <td>1,000</td>
+                        <td>3,200,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">5.21 %</a></td>
+                        <td>160,000</td>
+                        <td>16,000</td>
+                        <td>3,024,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">0</a></td>
+                        <td>3,024,000</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">16</td>
+                        <td>2016.08</td>
+                        <td>휴대폰</td>
+                        <td>1,000</td>
+                        <td>3,200,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">5.21 %</a></td>
+                        <td>160,000</td>
+                        <td>16,000</td>
+                        <td>3,024,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">-100,980</a></td>
+                        <td>2,923,020</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">15</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">14</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">13</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">12</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">11</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">10</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">9</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">8</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">7</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">6</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">5</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">4</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">3</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">2</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                      <tr>
+                        <td class="num">1</td>
+                        <td>2016.08</td>
+                        <td>신용카드</td>
+                        <td>1,050</td>
+                        <td>3,360,000</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">2.43 %</a></td>
+                        <td>81,648</td>
+                        <td>8,165</td>
+                        <td>3,270,187</td>
+                        <td><a href="#" class="link" target="_blank" title="새창 열림">100,980</a></td>
+                        <td>3,371,167</td>
+                        <td><a href="#" class="btn_small btn_excel">상세내역</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- paging -->
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+              <!-- //paging -->
+            </div>
+            <!-- //정산현황 검색 리스트 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

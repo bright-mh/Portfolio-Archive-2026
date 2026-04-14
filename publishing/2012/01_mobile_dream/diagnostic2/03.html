@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+      name="viewport"
+    />
+
+    <link href="../common/css/contents.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/basic.js"></script>
+
+    <title>꿈날개</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1 class="sub_title" style="width: 80px">
+          <img src="../common/img/title_diagnostic2_01.png" alt="창업적성검사" />
+        </h1>
+        <p class="prev_page">
+          <a href="#"><img src="../common/img/btn_prev_page.png" alt="이전" /></a>
+        </p>
+        <p class="all_view">
+          <a href="javascript:all_view('01')"><img src="../common/img/btn_all_view.png" alt="메뉴보기" /></a>
+        </p>
+      </div>
+
+      <div id="container">
+        <div class="diagnostic_result">
+          <h2><img src="../common/img/title_diagnostic_result.png" alt="진단결과" /></h2>
+
+          <ul class="diagnostic2_result_tab">
+            <li id="tab1" class="tab1_on" onMouseDown="diagnostic2_result('01')"><span>결과보기</span></li>
+            <li id="tab2" class="tab2" onMouseDown="diagnostic2_result('02')"><span>항목별 상세보기</span></li>
+          </ul>
+
+          <!-- 결과보기 -->
+          <div class="diagnostic2_result_01">
+            <p class="text">
+              현재 회원님이 획득한 적성검사 점수의 평균은 90.66로써 그룹 A (창업자로서 충분한 능력을 지닌 상태) 에
+              속합니다. 특히 인간적매력 책임감 끈등은 다른 항복들에 비하여 높은 점수를 획득한 항목이며, 승부욕 결단력
+              모험심 은 다른 항목들과 비교하여 뒤쳐지기 때문에 자기 스스로의 개발 및 노력을 필요로 합니다.
+            </p>
+            <ul class="diagnostic2_graph_tab">
+              <li class="check1">
+                <input name="" type="checkbox" id="diagnostic2_graph_check1" value="" checked /><label
+                  for="diagnostic2_graph_check1"
+                  onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){diagnostic2_graph_check1.click()}ImgChangeMatch(this)"
+                  onClick="graph_check1()"
+                  class="on"
+                  >진단결과</label
+                >
+              </li>
+              <li class="check2">
+                <input name="" type="checkbox" id="diagnostic2_graph_check2" value="" checked /><label
+                  for="diagnostic2_graph_check2"
+                  onMouseDown="if(navigator.appVersion.indexOf('MSIE') != -1){diagnostic2_graph_check2.click()}ImgChangeMatch(this)"
+                  onClick="graph_check2()"
+                  class="on"
+                  >평균점</label
+                >
+              </li>
+            </ul>
+            <div class="diagnostic2_graph">
+              <!-- 평균점 -->
+              <canvas width="298" height="160" id="diagnostic2_canvas1"></canvas>
+              <script type="text/javascript">
+                function doFirst() {
+                  var x = document.getElementById("diagnostic2_canvas1");
+                  canvas = x.getContext("2d");
+
+                  canvas.beginPath();
+                  canvas.moveTo(166, 45); //정신적건강 : 1점(155,70) / 2점(160.5,57.5) / 3점(166,45) / 4점(172,32) / 5점(177.5,19)
+                  canvas.lineTo(194, 50); //지식수준 : 1점(161,74.5) / 2점(171.5,66.5) / 3점(182.5,58) / 4점(194,50) / 5점(205,42)
+                  canvas.lineTo(219, 83); //창조성 : 1점(163,83) / 2점(176.5,83) / 3점(190.5,83) / 4점(205,83) / 5점(219,83)
+                  canvas.lineTo(194, 116); //모험심 : 1점(161,91.5) / 2점(171.5,99.5) / 3점(182.5,108) / 4점(194,116) / 5점(205,124)
+                  canvas.lineTo(166, 121); //책임감 : 1점(155,96) / 2점(160.5,108.5) / 3점(166,121) / 4점(172,134) / 5점(177.5,147)
+                  canvas.lineTo(137.5, 108.5); //자신감 : 1점(143,96) / 2점(137.5,108.5) / 3점(132,121) / 4점(126,134) / 5점(120.5,147)
+                  canvas.lineTo(137, 91.5); //결단력 : 1점(137,91.5) / 2점(126.5,99.5) / 3점(115.5,108) / 4점(104,116) / 5점(93,124)
+                  canvas.lineTo(121.5, 83); //승부욕 : 1점(135,83) / 2점(121.5,83) / 3점(107.5,83) / 4점(93,83) / 5점(79,83)
+                  canvas.lineTo(115.5, 58); //끈기 : 1점(137,74.5) / 2점(126.5,66.5) / 3점(115.5,58) / 4점(104,50) / 5점(93,42)
+                  canvas.lineTo(126, 32); //인간적매력 : 1점(143,70) / 2점(137.5,57.5) / 3점(132,45) / 4점(126,32) / 5점(120.5,19)
+                  canvas.closePath();
+                  canvas.strokeStyle = "#f9c22f";
+                  canvas.stroke();
+                }
+                window.addEventListener("load", doFirst, false);
+              </script>
+              <!-- //평균점 -->
+
+              <!-- 진단결과 -->
+              <canvas width="298" height="160" id="diagnostic2_canvas2"></canvas>
+              <script type="text/javascript">
+                function doFirst() {
+                  var x = document.getElementById("diagnostic2_canvas2");
+                  canvas = x.getContext("2d");
+
+                  canvas.beginPath();
+                  canvas.moveTo(177.5, 19); //정신적건강 : 1점(155,70) / 2점(160.5,57.5) / 3점(166,45) / 4점(172,32) / 5점(177.5,19)
+                  canvas.lineTo(194, 50); //지식수준 : 1점(161,74.5) / 2점(171.5,66.5) / 3점(182.5,58) / 4점(194,50) / 5점(205,42)
+                  canvas.lineTo(190.5, 83); //창조성 : 1점(163,83) / 2점(176.5,83) / 3점(190.5,83) / 4점(205,83) / 5점(219,83)
+                  canvas.lineTo(171.5, 99.5); //모험심 : 1점(161,91.5) / 2점(171.5,99.5) / 3점(182.5,108) / 4점(194,116) / 5점(205,124)
+                  canvas.lineTo(155, 96); //책임감 : 1점(155,96) / 2점(160.5,108.5) / 3점(166,121) / 4점(172,134) / 5점(177.5,147)
+                  canvas.lineTo(137.5, 108.5); //자신감 : 1점(143,96) / 2점(137.5,108.5) / 3점(132,121) / 4점(126,134) / 5점(120.5,147)
+                  canvas.lineTo(115.5, 108); //결단력 : 1점(137,91.5) / 2점(126.5,99.5) / 3점(115.5,108) / 4점(104,116) / 5점(93,124)
+                  canvas.lineTo(93, 83); //승부욕 : 1점(135,83) / 2점(121.5,83) / 3점(107.5,83) / 4점(93,83) / 5점(79,83)
+                  canvas.lineTo(93, 42); //끈기 : 1점(137,74.5) / 2점(126.5,66.5) / 3점(115.5,58) / 4점(104,50) / 5점(93,42)
+                  canvas.lineTo(126, 32); //인간적매력 : 1점(143,70) / 2점(137.5,57.5) / 3점(132,45) / 4점(126,32) / 5점(120.5,19)
+                  canvas.closePath();
+                  canvas.strokeStyle = "#9eceef";
+                  canvas.stroke();
+                }
+                window.addEventListener("load", doFirst, false);
+              </script>
+              <!-- //진단결과 -->
+            </div>
+          </div>
+          <!-- //결과보기 -->
+
+          <!-- 항목별 상세보기 -->
+          <div class="diagnostic2_result_02" style="display: none">
+            <table>
+              <thead>
+                <tr>
+                  <th>항목</th>
+                  <th>점수</th>
+                  <th style="width: 100px">설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>정신적건강</td>
+                  <td><span>2.67</span></td>
+                  <td>
+                    <a href="javascript:aptitude_layer('01')"
+                      ><img src="../common/img/btn_view3.png" alt="자세히보기"
+                    /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>지식수준</td>
+                  <td><span>3.67</span></td>
+                  <td>
+                    <a href="javascript:aptitude_layer('01')"
+                      ><img src="../common/img/btn_view3.png" alt="자세히보기"
+                    /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>창조성</td>
+                  <td><span>3.33</span></td>
+                  <td>
+                    <a href="javascript:aptitude_layer('01')"
+                      ><img src="../common/img/btn_view3.png" alt="자세히보기"
+                    /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>승부욕</td>
+                  <td><span>4.65</span></td>
+                  <td>
+                    <a href="javascript:aptitude_layer('01')"
+                      ><img src="../common/img/btn_view3.png" alt="자세히보기"
+                    /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>자신감</td>
+                  <td><span>3.21</span></td>
+                  <td>
+                    <a href="javascript:aptitude_layer('01')"
+                      ><img src="../common/img/btn_view3.png" alt="자세히보기"
+                    /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>모험심</td>
+                  <td><span>1.27</span></td>
+                  <td>
+                    <a href="javascript:aptitude_layer('01')"
+                      ><img src="../common/img/btn_view3.png" alt="자세히보기"
+                    /></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //항목별 상세보기 -->
+
+          <!-- 상세항목보기 레이어 -->
+          <div class="aptitude_detail_layer" style="display: none">
+            <h2><img src="../common/img/title_aptitude_detail.png" alt="상세항목보기" /></h2>
+            <div>
+              <p class="text"><span>정신적 건강</span>에 대한 상세설명 입니다.</p>
+              <div>
+                모험심은 업무수행 시의 적극적인 행동 정도와 새롭고 혁신적인 일에 얼마나 과감히 도전할 수 있는지를
+                측정하기 위한 요인으로 현재 보통의 수준입니다. 즉, 현재의 상태도 창업을 하기에 적절하지만 창업가로서의
+                자질을 높이기 위해, 이 요인의 수준을 높이는 노력을 하는 것이 권장 됩니다.<br />모험심은 업무수행 시의
+                적극적인 행동 정도와 새롭고 혁신적인 일에 얼마나 과감히 도전할 수 있는지를 측정하기 위한 요인으로 현재
+                보통의 수준입니다. 즉, 현재의 상태도 창업을 하기에 적절하지만 창업가로서의 자질을 높이기 위해, 이 요인의
+                수준을 높이는 노력을 하는 것이 권장 됩니다.<br />모험심은 업무수행 시의 적극적인 행동 정도와 새롭고
+                혁신적인 일에 얼마나 과감히 도전할 수 있는지를 측정하기 위한 요인으로 현재 보통의 수준입니다. 즉, 현재의
+                상태도 창업을 하기에 적절하지만 창업가로서의 자질을 높이기 위해, 이 요인의 수준을 높이는 노력을 하는
+                것이 권장 됩니다.
+              </div>
+            </div>
+            <p class="close">
+              <a href="javascript:aptitude_layer('02')"><img src="../common/img/btn_close.png" alt="닫기" /></a>
+            </p>
+          </div>
+          <!-- //상세항목보기 레이어 -->
+        </div>
+      </div>
+
+      <div id="floater">
+        <div class="floater_inner">
+          <p class="center_call">
+            <a href="tel:0318999119"><img src="../common/img/btn_call.png" alt="학습지원 센터 031-8999-119" /></a>
+          </p>
+          <ul class="floater_btn1">
+            <li class="btn1">
+              <a href="#"><img src="../common/img/floater_btn1_01.png" alt="꿈날개 소개" /></a>
+            </li>
+            <li class="btn2">
+              <a href="#"><img src="../common/img/floater_btn1_02.png" alt="개인정보처리방침" /></a>
+            </li>
+            <li class="btn3">
+              <a href="#"><img src="../common/img/floater_btn1_03.png" alt="이용약관" /></a>
+            </li>
+            <li class="btn4">
+              <a href="http://www.dream.go.kr/" target="_blank"
+                ><img src="../common/img/floater_btn1_04.png" alt="PC버전"
+              /></a>
+            </li>
+          </ul>
+          <ul class="floater_btn2">
+            <li>
+              <a href="#"><img src="../common/img/btn_login.png" alt="로그인" /></a>
+            </li>
+            <li class="btn_top" onClick="btn_top()"><img src="../common/img/btn_top.png" alt="맨위로" /></li>
+          </ul>
+          <p class="floater_copy">
+            <img src="../common/img/floater_copy.png" alt="Gyeoggi Women’s Development Center" />
+          </p>
+        </div>
+      </div>
+
+      <!-- 전체메뉴 -->
+      <div class="all_menu" style="display: none">
+        <h2><img src="../common/img/title_all_menu.png" alt="메뉴보기" /></h2>
+        <ul>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_01.png" alt="모바일학습" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_02.png" alt="홈으로" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_03.png" alt="이용안내" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_04.png" alt="직업선호도검사" /></a>
+          </li>
+          <li></li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_05.png" alt="창업적성검사" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_06.png" alt="QA" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_07.png" alt="공지사항" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_08.png" alt="교육후기" /></a>
+          </li>
+        </ul>
+        <p class="close">
+          <a href="javascript:all_view('02')"><img src="../common/img/btn_close.png" alt="닫기" /></a>
+        </p>
+      </div>
+      <!-- //전체메뉴 -->
+    </div>
+  </body>
+</html>

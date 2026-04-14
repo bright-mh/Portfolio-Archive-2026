@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Push 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb5:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(1)").addClass("on");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(1)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb5">
+                <a href="#">프로모션 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">팝업관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">팝업관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Push 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">Push 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이벤트 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이벤트 배너관리</a></li>
+                      <li><a href="#">이달의 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 티켓관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">추천앱 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">추천앱 배너관리</a></li>
+                      <li><a href="#">추천앱 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">위젯관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">위젯관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>프로모션 관리</span>
+              <span>Push 관리</span>
+              <strong>Push 수정/조회</strong>
+            </div>
+            <h3 class="tit">Push 수정/조회</h3>
+
+            <!-- Push 수정/조회 테이블 -->
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >Push 제목, 수신회원, 발송대상, 발송일시, 발송내용, 발송이미지, 이동경로등록, 작성자 (ID),
+                      작성일시, 수정자 (ID), 수정일시가 있는 Push 수정/조회 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Push 제목</th>
+                      <td colspan="3">(광고)지만 기대했슈?</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수신 회원</th>
+                      <td colspan="3">T 아이디</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">발송대상</th>
+                      <td colspan="3">
+                        <strong>T 아이디 전체회원</strong>
+
+                        <!-- T 아이디 전체회원 선택 시, 보여지는 테이블 -->
+                        <div class="send_option gap_top">- OS 선택 : &nbsp;Android</div>
+                        <div class="send_option">- 통신사 선택 : &nbsp;SKT</div>
+                        <div class="send_option">
+                          - 디지털콘텐츠 혜택 알림 OFF 포함 / 광고성 정보 수신 동의 OFF 포함
+                        </div>
+                        <!-- //T 아이디 전체회원 선택 시, 보여지는 테이블 -->
+
+                        <!-- 연령 및 성별 선택 시, 보여지는 테이블 -->
+                        <strong>연령 및 성별</strong>
+                        <div class="table_list_btm gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>연령 및 성별 선택 입력 서식</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col" colspan="2">0 ~ 13</th>
+                                  <th scope="col" colspan="2">14 ~ 18</th>
+                                  <th scope="col" colspan="2">19 ~ 24</th>
+                                  <th scope="col" colspan="2">25 ~ 29</th>
+                                  <th scope="col" colspan="2">30 ~ 39</th>
+                                  <th scope="col" colspan="2">40 ~ 49</th>
+                                  <th scope="col" colspan="2">50 ~ 59</th>
+                                  <th scope="col" colspan="2">60대이상</th>
+                                </tr>
+                                <tr>
+                                  <th scope="col" class="bg_blue"><label for="person1">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person2">여</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person3">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person4">여</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person5">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person6">여</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person7">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person8">여</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person9">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person10">여</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person11">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person12">여</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person13">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person14">여</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person15">남</label></th>
+                                  <th scope="col" class="bg_blue"><label for="person16">여</label></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="checkbox" id="person1" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person2" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person3" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person4" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person5" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person6" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person7" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person8" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person9" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person10" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person11" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person12" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person13" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person14" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person15" checked="checked" disabled="disabled" /></td>
+                                  <td><input type="checkbox" id="person16" checked="checked" disabled="disabled" /></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="send_option gap_top">- OS 선택 : &nbsp;Android</div>
+                        <div class="send_option">- 통신사 선택 : &nbsp;SKT</div>
+                        <div class="send_option">
+                          - 디지털콘텐츠 혜택 알림 OFF 포함 / 광고성 정보 수신 동의 OFF 포함
+                        </div>
+                        <!-- //연령 및 성별 선택 시, 보여지는 테이블 -->
+
+                        <!-- 개별선택 선택 시, 보여지는 영역 -->
+                        <strong>개별 선택</strong>
+                        <div class="gap_top">- OS 선택 :&nbsp;Android, IOS</div>
+                        <div class="table_list_btm gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>회원 ID, 닉네임, 통합 ID / MDN이 있는 혜택조회 내용</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: *" />
+                                <col style="width: *" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">회원 ID</th>
+                                  <th scope="col">닉네임</th>
+                                  <th scope="col">통합 ID / MDN</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>sasakki84</td>
+                                  <td>슨뇨오빠</td>
+                                  <td>010-8820-9638</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //개별선택 선택 시, 보여지는 영역 -->
+
+                        <!-- 엑셀등록 선택 시, 보여지는 영역 -->
+                        <strong>엑셀등록 </strong>
+                        <div class="gap_top">
+                          <a href="#" class="link">2016tlifewinter_event_user_20160729.csv </a>
+                        </div>
+                        <!-- //엑셀등록 선택 시, 보여지는 영역 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">발송일시</th>
+                      <td colspan="3">2016-11-01 20시 30분 (예약발송)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">발송내용</th>
+                      <td colspan="3">나른한 오후에 단비같은 쿠폰! 친구 5명만 모으면 아웃백 베이비립이 단돈 만원에!</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">발송이미지</th>
+                      <td colspan="3">
+                        <img src="../../img/img_noimg.gif" alt="push 신규 이미지" width="310" height="160" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이동경로 등록</th>
+                      <td colspan="3">
+                        메인이동
+
+                        <!-- [D] 링크 URL 지정 선택 시, 보여지는 테이블 -->
+                        <div class="table_list gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>링크 URL 지정 선택 시 입력 서식</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">링크URL</th>
+                                  <td>
+                                    <a href="#" class="link"
+                                      >http://www.sktmembership.co.kr/web/html/coupon/tMania.jsp
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //링크 URL 지정 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 혜택 지정 선택 시, 보여지는 테이블 -->
+                        <div class="table_list_btm gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>혜택조회 입력 서식</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">혜택조회</th>
+                                  <td>
+                                    <div class="table_inner">
+                                      <table class="tbl_list">
+                                        <caption>
+                                          <strong>혜택명, Type, 카테고리, 상품변경이 있는 혜택조회 내용</strong>
+                                        </caption>
+                                        <colgroup>
+                                          <col style="width: *" />
+                                          <col style="width: 130px" />
+                                          <col style="width: 120px" />
+                                          <col style="width: 90px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">혜택명</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">카테고리</th>
+                                            <th scope="col">상품변경</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="left">
+                                              <a href="#" class="link"
+                                                >더운 여름 밤에도 치늬님은 진리(최대 20자까지 노출)</a
+                                              >
+                                            </td>
+                                            <td>선착순 / 일반형</td>
+                                            <td>푸드 &gt; 치킨</td>
+                                            <td>-</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //혜택 지정 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 공지사항 지정 선택 시, 보여지는 테이블 -->
+                        <div class="table_list gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>공지사항 지정 선택 시 입력 서식</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">공지사항 지정</th>
+                                  <td><a href="#" class="link">425 매일매일 새로운 혜택 T life!!</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //공지사항 지정 선택 시, 보여지는 테이블 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">작성자 (ID)</th>
+                      <td>관리자 (admin)</td>
+                      <th scope="row">작성일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수정자 (ID)</th>
+                      <td>송승헌 (admin_sub)</td>
+                      <th scope="row">수정일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_left">
+                  <a href="#" class="btn_delete">삭제</a>
+                </div>
+                <div class="btn_right">
+                  <a href="#" class="btn_save">확인</a>
+                </div>
+              </div>
+            </div>
+            <!-- //Push 수정/조회 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

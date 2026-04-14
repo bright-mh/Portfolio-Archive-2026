@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>New Balance Korea</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/library.js"></script>
+    <script src="../../js/ui.js"></script>
+  </head>
+  <body class="layer_on">
+    <!-- [D] 레이어 팝업 띄울 시에 lyaer_on 클래스 body에 추가! -->
+    <div class="layer_wrap">
+      <div class="pop_inner">
+        <div class="header">
+          <strong>교환사유 및 옵션 선택</strong>
+          <a href="#none" class="pop_close"><span class="blind">닫기</span></a>
+        </div>
+        <div class="contents">
+          <div class="inner">
+            <div class="reason_box">
+              <!-- 수량 -->
+              <div class="sort_select">
+                <p class="item_tit">수량</p>
+                <ul class="items">
+                  <li><input type="radio" id="amount1" name="amount" /><label for="amount1">1</label></li>
+                  <li><input type="radio" id="amount2" name="amount" /><label for="amount2">2</label></li>
+                  <li><input type="radio" id="amount3" name="amount" /><label for="amount3">3</label></li>
+                </ul>
+              </div>
+              <!-- //수량 -->
+              <!-- 신청사유 -->
+              <div class="sort_select">
+                <p class="item_tit">신청사유</p>
+                <div class="btn_radio">
+                  <div class="col2">
+                    <input type="radio" id="request1" name="request" /><label for="request1" class="btn_ty_bline basic"
+                      >고객변심</label
+                    >
+                    <input type="radio" id="request2" name="request" /><label for="request2" class="btn_ty_bline basic"
+                      >품절</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- //신청사유 -->
+              <!-- 상품상태 -->
+              <div class="sort_select">
+                <p class="item_tit">상품상태</p>
+                <div class="btn_radio">
+                  <div class="col2">
+                    <input type="radio" id="pr_condition1" name="pr_condition" /><label
+                      for="pr_condition1"
+                      class="btn_ty_bline basic"
+                      >새상품</label
+                    >
+                    <input type="radio" id="pr_condition2" name="pr_condition" /><label
+                      for="pr_condition2"
+                      class="btn_ty_bline basic"
+                      >개봉한 상품</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- //상품상태 -->
+              <!-- 옵션선택 -->
+              <div class="sort_select">
+                <p class="item_tit">
+                  옵션선택<span class="txt">교환하실 옵션을 선택해주세요</span><span class="right">기존 옵션</span>
+                </p>
+                <!-- [D] 기존에 선택되어져 있는 상품은 li 태그에 class="on" 추가 -->
+                <ul class="items color">
+                  <li>
+                    <input type="radio" id="black" name="pr_color" /><label for="black"
+                      ><img src="../../img/product/pro_goods.png" alt=""
+                    /></label>
+                  </li>
+                  <li class="on">
+                    <input type="radio" id="gray" name="pr_color" /><label for="gray"
+                      ><img src="../../img/product/pro_goods.png" alt=""
+                    /></label>
+                  </li>
+                  <li>
+                    <input type="radio" id="beige" name="pr_color" /><label for="beige"
+                      ><img src="../../img/product/pro_goods.png" alt=""
+                    /></label>
+                  </li>
+                  <li>
+                    <input type="radio" id="beige2" name="pr_color" /><label for="beige2"
+                      ><img src="../../img/product/pro_goods.png" alt=""
+                    /></label>
+                  </li>
+                </ul>
+              </div>
+              <!-- //옵션선택 -->
+              <!-- SIZE -->
+              <div class="sort_select none">
+                <p class="item_tit">SIZE</p>
+                <!-- [D] 기존에 선택되어져 있는 상품은 li 태그에 class="on" 추가 -->
+                <ul class="items">
+                  <li><input type="radio" id="size_220" name="pr_size" /><label for="size_220">220</label></li>
+                  <li class="on">
+                    <input type="radio" id="size_225" name="pr_size" /><label for="size_225">225</label>
+                  </li>
+                  <li><input type="radio" id="size_230" name="pr_size" /><label for="size_230">230</label></li>
+                  <li><input type="radio" id="size_235" name="pr_size" /><label for="size_235">235</label></li>
+                  <li><input type="radio" id="size_240" name="pr_size" /><label for="size_240">240</label></li>
+                  <li><input type="radio" id="size_245" name="pr_size" /><label for="size_245">245</label></li>
+                  <li><input type="radio" id="size_250" name="pr_size" disabled /><label for="size_250">250</label></li>
+                  <li><input type="radio" id="size_255" name="pr_size" /><label for="size_255">255</label></li>
+                  <li><input type="radio" id="size_260" name="pr_size" /><label for="size_260">260</label></li>
+                  <li><input type="radio" id="size_265" name="pr_size" /><label for="size_265">265</label></li>
+                  <li><input type="radio" id="size_270" name="pr_size" /><label for="size_270">270</label></li>
+                  <li><input type="radio" id="size_275" name="pr_size" /><label for="size_275">275</label></li>
+                  <li><input type="radio" id="size_280" name="pr_size" /><label for="size_280">280</label></li>
+                </ul>
+              </div>
+              <!-- //SIZE -->
+              <!-- 신발 너비 -->
+              <div class="sort_select space">
+                <p class="item_tit">신발 너비</p>
+                <!-- [D] 기존에 선택되어져 있는 상품은 li 태그에 class="on" 추가 -->
+                <ul class="items sm">
+                  <li><input type="radio" id="size_0D" name="pr_wide" /><label for="size_0D">0D</label></li>
+                  <li class="on"><input type="radio" id="size_0M" name="pr_wide" /><label for="size_0M">0M</label></li>
+                  <li><input type="radio" id="size_2E" name="pr_wide" /><label for="size_2E">2E</label></li>
+                  <li><input type="radio" id="size_4E" name="pr_wide" /><label for="size_4E">4E</label></li>
+                  <li><input type="radio" id="size_B" name="pr_wide" /><label for="size_B">B</label></li>
+                  <li><input type="radio" id="size_D" name="pr_wide" /><label for="size_D">D</label></li>
+                </ul>
+              </div>
+              <!-- //신발 너비 -->
+
+              <div class="btn_area">
+                <div class="col1">
+                  <a href="#none" class="btn_ty_bface basic">확인</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>광고성 정보 수신동의 관리 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb4:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb4:eq(0)>ul>li:eq(3)").addClass("on");
+              $("#gnb>li.gnb4:eq(0)>ul>li:eq(3)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb4">
+                <a href="#">고객지원</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">1:1 문의관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">1:1 문의관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">공지사항</a></li>
+                      <li><a href="#">X viewer 공지사항</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">경품발급 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">경품발급 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">광고성 정보 수신 동의</a>
+                    <ul class="depth_ul2">
+                      <li>
+                        <a href="#">광고성 정보 수신동의<br />관리</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>고객지원</span>
+              <span>광고성 정보 수신 동의</span>
+              <strong>광고성 정보 수신동의 관리</strong>
+            </div>
+            <h3 class="tit">광고성 정보 수신동의 관리</h3>
+            <ul class="guide">
+              <li>
+                광고성 정보 수신동의 유지 중인 고객에게 자동으로 수신 동의 Push를 발송한 관리 이력을 조회할 수 있습니다.
+              </li>
+              <li>자동 Push 발송 시점은 최종 동의 날짜 기준 + 11개월 15일째 되는 날 18시에 발송 됩니다.</li>
+              <li>제목 및 메시지는 모두 자동으로 발송되기 때문에 수정 및 관리가 불가 합니다.</li>
+              <li>해당 이력은 발송 시점으로부터 6개월간 보관후 자동 삭제 됩니다.</li>
+            </ul>
+
+            <!-- 광고성 정보 수신동의 관리 검색 테이블 -->
+            <div class="table_list_top">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>발송일에 따른 광고성 정보 수신동의 관리 검색 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">발송일</th>
+                      <td>
+                        <input
+                          type="text"
+                          title="발송일 검색 시작일"
+                          value="2016-11-01"
+                          class="wid_calendar pickerArea"
+                        />
+                        &nbsp;~&nbsp;
+                        <input
+                          type="text"
+                          title="발송일 검색 종료일"
+                          value="2016-11-07"
+                          class="wid_calendar pickerArea"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_right">
+                  <a href="#" class="btn_delete">초기화</a>
+                  <a href="#" class="btn_search">검색</a>
+                </div>
+              </div>
+            </div>
+            <!-- //광고성 정보 수신동의 관리 검색 테이블 -->
+
+            <!-- 광고성 정보 수신동의 관리 리스트 -->
+            <div class="table_list_btm">
+              <div class="total_area">
+                <p class="total_num">총 건수 : <strong>00</strong> 건</p>
+                <div class="sel_box">
+                  <select>
+                    <option>20개씩 보기</option>
+                    <option>30개씩 보기</option>
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>번호, 발송일시, 발송인원이 있는 광고성 정보 수신동의 관리 검색 결과 리스트</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 60px" />
+                    <col style="width: *" />
+                    <col style="width: 300px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">발송일시</th>
+                      <th scope="col">발송인원</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- [D] 내용이 없을 시, -->
+                    <tr>
+                      <td colspan="3">검색 결과가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td class="num">20</td>
+                      <td>YYYY.MM.DD&nbsp;&nbsp;TT:MM</td>
+                      <td>102</td>
+                    </tr>
+                    <tr>
+                      <td class="num">19</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">18</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>102</td>
+                    </tr>
+                    <tr>
+                      <td class="num">17</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td class="num">16</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td class="num">15</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>120</td>
+                    </tr>
+                    <tr>
+                      <td class="num">14</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">13</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">12</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">11</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">10</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">9</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">8</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">7</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">6</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">5</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">4</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">3</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">2</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td class="num">1</td>
+                      <td>2016.11.01&nbsp;&nbsp;18:00</td>
+                      <td>88</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- paging -->
+              <div class="paging">
+                <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+                <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="on">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+                <a href="#" class="last"
+                  ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+                /></a>
+              </div>
+              <!-- //paging -->
+            </div>
+            <!-- //광고성 정보 수신동의 관리 리스트 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

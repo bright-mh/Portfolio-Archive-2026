@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>미션 홈 등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //달력
+        $(".pickerArea").datepicker({
+          showOn: "button",
+          buttonImage: "../../img/img_calender.gif",
+          buttonImageOnly: true,
+          showButtonPanel: true,
+          dateFormat: "yy-mm-dd",
+          showAnim: "",
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: false,
+          changeYear: false,
+          numberOfMonths: 1,
+          showButtonPanel: false,
+          minDate: -20,
+          maxDate: "+1111M +1000D",
+          showWeek: false,
+          firstDay: 1,
+          beforeShow: function (input) {
+            var i_offset = $(input).offset();
+            setTimeout(function () {
+              $("#ui-datepicker-div").css({ top: i_offset.top + 35, bottom: "", left: i_offset.left });
+            });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb2:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb2:eq(0)>ul>li:eq(0)>ul>li:eq(2)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb2">
+                <a href="#">전시 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">전시관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">메인 관리</a></li>
+                      <li><a href="#">타임오퍼 관리</a></li>
+                      <li><a href="#">미션 홈 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">상품등록관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">혜택관리</a></li>
+                      <li><a href="#">미션관리</a></li>
+                      <li><a href="#">응모관리</a></li>
+                      <li><a href="#">외부서비스 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>전시 관리</span>
+              <span>전시 관리</span>
+              <span>미션 홈 관리</span>
+              <strong>미션 홈 등록</strong>
+            </div>
+            <h3 class="tit">미션 홈 등록</h3>
+
+            <!-- 미션 기본정보 -->
+            <h4 class="tit">미션 기본정보</h4>
+            <div class="table_list_top">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>전시 시작일, 전시 종료일, 관리번호가 있는 미션 기본정보 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="displayStartDate" class="ess">전시 시작일</label>
+                      </th>
+                      <td>
+                        <input type="text" id="displayStartDate" class="wid_calendar pickerArea" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="displayEndDate" class="ess">전시 종료일</label>
+                      </th>
+                      <td>
+                        <input type="text" id="displayEndDate" class="wid_calendar pickerArea" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <label for="mgmtNum" class="ess">관리번호</label>
+                      </th>
+                      <td>
+                        <input type="text" id="mgmtNum" class="wid_per30" />
+                        <a href="#" class="btn_small">중복확인</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //미션 기본정보 -->
+
+            <!-- 미션 조회 -->
+            <h4 class="tit">미션 조회</h4>
+            <div class="table_list_btm space_btm">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>미션명, 미션 속성, 등록일, 변경 정보가 있는 미션 조회</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: *" />
+                    <col style="width: 200px" />
+                    <col style="width: 130px" />
+                    <col style="width: 90px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">미션명</th>
+                      <th scope="col">미션 속성</th>
+                      <th scope="col">등록일</th>
+                      <th scope="col">변경</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="4">
+                        미션을 선택하세요. <a href="#" class="btn_small" target="_blank" title="새창 열림">미션선택</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="left">
+                        <a href="#" class="link" target="_blank" title="새창 열림"
+                          >관심사를 설정하시면 더더욱 다양한 혜택이 두둥</a
+                        >
+                      </td>
+                      <td>정보입력형 &gt; 관심사 설정</td>
+                      <td>2016.07.20</td>
+                      <td><a href="#" class="btn_small" target="_blank" title="새창 열림">변경</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //미션 조회 -->
+
+            <!-- 미션 성공 시 Ticket 설정 -->
+            <h4 class="tit">미션 성공 시 Ticket 설정</h4>
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong>미션 참여자가 있는 미션 성공 시 Ticket 설정 입력 서식</strong>
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><label for="participant" class="ess">미션 참여자</label></th>
+                      <td><input type="text" id="participant" /> T</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //미션 성공 시 Ticket 설정 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_cancel">취소</a>
+                <a href="#" class="btn_save">저장</a>
+              </div>
+            </div>
+            <!-- //btngroup-->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

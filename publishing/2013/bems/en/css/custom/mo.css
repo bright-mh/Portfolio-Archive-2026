@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+/* 목표량 설정하기 */
+.goalSetGroup {
+  padding: 0 0 129px 0;
+}
+.goalSetGroup p {
+  color: #4b4b4c;
+  line-height: 18px;
+}
+
+/* 가로 그래프 영역 */
+.graphBox {
+  position: relative;
+  padding: 16px 0 20px 0;
+}
+.graphBox .graphGroup {
+  margin: 0;
+}
+.graphBox .graphDiv {
+  position: relative;
+}
+.graphBox .graphTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 138px;
+  height: 25px;
+  color: #4b4b4c;
+  line-height: 25px;
+}
+.graphBox .graphTitle02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88px;
+  height: 25px;
+  color: #4b4b4c;
+  line-height: 25px;
+}
+
+.graphBox .bgGraph {
+  position: relative;
+  height: 25px;
+  margin: 0 0 0 138px;
+  background: url("/html/2014/bems/en/images/common/bg_graph01.gif") repeat-x 0 0;
+}
+.graphBox .bgGraph span {
+  display: block;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/html/2014/bems/en/images/common/bg_graph02.gif") repeat-x 0 0;
+}
+.graphBox .bgGraph.bgGraph_02 {
+  background: none;
+}
+.graphBox .bgGraph.bgGraph_02 span {
+  display: block;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/html/2014/bems/en/images/common/bg_graph11.gif") repeat-x 0 0;
+}
+.graphBox .bgGraph01 {
+  position: relative;
+  width: 243px;
+  height: 25px;
+  margin: 0 0 0 88px;
+}
+.graphBox .bgGraph01 span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  background: url("/html/2014/bems/en/images/common/bg_graph12.gif") repeat-x 0 0;
+}
+.graphBox .bgGraph01.bgGraph_03 span {
+  display: block;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/html/2014/bems/en/images/common/bg_graph11.gif") repeat-x 0 0;
+}
+
+/*tooltip*/
+.graphBox .graphTooltip {
+  display: none;
+  position: fixed;
+  height: 62px;
+  padding: 10px 13px 9px 11px;
+  background: url("/html/2014/bems/en/images/common/bg_tooltip.png") repeat-x 0 0;
+  color: #4b4b4c;
+  line-height: 16px;
+  z-index: 100000;
+}
+.graphBox .graphTooltip p {
+  margin-bottom: 1px;
+  font-size: 11px;
+}
+.graphBox .graphTooltip ul li {
+  font-size: 11px;
+  line-height: 16px;
+}
+.graphBox .graphTooltip ul li span {
+  font-weight: bold;
+}
+.graphBox .graphTooltip .bg_tooltipLeft {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 5px;
+  height: 81px;
+  background: url("/html/2014/bems/en/images/common/bg_tooltip_left.png") no-repeat 0 0;
+  z-index: 20;
+}
+.graphBox .graphTooltip .bg_tooltipRight {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 8px;
+  height: 81px;
+  background: url("/html/2014/bems/en/images/common/bg_tooltip_right.png") no-repeat 2px 0;
+  z-index: 20;
+}
+
+.graphBox .totalGroup {
+  margin: 20px 0 0 0;
+}
+.graphBox .totalGroup .textGroup01 {
+  float: left;
+}
+.graphBox .totalGroup .textGroup01 .textStyle01 {
+  float: left;
+  width: 123px;
+  color: #898a8c;
+  font-size: 12px;
+}
+.graphBox .totalGroup .textGroup01 .textStyle02 {
+  float: left;
+  margin-left: 10px;
+  color: #4b4b4c;
+  font-family: "tahoma";
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 31px;
+}
+.graphBox .totalGroup .textGroup01 .textStyle03 {
+  float: left;
+  margin: 14px 19px 0 9px;
+  color: #4b4b4c;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+}
+.graphBox .totalGroup .textGroup02 {
+  float: left;
+}
+.graphBox .totalGroup .textDecrease {
+  display: inline-block;
+  padding: 20px 39px 0 0;
+  background: url("/html/2014/bems/en/images/common/icon_decrease02.png") no-repeat right 5px;
+  color: #3366cc;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  vertical-align: top;
+}
+.graphBox .totalGroup .textIncrease {
+  display: inline-block;
+  padding: 20px 39px 0 0;
+  background: url("/html/2014/bems/en/images/common/icon_increase02.png") no-repeat right 5px;
+  color: #3366cc;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  vertical-align: top;
+}
+.graphBox .totalGroup02 {
+  margin: 15px 0 0 0;
+}
+.graphBox .totalGroup02 .textStyle01 {
+  display: block;
+  float: left;
+  width: 123px;
+  color: #898a8c;
+  font-size: 12px;
+}
+.graphBox .totalGroup02 .textStyle02 {
+  float: left;
+  color: #4b4b4c;
+  font-family: "tahoma";
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 28px;
+}
+.graphBox .totalGroup02 .textStyle03 {
+  float: left;
+  margin: 10px 0 0 7px;
+  color: #4b4b4c;
+  font-family: "tahoma";
+  font-size: 14px;
+  font-weight: bold;
+}
+.graphBox .totalGroup02 .textStyle04 {
+  float: left;
+  margin: 13px 0 0 10px;
+  color: #4b4b4c;
+}
+
+.chartList {
+  width: 340px;
+  margin: 0 auto;
+}
+.chartList li {
+  float: left;
+  padding: 0 12px 0 21px;
+  color: #898a8c;
+  font-size: 11px;
+  line-height: 16px;
+}
+.chartList li.listStyle01 {
+  background: url("/html/2014/bems/en/images/common/bg_ex_note01.gif") no-repeat 0 0;
+}
+.chartList li.listStyle02 {
+  background: url("/html/2014/bems/en/images/common/bg_ex_note02.gif") no-repeat 0 0;
+}
+.chartList li.listStyle03 {
+  padding-right: 0;
+  background: url("/html/2014/bems/en/images/common/bg_ex_note03.gif") no-repeat 0 0;
+}
+
+.minH297 {
+  min-height: 297px;
+}
+
+.moFloorBox {
+  position: relative;
+  margin: 0 0 10px 0;
+}
+.moFloorBox h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 123px;
+  margin: 0;
+  color: #19191a;
+}
+.moFloorBox span.titleInfo {
+  float: left;
+  margin: 0 0 0 123px;
+  padding: 3px 0 0 0;
+  color: #898a8c;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* 1600 이상 */
+@media only screen and (min-width: 1600px) {
+  /* 가로 그래프 영역 */
+  .graphBox .graphGroup {
+    margin: 0 288px 0 0;
+  }
+  .graphBox .bgGraph01 {
+    width: 299px;
+  }
+
+  .graphBox .totalGroup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 247px;
+    overflow: hidden;
+  }
+  .graphBox .totalGroup .textGroup01 {
+    width: 145px;
+  }
+  .graphBox .totalGroup .textGroup02 {
+    float: right;
+  }
+  .graphBox .totalGroup .textGroup01 .textStyle01 {
+    display: block;
+    width: 232px;
+    height: 16px;
+    clear: both;
+  }
+  .graphBox .totalGroup .textGroup01 .textStyle02 {
+    margin-left: 0;
+    clear: both;
+  }
+  .graphBox .totalGroup .textGroup01 .textStyle03 {
+    margin: 14px 0 0 7px;
+  }
+  .graphBox .totalGroup .textDecrease {
+    padding: 36px 39px 0 0;
+    background: url("/html/2014/bems/en/images/common/icon_decrease02.png") no-repeat right 21px;
+  }
+  .graphBox .totalGroup .textIncrease {
+    padding: 36px 39px 0 0;
+    background: url("/html/2014/bems/en/images/common/icon_increase02.png") no-repeat right 21px;
+  }
+  .graphBox .totalGroup02 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 186px;
+  }
+  .graphBox .totalGroup02 .textStyle01 {
+    width: 186px;
+  }
+  .graphBox .totalGroup02 .textStyle04 {
+    margin: 0;
+    clear: both;
+  }
+}

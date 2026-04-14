@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>원단위 비교 분석 | 에너지 분석 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/an.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+        $("#country_01").selectbox();
+        $("#country_02").selectbox();
+      });
+    </script>
+    <script src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <script src="chartScripts/AN_BASICUNIT_001.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title02.gif" alt="에너지 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth03">
+              <a href="#link"><span>트랜드 분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>전체 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>가스 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>층별 전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기피크</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>목표대비 사용량 분석</span></a>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>에너지 사용량 패턴분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>전기 사용패턴</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>가스 사용패턴</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>층별 누적 사용량 분석</span></a>
+            </li>
+            <li class="depth02 on">
+              <a href="#link"><span>원단위 비교 분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>원단위 비교분석</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>에너지 분석<span>&gt;</span></li>
+                <li class="last">원단위 비교분석</li>
+              </ul>
+            </div>
+
+            <!-- 2013-12-16 전체 내용 수정 -->
+            <!-- 도움말, 인쇄, 북마크 -->
+            <div class="clear">
+              <ul class="sideList">
+                <li class="sideStyle01"><a href="#link">도움말</a></li>
+                <li class="sideStyle02"><a href="#link">인쇄</a></li>
+                <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                <li class="sideStyle03"><a href="#link">북마크</a></li>
+              </ul>
+            </div>
+            <!-- //도움말, 인쇄, 북마크 -->
+
+            <!-- 용도별 원단위 사용량 -->
+            <section class="BoxArea mt10">
+              <div class="boxBg">
+                <section>
+                  <h2>용도별 원단위 사용량</h2>
+                  <p class="an_txtInfo">
+                    <span class="point">OOOO</span>은(는) 2013년 1~10월(전월)까지의 원단위 사용량이며, 그 밖의 용도별
+                    원단위 사용량은 에너지관리공단에서 제공하는 2012년(전년)의 데이터에 해당됩니다.
+                  </p>
+                  <!-- [D] 접속 기간에 따른 안내 텍스트 타입 - 각각 주석 처리 해 둠 -->
+                  <!-- <p class="an_txtInfo"><span class="point">OOOO</span>은(는) 2013년 1월의 원단위 사용량이며, 그 밖의 용도별 원단위 사용량은 에너지관리공단에서 제공하는 2012년(전년)의 데이터에 해당됩니다.</p> -->
+                  <!-- <p class="an_txtInfo"><span class="point">OOOO</span>은(는) 2012년 1월~12월(전월)까지의 원단위 사용량이며, 그 밖의 용도별 원단위 사용량은 에너지관리공단에서 제공하는 2011년(전년)의 데이터에 해당됩니다.</p> -->
+
+                  <!--차트 삽입부분 -->
+                  <div id="chart01" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                  <!--//차트 삽입부분 -->
+                </section>
+              </div>
+            </section>
+            <!-- //용도별 원단위 사용량 -->
+
+            <!-- 원단위 사용량 패턴 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <article class="tableGroup01">
+                  <h2>OOOO 원단위 사용량 패턴</h2>
+                  <!--차트 삽입부분 -->
+                  <div id="chart02" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                  <!--//차트 삽입부분 -->
+
+                  <table class="table_style01 mt40">
+                    <caption class="blind">
+                      원단위 비교 분석 주요정보
+                    </caption>
+                    <colgroup>
+                      <col style="width: 25%" />
+                      <col style="width: 25%" />
+                      <col style="width: 25%" />
+                      <col style="width: 25%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <!-- 2014-01-06 제목 셀 텍스트_수정 -->
+                        <th scope="col">년</th>
+                        <!-- //2014-01-06 제목 셀 텍스트_수정 -->
+                        <th scope="col">최대(kgoe/㎡)</th>
+                        <th scope="col">최소(kgoe/㎡)</th>
+                        <th scope="col">평균(kgoe/㎡)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2013년</td>
+                        <td>2013년 6월 / 5.16</td>
+                        <td>2013년 1월 / 0.0123456</td>
+                        <td>0.0444123</td>
+                      </tr>
+                      <tr>
+                        <td>2012년</td>
+                        <td>2012년 6월 / 0.0932612</td>
+                        <td>2012년 1월 / 0.0123456</td>
+                        <td>0.0444123</td>
+                      </tr>
+                      <tr>
+                        <td>2011년</td>
+                        <td>2011년 6월 / 0.0932612</td>
+                        <td>2011년 1월 / 0.0123456</td>
+                        <td>0.0444123</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+              </div>
+            </section>
+            <!-- //원단위 사용량 패턴 -->
+            <!-- //2013-12-16 전체 내용 수정 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

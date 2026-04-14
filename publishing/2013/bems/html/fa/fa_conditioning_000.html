@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <link href="/html/2014/bems/css/custom/fa.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+        $("#country_01").selectbox();
+        $("#country_02").selectbox();
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $("#chart01").highcharts({
+          chart: {
+            type: "spline",
+          },
+          title: {
+            text: "Wind speed during two days",
+          },
+          subtitle: {
+            text: "October 6th and 7th 2009 at two locations in Vik i Sogn, Norway",
+          },
+          xAxis: {
+            type: "datetime",
+            plotBands: [
+              {
+                // visualize the weekend
+                from: Date.UTC(2009, 9, 6, 0, 0, 0),
+                to: Date.UTC(2009, 9, 6, 12, 0, 0),
+                color: "rgba(68, 170, 213, .2)",
+              },
+              {
+                // visualize the weekend
+                from: Date.UTC(2009, 9, 7, 0, 0, 0),
+                to: Date.UTC(2009, 9, 7, 12, 0, 0),
+                color: "rgba(213, 170, 170, .2)",
+              },
+            ],
+          },
+          yAxis: {
+            title: {
+              text: "Wind speed (m/s)",
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null,
+          },
+          tooltip: {
+            valueSuffix: " m/s",
+          },
+          plotOptions: {
+            spline: {
+              lineWidth: 4,
+              states: {
+                hover: {
+                  lineWidth: 5,
+                },
+              },
+              marker: {
+                enabled: false,
+              },
+              pointInterval: 3600000, // one hour
+              pointStart: Date.UTC(2009, 9, 6, 0, 0, 0),
+            },
+          },
+          series: [
+            {
+              name: "Hestavollane",
+              data: [
+                4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1, 7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1,
+                5.8, 5.9, 7.4, 8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5, 7.1, 7.5, 8.1, 6.8, 3.4, 2.1,
+                1.9, 2.8, 2.9, 1.3, 4.4, 4.2, 3.0, 3.0,
+              ],
+            },
+            {
+              name: "Voll",
+              data: [
+                0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0, 0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0,
+                0.0, 0.0, 0.0, 0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3, 3.0, 3.3, 4.8, 5.0, 4.8, 5.0,
+                3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4,
+              ],
+            },
+          ],
+          navigation: {
+            menuItemStyle: {
+              fontSize: "10px",
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title05.gif" alt="설비성능 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02">
+              <a href="#link"><span>주요설비운전현황</span></a>
+            </li>
+            <li class="depth03 on">
+              <a href="#link"><span>계통설비성능분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>냉열원</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>온열원</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>냉온열원공통</span></a>
+                </li>
+                <li class="on">
+                  <a href="#link"><span>공조</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>환기</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전력계통</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>신재생</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>공조설비</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>위생</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>다중설비계통분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>공조</h1>
+              <ul class="location">
+                <li class="first"><a href="#link">Dashoboard</a><span>&gt;</span></li>
+                <li>설비성능 분석<span>&gt;</span></li>
+                <li>계통설비성능 분석<span>&gt;</span></li>
+                <li>공조<span>&gt;</span></li>
+                <li class="last">시간별</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <section class="tabBox">
+              <div class="boxBg">
+                <div class="tabTitleGroup">
+                  <!-- [D] 선택된 탭의 li에 class="on" 삽입 -->
+                  <ul class="tabTitleList">
+                    <li><a href="#link">실시간별</a></li>
+                    <li class="on"><a href="#link">시간별</a></li>
+                    <li><a href="#link">일별</a></li>
+                    <li><a href="#link">월별</a></li>
+                    <li><a href="#link">연별</a></li>
+                  </ul>
+                  <ul class="tabSideList">
+                    <li class="tabSideStyle01"><a href="#link">도움말</a></li>
+                    <li class="tabSideStyle02"><a href="#link">인쇄</a></li>
+                    <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                    <li class="tabSideStyle03"><a href="#link">북마크</a></li>
+                  </ul>
+                </div>
+
+                <!-- 탭 상세 -->
+                <div class="tabDetailGroup">
+                  <div class="layerGroup clear02">
+                    <!-- 층 그룹 -->
+                    <div class="fl">
+                      <!-- layerOne -->
+                      <div class="layerOne clear02">
+                        <div class="fl clear">
+                          <label for="input_date">날짜선택</label>
+                          <input type="text" name="input_date" id="input_date" class="fl fa_input_date w120" />
+                        </div>
+                        <div class="fl pl31">
+                          <p class="detailTitle">최근</p>
+                          <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                          <ul class="fl btn_timeList">
+                            <li><a href="#link">6시간</a></li>
+                            <li><a href="#link">12시간</a></li>
+                            <li><a href="#link">24시간</a></li>
+                            <li class="today on"><a href="#link">오늘</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- //layerOne -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02">
+                        <div class="fl">
+                          <!-- [D] 선택된 버튼의 li에 class="on" 삽입 -->
+                          <p class="search_01">
+                            <label for="search">장비/조회값</label>
+                            <input type="text" id="search" name="search" class="w405" />
+                          </p>
+                        </div>
+                        <p class="find">
+                          <a href="#link">추가/변경</a>
+                        </p>
+                      </div>
+                      <!-- //layerTwo -->
+                    </div>
+                    <!-- //층 그룹 -->
+                    <p class="fl btn_search">
+                      <a href="#link"><span>검색</span></a>
+                    </p>
+                  </div>
+                </div>
+                <!-- //탭 상세 -->
+              </div>
+            </section>
+            <!-- //탭영역 -->
+
+            <!-- 빈 영역 -->
+            <section class="">
+              <div class="" style="min-width: 310px; height: 800px; margin: 0 auto">
+                <!-- 이미지 영역 -->
+                <div style="text-align: center; margin-top: 35px">
+                  <img src="/html/2014/bems/images/common/icon_glasses.gif" alt="데이터를 조회해 주시기 바랍니다" />
+                </div>
+                <p style="text-align: center; margin-top: 15px">데이터를 조회해 주시기 바랍니다</p>
+                <!-- 이미지 영역 -->
+              </div>
+            </section>
+            <!-- //빈 영역 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>M.office Key View</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <style type="text/css">
+      .wrap.idx {
+        background: #f9f9fb;
+      }
+      .wrap.idx .container {
+        position: static;
+      }
+      .wrap.idx .container .box {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+      }
+      .pub_tit {
+        color: #145383;
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .idx_link {
+        margin-top: 10vh;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+      }
+      .idx_link a {
+        display: inline-block;
+        width: 48%;
+        max-width: 300px;
+        padding: 40px 0;
+        background: #145383;
+        color: #fff;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      .idx_link a + a {
+        margin-left: 4%;
+      }
+      @media only screen and (max-width: 720px) {
+        .pub_tit {
+          font-size: 1.3rem;
+        }
+        .pub_tit img {
+          width: 50%;
+        }
+        .idx_link {
+          margin-top: 7vh;
+        }
+        .idx_link a {
+          padding: 25px 0;
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap idx">
+      <!-- container -->
+      <div class="container">
+        <div class="box">
+          <h1 class="pub_tit"><img src="common/img/logo_moffice.png" alt="M.office logo" /><br />M.office key View</h1>
+          <div class="idx_link">
+            <a href="./html/login.html" class="menu">login</a>
+            <a href="./html/keyview.html" class="menu">key View page</a>
+          </div>
+        </div>
+      </div>
+      <!-- // container -->
+    </div>
+    <!-- // wrap -->
+  </body>
+</html>

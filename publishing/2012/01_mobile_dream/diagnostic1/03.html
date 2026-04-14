@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"
+      name="viewport"
+    />
+
+    <link href="../common/css/contents.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/basic.js"></script>
+
+    <title>꿈날개</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1 class="sub_title" style="width: 94px">
+          <img src="../common/img/title_diagnostic1_01.png" alt="직업선호도검사" />
+        </h1>
+        <p class="prev_page">
+          <a href="#"><img src="../common/img/btn_prev_page.png" alt="이전" /></a>
+        </p>
+        <p class="all_view">
+          <a href="javascript:all_view('01')"><img src="../common/img/btn_all_view.png" alt="메뉴보기" /></a>
+        </p>
+      </div>
+
+      <div id="container">
+        <div class="diagnostic_result">
+          <h2><img src="../common/img/title_diagnostic_result.png" alt="진단결과" /></h2>
+
+          <ul class="diagnostic1_result_tab">
+            <li id="tab1" class="tab1_on" onMouseDown="diagnostic1_result('01')"><span>결과보기</span></li>
+            <li id="tab2" class="tab2" onMouseDown="diagnostic1_result('02')"><span>그래프보기</span></li>
+            <li id="tab3" class="tab3" onMouseDown="diagnostic1_result('03')"><span>추천직업보기</span></li>
+          </ul>
+
+          <!-- 결과보기 -->
+          <div class="diagnostic1_result_01">
+            윤재성님은 진취형입니다.<br />진취형이 강한 사람은 사람들을 이끌고 지도하는 일을 선호하며 사람들을 설득하여
+            자신의 생각을 전달하거나 제품을 판매하는 일에 소질이 있습니다. 이 유형은 리더쉽, 기획 혹은 비지니스에서
+            성공하고 싶어 합니다. 이 유형은 자기 자신을 정력적이고, 의욕적이고 사교적으로 봅니다. 진취형은 물질이나
+            아이디어 보다는 사람들을 이끌고 지도하는 일을 선호하며, 사람들을 설득하여 자신의 생각을 전달 하거나 제품을
+            판매하는 일에 소질이 있습니다.진취형이 강한 사람은 사람들을 이끌고 지도하는 일을 선호하며사람들을 설득하여
+            자신의 생각을 전달하거나 제품을 판매하는 일에 소질이 있습니다. 이 유형은 리더쉽, 기획 혹은 비지니스에서
+            성공하고 싶어 합니다. 이 유형은 자기 자신을 정력적이고, 의욕적이고 사교적으로 봅니다. 진취형은 물질이나
+            아이디어 보다는사람들을 이끌로 지도하는 일을 선호합니다.
+          </div>
+          <!-- //결과보기 -->
+
+          <!-- 그래프보기 -->
+          <div class="diagnostic1_result_02" style="display: none">
+            <dl>
+              <dt>꼭 알아두세요~!</dt>
+              <dd>
+                1. 직업선호도 검사는 <span>6개 유형별 6점~24점의 점수분포</span>를 보이며, 이 점수는 여러분께서 응답하신
+                질문에 대한 합계 점수입니다.
+              </dd>
+              <dd>
+                2. 그래프상 <span>가장 높은 점수를 보이고 있는 유형</span>이 여러분께서
+                <span>높은 선호도와 흥미를 가지고 있는 유형</span>이라 할 수 있습니다.
+              </dd>
+            </dl>
+            <div class="diagnostic1_graph">
+              <canvas width="240" height="168" id="diagnostic1_canvas"></canvas>
+              <script type="text/javascript">
+                function doFirst() {
+                  var x = document.getElementById("diagnostic1_canvas");
+                  canvas = x.getContext("2d");
+
+                  canvas.beginPath();
+                  canvas.moveTo(105.5, 58); //사무형 : 4점(115.5,76) / 8점(110.5,67) / 12점(105.5,58) / 16점(100.5,49) / 20점(93,35) / 24점(85,21.5)
+                  canvas.lineTo(147, 35); //실재형 : 4점(124.5,76) / 8점(129.5,67) / 12점(134.5,58) / 16점(139.5,49) / 20점(147,35) / 24점(155,21.5)
+                  canvas.lineTo(139, 84); //탐구형 : 4점(129.5,84) / 8점(139,84) / 12점(149.5,84) / 16점(160.5,84) / 20점(176,84) / 24점(191.5,84)
+                  canvas.lineTo(139.5, 119); //예술형 : 4점(124.5,92) / 8점(129.5,101) / 12점(134.5,110) / 16점(139.5,119) / 20점(147,133) / 24점(155,146.5)
+                  canvas.lineTo(93, 133); //사회형 : 4점(115.5,92) / 8점(110.5,101) / 12점(105.5,110) / 16점(100.5,119) / 20점(93,133) / 24점(85,146.5)
+                  canvas.lineTo(79.5, 84); //진취형 : 4점(110.5,84) / 8점(101,84) / 12점(90.5,84) / 16점(79.5,84) / 20점(64,84) / 24점(48.5,84)
+                  canvas.closePath();
+                  canvas.strokeStyle = "#f9c22f";
+                  canvas.stroke();
+                }
+                window.addEventListener("load", doFirst, false);
+              </script>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>유형</th>
+                  <th>특징</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>실재형</th>
+                  <td>
+                    솔직하고, 성실하고, 검소하며, 신체적으로 활동적이며, 소박하고, 말이 적으며, 기계적 적성이 높음
+                  </td>
+                </tr>
+                <tr>
+                  <th>탐구형</th>
+                  <td>탐구심이 많고, 논리적, 분석적ㆍ합리적이며, 지적 호기심이 많고, 수학적ㆍ과학적 적성이 높음</td>
+                </tr>
+                <tr>
+                  <th>예술형</th>
+                  <td>
+                    상상력이 풍부하고, 감수성이 강하며, 자유분방하며 개방적이고, 예술에 소질이 있으며 창의적인 적성이
+                    높음
+                  </td>
+                </tr>
+                <tr>
+                  <th>사회형</th>
+                  <td>
+                    다른 사람에게 친절하고 이해심이 많고, 남을 도와주려고 하고, 봉사적이며, 인간관계 능력이 높으며,
+                    사람들을 좋아함
+                  </td>
+                </tr>
+                <tr>
+                  <th>진취형</th>
+                  <td>지도력과 설득력이 있으며, 열성적이고 야심적이며, 외향적이고 통솔력이 있음</td>
+                </tr>
+                <tr>
+                  <th>사무형</th>
+                  <td>
+                    책임감이 있고, 빈틈이 없으며, 조심성이 있고, 변화를 좋아하지 않으며, 계획성이 있으며, 사무능력과
+                    계산 능력이 높음
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //그래프보기 -->
+
+          <!-- 추천직업보기 -->
+          <div class="diagnostic1_result_03" style="display: none">
+            <table>
+              <thead>
+                <tr>
+                  <th>순위</th>
+                  <th>직업명</th>
+                  <th>적합도</th>
+                  <th>직업소개</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>음악치료사</td>
+                  <td><span>100</span></td>
+                  <td>
+                    <a href="javascript:job_layer('01')"><img src="../common/img/btn_view2.png" alt="정보보기" /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>성교육강사</td>
+                  <td><span>100</span></td>
+                  <td>
+                    <a href="javascript:job_layer('01')"><img src="../common/img/btn_view2.png" alt="정보보기" /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>한국어강사</td>
+                  <td><span>100</span></td>
+                  <td>
+                    <a href="javascript:job_layer('01')"><img src="../common/img/btn_view2.png" alt="정보보기" /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>임상심리사(심리치료사)</td>
+                  <td><span>100</span></td>
+                  <td>
+                    <a href="javascript:job_layer('01')"><img src="../common/img/btn_view2.png" alt="정보보기" /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>놀이치료사</td>
+                  <td><span>100</span></td>
+                  <td>
+                    <a href="javascript:job_layer('01')"><img src="../common/img/btn_view2.png" alt="정보보기" /></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //추천직업보기 -->
+
+          <!-- 직업상세보기 레이어 -->
+          <div class="job_detail_layer" style="display: none">
+            <h2><img src="../common/img/title_job_detail.png" alt="직업상세보기" /></h2>
+            <div>
+              <p class="text"><span>음악치료사</span>에 대한 직업정보 입니다.</p>
+              <table>
+                <tr>
+                  <th>직업명</th>
+                  <td>음악치료사</td>
+                  <th>흥미</th>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <th>직군</th>
+                  <td>심리치료</td>
+                  <th>근무형태</th>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <th>직무</th>
+                  <td colspan="3">보건분야</td>
+                </tr>
+                <tr>
+                  <th>개요</th>
+                  <td colspan="3">
+                    음악치료방법을 통해 개인의 정신적, 신체적, 정서적 이상 상태를 복원, 유지, 향상시킴
+                  </td>
+                </tr>
+                <tr>
+                  <th>수행업무</th>
+                  <td colspan="3">
+                    우울증, 자폐증, 기타 정신적 발육부진 환자들에 대한 정신과의사(의료업)의 일차적인 진단이 이루어 진 후
+                    해당환자의 이상 상태를 파악하여 음악 치료계획을 수립함 - 환자와 함께 피아노, 오르간, 북 , 징, 꽹가리
+                    등의 악기를 이용해서 즉흥 연주 및 작곡을 하면서 환자의 음악적 표현을 이끌어내고 음악연주를 통해
+                    나타나는 환자의 상태를 진단 평가함 - 환자의 진단 결과를 정리하여 보호자에게 전달하며, 환자의특성에
+                    따라 음악적 치료방법을 제시함 - 환자의 치료상
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <p class="close">
+              <a href="javascript:job_layer('02')"><img src="../common/img/btn_close.png" alt="닫기" /></a>
+            </p>
+          </div>
+          <!-- //직업상세보기 레이어 -->
+        </div>
+      </div>
+
+      <div id="floater">
+        <div class="floater_inner">
+          <p class="center_call">
+            <a href="tel:0318999119"><img src="../common/img/btn_call.png" alt="학습지원 센터 031-8999-119" /></a>
+          </p>
+          <ul class="floater_btn1">
+            <li class="btn1">
+              <a href="#"><img src="../common/img/floater_btn1_01.png" alt="꿈날개 소개" /></a>
+            </li>
+            <li class="btn2">
+              <a href="#"><img src="../common/img/floater_btn1_02.png" alt="개인정보처리방침" /></a>
+            </li>
+            <li class="btn3">
+              <a href="#"><img src="../common/img/floater_btn1_03.png" alt="이용약관" /></a>
+            </li>
+            <li class="btn4">
+              <a href="http://www.dream.go.kr/" target="_blank"
+                ><img src="../common/img/floater_btn1_04.png" alt="PC버전"
+              /></a>
+            </li>
+          </ul>
+          <ul class="floater_btn2">
+            <li>
+              <a href="#"><img src="../common/img/btn_login.png" alt="로그인" /></a>
+            </li>
+            <li class="btn_top" onClick="btn_top()"><img src="../common/img/btn_top.png" alt="맨위로" /></li>
+          </ul>
+          <p class="floater_copy">
+            <img src="../common/img/floater_copy.png" alt="Gyeoggi Women’s Development Center" />
+          </p>
+        </div>
+      </div>
+
+      <!-- 전체메뉴 -->
+      <div class="all_menu" style="display: none">
+        <h2><img src="../common/img/title_all_menu.png" alt="메뉴보기" /></h2>
+        <ul>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_01.png" alt="모바일학습" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_02.png" alt="홈으로" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_03.png" alt="이용안내" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_04.png" alt="직업선호도검사" /></a>
+          </li>
+          <li></li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_05.png" alt="창업적성검사" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_06.png" alt="QA" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_07.png" alt="공지사항" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../common/img/all_menu_08.png" alt="교육후기" /></a>
+          </li>
+        </ul>
+        <p class="close">
+          <a href="javascript:all_view('02')"><img src="../common/img/btn_close.png" alt="닫기" /></a>
+        </p>
+      </div>
+      <!-- //전체메뉴 -->
+    </div>
+  </body>
+</html>

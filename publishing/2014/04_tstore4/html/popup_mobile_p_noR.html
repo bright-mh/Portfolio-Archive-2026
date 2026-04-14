@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.selectbox.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.jscrollpane.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.selectbox_type4_pop.js"></script>
+    <script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layers");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+
+        var wid = 0.5 * (450 - $(".paging_popup").width());
+        $(".paging_popup").css("left", wid);
+
+        $("#popSelect").selectboxPop();
+
+        $("div")
+          .find(".scrollCon")
+          .each(function () {
+            var ul = $(this).find("ul");
+            ul.parent().height(parseInt(ul.height()) + 12);
+            $(this).jScrollPane({ showArrows: true });
+            $(this).slideUp(1, function () {
+              $(this).css("margin-top", "0");
+            });
+          });
+        setTimeout(function () {
+          $("div")
+            .find(".scrollCon")
+            .each(function () {
+              $(this).height("137px");
+            });
+        }, 500);
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layers" style="width: 450px">
+      <div class="layers-header2">
+        <h1><img src="../img/popup/h1_phonelook.gif" alt="가능 휴대기기 보기" /></h1>
+        <div class="header-group">
+          <h1><img src="../img/popup/txt_productsearch.gif" alt="제품 검색" /></h1>
+          <select id="popSelect">
+            <option value="1">전체</option>
+            <option value="2">Samsung</option>
+            <option value="3">LG</option>
+            <option value="4">Pantech</option>
+            <option value="5">Motorola</option>
+            <option value="6">Pantech & Curitel</option>
+            <option value="7">Sony Ericsson</option>
+          </select>
+          <label for="deviceName" style="display: none">휴대기기명</label
+          ><input id="deviceName" type="text" class="text" style="width: 123px" placeholder="제품명을 입력하세요" />
+          <span class="btntype"
+            ><a href="#"><img src="../img/common/btn/btn_retrieve.gif" alt="검색" /></a
+          ></span>
+        </div>
+      </div>
+      <div class="layers-contents">
+        <p class="layers-desc">검색결과 총 <strong>0</strong> 건</p>
+        <ul class="ware-list">
+          <li class="noResult">
+            <span>검색 결과가 존재하지 않습니다.</span>
+          </li>
+        </ul>
+        <div class="paging_popup">
+          <strong>1</strong>
+        </div>
+        <div class="close">
+          <a href="#"><img src="../img/common/btn/btn_close.gif" alt="닫기" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>PC ON/OFF 통계</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- wrap -->
+    <div class="wrap approval">
+      <!-- header -->
+      <header>
+        <div class="user_box">
+          <p>지진희 (제이니스)</p>
+        </div>
+        <div class="logo_box">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 30px / 가로크기는 비율로 자동조정 -->
+          <h1>
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 30px" /></a>
+          </h1>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- LNB : left menu -->
+        <nav class="lnb_area">
+          <h2 class="blind">결재자 메뉴</h2>
+          <ul class="lnb_list">
+            <!-- [D] 1Depth 선택 시, li태그에 class="on" 추가 -->
+            <li class="list_basic1">
+              <a href="#none" class="depth1">미승인 신청 현황</a>
+            </li>
+            <li class="list_basic2">
+              <a href="#none" class="depth1">전체 신청 현황</a>
+            </li>
+            <li class="list_basic4">
+              <a href="#none" class="depth1">PC ON/OFF 조회</a>
+            </li>
+            <li class="list_basic3">
+              <a href="#none" class="depth1">자리비움 조회</a>
+            </li>
+            <li class="list_basic5 on">
+              <a href="#none" class="depth1">PC ON/OFF 통계</a>
+            </li>
+            <li class="list_basic10">
+              <a href="#none" class="depth1">연장근무시간 통계</a>
+            </li>
+            <li class="list_basic8">
+              <a href="#none" class="depth1">휴가자 조회</a>
+            </li>
+            <li class="list_basic9">
+              <a href="#none" class="depth1">차단 예외자 조회</a>
+            </li>
+            <li class="list_basic7">
+              <a href="#none" class="depth1">대결자 관리</a>
+            </li>
+            <!-- <li class="list_basic6">
+						<a href="#none" class="depth1">PC 연장사용 통계</a>
+					</li>
+					<li class="list_basic11">
+						<a href="#none" class="depth1">심야근무 통계</a>
+					</li>
+					<li class="list_basic12">
+						<a href="#none" class="depth1">자리비움 통계</a>
+					</li> -->
+          </ul>
+        </nav>
+        <!-- //LNB : left menu -->
+
+        <!-- contents -->
+        <div class="contents">
+          <!-- tip area -->
+          <div class="tip_area">
+            <!-- <a href="#none" class="btn_tip">TIP</a> -->
+            <p class="blind">TIP</p>
+            <div class="tip_box">
+              <ul class="tip_list">
+                <li>통계에 포함되는 데이터의 제한 조건은 다음과 같습니다.</li>
+                <!-- [D] depth적 li태그에는 class="tip_depth" 추가-->
+                <li class="tip_depth">PC ON : 오전 6시 ~ 오전 10시 사이의 기록만을 대상으로 합니다.</li>
+                <li class="tip_depth">PC OFF : 오후 5시 ~ 오전 0시 사이의 기록만을 대상으로 합니다.</li>
+                <li>휴일의 기록은 통계처리 대상이 아닙니다.</li>
+                <li>부서별 통계와 직급/직위/직책별 통계를 조회할 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- //tip area -->
+
+          <h2 class="title_cont btm_none">PC ON/OFF 통계</h2>
+
+          <!-- search area -->
+          <div class="search_area">
+            <div class="tbl_search">
+              <table>
+                <colgroup>
+                  <col style="width: 128px" />
+                  <col style="width: auto" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">기간</th>
+                    <td>
+                      <div class="select_box">
+                        <select name="" title="기간" style="width: 155px">
+                          <option value="">전체</option>
+                          <option value="">옵션1</option>
+                          <option value="">옵션2</option>
+                          <option value="">옵션3</option>
+                          <option value="">옵션4</option>
+                        </select>
+                        <select name="" title="기간" style="width: 155px">
+                          <option value="">전체</option>
+                          <option value="">옵션1</option>
+                          <option value="">옵션2</option>
+                          <option value="">옵션3</option>
+                          <option value="">옵션4</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">부서</th>
+                    <td colspan="3">
+                      <select name="" title="부서" style="width: 314px">
+                        <option value="">전체</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                      </select>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="checkbox" id="" name="" value="" class="ml12" /><label for="">하위부서 포함</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- btn -->
+            <div class="btn_area">
+              <a href="#none" class="btn_big bg_blue icon_big_search">검색</a>
+            </div>
+            <!-- //btn -->
+          </div>
+          <!-- //search area -->
+
+          <!-- result_area -->
+          <div class="result_area">
+            <!-- result_top -->
+            <div class="result_top clearfix">
+              <div class="fl_left">
+                <p class="totla_num">총 <span>0</span>건 / <span>2019</span>년 <span>08</span>월</p>
+              </div>
+              <div class="btn_area fl_right">
+                <!-- <a href="#none" class="btn_md icon_md_csv">CSV</a> -->
+                <a href="#none" class="btn_md icon_md_excel">엑셀</a>
+              </div>
+            </div>
+            <!-- //result_top -->
+
+            <!-- tbl_default -->
+            <div class="tbl_default">
+              <table>
+                <colgroup>
+                  <col style="width: auto" />
+                  <col style="width: 135px" />
+                  <col style="width: 135px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">부서</th>
+                    <th scope="col"><a href="#none">PC ON(AVG)</a></th>
+                    <th scope="col"><a href="#none">PC OFF(AVG)</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="no_data">
+                    <td colspan="100">검색된 데이터가 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="left">
+                      이사회 &gt; 대표이사 &gt; WM사업부 &gt; 강남지역본부 &gt; NH금융PLUS 대치WM센터
+                    </td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl_default -->
+
+            <!-- result_paging -->
+            <div class="result_paging">
+              <!-- paging -->
+              <div class="paging">
+                <a href="#none" class="btn_start">처음으로</a>
+                <a href="#none" class="btn_prev">이전</a>
+                <strong>1</strong>
+                <a href="#none">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none">6</a>
+                <a href="#none">7</a>
+                <a href="#none">8</a>
+                <a href="#none">9</a>
+                <a href="#none">10</a>
+                <a href="#none" class="btn_next">다음</a>
+                <a href="#none" class="btn_end">맨끝으로</a>
+              </div>
+              <!-- //paging -->
+              <p class="page_num"><strong>3</strong>/<span>10</span></p>
+            </div>
+            <!-- //result_paging -->
+          </div>
+          <!-- //result_area -->
+
+          <!-- TOP btn -->
+          <a href="#none" class="btn_top">TOP</a>
+          <!-- //TOP btn -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

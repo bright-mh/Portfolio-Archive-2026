@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="utf-8" />
+	<title>Cloud Bems</title>
+
+	<script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+	
+	
+	<!-- main include -->
+	<script type="text/javascript" charset="utf-8"  src="/html/2014/bems/js/jquery.dotdotdot.min.js"></script>
+	<link href="/html/2014/bems/css/custom/main_layout.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/html/2014/bems/js/custom/main_layout.js"></script>
+
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery('#modelContent').modal({"keyboard":false})});
+	</script>
+
+
+
+
+<script>
+
+$(function () {
+	
+    $('#chart01').highcharts({
+	    chart: {
+	        type: 'gauge',
+	        plotBackgroundColor: '#FFFFFF',
+	        plotBackgroundImage: null,
+	        plotBorderWidth: 0,
+			plotBorderColor: '#FFFFFF',
+	        plotShadow: false,
+			backgroundColor: '#FFFFFF',
+			backgroundImage: null,
+			alignTicks: false,
+			borderColor: '#FFFFFF',
+			spacing: [20,10,0,0]
+	    },
+		credits: {enabled: false},
+		exporting: {enabled: false},
+	    legend: {enabled: false},
+	    title: {
+	        text: ''
+	    }, 
+	    pane: {
+	        startAngle: -150,
+	        endAngle: 150, 
+			background: [],
+			borderColor:'#FFFFFF'
+	    },
+	       
+	    // the value axis
+	    yAxis: {
+	        min: 0,
+	        max: 200,
+
+	        minorTickInterval: 'auto',
+	        minorTickWidth: 1,
+	        minorTickLength: 40,
+	        minorTickPosition: 'inside',
+	        minorTickColor: '#666',
+	        tickPixelInterval: 30, // 중간 구분선
+	        labels: {
+	            rotation: 'auto',
+				style:{
+					'font-size':'10px', 
+					'color':'#999999'
+				}
+	        },
+	        title: {
+	            text: ''
+	        },
+	        plotBands: [{
+	            from: 0,
+	            to: 119,
+	            color: '#b4cd78',  // 첫번째 영역
+				innerRadius: '90%',
+				outerRadius: '130%'
+	        }, {
+	            from: 120,
+	            to: 159,
+	            color: '#f5be55',  // 두번째 영역
+				innerRadius: '90%',
+				outerRadius: '130%'
+	        }, {
+	            from: 160,
+	            to: 200,
+	            color: '#c82d2d', // 세번째 영역
+				innerRadius: '90%',
+				outerRadius: '130%'
+	        }]        
+	    },
+	
+	    series: [{
+			key: 'key',
+	        name: '12:45', // 여기에 툴팁에 초기에 표시되는 타이틀이 들어갑니다. 
+			data: [{y:80,dataLabels:false}],
+			tooltip: {
+				shared: true,
+				useHTML: true,
+				headerFormat: '<div class="chart_tooltip">',
+				pointFormat: '{series.name} <br />{point.y}',
+				footerFormat: '</div>',
+				valueDecimals: 0, // 소수점 몇자리까지 표시 할 것인지
+				valueSuffix: ' kWh'
+			}
+	    }]
+	}, 
+	// Add some life
+	function (chart) {
+		if (!chart.renderer.forExport) {
+
+			setInterval(function () { // 주기적으로 아래 함수를 실행시켜 주면서 데이터를 반영합니다. ajax로 데이터를 불러올 것 이라면 이 부분에 코딩을 하시면 됩니다. 
+				var data = chart.series[0];
+				var point = chart.series[0].points[0];
+				var newName = "13:00";
+				var newPoint = 160;
+		        data.name = newName;
+				point.update(newPoint);
+				
+		    }, 3000); // 1000 : 1초
+
+		}
+	});
+});
+
+jQuery('document').ready(function(){ // ie8 에서 선 제거 위함.
+	jQuery(".highcharts-axis").find("path").attr("stroke-width","0");
+});
+
+
+/**
+	에너지 사용량 부분 챠트 설정
+*/	
+
+jQuery(function () {
+        $('#chart02').highcharts({
+			credits: {enabled: false},
+			exporting: {enabled: false},
+			legend: {enabled: false},
+            chart: {
+                zoomType: 'xy',
+				spacing: [40,0,50,0]
+            },
+            title: { text: ' '},
+            subtitle: { text: ' ' },
+
+            xAxis: [{
+				type:"datetime",
+				dateTimeLabelFormats: {
+                	day: '%e' // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            	},
+            	tickWidth: 0, // 2014-01-10 x축 선 없앰.
+				pointStart: Date.UTC(2013, 11, 19) // 기준 날짜를 설정
+            }],
+            yAxis:
+			[{ // Primary yAxis
+				lineWidth: 1,
+				max: 200,
+                labels: {
+                    format: '{value}',
+					align: 'right',
+                    style: {
+                        color: '#777777',
+						'font-size':'10px'
+                    }
+                },
+                title: {
+					rotation: -90,					
+                    text: '(TOE)',
+                    style: {
+                        color: '#777777',
+						'font-size':'10px',
+						'font-weight':'bold'
+					}
+                }
+            }
+			, 
+			{ // Secondary yAxis
+				lineWidth: 1,
+                title: {
+                    text: '(℃)',
+					rotation: 90,					
+                    style: {
+                        color: '#777777',
+						'font-size':'10px',
+						'font-weight':'bold',
+						'writing-mode': 'lr-tb' 
+
+                    }
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: '#777777',
+						'font-size':'10px',
+						align:0
+                    }
+                },
+                opposite: true
+			}
+			],
+            tooltip: {
+                shared: false
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal'
+                }
+            },
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom',
+                floating: false,
+                backgroundColor: '#FFFFFF',
+				y:30,
+				borderColor: '#FFFFFF',
+				itemDistance: 20,
+				title:{
+					style:{
+						fontSize:'10px',
+						color:'#777777',
+						fontWeight:'normal'
+					}
+				},
+				style:{
+					fontSize:'10px',
+					color:'#777777',
+					fontWeight:'normal'
+				}
+            },
+            series: [
+				{
+					name: '전기',
+					color: '#77b4d3',
+					type: 'column',
+					yAxis: 0,
+					data: [29.9, 87.5, 30.4, 112.2, 94.0, 76.0, 93.6, 118.5, 116.4, 94.1, 51.6, 52.4],
+					pointInterval: 24 * 3600 * 1000, // one day
+					labels:{
+						style: {
+							color: '#777777',
+							'font-size':'10px'
+						}
+					},
+					tooltip: {
+						valueSuffix: ' toe',
+						dateTimeLabelFormats: {
+			                day: '%m월%e일(%a)' // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            			},
+						shared: true,
+						useHTML: true,
+						headerFormat: '{point.key}<br />',
+						pointFormat: '<dl>' + 
+										'<dt style="color: {series.color}">{series.name}: </dt>' +
+										'<dd style="text-align: right"> {point.y} </dd> ' + 
+									 '</dl> ',
+						footerFormat: '',
+						valueDecimals: 2
+					}
+				}, 
+				{
+					name: '가스',
+					color: '#ed8672',
+					type: 'column',
+					yAxis: 0,
+					data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+					pointInterval: 24 * 3600 * 1000, // one day
+					labels:{
+						style: {
+							color: '#777777',
+							'font-size':'10px'
+						}
+					},
+					tooltip: {
+						valueSuffix: ' toe',
+						dateTimeLabelFormats: {
+			                day: '%m월%e일(%a)' // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            			},						
+						shared: true,
+						useHTML: true,
+						headerFormat: '{point.key}<br />',
+						pointFormat: '<dl>' + 
+										'<dt style="color: {series.color}">{series.name}: </dt>' +
+										'<dd style="text-align: right"> {point.y} </dd> ' + 
+									 '</dl> ',
+						footerFormat: '',
+						valueDecimals: 2
+					}
+					
+		
+				}, 
+				{
+					name: '외기온도',
+					color: '#616161',
+					type: 'line',
+					yAxis: 1,
+					data: [2.9, 11.5, 10.4, 19.2, 14.0, 16.0, 15.6, 18.5, 16.4, 14.1, 15.6,14.4],
+					pointInterval: 24 * 3600 * 1000, // one day
+					labels:{
+						style: {
+							color: '#777777',
+							'font-size':'10px'
+						}
+					},
+					tooltip: {
+						valueSuffix: ' ℃',
+						dateTimeLabelFormats: {
+			                day: '%m월%e일(%a)' // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            			},
+						shared: true,
+						useHTML: true,
+						headerFormat: '{point.key}<br />',
+						pointFormat: '<dl>' + 
+										'<dt style="color: {series.color}">{series.name}: </dt>' +
+										'<dd style="text-align: right"> {point.y} </dd> ' + 
+									 '</dl> ',
+						footerFormat: '',
+						valueDecimals: 2
+												
+					},
+					marker:{
+						symbol:'circle',
+						fillColor:'#FFFFFF',
+						lineColor:'#616161',
+						lineWidth: 2
+					}
+				}
+			]
+        });
+    });
+    
+jQuery('document').ready(function(){
+	jQuery('.highcharts-legend-item').find("tspan").css({'color':'#CCCCCC', 'font-size':'10px','font-weight':'normal'});
+	jQuery('.highcharts-legend-item').find("rect").css({'height':'10px'});
+	// ie8 에서 y 축 타이틀 회전위해
+	
+});
+
+jQuery(function () {
+    jQuery('#chart03').highcharts({
+        chart: {
+            spacing: [40, 0, 50, 0]
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        exporting: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+                day: '%e' // %e:날짜(숫자), %a:요일(세글자), %m:월(숫자) %Y:년도(숫자) %H:시간(24), %M:분, %S:초
+            },
+            pointStart: Date.UTC(2013, 11, 19), // 기준 날짜를 설정
+            tickWidth: 0
+        },
+        yAxis: {
+            lineWidth: 1,
+            title: {
+                text: 'kWh',
+                style: {
+                    color: '#777777',
+                        'font-size': '10px',
+                        'font-weight': 'bold'
+                }
+            },
+            tickInterval: 10000,
+            labels: {
+                formatter: function () {
+                    return (this.value / 1000);
+                }
+            }
+        },
+		tooltip: {
+			valueSuffix: ' kWh',
+			dateTimeLabelFormats: {
+			day: '%m월 %e일'
+			},
+			shared: false,
+			useHTML: true,
+			headerFormat: '{point.key}<br />',
+			pointFormat: '<p>' + 
+			'<span style="">{series.name}: </span>' +
+			'<span style="text-align: right"> {point.y} </span> ' + 
+			'</span> ',
+			footerFormat: '',
+			valueDecimals: 2
+		},		
+        series: [
+		{
+            type: 'area',
+            name: '최근1주일 평균',
+            lineColor: '#a9a9a9',
+            lineWidth: 1,
+            color: '#f0f0f0',
+			marker: {
+				enabled: false,
+				symbol: 'circle',
+				fillColor: '#FFFFFF',
+				lineColor: '#a9a9a9',
+				radius: 2,
+				lineWidth: 1
+			},
+            data: [1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126, 27387, 29459],
+            pointInterval: 24 * 3600 * 1000 // one day
+
+        }
+		,
+		{
+            type: 'spline',
+            lineColor: '#ed8672',
+            lineWidth: 1,
+            name: '오늘',
+            marker: {
+                enabled: false
+            },
+            data: [1060, 1605, 2471, 3322, 4238, 5221, 6129, {
+                y: 7089,
+                marker: {
+                    enabled: true,
+                    symbol: 'circle',
+                    fillColor: '#FFFFFF',
+                    lineColor: '#ed8672',
+                    lineWidth: 2
+                }
+            },
+            8339, 9399, 10538, 11643],
+            pointInterval: 24 * 3600 * 1000 // one day
+        }
+		],
+        legend: {
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom',
+            floating: false,
+            backgroundColor: '#FFFFFF',
+            y: 30,
+            borderColor: '#FFFFFF',
+            itemDistance: 20,
+            title: {
+                style: {
+                    fontSize: '10px',
+                    color: '#777777',
+                    fontWeight: 'normal'
+                }
+            },
+            style: {
+                fontSize: '10px',
+                color: '#777777',
+                fontWeight: 'normal'
+            }
+        }
+    });
+}); 
+
+</script> 	
+</head>
+
+<body>	
+	<script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+		
+	<!-- container --> 
+	<div id="mainCon">
+
+		<div class="content">
+			
+			<section class="smallBox todayEn">
+				
+				<div class="wrapCon">
+					
+					<div class="tit">
+						<h1>오늘의 에너지 사용량</h1>
+					</div>
+
+					<div class="con">
+						<div class="eleckArea">
+							
+							<div class="topBox">
+								<div class="icon"><img src="/html/2014/bems/images/common/icon_spark.gif" alt="전기 아이콘"/></div>
+								<div class="grap">
+								<!-- 일 -->
+									<div class="tGrap">
+										<div class="maxData">
+											<div class="realData"></div>
+										</div>
+										<!-- 툴팁 영역 -->
+											<div class="graphTooltip">
+												<p>10월1일(월)</p>
+												<!-- 
+												case : 휴일 인 경우
+												<p>10월1일(<span class="holi">일</span>)</p>
+												-->
+												<ul>
+													<li>전기 : <span>0.0394567 TOE</span>(9,300 kWh)</li>
+													<li>전체 : 0.1234567 toe</li>
+												</ul>
+												<!-- bg를 위한 div 태그 -->
+												<div class="bg_tooltipLeft"></div>
+												<div class="bg_tooltipRight"></div>
+											</div>
+										<!-- //툴팁 영역 -->
+									</div>
+									<!-- 월 -->
+									<div class="mGrap">
+										<div class="maxData">
+											<div class="realData"></div>
+										</div>
+										<!-- 툴팁 영역 -->
+											<div class="graphTooltip">
+												<p>10월</p>
+												<ul>
+													<li>전기 : <span>0.0394567 TOE</span>(9,300 kWh)</li>
+													<li>전체 : 0.1234567 toe</li>
+												</ul>
+												<!-- bg를 위한 div 태그 -->
+												<div class="bg_tooltipLeft"></div>
+												<div class="bg_tooltipRight"></div>
+											</div>
+										<!-- //툴팁 영역 -->
+									</div>
+									<!-- 년 -->
+									<div class="bGrap">
+										<div class="maxData">
+											<div class="realData"></div>
+										</div>
+										<!-- 툴팁 영역 -->
+											<div class="graphTooltip">
+												<p>2013년</span></p>
+												<ul>
+													<li>전기 : <span>0.0394567 TOE</span>(9,300 kWh)</li>
+													<li>전체 : 0.1234567 toe</li>
+												</ul>
+												<!-- bg를 위한 div 태그 -->
+												<div class="bg_tooltipLeft"></div>
+												<div class="bg_tooltipRight"></div>
+											</div>
+										<!-- //툴팁 영역 -->
+									</div>
+								</div>
+							</div>
+							<div class="table">
+								<table border="0" cellpadding="0" cellSpacing="0" width="100%">
+									<thead>
+										<tr class="head">
+											<td class="title">전기</td>
+											<td class="timeAmount">16:50까지 사용량</td>
+											<td class="todayAmount">1일 총 사용량</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><img src="/html/2014/bems/images/common/elect_icon1.gif" alt=""/>오늘</td>
+											<td><span class="point1">840 kWh</span></td>
+											<td><span class="point1">-</span></td>
+										</tr>
+										<tr>
+											<td><img src="/html/2014/bems/images/common/elect_icon2.gif" alt=""/>어제</td>
+											<td>930 kWh</td>
+											<td>9,300 kWh</td>
+										</tr>
+										<tr>
+											<td><img src="/html/2014/bems/images/common/elect_icon3.gif" alt=""/>작년</td>
+											<td>112 kWh</td>
+											<td>12,570 kWh</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="gasArea">
+							<div class="topBox">
+								<div class="icon"><img src="/html/2014/bems/images/common/icon_fire.gif" alt="불 아이콘"/></div>
+								<div class="grap">
+								<!-- 일 -->
+									<div class="tGrap">
+										<div class="maxData">
+											<div class="realData"></div>
+										</div>
+										<!-- 툴팁 영역 -->
+											<div class="graphTooltip">
+												<p>10월1일(<span class="holi">일</span>)</p>
+												<!-- 
+												case : 휴일이 아닐 경우
+												<p>10월1일(월)</p>
+												-->
+												<ul>
+													<li>가스 : <span>0.0394567 TOE</span>(9,300 N㎥)</li>
+													<li>전체 : 0.1234567 toe</li>
+												</ul>
+												<!-- bg를 위한 div 태그 -->
+												<div class="bg_tooltipLeft"></div>
+												<div class="bg_tooltipRight"></div>
+											</div>
+										<!-- //툴팁 영역 -->
+									</div>
+									<!-- 월 -->
+									<div class="mGrap">
+										<div class="maxData">
+											<div class="realData"></div>
+										</div>
+										<!-- 툴팁 영역 -->
+											<div class="graphTooltip">
+												<p>10월</p>
+												<ul>
+													<li>가스 : <span>0.0394567 TOE</span>(9,300 N㎥)</li>
+													<li>전체 : 0.1234567 toe</li>
+												</ul>
+												<!-- bg를 위한 div 태그 -->
+												<div class="bg_tooltipLeft"></div>
+												<div class="bg_tooltipRight"></div>
+											</div>
+										<!-- //툴팁 영역 -->
+									</div>
+									<!-- 년 -->
+									<div class="bGrap">
+										<div class="maxData">
+											<div class="realData"></div>
+										</div>
+										<!-- 툴팁 영역 -->
+											<div class="graphTooltip">
+												<p>2013년</p>
+												<ul>
+													<li>가스 : <span>0.0394567 TOE</span>(9,300 N㎥)</li>
+													<li>전체 : 0.1234567 toe</li>
+												</ul>
+												<!-- bg를 위한 div 태그 -->
+												<div class="bg_tooltipLeft"></div>
+												<div class="bg_tooltipRight"></div>
+											</div>
+										<!-- //툴팁 영역 -->
+									</div>
+								</div>
+							</div>
+							<div class="table">
+								<table border="0" cellpadding="0" cellSpacing="0" width="100%">
+									<thead>
+										<tr class="head">
+											<td class="title">가스</td>
+											<td class="timeAmount">16:50까지 사용량</td>
+											<td class="todayAmount">1일 총 사용량</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><img src="/html/2014/bems/images/common/gas_icon1.gif" alt=""/>오늘</td>
+											<td><span class="point2">840 kWh</span></td>
+											<td><span class="point2">-</span></td>
+										</tr>
+										<tr>
+											<td><img src="/html/2014/bems/images/common/gas_icon2.gif" alt=""/>어제</td>
+											<td>930 kWh</td>
+											<td>9,300 kWh</td>
+										</tr>
+										<tr>
+											<td><img src="/html/2014/bems/images/common/gas_icon3.gif" alt=""/>작년</td>
+											<td>112 kWh</td>
+											<td>12,570 kWh</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>	
+
+				</div>
+			</section>
+
+			<section class="smallBox elecPeak">
+				<div class="wrapCon">
+					<div class="tit">
+						<h1>일반전력 피크</h1>
+					</div>
+					<div class="peakBox">
+						<div class="left">
+							<div class="data">
+							184<span class="unit">Kw</span><span class="time">오늘 16:50</span>
+							</div>
+						</div>
+						<div class="warning">
+							<img src="/html/2014/bems/images/common/warning_step1.gif" alt="원활"/>
+							<!--
+							case 주의
+							<img src="/html/2014/bems/images/common/warning_step2.gif" alt="주의"/>
+							 -->
+							 <!--
+							case 경고
+							<img src="/html/2014/bems/images/common/warning_step3.gif" alt="경고"/>
+							-->
+						</div>
+					</div>
+					<div class="dataBox">
+						<div id="chart01" class="cirGrap" style="background:#ccc;">
+						그래프 영역
+						</div>
+						<div class="tableData">
+							<table border = "1" cellpadding="0" cellspacing="0">
+								<thead>
+									<tr class="head">
+										<td>오늘 최대</td>
+										<td class="unit01">527 kW</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>올해 목표</td>
+										<td>840kW</td>
+									</tr>
+									<tr>
+										<td>올해 피크</td>
+										<td>930 kW</td>
+									</tr>
+									<tr>
+										<td>작년 피크</td>
+										<td>1,112 kW</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bigBox enUse">
+				<div class="wrapCon">
+					<div class="tit">
+						<h1>에너지 사용량</h1>
+						<div class="tabSelectBox">
+							<ul>
+								<li><a href="#"><div><span>일별</span></div></a></li>
+								<li class="over"><a href="#"><div><span>월별</span></div></a></li>
+								<li><a href="#"><div><span>연별</span></div></a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="chart02" class="grapArea" style="background:#ccc;">
+					그래프 영역
+					</div>
+					
+				</div>
+			</section>
+
+			<section class="bigBox usePattern">
+				<div class="wrapCon">
+					<div class="tit">
+						<h1>에너지 사용패턴</h1>
+						<div class="tabSelectBox">
+							<ul>
+								<li class="over"><a href="#"><div><span>전기</span></div></a></li>
+								<li><a href="#"><div><span>가스</span></div></a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="conBox">
+						<div class="cusTomselec">
+							<div class="compare">오늘의 사용량 VS</div>
+							<div class="cusArea">
+								<select  id="dataBox" tabindex="1">
+									<option value="yesterday">어제</option>
+									<option value="week">최근 1주일 평균</option>
+									<option value="month">최근 30일 평균</option>
+								</select>
+							</div>
+						</div>
+						<div id="chart03" class="grapArea2" style="background:#ccc;">
+						그래프 영역
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="smallBox charge">
+				
+				<div class="wrapCon">
+					<div class="tit">
+						<h1>9월 에너지 납부 요금</h1>
+						<div class="numBox">
+							85,760,000 <span class="unit">원</span>
+						</div>
+					</div>
+					<div class="dataBox02">
+						<div class="left">
+							<div class="txt01">작년 동월대비</div>
+							<div class="data01">23.50<span>%</span></div>
+						</div>
+						<div class="icon">
+							<img src="/html/2014/bems/images/common/main_down_icon.gif" alt="down"/>
+							<!-- 
+							case up
+							<img src="/html/2014/bems/images/common/main_up_icon.gif" alt="up"/>
+							-->
+							<!-- 
+							case same
+							<img src="/html/2014/bems/images/common/main_same_icon.gif" alt="same"/>
+							-->
+						</div>
+					</div>
+					<div class="dataTable">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<thead>
+								<tr class="head">
+									<td class="fir"></td>
+									<td class="sec">9월 요금</td>
+									<td class="thr">8월 대비</td>
+									<td class="four">작년 동월대비</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="color">
+									<td class="fir">전체</td>
+									<td class="sec">85,760,000원</td>
+									<td class="thr">3.50%<img src="/html/2014/bems/images/common/table_icon_down.png" alt=""/></td>
+									<td class="four">23.50%<img src="/html/2014/bems/images/common/table_icon_up.png" alt=""/></td>
+								</tr>
+								<tr>
+									<td class="fir">전기</td>
+									<td class="sec">10,760,000원</td>
+									<td class="thr">13.52%<img src="/html/2014/bems/images/common/table_icon_same.png" alt=""/></td>
+									<td class="four">3.56%<img src="/html/2014/bems/images/common/table_icon_up.png" alt=""/></td>
+								</tr>
+								<tr class="color">
+									<td class="fir">가스</td>
+									<td class="sec">42,000,000원</td>
+									<td class="thr">3.50%<img src="/html/2014/bems/images/common/table_icon_up.png" alt=""/></td>
+									<td class="four">5.52%<img src="/html/2014/bems/images/common/table_icon_down.png" alt=""/></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section class="smallBox preparing">
+				<div class="wrapCon">
+					<div class="tit">
+						<h1>10월 목표대비 사용량</h1>
+						<div class="numBox">
+							0.1234567 <span class="unit">toe</span>
+						</div>
+					</div>
+					<div class="dataBox03">
+						<div class="left">
+							<div class="txt01">목표대비 사용율</div>
+							<div class="data01">30.25<span>%</span></div>
+						</div>
+						<div class="icon">
+							<div class="bg"></div>
+							<div class="percenBox"><div class="percen"></div></div>
+							<div class="hIcon"><img src="/html/2014/bems/images/common/main_target_icon.png" alt=""/></div>
+						</div>
+					</div>
+
+					<div class="dataTable">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<thead>
+								<tr class="head">
+									<td class="fir"></td>
+									<td class="sec">목표량</td>
+									<td class="thr">사용량</td>
+									<td class="four">사용율</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="color">
+									<td class="fir">전체</td>
+									<td class="sec">0.8731200 toe</td>
+									<td class="thr">0.1731200 toe</td>
+									<td class="four">30.25%</td>
+								</tr>
+								<tr>
+									<td class="fir">전기</td>
+									<td class="sec">1,013.76 kWh</td>
+									<td class="thr">1,013.76 kWh</td>
+									<td class="four">30.00%</td>
+								</tr>
+								<tr class="color">
+									<td class="fir">가스</td>
+									<td class="sec">1,013.76 30.25%</td>
+									<td class="thr">1,013.76 30.25%</td>
+									<td class="four">53.40%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</section>
+		</div>
+		
+		<!-- RSS -->
+		<div class="rss">
+			<div class="feedBox">
+				<div class="display">
+					<ul>	
+						<li class="clear">
+							<p style=" white-space:nowrap;">
+								<a href="#"><span class="tit">에너지 뉴스1</span></a><span class="part"><img src="/html/2014/bems/images/common/rss_part.gif" alt=""/></span>
+								<span class="stit">그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나</span><span class="place">&nbsp;- 산업교육연구소 전략품목교육센터 전략품목 전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략</span>
+							</p>
+							<div class="date">[2013.10.30]</div>
+						</li>
+						<li class="clear">
+							<p style=" white-space:nowrap;">
+								<a href="#"><span class="tit">에너지 뉴스2</span></a><span class="part"><img src="/html/2014/bems/images/common/rss_part.gif" alt=""/></span>
+								<span class="stit">그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나</span><span class="place">&nbsp;- 산업교육연구소 전략품목교육센터 전략품목전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략</span>
+							</p>
+							<div class="date">[2013.10.30]</div>
+						</li>
+						<li class="clear">
+							<p style=" white-space:nowrap;">
+								<a href="#"><span class="tit">에너지 뉴스3</span></a><span class="part"><img src="/html/2014/bems/images/common/rss_part.gif" alt=""/></span>
+								<span class="stit">그린 건축물 적용 에너지 절감/통합관리 신기술 및 사업전략 세미나</span><span class="place">&nbsp;- 산업교육연구소 전략품목교육센터 전략품목 전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략전략략</span>
+							</p>
+							<div class="date">[2013.10.30]</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="rss_btn">
+				<a href="#"><img src="/html/2014/bems/images/common/rss_btn.gif" alt="더보기"/></a>
+			</div>
+
+		</div>
+		<!-- //RSS -->
+
+		<!-- footer -->
+		<footer>
+			<div class="leftBox">
+				<div class="logo">
+					<img src="/html/2014/bems/images/common/footer_logo.gif" alt="SK CLOUD BEMS"/>
+				</div>
+				<div class="copyBox">
+					<p class="address">서울특별시 을지로 2가 11번지 SK Telecom <span>|</span> 대표이사: 하성민 <span>|</span>  대표전화: 02) 1234-5678 <span>|</span>  사업자등록번호: 104-81-37225</p>
+					<p class="copy">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+					<p class="brow">
+							<a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"><img src="/html/2014/bems/images/common/footer_ie.gif" alt="Internet Explorer"/></a><img src="/html/2014/bems/images/common/footer_part.gif" alt="" class="part"/>
+							<a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"><img src="/html/2014/bems/images/common/footer_chrome.gif" alt="Chrome"/></a><img src="/html/2014/bems/images/common/footer_part.gif" alt="" class="part"/>
+							<a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"><img src="/html/2014/bems/images/common/footer_ff.gif" alt="FireFox"/></a><img src="/html/2014/bems/images/common/footer_part.gif" alt="" class="part"/>
+							<a href="http://www.apple.com/kr/safari/" target="_blank"><img src="/html/2014/bems/images/common/footer_safari.gif" alt="Safari"/></a>
+						<span>* CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.</span></p>
+				</div>
+			</div>
+			<div class="fBtn">
+				<a href="#"><img src="/html/2014/bems/images/common/footer_btn.gif" alt=""></a>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- 모달팝업 내용 -->
+	<style>
+		model {margin:0 !important;}
+	</style>
+	<div id="modelContent" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+	style="position:absolute; width:656px; left:50%; margin-left:-328px; top:50%; margin-top:-250px;">
+		<!-- [D] 팝업사이즈 : width:656px; -->
+		<section class="popup" style="width:654px;">
+			<div class="title">
+				<h1>비밀번호 변경</h1>
+				<p class="pop_close"><a href="#link" onclick="$('#modelContent').modal('hide')"><img src="/html/2014/bems/images/common/btn_popup_close.png" alt="닫기" /></a></p>
+			</div>
+			<div class="popContainer04">
+				
+				<div class="bookMak">
+					<p class="text">현재 사용하고 계시는 계정의 비밀번호를 변경할 수 있습니다.</p>
+					<!-- [D] default -->
+					<div class="box04">
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">현재 비밀번호 :</span>
+							<input type="password" class="fl input_style02 input02" />
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">새 비밀번호 :</span>
+							<input type="password" class="fl input_style02 input02" />
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03">새 비밀번호 (재입력) :</span>
+							<input type="password" class="fl input_style02 input02" />
+						</div>
+					</div>
+
+					<!-- [D] 오류메시지 (주석처리) -->
+					<!--
+					<div class="box04">
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">현재 비밀번호 :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">비밀번호가 올바르지 않습니다.</p>
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03_01">새 비밀번호 :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">비밀번호를 입력하세요.</p>
+						</div>
+						<div class="group03 clear02 mt10">
+							<span class="fl titleMark03">새 비밀번호 (재입력) :</span>
+							<input type="password" class="fl input_style02 input02" />
+							<p class="text03">비밀번호를 입력하세요.</p>
+						</div>
+					</div>
+					-->
+				</div>
+
+				<ul class="pwList">
+					<!-- 2013-12-23 텍스트 수정 -->
+					<li class="listStyle">* 비밀번호는 최대 10자리로 영문(대소문자 구분), 숫자 2가지 이상의 조합을 사용해야 하여, 아이디를 포함하지 않아야 합니다.</li>
+					<!-- //2013-12-23 텍스트 수정 -->
+					<li>* 개인정보 보호를 위해 비밀번호는 타 사이트와는 다른 비밀번호로 주기적으로 변경해주세요.</li>
+				</ul>
+
+				<!-- 버튼 -->
+				<div class="btn_area02 center mt15">
+					<a href="#link" class="on"><span>확인</span></a>
+					<a href="#link" class="on"><span>취소</span></a>
+				</div>
+				<!-- //버튼 -->
+			</div>
+		</section>
+	</div>
+	<!-- //모달팝업 내용 -->
+</body>
+</html>

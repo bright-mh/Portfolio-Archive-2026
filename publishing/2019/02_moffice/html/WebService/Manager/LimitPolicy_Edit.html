@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>제한정책 편집모드</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*745 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>제한정책 편집모드</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- tbl_row_default -->
+        <div class="tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 160px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">제한정책명</th>
+                <td>
+                  <input type="text" name="" value="" title="제한정책명" style="width: 320px" />
+                  <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                  <input type="checkbox" id="" name="" value="" /><label for="">기본</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">강제차단</th>
+                <td><input type="checkbox" id="" name="" value="" /><label for="">하루종일 강제차단함</label></td>
+              </tr>
+              <tr>
+                <th scope="row">사전신청 제한</th>
+                <td class="ect">
+                  <!-- box_change -->
+                  <div class="box_change">
+                    <input type="radio" id="" name="" value="" /><label for="">사용안함</label>
+                    <input type="radio" id="" name="" value="" /><label for="">사용가능</label>
+
+                    <!-- bg_box -->
+                    <div class="bg_box">
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        1회 신청가능 최대시간 제한
+                        <input type="text" name="" value="00" title="분" class="center ml12 mr4" style="width: 60px" />
+                        분
+                      </div>
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        최대 신청시간 제한
+                        <input
+                          type="text"
+                          name=""
+                          value="00:00"
+                          title="시간 입력"
+                          class="center ml12 mr4"
+                          style="width: 70px"
+                        />
+                        (0시기준)
+                      </div>
+                    </div>
+                    <!-- //bg_box -->
+                  </div>
+                  <!-- //box_change -->
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">긴급신청 제한</th>
+                <td class="ect">
+                  <!-- box_change -->
+                  <div class="box_change">
+                    <input type="radio" id="" name="" value="" /><label for="">사용안함</label>
+                    <input type="radio" id="" name="" value="" /><label for="">사용가능</label>
+
+                    <!-- bg_box -->
+                    <div class="bg_box">
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        신청가능 최대 횟수제한
+                        <input
+                          type="text"
+                          name=""
+                          value="00"
+                          title="횟수"
+                          class="center ml12 mr4"
+                          style="width: 60px"
+                        />
+                        회
+                      </div>
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        1회 신청가능 최대시간 제한
+                        <input type="text" name="" value="00" title="분" class="center ml12 mr4" style="width: 60px" />
+                        분
+                      </div>
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        최대 신청시간 제한
+                        <input
+                          type="text"
+                          name=""
+                          value="00:00"
+                          title="시간 입력"
+                          class="center ml12 mr4"
+                          style="width: 70px"
+                        />
+                        (0시기준)
+                      </div>
+                    </div>
+                    <!-- //bg_box -->
+                  </div>
+                  <!-- //box_change -->
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">자동자리비움 감지</th>
+                <td class="ect">
+                  <!-- box_change -->
+                  <div class="box_change">
+                    <!-- bg_box -->
+                    <div class="bg_box mt0">
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        업무시간중 자리비움 감지시간
+                        <input type="text" name="" value="00" title="분" class="center ml12 mr4" style="width: 60px" />
+                        분
+                      </div>
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        연장근무시간중 자리비움 감지시간
+                        <input type="text" name="" value="00" title="분" class="center ml12 mr4" style="width: 60px" />
+                        분
+                      </div>
+                    </div>
+                    <!-- //bg_box -->
+                  </div>
+                  <!-- //box_change -->
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">업무시간<br />사전 자리비움 등록</th>
+                <td class="ect">
+                  <!-- box_change -->
+                  <div class="box_change">
+                    <input type="radio" id="" name="" value="" /><label for="">사용안함</label>
+                    <input type="radio" id="" name="" value="" /><label for="">사용함</label>
+
+                    <!-- bg_box -->
+                    <div class="bg_box">
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        최대 등록가능 횟수 제한
+                        <input
+                          type="text"
+                          name=""
+                          value="00"
+                          title="횟수"
+                          class="center ml12 mr4"
+                          style="width: 60px"
+                        />
+                        회
+                      </div>
+                      <div class="line_change">
+                        <input type="checkbox" name="" value="" class="mr2" />
+                        1회당 최대 등록시간 제한
+                        <input type="text" name="" value="00" title="분" class="center ml12 mr4" style="width: 60px" />
+                        분
+                      </div>
+                    </div>
+                    <!-- //bg_box -->
+                  </div>
+                  <!-- //box_change -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">저장</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

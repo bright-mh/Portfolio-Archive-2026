@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <!-- 2014-01-06 title 띄어쓰기_수정 -->
+    <title>사용자 정의 분석 | 설비성능 분석 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <!-- //2014-01-06 title 띄어쓰기_수정 -->
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/fa.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+        $("#country_01").selectbox();
+        $("#country_02").selectbox();
+        $("#country_03").selectbox();
+        $("#country_04").selectbox();
+        $("#country_05").selectbox();
+
+        jQuery("#country_02")
+          .next()
+          .find(".sbOptions>li")
+          .bind("click", function () {
+            if (jQuery(this).text() == "사용함") {
+              jQuery(this).parent().parent().parent().parent().next().show();
+            } else {
+              jQuery(this).parent().parent().parent().parent().next().hide();
+            }
+          });
+
+        jQuery("#country_03")
+          .next()
+          .find(".sbOptions>li")
+          .bind("click", function () {
+            if (jQuery(this).text() == "사용함") {
+              jQuery(this).parent().parent().parent().parent().next().show();
+            } else {
+              jQuery(this).parent().parent().parent().parent().next().hide();
+            }
+          });
+
+        jQuery("#country_04")
+          .next()
+          .find(".sbOptions>li")
+          .bind("click", function () {
+            if (jQuery(this).text() == "사용함") {
+              jQuery(this).parent().parent().parent().parent().next().show();
+            } else {
+              jQuery(this).parent().parent().parent().parent().next().hide();
+            }
+          });
+
+        jQuery("#country_05")
+          .next()
+          .find(".sbOptions>li")
+          .bind("click", function () {
+            if (jQuery(this).text() == "사용함") {
+              jQuery(this).parent().parent().parent().parent().next().show();
+            } else {
+              jQuery(this).parent().parent().parent().parent().next().hide();
+            }
+          });
+      });
+    </script>
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+    <script src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <script src="chartScripts/FA_USERDEFINE_002.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title05.gif" alt="설비성능 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02">
+              <a href="#link"><span>주요설비 운전현황</span></a>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>계통설비 성능 분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>냉열원</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>온열원</span></a>
+                </li>
+                <!-- 2014-01-06 LNB "냉온열원공통" 띄어쓰기_수정 -->
+                <li>
+                  <a href="#link"><span>냉온열원 공통</span></a>
+                </li>
+                <!-- //2014-01-06 LNB "냉온열원공통" 띄어쓰기_수정 -->
+                <li>
+                  <a href="#link"><span>공조</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>환기</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전력계통</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>신재생</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>공조설비</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>위생</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>다중 설비계통 분석</span></a>
+            </li>
+            <li class="depth02 on">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>사용자 정의 분석</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 및 전체 띄어쓰기_수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <li>설비성능 분석<span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 및 전체 띄어쓰기_수정 -->
+                <li class="last">사용자 정의 분석</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <section class="tabBox">
+              <div class="boxBg">
+                <div class="tabTitleGroup">
+                  <ul class="tabSideList">
+                    <li class="tabSideStyle01"><a href="#link">도움말</a></li>
+                    <li class="tabSideStyle02"><a href="#link">인쇄</a></li>
+                    <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                    <li class="tabSideStyle03"><a href="#link">북마크</a></li>
+                  </ul>
+                </div>
+
+                <!-- 탭 상세 -->
+                <div class="tabDetailGroup">
+                  <div class="layerGroup clear02">
+                    <!-- 층 그룹 -->
+                    <div class="fl">
+                      <!-- layerOne -->
+                      <div class="layerOne clear02">
+                        <div class="fl clear">
+                          <label for="input_date">기간선택</label>
+                          <input
+                            type="text"
+                            name="input_date"
+                            id="input_date"
+                            value="2013-08-01"
+                            class="fl input_date w86"
+                          />
+                          <span class="fl rangeStyle">~</span>
+                          <input type="text" name="input_date" value="2013-08-31" class="fl input_date w86" />
+                        </div>
+                        <div class="fl pl31">
+                          <label for="country_01">단위선택</label>
+                          <div class="s4 pl89">
+                            <select id="country_01">
+                              <option value="v1" selected="selected">15분</option>
+                              <option value="v2">1시간</option>
+                              <option value="v3">일별</option>
+                              <option value="v4">월별</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerOne -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pb0">
+                        <div class="clear02">
+                          <div class="fl">
+                            <label for="search" class="pl30">X축</label>
+                            <input
+                              type="text"
+                              id="search"
+                              name="search"
+                              value="터보식냉동기1-부하율"
+                              class="w395 input_style02"
+                            />
+                          </div>
+                          <div class="fl pl10">
+                            <p class="btn_area">
+                              <a href="#link"><span>조회</span></a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="mt15 clear02">
+                          <div class="fl">
+                            <label for="country_02" class="ml89 fontStyle">데이터제한</label>
+                            <div class="s4 pl163">
+                              <select id="country_02">
+                                <option value="v1" selected="selected">사용안함</option>
+                                <option value="v2">사용함</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="fl range" style="display: none">
+                            <label for="range" class="ml31 fontStyle">범위</label>
+                            <input type="text" name="range01" id="range" value="0.0" class="w56 input_style01" />
+                            <span>~</span>
+                            <input type="text" name="range02" value="0.0" class="w56 input_style01" />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pb0">
+                        <div class="clear02">
+                          <div class="fl">
+                            <label for="search2" class="pl30">Y축</label>
+                            <input
+                              type="text"
+                              id="search2"
+                              name="search"
+                              value="흡수식 냉동기2호 - COP"
+                              class="w395 input_style02"
+                            />
+                          </div>
+                          <div class="fl pl10">
+                            <p class="btn_area">
+                              <a href="#link"><span>변경</span></a>
+                              <a href="#link"><span>삭제</span></a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="mt15 clear02">
+                          <div class="fl">
+                            <label for="country_03" class="ml89 fontStyle">데이터제한</label>
+                            <div class="s4 pl163">
+                              <select id="country_03">
+                                <option value="v1">사용안함</option>
+                                <option value="v2" selected="selected">사용함</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- 131203_id 중복 문제로 수정 -->
+                          <div class="fl">
+                            <label for="range2" class="ml31 fontStyle">범위</label>
+                            <input type="text" name="range01" id="range2" value="0.0" class="w56 input_style01" />
+                            <span>~</span>
+                            <input type="text" name="range02" value="0.0" class="w56 input_style01" />
+                          </div>
+                          <!-- //131203_id 중복 문제로 수정 -->
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pb0">
+                        <div class="clear02">
+                          <div class="fl">
+                            <label for="search3" class="pl30">Y축</label>
+                            <input
+                              type="text"
+                              id="search3"
+                              name="search"
+                              value="흡수식 냉동기2호 - COP"
+                              class="w395 input_style02"
+                            />
+                          </div>
+                          <div class="fl pl10">
+                            <p class="btn_area">
+                              <a href="#link"><span>변경</span></a>
+                              <a href="#link"><span>삭제</span></a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="mt15 clear02">
+                          <div class="fl">
+                            <label for="country_04" class="ml89 fontStyle">데이터제한</label>
+                            <div class="s4 pl163">
+                              <select id="country_04">
+                                <option value="v1">사용안함</option>
+                                <option value="v2" selected="selected">사용함</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- 131203_id 중복 문제로 수정 -->
+                          <div class="fl">
+                            <label for="range3" class="ml31 fontStyle">범위</label>
+                            <input type="text" name="range01" id="range3" value="0.0" class="w56 input_style01" />
+                            <span>~</span>
+                            <input type="text" name="range02" value="0.0" class="w56 input_style01" />
+                          </div>
+                          <!-- //131203_id 중복 문제로 수정 -->
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pb0">
+                        <div class="clear02">
+                          <div class="fl">
+                            <label for="search4" class="pl30">Y축</label>
+                            <input
+                              type="text"
+                              id="search4"
+                              name="search"
+                              value="흡수식 냉동기2호 - COP"
+                              class="w395 input_style02"
+                            />
+                          </div>
+                          <div class="fl pl10">
+                            <p class="btn_area">
+                              <a href="#link"><span>변경</span></a>
+                              <a href="#link"><span>삭제</span></a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="mt15 clear02">
+                          <div class="fl">
+                            <label for="country_05" class="ml89 fontStyle">데이터제한</label>
+                            <div class="s4 pl163">
+                              <select id="country_05">
+                                <option value="v1" selected="selected">사용안함</option>
+                                <option value="v2">사용함</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- 131203_id 중복 문제로 수정 -->
+                          <div class="fl range" style="display: none">
+                            <label for="range4" class="ml31 fontStyle">범위</label>
+                            <input type="text" name="range01" id="range4" value="0.0" class="w56 input_style01" />
+                            <span>~</span>
+                            <input type="text" name="range02" value="0.0" class="w56 input_style01" />
+                          </div>
+                          <!-- //131203_id 중복 문제로 수정 -->
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02 pb15">
+                        <div class="clear02">
+                          <div class="fl">
+                            <label for="search5" class="pl30">Y축</label>
+                            <input type="text" id="search5" name="search" class="w395 input_style02" />
+                          </div>
+                          <div class="fl pl10">
+                            <p class="btn_area">
+                              <a href="#link"><span>조회</span></a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                    </div>
+                    <!-- //층 그룹 -->
+                    <p class="fl btn_search">
+                      <a href="#link"><span>검색</span></a>
+                    </p>
+                  </div>
+                </div>
+                <!-- //탭 상세 -->
+              </div>
+            </section>
+            <!-- //탭영역 -->
+
+            <!-- 차트 영역 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!--차트 삽입부분 -->
+                <div id="chart01" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //차트 영역 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

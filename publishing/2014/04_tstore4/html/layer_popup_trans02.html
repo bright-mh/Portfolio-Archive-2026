@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.tinyscrollbar.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.event.drag-1.5.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.touchSlider2.js"></script>
+    <script type="text/javascript" src="../js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="../js/design.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layer_popup");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+        $(window).resize(function () {
+          var wid = 0.5 * ($(window).width() - popup.width());
+          var hei = 0.5 * ($(window).height() - popup.height());
+          popup.css({ top: hei, left: wid });
+        });
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layer_popup">
+      <div class="titleY">
+        <div class="titleCon">내 폰에서 보기</div>
+      </div>
+      <div class="contents">
+        <div class="sns_trans">
+          <img src="../img/popup/icon_trans.png" alt="" />
+          <span class="loading"><img src="../img/popup/loading2.gif" alt="" /></span>
+          <p class="description_trans"><span>URL이 문자로 전송</span>되었습니다.</p>
+          <p class="footnote">휴대폰을 확인해주세요.</p>
+        </div>
+        <p class="okBtn">
+          <a href="#"><img src="../img/common/btn/btn_ok2.gif" alt="확인" /></a>
+        </p>
+      </div>
+      <div class="border_bottom_m_w">
+        <div class="border_bottom_m_w2"></div>
+      </div>
+      <div class="close">
+        <a href="#"><img src="../img/common/btn/btn_closeX.png" alt="닫기" /></a>
+      </div>
+    </div>
+  </body>
+</html>

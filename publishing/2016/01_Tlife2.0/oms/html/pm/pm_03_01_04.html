@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>이벤트 배너 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1>
+            <a href="#"><img src="../../img/h1_logo.png" alt="T life" /></a>
+          </h1>
+          <div class="top">
+            <h2>T life Operating Management System</h2>
+            <div class="user">
+              <p><strong>[admin]</strong> 님이 로그인 하셨습니다.(최종 접속일:YYYY-MM-DD 00:00:00)</p>
+              <div class="btn"><a href="#" class="btn_logout">Logout</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb5:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(2)").addClass("on");
+              $("#gnb>li.gnb5:eq(0)>ul>li:eq(2)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb5">
+                <a href="#">프로모션 관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">팝업관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">팝업관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Push 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">Push 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">이벤트 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">이벤트 배너관리</a></li>
+                      <li><a href="#">이달의 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 쿠폰 관리</a></li>
+                      <li><a href="#">웰컴 티켓관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">추천앱 관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">추천앱 배너관리</a></li>
+                      <li><a href="#">추천앱 관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">위젯관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">위젯관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>프로모션 관리</span>
+              <span>이벤트 관리</span>
+              <span>이벤트 배너관리</span>
+              <strong>이벤트 배너 수정/조회</strong>
+            </div>
+            <h3 class="tit">이벤트 배너 수정/조회</h3>
+
+            <!-- 이벤트 배너 수정/조회 테이블 -->
+            <div class="table_list">
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >배너 제목, Sub 제목, 노출기간, 이미지, 이동경로, 노출설정, 노출순서, 작성자 (ID), 작성일자,
+                      수정자 (ID), 수정일자가 있는 이벤트 배너 신규등록 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">배너 제목</th>
+                      <td colspan="3">T-life에 오신 것을 환영합니다!</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Sub 제목</th>
+                      <td colspan="3">처음 오신 분들을 위한 특별한 혜택!</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">노출기간</th>
+                      <td colspan="3">2016-11-01 ~ 2016-11-30</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이미지</th>
+                      <td colspan="3">
+                        <div class="img_area">
+                          <img src="../../img/img_noimg.gif" alt="push 이미지" width="320" height="246" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이동경로</th>
+                      <td colspan="3">
+                        <!-- [D] Web view 형 선택 시, 보여지는 테이블 -->
+                        Web view 형
+                        <div class="gap_top">
+                          <a href="#" class="link" target="_blank" title="새창 열림"
+                            >http://www.tworld.co.kr/twd/html/global/GR3.2.2T.html</a
+                          >
+                        </div>
+                        <!-- //Web view 형 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 외부 링크 형 선택 시, 보여지는 테이블 -->
+                        외부 링크 형
+                        <div class="gap_top">
+                          <a href="#" class="link" target="_blank" title="새창 열림"
+                            >http ://11st.com.event_2016_open</a
+                          >
+                        </div>
+                        <!-- //외부 링크 형 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 공지사항 선택 시, 보여지는 테이블 -->
+                        공지사항
+                        <div class="table_list gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>공지사항 확인</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 150px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">공지사항 확인</th>
+                                  <td>425 매일매일 새로운 혜택 T life!!</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //공지사항 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 혜택 선택 시, 보여지는 테이블 -->
+                        혜택
+                        <div class="table_list_btm gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>혜택 조회</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 150px" />
+                                <col style="width: *" />
+                                <col style="width: 150px" />
+                                <col style="width: 120px" />
+                                <col style="width: 100px" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" rowspan="2">혜택조회</th>
+                                  <th scope="col">혜택명</th>
+                                  <th scope="col">Type</th>
+                                  <th scope="col">카테고리</th>
+                                  <th scope="col">상품변경</th>
+                                </tr>
+                                <tr>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >더운 여름 밤에도 치늬님은 진리(최대 20자까지 노출)</a
+                                    >
+                                  </td>
+                                  <td>선착순 / 일반형</td>
+                                  <td>푸드 / 외식</td>
+                                  <td>-</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //혜택 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 미션 선택 시, 보여지는 테이블 -->
+                        미션
+                        <div class="table_list_btm gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>미션 선택</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 150px" />
+                                <col style="width: *" />
+                                <col style="width: 170px" />
+                                <col style="width: 100px" />
+                                <col style="width: 100px" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" rowspan="2">미션선택</th>
+                                  <th scope="col">미션명</th>
+                                  <th scope="col">미션속성</th>
+                                  <th scope="col">전시일</th>
+                                  <th scope="col">변경</th>
+                                </tr>
+                                <tr>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림"
+                                      >관심사를 설정하시면 더더욱 다양한 혜택이 두둥</a
+                                    >
+                                  </td>
+                                  <td>정보입력형 &gt; 관심사 설정</td>
+                                  <td>2016.07.20</td>
+                                  <td>-</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //미션 선택 시, 보여지는 테이블 -->
+
+                        <!-- [D] 추천앱 선택 시, 보여지는 테이블 -->
+                        추천앱
+                        <div class="table_list_btm gap_top">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>추천앱 선택</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 150px" />
+                                <col style="width: *" />
+                                <col style="width: 100px" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" rowspan="2">추천앱 선택</th>
+                                  <th scope="col">제목</th>
+                                  <th scope="col">변경</th>
+                                </tr>
+                                <tr>
+                                  <td class="left">
+                                    <a href="#" class="link" target="_blank" title="새창 열림">온 국민의 T 전화</a>
+                                  </td>
+                                  <td>-</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //추천앱 선택 시, 보여지는 테이블 -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">노출설정</th>
+                      <td colspan="3">N</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">작성자 (ID)</th>
+                      <td>Gildong00 (Master)</td>
+                      <th scope="row">작성일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수정자 (ID)</th>
+                      <td>Gildong00 (Master)</td>
+                      <th scope="row">수정일시</th>
+                      <td>2016.11.12&nbsp;&nbsp;15:33</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btngroup">
+                <div class="btn_left">
+                  <a href="#" class="btn_delete">삭제</a>
+                </div>
+                <div class="btn_right">
+                  <a href="#" class="btn_save">확인</a>
+                </div>
+              </div>
+            </div>
+            <!-- //이벤트 배너 수정/조회 테이블 -->
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

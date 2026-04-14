@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>이미지 파일 정보</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../jworks/common/lib/jquery/plugin/jquery.filestyle/css/jquery-filestyle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../../jworks/common/lib/jquery/plugin/jquery.filestyle/js/jquery-filestyle.min.js"
+    ></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+    <script type="text/javascript">
+      $jq(":file").jfilestyle({ theme: "black" });
+    </script>
+  </head>
+  <!-- [D] 팝업 사이즈 : 880*614 -->
+  <body class="popup" style="width: 880px">
+    <!-- pop_wrap -->
+    <div class="pop_wrap">
+      <!-- header -->
+      <header>
+        <h1>이미지 파일 정보</h1>
+      </header>
+      <!-- //header -->
+
+      <!-- pop_contents -->
+      <div class="pop_contents md_contents">
+        <!-- tip area -->
+        <div class="tip_area">
+          <p class="blind">TIP</p>
+          <div class="tip_box">
+            <ul class="tip_list">
+              <li>내용</li>
+            </ul>
+          </div>
+        </div>
+        <!-- //tip area -->
+
+        <!-- tbl_row_default -->
+        <div class="tbl_row_default">
+          <table>
+            <colgroup>
+              <col style="width: 160px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">구분</th>
+                <td>
+                  <select name="" title="선택" style="width: 100%">
+                    <option value="">전체</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션4</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">이미지명</th>
+                <td>
+                  <input type="text" name="" value="" title="이미지명" style="width: 100%" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">번호</th>
+                <td>
+                  <input
+                    type="text"
+                    name=""
+                    value="1"
+                    title="번호"
+                    class="center"
+                    style="width: 60px"
+                    disabled="disabled"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">이미지</th>
+                <td class="img_file_regist">
+                  <div class="img_preview_area">
+                    <p class="img_box"><!-- <img src="../../common/img/dummy_notice_window0.png" alt=""> --></p>
+                  </div>
+                  <div class="file_box">
+                    <input
+                      type="file"
+                      class="jfilestyle"
+                      data-inputSize="532px"
+                      data-theme="black"
+                      data-text="파일선택"
+                    />
+                    <a href="#none" class="btn_md bg_gray">업로드</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //tbl_row_default -->
+
+        <!-- btn -->
+        <div class="btn_area">
+          <a href="#none" class="btn_big bg_deepblue icon_big_save_white">저장</a>
+          <a href="#none" class="btn_big bg_gray icon_big_delete_white">닫기</a>
+        </div>
+        <!-- //btn -->
+      </div>
+      <!-- //pop_contents -->
+    </div>
+    <!-- //pop_wrap -->
+  </body>
+</html>

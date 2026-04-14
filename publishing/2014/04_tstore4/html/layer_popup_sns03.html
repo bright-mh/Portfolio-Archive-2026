@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.selectbox.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.jscrollpane.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.selectbox_type2_pop.js"></script>
+    <script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../js/design.js"></script>
+    <script type="text/javascript" src="../js/jquery.ezmark.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layer_popup");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+        $(window).resize(function () {
+          var wid = 0.5 * ($(window).width() - popup.width());
+          var hei = 0.5 * ($(window).height() - popup.height());
+          popup.css({ top: hei, left: wid });
+        });
+
+        $("#popSelect01").selectboxPop();
+
+        $("div")
+          .find(".scrollCon")
+          .each(function () {
+            var ul = $(this).find("ul");
+            ul.parent().height(parseInt(ul.height()) + 12);
+            $(this).jScrollPane({ showArrows: true });
+            $(this).slideUp(1, function () {
+              $(this).css("margin-top", "0");
+            });
+          });
+        setTimeout(function () {
+          $("div")
+            .find(".scrollCon")
+            .each(function () {
+              $(this).height("167px");
+            });
+        }, 500);
+      });
+      $(document).ready(function () {
+        $(".agrees input[type=checkbox]").ezMark();
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layer_popup">
+      <div class="titleG">
+        <div class="titleCon">내 폰에서 보기</div>
+      </div>
+      <div class="contents">
+        <p class="description">
+          휴대폰 번호를 입력하면 해당 상품 상세페이지를 볼수 있는<br />
+          <span>URL이 문자로 전송</span>됩니다!
+        </p>
+        <div class="phoneCon">
+          <select id="popSelect01">
+            <option selected disabled>선택</option>
+            <option value="1">010</option>
+            <option value="2">011</option>
+            <option value="3">016</option>
+            <option value="4">017</option>
+            <option value="5">018</option>
+            <option value="6">019</option>
+          </select>
+          <div class="inputCon">
+            -<label for="phoneInput" style="display: none">전화번호 입력</label>
+            <input id="phoneInput" type="text" class="text" maxlength="4" />-<label
+              for="phoneInput2"
+              style="display: none"
+              >전화번호 입력</label
+            >
+            <input id="phoneInput2" type="text" class="text" maxlength="4" />
+            <a href="#"><img src="../img/popup/btn_phoneCer.gif" alt="인증번호받기" /></a>
+          </div>
+        </div>
+        <div class="certiNum">
+          <label for="deviceName" style="display: none">휴대기기명</label>
+          <input
+            id="deviceName"
+            type="text"
+            class="text"
+            style="width: 147px"
+            placeholder="인증번호 6자리"
+            maxlength="6"
+          />
+          <span class="btntype"
+            ><a href="#"><img src="../img/common/btn/btn_ok.gif" alt="확인" /></a
+          ></span>
+          <span class="restTime">남은시간 <span>02:55</span></span>
+        </div>
+        <div class="agrees">
+          <span>상품 상세 페이지 URL 발송을 위해 휴대폰 번호를 수집하며,<br />입력하신 번호는 저장하지 않습니다.</span>
+          <div><input type="checkbox" id="typeAg" /><label for="typeAg">동의합니다.</label></div>
+        </div>
+        <p class="snsBtn">
+          <a href="#"><img src="../img/popup/btn_sns_1.png" alt="문자 보내기" /></a>
+        </p>
+        <!-- 활성화 버튼 btn_sns.png -->
+      </div>
+      <div class="footnote">
+        <p>* 전송은 무료이며 입력하신 번호는 저장되지 않습니다.</p>
+        <p>* 고객님의 소중한 정보 보호를 위해 휴대폰 인증이 필요합니다.</p>
+      </div>
+      <div class="border_bottom_m_g">
+        <div class="border_bottom_m_g2"></div>
+      </div>
+      <div class="close">
+        <a href="#"><img src="../img/common/btn/btn_closeX.png" alt="닫기" /></a>
+      </div>
+    </div>
+  </body>
+</html>

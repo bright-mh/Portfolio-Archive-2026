@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>에너지원 별 사용량 | 에너지 모니터링 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/mo.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <!-- 2014-01-07 chart 공통 -->
+
+    <script>
+      jQuery(function () {
+        jQuery("#chart01").highcharts({
+          credits: { enabled: false },
+          chart: {
+            type: "spline",
+            spacing: [40, 0, 0, 0],
+            events: {
+              load: function (event) {
+                onChartLoaded("chart01");
+              },
+            }, // 2014-01-07 폰트 통일을 위해 추가
+          },
+          title: {
+            text: "",
+          },
+          subtitle: {
+            text: "",
+          },
+          xAxis: [
+            {
+              tickWidth: 0,
+              type: "datetime",
+              dateTimeLabelFormats: {
+                day: "%H:%M", //2014-01-06  x축 시간 표기 날짜 수정
+                hour: "%H:%M", //2014-01-06  x축 시간 표기 날짜 수정
+              },
+              //tickInterval: 15 * 60 * 1000,		//2014-01-06 X축 시간 간격 잗동으로 설정
+              labels: {
+                style: {
+                  "font-size": "11px", //2014-01-06 x 축 폰트 사이즈 수정
+                },
+              },
+            },
+          ],
+          yAxis: [
+            {
+              lineWidth: 1,
+              title: {
+                text: "kWh",
+              },
+              min: 0,
+              minorGridLineWidth: 0,
+              gridLineWidth: 1,
+              alternateGridColor: null,
+              tickInterval: 1,
+              tickColor: "#cccccc",
+            },
+            {
+              lineWidth: 1,
+              title: {
+                text: "N㎥",
+              },
+              minorGridLineWidth: 0,
+              gridLineWidth: 1,
+              alternateGridColor: null,
+              tickInterval: 5,
+              tickColor: "#cccccc",
+              opposite: true,
+            },
+          ],
+          plotOptions: {
+            spline: {
+              lineWidth: 2,
+              states: {
+                hover: {
+                  lineWidth: 2,
+                },
+              },
+            },
+          },
+
+          series: [
+            {
+              name: "일반전력",
+              data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1, 7.9, 7.9, 7.5, 6.7],
+              pointStart: Date.UTC(2013, 11, 14), // 시작일. 오늘. 개발 시 적용.
+              pointInterval: 15 * 60 * 1000, // 데이터의 간격. 상단에 tickInterval 과 동일한 값으로 설정.
+              tooltip: {
+                valueSuffix: " kWh",
+                dateTimeLabelFormats: {
+                  hour: "%H:%M",
+                },
+                shared: false,
+                useHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  "<p>" +
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right"> {point.y} </span> ' +
+                  "</p> ",
+                footerFormat: "",
+                valueDecimals: 2,
+              },
+              marker: BC.marker01, // 2014-01-07 marker 통일
+            },
+            {
+              name: "심야전력",
+              data: [3.9, 1.7, 2.3, 3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4],
+              pointStart: Date.UTC(2013, 11, 14), // 시작일. 오늘. 개발 시 적용.
+              pointInterval: 15 * 60 * 1000, // 데이터의 간격. 상단에 tickInterval 과 동일한 값으로 설정.
+              tooltip: {
+                valueSuffix: " kWh",
+                dateTimeLabelFormats: {
+                  hour: "%H:%M",
+                },
+                shared: false,
+                useHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  "<p>" +
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right"> {point.y} </span> ' +
+                  "</p> ",
+                footerFormat: "",
+                valueDecimals: 2,
+              },
+              marker: BC.marker01, // 2014-01-07 marker 통일
+            },
+            {
+              name: "가스",
+              yAxis: 1,
+              color: "#77b4d3",
+              data: [15.0, 20.1, 44.0, 40.3, 54.0, 42.6, 48.4, 36.0, 50.1, 35.0, 34.0, 40.0, 35.0, 34.0, 42.0, 36.0],
+              pointStart: Date.UTC(2013, 11, 14), // 시작일. 오늘. 개발 시 적용.
+              pointInterval: 15 * 60 * 1000, // 데이터의 간격. 상단에 tickInterval 과 동일한 값으로 설정.
+              tooltip: {
+                valueSuffix: " N㎥",
+                dateTimeLabelFormats: {
+                  hour: "%H:%M",
+                },
+                shared: false,
+                useHTML: true,
+                headerFormat: "{point.key}<br />",
+                pointFormat:
+                  "<p>" +
+                  '<span style="color: {series.color}">{series.name}: </span>' +
+                  '<span style="text-align: right"> {point.y} </span> ' +
+                  "</p> ",
+                footerFormat: "",
+                valueDecimals: 2,
+              },
+              marker: BC.marker01, // 2014-01-07 marker 통일
+            },
+          ],
+          legend: {
+            layout: "horizontal",
+            align: "center",
+            verticalAlign: "bottom",
+            floating: false,
+            backgroundColor: "#FFFFFF",
+            borderColor: "#FFFFFF",
+            title: {
+              style: {
+                fontSize: "10px",
+                color: "#777777",
+                fontWeight: "normal",
+              },
+            },
+            style: {
+              fontSize: "10px",
+              color: "#777777",
+              fontWeight: "normal",
+            },
+          },
+          navigation: {
+            menuItemStyle: {
+              fontSize: "11px",
+            },
+          },
+          exporting: {
+            buttons: {
+              contextButton: {
+                align: "right",
+                y: -40,
+                x: -22,
+              },
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title01.gif" alt="에너지 모니터링" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02 on">
+              <a href="#link"><span>에너지원 별 사용량</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>목표대비 사용량</span></a>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>전기 사용량</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>계통 별 전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기 사용패턴</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>층별 전기사용량</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>가스 사용량</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>실내외 온도/습도</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>에너지원 별 사용량</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>에너지 모니터링<span>&gt;</span></li>
+                <li class="last">에너지원 별 사용량</li>
+              </ul>
+            </div>
+
+            <!-- 도움말, 인쇄, 북마크 -->
+            <div class="clear">
+              <ul class="sideList">
+                <li class="sideStyle01"><a href="#link">도움말</a></li>
+                <li class="sideStyle02"><a href="javascript:printView()">인쇄</a></li>
+                <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                <li class="sideStyle03"><a href="#link">북마크</a></li>
+              </ul>
+            </div>
+            <!-- //도움말, 인쇄, 북마크 -->
+
+            <!-- 차트 영역 -->
+            <section class="BoxArea mt10">
+              <div class="boxBg">
+                <!--차트 삽입부분 -->
+                <div id="chart01" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+              </div>
+            </section>
+            <!-- //차트 영역 -->
+
+            <!-- 누적 사용량&주요정보 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!-- 누적 사용량 -->
+                <article class="tableGroup01">
+                  <h2>누적 사용량<span class="titleInfo">오늘 00:00 ~ 20:15까지의 누적 사용량</span></h2>
+                  <!-- [D] 가스 : class="accColor_gas" / 전기 : class="accColor_ele" -->
+                  <ul class="accumulate">
+                    <li class="accColor01">
+                      <span class="acc_Style01">일반전력</span>
+                      <span class="acc_Style02">288</span> <span class="acc_Style03">kWh</span>
+                    </li>
+                    <li class="accColor02">
+                      <span class="acc_Style01">심야전력</span>
+                      <span class="acc_Style02">199</span> <span class="acc_Style03">kWh</span>
+                    </li>
+                    <li class="accColor_gas">
+                      <span class="acc_Style01">가스</span>
+                      <span class="acc_Style02">38</span> <span class="acc_Style03">N㎥</span>
+                    </li>
+                  </ul>
+                </article>
+                <!-- //누적 사용량 -->
+
+                <!-- 주요정보 -->
+                <article class="tableGroup01 mt26">
+                  <h2>주요정보<span class="titleInfo">오늘 00:00 ~ 20:15까지의 에너지원 별 사용량 주요정보</span></h2>
+                  <table class="table_style01">
+                    <caption class="blind">
+                      에너지원 별 사용량 주요정보
+                    </caption>
+                    <colgroup>
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 16.6%" />
+                      <col style="width: 17%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col" colspan="2">최대</th>
+                        <th scope="col" colspan="2">최소</th>
+                        <th scope="col">평균</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="thStyle">일반전력</th>
+                        <td>13:15</td>
+                        <td>9,838.13 kWh</td>
+                        <td>13:15</td>
+                        <td>9,838.13 kWh</td>
+                        <td>9,838.13 kWh</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="thStyle">심야전력</th>
+                        <td>13:15</td>
+                        <td>9,838.13 kWh</td>
+                        <td>13:15</td>
+                        <td>9,838.13 kWh</td>
+                        <td>9,838.13 kWh</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="thStyle">가스</th>
+                        <td>13:15</td>
+                        <td>9,838.13 N㎥</td>
+                        <td>13:15</td>
+                        <td>9,838.13 N㎥</td>
+                        <td>9,838.13 N㎥</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+                <!-- //주요정보 -->
+              </div>
+            </section>
+            <!-- //누적 사용량&주요정보 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script>
+      function printView() {
+        setPrintMode(1);
+        $("#chart01").highcharts().reflow();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      평균 사용량 | 전기 사용패턴 | 에너지 사용량 패턴분석 | 에너지 분석 | 빌딩 에너지 관리 시스템 CLOUD BEMS
+    </title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/an.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/html/2014/bems/js/jquery.selectbox-0.2.js"></script>
+    <script src="/html/2014/bems/js/custom/bems.datatable.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".input_date").datepicker();
+      });
+    </script>
+
+    <script src="/html/2014/bems/js/custom/chart_common.js"></script>
+    <script src="chartScripts/AN_TIME-EL_001.js"></script>
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title02.gif" alt="에너지 분석" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth03">
+              <a href="#link"><span>트랜드 분석</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>전체 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>가스 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>층별 전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기피크</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>목표대비 사용량 분석</span></a>
+            </li>
+            <li class="depth03 on">
+              <a href="#link"><span>에너지 사용량 패턴분석</span></a>
+              <ul>
+                <li class="on">
+                  <a href="#link"><span>전기 사용패턴</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>가스 사용패턴</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>층별 누적 사용량 분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>원단위 비교 분석</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>사용자 정의 분석</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>전기 사용패턴</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>에너지 분석<span>&gt;</span></li>
+                <li>에너지 사용량 패턴분석<span>&gt;</span></li>
+                <li>전기 사용패턴<span>&gt;</span></li>
+                <li class="last">평균 사용량</li>
+              </ul>
+            </div>
+
+            <!-- 탭영역 -->
+            <section class="tabBox">
+              <div class="boxBg">
+                <div class="tabTitleGroup">
+                  <!-- [D] 선택된 탭의 li에 class="on" 삽입 -->
+                  <ul class="tabTitleList">
+                    <li class="on"><a href="#link">평균 사용량</a></li>
+                    <li><a href="#link">누적 사용량</a></li>
+                  </ul>
+                  <ul class="tabSideList">
+                    <li class="tabSideStyle01"><a href="#link">도움말</a></li>
+                    <li class="tabSideStyle02"><a href="#link">인쇄</a></li>
+                    <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                    <li class="tabSideStyle03"><a href="#link">북마크</a></li>
+                  </ul>
+                </div>
+
+                <!-- 탭 상세 -->
+                <div class="tabDetailGroup">
+                  <div class="layerGroup clear02">
+                    <!-- 층 그룹 -->
+                    <div class="fl">
+                      <!-- layerOne -->
+                      <div class="layerOne clear02">
+                        <div class="fl clear">
+                          <label for="input_date">기간선택</label>
+                          <input
+                            type="text"
+                            name="input_date"
+                            id="input_date"
+                            value="2013-01-15"
+                            class="fl input_date w86"
+                          />
+                          <span class="fl rangeStyle">~</span>
+                          <input type="text" name="input_date" value="2013-01-15" class="fl input_date w86" />
+                        </div>
+                        <div class="fl pl10">
+                          <!-- [D] 선택된 버튼의 a에 class="on" 삽입 -->
+                          <p class="btn_area">
+                            <a href="#link" class="on"><span>오늘</span></a>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- //layerOne -->
+                      <!-- layerTwo -->
+                      <div class="layerTwo clear02">
+                        <!-- 131203_id 중복 문제로 수정 -->
+                        <div class="fl clear">
+                          <label for="input_date2">비교대상</label>
+                          <input
+                            type="text"
+                            name="input_date"
+                            id="input_date2"
+                            value="2013-01-07"
+                            class="fl input_date w86"
+                          />
+                          <span class="fl rangeStyle">~</span>
+                          <input type="text" name="input_date" value="2013-01-14" class="fl input_date w86" />
+                        </div>
+                        <!-- //131203_id 중복 문제로 수정 -->
+                        <div class="fl pl10">
+                          <!-- [D] 선택된 버튼의 a에 class="on" 삽입 -->
+                          <!-- 2014-01-06 "최근 일주일"로 텍스트 및 띄어쓰기_수정 -->
+                          <p class="btn_area">
+                            <a href="#link" class="on"><span>최근 일주일 평균</span></a>
+                          </p>
+                          <!-- //2014-01-06 "최근 일주일"로 텍스트 및 띄어쓰기_수정 -->
+                        </div>
+                      </div>
+                      <!-- //layerTwo -->
+                    </div>
+                    <!-- //층 그룹 -->
+                    <p class="fl btn_search">
+                      <a href="#link"><span>검색</span></a>
+                    </p>
+                  </div>
+                </div>
+                <!-- //탭 상세 -->
+              </div>
+            </section>
+            <!-- //탭영역 -->
+
+            <!-- 차트 영역 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!--차트 삽입부분 -->
+                <div id="chart01" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <!--//차트 삽입부분 -->
+                <!-- 2014-01-21 범례 영역 자리 확보를 위한_수정 -->
+                <ul class="chartList clear02">
+                  <!-- [D] 빈 span 태그는 효과를 주기 위한 태그입니다. 지우지 마세요! -->
+                  <li class="listStyle01"><span></span>경부하(00원)</li>
+                  <li class="listStyle02"><span></span>중부하(00원)</li>
+                  <li class="listStyle03"><span></span>최대부하(00원)</li>
+                </ul>
+                <!-- //2014-01-21 범례 영역 자리 확보를 위한_수정 -->
+              </div>
+            </section>
+            <!-- //차트 영역 -->
+
+            <!-- 테이블 영역 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <!-- 주요정보 -->
+                <article class="tableGroup01">
+                  <h2>주요정보</h2>
+                  <table class="table_style01">
+                    <caption class="blind">
+                      전기 사용패턴 평균 사용량 주요정보
+                    </caption>
+                    <colgroup>
+                      <col style="width: 20%" />
+                      <col style="width: 20%" />
+                      <col style="width: 20%" />
+                      <col style="width: 20%" />
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">최대 (kWh)</th>
+                        <th scope="col">최소 (kWh)</th>
+                        <th scope="col">평균 (kWh)</th>
+                        <th scope="col">누적 총계 (kWh)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>검색대상</td>
+                        <td>10:00 / 245</td>
+                        <td>04:00, 05:00 / 106</td>
+                        <td>186.09</td>
+                        <td>3,929</td>
+                      </tr>
+                      <tr>
+                        <td>비교대상</td>
+                        <td>10:00 / 245</td>
+                        <td>04:00, 05:00 / 106</td>
+                        <td>186.09</td>
+                        <td>3,929</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+                <!-- //주요정보 -->
+
+                <!-- 차트 데이터 -->
+                <article class="tableGroup02 mt40">
+                  <h2 class="mb0">차트 데이터</h2>
+                  <table class="table table_id_4">
+                    <caption class="blind">
+                      전기 사용패턴 평균 사용량 차트 데이터
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">시간</th>
+                        <th scope="col">사용량 (kWh)</th>
+                        <th scope="col">비교대상 (kWh)</th>
+                        <th scope="col">외기온도</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>01:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>02:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>03:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>04:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>05:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>06:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>07:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>08:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>09:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>10:00</td>
+                        <td>139</td>
+                        <td>126</td>
+                        <td>12</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+                <!-- //차트 데이터 -->
+              </div>
+            </section>
+            <!-- 테이블 영역 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

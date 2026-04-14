@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+textarea,
+input,
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-family: "돋움", Dotum, Helvetica, AppleGothic, Sans-serif;
+  color: #666666;
+  font-weight: normal;
+}
+
+.opic_jop_detail textarea,
+.opic_jop_detail input,
+.opic_jop_detail html,
+.opic_jop_detail body,
+.opic_jop_detail div,
+.opic_jop_detail span,
+.opic_jop_detail object,
+.opic_jop_detail iframe,
+.opic_jop_detail h1,
+.opic_jop_detail h2,
+.opic_jop_detail h3,
+.opic_jop_detail h4,
+.opic_jop_detail h5,
+.opic_jop_detail h6,
+.opic_jop_detail p,
+.opic_jop_detail blockquote,
+.opic_jop_detail pre,
+.opic_jop_detail a,
+.opic_jop_detail abbr,
+.opic_jop_detail acronym,
+.opic_jop_detail address,
+.opic_jop_detail code,
+.opic_jop_detail del,
+.opic_jop_detail dfn,
+.opic_jop_detail em,
+.opic_jop_detail img,
+.opic_jop_detail q,
+.opic_jop_detail dl,
+.opic_jop_detail dt,
+.opic_jop_detail dd,
+.opic_jop_detail ol,
+.opic_jop_detail ul,
+.opic_jop_detail li,
+.opic_jop_detail fieldset,
+.opic_jop_detail form,
+.opic_jop_detail label,
+.opic_jop_detail legend,
+.opic_jop_detail table,
+.opic_jop_detail caption,
+.opic_jop_detail tbody,
+.opic_jop_detail tfoot,
+.opic_jop_detail thead,
+.opic_jop_detail tr,
+.opic_jop_detail th,
+.opic_jop_detail td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: middle;
+  line-height: 18px;
+  font-family: "돋움", Dotum, Helvetica, AppleGothic, Sans-serif;
+  color: #666666;
+  font-weight: normal;
+}
+
+select {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  font-size: 12px;
+  font-family: "돋움", Dotum, Helvetica, AppleGothic, Sans-serif;
+  color: #666666;
+  font-weight: normal;
+  height: 20px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+table,
+td,
+th {
+  vertical-align: middle;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote {
+  quotes: "" "";
+}
+a img {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dd9717 !important;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+a,
+input {
+  word-wrap: expression(this.style.wordWrap= "normal", this.hideFocus=true);
+}

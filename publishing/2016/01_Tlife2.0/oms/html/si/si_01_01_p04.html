@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>상세그룹 수정/조회 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script>
+      $(function () {
+        //파일 업로드
+        var fileTarget = $(".filebox .file_hidden");
+
+        fileTarget.on("change", function () {
+          if (window.FileReader) {
+            // modern browser
+            var filename = $(this)[0].files[0].name;
+          } else {
+            // old IE
+            var filename = $(this).val().split("/").pop().split("\\").pop();
+          }
+
+          $(this).siblings(".file_name").val(filename);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>상세그룹 수정/조회</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <ul class="guide">
+            <li>상세그룹에 필요한 정보를 입력해 주세요.</li>
+          </ul>
+
+          <!-- 상세그룹 수정/조회 -->
+          <div class="table_list">
+            <div class="comm_right">
+              <em class="ess">필수 입력 항목입니다.</em>
+            </div>
+
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong
+                    >코드 그룹명, 상세 코드, 정렬 순서, 상세 코드명, 설명, 이미지, 속성1, 속성2, 속성3, 속성4, 속성5,
+                    사용상태, 수정자 (ID), 수정일시가 있는 상세그룹 수정/조회 입력 서식</strong
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">코드 그룹명</th>
+                    <td colspan="3">A010</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">상세 코드</th>
+                    <td>AAl1019</td>
+                    <th scope="row">
+                      <label for="range_num" class="ess">정렬 순서</label>
+                    </th>
+                    <td>
+                      <input type="text" id="range_num" class="wid_per80" value="1" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="code_name" class="ess">상세 코드명</label>
+                    </th>
+                    <td colspan="3">
+                      <input type="text" id="code_name" class="wid_per80" value="A &gt; AA 그룹" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="account">설명</label>
+                    </th>
+                    <td colspan="3">
+                      <input type="text" id="account" class="wid_per80" value="A의 AA 그룹" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="image">이미지</label>
+                    </th>
+                    <td colspan="3">
+                      <div class="img_area">
+                        <img src="../../img/img_noimg.gif" alt="push 이미지" width="320" height="246" />
+                      </div>
+                      <div class="file_wrap">
+                        <div class="filebox">
+                          <input type="text" class="file_name" readonly="readonly" />
+
+                          <label for="file_choice">파일선택</label>
+                          <input type="file" id="file_choice" class="file_hidden" />
+                          <a href="#" class="btn_small">삭제</a>
+                        </div>
+                        <ul class="caution_list">
+                          <li>OOO*OOOpx 의 PNG 파일</li>
+                          <li>업로드 파일명에 특수문자(!@#$_,등) 및 공백이 있는 경우 오류 발생</li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="attribute1">속성1</label>
+                    </th>
+                    <td colspan="3">
+                      <input type="text" id="attribute1" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="attribute2">속성2</label>
+                    </th>
+                    <td colspan="3">
+                      <input type="text" id="attribute2" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="attribute3">속성3</label>
+                    </th>
+                    <td colspan="3">
+                      <input type="text" id="attribute3" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="attribute4">속성4</label>
+                    </th>
+                    <td colspan="3">
+                      <input type="text" id="attribute4" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="attribute5">속성5</label>
+                    </th>
+                    <td colspan="3">
+                      <input type="text" id="attribute5" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">사용상태</th>
+                    <td colspan="3">
+                      <input type="radio" id="use_state1" name="use_state" checked="checked" /><label
+                        for="use_state1"
+                        class="radio_range"
+                        >사용</label
+                      >
+                      <input type="radio" id="use_state2" name="use_state" /><label for="use_state2" class="radio_range"
+                        >미사용</label
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">수정자 (ID)</th>
+                    <td>Gildong01 (Master)</td>
+                    <th scope="row">수정일시</th>
+                    <td>YYYY.MM.DD&nbsp;&nbsp;TT:MM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //상세그룹 수정/조회 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_save">저장</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

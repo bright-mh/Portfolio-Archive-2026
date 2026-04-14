@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>코드그룹 신규등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>코드그룹 신규등록</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont">
+          <ul class="guide">
+            <li>코드등록에 필요한 코드 및 그룹명, 정렬순서를 입력해 주세요.</li>
+          </ul>
+
+          <!-- 코드그룹 신규등록 -->
+          <div class="table_list">
+            <div class="comm_right">
+              <em class="ess">필수 입력 항목입니다.</em>
+            </div>
+
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong
+                    >정렬 순서, 코드그룹 코드, 코드 그룹명, 설명, 사용여부가 있는 코드그룹 신규등록 입력 서식</strong
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <label for="range_num" class="ess">정렬 순서</label>
+                    </th>
+                    <td>
+                      <input type="text" id="range_num" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="group_code" class="ess">코드그룹 코드</label>
+                    </th>
+                    <td>
+                      <input type="text" id="group_code" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="code_name" class="ess">코드 그룹명</label>
+                    </th>
+                    <td>
+                      <input type="text" id="code_name" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="account">설명</label>
+                    </th>
+                    <td>
+                      <input type="text" id="account" class="wid_per80" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">사용여부</th>
+                    <td>
+                      <input type="radio" id="use" name="use_or_not" /><label for="use" class="radio_range">사용</label>
+                      <input type="radio" id="disuse" name="use_or_not" checked="checked" /><label
+                        for="disuse"
+                        class="radio_range"
+                        >미 사용</label
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //코드그룹 신규등록 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_save">저장</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

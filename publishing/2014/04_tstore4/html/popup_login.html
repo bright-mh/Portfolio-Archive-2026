@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>popup</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]><script src="../js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var popup = $(this).find(".layers");
+        var wid = 0.5 * ($(window).width() - popup.width());
+        var hei = 0.5 * ($(window).height() - popup.height());
+        popup.css({ top: hei, left: wid });
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header");
+        document.createElement("footer");
+        document.createElement("section");
+        document.createElement("aside");
+        document.createElement("nav");
+        document.createElement("article");
+        document.createElement("hgroup");
+        document.createElement("time");
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="layers" style="width: 375px">
+      <div class="layers-header2">
+        <h1><img src="../img/popup/h1_login.gif" alt="로그인 잠금 해제" /></h1>
+        <div class="header-group login"></div>
+      </div>
+      <div class="layers-contents">
+        <p class="layers-desc2">T store 아이디 / One ID</p>
+        <label for="idInput" style="display: none">ID 입력</label>
+        <input id="idInput" type="text" class="text" /><br />
+        <p class="layers-desc2 mt7">비밀번호</p>
+        <label for="idInput2" style="display: none">비밀번호 입력</label>
+        <input id="idInput2" type="password" class="text" />
+        <p class="description">
+          아이디 또는 비밀번호 찾기는 고객님의 스마트폰 모바일<br />
+          <a href="#">T store &gt; 마이페이지 &gt; 환경설정 &gt; 계정설정 &gt; 계정관리 &gt; 로그인</a>에서 가능합니다.
+        </p>
+        <p class="layers-desc2">보안문자</p>
+        <div class="text">
+          <span><img src="../img/popup/sample.gif" alt="" /></span>
+          <span class="reload"
+            ><a href="#"><img src="../img/popup/icon_reload.gif" alt="문자 다시받기" /> 문자 다시받기</a></span
+          >
+        </div>
+        <label for="textInput" style="display: none">그림문자 입력</label>
+        <input id="textInput" type="text" class="text" placeholder="그림에 보이는 문자를 입력해주세요." />
+        <p class="loginTerm"></p>
+        <div class="close">
+          <a href="#"><img src="../img/common/btn/btn_ok2.gif" alt="확인" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

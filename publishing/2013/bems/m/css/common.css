@@ -1,0 +1,471 @@
+@charset "utf-8";
+
+/* common */
+.clear{*zoom:1;}
+.clear:after {content:"";clear:both;display:block;}
+.blind{width:0;height:0;font-size:0;text-indent:-999999;overflow:hidden;visibility:hidden;}
+.colorH{color:#c82c2d;}
+
+body	{position:relative; height:100%; width:100%; background:#dce1e6;}
+#wrap	{position:relative;min-height:100%;height:100%;}
+
+/*header*/
+/* 2014-01-24 GNB 디자인 고도화를 위한_수정 */
+header{position:relative;height:43px;background:#3b3937; border-top:1px solid #454341;border-bottom:1px solid #282524; padding:0 40px; text-align:center;}
+header h1{height:29px;padding-top:14px;margin:0 auto; color:#f6f7fa; vertical-align:middle;}
+header h1 img{margin-bottom:-1px;}
+header h1 a	{display:inline-block;height:16px;}
+header h1 span{margin-left:7px;}
+header .sMenu{position:absolute;top:0;left:0;display:inline-block;height:44px;width:40px;background:url("/html/2014/bems/m/images/common/dot_head.png") 39px 0 repeat-y; border-right:1px solid #454341;}
+header .sMenu a{display:block;height:11px; padding:15px 11px 19px;}
+header .rMenu{position:absolute;top:0;right:0;display:inline-block;height:44px;width:40px;background:url("/html/2014/bems/m/images/common/dot_head02.png") 0 0 repeat-y; border-left:1px solid #292524;}
+header .rMenu a{display:block;height:11px; padding:15px 11px 19px;}
+
+/*contents*/
+#contents{background:#dce1e6;height: auto !important; margin:0 auto -114px;}
+#contents ul.tab{height:35px;}
+#contents ul.tab li{float:left; width:50%; text-align:center; background:#484545 url("/html/2014/bems/m/images/common/dot_head03.png") 0 0 repeat-y;}
+#contents ul.tab li a{display:block; height:15px;padding:10px 0;background:url("/html/2014/bems/m/images/common/dot_head03.png") 0 0 repeat-x;}
+#contents ul.tab li a:first-child{border-right:1px solid #282524;}
+#contents ul.tab li.on{background:#332f2f;}
+#contents ul.tab li.on a{background:url("/html/2014/bems/m/images/common/dot_head_tab.png") 0 0 repeat-x;}
+/* //2014-01-24 GNB 디자인 고도화를 위한_수정 */
+
+/*footer*/
+.push{height:114px;}
+footer .push{clear:both;}
+/* 2014-01-07 footer 로그아웃 버튼 상하여백 영역 조절_수정 */
+footer{position:relative;text-align:center; margin:0 auto; background:#dce1e6;}
+/* //2014-01-07 footer 로그아웃 버튼 상하여백 영역 조절_수정 */
+footer .dirBtn{position:relative; display:block;color:#ffffff; height:30px; padding:5px 5px 10px;border-bottom:1px solid #bdc1c6; background:#dce1e6 url("/html/2014/bems/m/images/common/dot_footer.png") 0 bottom repeat-x;}
+footer .dirBtn .footBtn{position:relative; float:left; display:inline-block; margin-right:5px;border-top:1px solid #8b96a6; border-bottom:1px solid #bfc5cf;}
+/*footer .dirBtn .footBtn.top{float:right; margin-left:5px;margin-right:0;} 2014-02-14 수정  footBtn top 별도로 분리*/ 
+footer .dirBtn .footBtn a{position:relative; display:inline-block; height:11px; padding:7px 8px 7px 8px; background:#9ea7b4;border:1px solid #8b96a6; border-top:1px solid #bfc5cf; color:#fff; line-height:100%;}
+footer .copy{padding:14px 0 15px; margin:0 auto; background:#d2d7dc; font-size:10px;}
+
+
+/*2014-02-14 footBtn top으로 바로가기 버튼 수정*/
+.top{position: fixed; z-index: 1000; bottom: 10px; right: 5px;}
+.top a{position:relative; display:inline-block; height:11px; padding:7px 8px 7px 8px; background:#9ea7b4;border:1px solid #8b96a6; border-top:1px solid #bfc5cf; color:#fff; line-height:100%;}
+/*End 2014-02-14 footBtn top으로 바로가기 버튼 수정*/
+
+/*today wearther*/
+article.today{font-size:10px;height:20px;padding-top:5px; margin:0 auto; text-align:center; color:#666666; font-weight:bold; border-bottom:1px solid #edeff1;vertical-align:middle;}
+article.today .temper{display:inline-block; text-align:right; padding-right:5px;}
+article.today .humidity{display:inline-block; text-align:left; margin-left:5px;}
+article.today img{vertical-align:middle; margin-right:3px;margin-bottom:3px;}
+article.today .high{color:#38a5db;}
+article.today .low{color:#e54a2a;}
+
+/*touchSlide,boxModule area*/
+#touchSlider6{width:100%; height:100%; min-height:; margin:0 auto; position:relative;overflow:hidden;}
+#touchSlider6 ul.slides{width:99999px; position:absolute; top:0; left:0;overflow:hidden;}
+#touchSlider6 ul.slides li.page{float:left; width:100%; height:100%; background:#dce1e6; font-size:14px; color:#fff;}
+#touchSlider6 ul.slides li.page .contBox{margin:0 5px 5px 5px; padding:10px;border:1px solid #c8ccd3; border-bottom:2px solid #c8ccd3; background:#fff; color:#666;}
+#touchSlider6 ul.slides li.page .contBox h3{font-size:14px;color:#333;}
+#touchSlider6 ul.slides li.page .contBox ul.multiBox{}
+#touchSlider6 ul.slides li.page .contBox ul.multiBox li.dotBox{border-top:2px dotted #ccc;padding-top:7px; margin-top:10px;}
+#touchSlider6 ul.slides li.page .contBox ul.multiBox li.dotBox:first-child{border-top:none;padding-top:0; margin-top:0;}
+#touchSlider6 ul.slides li.page .contBox ul.multiBox li.dotBox:after{clear:both;}
+
+/*boxModule-half*/
+#touchSlider6 ul.slides li.page .contBox.half{position:relative;display:block;background:none;box-shadow:none;border:none;padding:0;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf{height:124px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li{float:left; position:relative; width:50%; padding:0;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox{height:102px;padding:10px;border:1px solid #c8ccd3; border-bottom:2px solid #c8ccd3; background:#fff; color:#666;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li:first-child .innBox{margin-right:3px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li:last-child .innBox{margin-left:2px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox h3{font-size:14px;color:#333;}
+
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee{color:#fff; font-weight:bold;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee p{padding:13px 5px 11px;margin:10px 0;font-size:15px;background:#a1a1a1; text-align:center;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee p span{font-size:11px;}
+@media all and (min-width:480px) { 
+	#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee p{padding:12px 5px 10px;font-size:23px;}
+	#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee strong{padding-right:26px; background:url("/html/2014/bems/m/images/common/icon_coin.png") 100% 50% no-repeat; background-size:19px auto;}
+}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee dl{position:relative;color:#555;clear:both;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee dl dt{position:absolute;bottom:-1px;left:0;font-size:10px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee dl dt:first-child{top:1px;left:0;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee dl dd{margin-left:65px;font-size:12px;font-weight:bold;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .fee img{margin:0 0 2px 3px;}
+
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed{color:#fff; font-weight:normal;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed p{padding:12px 10px 10px;margin:10px 0;font-size:23px;background:#e46c50; text-align:left;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed p span{font-size:11px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed .build{position:relative; bottom:6px; float:right; display:inline-block; width:19px; height:29px; margin:-1px 0 0 0; border-bottom:0; background:#e46c50; vertical-align:bottom;background:url("/html/2014/bems/m/images/common/icon_building_off.png") 0 100% no-repeat; background-size:auto 29px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed .buildOn{position:absolute; bottom:0; left:0; display:inline-block; width:19px; margin:-1px 0 0 0; border-bottom:0; background:#be3c1d; vertical-align:bottom;bottom;background:url("/html/2014/bems/m/images/common/icon_building_on.png") 0 100% no-repeat; background-size:auto 29px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed dl{position:relative;color:#555;clear:both;}
+/* 2014-01-08 dashboard 목표대비 사용량 bg 아이콘 위치_수정 */
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed dl dt{position:absolute;bottom:-1px;left:0;padding-left:9px;font-size:10px;line-height:12px;background:url("/html/2014/bems/m/images/common/icon_fire_off.png") 0 1px no-repeat; background-size:auto 10px;}
+/* //2014-01-08 dashboard 목표대비 사용량 bg 아이콘 위치_수정 */
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed dl dt:first-child{top:1px;left:0;background:url("/html/2014/bems/m/images/common/icon_bolt_off.png") 0 2px no-repeat; background-size:auto 10px;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed dl dd{margin-left:36px;font-size:12px;font-weight:bold;}
+#touchSlider6 ul.slides li.page .contBox.half .moduleHalf li .innBox .targetUsed img{margin:0 0 2px 3px;}
+
+/*touchSlide area*/
+.btn_area{overflow:hidden; text-align:center; height:18px;}
+.btn_area button {display:block; width:100px; height:36px; background:#000; font-size:16px; color:#fff; font-weight:bold;}
+.btn_area button.btn_prev{float:left;}
+.btn_area button.btn_next{float:right;}
+.btn_area .btn_page{display:inline-block; height:3px; width:30px; margin:8px 3px 3px; text-indent:-9999px; background:#fdfdfd; border-top:1px solid #b2b2b2; border-bottom:1px solid #dce1e6;}
+.btn_area .btn_page.on {background:#ef8069; border-top:1px solid #b55b48; border-bottom:1px solid #fdfdfd;}
+
+/*Graphic area*/
+.dotBox h3{font-size:14px; color:#333;}
+/* 2014-01-20 수치데이터 자리 확보를 위한 레이아웃 변경_수정01 */
+.dotBox .resultData{position:relative; display:block;overflow:hidden;}
+.dotBox .resultData .time{display:block;float:left;margin:11px 20px 0 0; font-size:11px;color:#777;}
+.dotBox .resultData p.used{float:left;margin:8px 0 0 0;font-size:23px; font-weight:bold; color:#333;}
+.dotBox .resultData p.used span{font-size:10px;}
+.dotBox .iGraphBox ul{}
+.dotBox .iGraphBox li.iGraph{height:15px;margin:0; padding:0; position:relative;}
+/* //2014-01-20 수치데이터 자리 확보를 위한 레이아웃 변경_수정01 */
+
+
+
+/* Inline Bar Graph */
+/* 2014-01-20 수치데이터 자리 확보를 위한 레이아웃 변경_수정02 */
+.iGraphBox{position:relative;margin-top:8px; min-height:50px;}
+/* //2014-01-20 수치데이터 자리 확보를 위한 레이아웃 변경_수정02 */
+.iGraphBox .introDuct{margin-top:7px;font-size:10px; color:#555; letter-spacing:-0.06em;}
+.iGraphBox .introDuct span{margin-right:7px;}
+.iGraphBox .introDuct span img{margin-right:1px;}
+.iGraphBox .introDuct span.last{margin-right:10px;}
+.iGraphBox .introDuct span.last img{margin-left:2px;margin-right:0px;}
+.iGraph{white-space:nowrap; line-height:normal;margin:0; padding:0;}
+.iGraph .gBar{display:inline-block; width:100%; height:15px; margin:0;}
+/* 2014-01-08 dashboard 오늘의 전기, 오늘의 가스 막대그래프 box-shadow 추가_수정 */
+.iGraph .gAction{display:inline-block; height:15px; background:#e46c50;box-shadow:inset 0 1px 1px #bd5942;}
+.iGraph .gAction2{display:inline-block; height:15px; background:#b3381b;}
+.iGraph .gAction3{display:inline-block; height:15px; background:#54a4cb;box-shadow:inset 0 1px 1px #4688a8;}
+.iGraph .gAction4{display:inline-block; height:15px; background:#addaef;box-shadow:inset 0 1px 1px #97bed1;}
+.iGraph .gPercent{display:none;}
+.iGraph.yesterD .gBar{background:#d7d8db;box-shadow:inset 0 1px 1px #c4c5c7;}
+.iGraph.yesterD .gAction{background:#febaa2;box-shadow:inset 0 1px 1px #dea48f;}
+/* //2014-01-08 dashboard 오늘의 전기, 오늘의 가스 막대그래프 box-shadow 추가_수정 */
+
+
+
+
+
+
+/* Vertical Bar Graph */
+.vGraph{padding:0 0 15px;}
+.vGraph ul{margin:0; padding:0; height:48px; font-size:11px; list-style:none;}
+.vGraph ul:after{content:""; display:block; clear:both;}
+/* 2014-01-20 수치데이터 영역 확보를 위한 레이아웃 변경_수정03 */
+/* 2014-01-28 단말기별 영역 확보를 위한 넓이값_수정 */
+.vGraph li{float:left; display:inline; width:9.6%; height:48px; margin:0 2.7%; position:relative; text-align:center; white-space:nowrap; background-size:1px 8px; box-shadow:inset 0 1px 2px #b3b0b0;}
+/* //2014-01-28 단말기별 영역 확보를 위한 넓이값_수정 */
+.vGraph li:first-child{margin-left:0;}
+.vGraph li:last-child{margin-right:0;}
+@media all and (min-width:480px) { 
+	.vGraph li{width:36px;margin:0 13px;}
+}
+/* //2014-01-20 수치데이터 영역 확보를 위한 레이아웃 변경_수정03 */
+/* 2014-01-08 dashboard 금주의 누적 사용량 일~월까지 이탤릭체 스타일_수정 */
+.vGraph .gTerm{position:relative; display:inline-block; width:100%; height:20px; line-height:18px; margin:0 -100% -20px 0; padding:48px 0 0 0; vertical-align:bottom; color:#777777;font-size:9px;font-style:normal;}
+/* 2014-01-08 dashboard 금주의 누적 사용량 일~월까지 이탤릭체 스타일_수정 */
+.vGraph .gTerm img{margin-top:2px;}
+.vGraph .gBar{position:relative; display:inline-block; width:100%; margin:-1px 0 0 0; border-bottom:0; background:#e46c50; vertical-align:bottom;}
+.vGraph .gBar2{position:absolute; bottom:0; left:0; display:inline-block; width:100%; margin:-1px 0 0 0; border-bottom:0; background:#be3c1d; vertical-align:bottom;}
+.vGraph .gBar3{position:relative; display:inline-block; width:100%; margin:-1px 0 0 0; border-bottom:0; background:#addaef; vertical-align:bottom;}
+.vGraph .gBar4{position:absolute; bottom:0; left:0; display:inline-block; width:100%; margin:-1px 0 0 0; border-bottom:0; background:#1571a6; vertical-align:bottom;}
+.vGraph .gBar span{position:absolute; width:100%; top:-20px; left:0; color:#777777;}
+.vGraph .numer{display:none;}
+
+
+/* 131211jhy 추가 dashboard 그래프 배경 추가*/
+
+.vGraph .bg {width:100%; height:100%; position:absolute; left:0; bottom:0;}
+.vGraph .bg .gBar{position:absolute; left:0; bottom:0; width:100%; height:100%; background:#e9e9e9;}
+.vGraph .bg .gBar2{position:absolute; left:0; bottom:0; width:100%; height:100%; background:#ddd9d9;}
+
+/*// 131211jhy 추가 dashboard 그래프 배경 추가*/
+
+
+
+
+
+
+/* 오늘의 피크 */
+.peak{position:relative;width:100%;color:#333;margin-bottom:22px;}
+.peak h3{font-size:14px;}
+.peak h3 span{display:block;font-size:11px;color:#777;}
+.peak p{position:absolute;bottom:0;right:0;}
+/* 2014-01-09 dashboard:오늘의 일반전력피크 - 수치 데이터 7자리 확보를 위한_수정01 */
+.peak p strong{font-size:25px;}
+/* 2014-01-20 폰트 사이즈 조절을 위한_수정01 */
+.peak p span{font-size:10px;font-weight:bold;}
+/* //2014-01-20 폰트 사이즈 조절을 위한_수정01 */
+/* //2014-01-09 dashboard:오늘의 일반전력피크 - 수치 데이터 7자리 확보를 위한_수정01 */
+.peak p span.condition{margin-left:8px; font-size:11px;font-weight:normal;}
+.peak p span.condition img{width:auto; height:20px;}
+
+.peakGauge{margin:0 auto; text-align:center;}
+/* 2014-02-13 dashboard_오늘의 일반전력피크_수정 */
+.peakGauge .chartBox{display:inline-block;position:relative;margin-right:10px;}
+.peakGauge .chartBox dl{position:absolute;top:100px;left:16px;}
+.peakGauge .chartBox dl dt{padding:0 0 3px 0;color:#555;font-size:10px;}
+.peakGauge .chartBox dl dd{font-size:20px;color:#555;font-weight:bold;}
+.peakGauge .chartBox dl span{font-size:9px;}
+.peakGauge .peakTarget{display:inline-block;}
+/* 2014-01-09 dashboard:오늘의 일반전력피크 - 수치 데이터 7자리 확보를 위한_수정02 */
+.peakGauge .peakTarget dl{margin:0 10px;padding:0;text-align:left;}
+/* //2014-01-09 dashboard:오늘의 일반전력피크 - 수치 데이터 7자리 확보를 위한_수정02 */
+.peakGauge .peakTarget dl.dl_style01{padding:0 0 4px 0;}
+.peakGauge .peakTarget dl.dl_style02{padding:12px 0 0 0;border-top:2px dotted #a6a6a6;}
+/* //2014-02-13 dashboard_오늘의 일반전력피크_수정 */
+.peakGauge .peakTarget dt{font-size:10px;line-height:120%;color:#777;}
+.peakGauge .peakTarget dd{padding-bottom:6px;font-size:15px;color:#555;font-weight:bold;}
+.peakGauge .peakTarget dd span{font-size:9px;}
+/* 2013-12-16 추가 */
+.peakGauge .peakTarget dt.style_dt{font-size:10px;line-height:180%;color:#777;}
+/* 2014-01-09 dashboard:오늘의 일반전력피크 - 수치 데이터 7자리 확보를 위한_수정03 */
+/* 2014-01-20 폰트 사이즈 조절을 위한_수정02 */
+.peakGauge .peakTarget dd.style_dd{padding-bottom:6px;font-size:23px;color:#333;font-weight:bold;}
+/* 2014-01-20 폰트 사이즈 조절을 위한_수정02 */
+.peakGauge .peakTarget dd.style_dd span{font-size:10px;}
+/* //2014-01-09 dashboard:오늘의 일반전력피크 - 수치 데이터 7자리 확보를 위한_수정03 */
+/* //2013-12-16 추가 */
+/* 2014-01-02 dashboard 오늘의 일반전력피크 추가 */
+.peakGauge .peakTarget ul.peakList{padding:12px 0 4px;margin:0 10px;border-top:2px dotted #a6a6a6; text-align:left;}
+.peakGauge .peakTarget ul.peakList li{padding-bottom:9px;overflow:hidden;}
+.peakGauge .peakTarget ul.peakList li .style_span01{float:left;padding:2px 0 0 0;font-size:10px;line-height:120%;color:#777;}
+.peakGauge .peakTarget ul.peakList li .style_span02{margin:0 0 0 10px;font-size:15px;color:#555;font-weight:bold;}
+.peakGauge .peakTarget ul.peakList li .style_span02 .style_span03{font-size:9px;}
+/* //2014-01-02 dashboard 오늘의 일반전력피크 추가 */
+/* 2014-02-13 dashboard_오늘의 일반전력피크_추가 */
+@media all and (min-width:480px) { 
+	.peakGauge .chartBox{display:inline-block;position:relative;margin-right:10px;padding-right:35px;}
+	.peakGauge .chartBox dl{position:absolute;top:100px;left:0;overflow:hidden;}
+	.peakGauge .chartBox dl dt{float:left;padding:0 10px 0 0;color:#555;font-size:10px;line-height:120%;letter-spacing:-0.5px;}
+	.peakGauge .chartBox dl dt span{display:block;letter-spacing:-0.5px;}
+	.peakGauge .chartBox dl dd{float:left;font-size:20px;padding-top:3px;color:#555;font-weight:bold;line-height:20px;}
+	.peakGauge .chartBox dl span{font-size:9px;}
+
+	.peakGauge .peakTarget{display:inline-block;}
+	.peakGauge .peakTarget dl{margin:0 0 0 10px;padding:0 10px 0 0;text-align:left;overflow:hidden;}
+	.peakGauge .peakTarget dl.dl_style01{padding:0 0 4px 0;}
+	.peakGauge .peakTarget dl.dl_style02{padding:12px 0 0 0;border-top:2px dotted #a6a6a6;}
+	.peakGauge .peakTarget dl.dl_style03{padding:0 0 20px 0;}
+	.peakGauge .peakTarget dt{float:left;padding:2px 10px 0 0;font-size:10px;line-height:120%;color:#777;}
+	.peakGauge .peakTarget dd{float:left;padding-bottom:6px;font-size:15px;color:#555;font-weight:bold;}
+	.peakGauge .peakTarget dd span{font-size:9px;}
+}
+/* //2014-02-13 dashboard_오늘의 일반전력피크_추가 */
+
+
+/* 빌딩선택 select */
+.selectG01 .ui-select .ui-btn{opacity:0;}
+.selectG01 .ui-select .ui-btn select{opacity:0;}
+.selectG01 .ui-select{position:absolute;top:0;right:0;width:36px;height:35px;}
+.selectG01 .ui-select .ui-btn-icon-right .ui-btn-inner, .ui-select .ui-li-has-count .ui-btn-inner{padding:0;}
+.selectG01 .ui-btn{margin:0;width:36px;height:35px;}
+
+/* dashboard - 에너지 사용량 / 에너지 사용패턴 */
+#touchSlider6 ul.slides li.page .contBox_02{padding-bottom:15px;}
+#touchSlider6 ul.slides li.page .contBox_02 h4{padding:0 0 3px 0;color:#333;font-size:14px;}
+#touchSlider6 ul.slides li.page .contBox_02 .txtDate{margin:0 0 15px 0;color:#777;font-size:11px;}
+
+.choiceTab li{float:left;width:33%;min-height:29px;margin:0 0 10px 0;border-bottom:1px solid #fff;}
+.choiceTab li:nth-child(2){width:34%;}
+/* 2014-01-08 탭 border color_수정01 */
+.choiceTab li.on{border-bottom:1px solid #edeef2;}
+/* //2014-01-08 탭 border color_수정01 */
+.choiceTab li a{display:block;border:1px solid #dee2e8;border-left:none;background:#fafbff;color:#717273 !important;font-size:11px;text-align:center;}
+.choiceTab li:first-child a{border-left:1px solid #dee2e8;}
+.choiceTab li.on a{color:#e56b53 !important;}
+/* 2014-01-08 탭 border color_수정02 */
+.choiceTab li a span{display:block;padding:7px 0 9px 0;border-top:1px solid #edeef2;}
+/* //2014-01-08 탭 border color_수정02 */
+.choiceTab li.on a span{border-top:1px solid #fff;}
+.choiceTab02 li{width:50%;}
+.choiceTab02 li:nth-child(2){width:50%;}
+
+.chartArea div.chartBox01, .chartArea div.chartBox03{display:none;}
+.chartArea div.chartBox02{display:block;}
+.chartArea div.chartG01{display:block;}
+.chartArea div.chartG02{display:none;}
+
+.chartArea .compare{float:right;margin:0 0 10px 0;}
+.chartArea .compare .txtToday{display:block;float:left;margin:0 4px 0 0;color:#666;font-size:10px;line-height:23px;}
+/* 2014-01-08 셀렉트박스 border-color_수정 */
+.chartArea .compare .selectG02{position:relative;float:left;border-bottom:1px solid #ededed;background:url('/html/2014/bems/m/images/common/bg_select.gif') repeat-x 0 1px;}
+/* //2014-01-08 셀렉트박스 border-color_수정 */
+.chartArea .compare .selectG02 p{border:1px solid #dbdbdb;padding:0 5px;}
+/* 2014-01-08 셀렉트박스 bg 사이즈_수정 */
+.chartArea .compare .selectG02 p a{display:block;min-width:99px;height:23px;background:url('/html/2014/bems/m/images/common/bg_select_dot.png') no-repeat 100% 50%;background-size:10px 5px;color:#3d3d3d;font-size:11px;font-weight:normal;line-height:23px;}
+/* //2014-01-08 셀렉트박스 bg 사이즈_수정 */
+.chartArea .compare .selectG02 .ui-select{width:100%;}
+.chartArea .compare .selectG02 .ui-select .ui-btn{opacity:0;}
+.chartArea .compare .selectG02 .ui-select .ui-btn select{margin:0;padding:0;opacity:0;}
+.chartArea .compare .selectG02 .ui-select{position:absolute;top:0;right:0;height:23px;padding:0}
+.chartArea .compare .selectG02 .ui-select .ui-btn-icon-right .ui-btn-inner, .ui-select .ui-li-has-count .ui-btn-inner{padding:0;}
+.chartArea .compare .selectG02 .ui-btn{height:23px;margin:0;}
+.chartArea .compare .selectG02 .ui-btn-inner{font-size:11px;}
+
+/* lnb */
+/* 2014-01-24 GNB 디자인 고도화를 위한_수정02 */
+.ui-panel-position-left.ui-panel-display-reveal, .ui-panel-position-left.ui-panel-open{background:#474747 url('/html/2014/bems/m/images/common/bg_lnb.gif') repeat-y right 0;}
+.ui-body-b, .ui-overlay-b{background:#474747 url('/html/2014/bems/m/images/common/bg_lnb.gif') repeat-y -46px 0;text-shadow:none;}
+.ui-panel-display-reveal{box-shadow:none;}
+
+.lnbArea .logo_lnb{min-height:34px;padding:9px 0 0 0;border-top:1px solid #3f3f3f;border-bottom:1px solid #2b2b2b;background:#343434 url('/html/2014/bems/m/images/common/bg_lnb_logo.gif') repeat-y right 0;text-align:center;}
+/* 2014-01-28 로고 디자인 픽셀 깨짐_추가 */
+.lnbArea .logo_lnb img{width:32px;height:25px;}
+/* //2014-01-28 로고 디자인 픽셀 깨짐_추가 */
+.lnbArea .lnb_depth01{border-top:1px solid #515151;border-bottom:1px solid #2b2b2b;background:#3d3d3d url('/html/2014/bems/m/images/common/bg_lnb_depth.gif') repeat-y right 0;}
+
+.lnbArea .lnb_depth01 a{display:block;padding:12px 0 12px 30px;background:url('/html/2014/bems/m/images/common/lnb_one01.png') no-repeat 9px 12px;background-size:15px 15px;color:#ebf0f5;font-size:12px;}
+.lnbArea .lnb_depth01 a.on{background:url('/html/2014/bems/m/images/common/lnb_one01_on.png') no-repeat 9px 12px;background-size:15px 15px;color:#ed6d53;}
+.lnbArea .lnb_depth01 a.ck02{background:url('/html/2014/bems/m/images/common/lnb_one02.png') no-repeat 9px 12px;background-size:15px 15px;font-size:11px;}
+.lnbArea .lnb_depth01 a.ck02.on{background:url('/html/2014/bems/m/images/common/lnb_one02_on.png') no-repeat 9px 12px;background-size:15px 15px
+;color:#ed6d53;}
+.lnbArea .lnb_depth02 li{border-top:1px solid #5a5a5a;border-bottom:1px solid #3d3d3d;}
+.lnbArea .lnb_depth02 li.first{border-top:1px solid #3c3c3c;}
+.lnbArea .lnb_depth02 li a{display:block;padding:9px 0 9px 30px;background:url('/html/2014/bems/m/images/common/lnb_two.gif') no-repeat 20px 14px;background-size:4px 5px;color:#ebf0f5;font-size:10px;font-weight:normal;}
+.lnbArea .lnb_depth02 li a:link{color:#ebf0f5;}
+.lnbArea .lnb_depth02 li a.on{background:url('/html/2014/bems/m/images/common/lnb_two_on.gif') no-repeat 20px 14px;background-size:4px 5px;color:#ed6d53;}
+/* //2014-01-24 GNB 디자인 고도화를 위한_수정02 */
+
+/* 에너지 모니터링 */
+#touchSlider6.monitoring ul.slides li.page .contBox02{border-bottom:2px solid #d2d6dd;background:#f6f7f8;}
+#touchSlider6.monitoring ul.slides li.page .contBox02 h3{color:#333;font-size:14px;}
+#touchSlider6.monitoring ul.slides li.page .contBox02 .txtDate{padding:5px 0 0 0;color:#777;font-size:11px;}
+
+#touchSlider6.monitoring ul.slides li.page .contBox h4{padding:0 0 10px 0;color:#333;font-size:11px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .groupBox01{margin:5px 0 25px 0;}
+#touchSlider6.monitoring ul.slides li.page .contBox .groupBox02{margin:0 0 20px 0;}
+#touchSlider6.monitoring ul.slides li.page .contBox .groupBox03{margin:0 0 5px 0;}
+#touchSlider6.monitoring ul.slides li.page .contBox .groupBox04{margin:5px 0 20px 0;}
+#touchSlider6.monitoring ul.slides li.page .contBox .groupBox04 h4{padding:5px 0 15px 0;color:#333;font-size:11px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .groupBox05{margin:0 0 25px 0;}
+
+#touchSlider6.monitoring ul.slides li.page .contBox .txtInfo{margin:7px 0 0 0;color:#777px;font-size:10px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .txtInfo span.dataUp{padding:0 0 0 11px;background:url('/html/2014/bems/m/images/common/icon_up.png') no-repeat 0 50%;background-size:9px 6px;color:#c82c2d;}
+#touchSlider6.monitoring ul.slides li.page .contBox .txtInfo span.dataDown{padding:0 0 0 11px;background:url('/html/2014/bems/m/images/common/icon_dn.png') no-repeat 0 50%;background-size:9px 6px;color:#3366cc;}
+
+/* 에너지 모니터링 - 누적 사용량 */
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList{overflow:hidden;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li{float:left;width:33%;margin:0 0 5px 0;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li div{padding:10px;border-bottom:1px solid #ededed;background:#f7f7f7;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li .listTitle{padding:0 0 3px 0;color:#666;font-size:10px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li .listTitle span{display:block;width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li .num{font-size:15px;font-weight:bold;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li .unit{font-size:9px;font-weight:bold;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li.listStyle01 div{margin-right:3px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li.listStyle02{width:34%;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li.listStyle02 div{margin:0 3px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li.listStyle03 div{margin-left:3px;}
+/* 2014-02-13 누적 사용량에 비중 정보_추가 */
+.gravity{margin:0;padding:0;line-height:30%;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li .num02{margin:0;padding:0;font-size:10px;font-weight:bold;}
+#touchSlider6.monitoring ul.slides li.page .contBox .accrueList li .unit02{margin:0;padding:0;font-size:7px;font-weight:bold;}
+/* //2014-02-13 누적 사용량에 비중 정보_추가 */
+
+/* 누적 사용량 - 색상코드 */
+.total{color:#9a78dc !important;} /* total */
+.total_2{color:#c4b2e7 !important;} /*total 비교대상  */
+.effect{color:#ed8672 !important;} /* 전기 */
+.effect_2{color:#f7beb2 !important;} /* 전기 비교대상 */
+.gas{color:#77b4d3 !important;} /* 가스 */
+.gas_2{color:#b4dcf0 !important;} /* 가스 비교대상 */
+.temp_in{color:#9a017b !important;} /* 기온 실내 */
+.temp_out{color:#ed4aee !important;} /* 기온 실외 */
+.mois_in{color:#008e75 !important;} /* 습도 실내 */
+.mois_out{color:#00e0c8 !important;} /* 습도 실외 */
+.peak_good{color:#b4cd78 !important;} /* 피크 양호 */
+.peak_caution{color:#f5be55 !important;} /* 피크 주의 */
+.peak_warn{color:#c82d2d !important;} /* 피크 경고 */
+.chart_color01{color:#2f7ed8 !important;}
+.chart_color02{color:#0d233a !important;}
+.chart_color03{color:#8bbc21 !important;}
+.chart_color04{color:#910000 !important;}
+.chart_color05{color:#1aadce !important;}
+.chart_color06{color:#492970 !important;}
+.chart_color07{color:#f28f43 !important;}
+.chart_color08{color:#77a1e5 !important;}
+.chart_color09{color:#c42525 !important;}
+.chart_color10{color:#a6c96a !important;}
+
+/* 에너지 모니터링 - 전층 누적 사용량 */
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList{overflow:hidden;}
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList li{float:left;width:50%;letter-spacing:-0.25px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList li div{padding:10px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList li .listTitle{padding:0 0 3px 0;color:#fff;font-size:10px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList li .num{color:#fff;font-size:15px;font-weight:bold;}
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList li .unit{color:#fff;font-size:9px;font-weight:bold;}
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList li:nth-child(1) div{margin-right:3px;background:#f7beb2;}
+#touchSlider6.monitoring ul.slides li.page .contBox .wholeList li:nth-child(2) div{margin-left:3px;background:#ed8672;}
+
+/* 에너지 모니터링 - 주요정보 테이블 */
+table.table_style01{width:100%;text-align:center;font-size:10px;letter-spacing:-0.25px;}
+table.table_style01 thead th{padding:7px 0;background:#f3f5f8;color:#333;border:1px solid #d0d4d9;}
+table.table_style01 tbody th{padding:7px 5px;color:#555;border:1px solid #d0d4d9;}
+table.table_style01 tbody th.bgColor{background:#fafafa}
+table.table_style01 tbody td{padding:7px 5px;color:#555;border:1px solid #d0d4d9;}
+
+/* 에너지 모니터링 - 목표대비 사용량 */
+.graphArea{position:relative;margin:0 0 10px 0;}
+.graphArea .areaBox{margin:0 94px 0 0;}
+/* 2014-02-13 목표대비 사용량_수정01 */
+.graphArea .areaBox02{margin:0 77px 0 0;}
+.graphArea .areaBox .yDay, .graphArea .areaBox .tDay{position:relative;height:20px;}
+.graphArea .areaBox .yDay02{position:relative;height:30px;}
+.graphArea .areaBox .yDay .txtDate, .graphArea .areaBox .tDay .txtDate{position:absolute;top:0;left:0;width:67px;height:15px;padding:3px 0 0 0;font-size:10px;}
+.graphArea .areaBox .yDay .txtDate02, .graphArea .areaBox .tDay .txtDate02{position:absolute;top:0;left:0;width:85px;height:15px;padding:0;font-size:10px;font-weight:bold;}
+.graphArea .areaBox .yDay .txtDate02 span, .graphArea .areaBox .tDay .txtDate02 span{display:block;font-weight:normal;line-height:50%;}
+/* 2014-01-08 에너지 모니터링:목표대비 사용량 막대그래프 bg및 box-shadow_수정01 */
+.graphArea .areaBox .yDay .graphY{position:relative;height:20px;margin:0 0 0 70px;background:#d7d8db;box-shadow:inset 0 1px 1px #c4c5c7;}
+/* //2014-01-08 에너지 모니터링:목표대비 사용량 막대그래프 bg및 box-shadow_수정01 */
+/* 2013-12-16 수정 */
+.graphArea .areaBox .yDay .graphY02{position:relative;height:20px;margin:0 0 0 85px;background:#d7d8db;box-shadow:inset 0 1px 1px #c4c5c7;}
+/* //2013-12-16 수정 */
+/* 2014-01-08 에너지 모니터링:목표대비 사용량 막대그래프 bg및 box-shadow_수정02 */
+.graphArea .areaBox .yDay .graphY span, .graphArea .areaBox .yDay .graphY02 span{position:absolute;top:0;left:0;height:20px;background:#c4b2e7;box-shadow:inset 0 1px 1px #ad9ecd;}
+/* //2014-01-08 에너지 모니터링:목표대비 사용량 막대그래프 bg및 box-shadow_수정02 */
+.graphArea .areaBox .tDay .graphY{position:relative;height:15px;margin:0 0 0 70px;}
+.graphArea .areaBox .tDay .graphY02{position:relative;height:15px;margin:0 0 0 85px;}
+/* 2014-01-08 에너지 모니터링:목표대비 사용량 막대그래프 bg및 box-shadow_수정03 */
+.graphArea .areaBox .tDay .graphY span, .graphArea .areaBox .tDay .graphY02 span{position:absolute;top:0;left:0;height:20px;background:#9a78dc;box-shadow:inset 0 1px 1px #8f63b6;}
+/* //2014-01-08 에너지 모니터링:목표대비 사용량 막대그래프 bg및 box-shadow_수정03 */
+/* //2014-02-13 목표대비 사용량_수정01 */
+
+.tooltipBox{display:none;position:absolute;top:0;left:0;padding:10px;border:1px solid #4b4b4c;border-radius:5px;box-shadow:1px 1px 2px #444;background:#fff;opacity:0.8;color:#777;font-size:11px;z-index:10000;}
+.tooltipBox p{margin:0 0 5px 0; text-align:left;}
+.tooltipBox span{font-weight:bold;}
+.tooltipBox ul{height:auto;}
+.tooltipBox ul li{width:auto;height:auto;background:none;box-shadow:none;}
+
+
+.graphArea .totalCon{position:absolute;top:0;right:0;width:79px;padding:0 0 0 15px;color:#555;}
+/* 2014-02-13 목표대비 사용량_수정02 */
+.graphArea .totalCon02{width:62px;padding:4px 0 0 15px;}
+.graphArea .totalCon span.txtContrast{display:block;padding:0 0 3px 0;font-size:10px;}
+.graphArea .totalCon span.txtContrast02{display:block;font-size:10px;line-height:80%;}
+/* 2014-02-13 목표대비 사용량_수정02 */
+.graphArea .totalCon .dataUp{display:inline;padding:0 19px 0 0;background:url('/html/2014/bems/m/images/common/icon_up02.png') no-repeat 100% 3px;background-size:16px 12px;font-size:15px;font-weight:bold;}
+.graphArea .totalCon .dataDown{display:inline;padding:0 19px 0 0;background:url('/html/2014/bems/m/images/common/icon_dn02.png') no-repeat 100% 3px;background-size:16px 12px;font-size:15px;font-weight:bold;}
+.graphArea .totalCon .unitNum{display:inline;font-size:15px;font-weight:bold;}
+.graphArea .totalCon .unit{display:inline;font-size:9px;}
+
+#touchSlider6.monitoring ul.slides li.page .contBox .noGoalBox{height:141px;}
+#touchSlider6.monitoring ul.slides li.page .contBox .noGoalBox p{margin:42px 0 0 0;padding:25px 0 0 0;background:url('/html/2014/bems/m/images/common/bg_nogoal.gif') no-repeat 50% 0;background-size:27px 20px;color:#777;font-size:11px;text-align:center;}
+
+.noData{padding:50px 0 70px;font-size:11px;color:#777;text-align:center;}
+.noData img{height:20px;width:auto;display:block;text-align:center;margin:0 auto;padding-bottom:5px;}
+.moduleHalf .noData{padding:10px 0 0;}
+
+/* 경부하, 중부하, 경부하 범례 */
+.loadList{text-align:center;}
+/* 2014-01-08 에너지모니터링:전기 사용패턴 범례-폰트 컬러_수정 */
+.loadList li{display:inline;margin:0 25px 0 0;color:#274B6D;font-size:10px;letter-spacing:-0.25;}
+/* //2014-01-08 에너지모니터링:전기 사용패턴 범례-폰트 컬러_수정 */
+.loadList li.list03{margin:0;}
+.loadList li span{display:inline-block;width:10px;height:7px;margin:0 5px 0 0;}
+.loadList li.list01 span{background:#d9e6b9;}
+.loadList li.list02 span{background:#fceed4;}
+.loadList li.list03 span{background:#f4d5d5;}
+

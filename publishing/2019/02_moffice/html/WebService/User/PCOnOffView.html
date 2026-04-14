@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>사용자 &gt; PC사용현황</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="user_sub">
+    <!-- header -->
+    <header>
+      <div class="user_inner_header">
+        <div class="header_top">
+          <!-- [D] 회사 로고 사이즈는 img 태그에 style="height:00px;"로 세로값을 직접 넣어주세요. default는 36px / 가로크기는 비율로 자동조정 -->
+          <h1 class="logo">
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" style="height: 36px" /></a>
+          </h1>
+          <p class="user_info">개발팀 이승우 부장 (20131101)</p>
+          <div class="right_area">
+            <p class="company_info">JNESS</p>
+            <p class="today">2019-09-23 (월)</p>
+          </div>
+        </div>
+
+        <!-- GNB -->
+        <nav class="user_gnb_area">
+          <h2 class="blind">사용자 메뉴</h2>
+          <a href="#none" class="btn_gnb left">HOME</a>
+          <ul>
+            <!-- [D] 선택 시, li태그에 class="on" 추가 -->
+            <li><a href="#none">연장근무</a></li>
+            <li class="on"><a href="#none">PC사용현황</a></li>
+            <li><a href="#none">자리비움</a></li>
+            <li><a href="#none">연장근무</a></li>
+            <li><a href="#none">PC사용현황</a></li>
+            <li><a href="#none">자리비움</a></li>
+          </ul>
+          <a href="#none" class="btn_gnb right">인증 초기화</a>
+          <!-- <p class="btn_gnb right standby">인증 대기중</p> -->
+        </nav>
+        <!-- //GNB -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- contents -->
+    <div class="user_contents">
+      <h2 class="title_cont">PC사용현황</h2>
+
+      <!-- user_search_area -->
+      <div class="user_search_area">
+        <div class="ip_calendar">
+          <input type="text" name="" value="2019-07-05" title="시작일" />
+          <img src="../../common/img/user_icon_calendar.png" alt="달력" class="img_carlendar" />
+        </div>
+        ~
+        <div class="ip_calendar">
+          <input type="text" name="" value="2019-07-05" title="종료일" />
+          <img src="../../common/img/user_icon_calendar.png" alt="달력" class="img_carlendar" />
+        </div>
+        <a href="#none" class="btn_md bg_gray">조회</a>
+      </div>
+      <!-- //user_search_area -->
+
+      <!-- user_result_area -->
+      <div class="user_result_area">
+        <!-- user_result_top -->
+        <div class="user_result_top">
+          <p class="totla_num">총 <span>0</span>건</p>
+        </div>
+        <!-- //user_result_top -->
+
+        <!-- user_bg_box -->
+        <div class="user_bg_box">
+          <!-- user_tbl_default -->
+          <div class="user_tbl_default">
+            <table>
+              <colgroup>
+                <col style="width: auto" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">근무일</th>
+                  <th scope="col">사용시작</th>
+                  <th scope="col">사용종료</th>
+                  <th scope="col">총 사용</th>
+                  <th scope="col">총 IDLE</th>
+                  <th scope="col">총 연장사용</th>
+                  <th scope="col">총 자리비움</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no_data">
+                  <td colspan="100">검색된 데이터가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td>2019-08-30</td>
+                  <td>08:40</td>
+                  <td>18:12</td>
+                  <td>09h11m</td>
+                  <td>02h03m</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+                <tr>
+                  <td>2019-08-30</td>
+                  <td>08:40</td>
+                  <td>18:12</td>
+                  <td>09h11m</td>
+                  <td>02h03m</td>
+                  <td>00h00m</td>
+                  <td>00h00m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //user_tbl_default -->
+
+          <!-- user_result_paging -->
+          <div class="user_result_paging">
+            <!-- user_paging -->
+            <div class="user_paging">
+              <a href="#none" class="btn_start">처음으로</a>
+              <a href="#none" class="btn_prev">이전</a>
+              <a href="#none">1</a>
+              <a href="#none">2</a>
+              <strong>3</strong>
+              <a href="#none">4</a>
+              <a href="#none">5</a>
+              <a href="#none">6</a>
+              <a href="#none">7</a>
+              <a href="#none">8</a>
+              <a href="#none">9</a>
+              <a href="#none">10</a>
+              <a href="#none" class="btn_next">다음</a>
+              <a href="#none" class="btn_end">맨끝으로</a>
+            </div>
+            <!-- //user_paging -->
+            <p class="page_num"><strong>3</strong>/<span>10</span></p>
+          </div>
+          <!-- //user_result_paging -->
+        </div>
+        <!-- //user_bg_box -->
+      </div>
+      <!-- //user_result_area -->
+
+      <!-- btn -->
+      <div class="btn_area">
+        <a href="#none" class="btn_big bg_deepblue">연장사용 신청</a>
+      </div>
+      <!-- //btn -->
+    </div>
+    <!-- //contents -->
+  </body>
+</html>

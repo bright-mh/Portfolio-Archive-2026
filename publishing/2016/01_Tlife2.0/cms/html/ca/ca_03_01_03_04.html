@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>신규회원등록 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+  </head>
+  <body>
+    <!-- skip navi -->
+    <div id="skip_navi">
+      <a href="#gnb"><span>주메뉴로 바로가기</span></a>
+      <a href="#contents"><span>본문으로 바로가기</span></a>
+    </div>
+    <!-- //skip navi -->
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div id="header">
+          <h1><a href="#">T life</a></h1>
+          <div class="top">
+            <h2 class="none">T life Contents Management System</h2>
+            <div class="user">
+              <p>CMS 관리자 회원 <strong>[김민석]</strong> 님 반갑습니다.</p>
+              <div class="btn">
+                <a href="#" class="btn_my">나의 정보관리</a>
+                <a href="#" class="btn_logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- GNB -->
+        <nav>
+          <script type="text/javascript">
+            // 현재 메뉴 표시
+            $(function () {
+              $("#gnb>li.gnb3_3:eq(0)").addClass("on").children("ul").css("display", "block");
+              $("#gnb>li.gnb3_3:eq(0)>ul>li:eq(0)").addClass("on");
+              $("#gnb>li.gnb3_3:eq(0)>ul>li:eq(0)>ul>li:eq(0)").addClass("on");
+            });
+          </script>
+          <div class="gnb_wrap mCustomScrollbar">
+            <ul id="gnb">
+              <li class="depth1 gnb3_3">
+                <a href="#">회원관리</a>
+                <ul class="depth_ul1">
+                  <li>
+                    <a href="#">회원관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">회원관리</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">계약관리</a>
+                    <ul class="depth_ul2">
+                      <li><a href="#">제휴사 정보 관리</a></li>
+                      <li><a href="#">채널 정보 관리</a></li>
+                      <li><a href="#">캠페인 정보 관리</a></li>
+                      <li><a href="#">브랜드 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <!-- contents -->
+        <div id="contents">
+          <!-- section -->
+          <div class="section">
+            <div class="location">
+              <span class="home">홈</span>
+              <span>회원관리</span>
+              <span>회원관리</span>
+              <strong>신규회원등록</strong>
+            </div>
+
+            <h3 class="tit">신규 회원 등록</h3>
+            <ul class="guide">
+              <li>신규 회원을 등록합니다.</li>
+              <li>
+                제휴사 회원인 경우 제휴사 코드와 캠페인 정보, 채널 회원인 경우 판매채널과 캠페인 정보를 반드시 선택 입력
+                해주세요.
+              </li>
+              <li>
+                등록할 제휴사 및 채널이 없는 경우 계약관리에서 해당 정보를 등록하신 후 회원등록을 진행하시기 바랍니다.
+              </li>
+            </ul>
+
+            <!-- 신규 회원 등록 테이블 -->
+            <div class="table_list">
+              <div class="comm_right">
+                <em class="ess">필수 입력 항목입니다.</em>
+              </div>
+
+              <div class="table_wrap">
+                <table class="tbl_list">
+                  <caption>
+                    <strong
+                      >회원구분, 운영자ID, 비밀번호, 이름, 소속사, 휴대폰 번호, 이메일 주소, 메뉴 권한, 판매채널
+                      (채널ID), 캠페인 정보가 있는 신규 회원 등록 입력 서식</strong
+                    >
+                  </caption>
+                  <colgroup>
+                    <col style="width: 130px" />
+                    <col style="width: *" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="row">회원구분</th>
+                      <td>
+                        <select title="회원구분" style="width: 140px">
+                          <option>선택하세요.</option>
+                          <option>제휴사</option>
+                          <option selected="selected">채널</option>
+                          <option>CMS관리자</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">운영자 ID</span>
+                      </th>
+                      <td>
+                        <input type="text" class="wid_per30" title="운영자 ID" maxlength="16" />
+                        <a href="#" class="btn_small">중복 확인</a>
+                        <span class="caution caution_left"
+                          >영문 또는 영문/숫자 조합하여 6~16자리까지 사용 가능합니다.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">비밀번호</span>
+                      </th>
+                      <td>
+                        <input type="password" class="wid_per30" title="비밀번호" maxlength="16" />
+                        <span class="caution caution_left"
+                          >영문/숫자/특수문자 조합하여 9~16자리까지 사용 가능합니다.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이름</span>
+                      </th>
+                      <td>
+                        <input type="text" class="wid_per30" title="이름" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">소속사</span>
+                      </th>
+                      <td>
+                        <input type="text" class="wid_per30" title="소속사" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">휴대폰 번호</span>
+                      </th>
+                      <td>
+                        <select title="휴대폰 번호" style="width: 70px">
+                          <option>010</option>
+                          <option>011</option>
+                          <option>016</option>
+                          <option>017</option>
+                          <option>018</option>
+                          <option>019</option>
+                        </select>
+                        -
+                        <input
+                          type="text"
+                          class="wid_phone"
+                          maxlength="4"
+                          title="휴대폰 번호 가운데 네자리"
+                          placeholder="1245"
+                        />
+                        -
+                        <input
+                          type="text"
+                          class="wid_phone"
+                          maxlength="4"
+                          title="휴대폰 번호 마지막 네자리"
+                          placeholder="4856"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">이메일 주소</span>
+                      </th>
+                      <td>
+                        <input type="text" class="wid_per30" title="이메일 주소" placeholder="example@sk.com" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">메뉴 권한</span>
+                      </th>
+                      <td>
+                        <div class="table_list">
+                          <div class="table_inner">
+                            <table class="tbl_list">
+                              <caption>
+                                <strong>메뉴권한 서식을 제공합니다.</strong>
+                              </caption>
+                              <colgroup>
+                                <col style="width: 130px" />
+                                <col style="width: *" />
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="left">
+                                    <input type="checkbox" id="chk01" />&nbsp;<label for="chk01">전체</label>
+                                  </th>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="left">
+                                    <input type="checkbox" id="chk02" />&nbsp;<label for="chk02">무료상품관리</label>
+                                  </th>
+                                  <td>
+                                    <input type="checkbox" id="chk02_01" /><label for="chk02_01" class="radio_range"
+                                      >상품관리</label
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="left">
+                                    <input type="checkbox" id="chk03" />&nbsp;<label for="chk03">유료상품관리</label>
+                                  </th>
+                                  <td>
+                                    <input type="checkbox" id="chk03_01" /><label for="chk03_01" class="radio_range"
+                                      >상품관리</label
+                                    >
+                                    <input type="checkbox" id="chk03_02" /><label for="chk03_02" class="radio_range"
+                                      >쿠폰발급현황</label
+                                    >
+                                    <input type="checkbox" id="chk03_03" /><label for="chk03_03" class="radio_range"
+                                      >정산관리</label
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="left">
+                                    <input type="checkbox" id="chk04" />&nbsp;<label for="chk04">통계관리</label>
+                                  </th>
+                                  <td>
+                                    <input type="checkbox" id="chk04_01" /><label for="chk04_01" class="radio_range"
+                                      >통계관리</label
+                                    >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">판매채널 (채널 ID)</span>
+                      </th>
+                      <td>
+                        <select title="판매채널 (채널 ID)" style="width: 235px">
+                          <option>판매채널</option>
+                          <option>T라이프 (CH_0001)</option>
+                          <option>쿠키즈 (CH_0002)</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="ess">캠페인 정보</span>
+                      </th>
+                      <td>
+                        <select title="제휴사 선택" style="width: 235px" disabled="disabled">
+                          <option>제휴사</option>
+                          <option>기프티콘 (앰엔서비스)</option>
+                          <option>기프티쇼 (E&amp;M)</option>
+                        </select>
+                        <select title="캠페인 명 (캠페인ID) 선택" style="width: 350px" disabled="disabled">
+                          <option>캠페인 명 (캠페인ID)</option>
+                          <option>티라이프 유료쿠폰 (CAMPID_202015)</option>
+                          <option>쿠키즈 유료쿠폰 (CAMPID_202016)</option>
+                        </select>
+                        <a href="#" class="btn_small">추가</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td>
+                        <div>
+                          <input type="text" title="제휴사 명" style="width: 213px" disabled="disabled" />
+                          <input type="text" title="캠페인 명 (캠페인ID)" style="width: 328px" disabled="disabled" />
+                          <!-- <a href="#" class="btn_small">삭제</a> -->
+                        </div>
+
+                        <!-- 추가 영역 --
+											<div class="gap_top">
+												<input type="text" title="제휴사 명" style="width:213px" disabled="disabled" />
+												<input type="text" title="캠페인 명 (캠페인ID)" style="width:328px" disabled="disabled" />
+												<a href="#" class="btn_small">삭제</a>
+											</div>
+											<!-- //추가 영역 -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //신규 회원 등록 테이블 -->
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_cancel">취소</a>
+                <a href="#" class="btn_new">회원등록</a>
+              </div>
+            </div>
+          </div>
+          <!-- //section -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div id="footer">
+          <h1><img src="../../img/foot_logo.png" alt="SK telecom" /></h1>
+          <p class="copy">COPYRIGHT &copy; 2016 SKTelecom. ALL RIGHTS RESERVED.</p>
+          <p class="common_clause"><a href="#" class="link">개인정보 처리방침</a></p>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

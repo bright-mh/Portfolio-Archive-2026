@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>이벤트 선택 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>이벤트 선택</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <!-- 이벤트 선택 검색 -->
+          <div class="table_list_top">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>카테고리, 검색어가 있는 이벤트 선택 검색 입력 서식</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">카테고리</th>
+                    <td>
+                      <select title="카테고리" style="width: 140px">
+                        <option>전체</option>
+                        <option>Web view</option>
+                        <option>외부 링크</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">검색어</th>
+                    <td>
+                      <input type="text" class="wid_per80" title="검색어 입력" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_search">검색</a>
+              </div>
+            </div>
+          </div>
+          <!-- //이벤트 선택 검색 -->
+
+          <!-- 이벤트 선택 검색 결과 리스트 -->
+          <div class="table_list_btm">
+            <div class="total_area">
+              <p class="total_num">총 검색 수 : <strong>00</strong> 개</p>
+              <div class="sel_box">
+                <select>
+                  <option>20개씩 보기</option>
+                  <option>50개씩 보기</option>
+                  <option>100개씩 보기</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>선택, 번호, 카테고리, 이벤트명, 등록일이 있는 이벤트 선택 검색 결과 리스트</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 45px" />
+                  <col style="width: 60px" />
+                  <col style="width: 140px" />
+                  <col style="width: *" />
+                  <col style="width: 120px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">선택</th>
+                    <th scope="col">번호</th>
+                    <th scope="col">카테고리</th>
+                    <th scope="col">이벤트명</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- [D] 리스트가 없을 때 -->
+                  <tr>
+                    <td colspan="5">검색 결과가 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" checked="checked" /></td>
+                    <td>10</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >할인과 결제를 한 번에, T페이 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>9</td>
+                    <td>Web view</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >온 국민의 T 전화 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>8</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >SKT의 똑똑한 통화 도우미 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>7</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >SKT의 똑똑한 통화 도우미 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>6</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >온 국민의 T 전화 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>5</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >SKT의 똑똑한 통화 도우미 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>4</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >SKT의 똑똑한 통화 도우미 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>3</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >온 국민의 T 전화 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>2</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >SKT의 똑똑한 통화 도우미 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="move" title="이동경로 리스트 선택" /></td>
+                    <td>1</td>
+                    <td>외부링크</td>
+                    <td class="left">
+                      <a href="#" class="link" title="새창 열림" target="_blank"
+                        >SKT의 똑똑한 통화 도우미 (최대 20자까지 노출)</a
+                      >
+                    </td>
+                    <td>YYYY.MM.DD</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="paging">
+              <a href="#" class="fir"><img src="../../img/btn_fir.gif" alt="첫 페이지" title="첫 페이지" /></a>
+              <a href="#" class="pre"><img src="../../img/btn_pre.gif" alt="이전" title="이전으로" /></a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#" class="on">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#">10</a>
+              <a href="#" class="next"><img src="../../img/btn_next.gif" alt="다음" title="다음으로" /></a>
+              <a href="#" class="last"
+                ><img src="../../img/btn_last.gif" alt="마지막 페이지" title="마지막 페이지"
+              /></a>
+            </div>
+          </div>
+          <!-- //이벤트 선택 검색 결과 리스트 -->
+
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_cancel">취소</a>
+              <a href="#" class="btn_save">선택완료</a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

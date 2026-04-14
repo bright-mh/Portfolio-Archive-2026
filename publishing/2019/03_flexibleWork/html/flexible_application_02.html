@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>유연근무신청</title>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../resources/js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../resources/css/user.css" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- header -->
+    <header>
+      <div class="inner_header">
+        <div class="header_top">
+          <!-- [D] img태그 alt값에 회사명 입력해 주세요. -->
+          <h1 class="logo">
+            <a href="#none"><img src="../resources/img/logo/img_logo.png" alt="회사명 입력" style="height: 36px" /></a>
+          </h1>
+          <p class="user_info">개발팀 이승우 부장 (20131101)</p>
+          <div class="right_area">
+            <p class="company_info">JNESS</p>
+            <p class="today">2019-09-23 (월)</p>
+          </div>
+        </div>
+
+        <!-- GNB : menu -->
+        <nav class="gnb_area">
+          <h2 class="blind">메뉴</h2>
+          <ul>
+            <!-- [D] 선택 시, li태그에 class="on" 추가 -->
+            <li><a href="#none">근무일정확인</a></li>
+            <li class="on"><a href="#none">유연근무신청</a></li>
+            <li><a href="#none">휴가신청</a></li>
+            <li><a href="#none">출장신청</a></li>
+          </ul>
+        </nav>
+        <!-- //GNB : menu -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- contents -->
+    <div class="contents">
+      <h2 class="title_cont">유연근무신청</h2>
+
+      <!-- bg_box -->
+      <div class="bg_box">
+        <!-- calendar_area -->
+        <div class="calendar_area">
+          <!-- calendar_top -->
+          <div class="calendar_top">
+            <div class="box">
+              <!-- [D] 이전&다음 버튼 disabled 시, 해당 버튼의 a태그에 class="disabled" 추가 -->
+              <a href="#none" class="btn_cal_prev">이전</a>
+              <strong>2019년 09월</strong>
+              <a href="#none" class="btn_cal_next">다음</a>
+            </div>
+            <div class="btn_area">
+              <a href="#none" class="btn_md btn_cal_today">오늘</a>
+              <a href="#none" class="btn_md bg_gray">목록보기</a>
+            </div>
+            <div class="title_area">
+              <p class="title_calendar">상반기 유연근무 03</p>
+              <span class="small_title">선택근무제 : 2019-07-05~2019-09-05</span>
+            </div>
+          </div>
+          <!-- //calendar_top -->
+
+          <!-- calenda_table -->
+          <div class="tbl_calendar">
+            <table>
+              <colgroup>
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+                <col style="width: 162px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <!-- [D] 클릭 시, span 태그에 class="on" 토글 효과 -->
+                  <th scope="col">일요일</th>
+                  <th scope="col"><span class="on">월요일</span></th>
+                  <th scope="col"><span>화요일</span></th>
+                  <th scope="col"><span>수요일</span></th>
+                  <th scope="col"><span>목요일</span></th>
+                  <th scope="col"><span>금요일</span></th>
+                  <th scope="col">토요일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">1</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">2</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">3</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">4</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">5</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">6</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="last">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">7</strong>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">8</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">9</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">10</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">11</strong>
+                      </div>
+                      <p class="img_box"><img src="../resources/img/img_calendar_dayoff.png" alt="휴가" /></p>
+                    </div>
+                  </td>
+                  <!-- [D] 휴일 또는 공휴일에는 td 태그에 class="day_off" 추가 -->
+                  <td class="day_off">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">12</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="day_off">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">13</strong>
+                        <span>추석</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="last day_off">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">14</strong>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">15</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- [D] 오늘 날짜에 "today" 클래스 추가 / '오늘'이 들어간 p 태그 추가 -->
+                  <td class="today">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">16</strong>
+                        <span>오늘</span>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">17</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">18</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">19</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">20</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="last">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">21</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">22</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">23</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">24</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <!-- [D] 휴가 및 반차 시, span 태그에 class="holiday" 추가
+											list를 딤드 처리 하고 싶을때, li 태그에 class="dimmed" 추가
+										-->
+                      <div class="date_head">
+                        <strong class="day">25</strong>
+                        <span class="holiday">휴가</span>
+                      </div>
+                      <ul class="list">
+                        <li class="dimmed">08:00~11:30<strong>04h 30m</strong></li>
+                        <li class="dimmed">12:30~16:00<strong>03h 30m</strong></li>
+                        <li class="dimmed">17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">26</strong>
+                        <span class="holiday">오전반차</span>
+                      </div>
+                      <ul class="list">
+                        <li class="dimmed">08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                        <li>17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <!-- [D] 출장 시, span 태그에 class="business" 추가 -->
+                      <div class="date_head">
+                        <strong class="day">27</strong>
+                        <span class="business">출장</span>
+                      </div>
+                      <ul class="list">
+                        <li class="dimmed">08:00~11:30<strong>04h 30m</strong></li>
+                        <li class="dimmed">12:30~16:00<strong>03h 30m</strong></li>
+                        <li class="dimmed">17:00~20:00<strong>03h 00m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="last">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">28</strong>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">29</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">30</strong>
+                      </div>
+                      <ul class="list">
+                        <li>08:00~11:30<strong>04h 30m</strong></li>
+                        <li>12:30~16:00<strong>03h 30m</strong></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <!-- [D] 현재 달이 아닌 경우, td 태그에 class="other_month" 추가 -->
+                  <td class="other_month">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">1</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="other_month">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">2</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="other_month">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">3</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="other_month">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">4</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="last other_month">
+                    <div class="box">
+                      <div class="date_head">
+                        <strong class="day">5</strong>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //calenda_table -->
+        </div>
+        <!-- //calendar_area -->
+
+        <!-- 적용 영역 : 조건1 -->
+        <div class="apply_area">
+          <div class="box_left">
+            <!-- group1 -->
+            <div class="group">
+              <select name="" title="근로시간" style="width: 192px">
+                <option value="">근로시간</option>
+              </select>
+              <select name="" title="시업/종업 선택" style="width: 302px">
+                <option value="">시업/종업 선택</option>
+              </select>
+              <!-- btn -->
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <!-- //btn -->
+            </div>
+            <!-- //group1 -->
+          </div>
+          <div class="box_right">
+            <ul class="time_list">
+              <!-- [D] 신청시간 초과 시, strong 태그에 class="over" 추가 -->
+              <li>
+                <p class="tbl_column"><span>신청시간</span><strong>152h 00m</strong></p>
+                <p class="tbl_column"><span>연장시간</span><strong>52h 00m</strong></p>
+              </li>
+              <li class="last">근무시간<strong>152h 00m</strong></li>
+            </ul>
+            <p class="add_txt">추가 텍스트 내용 텍스트 내용</p>
+          </div>
+        </div>
+        <!-- //적용 영역 : 조건1 -->
+
+        <!-- 적용 영역 : 조건2 -->
+        <div class="apply_area">
+          <div class="box_left">
+            <!-- group1 -->
+            <div class="group">
+              <select name="" title="근로시간" style="width: 192px">
+                <option value="">근로시간</option>
+              </select>
+              <select name="" title="시업/종업 선택" style="width: 302px">
+                <option value="">시업/종업 선택</option>
+              </select>
+              <!-- btn -->
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <!-- //btn -->
+            </div>
+            <!-- //group1 -->
+            <!-- group2 -->
+            <div class="group tbl_zone">
+              <div class="left_zone">
+                <div class="small_group">
+                  <select name="" title="시간" style="width: 118px">
+                    <option value="">7시</option>
+                  </select>
+                  <select name="" title="분" style="width: 118px">
+                    <option value="">00분</option>
+                  </select>
+                  <span class="separate">~</span>
+                  <select name="" title="시간" style="width: 118px">
+                    <option value="">8시</option>
+                  </select>
+                  <select name="" title="분" style="width: 118px">
+                    <option value="">00분</option>
+                  </select>
+                  <a href="#none" class="btn"><img src="../resources/img/btn_delete.png" alt="삭제" /></a>
+                </div>
+                <div class="small_group">
+                  <select name="" title="시간" style="width: 118px">
+                    <option value="">7시</option>
+                  </select>
+                  <select name="" title="분" style="width: 118px">
+                    <option value="">00분</option>
+                  </select>
+                  <span class="separate">~</span>
+                  <select name="" title="시간" style="width: 118px">
+                    <option value="">8시</option>
+                  </select>
+                  <select name="" title="분" style="width: 118px">
+                    <option value="">00분</option>
+                  </select>
+                  <a href="#none" class="btn"><img src="../resources/img/btn_delete.png" alt="삭제" /></a>
+                </div>
+                <div class="small_group">
+                  <select name="" title="시간" style="width: 118px">
+                    <option value="">7시</option>
+                  </select>
+                  <select name="" title="분" style="width: 118px">
+                    <option value="">00분</option>
+                  </select>
+                  <span class="separate">~</span>
+                  <select name="" title="시간" style="width: 118px">
+                    <option value="">8시</option>
+                  </select>
+                  <select name="" title="분" style="width: 118px">
+                    <option value="">00분</option>
+                  </select>
+                  <a href="#none" class="btn"><img src="../resources/img/btn_add.png" alt="추가" /></a>
+                </div>
+              </div>
+              <!-- btn -->
+              <a href="#none" class="right_zone">적용</a>
+              <!-- //btn -->
+            </div>
+            <!-- //group2 -->
+            <!-- group3 -->
+            <div class="group">
+              <span class="txt1">당일 수정 : </span>
+              <select name="" title="시간" style="width: 118px">
+                <option value="">7시</option>
+              </select>
+              <select name="" title="분" style="width: 118px">
+                <option value="">00분</option>
+              </select>
+              <span class="txt2">* 종료시만 변경 가능</span>
+              <!-- btn -->
+              <a href="#none" class="btn_sm bg_gray">적용</a>
+              <!-- //btn -->
+            </div>
+            <!-- //group3 -->
+          </div>
+          <div class="box_right">
+            <ul class="time_list division">
+              <!-- [D] 신청시간 초과 시, strong 태그에 class="over" 추가 -->
+              <li>
+                <p class="tbl_column"><span>신청시간</span><strong class="over">222h 00m</strong></p>
+                <p class="tbl_column"><span>연장시간</span><strong class="over">52h 00m</strong></p>
+              </li>
+              <li class="last">근무시간<strong>152h 00m</strong></li>
+            </ul>
+          </div>
+        </div>
+        <!-- //적용 영역 : 조건2 -->
+      </div>
+      <!-- //bg_box -->
+
+      <!-- bg_box -->
+      <div class="bg_box">
+        <!-- application_area -->
+        <div class="application_area">
+          <!-- 신청사유 입력 -->
+          <div class="reason_box">
+            <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+            <label for="">신청사유 :</label>
+            <input type="text" id="" name="" value="" placeholder="신청사유를 입력해주세요." style="width: 971px" />
+          </div>
+          <!-- //신청사유 입력 -->
+
+          <!-- 결재자 검색 -->
+          <div class="payment_search_box">
+            <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+            <label for="">결재자 검색 :</label>
+            <input type="text" id="" name="" value="" placeholder="이름" style="width: 180px" />
+            <a href="#none" class="btn_sm bg_gray">검색</a>
+            <span class="txt"
+              >* 한영전환이 되지 않을 경우 Tab 키와 Shift-Tab 키를 눌러서 포커스를 앞 뒤로 이동시켜 보세요.</span
+            >
+
+            <!-- scroll_box -->
+            <div class="scroll_box">
+              <!-- tbl_payment -->
+              <div class="tbl_payment">
+                <table>
+                  <colgroup>
+                    <col style="width: 196px" />
+                    <col style="width: 72px" />
+                    <col style="width: auto" />
+                    <col style="width: 159px" />
+                    <col style="width: 212px" />
+                    <col style="width: 89px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">사번</th>
+                      <th scope="col">차수</th>
+                      <th scope="col">부서</th>
+                      <th scope="col">이름</th>
+                      <th scope="col">직급</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2019090104</td>
+                      <td>1차</td>
+                      <td>정보기술담당</td>
+                      <td>김상복</td>
+                      <td class="eft">부장</td>
+                      <td class="last"><a href="#none" class="btn_sm bg_gray">선택하기</a></td>
+                    </tr>
+                    <tr>
+                      <td>2019090104</td>
+                      <td>1차</td>
+                      <td>정보기술담당</td>
+                      <td>김상복</td>
+                      <td class="eft">부장</td>
+                      <td class="last"><a href="#none" class="btn_sm bg_gray">선택하기</a></td>
+                    </tr>
+                    <tr>
+                      <td>2019090104</td>
+                      <td>1차</td>
+                      <td>정보기술담당</td>
+                      <td>김상복</td>
+                      <td class="eft">부장</td>
+                      <td class="last"><a href="#none" class="btn_sm bg_gray">선택하기</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_payment -->
+            </div>
+            <!-- //scroll_box -->
+          </div>
+          <!-- //결재자 검색 -->
+
+          <!-- 결재자 선택 -->
+          <div class="payment_search_box">
+            <!-- 추가 데이터 없음 : default -->
+            <p class="title">
+              <span class="txt2">결재자 검색 :</span>
+              <span class="txt3">추가된 데이터가 없습니다.</span>
+            </p>
+            <!-- //추가 데이터 없음 : default -->
+
+            <!-- 추가 데이터가 있을 때 -->
+            <p class="title">
+              <span class="txt2">결재자 검색 :</span>
+            </p>
+
+            <!-- scroll_box -->
+            <div class="scroll_box">
+              <!-- tbl_payment -->
+              <div class="tbl_payment">
+                <table>
+                  <colgroup>
+                    <col style="width: 196px" />
+                    <col style="width: 72px" />
+                    <col style="width: auto" />
+                    <col style="width: 159px" />
+                    <col style="width: 212px" />
+                    <col style="width: 89px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">사번</th>
+                      <th scope="col">차수</th>
+                      <th scope="col">부서</th>
+                      <th scope="col">이름</th>
+                      <th scope="col">직급</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2019090104</td>
+                      <td>1차</td>
+                      <td>정보기술담당</td>
+                      <td>김상복</td>
+                      <td class="eft">부장</td>
+                      <td class="last"><a href="#none" class="btn_sm bg_pink_line">삭제하기</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl_payment -->
+            </div>
+            <!-- //scroll_box -->
+            <!-- //추가 데이터가 있을 때 -->
+          </div>
+          <!-- //결재자 선택 -->
+        </div>
+        <!-- //application_area -->
+
+        <!-- btn_area -->
+        <div class="btn_area btm">
+          <a href="#none" class="btn_big bg_deepblue">신청하기</a>
+        </div>
+      </div>
+      <!-- //bg_box -->
+    </div>
+    <!-- //contents -->
+  </body>
+</html>

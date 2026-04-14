@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>component</title>
+	<meta charset="utf-8" />
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="../../js/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/library.js"></script>
+	<script src="../../js/ui.js"></script>
+	<!--[if lt IE 10]>
+		<script type="text/javascript" src="../../js/ui_ie9.js"></script>
+	<![endif]-->
+
+	<style type="text/css">
+		/* guide 레이아웃 스타일 */
+		.gWrap header {width:100%;height:30px;padding:25px 0;}
+		.gWrap header h1 {padding-left:20px;color:#121212;font-weight:700;font-size:30px;line-height:1;}
+		.gCont {max-width:1200px;padding:0 20px 20px;}
+		h2 {margin-top:20px;padding:20px 0;border-top:1px dashed #666;font-weight:700;font-size:20px;}
+		.gCont .gTit:before{content:'*';margin-right:10px;color:#ac0c3c;}
+		.gCont .gInfo {margin:0 0 20px;padding-left:20px;color:#000;font-size:14px;line-height:1.5}
+		.gCont .gInfo:before {content:"●";display:inline-block;margin-right:10px;color:#777;font-size:12px;}
+		.gCont .preview {min-height:30px;margin-bottom:40px;padding:0 0 0 20px;overflow:hidden}
+		/*.test {color:red\9;}*/
+		:root .test {color:yellow \9;}
+		.test {color:red;}
+	</style>
+</head>
+<body>
+<div class="gWrap">
+<header>
+	<h1>NewBalance Publishing Guide</h1>
+</header>
+<div class="gCont">
+	<!-- Button Default -->
+	<section>
+		<h2 class="test">Button</h2>
+		<p class="gInfo">color type</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_rface sm">#dd1835</a>
+			<a href="#none" class="btn_ty_rline sm">#dd1835</a>
+			<a href="#none" class="btn_ty_bface sm">#141414</a>
+			<a href="#none" class="btn_ty_bline sm">#444444</a>
+			<a href="#none" class="btn_ty_gface sm">#444444</a>
+			<a href="#none" class="btn_ty_gface2 sm">#eaeaea</a>
+		</div>
+
+		<p class="gInfo">작은 사이즈 버튼(120*45) : class="sm" 추가</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_rface sm">주문하기</a>
+			<a href="#none" class="btn_ty_rline sm">구매하기</a>
+			<a href="#none" class="btn_ty_bface sm">확인하기</a>
+			<a href="#none" class="btn_ty_bline sm">취소하기</a>
+			<a href="#none" class="btn_ty_bline1 sm">취소하기</a>
+			<a href="#none" class="btn_ty_gface sm">문의하기</a>
+			<a href="#none" class="btn_ty_gface2 sm">자주 묻는 질문 찾기</a>
+
+		</div>
+
+		<p class="gInfo">중간 사이즈 버튼(120*50) : class="md" 추가</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_rface md">주문하기</a>
+			<a href="#none" class="btn_ty_rline md">구매하기</a>
+			<a href="#none" class="btn_ty_bface md">확인하기</a>
+			<a href="#none" class="btn_ty_bline md">취소하기</a>
+			<a href="#none" class="btn_ty_gface md">문의하기</a>
+			<a href="#none" class="btn_ty_gface2 md">재고확인</a>
+		</div>
+
+		<p class="gInfo">기본 사이즈 버튼(140*60) : class="lg" 추가</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_rface lg">구매하기</a>
+			<a href="#none" class="btn_ty_rline lg">구매하기</a>
+			<a href="#none" class="btn_ty_bface lg">결제하기</a>
+			<a href="#none" class="btn_ty_bline lg">취소</a>
+			<a href="#none" class="btn_ty_gface lg">문의하기</a>
+			<a href="#none" class="btn_ty_gface2 lg">재고확인</a>
+			<br /><br />
+			<div>
+				<a href="#none" class="btn_ty_bface lg">전체 상품 주문하기</a>
+				<a href="#none" class="btn_ty_bline lg">선택 상품 주문하기</a>
+			</div>
+		</div>
+
+		<p class="gInfo">주문 영역 버튼 : class="xs" 추가</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_rface xs">주문하기</a>
+			<a href="#none" class="btn_ty_gface xs">관심상품</a>
+			<a href="#none" class="btn_ty_bline xs">삭제하기</a>
+
+			<a href="#none" class="btn_ty_bface xs">전체 취소</a>
+		</div>
+
+		<p class="gInfo">인풋 영역 버튼</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_form xs">조회하기</a>
+			<a href="#none" class="btn_ty_form">조회하기</a>
+			<a href="#none" class="btn_ty_form">변경하기</a>
+			<a href="#none" class="btn_ty_form">우편번호 찾기</a>
+			<a href="#none" class="btn_ty_form">배송지 주소록</a>
+		</div>
+
+		<p class="gInfo">비활성화 버튼 : class="disabled" 추가</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_rline xs disabled">구매하기</a>
+			<a href="#none" class="btn_ty_rface sm disabled">구매하기</a>
+			<a href="#none" class="btn_ty_bline md disabled">구매하기</a>
+			<a href="#none"  class="btn_ty_bface lg disabled">구매하기</a>
+
+		</div>
+
+		<p class="gInfo">더보기 버튼</p>
+		<div class="preview">
+			<a href="#none" class="btn_ty_more">더 보기</a>
+		</div>
+
+		<p class="gInfo">비교하기 토글 버튼 : a 태그에 class="on"으로 제어</p>
+		<div class="preview">
+			<a href="#link" class="btn_ty_compare comp"><span>비교하기</span></a>
+		</div>
+
+		<p class="gInfo">라인 버튼</p>
+		<div class="preview">
+			<a href="#none" class="btn_line">변경</a>
+		</div>
+	</section>
+	<!-- // Button Default -->
+
+	<!-- Button Area -->
+	<section>
+		<h2>Button Area</h2>
+		<p class="gInfo">기본 정렬 : right  </p>
+		<div class="preview">
+			<div class="btn_area">
+				<a href="#none" class="btn_ty_bface lg">결제하기</a>
+				<a href="#none" class="btn_ty_bline lg">취소</a>
+			</div>
+		</div>
+
+		<p class="gInfo">왼쪽 정렬</p>
+		<div class="preview">
+			<div class="btn_area left">
+				<a href="#none" class="btn_ty_bface lg">결제하기</a>
+				<a href="#none" class="btn_ty_bline lg">취소</a>
+			</div>
+		</div>
+
+		<p class="gInfo">가운데 정렬</p>
+		<div class="preview">
+			<div class="btn_area center">
+				<a href="#none" class="btn_ty_rface md">전체보기</a>
+			</div>
+		</div>
+
+		<p class="gInfo">버튼 기본사이즈 120→140 : class="wid140" 추가)</p>
+		<div class="preview">
+			<div class="btn_area center wid140">
+				<a href="#none" class="btn_ty_bface sm">입고 알림 신청하기</a>
+				<a href="#none" class="btn_ty_bline sm">취소하기</a>
+			</div>
+			<br /><br />
+
+			<div class="btn_area center wid140">
+				<a href="#none" class="btn_ty_gface2 sm">자주 묻는 질문 찾기 </a>
+				<a href="#none" class="btn_ty_gface2 sm">1:1 문의하기</a>
+			</div>
+		</div>
+	</section>
+	<!-- // Button Area -->
+
+	<!-- select -->
+	<section>
+		<h2>Select</h2>
+		<p class="gInfo">기본 select :  width값은 인라인 스타일이나, 별도 css로 제어</p>
+		<div class="preview">
+			<span class="select_box" style="width:200px">
+				<select title="색상">
+					<option>색상</option>
+					<option>Blue</option>
+					<option>Gray</option>
+					<option>Beige</option>
+				</select>
+			</span>
+			<span class="select_box disabled" style="display:inline-block;width:200px">
+				<select disabled title="색상">
+					<option>색상</option>
+					<option>Blue</option>
+					<option>Gray</option>
+					<option>Beige</option>
+				</select>
+			</span>
+		</div>
+
+		<p class="gInfo">높이 45px select : select_box 에 class="medium" 추가</p>
+		<div class="preview">
+			<span class="select_box medium" style="display:inline-block;width:200px">
+				<select title="색상">
+					<option>색상</option>
+					<option>Blue</option>
+					<option>Gray</option>
+					<option>Beige</option>
+				</select>
+			</span>
+			<span class="select_box medium disabled" style="display:inline-block;width:200px">
+				<select disabled title="색상">
+					<option>색상</option>
+					<option>Blue</option>
+					<option>Gray</option>
+					<option>Beige</option>
+				</select>
+			</span>
+		</div>
+
+		<p class="gInfo">작은 select : select_box 에 class="small" 추가</p>
+		<div class="preview">
+			<span class="select_box small" style="display:inline-block;width:200px">
+				<select title="색상">
+					<option>색상</option>
+					<option>Blue</option>
+					<option>Gray</option>
+					<option>Beige</option>
+				</select>
+			</span>
+			<span class="select_box small disabled" style="display:inline-block;width:200px">
+				<select disabled title="색상">
+					<option>색상</option>
+					<option>Blue</option>
+					<option>Gray</option>
+					<option>Beige</option>
+				</select>
+			</span>
+		</div>
+	</section>
+	<!-- // select -->
+
+	<!-- Tooltip -->
+	<section>
+		<h2>Tooltip</h2>
+		<p class="gInfo">기본 툴팁</p>
+		<div class="preview" style="overflow:inherit">
+			<p class="tooltip"><span class="blind">?</span>
+				<span class="text">
+					<strong>쿠폰</strong>
+					쿠폰은 주문 건당 1개만 사용가능하며, 주문 사용 즉시 소멸됩니다.<br />
+					쿠폰 종류에 따라 사용/환원 기준이 상이 하므로 사용 지침을 꼭 확인해 주시기 바랍니다.
+				</span>
+			</p>
+		</div>
+	</section>
+	<!-- // Tooltip -->
+
+	<!-- input -->
+	<section>
+		<h2>Input</h2>
+		<p class="gInfo">input small : 170px</p>
+		<div class="preview" style="">
+			<input type="text" id="" class="ip_text sm" title="" value="small" />
+			<input type="text" id="" disabled class="ip_text sm" title="" value="small" />
+		</div>
+
+		<p class="gInfo">input medium : 270px</p>
+		<div class="preview" style="">
+			<input type="text" id="" class="ip_text md" title="" value="medium" />
+			<input type="text" id="" disabled class="ip_text md" title="" value="medium" />
+		</div>
+
+		<p class="gInfo">input large : 526px</p>
+		<div class="preview" style="">
+			<input type="text" id="" class="ip_text lg" title="" value="large" />
+			<input type="text" id="" disabled class="ip_text lg" title="" value="large" />
+		</div>
+
+		<p class="gInfo">input xlarge : 634px</p>
+		<div class="preview" style="">
+			<input type="text" id="" class="ip_text xl" title="" value="xlarge" />
+			<input type="text" id="" disabled class="ip_text xl" title="" value="xlarge" />
+		</div>
+
+		<p class="gInfo">placeholder (ie9대응)</p>
+		<div class="preview" style="">
+			<span class="placeholder">
+				<label for="login_id" class="assi">아이디</label>
+				<input type="text" id="login_id" class="ip_text" />
+			</span>
+		</div>
+
+	</section>
+	<!-- // input -->
+
+	<!-- input -->
+	<section>
+		<h2>checkbox / radio </h2>
+		<p class="gInfo">checkbox</p>
+		<div class="preview">
+			<input type="checkbox" id="check" name="check" class="ip_chekbox" /><label for="check">이메일 수신</label>&nbsp;&nbsp;
+			<input type="checkbox" id="check2" name="check" class="ip_chekbox" checked /><label for="check2">이메일 수신</label>&nbsp;&nbsp;
+			<input type="checkbox" id="check3" name="check" class="ip_chekbox" disabled /><label for="check3">이메일 수신</label>&nbsp;&nbsp;
+			<input type="checkbox" id="check4" name="check" class="ip_chekbox" disabled checked /><label for="check4">이메일 수신</label>
+		</div>
+
+		<p class="gInfo">radio</p>
+		<div class="preview" style="">
+			<input type="radio" id="radio" name="radio" class="ip_radio" /><label for="radio">기본주소</label>&nbsp;&nbsp;
+			<input type="radio" id="radio2" name="radio2" class="ip_radio" checked /><label for="radio2">기본주소</label>&nbsp;&nbsp;
+			<input type="radio" id="radio3" name="radio3" class="ip_radio" disabled /><label for="radio3">기본주소</label>&nbsp;&nbsp;
+			<input type="radio" id="radio4" name="radio4" class="ip_radio" disabled checked /><label for="radio4">기본주소</label>
+		</div>
+	</section>
+	<!-- // input -->
+
+
+
+	<!-- form area -->
+	<section>
+		<h2>Form Area</h2>
+		<p class="gInfo">form 영역</p>
+		<div class="preview" style="">
+			<div class="title_box">
+				<h3 class="sec_tit">회원정보</h3>
+				<div class="txt_info">
+					<input type="checkbox" id="chk02" class="ip_chekbox effect" /><label for="chk02">주문자와 동일합니다.</label>
+					<span class="compulsory">필수입력<em class="mark"></em></span>
+				</div>
+			</div>
+			<!-- FormArea -->
+			<div class="form_area">
+				<fieldset>
+					<legend>기본항목입력 입력양식</legend>
+					<div class="row type_low">
+						<strong class="ftit">이름 <em class="compulsory">필수</em></strong>
+						<div class="fdata"><span class="fval">이일환</span></div>
+					</div>
+					<div class="row type_low">
+						<strong class="ftit">성별 <em class="compulsory">필수</em></strong>
+						<div class="fdata"><span class="fval">남성</span></div>
+					</div>
+					<div class="row">
+						<strong class="ftit">배송지 선택 <em class="compulsory">필수</em></strong>
+						<div class="fdata">
+							<span class="chk"><input type="radio" id="deli01" name="deli" class="ip_radio"><label for="deli01">기본주소</label></span>
+							<span class="chk"><input type="radio" id="deli02" name="deli" class="ip_radio"><label for="deli02">기본주소</label></span>
+							<a href="#none" class="btn_ty_form">배송지 주소록</a>
+						</div>
+					</div>
+					<div class="row">
+						<label for="deli_name" class="ftit">받으실 분 이름 <em class="compulsory">필수</em></label>
+						<div class="fdata">
+							<input type="text" id="deli_name" class="ip_text lg" title="받으실 분 이름" />
+						</div>
+					</div>
+					<div class="row">
+						<label for="birth" class="ftit">생년월일 <em class="compulsory">필수</em></label>
+						<div class="fdata">
+							<span class="select_box">
+								<select id="birth" title="태어난 연도">
+									<option value="">2017</option>
+								</select>
+							</span>
+							<em class="unit">년</em>
+							<span class="select_box">
+								<select title="태어난 달">
+									<option value="">01</option>
+								</select>
+							</span>
+							<em class="unit">월</em>
+							<span class="select_box">
+								<select title="태어난 일">
+									<option value="">01</option>
+								</select>
+							</span>
+							<em class="unit">일</em>
+							<em class="ip_info">생년월일 입력 시 양력 생일을 입력해 주세요. 입력된 생일 전후 20일 간 사용 가능한 생일 쿠폰이 발급됩니다.</em>
+						</div>
+					</div>
+					<div class="row">
+						<label for="phone_num" class="ftit">휴대폰번호 <em class="compulsory">필수</em></label>
+						<div class="fdata">
+							<span class="select_box">
+								<select id="phone_num" title="휴대폰 앞 번호">
+									<option value="선택">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="019">019</option>
+								</select>
+							</span>
+							<input type="text" value="" class="ip_text sm" title="휴대폰 가운데 번호" />
+							<input type="text" value="" class="ip_text sm" title="휴대폰 마지막 번호" />
+							<a href="#none" class="btn_ty_form">인증번호 요청</a>
+							<a href="#none" class="btn_ty_bline sm">취소</a>
+							<em class="ip_info point_r">* 숫자만 입력 가능합니다.</em>
+						</div>
+					</div>
+					<div class="row">
+						<label for="phone_num2" class="ftit">다른 전화번호</label>
+						<div class="fdata">
+							<span class="select_box">
+								<select id="phone_num2" title="전화번호 앞 번호">
+									<option value="선택">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="019">019</option>
+								</select>
+							</span>
+							<input type="text" class="ip_text sm" title="전화번호 가운데 번호" />
+							<input type="text" class="ip_text sm" title="전화번호 마지막 번호" />
+							<em class="ip_info point_r">* 숫자만 입력 가능합니다.</em>
+						</div>
+					</div>
+					<div class="row">
+						<strong class="ftit">배송지 주소 <em class="compulsory">필수</em></strong>
+						<div class="fdata">
+							<div class="block">
+								<input type="text" class="ip_text sm" readonly title="배송지 우편번호" />
+								<a href="#none" class="btn_ty_form">우편번호 찾기</a>
+								<span class="chk"><input type="checkbox" id="add_deli" name="add_deli" checked="checked" class="ip_chekbox"><label for="add_deli">배송지 주소록에 추가</label></span>
+							</div>
+							<input type="text" class="ip_text xl" readonly title="기본 주소" />
+							<input type="text" class="ip_text xl" title="상세 주소" />
+						</div>
+					</div>
+					<div class="row">
+						<strong class="ftit">배송지 주소 <em class="compulsory">필수</em></strong>
+						<div class="fdata">
+							<p class="ftxt">(01376) 서울특별시 도봉구 시루봉로1길 6(쌍문동 산240-5) 둘리 뮤지엄</p>
+							<a href="#none" class="btn_ty_form">우편번호 찾기</a>
+						</div>
+					</div>
+					<div class="row">
+						<strong class="ftit">배송시 요청사항</strong>
+						<div class="fdata">
+							<textarea class="ip_textarea" cols="10" rows="10" title="배송시 요청사항" placeholder="택배 기사님께 전달하는 내용입니다. (0/50자)"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<label class="ftit" for="email">이메일 <em class="compulsory">필수</em></label>
+						<div class="fdata">
+							<input type="text" id="email" class="ip_text sm" title="이메일 아이디" />
+							<em class="unit">@</em>
+							<input type="text" value="" class="ip_text sm" title="이메일 도메인 주소" />
+							<span class="select_box" style="width:220px">
+								<select title="이메일 도메인 선택">
+									<option value="직접입력">직접입력</option>
+									<option value="naver.com">naver.com</option>
+									<option value="hanmail.net">hanmail.net</option>
+									<option value="nate.com">nate.com</option>
+									<option value="gmail.com">gmail.com</option>
+									<option value="hotmail.com">hotmail.com</option>
+									<option value="yahoo.com">yahoo.com</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row type_low">
+						<strong class="ftit">정보 수신여부</strong>
+						<div class="fdata">
+							<span class="chk"><input type="checkbox" id="receive_mail" name="receive" class="ip_chekbox"><label for="receive_mail">이메일 수신</label></span>
+							<span class="chk"><input type="checkbox" id="receive_sms" name="receive" class="ip_chekbox"><label for="receive_sms">문자(SMS) 수신</label></span>
+							<em class="ip_info">문자(SMS)를 수신하신 경우에만 생일쿠폰문자와 이벤트알림을 받으실 수 있습니다.</em>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<!-- FormArea -->
+			<div class="form_area form_area1">
+				<fieldset>
+                    <legend>기본항목입력 입력양식</legend>
+                    <div class="row type_low2">
+                        <label for="text2" class="ftit">보내실 곳</label>
+                        <div class="fdata">
+                            <div class="txt">서울시영등포구</div>
+                        </div>
+                    </div>
+                    <div class="row type_low2">
+                        <label for="text2" class="ftit">동봉 할 배송비</label>
+                        <div class="fdata">
+                            <div class="txt">5000원<span class="txt_small">(왕복배송비)</span></div>
+                        </div>
+                    </div>
+                    <div class="row type_low2">
+                        <label class="ftit ftit1">택배사</label>
+                        <div class="fdata txt_data">
+                            <span class="chk"><input type="radio" id="radio1" name="radio" class="ip_radio" checked="checked"><label for="radio1">CJ대한통운(뉴발란스 지정 업체)</label></span>
+                            <span class="chk"><input type="radio" id="radio2" name="radio" class="ip_radio"><label for="radio2">그외 업체</label></span>
+                            <span class="select_box small disabled" style="display:inline-block;width:200px">
+                                <select disabled="" title="택배사 선택">
+                                    <option>현대택배</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row type_low2">
+                        <label for="text1" class="ftit ftit2">운송장번호</label>
+                        <div class="fdata">
+                            <input type="text" id="text1" class="ip_text lg" title="계좌번호" style="width:300px;">
+                            <em class="ip_info">‘-’ 없이 숫자만 입력해 주세요.</em>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+		</div>
+	</section>
+	<!-- // input -->
+
+
+</div>
+<!-- // wrap -->
+</body>
+</html>

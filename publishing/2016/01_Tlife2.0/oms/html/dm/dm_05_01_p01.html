@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>당첨자 결과 | T life</title>
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/popup.css" />
+    <!--[if lt IE 9]> <script src="../../js/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 감싸기 -->
+    <div id="wrap" class="layerpop">
+      <div class="popup">
+        <div class="top">
+          <h2>당첨자 결과</h2>
+          <div class="btn_clo">
+            <a href="#"><img src="../../img/btn_x.png" alt="닫기" /></a>
+          </div>
+        </div>
+
+        <div class="cont heig1">
+          <!-- 혜택정보 -->
+          <h3 class="tit">혜택정보</h3>
+          <div class="table_list_top">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong
+                    >혜택명, 시작일, 종료일/당첨 완료, 쿠폰명/ID, 쿠폰 총 등록수량, 응모 티켓 소모량, 블랙리스트
+                    당첨여부, 중복당첨 여부가 있는 혜택정보</strong
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 200px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">혜택명</th>
+                    <td>5월에 야구장 가자</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">시작일, 종료일 / 당첨 완료</th>
+                    <td>2016.05.22 ~ 2016.06.10 / 2016.06.11</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">쿠폰명/ID</th>
+                    <td>스타벅스 아메리카노 / C00000000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">쿠폰 총 등록수량</th>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">응모 티켓 소모량</th>
+                    <td>
+                      1. SKT &gt; OO 요금제군 - 15T<br />
+                      2. SKT &gt; OO 요금제군 – Freepass
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">블랙리스트 당첨여부</th>
+                    <td>불가</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">중복당첨 여부</th>
+                    <td>불가</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //혜택정보 -->
+
+          <!-- 검색어 입력 -->
+          <div class="table_list_top">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>검색어 입력 서식</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 130px" />
+                  <col style="width: *" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">검색어</th>
+                    <td>
+                      <select title="검색 조건 선택" style="width: 100px">
+                        <option>회원ID</option>
+                        <option>닉네임</option>
+                      </select>
+                      <input type="text" class="wid_per80" title="검색 텍스트 입력" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="btngroup">
+              <div class="btn_right">
+                <a href="#" class="btn_search">검색</a>
+              </div>
+            </div>
+          </div>
+          <!-- //검색어 입력 -->
+
+          <!-- 검색 결과 리스트 -->
+          <div class="table_list_btm">
+            <div class="table_wrap">
+              <table class="tbl_list">
+                <caption>
+                  <strong>번호, 회원ID, 닉네임이 있는 당첨자 검색 결과 리스트</strong>
+                </caption>
+                <colgroup>
+                  <col style="width: 70px" />
+                  <col style="width: *" />
+                  <col style="width: *" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">회원ID</th>
+                    <th scope="col">닉네임</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- [D] 리스트가 없을 때 -->
+                  <tr>
+                    <td colspan="3" class="none">검색된 리스트가 없습니다</td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>sjeh***</td>
+                    <td>눈따무력</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //검색 결과 리스트 -->
+
+          <!-- btngroup-->
+          <div class="btngroup">
+            <div class="btn_center">
+              <a href="#" class="btn_close">닫기</a>
+            </div>
+          </div>
+          <!-- //btngroup-->
+        </div>
+        <!-- //cont -->
+      </div>
+      <!-- // popup -->
+    </div>
+    <!-- //전체 감싸기 -->
+  </body>
+</html>

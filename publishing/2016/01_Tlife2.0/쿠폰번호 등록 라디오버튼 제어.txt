@@ -1,0 +1,46 @@
+
+			/* 쿠폰번호 등록 영역 라디오버튼 */
+			var coupon = $(".coupon_num input[type='radio']");
+
+			coupon.each(function() {
+				$(this).click(function() {
+					var index = $(this).attr('index');
+					$('.coupon_num input[type="text"]').attr('disabled',true).val('');
+					$('.coupon_num .img_coupon select').attr('disabled',true);
+					$('.coupon_num a.btn, .coupon_num .filebox label').addClass('dimmed');
+					$('.bacode_coupon a.excel_down').hide();
+					$('.choice_img').val('basic_img');
+					$('.change_img').attr('src', $('.change_img').attr('src').replace('/img_noimg02.gif','/co_img_coupon_normal.png'));
+					
+					if (index == '1') {
+						$('.bacode_coupon a.btn').removeClass('dimmed');
+						if ($('.bacode_coupon a.excel_down').text()){
+							$('.bacode_coupon a.excel_down').show();
+						} else {
+							$('.bacode_coupon a.excel_down').text('')
+						}
+					} else if (index == '2') {
+						$('.img_coupon select').attr('disabled',false);
+
+						//셀렉트 이미지 교체
+						$('.choice_img').on('change', function() {
+							var img_coupon_val = $(this).val();
+							var change_img = $('.change_img').attr('src');
+
+							if (img_coupon_val == 'basic_img') {
+								$('.change_img').attr('src', change_img.replace('/img_noimg02.gif','/co_img_coupon_normal.png'));
+								$(".img_coupon input[type='text']").attr('disabled',true).val('');
+								$('.img_coupon a.btn, .img_coupon .filebox label').addClass('dimmed');
+							}
+							else if (img_coupon_val == 'regist_img') {
+								$('.change_img').attr('src', change_img.replace('/co_img_coupon_normal.png','/img_noimg02.gif'));
+								$(".img_coupon input[type='text']").attr('disabled',false).val('');
+								$('.img_coupon a.btn, .img_coupon .filebox label').removeClass('dimmed');
+							}
+						});
+					} else if (index == '3') {
+						$('.singlekey_coupon input[type=text]').attr('disabled',false);
+						$('.singlekey_coupon a.btn').removeClass('dimmed');
+					}
+				});
+			});

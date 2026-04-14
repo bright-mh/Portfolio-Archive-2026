@@ -1,0 +1,784 @@
+@charset "utf-8";
+
+/*GNB layout*/
+
+header {
+  background: #444445;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0px;
+  left: 0;
+} /*추후 position : fixed*/
+header .utill {
+  width: 1000px;
+  height: 45px;
+} /*height:45px; border-bottom:1px*/
+header .utill .leftArea {
+  width: 284px;
+  float: left;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-right: 1px solid #2b2b2b;
+  position: relative;
+}
+header .utill .leftArea .logo {
+  position: absolute;
+  left: 30px;
+  top: 12px;
+  width: 140px;
+  height: 21px;
+}
+/*131224 장소 선택 위치 수정*/
+header .utill .leftArea .currentP {
+  width: 116px;
+  height: 100%;
+  position: absolute;
+  left: 168px;
+}
+/*End 131224 장소 선택 위치 수정*/
+header .utill .leftArea .currentP.on {
+  background: #3d3d3d;
+}
+header .utill .leftArea .currentP p {
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+header .utill .leftArea .currentP .depthOne {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+header .utill .leftArea .currentP .depthOne p {
+  margin: 18px 0 0 15px;
+  width: 60%;
+}
+header .utill .leftArea .currentP .depthOne img {
+  position: absolute;
+  right: 10px;
+  top: 21px;
+}
+
+header .utill .leftArea .currentP .currentP_sub {
+  position: absolute;
+  min-width: 117px;
+  left: 0;
+  top: 46px;
+  background: #3d3d3d;
+  border-top: 1px solid #ed6d53;
+  overflow: hidden;
+  z-index: 4;
+  border-bottom: 1px solid #bbb;
+} /*117px*/
+header .utill .leftArea .currentP .currentP_sub ul {
+  padding: 20px 15px 0 15px;
+}
+header .utill .leftArea .currentP .currentP_sub ul li {
+  height: 15px;
+  padding-bottom: 20px;
+}
+header .utill .leftArea .currentP .currentP_sub ul li.on p {
+  color: #ed6d53;
+}
+
+header .utill .leftArea .currentP .currentP_sub ul p {
+  font-weight: normal;
+}
+
+header .utill .rightArea {
+  float: right;
+  height: 100%;
+}
+header .utill .rightArea .clear02 {
+  height: 100%;
+}
+header .utill .rightArea .time {
+  float: left;
+  margin-right: 20px;
+  height: 100%;
+}
+header .utill .rightArea .time p {
+  color: #bbb;
+  font-weight: bold;
+  padding-top: 15px;
+  min-width: 185px;
+}
+header .utill .rightArea .time p span img {
+  position: relative;
+  top: -1px;
+  margin: 0 8px 0 10px;
+}
+header .utill .rightArea .weather {
+  float: left;
+  height: 100%;
+  color: #a1a1a1;
+  position: relative;
+  margin-right: 20px;
+}
+header .utill .rightArea .weather p {
+  margin: 14px 0 0 35px;
+}
+header .utill .rightArea .weather img {
+  position: absolute;
+  top: 6px;
+}
+header .utill .rightArea .weather span.low {
+  color: #77b4d3;
+  margin: 0 0 0 3px;
+  font-weight: bold;
+}
+header .utill .rightArea .weather span.high {
+  color: #ed6d53;
+  margin: 0 0 0 1px;
+  font-weight: bold;
+}
+
+header .utill .rightArea .temp {
+  float: left;
+  height: 100%;
+  color: #a1a1a1;
+  position: relative;
+  padding-right: 20px;
+  border-right: 1px solid #2b2b2b;
+}
+header .utill .rightArea .temp p {
+  margin: 15px 0 0 15px;
+}
+header .utill .rightArea .temp img {
+  position: absolute;
+  top: 0px;
+  top: 12px;
+}
+header .utill .rightArea .temp span.col {
+  color: #bbb;
+  margin: 0 0 0 3px;
+  font-weight: bold;
+}
+header .utill .rightArea .temp span.hum {
+  color: #bbb;
+  margin: 0 0 0 1px;
+  font-weight: bold;
+}
+
+header .utill .rightArea .user {
+  width: 218px;
+  height: 100%;
+  border-left: 1px solid #4e4e4e;
+  float: left;
+  position: relative;
+}
+header .utill .rightArea .user img {
+  position: absolute;
+  left: 19px;
+  top: 12px;
+}
+header .utill .rightArea .user p.usNm {
+  margin: 15px 0 0 38px;
+  color: #bbb;
+  font-weight: bold;
+}
+header .utill .rightArea .user p .uName {
+  text-decoration: underline !important;
+  color: #bbb;
+  font-weight: bold;
+}
+header .utill .rightArea .userSub {
+  width: 219px;
+  height: 118px;
+  border-top: 1px solid #ed6d53;
+  border-bottom: 1px solid #bbb;
+  position: absolute;
+  left: 0;
+  top: 45px;
+  background: #3d3d3d;
+  z-index: 5;
+}
+header .utill .rightArea .userSub .neInfo {
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid #262627;
+}
+header .utill .rightArea .userSub .neInfo p.nm {
+  padding: 20px 20px 0 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+header .utill .rightArea .userSub .neInfo p.em {
+  padding: 8px 20px 0 20px;
+  color: #fff;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+header .utill .rightArea .userSub .ractionBox {
+  width: 100%;
+  height: 42px;
+  background: #444445;
+}
+header .utill .rightArea .userSub .ractionBox p.left {
+  float: left;
+}
+header .utill .rightArea .userSub .ractionBox p.left a {
+  font-size: 11px;
+  color: #bbb;
+  text-decoration: underline;
+}
+header .utill .rightArea .userSub .ractionBox p.left a.pwChange {
+  margin: 0 0 0 18px;
+  position: relative;
+  top: 15px;
+}
+header .utill .rightArea .userSub .ractionBox p.left a.emChange {
+  position: relative;
+  top: 15px;
+  left: 10px;
+}
+header .utill .rightArea .userSub .ractionBox .log {
+  float: right;
+  width: 43px;
+  height: 42px;
+  position: relative;
+  border-left: 1px solid #262627;
+}
+header .utill .rightArea .userSub .ractionBox .log img {
+  position: static;
+}
+
+header .liner {
+  background: #262627;
+  width: 100%;
+  height: 1px;
+}
+header nav {
+  min-width: 1000px;
+  max-width: 1600px;
+  height: 63px;
+} /*height:63px;*/
+header nav .menuBox {
+  width: 937px;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+header nav .menuBox ul li {
+  float: left;
+  width: 16.45%;
+  height: 62px;
+  border: 1px solid #262627;
+  border-top: 1px solid #515151;
+  border-left: 1px solid #515151;
+  cursor: pointer;
+}
+header nav .menuBox ul li.on {
+  background: #595959;
+  border: 1px solid #595959;
+  border-right: 1px solid #262627;
+}
+header nav .menuBox ul li.on .bBox span {
+  color: #ed6d53;
+  font-weight: bold;
+}
+header nav .menuBox ul li .bBox {
+  width: 100%;
+  height: 39px;
+  text-align: center;
+  padding-top: 23px;
+} /*gnb menu Height*/
+header nav .menuBox ul li .bBox .icon {
+  margin-right: 5px;
+} /*2014-01-08 gnb 줄바꿈 현상 수정*/
+header nav .menuBox ul li .bBox span {
+  color: #e1e2e6;
+  font-weight: bold;
+}
+header nav .bookMark {
+  width: 61px;
+  height: 63px;
+  float: right;
+  position: relative;
+  border-left: 1px solid #515151;
+  border-top: 1px solid #515151;
+  border-right: 1px solid #262627;
+  background: #373737;
+}
+header nav .bookMark .bBox {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+header nav .bookMark.on {
+  background: #595959;
+}
+header nav .bookMark .bBox > img {
+  position: absolute;
+  left: 22px;
+  top: 22px;
+}
+
+.gnbSubMenu {
+  position: fixed;
+  left: 0;
+  top: 109px;
+  background: #595959;
+  width: 100%;
+  z-index: 1001;
+}
+.liner02 {
+  width: 100%;
+  height: 1px;
+  background: #ed6d53;
+}
+.overLiner {
+  width: 100px;
+  height: 1px;
+  background: #595959;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.gnbSubMenu .gSubArea {
+  width: 1000px;
+  z-index: 999;
+}
+.gnbSubMenu .gSubArea .gSub_section {
+  width: 940px;
+}
+/*gnb twoDepath a link로도 접근 가능하게 수정*/
+.gnbSubMenu .gSubArea .gSub_section li.one {
+  float: left;
+  width: 16.45%;
+  border-right: 1px solid #484849;
+  border-left: 1px solid #6a6a6a;
+  margin: 25px 0 30px 0;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li {
+  margin: 0 15px 14px 15px;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > a > p {
+  font-size: 11px;
+  color: #b2b2b2;
+  overflow: hidden;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li.on > a > p {
+  color: #f6f7fa;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > p {
+  font-size: 11px;
+  color: #b2b2b2;
+  overflow: hidden;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li.on > p {
+  color: #ed6d53;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul {
+  margin-top: 5px;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul > li > a > p {
+  font-size: 11px;
+  margin-bottom: 5px;
+  padding-left: 8px;
+  color: #b3b3b3;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul > li > p {
+  font-size: 11px;
+  margin-bottom: 5px;
+  padding-left: 8px;
+  color: #b3b3b3;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul > li {
+  background: url(/html/2014/bems/en/images/common/threeDepth_off_icon.gif) no-repeat left 4px;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul > li:last-child {
+  margin-bottom: 0px;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul > li.on > p {
+  color: #ed6d53;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul > li.on > a > p {
+  color: #ed6d53;
+}
+.gnbSubMenu .gSubArea .gSub_section li.one ul.two > li > ul > li.on {
+  background: url(/html/2014/bems/en/images/common/threeDepth_on_icon.gif) no-repeat left 4px;
+}
+/*//gnb twoDepath a link로도 접근 가능하게 수정*/
+
+.bookBox {
+  position: absolute;
+  right: -1px;
+  top: 63px;
+  background: #595959;
+  width: 800px;
+  height: 411px;
+}
+.bookBox .overLiner {
+  width: 63px;
+  left: 737px;
+}
+.bookBox .con {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bookBox .forder {
+  position: absolute;
+  width: 270px;
+  left: 20px;
+  top: 0;
+}
+.bookBox h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 25px 0 15px 0;
+}
+.bookBox .forder .fBox {
+  overflow-y: scroll;
+  width: 268px;
+  height: 298px;
+  border: 1px solid #ced2d9;
+}
+.bookBox .forder .fBox ul {
+  background: url(/images/common/bookmark_bg.gif) 0 0;
+  min-height: 100%;
+}
+.bookBox .forder ul li {
+  margin-left: 20px;
+  width: 230px;
+  height: 37px;
+  position: relative;
+} /*2014-01-07 북마크 아이콘짤림 수정  overflow:hidden; 삭제*/
+.bookBox .forder ul li input {
+  background: transparent;
+  outline: none;
+  width: 208px;
+  margin: 0;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4b4b4c;
+  font-size: 12px;
+  border: 0;
+  cursor: default;
+  vertical-align: middle;
+  padding: 12px 0 0 20px;
+}
+.bookBox .forder ul li.on input {
+  color: #ef6c4e;
+}
+.bookBox .forder ul li > img {
+  position: absolute;
+  top: 14px;
+  left: -2px;
+} /*2014-01-08 북마크 짤림 현상 수정*/
+.bookBox .page {
+  position: absolute;
+  width: 480px;
+  left: 300px;
+  top: 0;
+}
+.bookBox .page .pBox {
+  overflow-y: scroll;
+  width: 478px;
+  height: 298px;
+  border: 1px solid #ced2d9;
+}
+.bookBox .page .pBox ul {
+  background: url(/images/common/bookmark_bg.gif) 0 0;
+  min-height: 100%;
+}
+.bookBox .page ul li {
+  height: 37px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.bookBox .page ul li p {
+  padding: 12px 0 0 20px;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+.bookBox .page ul li p a {
+  color: #4b4b4c;
+  font-size: 12px;
+}
+.bookBox .page ul li.on p {
+  color: #ef6c4e;
+  font-size: 12px;
+}
+.bookBox .page ul li.on p a {
+  color: #ef6c4e;
+  font-size: 12px;
+}
+.bookBox .page ul li p a:hover {
+  color: #4b4b4c;
+}
+.bookBox .page ul li.on p a:hover {
+  color: #ef6c4e;
+}
+.bookBox .page ul li .delete {
+  position: absolute;
+  right: 18px;
+  top: 11px;
+  cursor: pointer;
+}
+.bookBox .absol {
+  position: absolute;
+  top: 360px;
+}
+.bookBox .btn_creat {
+  left: 19px;
+}
+.bookBox .btn_modify {
+  left: 119px;
+} /*2014-01-07 북마크 버튼 간격 수정 */
+.bookBox .btn_dele {
+  left: 179px;
+} /*2014-01-07  북마크 버튼 간격 수정 */
+.bookBox .btn_close {
+  right: 20px;
+}
+
+/*outline*/
+input,
+textarea {
+  outline: none !important;
+  outline-style: none !important;
+}
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover,
+input:active,
+textarea:active {
+  outline: none !important;
+  outline-style: none !important;
+}
+
+/*Admin sub*/
+.gnbSubMenu2 {
+  position: fixed;
+  left: 0;
+  top: 121px;
+  background: #595959;
+  width: 100%;
+  z-index: 1001;
+} /*total height 123px;*/
+.gnbSubMenu2 .gSubArea {
+  width: 1000px;
+  z-index: 999;
+}
+.gnbSubMenu2 .gSubArea .gSub_section {
+  width: 940px;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one {
+  float: left;
+  width: 16.45%;
+  border-right: 1px solid #484849;
+  border-left: 1px solid #6a6a6a;
+  margin: 25px 0 30px 0;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li {
+  margin: 0 15px 14px 15px;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li > p {
+  font-size: 12px;
+  color: #b2b2b2;
+  overflow: hidden;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li.on > p {
+  color: #f6f7fa;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li > ul {
+  margin-top: 5px;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li > ul > li > p {
+  font-size: 11px;
+  margin-bottom: 5px;
+  padding-left: 8px;
+  color: #b3b3b3;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li > ul > li {
+  background: url(/images/common/threeDepth_off_icon.gif) no-repeat left 4px;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li > ul > li:last-child {
+  margin-bottom: 0px;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li > ul > li.on > p {
+  color: #ed6d53;
+}
+.gnbSubMenu2 .gSubArea .gSub_section li.one ul.two > li > ul > li.on {
+  background: url(/images/common/threeDepth_on_icon.gif) no-repeat left 4px;
+}
+.gSubArea .gSub_section li.one.bg {
+  width: 1px;
+  border-right: 0;
+}
+
+/*head Alert*/
+/*ThreeMonth of Not PassWord in 3Month */
+.headAlert {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background: url(/images/common/head_alert_bg.gif) repeat-x 0 0;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+}
+.headAlert .pwAlert {
+  position: relative;
+  min-width: 1000px;
+  height: 100%;
+  max-width: 1600px;
+}
+.headAlert .icon {
+  position: absolute;
+  left: 30px;
+  top: 11px;
+}
+.headAlert .txt {
+  float: left;
+  margin-left: 69px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 16px;
+  display: inline;
+}
+.headAlert .txt span {
+  position: relative;
+}
+.headAlert .pwAlert .txt span {
+  top: 10px;
+}
+.headAlert .btn01 {
+  float: left;
+  margin: 14px 0 0 20px;
+}
+.headAlert .closeBtn01 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*Setting of Taraget*/
+.headAlert .tgAlert {
+  position: relative;
+  min-width: 1000px;
+  height: 100%;
+  max-width: 1600px;
+}
+.headAlert .tgAlert .txt span {
+  top: 18px;
+}
+
+.headAlert2 {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background: url(/images/common/head_alert_bg.gif) repeat-x 0 0;
+  z-index: 1001;
+  left: 0;
+  top: 50px;
+}
+.headAlert2 .pwAlert {
+  position: relative;
+  min-width: 1000px;
+  height: 100%;
+  max-width: 1600px;
+}
+.headAlert2 .icon {
+  position: absolute;
+  left: 30px;
+  top: 11px;
+}
+.headAlert2 .txt {
+  float: left;
+  margin-left: 69px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 16px;
+  display: inline;
+}
+.headAlert2 .txt span {
+  position: relative;
+}
+.headAlert2 .pwAlert .txt span {
+  top: 10px;
+}
+.headAlert2 .btn01 {
+  float: left;
+  margin: 14px 0 0 20px;
+}
+.headAlert2 .closeBtn01 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*Setting of Taraget*/
+.headAlert2 .tgAlert {
+  position: relative;
+  min-width: 1000px;
+  height: 100%;
+  max-width: 1600px;
+}
+.headAlert2 .tgAlert .txt span {
+  top: 18px;
+}
+.headAlert2 .tgAlert .btn01 {
+  left: 347px;
+}
+
+.gnbbgBox {
+  border: 1px solid #262627;
+  border-top: 1px solid #515151;
+  border-left: 1px solid #515151;
+  position: absolute;
+}
+.conPosDiv {
+  width: 100%;
+}
+
+/*131224 btn 오버 설정 및 기본 설정 추가*/
+.btn05 {
+  background: #b9493d url(/images/common/btn_t_bg.gif) repeat-x 0 0;
+  font-size: 12px;
+  color: #fcdedb;
+  padding: 6px 6px 5px 6px;
+  border: 1px solid #8d3930;
+}
+.btn_f_box > a {
+  float: left;
+  margin-right: 5px;
+}
+.btn05:hover {
+  background: #923a30 url(/images/common/btn_t_bg_over.gif) repeat-x 0 0;
+  border: 1px solid #742f27;
+}
+header .utill .leftArea .currentP .currentP_sub ul li p:hover {
+  color: #ed6d53;
+}
+header .utill .rightArea .userSub .ractionBox p.left a:hover {
+  color: #ed6d53;
+}
+.bookBox .forder ul li input {
+  cursor: pointer;
+}
+.bookBox .forder ul li input:hover {
+  color: #ed6d53;
+}

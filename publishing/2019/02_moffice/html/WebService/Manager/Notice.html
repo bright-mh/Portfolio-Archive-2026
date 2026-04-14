@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <title>사내정보 &gt; 공지사항 관리</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="../../common/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/user.css" />
+    <script type="text/javascript" src="../../jworks/common/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../common/js/ui.js"></script>
+  </head>
+  <body class="sub">
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- header -->
+      <header>
+        <div class="user_box">
+          <p>지진희 (제이니스)</p>
+        </div>
+        <div class="logo_box">
+          <h1>
+            <a href="#none"><img src="../../common/img/logo/logo.jpg" alt="회사로고" /></a>
+          </h1>
+
+          <select name="" title="선택" style="width: 300px">
+            <option value="">전체</option>
+            <option value="">옵션1</option>
+            <option value="">옵션2</option>
+            <option value="">옵션3</option>
+            <option value="">옵션4</option>
+          </select>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- LNB : left menu -->
+        <nav class="lnb_area">
+          <h2 class="blind">운영자 메뉴</h2>
+          <ul class="lnb_list">
+            <!-- [D] 1Depth 선택 시, li태그에 class="on" 추가 -->
+            <li class="list_basic1 on">
+              <a href="#none" class="depth1">사내정보</a>
+              <!-- [D] 2Depth 선택 시, li태그에 class="on" 추가 -->
+              <ul>
+                <li class="on"><a href="#none">공지사항 관리</a></li>
+                <li><a href="#none">사원정보 관리</a></li>
+                <li><a href="#none">휴일정보 관리</a></li>
+                <li><a href="#none">운영자 관리</a></li>
+                <li><a href="#none">부서별 운영자 관리</a></li>
+                <li><a href="#none">결재자 관리</a></li>
+                <li><a href="#none">그룹 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic2">
+              <a href="#none" class="depth1">PC 사용자</a>
+              <ul>
+                <li><a href="#none">비대상자 관리</a></li>
+                <li><a href="#none">차단 예외자 관리</a></li>
+                <li><a href="#none">휴가자 관리</a></li>
+                <li><a href="#none">사용자 초기화 관리</a></li>
+              </ul>
+            </li>
+            <li class="list_basic3">
+              <a href="#none" class="depth1">PC 사용 현황</a>
+              <ul>
+                <li><a href="#none">미승인 신청 현황</a></li>
+                <li><a href="#none">전체 신청 현황</a></li>
+                <li><a href="#none">PC ON/OFF 조회</a></li>
+                <li><a href="#none">PC-LOG 조회</a></li>
+                <li><a href="#none">PC-IDLE 조회</a></li>
+                <li><a href="#none">자리비움 조회</a></li>
+              </ul>
+            </li>
+            <li class="list_basic4">
+              <a href="#none" class="depth1">통계 현황</a>
+              <ul>
+                <li><a href="#none">PC ON/OFF 통계</a></li>
+                <li><a href="#none">PC 연장사용 통계</a></li>
+                <li><a href="#none">설치현황 통계</a></li>
+              </ul>
+            </li>
+            <li class="list_basic5">
+              <a href="#none" class="depth1">시스템</a>
+              <ul>
+                <li><a href="#none">설치현황 관리</a></li>
+                <li><a href="#none">데몬로그 조회</a></li>
+                <li><a href="#none">프로그램 설정</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- //LNB : left menu -->
+
+        <!-- contents -->
+        <div class="contents">
+          <!-- tip area -->
+          <div class="tip_area">
+            <a href="#none" class="btn_tip">TIP</a>
+            <p class="blind">TIP</p>
+            <div class="tip_box">
+              <ul class="tip_list">
+                <li><strong>공개</strong> 상태의 게시물이 <strong>배포일시</strong> 기준으로 사용자에게 전달됩니다.</li>
+                <li>
+                  <strong>Top 공지</strong> 속성이 설정된 공지 항목은 사용자 대시보드의 공지사항 목록에서
+                  <strong>상위</strong>에 노출됩니다.
+                </li>
+                <li>
+                  <strong>배포일시</strong>를 미래의 일시로 설정하여 공지를 <strong>예약</strong>하여 등록할 수
+                  있습니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- //tip area -->
+
+          <h2 class="title_cont btm_none">공지사항 관리</h2>
+
+          <!-- search area -->
+          <div class="search_area">
+            <div class="tbl_search">
+              <table>
+                <colgroup>
+                  <col style="width: 128px" />
+                  <col style="width: 334.4px" />
+                  <col style="width: 128px" />
+                  <col style="width: 334px" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">기간</th>
+                    <td>
+                      <div class="ip_calendar">
+                        <input type="text" name="" value="2019-07-05" title="시작일" />
+                        <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                      </div>
+                      ~
+                      <div class="ip_calendar">
+                        <input type="text" name="" value="2019-07-05" title="종료일" />
+                        <img src="../../common/img/icon_calendar.png" alt="달력" class="img_carlendar" />
+                      </div>
+                    </td>
+                    <th scope="row">대상</th>
+                    <td>
+                      <select name="" title="대상" style="width: 100%">
+                        <option value="">전체</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                        <option value="">옵션4</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">검색</th>
+                    <td>
+                      <select name="" title="검색" style="width: 130px">
+                        <option value="">전체</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                        <option value="">옵션4</option>
+                      </select>
+                      <div class="ip_box" style="width: 180px">
+                        <input type="text" name="" value="" title="검색어" />
+                        <a href="#none" class="icon_delete_full_blue">삭제</a>
+                      </div>
+                    </td>
+                    <th scope="row">상태</th>
+                    <td>
+                      <!-- [D] label과 id의 값을 동일하게 넣어 주세요. -->
+                      <input type="radio" id="" name="" value="" /><label for="">전체</label>
+                      <input type="radio" id="" name="" value="" /><label for="">공개</label>
+                      <input type="radio" id="" name="" value="" /><label for="">비공개</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- btn -->
+            <div class="btn_area">
+              <a href="#none" class="btn_big bg_blue icon_big_search">검색</a>
+            </div>
+            <!-- //btn -->
+          </div>
+          <!-- //search area -->
+
+          <!-- result_area -->
+          <div class="result_area">
+            <!-- result_top -->
+            <div class="result_top clearfix">
+              <div class="fl_left">
+                <p class="totla_num">총 <span>0</span>건</p>
+              </div>
+              <div class="btn_area fl_right">
+                <!-- <a href="#none" class="btn_md icon_md_csv">CSV</a> -->
+                <a href="#none" class="btn_md icon_md_excel">엑셀</a>
+                <a href="#none" title="새창 열림" class="btn_md bg_gray icon_md_regist_white3">등록</a>
+              </div>
+            </div>
+            <!-- //result_top -->
+
+            <!-- tbl_default -->
+            <div class="tbl_default">
+              <table>
+                <colgroup>
+                  <col style="width: 40px" />
+                  <col style="width: 80px" />
+                  <col style="width: 80px" />
+                  <col style="width: auto" />
+                  <col style="width: 100px" />
+                  <col style="width: 110px" />
+                  <col style="width: 80px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col"><input type="checkbox" name="" value="" title="전체 선택" /></th>
+                    <th scope="col" class="order_by_asc"><a href="#none">상태</a></th>
+                    <th scope="col" class="order_by_desc"><a href="#none">대상</a></th>
+                    <th scope="col"><a href="#none">제목</a></th>
+                    <th scope="col"><a href="#none">배포일시</a></th>
+                    <th scope="col"><a href="#none">등록정보</a></th>
+                    <th scope="col">관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="no_data">
+                    <td colspan="100">검색된 데이터가 없습니다.</td>
+                  </tr>
+                  <!-- [D] top 공지 시, tr 태그에 class="top" 추가 / td 태그에 TOP icon 추가  -->
+                  <tr class="top">
+                    <td><input type="checkbox" name="" value="" title="행 선택" /></td>
+                    <td>공개</td>
+                    <td>전체</td>
+                    <td class="left"><span class="icon_top">TOP</span>공지사항입니다.</td>
+                    <td>2019-06-25 PM 05:56</td>
+                    <td>이승우<br />(2019-06-25)</td>
+                    <td><a href="#none" title="새창 열림" class="btn_sm bg_sky">수정</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" value="" title="행 선택" /></td>
+                    <td>공개</td>
+                    <td>전체</td>
+                    <td class="left">공지사항입니다.</td>
+                    <td>2019-06-25 PM 05:56</td>
+                    <td>이승우<br />(2019-06-25)</td>
+                    <td><a href="#none" title="새창 열림" class="btn_sm bg_sky">수정</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" value="" title="행 선택" /></td>
+                    <td>공개</td>
+                    <td>전체</td>
+                    <td class="left">공지사항입니다.</td>
+                    <td>2019-06-25 PM 05:56</td>
+                    <td>이승우<br />(2019-06-25)</td>
+                    <td><a href="#none" title="새창 열림" class="btn_sm bg_sky">수정</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl_default -->
+
+            <!-- result_paging -->
+            <div class="result_paging">
+              <!-- paging -->
+              <div class="paging">
+                <a href="#none" class="btn_start">처음으로</a>
+                <a href="#none" class="btn_prev">이전</a>
+                <strong>1</strong>
+                <a href="#none">2</a>
+                <a href="#none">3</a>
+                <a href="#none">4</a>
+                <a href="#none">5</a>
+                <a href="#none">6</a>
+                <a href="#none">7</a>
+                <a href="#none">8</a>
+                <a href="#none">9</a>
+                <a href="#none">10</a>
+                <a href="#none" class="btn_next">다음</a>
+                <a href="#none" class="btn_end">맨끝으로</a>
+              </div>
+              <!-- //paging -->
+              <p class="page_num"><strong>3</strong>/<span>10</span></p>
+            </div>
+            <!-- //result_paging -->
+
+            <!-- result_btm -->
+            <div class="result_btm">
+              <!-- btn -->
+              <div class="btn_box btn_area">
+                <div class="fl_left">
+                  <select style="width: 100px">
+                    <option value="">선택</option>
+                    <option value="">공개</option>
+                    <option value="">비공개</option>
+                  </select>
+                  <a href="#none" class="btn_md bg_blue icon_md_choice_white">변경</a>
+                </div>
+              </div>
+              <!-- //btn -->
+            </div>
+            <!-- //result_btm -->
+          </div>
+          <!-- //result_area -->
+
+          <!-- TOP btn -->
+          <a href="#none" class="btn_top">TOP</a>
+          <!-- //TOP btn -->
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <div class="fl_left"><img src="../../common/img/logo_footer.png" alt="M.office" /></div>
+        <div class="fl_right">&copy; 2019 JNESS Corp. All Rights Reserved.</div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>목표대비 사용량 | 에너지 모니터링 | 빌딩 에너지 관리 시스템 CLOUD BEMS</title>
+    <script type="text/javascript" src="/html/2014/bems/js/custom/head.js"></script>
+    <link href="/html/2014/bems/css/custom/mo.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="sub">
+    <div class="blind"><a href="#content" class="hidden">본문 바로가기</a></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <script type="text/javascript" src="/html/2014/bems/js/custom/gnb.js"></script>
+      <!-- //header -->
+
+      <!-- container -->
+      <div id="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <h2 class="subTitle"><img src="/html/2014/bems/images/common/sub_title01.gif" alt="에너지 모니터링" /></h2>
+          <!-- [D] 선택된 메뉴의 li에 클래스명 "on" 삽입 -->
+          <ul>
+            <li class="depth02">
+              <a href="#link"><span>에너지원 별 사용량</span></a>
+            </li>
+            <li class="depth02 on">
+              <a href="#link"><span>목표대비 사용량</span></a>
+            </li>
+            <li class="depth03">
+              <a href="#link"><span>전기 사용량</span></a>
+              <ul>
+                <li>
+                  <a href="#link"><span>계통 별 전기 사용량</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>전기 사용패턴</span></a>
+                </li>
+                <li>
+                  <a href="#link"><span>층별 전기사용량</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>가스 사용량</span></a>
+            </li>
+            <li class="depth02">
+              <a href="#link"><span>실내외 온도/습도</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="boxContents">
+            <div class="titleArea">
+              <h1>목표대비 사용량</h1>
+              <ul class="location">
+                <!-- 2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li class="first"><a href="#link">Dashboard</a><span>&gt;</span></li>
+                <!-- //2014-01-06 navigation(breadcrumb) dashboard 철자 수정 -->
+                <li>에너지 모니터링<span>&gt;</span></li>
+                <li class="last">목표대비 사용량</li>
+              </ul>
+            </div>
+
+            <!-- 도움말, 인쇄, 북마크 -->
+            <div class="clear">
+              <ul class="sideList">
+                <li class="sideStyle01"><a href="#link">도움말</a></li>
+                <li class="sideStyle02"><a href="#link">인쇄</a></li>
+                <!-- [D] 북마크가 되어 있을 시, li태그에 class="on" 추가 -->
+                <li class="sideStyle03"><a href="#link">북마크</a></li>
+              </ul>
+            </div>
+            <!-- //도움말, 인쇄, 북마크 -->
+
+            <!-- 오늘의 사용량 -->
+            <section class="BoxArea mt10">
+              <div class="boxBg">
+                <section>
+                  <h2>
+                    오늘의 사용량<span class="titleInfo">오늘 00:00 ~ 13:15까지의 에너지 사용량 정보입니다.</span>
+                  </h2>
+                  <div class="graphBox">
+                    <div class="graphGroup">
+                      <div class="graphDiv">
+                        <p class="graphTitle">어제 10/31(<span class="weekend">일</span>)</p>
+                        <p class="bgGraph"><span class="graphBar" style="width: 50%"></span></p>
+                        <!-- 툴팁 영역 -->
+                        <div class="graphTooltip">
+                          <p>오늘 <span class="pl7">00:00~ 13:15</span></p>
+                          <ul>
+                            <!-- 2014-01-06 TOE 단위 소문자_수정01 -->
+                            <li>전체 : <span>0.0394567 toe</span></li>
+                            <!-- //2014-01-06 TOE 단위 소문자_수정01 -->
+                            <li>전기 : 191.89 kWh</li>
+                            <li>가스 : 191.89 N㎥</li>
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <!-- //툴팁 영역 -->
+                      </div>
+
+                      <div class="graphDiv">
+                        <p class="graphTitle">오늘 11/01(<span>월</span>)</p>
+                        <p class="bgGraph bgGraph_02"><span class="graphBar" style="width: 40%"></span></p>
+                        <!-- 툴팁 영역 -->
+                        <div class="graphTooltip">
+                          <p>오늘 <span class="pl7">00:00~ 13:15</span></p>
+                          <ul>
+                            <!-- 2014-01-06 TOE 단위 소문자_수정02 -->
+                            <li>전체 : <span>0.0394567 toe</span></li>
+                            <!-- //2014-01-06 TOE 단위 소문자_수정02 -->
+                            <li>전기 : 191.89 kWh</li>
+                            <li>가스 : 191.89 N㎥</li>
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <!-- //툴팁 영역 -->
+                      </div>
+                    </div>
+                    <div class="totalGroup">
+                      <div class="textGroup01">
+                        <span class="textStyle01">어제대비</span>
+                        <!-- [D] 증가일 경우 class="textIncrease" -->
+                        <span class="textStyle02">10.23</span> <span class="textStyle03">%</span>
+                      </div>
+                      <div class="textGroup02"><span class="textDecrease">감소</span></div>
+                    </div>
+                  </div>
+                  <table class="table_style01">
+                    <caption class="blind">
+                      오늘의 사용량 정보
+                    </caption>
+                    <colgroup>
+                      <col style="width: 12.1%" />
+                      <col style="width: 29.3%" />
+                      <col style="width: 29.3%" />
+                      <col style="width: 29.3%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">가스</th>
+                        <th scope="col">전체</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="thStyle">어제</th>
+                        <td>191.89 kWh</td>
+                        <td>191.89 N㎥</td>
+                        <!-- 2014-01-06 TOE 단위 소문자_수정03 -->
+                        <td>0.0394567 toe</td>
+                        <!-- //2014-01-06 TOE 단위 소문자_수정03 -->
+                      </tr>
+                      <tr>
+                        <th scope="row" class="thStyle">오늘</th>
+                        <td>191.89 kWh</td>
+                        <td>191.89 N㎥</td>
+                        <!-- 2014-01-06 TOE 단위 소문자_수정04 -->
+                        <td>0.0394567 toe</td>
+                        <!-- //2014-01-06 TOE 단위 소문자_수정04 -->
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+              </div>
+            </section>
+            <!-- //오늘의 사용량 -->
+
+            <!-- 2014-02-13 목표대비 사용량으로 통합_수정 -->
+            <!-- 목표대비 사용량 -->
+            <section class="BoxArea">
+              <div class="boxBg">
+                <section>
+                  <h2>목표대비 사용량</h2>
+                  <!-- [D] 목표량 설정이 없을 시, 주석 처리 해 놓음 -->
+                  <!--
+								<div class="goalSetGroup">
+									<p class="pt11">2014년의 에너지 목표량이 설정되지 않아 정보를 표시할 수 없습니다.</p>
+									<ul class="btn_timeList pt26">
+										<li><a href="#link">목표량 설정하기</a></li>
+									</ul>
+								</div>
+								-->
+                  <div class="graphBox">
+                    <div class="graphGroup02">
+                      <div class="graphDiv">
+                        <p class="graphTitle02">목표량<span>오늘까지의 목표량</span></p>
+                        <p class="bgGraph01"><span class="graphBar" style="width: 50%"></span></p>
+                        <!-- 툴팁 영역 -->
+                        <div class="graphTooltip">
+                          <p>오늘 <span class="pl7">00:00~ 13:15</span></p>
+                          <ul>
+                            <li>전체 : <span>0.0394567 toe</span></li>
+                            <li>전기 : 191.89 kWh</li>
+                            <li>가스 : 191.89 N㎥</li>
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <!-- //툴팁 영역 -->
+                      </div>
+
+                      <div class="graphDiv">
+                        <p class="graphTitle02">사용량<span>현재까지 사용량</span></p>
+                        <p class="bgGraph01 bgGraph_03"><span class="graphBar" style="width: 40%"></span></p>
+                        <!-- 툴팁 영역 -->
+                        <div class="graphTooltip">
+                          <p>오늘 <span class="pl7">00:00~ 13:15</span></p>
+                          <ul>
+                            <li>전체 : <span>0.0394567 toe</span></li>
+                            <li>전기 : 191.89 kWh</li>
+                            <li>가스 : 191.89 N㎥</li>
+                          </ul>
+                          <!-- bg를 위한 div 태그 -->
+                          <div class="bg_tooltipLeft"></div>
+                          <div class="bg_tooltipRight"></div>
+                        </div>
+                        <!-- //툴팁 영역 -->
+                      </div>
+                    </div>
+                    <div class="totalGroup02">
+                      <span class="textStyle01">목표량 대비</span>
+                      <span class="textStyle02">100.12</span> <span class="textStyle03">%</span>
+                      <span class="textStyle04">사용중</span>
+                    </div>
+                  </div>
+                  <table class="table_style01">
+                    <caption class="blind">
+                      오늘의 사용량 정보
+                    </caption>
+                    <colgroup>
+                      <col style="width: 25%" />
+                      <col style="width: 25%" />
+                      <col style="width: 25%" />
+                      <col style="width: 25%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">가스</th>
+                        <th scope="col">전체</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="thStyle">올해의 목표량</th>
+                        <td>191.89 kWh</td>
+                        <td>191.89 N㎥</td>
+                        <td>0.0394567 toe</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="thStyle">오늘까지의 목표량</th>
+                        <td>191.89 kWh</td>
+                        <td>191.89 N㎥</td>
+                        <td>0.0394567 toe</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="thStyle">현재까지의 목표량</th>
+                        <td>69.23 kWh</td>
+                        <td>72.23 N㎥</td>
+                        <td>70.23 toe</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+              </div>
+            </section>
+            <!-- //목표대비 사용량 -->
+            <!-- //2014-02-13 목표대비 사용량으로 통합_수정 -->
+          </div>
+        </div>
+        <!-- //contents -->
+      </div>
+      <!-- //container -->
+
+      <!-- footer -->
+      <footer>
+        <p class="f_logo01"><img src="/html/2014/bems/images/common/logo_footer01.png" alt="SK" /></p>
+        <p class="f_logo02"><img src="/html/2014/bems/images/common/logo_footer02.png" alt="CLOUD BEMS" /></p>
+        <div class="f_group">
+          <div class="clear">
+            <address>서울특별시 을지로 2가 11번지 SK Telecom</address>
+            <ul class="f_list01">
+              <li>대표이사: 하성민</li>
+              <li>대표전화: 02) 1234-5678</li>
+              <li>사업자등록번호: 104-81-37225</li>
+            </ul>
+          </div>
+          <p class="textStyle01">COPYRIGHT © CLOUD Building Energy Management System ALL RIGHTS RESERVED.</p>
+          <div class="clear">
+            <p class="textStyle02">
+              * CLOUD BEMS 웹사이트는 Internet Explorer 9, Chrome 4, Firefox 5, Safari 5 이상에 최적화 되어있습니다.
+            </p>
+            <ul class="f_list01 f_list02">
+              <li class="listStyle01">
+                <a href="http://windows.microsoft.com/ko-kr/internet-explorer/download-ie" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web01.png" alt="Internet Explorer"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.google.com/intl/ko/chrome/browser/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web02.png" alt="Chrome"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.mozilla.or.kr/ko/firefox/new/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web03.png" alt="FireFox"
+                /></a>
+              </li>
+              <li class="listStyle01">
+                <a href="http://www.apple.com/kr/safari/" target="_blank"
+                  ><img src="/html/2014/bems/images/common/icon_web04.png" alt="Safari"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="btn_top">
+          <a href="#link"><img src="/html/2014/bems/images/common/btn_top.gif" alt="Top으로 바로 가기" /></a>
+        </p>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>
