@@ -6,4 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/Portfolio-Archive-2026/",
   plugins: [react(), tailwindcss()],
+  server: {
+    open: "/",
+  },
 });
