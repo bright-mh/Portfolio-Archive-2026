@@ -43,7 +43,7 @@ function MusinsaProjectItem({ project }) {
   return (
     <article className="mb-10 pb-10 border-b border-gray-100 last:border-none last:mb-0 last:pb-0">
       <div className="flex flex-col gap-1 mb-4">
-        <h3 className="mt-0 mb-0 text-lg font-bold leading-snug">{project.title}</h3>
+        <h3 className="mt-0 mb-0 text-lg font-bold leading-snug">📁 {project.title}</h3>
         <p className="mt-0 mb-0 text-sm text-gray-400">{project.period}</p>
       </div>
       <div className="flex flex-wrap gap-1.5 mb-5">
@@ -52,7 +52,7 @@ function MusinsaProjectItem({ project }) {
         ))}
       </div>
       <div className="pl-4 border-l-2 border-gray-200">
-        <p className="mt-0 mb-4 text-base font-medium">{project.heading}</p>
+        <p className="mt-0 mb-4 text-base font-bold">{project.heading}</p>
         <p className="mt-0 mb-1 text-sm font-semibold text-gray-500 uppercase tracking-wide">작업 내용</p>
         <p className="mt-0 mb-4 text-sm leading-7 text-gray-700">{project.role}</p>
         <p className="mt-0 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">주요 성과</p>
@@ -72,7 +72,7 @@ function MusinsaYearSection({ yearGroup }) {
   return (
     <section id={`musinsa-year-${yearGroup.year}`} className="mb-12">
       <div className="flex items-center gap-4 mb-6">
-        <h2 className="mt-0 mb-0 text-2xl font-extrabold">{yearGroup.year}</h2>
+        <h2 className="mt-0 mb-0 text-xl font-extrabold">{yearGroup.year}</h2>
         <span className="text-sm text-gray-400">{yearGroup.projects.length}개 프로젝트</span>
       </div>
       {yearGroup.projects.map((project) => (

@@ -69,20 +69,17 @@ export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onC
       }}
       className="fixed inset-0 bg-black/55 flex items-center justify-center z-[1000]"
     >
-      <div className={`bg-white rounded-xl w-[90%] max-h-[80vh] flex flex-col shadow-2xl overflow-hidden ${wide ? "max-w-3xl" : "max-w-2xl"}`}>
+      <div
+        className={`bg-white rounded-xl w-[90%] max-h-[80vh] flex flex-col shadow-2xl overflow-hidden ${wide ? "max-w-3xl" : "max-w-2xl"}`}
+      >
         {/* 고정 헤더 */}
         <div className="px-10 py-6 border-b border-gray-100 bg-white shrink-0">
           <div className="flex items-start justify-between">
             <div>
-              <h3 className="mt-0 mb-1 text-xl font-bold">{title}</h3>
+              <h3 className="mt-0 mb-1 text-2xl font-bold">{title}</h3>
               {subtitle && <p className="mt-0 mb-0 text-sm text-gray-500">{subtitle}</p>}
               {link && (
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-block mt-2 text-xs underline"
-                >
+                <a href={link.href} target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs underline">
                   {link.label}
                 </a>
               )}
@@ -116,7 +113,9 @@ export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onC
         </div>
 
         {/* 스크롤 본문 */}
-        <div ref={scrollContainerRef} className="overflow-y-auto px-10 py-6">{children}</div>
+        <div ref={scrollContainerRef} className="overflow-y-auto px-10 py-6">
+          {children}
+        </div>
       </div>
     </div>
   );

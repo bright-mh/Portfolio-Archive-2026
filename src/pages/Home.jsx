@@ -4,7 +4,7 @@ import { WORK_TIMELINE } from "../constants/work-timeline.constant";
 export default function Home() {
   return (
     <section>
-      <header className="relative pb-7 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-1 after:bg-black">
+      <header className="relative pb-7 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-[3px] after:bg-black">
         <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold">Kim Myeong Hui Portfolio</h1>
         <a href="tel:010-2984-6115" className="block">
           📱 010-2984-6115
