@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * 범용 레이어 팝업 컴포넌트
@@ -7,12 +6,16 @@ import { Link } from "react-router-dom";
  * @param {string}   title       - 고정 헤더에 표시할 제목 (필수)
  * @param {string}   [subtitle]  - 제목 아래 작은 설명 텍스트
  * @param {{ href: string, label: string }} [link] - 헤더에 표시할 외부 링크
- * @param {string}   [detailHref] - 내부 상세 페이지 경로 (React Router Link)
+ * @param {{ label: string, id: string }[]} [tabs] - 연도별 탭 (클릭 시 해당 섹션으로 스크롤)
  * @param {string}   [ariaLabel] - 스크린리더용 다이얼로그 레이블 (기본값: title)
  * @param {Function} onClose     - 닫기 핸들러 (필수)
+ * @param {boolean}  [wide]      - 넓은 팝업 여부 (기본값: false)
  * @param {React.ReactNode} children - 스크롤되는 본문 영역
  */
-export default function PopupModal({ title, subtitle, link, detailHref, ariaLabel, onClose, children }) {
+export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onClose, children, wide = false }) {
+  const [activeTab, setActiveTab] = useState(tabs?.[0]?.id ?? null);
+  const scrollContainerRef = useRef(null);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") onClose();
@@ -20,6 +23,41 @@ export default function PopupModal({ title, subtitle, link, detailHref, ariaLabe
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
+
+  useEffect(() => {
+    if (!tabs || !scrollContainerRef.current) return;
+    const container = scrollContainerRef.current;
+
+    // 마운트 시 1회만 읽어 캐싱 (Forced Reflow 1회 허용)
+    const containerTop = container.getBoundingClientRect().top;
+    const offsets = tabs.map((tab) => {
+      const el = document.getElementById(tab.id);
+      return { id: tab.id, top: el ? el.getBoundingClientRect().top - containerTop : 0 };
+    });
+
+    const handleScroll = () => {
+      const scrollTop = container.scrollTop;
+      let currentId = tabs[0].id;
+
+      for (const { id, top } of offsets) {
+        if (top - scrollTop <= 8) currentId = id;
+      }
+
+      setActiveTab(currentId);
+    };
+
+    container.addEventListener("scroll", handleScroll, { passive: true });
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, [tabs]);
+
+  const scrollToSection = (id) => {
+    const container = scrollContainerRef.current;
+    const el = document.getElementById(id);
+    if (!container || !el) return;
+    const offset = el.getBoundingClientRect().top - container.getBoundingClientRect().top;
+    container.scrollBy({ top: offset, behavior: "smooth" });
+    setActiveTab(id);
+  };
 
   return (
     <div
@@ -31,44 +69,54 @@ export default function PopupModal({ title, subtitle, link, detailHref, ariaLabe
       }}
       className="fixed inset-0 bg-black/55 flex items-center justify-center z-[1000]"
     >
-      <div className="bg-white rounded-xl w-[90%] max-w-2xl max-h-[80vh] flex flex-col shadow-2xl overflow-hidden">
+      <div className={`bg-white rounded-xl w-[90%] max-h-[80vh] flex flex-col shadow-2xl overflow-hidden ${wide ? "max-w-3xl" : "max-w-2xl"}`}>
         {/* 고정 헤더 */}
-        <div className="flex items-start justify-between px-10 py-6 border-b border-gray-100 bg-white shrink-0">
-          <div>
-            <h3 className="mt-0 mb-1 text-xl font-bold">{title}</h3>
-            {subtitle && <p className="mt-0 mb-0 text-sm text-gray-500">{subtitle}</p>}
-            {link && (
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block mt-2 text-xs underline"
-              >
-                {link.label}
-              </a>
-            )}
-            {detailHref && (
-              <Link
-                to={detailHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block mt-2 ml-3 text-xs underline text-blue-600 hover:text-blue-800"
-              >
-                프로젝트 상세 내역 보기 →
-              </Link>
-            )}
+        <div className="px-10 py-6 border-b border-gray-100 bg-white shrink-0">
+          <div className="flex items-start justify-between">
+            <div>
+              <h3 className="mt-0 mb-1 text-xl font-bold">{title}</h3>
+              {subtitle && <p className="mt-0 mb-0 text-sm text-gray-500">{subtitle}</p>}
+              {link && (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block mt-2 text-xs underline"
+                >
+                  {link.label}
+                </a>
+              )}
+            </div>
+            <button
+              onClick={onClose}
+              aria-label="닫기"
+              className="ml-4 shrink-0 bg-transparent border-none text-2xl leading-none cursor-pointer text-gray-400 hover:text-gray-700"
+            >
+              ×
+            </button>
           </div>
-          <button
-            onClick={onClose}
-            aria-label="닫기"
-            className="ml-4 shrink-0 bg-transparent border-none text-2xl leading-none cursor-pointer text-gray-400 hover:text-gray-700"
-          >
-            ×
-          </button>
+
+          {tabs && tabs.length > 0 && (
+            <div className="flex gap-2 mt-4 overflow-x-auto pb-0.5">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => scrollToSection(tab.id)}
+                  className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer border-none ${
+                    activeTab === tab.id
+                      ? "bg-gray-900 text-white"
+                      : "bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-900"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* 스크롤 본문 */}
-        <div className="overflow-y-auto px-10 py-6">{children}</div>
+        <div ref={scrollContainerRef} className="overflow-y-auto px-10 py-6">{children}</div>
       </div>
     </div>
   );

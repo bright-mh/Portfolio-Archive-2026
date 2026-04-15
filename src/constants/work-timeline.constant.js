@@ -1,77 +1,12 @@
+import { MUSINSA_WORK } from "./work-musinsa.constant";
+
 export const WORK_TIMELINE = [
   {
     period: "2021 - 2025",
     company: "MUSINSA",
     role: "프론트엔드 개발",
     codingListHref: "https://www.musinsa.com/main/musinsa/recommend?gf=F",
-    detailHref: "/about-musinsa-work",
-    groups: [
-      {
-        yearLabel: "2025: 아키텍처 최신화 및 비즈니스 방어",
-        projects: [
-          {
-            title: "주문서 FE/BE 분리 및 React 전환",
-            context: "백엔드 의존성이 높은 레거시 구조로 인한 개발 병목 및 유지보수 효율 저하.",
-            action:
-              "주문 로직을 React 기반 독립 애플리케이션으로 재구축. 신규 디자인 시스템(MDS)을 전면 도입하고 모듈화된 컴포넌트 설계.",
-            result: "개발 리소스 50% 단축(4주→2주). 독립 배포 환경 구축으로 운영 안정성 확보 및 장애 리스크 최소화.",
-          },
-          {
-            title: "쿠폰 검증 시스템 고도화 및 비용 누수 차단",
-            action: "복잡한 할인/회수 로직을 도메인 중심으로 추상화하여 리팩토링.",
-            result: "코드 라인 수 획기적 감축 및 DX(개발자 경험) 개선. 하반기 약 1억 8,620만 원의 비용 누수 방어.",
-          },
-        ],
-      },
-      {
-        yearLabel: "2024: 플랫폼 확장 및 사용자 경험 최적화",
-        projects: [
-          {
-            title: "무신사 2.0 마이페이지 및 혜택 시스템 구축",
-            action:
-              "전사 등급제 개편에 따른 포인트/적립금 서비스 React 전환. 데이터 시각화(그래프)를 통한 사용자 혜택 체감도 향상.",
-            result: "마이페이지 내 혜택 전환율 310bps 상승(5.1%→8.2%). 방문자 수 37% 증가.",
-          },
-          {
-            title: "PC UI/UX 최적화 및 경량화",
-            context: "PC 채널 중단 후 발생하는 고레벨 고객 이탈 및 매출 하락 대응.",
-            action: "1,500건의 VoC 분석 기반 PC 전용 레이아웃 설계 및 적응형 UI 구현.",
-            result: "PC 결제 금액 비중 157bps 상승. 하락하던 PC 매출 지표의 성공적인 반등 견인.",
-          },
-        ],
-      },
-      {
-        yearLabel: "2023: 데이터 기반 그로스(Growth) 및 전환율 혁신",
-        projects: [
-          {
-            title: "회원가입 시스템 전면 개편",
-            context: "복잡한 가입 절차로 인한 높은 이탈률 해결.",
-            action: "이탈 구간 데이터 분석을 통한 플로우 간소화 및 네이버/토스 본인인증 신규 도입.",
-            result: "가입 전환율 93.3% 달성 (기존 65.5% 대비 압도적 개선).",
-          },
-          {
-            title: "첫 구매 혜택 인터페이스 A/B 테스팅",
-            action: "타겟팅 UI 로직 구축 및 데이터 트래킹(GA4/Amplitude) 정합성 확보.",
-            result: "당일 첫 구매 전환율 전월 대비 9.3% 향상.",
-          },
-        ],
-      },
-      {
-        yearLabel: "2021 - 2022: 글로벌 런칭 및 UI 표준 수립",
-        projects: [
-          {
-            title: "글로벌 무신사 스토어 신규 구축",
-            action: "React SSR 기반 다국어 대응 레이아웃 설계. 검색 엔진 최적화(SEO) 및 성능 최적화.",
-            result: "성공적인 글로벌 서비스 런칭 및 다국어 환경에서의 UI 일관성 확보.",
-          },
-          {
-            title: "레거시 탈피 및 UI 아키텍처 통합",
-            action: "BEM 방법론 및 Sass 기반의 신규 프레임워크 전환. 전사 UI 가이드라인 수립.",
-            result: "노후화된 회원/주문 프로세스 UI 최신화 및 전사 UI 일관성 확보.",
-          },
-        ],
-      },
-    ],
+    musinsaGroups: MUSINSA_WORK,
   },
   {
     period: "2020",
