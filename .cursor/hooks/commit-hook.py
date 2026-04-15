@@ -53,13 +53,13 @@ agent_message = f"""사용자가 -commit 명령어를 입력했습니다. 아래
 2. 커밋 메시지를 사용자에게 먼저 보여주기:
    예시) 커밋 메시지: `feat: Pretendard 폰트 적용`
 3. 사용자에게 물어보기:
-   "커밋하시겠습니까? (y 또는 Enter: 진행 / n: 취소)"
-4. 사용자가 y, yes, 또는 빈 Enter를 입력하면:
+   "커밋하시겠습니까? (y / 응 / ㅇㅇ: 진행 / n: 취소)"
+4. 사용자가 y, yes, 응, ㅇㅇ 중 하나를 입력하면:
    - `git add -A` 실행
    - 작성한 커밋 메시지로 `git commit` 실행
    - 커밋 완료 후 사용자에게 물어보기:
-     "Push하시겠습니까? (y 또는 Enter: push / n: 취소)"
-   - 사용자가 y, yes, 또는 빈 Enter를 입력하면 `git push origin main` 실행
+     "Push하시겠습니까? (y / 응 / ㅇㅇ: push / n: 취소)"
+   - 사용자가 y, yes, 응, ㅇㅇ 중 하나를 입력하면 `git push origin main` 실행
    - n이면 "Push가 취소되었습니다." 출력
 5. 3번에서 사용자가 n을 입력하면 "커밋이 취소되었습니다." 출력
 
