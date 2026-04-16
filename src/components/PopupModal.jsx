@@ -15,6 +15,8 @@ import { useEffect, useRef, useState } from "react";
 export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onClose, children, wide = false }) {
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.id ?? null);
   const scrollContainerRef = useRef(null);
+  const isScrollingRef = useRef(false);
+  const scrollTimerRef = useRef(null);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -36,6 +38,8 @@ export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onC
     });
 
     const handleScroll = () => {
+      if (isScrollingRef.current) return;
+
       const scrollTop = container.scrollTop;
       let currentId = tabs[0].id;
 
@@ -54,6 +58,20 @@ export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onC
     const container = scrollContainerRef.current;
     const el = document.getElementById(id);
     if (!container || !el) return;
+
+    isScrollingRef.current = true;
+    clearTimeout(scrollTimerRef.current);
+
+    const onScrollEnd = () => {
+      isScrollingRef.current = false;
+      clearTimeout(scrollTimerRef.current);
+      container.removeEventListener("scrollend", onScrollEnd);
+    };
+    container.addEventListener("scrollend", onScrollEnd);
+
+    // scrollend 미지원 브라우저 fallback
+    scrollTimerRef.current = setTimeout(onScrollEnd, 1500);
+
     const offset = el.getBoundingClientRect().top - container.getBoundingClientRect().top;
     container.scrollBy({ top: offset, behavior: "smooth" });
     setActiveTab(id);
@@ -99,10 +117,10 @@ export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onC
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
-                  className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer border-none ${
+                  className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-medium cursor-pointer border-1 text-gray-500 border-gray-300 ${
                     activeTab === tab.id
-                      ? "bg-gray-900 text-white"
-                      : "bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-900"
+                      ? "bg-gray-900 text-white border-gray-900"
+                      : "text-gray-500 border-gray-300 hover:text-gray-900 hover:border-gray-500"
                   }`}
                 >
                   {tab.label}
