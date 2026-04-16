@@ -19,8 +19,17 @@ export const MUSINSA_WORK = [
       },
       {
         title: "장바구니 쿠폰 조건 검증 시스템 고도화 및 할인 혜택 자동 회수 로직 구현",
-        period: "2025.8.30",
-        skills: ["HTML5", "CSS3", "SCSS", "React Refactoring", "Code Complexity Reduction", "Clean Code", "Partner Office UI/UX Modernization", "Admin System Optimization"],
+        period: "2025.8.1 ~ 2025.8.30",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "React Refactoring",
+          "Code Complexity Reduction",
+          "Clean Code",
+          "Partner Office UI/UX Modernization",
+          "Admin System Optimization",
+        ],
         heading: "결제 정합성 확보를 위한 혜택 회수 로직 구현 및 클린 코드 기반의 DX(Developer Experience) 개선",
         role: "복잡하게 얽혀있던 쿠폰 검증 로직 재설계 및 부분 취소 시 차등 회수 로직 구현.",
         results: [
@@ -32,8 +41,16 @@ export const MUSINSA_WORK = [
       },
       {
         title: "주문서 FE/BE 분리 및 React 전환",
-        period: "2025.7.3",
-        skills: ["HTML5", "CSS3", "SCSS", "React", "MDS(Design System) Integration", "Frontend Architecture Redesign", "Modular UI Development"],
+        period: "2025.5.2 ~ 2025.7.3",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "React",
+          "MDS(Design System) Integration",
+          "Frontend Architecture Redesign",
+          "Modular UI Development",
+        ],
         heading: "주문서 영역의 FE-BE 디커플링(Decoupling) 및 디자인 시스템 기반의 UI 엔지니어링 환경 구축",
         role: "주문서 영역의 레거시 구조(마크업 중심)를 React 기반 독립 애플리케이션으로 전환하고 FE/BE 개발 영역의 완전 분리.",
         results: [
@@ -46,7 +63,7 @@ export const MUSINSA_WORK = [
       },
       {
         title: "플러스배송(도착보장) 서비스 인지도 제고 및 전 지면 노출 고도화",
-        period: "2025.6.30",
+        period: "2025.6.16 ~ 2025.6.30",
         skills: ["HTML5", "CSS3", "SCSS", "React", "UI/UX Optimization", "Feature Flag Implementation"],
         heading: "사용자 접점 전반의 배송 정보 시각화 및 피쳐 플래그 기반의 안정적 서비스 전파",
         role: "플러스배송 서비스 브랜딩 강화를 위한 전 지면 UI/UX 개편 및 탐색 편의성 개선을 위한 프론트엔드 최적화.",
@@ -59,7 +76,7 @@ export const MUSINSA_WORK = [
       },
       {
         title: "장바구니 쿠폰 발행기능 고도화",
-        period: "2025.5.30",
+        period: "2025.5.12 ~2025.5.30",
         skills: ["HTML5", "CSS3", "SCSS", "React", "High-Traffic Campaign Optimization", "UI/UX Interaction Design"],
         heading: "대규모 프로모션 대응을 위한 복합 쿠폰 로직 구현 및 주문 인터랙션 고도화",
         role: "장바구니 쿠폰 발행 조건 다각화에 따른 주문서 내 쿠폰 적용 UI 개발 및 대규모 트래픽 대응 최적화.",
@@ -71,8 +88,16 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 2.0 PC UI/UX 최적화",
-        period: "2025.4.30",
-        skills: ["HTML5", "CSS3", "SCSS", "UI/UX Optimization", "Responsive/Adaptive Design", "FE Development Standard Guide", "Performance Lightweighting"],
+        period: "2025.4.1 ~ 2025.4.30",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "UI/UX Optimization",
+          "Responsive/Adaptive Design",
+          "FE Development Standard Guide",
+          "Performance Lightweighting",
+        ],
         heading: "데이터 기반의 PC 사용성 복구 및 프론트엔드 개발 표준화를 통한 생산성 극대화",
         role: "PC 채널 종료 후 발생하는 고객 이탈 및 매출 하락 대응을 위한 주문/결제 영역 PC 전용 UI/UX 설계 및 최적화.",
         results: [
@@ -89,8 +114,17 @@ export const MUSINSA_WORK = [
     projects: [
       {
         title: "무신사 머니 상품권 및 선물하기 서비스 UI/UX 개발",
-        period: "2024.12.31",
-        skills: ["HTML5", "CSS3", "SCSS", "React", "UI/UX Implementation", "Design System 2.0", "Responsive Web", "Component-driven Development"],
+        period: "2024.12.23 ~ 2024.12.31",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "React",
+          "UI/UX Implementation",
+          "Design System 2.0",
+          "Responsive Web",
+          "Component-driven Development",
+        ],
         heading: "선물하기 특화 인터페이스 구현 및 디자인 시스템 2.0 기반 주문서 최적화",
         role: "무신사 머니 상품권 판매 및 선물하기 서비스의 사용자 접점(Touch-point) UI 개발 및 전용 주문서 마크업 고도화.",
         results: [
@@ -103,8 +137,16 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 2.0 클레임(취소·반품·교환) 시스템 전면 개편 및 React 전환",
-        period: "2024.12.19",
-        skills: ["HTML5", "CSS3", "SCSS", "React", "Design System 2.0", "SPA Architecture", "Claim Process Optimization"],
+        period: "2024.9.10 ~ 2024.12.19",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "React",
+          "Design System 2.0",
+          "SPA Architecture",
+          "Claim Process Optimization",
+        ],
         heading: "대규모 아키텍처 전환에 따른 클레임 프로세스 최적화 및 UI/UX 고도화",
         role: "클레임(취소/반품/교환) 요청·완료·철회 전 과정의 UI 개발 및 레거시 SSR 환경의 React SPA 전환.",
         results: [
@@ -116,8 +158,16 @@ export const MUSINSA_WORK = [
       },
       {
         title: "맞춤 제작 상품 청약철회 프로세스 고도화 및 정책 UI 도입",
-        period: "2024.9.9",
-        skills: ["HTML5", "CSS3", "SCSS", "React", "UI/UX Policy Implementation", "E-commerce Checkout Optimization", "Compliance UI"],
+        period: "2024.8.26 ~ 2024.9.9",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "React",
+          "UI/UX Policy Implementation",
+          "E-commerce Checkout Optimization",
+          "Compliance UI",
+        ],
         heading: "CS 리스크 최소화를 위한 맞춤형 상품 전용 안내 및 동의 인터페이스 구축",
         role: "마킹 유니폼 등 맞춤 제작 상품의 청약철회 불가 안내 강화 및 주문 프로세스 내 법적 동의 수집 UI 개발.",
         results: [
@@ -130,8 +180,14 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 2.0 회원 혜택 구축 및 UI/UX 고도화",
-        period: "2024.5.30",
-        skills: ["React", "Design System 2.0", "Data Visualization(Graph Interaction)", "UI/UX Refactoring", "SPA Architecture"],
+        period: "2024.4.8 ~ 2024.5.30",
+        skills: [
+          "React",
+          "Design System 2.0",
+          "Data Visualization(Graph Interaction)",
+          "UI/UX Refactoring",
+          "SPA Architecture",
+        ],
         heading: "사용자 혜택 체감도 향상을 위한 데이터 시각화 및 React 기반 UI 아키텍처 수립",
         role: "무신사 2.0 개편에 따른 '나의 혜택' 및 '등급 혜택 안내' 서비스의 프론트엔드 개발 및 리액트 전환.",
         results: [
@@ -144,8 +200,15 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 2.0 포인트·적립금 통합 관리 구축 및 UI 최신화",
-        period: "2024.4.5",
-        skills: ["React", "Design System 2.0", "GA4/Amplitude Integration", "SPA Architecture", "UI/UX Refactoring", "Legacy Migration"],
+        period: "2024.3.25 ~2024.4.5",
+        skills: [
+          "React",
+          "Design System 2.0",
+          "GA4/Amplitude Integration",
+          "SPA Architecture",
+          "UI/UX Refactoring",
+          "Legacy Migration",
+        ],
         heading: "정책 변경에 따른 데이터 마이그레이션 대응 및 리액트 기반 고도화",
         role: "등급제 개편 및 포인트 정책 종료에 따른 '적립금' 서비스의 전면 재설계 및 프론트엔드 React 전환 개발.",
         results: [
@@ -161,8 +224,15 @@ export const MUSINSA_WORK = [
     projects: [
       {
         title: "무신사 2.0 마이사이즈 React 전환 및 UI/UX 고도화",
-        period: "2023.12.26",
-        skills: ["React", "Design System 1.5", "UI/UX Refactoring", "PC/Mobile Responsive Optimization", "Data-driven UI Design", "Legacy Migration"],
+        period: "2023.12.1 ~ 2023.12.26",
+        skills: [
+          "React",
+          "Design System 1.5",
+          "UI/UX Refactoring",
+          "PC/Mobile Responsive Optimization",
+          "Data-driven UI Design",
+          "Legacy Migration",
+        ],
         heading: "데이터 이관에 따른 대규모 마이그레이션 및 차세대 디자인 시스템 적용",
         role: "무신사 시스템 2.0 프로젝트의 일환으로 기존 SSR 기반의 사이즈/뷰티 정보 페이지를 React로 전환하고 전반적인 사용자 인터페이스 고도화 주도.",
         results: [
@@ -174,8 +244,17 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 신규 고객 확보(첫 구매 혜택) 인터페이스 고도화 및 그로스 최적화",
-        period: "2023.9.30",
-        skills: ["HTML5", "CSS3", "SCSS", "React", "A/B Testing", "Data Analysis(GA/Amplitude)", "Conversion Rate Optimization(CRO)", "Growth Hacking UI"],
+        period: "2023.8.1 ~ 2023.9.29",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "React",
+          "A/B Testing",
+          "Data Analysis(GA/Amplitude)",
+          "Conversion Rate Optimization(CRO)",
+          "Growth Hacking UI",
+        ],
         heading: "데이터 분석 및 마케팅 효율 극대화를 위한 첫 구매 전환 UI/UX 최적화",
         role: "신규 회원 유입 확대 및 첫 구매 전환율 향상을 위한 웰컴 페이지 고도화 작업과 마케팅 퍼포먼스 지원 UI 개발.",
         results: [
@@ -188,8 +267,15 @@ export const MUSINSA_WORK = [
       },
       {
         title: "마이페이지 회원혜택 React 전환 및 운영 효율화",
-        period: "2023.8.31",
-        skills: ["React", "JavaScript(ES6+)", "SPA Architecture", "SSR-to-CSR Migration", "Legacy Code Analysis", "UI Refactoring"],
+        period: "2023.8.21 ~ 2023.8.31",
+        skills: [
+          "React",
+          "JavaScript(ES6+)",
+          "SPA Architecture",
+          "SSR-to-CSR Migration",
+          "Legacy Code Analysis",
+          "UI Refactoring",
+        ],
         heading: "기술 부채 해결을 위한 SSR 페이지의 React SPA 전환 및 운영 효율화",
         role: "기존 백엔드(Server-Side) 관리 영역의 회원혜택 페이지를 React 기반으로 전환하여 개발 직군 간 의존성 제거 및 프론트엔드 운영 독립성 확보.",
         results: [
@@ -201,7 +287,7 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 회원가입 시스템 UI/UX 전면 개편 및 가입 전환율 최적화",
-        period: "2023.6.30",
+        period: "2023.4.1 ~ 2023.6.30",
         skills: ["HTML5", "CSS3", "SCSS", "UI/UX Conversion Rate Optimization(CRO)"],
         heading: "데이터 기반의 UI/UX 개선을 통한 고효율 회원 유입 인터페이스 구축",
         role: "회원가입 이탈률 감소 및 가입 프로세스 간소화를 위한 전체 UI/UX 개편 및 신규 인증 수단 통합 개발.",
@@ -215,8 +301,17 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 본인인증 시스템 UI/UX 고도화 및 개발 운영 환경 최적화",
-        period: "~ 2023.4.28",
-        skills: ["HTML5", "CSS3", "SCSS", "React", "Monorepo", "Design System(Smart Components)", "Web Accessibility(Lighthouse)", "UI Architecture Refactoring"],
+        period: "2023.4.3 ~ 2023.4.28",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "React",
+          "Monorepo",
+          "Design System(Smart Components)",
+          "Web Accessibility(Lighthouse)",
+          "UI Architecture Refactoring",
+        ],
         heading: "운영 비용 절감 및 유지보수 효율 극대화를 위한 UI 아키텍처 최적화",
         role: "토스(Toss) 본인인증 신규 도입 UI 개발 및 백엔드 의존성 분리를 통한 독립적인 프론트엔드 운영 환경 구축.",
         results: [
@@ -229,7 +324,7 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 서비스 보안성 강화 및 ISMS 인증 대비 개인정보 보호 정책 UI 개편",
-        period: "~ 2023.3.2",
+        period: "2023.2.23 ~ 2023.3.2",
         skills: ["HTML5", "CSS3", "SCSS", "UI/UX Optimization"],
         heading: "개인정보 보호법 준수를 위한 회원가입 및 약관 동의 시스템 최적화",
         role: "광고성 정보 수신 및 개인정보 수집·이용 동의 절차의 법적 준거성을 확보하기 위한 프론트엔드 UI/UX 개편 수행.",
@@ -247,7 +342,7 @@ export const MUSINSA_WORK = [
     projects: [
       {
         title: "무신사·29CM·솔드아웃 통합 멤버십(TAG) 구축",
-        period: "~ 2022.12.30",
+        period: "2022.7.29 ~ 2022.12.30",
         skills: ["HTML5", "CSS3", "SCSS", "UI Component Architecture"],
         heading: "그룹사 통합 포인트 체계(TAG) 구축을 위한 유연한 UI 아키텍처 구현",
         role: "무신사 계열 3사 통합 멤버십 서비스인 'TAG 머니'의 전체 UI 개발 및 브랜드 경험(BX) 디자인 최적화 작업 수행.",
@@ -259,7 +354,7 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 파트너스 입점 시스템 UI/UX 고도화 및 운영 효율 개선",
-        period: "~ 2022.7.29",
+        period: "2022.4.29 ~ 2022.7.29",
         skills: ["HTML5", "CSS3", "SCSS", "Form Design Optimization", "UI/UX Refactoring"],
         heading: "사용자 경험(UX) 분석 기반의 입점 신청 인터페이스 최적화",
         role: "무신사 파트너스 입점 프로세스의 혼선과 운영 비효율을 해결하기 위한 입점 안내 및 신청 페이지의 UI 전면 개편.",
@@ -271,8 +366,16 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 iOS 앱 소셜 로그인 인터페이스 재활성화 및 UI 개편",
-        period: "~ 2022.7.4",
-        skills: ["HTML5", "CSS3", "SCSS", "Web-to-App Interface UI", "Mobile Web Optimization", "Apple HIG UI Compliance", "Responsive Markup"],
+        period: "2022.4.30 ~ 2022.7.4",
+        skills: [
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "Web-to-App Interface UI",
+          "Mobile Web Optimization",
+          "Apple HIG UI Compliance",
+          "Responsive Markup",
+        ],
         heading: "Apple 심사 가이드 준수 및 소셜 로그인 전환율 최적화 UI 개발",
         role: "iOS 앱 스토어 심사 기준(Human Interface Guidelines)에 부합하는 소셜 로그인(Apple/Kakao) UI 구축 및 긴급 대응을 통한 서비스 정상화 주도.",
         results: [
@@ -283,7 +386,7 @@ export const MUSINSA_WORK = [
       },
       {
         title: "무신사 글로벌 스토어 신규 구축",
-        period: "~ 2022.4.29",
+        period: "2022.1.2 ~ 2022.4.29",
         skills: ["React", "SSR(Next.js 등)", "HTML5", "CSS3", "SCSS", "Responsive Web", "UI/UX Optimization"],
         heading: "React SSR 기반의 글로벌 서비스 회원·마이페이지 신규 구축",
         role: "글로벌 무신사 스토어 런칭을 위한 회원 서비스(회원가입, 마이페이지, 계정 찾기 등) 및 이메일 템플릿의 프론트엔드 UI 구축.",
