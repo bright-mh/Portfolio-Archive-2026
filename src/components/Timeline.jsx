@@ -54,11 +54,16 @@ function MusinsaProjectItem({ project }) {
       <div className="pl-4 border-l-2 border-gray-200">
         <p className="mt-0 mb-4 text-base font-bold">{project.heading}</p>
         <p className="mt-0 mb-1 text-sm font-semibold text-gray-500 uppercase tracking-wide">작업 내용</p>
-        <p className="mt-0 mb-4 text-sm leading-7 text-gray-700">{project.role}</p>
+        <p className="mt-0 mb-4 text-sm leading-7 text-gray-700 relative pl-[14px] ml-[10px] before:content-[''] before:absolute before:left-[1px] before:top-[14px] before:-translate-y-1/2 before:w-[3px] before:h-[3px] before:bg-black before:rounded-full">
+          {project.role}
+        </p>
         <p className="mt-0 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">주요 성과</p>
-        <ul className="mt-0 pl-5 space-y-2">
+        <ul className="mt-0 space-y-2">
           {project.results.map((result, i) => (
-            <li key={i} className="text-sm leading-7 text-gray-700">
+            <li
+              key={i}
+              className="text-sm leading-7 text-gray-700 relative pl-[14px] ml-[10px] before:content-[''] before:absolute before:left-[1px] before:top-[14px] before:-translate-y-1/2 before:w-[3px] before:h-[3px] before:bg-black before:rounded-full"
+            >
               {result}
             </li>
           ))}
