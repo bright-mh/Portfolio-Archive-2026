@@ -97,8 +97,8 @@ export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onC
               <h3 className="mt-0 mb-1 text-2xl font-bold">{title}</h3>
               {subtitle && <p className="mt-0 mb-0 text-sm text-gray-500">{subtitle}</p>}
               {link && (
-                <a href={link.href} target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs underline">
-                  {link.label}
+                <a href={link.href} target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs">
+                  <span className="inline-block underline">{link.label}</span> {link.label && "→"}
                 </a>
               )}
             </div>
