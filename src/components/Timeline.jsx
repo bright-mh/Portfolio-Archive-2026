@@ -5,11 +5,11 @@ function ProjectCard({ project }) {
   return (
     <div className="mb-6">
       <h5 className="mt-0 mb-1.5 text-base font-semibold">{project.title}</h5>
-      {project.subtitle && <p>{project.subtitle}</p>}
+      {project.heading && <p>{project.heading}</p>}
       <ul className="m-0 pl-5 leading-7 text-sm">
-        {project.context && <li>Context: {project.context}</li>}
-        {project.action && <li>Action: {project.action}</li>}
-        {project.result && <li>Result: {project.result}</li>}
+        {project.context && <li>작업 배경: {project.context}</li>}
+        {project.role && <li>작업 내용: {project.role}</li>}
+        {project.results && <li>주요 성과: {project.results}</li>}
         {project.news && (
           <li>
             관련 소식:{" "}
@@ -19,14 +19,14 @@ function ProjectCard({ project }) {
           </li>
         )}
       </ul>
-      {project.codingListHref && (
+      {project.href && (
         <a
-          href={project.codingListHref}
+          href={project.href}
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-2 text-xs underline"
         >
-          {project.codingListHref.startsWith("http") ? "사이트 보기" : "퍼블리싱 파일 보기"}
+          {project.href.startsWith("http") ? "사이트 보기" : "퍼블리싱 파일 보기"}
         </a>
       )}
     </div>
@@ -132,7 +132,7 @@ export default function Timeline({ items }) {
         <PopupModal
           title={`${activeEntry.period} | ${activeEntry.company}`}
           subtitle={activeEntry.role}
-          link={activeEntry.codingListHref ? { href: activeEntry.codingListHref, label: "사이트 보기" } : undefined}
+          link={activeEntry.href ? { href: activeEntry.href, label: "사이트 보기" } : undefined}
           ariaLabel={`${activeEntry.company} 프로젝트 상세`}
           onClose={() => setActiveEntry(null)}
           wide={!!activeEntry.musinsaGroups}
