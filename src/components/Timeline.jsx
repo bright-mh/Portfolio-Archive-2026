@@ -1,35 +1,65 @@
 import { useState } from "react";
 import PopupModal from "./PopupModal";
 
+const BulletList = ({ items, className = "mb-4" }) => (
+  <ul className={`mt-0 space-y-2 ${className}`}>
+    {items.map((item, i) => (
+      <li
+        key={i}
+        className="text-sm leading-7 text-gray-700 relative pl-[14px] ml-[10px] mb-0 before:content-[''] before:absolute before:left-[1px] before:top-[12px] before:w-[3px] before:h-[3px] before:bg-black before:rounded-full"
+      >
+        {item}
+      </li>
+    ))}
+  </ul>
+);
+
 function ProjectCard({ project }) {
   return (
-    <div className="mb-6">
-      <h5 className="mt-0 mb-1.5 text-base font-semibold">{project.title}</h5>
-      {project.heading && <p>{project.heading}</p>}
-      <ul className="m-0 pl-5 leading-7 text-sm">
-        {project.context && <li>작업 배경: {project.context}</li>}
-        {project.role && <li>작업 내용: {project.role}</li>}
-        {project.results && <li>주요 성과: {project.results}</li>}
+    <article className="mb-10 pb-10 border-b border-gray-100 last:border-none last:mb-0 last:pb-0">
+      <div className="flex flex-col gap-1 mb-4">
+        <h3 className="mt-0 mb-0 text-lg font-bold leading-snug">📁 {project.title}</h3>
+      </div>
+      <div className="pl-4 border-l-2 border-gray-200">
+        {project.heading && <p className="mt-0 mb-4 text-base font-bold">{project.heading}</p>}
+        {project.context && (
+          <>
+            <p className="mt-0 mb-1 text-sm font-semibold text-gray-500 uppercase tracking-wide">작업 배경</p>
+            <BulletList items={project.context} />
+          </>
+        )}
+        {project.role && (
+          <>
+            <p className="mt-0 mb-1 text-sm font-semibold text-gray-500 uppercase tracking-wide">작업 내용</p>
+            <BulletList items={project.role} />
+          </>
+        )}
+        {project.results && (
+          <>
+            <p className="mt-0 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">주요 성과</p>
+            <BulletList items={project.results} className="mb-0" />
+          </>
+        )}
         {project.news && (
-          <li>
+          <p className="mt-4 text-sm font-semibold text-gray-500">
             관련 소식:{" "}
-            <a href={project.news} target="_blank" rel="noreferrer" className="underline">
+            <a href={project.news} target="_blank" rel="noreferrer" className="font-normal text-gray-700 underline">
               링크
             </a>
-          </li>
+          </p>
         )}
-      </ul>
-      {project.href && (
-        <a
-          href={project.href}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block mt-2 text-xs underline"
-        >
-          {project.href.startsWith("http") ? "사이트 보기" : "퍼블리싱 파일 보기"}
-        </a>
-      )}
-    </div>
+        {project.href && (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-3 text-xs border text-gray-900 border-gray-500 py-1 px-2 rounded-sm hover:text-white hover:bg-gray-900 hover:border-gray-900"
+          >
+            {project.href.startsWith("http") ? "사이트 보기" : "퍼블리싱 파일 보기"}
+          </a>
+        )}
+      </div>
+    </article>
   );
 }
 
@@ -58,16 +88,7 @@ function MusinsaProjectItem({ project }) {
           {project.role}
         </p>
         <p className="mt-0 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">주요 성과</p>
-        <ul className="mt-0 space-y-2">
-          {project.results.map((result, i) => (
-            <li
-              key={i}
-              className="text-sm leading-7 text-gray-700 relative pl-[14px] ml-[10px] before:content-[''] before:absolute before:left-[1px] before:top-[14px] before:-translate-y-1/2 before:w-[3px] before:h-[3px] before:bg-black before:rounded-full"
-            >
-              {result}
-            </li>
-          ))}
-        </ul>
+        <BulletList items={project.results} className="mb-0" />
       </div>
     </article>
   );
