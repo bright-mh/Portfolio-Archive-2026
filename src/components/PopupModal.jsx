@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from "react";
  * @param {boolean}  [wide]      - 넓은 팝업 여부 (기본값: false)
  * @param {React.ReactNode} children - 스크롤되는 본문 영역
  */
-export default function PopupModal({ title, subtitle, link, tabs, ariaLabel, onClose, children, wide = false }) {
+export function PopupModal({ title, subtitle, link, tabs, ariaLabel, onClose, children, wide = false }) {
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.id ?? null);
   const scrollContainerRef = useRef(null);
   const isScrollingRef = useRef(false);

@@ -1,4 +1,4 @@
-import { MUSINSA_WORK } from "./work-musinsa.constant";
+import { MUSINSA_WORK } from "@/constants/work-musinsa.constant";
 
 export const WORK_TIMELINE = [
   {

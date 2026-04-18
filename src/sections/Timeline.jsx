@@ -1,18 +1,5 @@
 import { useState } from "react";
-import PopupModal from "./PopupModal";
-
-const BulletList = ({ items, className = "mb-4" }) => (
-  <ul className={`mt-0 space-y-2 ${className}`}>
-    {items.map((item, i) => (
-      <li
-        key={i}
-        className="text-sm leading-7 text-gray-700 relative pl-[14px] ml-[10px] mb-0 before:content-[''] before:absolute before:left-[1px] before:top-[12px] before:w-[3px] before:h-[3px] before:bg-black before:rounded-full"
-      >
-        {item}
-      </li>
-    ))}
-  </ul>
-);
+import { PopupModal, BulletList } from "@/components/index";
 
 function ProjectCard({ project }) {
   return (
@@ -108,7 +95,7 @@ function MusinsaYearSection({ yearGroup }) {
   );
 }
 
-export default function Timeline({ items }) {
+export function Timeline({ items }) {
   const [activeEntry, setActiveEntry] = useState(null);
 
   return (

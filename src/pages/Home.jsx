@@ -1,9 +1,9 @@
-import Timeline from "../components/Timeline";
-import { WORK_TIMELINE } from "../constants/work-timeline.constant";
+import { Timeline } from "@/sections/index";
+import { WORK_TIMELINE } from "@/constants/index";
 
 export default function Home() {
   return (
-    <section>
+    <main>
       <header className="relative pb-7 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-[3px] after:bg-black">
         <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold">Kim Myeong Hui Portfolio</h1>
         <a href="tel:010-2984-6115" className="block">
@@ -56,6 +56,6 @@ export default function Home() {
         <h2 className="mb-4 text-xl font-bold">👩🏻‍💻 참여 프로젝트</h2>
         <Timeline items={WORK_TIMELINE} />
       </section>
-    </section>
+    </main>
   );
 }
