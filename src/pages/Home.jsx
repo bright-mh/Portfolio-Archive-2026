@@ -16,7 +16,8 @@ export default function Home() {
         <h2 className="blind">소개</h2>
         <strong className="text-[27px] font-bold">"기본에 충실한 퍼블리싱에서, 확장성 있는 프론트엔드 개발로"</strong>
         <p className="font-medium mt-4">
-          10년 넘는 시간 동안 웹의 시작과 현재를 모두 경험했습니다.
+          10년 넘는 시간 동안 웹 퍼블리셔로 활동하며 웹 표준의 시작부터 현재의 모던 프레임워크 환경까지 모두
+          경험했습니다.
           <br />
           그 과정에서 쌓아온 정교한 UI 구현 능력은 무신사 서비스를 리액트로 전환하고 고도화하는 과정에 든든한 밑거름이
           되었습니다.
