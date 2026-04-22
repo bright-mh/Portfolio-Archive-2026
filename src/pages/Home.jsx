@@ -1,5 +1,4 @@
 import { Timeline, Skills, Career } from "@/sections/index";
-import { WORK_TIMELINE } from "@/constants";
 
 export default function Home() {
   return (
@@ -32,7 +31,7 @@ export default function Home() {
       </section>
       <section className="mt-10">
         <h2 className="mb-4 text-xl font-bold">👩🏻‍💻 참여 프로젝트</h2>
-        <Timeline items={WORK_TIMELINE} />
+        <Timeline />
       </section>
       <section className="mt-15">
         <h2 className="mb-4 text-xl font-bold">🛠 기술 스택</h2>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PopupModal, BulletList } from "@/components/index";
+import { WORK_TIMELINE } from "@/constants";
 
 function ProjectCard({ project }) {
   return (
@@ -95,7 +96,8 @@ function MusinsaYearSection({ yearGroup }) {
   );
 }
 
-export function Timeline({ items }) {
+export function Timeline() {
+  const items = WORK_TIMELINE;
   const [activeEntry, setActiveEntry] = useState(null);
 
   return (
