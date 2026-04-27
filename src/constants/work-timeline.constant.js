@@ -4,7 +4,7 @@ export const WORK_TIMELINE = [
   {
     period: "2021 - 2025",
     company: "MUSINSA",
-    role: "프론트엔드 개발",
+    role: "UI 퍼블리싱 및 프론트엔드 개발",
     href: "https://www.musinsa.com/main/musinsa/recommend?gf=F",
     musinsaGroups: MUSINSA_WORK,
   },
@@ -64,7 +64,7 @@ export const WORK_TIMELINE = [
         heading: "워드프레스 기반 다국어 웹사이트 관리 및 기술 지원",
         role: [
           "WordPress 플랫폼을 활용한 다국어(국문/영문 등) 콘텐츠 업데이트 및 레이아웃 유지보수.",
-          "글로벌 서비스 안정성을 위한 상시 운영 관리 지원. (기여도 20%)",
+          "글로벌 서비스 안정성을 위한 상시 운영 관리 지원.",
         ],
         results: ["회계법인 특유의 신뢰도 높은 인터페이스 유지 및 다국어 환경에서의 웹 표준 준수 상태 지속 관리."],
       },
@@ -114,7 +114,7 @@ export const WORK_TIMELINE = [
         heading: "대규모 트래픽을 대응하는 브랜드 커머스 플랫폼 구축",
         role: [
           "IE9을 포함한 광범위한 브라우저 대응(크로스브라우징) 및 모바일 웹 최적화.",
-          "브랜드 아이덴티티를 유지하면서 구매 전환을 돕는 UI 퍼블리싱. (기여도 60%)",
+          "브랜드 아이덴티티를 유지하면서 구매 전환을 돕는 UI 퍼블리싱.",
         ],
         results: ["대형 커머스 환경에 필요한 안정적이고 견고한 마크업 구조 구축."],
       },
