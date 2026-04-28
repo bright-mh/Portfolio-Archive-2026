@@ -16,11 +16,12 @@ export const WORK_TIMELINE = [
       {
         title: "유연근무제 대응 엔터프라이즈 패키지 구축",
         href: "/Portfolio-Archive-2026/publishing/2019/03_flexibleWork/coding_list.html",
-        heading: "법정 근로시간 정책 기반의 복잡한 비즈니스 UI 구현",
+        heading: "법정 근로시간 정책 기반의 복잡한 비즈니스 UI 구현 (기여도 100%)",
         role: [
           "백엔드 에이전트와 데이터 통신 규약을 협의하여 동적 대시보드 및 복잡한 설정 화면 마크업 설계.",
           "시차출퇴근/선택근무 등 가변적인 정책 데이터를 시각화하는 데이터 그리드 최적화.",
         ],
+        contributionRate: "100%",
         results: [
           "다양한 기업 환경에 즉각 대응 가능한 유연한 UI 구조 확보.",
           "대규모 사용자 트래픽 환경에서도 안정적인 화면 렌더링 성능 유지.",
@@ -35,6 +36,7 @@ export const WORK_TIMELINE = [
           "UI 에이전트와 긴밀히 협업하여 전사 공통 UI 컴포넌트 가이드라인 수립.",
           "확장성을 고려한 마크업 구조 설계 및 인터랙션 구현.",
         ],
+        contributionRate: "100%",
         results: [
           "주력 상품의 디자인 아이덴티티 통일.",
           "재사용 가능한 컴포넌트 구조화를 통해 후속 프로젝트 UI 개발 속도 30% 이상 향상.",
@@ -56,6 +58,7 @@ export const WORK_TIMELINE = [
           "웹뷰(WebView) 환경에 최적화된 모바일 전용 UI 마크업 및 인터랙션 구현.",
           "다양한 모바일 기기 해상도 대응을 위한 유연한 레이아웃 설계.",
         ],
+        contributionRate: "100%",
         results: ["모바일 환경에서의 조작 편의성 증대 및 하이브리드 앱 특유의 네이티브한 사용자 경험 제공."],
       },
       {
@@ -66,6 +69,7 @@ export const WORK_TIMELINE = [
           "WordPress 플랫폼을 활용한 다국어(국문/영문 등) 콘텐츠 업데이트 및 레이아웃 유지보수.",
           "글로벌 서비스 안정성을 위한 상시 운영 관리 지원.",
         ],
+        contributionRate: "20%",
         results: ["회계법인 특유의 신뢰도 높은 인터페이스 유지 및 다국어 환경에서의 웹 표준 준수 상태 지속 관리."],
       },
     ],
@@ -84,6 +88,7 @@ export const WORK_TIMELINE = [
           "vw(Viewport Width) 단위를 적극 활용하여 iOS 및 안드로이드의 다양한 해상도에 가변적으로 대응하는 인터페이스 구현.",
           "웹뷰 환경에서의 렌더링 최적화.",
         ],
+        contributionRate: "70%",
         results: ["기기별 파편화를 극복하고 일관된 UI 제공.", "하이브리드 앱 특유의 유연한 레이아웃 완성."],
       },
       {
@@ -94,6 +99,7 @@ export const WORK_TIMELINE = [
           "다국어 지원 및 마크다운(Markdown) 문법 렌더링을 고려한 의미론적 마크업 설계.",
           "IE10부터 최신 크롬까지 대응하는 크로스브라우징 구현.",
         ],
+        contributionRate: "60%",
         results: ["블록체인 기술 문서의 가독성 확보 및 글로벌 개발자 접근성 향상."],
       },
       {
@@ -104,6 +110,7 @@ export const WORK_TIMELINE = [
           "복잡한 수치와 옵션 선택이 필요한 컨피규레이터 특성을 반영한 반응형 웹 설계.",
           "글로벌 사용자를 위한 다국어 대응 및 IE 호환성 확보.",
         ],
+        contributionRate: "20%",
         results: [
           "복잡한 제품 구성 과정을 시각화하여 사용자 편의성 증대 및 글로벌 영업 지원 도구로서의 활용도 극대화.",
         ],
@@ -116,6 +123,7 @@ export const WORK_TIMELINE = [
           "IE9을 포함한 광범위한 브라우저 대응(크로스브라우징) 및 모바일 웹 최적화.",
           "브랜드 아이덴티티를 유지하면서 구매 전환을 돕는 UI 퍼블리싱.",
         ],
+        contributionRate: "60%",
         results: ["대형 커머스 환경에 필요한 안정적이고 견고한 마크업 구조 구축."],
       },
     ],
@@ -133,6 +141,7 @@ export const WORK_TIMELINE = [
           "금융 서비스에 최적화된 UX Basic 가이드라인에 따른 UI 퍼블리싱 수행.",
           "일관된 사용자 경험을 위한 공통 컴포넌트 마크업 구조 설계.",
         ],
+        contributionRate: "30%",
         results: ["국내 주요 금융 앱의 표준이 된 '쏠(SOL)' 플랫폼의 UI 기틀 마련 및 시각적 일관성 확보."],
       },
       {
@@ -144,6 +153,7 @@ export const WORK_TIMELINE = [
           "PC 버전 고도화 구축 작업에 따른 신규 UI 반영 및 기존 기능의 유지보수 수행.",
           "잦은 콘텐츠 업데이트에 대응하는 유연한 마크업 관리.",
         ],
+        contributionRate: "50%",
         results: ["서비스 중단 없는 안정적인 플랫폼 운영 및 대규모 개편 작업의 성공적인 안착 지원."],
       },
     ],
@@ -163,6 +173,7 @@ export const WORK_TIMELINE = [
           "PC 버전 리뉴얼 및 모바일 웹/앱 UI 신규 구축 전담.",
           "복잡한 인터랙션 구현 및 웹 표준 준수.",
         ],
+        contributionRate: "100%",
         results: [
           "하위 브라우저(IE8~11) 지원을 통한 사용자 접근성 극대화 및 서비스 연속성 확보.",
           "모바일 환경에 최적화된 인터페이스 구축을 통해 서비스 이용률 및 사용자 만족도 개선.",
@@ -184,6 +195,7 @@ export const WORK_TIMELINE = [
           "모바일 환경에 최적화된 결제 및 포인트 관리 UI 퍼블리싱.",
           "사용자 편의성을 고려한 직관적인 메뉴 구조 및 인터랙션 구현.",
         ],
+        contributionRate: "100%",
         results: ["오프라인 결제와 연동되는 안정적인 모바일 서비스 환경 구축."],
       },
       {
@@ -195,6 +207,7 @@ export const WORK_TIMELINE = [
           "하이브리드 앱 환경에 최적화된 이벤트 페이지 신규 구축 및 운영.",
           "매주 진행되는 다양한 형태의 프로모션 UI 제작.",
         ],
+        contributionRate: "100%",
         results: [
           "하이브리드 앱 특유의 제약 사항을 극복한 유연한 이벤트 레이아웃 확보.",
           "신속한 업데이트를 통해 마케팅 효율 극대화.",
@@ -216,6 +229,7 @@ export const WORK_TIMELINE = [
           "PC, 모바일, 태블릿 전체에 대응하는 반응형 UI 최적화.",
           "IE8부터 오페라까지 아우르는 크로스브라우징 구현 및 웹 접근성 마크 획득을 위한 최종 마크업 검증 및 보완.",
         ],
+        contributionRate: "80%",
         results: ["장애인 및 노약자 등 모든 사용자의 접근성 보장.", "현대산업개발의 디지털 브랜드 아이덴티티 강화."],
       },
       {
@@ -225,6 +239,7 @@ export const WORK_TIMELINE = [
           "복잡한 금융 상품 정보를 직관적으로 전달하는 PC/모바일 신규 UI 퍼블리싱.",
           "하위 브라우저(IE8~11) 환경에서도 동일한 사용자 경험을 제공하는 레이아웃 설계.",
         ],
+        contributionRate: "50%",
         results: ["현대라이프만의 심플한 브랜드 철학을 반영한 디지털 판매 채널 구축 기여."],
       },
       {
@@ -235,6 +250,7 @@ export const WORK_TIMELINE = [
           "방대한 콘텐츠를 효율적으로 노출하기 위한 PC 메인 및 상세 페이지 리뉴얼.",
           "다양한 브라우저 환경에서의 안정적인 렌더링 최적화.",
         ],
+        contributionRate: "50%",
         results: ["앱 마켓의 시인성 개선 및 PC 환경에서의 콘텐츠 접근성 향상."],
       },
       {
@@ -245,6 +261,7 @@ export const WORK_TIMELINE = [
           "국문/영문 다국어 환경 대응 및 1024px/1600px 등 해상도 타입에 따른 가변형 반응형 UI 설계.",
           "대규모 데이터 시각화를 고려한 견고한 마크업 구조 구축.",
         ],
+        contributionRate: "80%",
         results: ["글로벌 비즈니스 환경에 최적화된 B2B 대시보드 인터페이스 완성."],
         news: "https://zdnet.co.kr/view/?no=20140416102305",
       },
@@ -264,6 +281,7 @@ export const WORK_TIMELINE = [
           "안드로이드 OS의 파편화된 해상도에 최적화된 모바일 마크업 설계.",
           "IE8부터 오페라까지 아우르는 광범위한 크로스브라우징 구현.",
         ],
+        contributionRate: "100%",
         results: ["기기별 일관된 사용자 경험 제공 및 안정적인 서비스 런칭 기여."],
       },
       {
@@ -275,6 +293,7 @@ export const WORK_TIMELINE = [
           "IE7 하위 브라우저 환경에서도 현대카드 특유의 세련된 디자인 레이아웃을 무너짐 없이 구현.",
           "결제 및 포인트 조회 등 복잡한 데이터 연동 화면 퍼블리싱.",
         ],
+        contributionRate: "80%",
         results: ["대규모 사용자 유입에 최적화된 견고한 UI 아키텍처 구축 및 현대카드의 디지털 브랜드 강화."],
       },
       {
@@ -286,6 +305,7 @@ export const WORK_TIMELINE = [
           "PC와 모바일 전반에 걸친 리뉴얼 퍼블리싱 전담.",
           "IE7~9 브라우저 환경에서의 안정적인 렌더링을 보장하는 크로스브라우징 최적화 및 상시 운영 기술 지원.",
         ],
+        contributionRate: "100%",
         results: ["통신사 특유의 방대한 상품 정보를 효율적으로 처리하는 UI 구조 확립."],
       },
     ],
@@ -304,6 +324,7 @@ export const WORK_TIMELINE = [
           "삼성의 표준 웹 가이드라인을 준수하여 정보 구조가 명확한 UI 구현.",
           "IE7~9 등 하위 브라우저에서도 깨짐 없는 레이아웃을 위한 크로스브라우징 최적화.",
         ],
+        contributionRate: "100%",
         results: [
           "교육 콘텐츠의 시각적 가독성을 확보하고, 다양한 사내 접속 환경에서 동일하게 출력되는 안정적인 마크업 구조 구축.",
         ],
@@ -316,6 +337,7 @@ export const WORK_TIMELINE = [
           "경기도 온라인 평생학습 서비스인 '꿈날개'의 모바일 버전 신규 구축.",
           "당시 급격히 보급되던 아이폰(iOS) 환경에 최적화된 모바일 웹 인터페이스 및 터치 기반 인터랙션 구현.",
         ],
+        contributionRate: "40%",
         results: ["장소에 구애받지 않는 모바일 학습 환경 제공을 통해 서비스 접근성 및 사용자 편의성 증대."],
       },
     ],
@@ -328,12 +350,14 @@ export const WORK_TIMELINE = [
       {
         title: "한양대학교 디자인 대학 공식 웹사이트 구축",
         role: ["디자인 대학 특유의 시각적 요소를 살린 UI 구현 및 IE7~9을 포함한 5대 브라우저 크로스브라우징 대응."],
+        contributionRate: "40%",
         results: ["학내 정보 접근성 향상 및 웹 표준에 기반한 안정적인 콘텐츠 노출."],
       },
       {
         title: "Credu Language(크레듀 언어 교육) 서비스 구축",
         href: "/Portfolio-Archive-2026/publishing/2011/05_credu/credu_codinglist.html",
         role: ["온라인 교육 콘텐츠 제공을 위한 웹 인터페이스 퍼블리싱 및 하위 브라우저 호환성 확보."],
+        contributionRate: "40%",
         results: ["교육 수강생들을 위한 안정적인 학습 환경 UI 제공."],
       },
       {
@@ -343,24 +367,28 @@ export const WORK_TIMELINE = [
           "건설 현장의 탄소 배출량을 측정·관리하는 전문 시스템의 전체 UI 퍼블리싱 전담.",
           "IE6를 포함한 엔터프라이즈 환경 최적화.",
         ],
+        contributionRate: "100%",
         results: ["복잡한 데이터 입력 및 결과 확인이 용이한 정갈한 시스템 인터페이스 구축."],
       },
       {
         title: "LG Diet U 프로모션 페이지 구축",
         href: "/Portfolio-Archive-2026/publishing/2011/03_LG_DietU/coding_list.html",
         role: ["캠페인 특성에 맞춘 동적인 레이아웃 및 프로모션 콘텐츠 퍼블리싱."],
+        contributionRate: "40%",
         results: ["브랜드 이벤트의 시각적 효과 전달 및 사용자 참여를 유도하는 UI 구현."],
       },
       {
         title: "신세계 쿨캣(Coolcat) 여자농구단 웹사이트 구축",
         href: "/Portfolio-Archive-2026/publishing/2011/02_Cool_cat/coding_list.html",
         role: ["구단 정보 및 경기 소식을 전달하는 커뮤니티형 웹사이트 신규 구축 참여."],
+        contributionRate: "50%",
         results: ["팬 서비스 강화를 위한 정보 중심의 UI 구조 확립."],
       },
       {
         title: "경기여성온라인 커리어코칭 시스템 구축",
         href: "/Portfolio-Archive-2026/publishing/2011/01_Carrer_Coaching/01.html",
         role: ["온라인 코칭 및 상담 서비스를 위한 웹 페이지 전체 퍼블리싱 전담."],
+        contributionRate: "100%",
         results: ["공공 교육 서비스 이용자를 위한 표준화된 웹 인터페이스 제공."],
       },
     ],

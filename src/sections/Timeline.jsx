@@ -22,11 +22,17 @@ function ProjectCard({ project }) {
             <BulletList items={project.role} />
           </>
         )}
+
         {project.results && (
           <>
             <p className="mt-0 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">주요 성과</p>
             <BulletList items={project.results} className="mb-0" />
           </>
+        )}
+        {project.contributionRate && (
+          <p className="mt-4 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide ">
+            기여도: <span className="font-normal text-gray-700">{project.contributionRate}</span>
+          </p>
         )}
         {project.news && (
           <p className="mt-4 text-sm font-semibold text-gray-500">
@@ -77,6 +83,9 @@ function MusinsaProjectItem({ project }) {
         </p>
         <p className="mt-0 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">주요 성과</p>
         <BulletList items={project.results} className="mb-0" />
+        <p className="mt-4 mb-2 text-sm font-semibold text-gray-500 uppercase tracking-wide ">
+          기여도: <span className="font-normal text-gray-700">{project.contributionRate}</span>
+        </p>
       </div>
     </article>
   );
