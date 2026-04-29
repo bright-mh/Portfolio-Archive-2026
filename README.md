@@ -13,6 +13,7 @@
 | 분류       | 사용 기술               |
 | ---------- | ----------------------- |
 | 프레임워크 | React 19                |
+| 언어       | TypeScript 6            |
 | 빌드 도구  | Vite 6                  |
 | 스타일     | Tailwind CSS 4          |
 | 라우팅     | React Router DOM 7      |
@@ -37,8 +38,9 @@ src/
 ├── sections/     # 섹션 단위 컴포넌트 (Career, Timeline, Skills)
 ├── components/   # 공통 컴포넌트 (BulletList, PopupModal 등)
 ├── constants/    # 콘텐츠 데이터 (경력, 프로젝트, 기술 스택)
-├── App.jsx
-├── main.jsx
+├── types/        # TypeScript 타입 정의
+├── App.tsx
+├── main.tsx
 └── index.css
 ```
 
@@ -52,6 +54,9 @@ npm install
 
 # 개발 서버 실행
 npm run dev
+
+# 개발 서버 실행 (Vite 캐시 초기화)
+npm run dev:clean
 
 # 프로덕션 빌드
 npm run build
