@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { PopupModal } from "@/components/index";
 import { WORK_TIMELINE } from "@/constants";
+import type { WorkEntry } from "@/types";
 import { ProjectCard } from "./ProjectCard";
 import { MusinsaYearSection } from "./MusinsaSection";
 
 export function Timeline() {
   const items = WORK_TIMELINE;
-  const [activeEntry, setActiveEntry] = useState(null);
+  const [activeEntry, setActiveEntry] = useState<WorkEntry | null>(null);
 
   return (
     <>
@@ -71,7 +72,7 @@ export function Timeline() {
                     ))}
                   </section>
                 ))
-              : activeEntry.projects.map((project) => <ProjectCard key={project.title} project={project} />)}
+              : (activeEntry.projects ?? []).map((project) => <ProjectCard key={project.title} project={project} />)}
         </PopupModal>
       )}
     </>

@@ -1,6 +1,11 @@
 import { BulletList } from "@/components/index";
+import type { ProjectItem } from "@/types";
 
-export function ProjectCard({ project }) {
+interface ProjectCardProps {
+  project: ProjectItem;
+}
+
+export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="mb-10 pb-10 border-b border-gray-100 last:border-none last:mb-0 last:pb-0">
       <div className="flex flex-col gap-1 mb-4">

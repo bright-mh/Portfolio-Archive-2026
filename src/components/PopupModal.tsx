@@ -1,25 +1,33 @@
 import { useEffect, useRef, useState } from "react";
 
-/**
- * 범용 레이어 팝업 컴포넌트
- *
- * @param {string}   title       - 고정 헤더에 표시할 제목 (필수)
- * @param {string}   [subtitle]  - 제목 아래 작은 설명 텍스트
- * @param {{ href: string, label: string }} [link] - 헤더에 표시할 외부 링크
- * @param {{ label: string, id: string }[]} [tabs] - 연도별 탭 (클릭 시 해당 섹션으로 스크롤)
- * @param {string}   [ariaLabel] - 스크린리더용 다이얼로그 레이블 (기본값: title)
- * @param {Function} onClose     - 닫기 핸들러 (필수)
- * @param {boolean}  [wide]      - 넓은 팝업 여부 (기본값: false)
- * @param {React.ReactNode} children - 스크롤되는 본문 영역
- */
-export function PopupModal({ title, subtitle, link, tabs, ariaLabel, onClose, children, wide = false }) {
+interface PopupModalProps {
+  title: string;
+  subtitle?: string;
+  link?: { href: string; label: string };
+  tabs?: { label: string; id: string }[];
+  ariaLabel?: string;
+  onClose: () => void;
+  wide?: boolean;
+  children: React.ReactNode;
+}
+
+export function PopupModal({
+  title,
+  subtitle,
+  link,
+  tabs,
+  ariaLabel,
+  onClose,
+  children,
+  wide = false,
+}: PopupModalProps) {
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.id ?? null);
-  const scrollContainerRef = useRef(null);
-  const isScrollingRef = useRef(false);
-  const scrollTimerRef = useRef(null);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const isScrollingRef = useRef<boolean>(false);
+  const scrollTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -54,7 +62,7 @@ export function PopupModal({ title, subtitle, link, tabs, ariaLabel, onClose, ch
     return () => container.removeEventListener("scroll", handleScroll);
   }, [tabs]);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const container = scrollContainerRef.current;
     const el = document.getElementById(id);
     if (!container || !el) return;

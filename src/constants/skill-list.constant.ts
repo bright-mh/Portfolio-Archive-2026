@@ -1,4 +1,6 @@
-export const SKILL_LIST = [
+import type { SkillGroup } from "@/types";
+
+export const SKILL_LIST: SkillGroup[] = [
   {
     category: "핵심 기술",
     items: ["HTML5 / CSS3 / JavaScript", "React", "TypeScript", "Web Standards & Accessibility"],

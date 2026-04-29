@@ -1,4 +1,9 @@
-export function BulletList({ items, className = "mb-4" }) {
+interface BulletListProps {
+  items: string[];
+  className?: string;
+}
+
+export function BulletList({ items, className = "mb-4" }: BulletListProps) {
   return (
     <ul className={`mt-0 space-y-2 ${className}`}>
       {items.map((item, i) => (

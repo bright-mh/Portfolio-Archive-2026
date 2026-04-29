@@ -1,4 +1,6 @@
-export const MUSINSA_WORK = [
+import type { MusinsaYearGroup } from "@/types";
+
+export const MUSINSA_WORK: MusinsaYearGroup[] = [
   {
     year: "2025",
     projects: [

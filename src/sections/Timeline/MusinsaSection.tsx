@@ -1,12 +1,13 @@
 import { BulletList } from "@/components/index";
+import type { MusinsaProject, MusinsaYearGroup } from "@/types";
 
-function SkillBadge({ skill }) {
+function SkillBadge({ skill }: { skill: string }) {
   return (
     <span className="inline-block px-2.5 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full">{skill}</span>
   );
 }
 
-function MusinsaProjectItem({ project }) {
+function MusinsaProjectItem({ project }: { project: MusinsaProject }) {
   return (
     <article className="mb-10 pb-10 border-b border-gray-100 last:border-none last:mb-0 last:pb-0">
       <div className="flex flex-col gap-1 mb-4">
@@ -34,7 +35,7 @@ function MusinsaProjectItem({ project }) {
   );
 }
 
-export function MusinsaYearSection({ yearGroup }) {
+export function MusinsaYearSection({ yearGroup }: { yearGroup: MusinsaYearGroup }) {
   return (
     <section id={`musinsa-year-${yearGroup.year}`} className="mb-12">
       <div className="flex items-center gap-4 mb-6">

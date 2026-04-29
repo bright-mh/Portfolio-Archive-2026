@@ -1,6 +1,7 @@
 import { MUSINSA_WORK } from "@/constants/work-musinsa.constant";
+import type { WorkEntry } from "@/types";
 
-export const WORK_TIMELINE = [
+export const WORK_TIMELINE: WorkEntry[] = [
   {
     period: "2021 - 2025",
     company: "MUSINSA",
