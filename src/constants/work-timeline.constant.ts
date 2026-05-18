@@ -279,7 +279,7 @@ export const WORK_TIMELINE: WorkEntry[] = [
         heading: "안드로이드 환경에 최적화된 모바일 및 웹 인터페이스 구현",
         context: ["SK텔레콤의 서비스 개방형 플랫폼 구축을 위한 신규 UI 프로젝트."],
         role: [
-          "안드로이드 OS의 파편화된 해상도에 최적화된 모바일 마크업 설계.",
+          "안드로이드 OS의 해상도에 최적화된 모바일 마크업 설계.",
           "IE8부터 오페라까지 아우르는 광범위한 크로스브라우징 구현.",
         ],
         contributionRate: "100%",
@@ -331,7 +331,7 @@ export const WORK_TIMELINE: WorkEntry[] = [
         ],
       },
       {
-        title: "모바일 꿈날개(경기도 온라인평용학습) 신규 구축",
+        title: "모바일 꿈날개(경기도 온라인평생학습) 신규 구축",
         href: "/Portfolio-Archive-2026/publishing/2012/01_mobile_dream/coding_list.html",
         heading: "공공 교육 서비스의 모바일 웹 최적화 및 접근성 강화",
         role: [
