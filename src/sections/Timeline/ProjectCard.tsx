@@ -1,4 +1,5 @@
 import { BulletList } from "@/components/index";
+import { IconFolder } from "@/images/IconFolder";
 import type { ProjectItem } from "@/types";
 
 interface ProjectCardProps {
@@ -9,7 +10,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="mb-10 pb-10 border-b border-gray-100 last:border-none last:mb-0 last:pb-0">
       <div className="flex flex-col gap-1 mb-4">
-        <h3 className="mt-0 mb-0 text-lg font-bold leading-snug">📁 {project.title}</h3>
+        <h3 className="mt-0 mb-0 text-lg font-bold leading-snug">
+          <IconFolder className="inline-block w-5 h-5 mr-2 align-text-top" />
+          {project.title}
+        </h3>
       </div>
       <div className="pl-4 border-l-2 border-gray-200">
         {project.heading && <p className="mt-0 mb-4 text-base font-bold">{project.heading}</p>}

@@ -1,4 +1,5 @@
 import { Timeline, Skills, Career } from "@/sections/index";
+import { IconPhoneCall, IconEnvelope, IconBuilding, IconDocumentSigned, IconSetting } from "@/images/index";
 
 export default function Home() {
   return (
@@ -6,10 +7,12 @@ export default function Home() {
       <header className="relative pb-7 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-[3px] after:bg-black">
         <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold">Kim Myeong Hui Portfolio</h1>
         <a href="tel:010-2984-6115" className="block">
-          📱 010-2984-6115
+          <IconPhoneCall className="inline-block w-4 h-4 mr-2" />
+          010-2984-6115
         </a>
         <a href="mailto:bright-mh@naver.com" className="block">
-          📨 bright-mh@naver.com
+          <IconEnvelope className="inline-block w-4 h-4 mr-2" />
+          bright-mh@naver.com
         </a>
       </header>
       <section className="mt-12">
@@ -27,15 +30,24 @@ export default function Home() {
         </p>
       </section>
       <section className="mt-10">
-        <h2 className="text-xl font-bold">📋 경력</h2>
+        <h2 className="text-xl font-bold">
+          <IconBuilding className="inline-block w-5 h-5 mr-2 mt-0.5 align-text-top" />
+          경력
+        </h2>
         <Career />
       </section>
       <section className="mt-10">
-        <h2 className="mb-4 text-xl font-bold">👩🏻‍💻 참여 프로젝트</h2>
+        <h2 className="mb-4 text-xl font-bold">
+          <IconDocumentSigned className="inline-block w-5 h-5 mr-2 mt-0.5 align-text-top" />
+          참여 프로젝트
+        </h2>
         <Timeline />
       </section>
       <section className="mt-15">
-        <h2 className="mb-4 text-xl font-bold">🛠 기술 스택</h2>
+        <h2 className="mb-4 text-xl font-bold">
+          <IconSetting className="inline-block w-5 h-5 mr-2 mt-0.5 align-text-top" />
+          기술 스택
+        </h2>
         <Skills />
       </section>
     </main>

@@ -1,4 +1,5 @@
 import { BulletList } from "@/components/index";
+import { IconFolder } from "@/images/IconFolder";
 import type { MusinsaProject, MusinsaYearGroup } from "@/types";
 
 function SkillBadge({ skill }: { skill: string }) {
@@ -11,7 +12,10 @@ function MusinsaProjectItem({ project }: { project: MusinsaProject }) {
   return (
     <article className="mb-10 pb-10 border-b border-gray-100 last:border-none last:mb-0 last:pb-0">
       <div className="flex flex-col gap-1 mb-4">
-        <h3 className="mt-0 mb-0 text-lg font-bold leading-snug">📁 {project.title}</h3>
+        <h3 className="mt-0 mb-0 text-lg font-bold leading-snug">
+          <IconFolder className="inline-block w-5 h-5 mr-2 align-text-top" />
+          {project.title}
+        </h3>
         <p className="mt-0 mb-0 text-sm text-gray-400">{project.period}</p>
       </div>
       <div className="flex flex-wrap gap-1.5 mb-5">
