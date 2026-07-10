@@ -17,7 +17,7 @@ export const WORK_TIMELINE: WorkEntry[] = [
       {
         title: "유연근무제 대응 엔터프라이즈 패키지 구축",
         href: "/Portfolio-Archive-2026/publishing/2019/03_flexibleWork/coding_list.html",
-        heading: "법정 근로시간 정책 기반의 복잡한 비즈니스 UI 구현 (기여도 100%)",
+        heading: "법정 근로시간 정책 기반의 복잡한 비즈니스 UI 구현",
         role: [
           "백엔드 에이전트와 데이터 통신 규약을 협의하여 동적 대시보드 및 복잡한 설정 화면 마크업 설계.",
           "시차출퇴근/선택근무 등 가변적인 정책 데이터를 시각화하는 데이터 그리드 최적화.",
