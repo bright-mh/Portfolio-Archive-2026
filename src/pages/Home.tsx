@@ -17,7 +17,9 @@ export default function Home() {
       </header>
       <section className="mt-12">
         <h2 className="blind">소개</h2>
-        <strong className="text-[27px] font-bold">"기본에 충실한 퍼블리싱에서, 확장성 있는 프론트엔드 개발로"</strong>
+        <strong className="text-[27px] font-bold">
+          "웹 표준의 기본기부터 모던 프레임워크까지, 화면의 완성도와 협업 효율을 모두 높이는 웹 퍼블리셔"
+        </strong>
         <p className="font-medium mt-4">
           10년 넘는 시간 동안 웹 퍼블리셔로 활동하며 웹 표준의 시작부터 현재의 모던 프레임워크 환경까지 모두
           경험했습니다.
